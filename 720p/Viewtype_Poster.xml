@@ -47,7 +47,6 @@
 			<shadowcolor>678b8b8b</shadowcolor>
 			<textcolor>678b8b8b</textcolor>
 			<label>$LOCALIZE[31235]</label>
-			<include>Animation_HiddenByInfo</include>
 			<include>Animation_Bartowski_Context_Zoom</include>
 		</control>
 		
@@ -72,7 +71,6 @@
 			<preloaditems>2</preloaditems>
 			<pagecontrol>65</pagecontrol>
 			<include>Animation_ZoomInZoomOut</include>
-			<include>Animation_HiddenByInfo</include>
 			<camera x="1340" y="380" />
 			<animation effect="rotatey" center="50" start="12" end="10" time="0" condition="true">Conditional</animation>
 			<animation effect="zoom" start="100" end="72" time="700" condition="Skin.HasSetting(Poster_Fanart)">Conditional</animation>
@@ -121,7 +119,7 @@
 						<posy>131</posy>
 						<width>162</width>
 						<height>241</height>
-						<texture diffuse="movie-poster/posterview_diffuse.png" fallback="extras/moviegenres/default.png">extras/moviegenres/$INFO[ListItem.Label].jpg</texture>
+						<texture diffuse="movie-poster/posterview_diffuse.png" fallback="special://skin/extras/moviegenres/default.png">special://skin/extras/moviegenres/$INFO[ListItem.Label].jpg</texture>
 						<fadetime>200</fadetime>
 						<aspectratio scalediffuse="false">stretch</aspectratio>
 						<visible>Container.Content(Genres)</visible>
@@ -153,7 +151,7 @@
 						<posy>368</posy>
 						<width>162</width>
 						<height>241</height>
-						<texture background="true" flipy="true" diffuse="movie-poster/posterview_diffuse.png" fallback="extras/moviegenres/default.png">extras/moviegenres/$INFO[ListItem.Label].jpg</texture>
+						<texture background="true" flipy="true" diffuse="movie-poster/posterview_diffuse.png" fallback="special://skin/extras/moviegenres/default.png">special://skin/extras/moviegenres/$INFO[ListItem.Label].jpg</texture>
 						<fadetime>200</fadetime>
 						<colordiffuse>89FFFFFF</colordiffuse>
 						<aspectratio scalediffuse="false">stretch</aspectratio>
@@ -250,7 +248,7 @@
 						<posy>90</posy>
 						<width>211</width>
 						<height>300</height>
-						<texture diffuse="movie-poster/posterview_diffuse.png" fallback="extras/moviegenres/default.png">extras/moviegenres/$INFO[ListItem.Label].jpg</texture>
+						<texture diffuse="movie-poster/posterview_diffuse.png" fallback="special://skin/extras/moviegenres/default.png">special://skin/extras/moviegenres/$INFO[ListItem.Label].jpg</texture>
 						<fadetime>200</fadetime>
 						<aspectratio scalediffuse="false">stretch</aspectratio>
 						<animation type="Focus" reversible="false">
@@ -291,7 +289,7 @@
 						<posy>390</posy>
 						<width>211</width>
 						<height>300</height>
-						<texture background="true" flipy="true" diffuse="movie-poster/posterview_diffuse.png" fallback="extras/moviegenres/default.png">extras/moviegenres/$INFO[ListItem.Label].jpg</texture>
+						<texture background="true" flipy="true" diffuse="movie-poster/posterview_diffuse.png" fallback="special://skin/extras/moviegenres/default.png">special://skin/extras/moviegenres/$INFO[ListItem.Label].jpg</texture>
 						<fadetime>200</fadetime>
 						<aspectratio scalediffuse="false">stretch</aspectratio>
 						<animation type="Focus" reversible="false">
@@ -352,7 +350,6 @@
 			<posx>0</posx>
 			<posy>0</posy>
 			<include>Animation_ZoomInZoomOut</include>
-			<include>Animation_HiddenByInfo</include>
 			<control type="textbox">
 				<description>Plot Movie</description>
 				<posx>340</posx>
@@ -463,7 +460,6 @@
 		<posy>260</posy>
 		<width>600</width>
 		<include>Animation_ZoomInZoomOut</include>
-		<include>Animation_HiddenByInfo</include>
 		<animation effect="slide" start="0,600" end="0,0" time="400" delay="3400" condition="Container.Content(movies) + !Skin.HasSetting(Poster_Fanart) + ![Container(55).OnNext | Container(55).OnPrevious]">Conditional</animation>
 		<visible>Control.IsVisible(55) + Skin.HasSetting(PosterPlus) + !IsEmpty(ListItem.Title) + Container.Content(movies) + !Skin.HasSetting(Poster_Fanart)</visible>
 			<control type="label">
@@ -516,7 +512,6 @@
 		<posx>20</posx>
 		<posy>90</posy>
 		<include>Animation_ZoomInZoomOut</include>
-		<include>Animation_HiddenByInfo</include>
 		<animation effect="slide" start="0,0" end="0,-40" time="0" tween="cubic" easing="inout" condition="IsEmpty(Control.GetLabel(7015))">Conditional</animation>
 		<visible>Control.IsVisible(55) + !IsEmpty(ListItem.Title) + [Container.Content(tvshows) | Container.Content(seasons)] + !Skin.HasSetting(Poster_Fanart) + !Player.HasVideo</visible>	
 			<control type="label">
@@ -564,7 +559,6 @@
 		<posx>20</posx>
 		<posy>44</posy>
 		<include>Animation_ZoomInZoomOut</include>
-		<include>Animation_HiddenByInfo</include>
 			<control type="label">
 				<posx>0</posx>
 				<posy>0</posy>
@@ -572,7 +566,6 @@
 				<height>89</height>
 				<font>Font_TVShow</font>
 				<label>[B][COLOR=ListTrackF]$LOCALIZE[515][/COLOR] [B][COLOR=white]$INFO[ListItem.Genre][/B][/COLOR]</label>
-				<include>Animation_HiddenByInfo</include>
 			</control>
 			<control type="label">
 				<posx>0</posx>
@@ -581,7 +574,6 @@
 				<height>89</height>
 				<font>Font_TVShow</font>
 				<label>[COLOR=ListTrackF][B]$LOCALIZE[172][/COLOR] [COLOR=white]$INFO[ListItem.Property(releasedate)][/COLOR][/B]</label>
-				<include>Animation_HiddenByInfo</include>
 			</control>
 			<control type="label">
 				<posx>0</posx>
@@ -590,14 +582,12 @@
 				<height>89</height>
 				<font>Font_TVShow</font>
 				<label>[COLOR=ListTrackF][B]$LOCALIZE[31226][/COLOR] [COLOR=white]$INFO[ListItem.mpaa][/COLOR][/B]</label>
-				<include>Animation_HiddenByInfo</include>
 			</control>
 		</control>
 		
 	<control type="group">
 		<posx>10</posx>
 		<posy>0</posy>
-		<include>Animation_HiddenByInfo</include>
 		<include>Animation_Viewtype_3dland_Lefttop</include>
 		<visible>Control.IsVisible(55) + Window.IsActive(Programs) + substring(container.folderpath,plugin://plugin.program.launcher)</visible>
 			<control type="label">
@@ -674,7 +664,6 @@
 			<orientation>horizontal</orientation>
 			<include condition="!Skin.HasSetting(grey_flags)">color_flags</include>
 			<include condition="Skin.HasSetting(grey_flags)">grey_flags</include>
-			<include>Animation_HiddenByInfo</include>
 			<include>Animation_ZoomInZoomOut</include>
 		</control>
 		<control type="image"> 
