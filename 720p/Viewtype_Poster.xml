@@ -31,8 +31,8 @@
 			<height>50</height>
 			<aligny>center</aligny>
 			<font>Font_Bartowski_Movies_Title</font>
-			<textcolor>ffb7b7b7</textcolor>
-			<shadowcolor>ff525252</shadowcolor>
+			<textcolor>viewheader</textcolor>
+			<shadowcolor>viewheadershadow</shadowcolor>
 			<label>[B]$INFO[ListItem.Label][/B]</label>
 		</control>
 		<control type="label"><!--Big Title-->

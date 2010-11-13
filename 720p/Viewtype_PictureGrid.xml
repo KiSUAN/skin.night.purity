@@ -129,8 +129,8 @@
 			<align>left</align>
 			<aligny>center</aligny>
 			<font>Font_Bartowski_Movies_Title</font>
-			<textcolor>ffb7b7b7</textcolor>
-			<shadowcolor>ff525252</shadowcolor>
+			<textcolor>viewheader</textcolor>
+			<shadowcolor>viewheadershadow</shadowcolor>
 			<include>Animation_BackdropFade</include>
 			<visible>Control.IsVisible(51)</visible>
 		</control>
@@ -213,8 +213,8 @@
 					<align>center</align>
 					<aligny>center</aligny>
 					<font>Font_MainMenuLabel</font>
-					<textcolor>mainblue</textcolor>
-					<shadowcolor>black</shadowcolor>
+					<shadowcolor>viewheadershadow</shadowcolor>
+					<textcolor>viewheader</textcolor>
 				</control>
 				<control type="image">
 					<posx>-9</posx>

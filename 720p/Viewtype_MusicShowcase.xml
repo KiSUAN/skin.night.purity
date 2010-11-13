@@ -30,8 +30,8 @@
 			<height>50</height>
 			<align>left</align>
 			<font>Font_Bartowski_Movies_Title</font>
-			<shadowcolor>ff525252</shadowcolor>
-			<textcolor>ffb7b7b7</textcolor>
+			<shadowcolor>viewheadershadow</shadowcolor>
+			<textcolor>viewheader</textcolor>
 			<label>[B]$INFO[ListItem.label][/B]</label>
 			<include>Animation_BackdropFade</include>
 		</control>
