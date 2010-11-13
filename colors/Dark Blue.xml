@@ -10,10 +10,7 @@
 	<color name="dialogheader">DDced8da</color>
 	<color name="mainblue">FF015582</color>
 	<color name="mainbluedarker">FF015582</color>
-	<color name="viewheader">ffb7b7b7</color>
-	<color name="viewheadershadow">ff525252</color>
-	<color name="PlayerAction">ffb7b7b7</color>
-	<color name="PlayerActionShadow">ff525252</color>
+
 	<!-- Theme Colours -->
 
 	<color name="BackgroundColor">ccFFFFFF</color>
@@ -21,6 +18,7 @@
 	<color name="BackgroundFilterColor1">dd000000</color>
 	<color name="ButtonFilterColor">FFffffff</color>
 	<color name="plotdiffuse">bb000000</color>
+	
 	<!-- Home 1 Colours -->
 
 	<color name="HomeFrameColor">FFE0E0E0</color>
@@ -83,6 +81,8 @@
 	<color name="OSDStatusBackground">11FFFFFF</color>
 	<color name="OSDStatus">33FFFFFF</color>
 	<color name="OSDPlayingDuration">FF474747</color>
+	<color name="PlayerAction">ffb7b7b7</color>
+	<color name="PlayerActionShadow">ff525252</color>
 
 	<!-- Window menu colours -->
 
@@ -94,7 +94,12 @@
 	<color name="PosterTitle">FF474747</color>
 	<color name="EpisodeLabelF">FF474747</color>	
 	<color name="EpisodePlot">DD202020</color>	
-	<color name="EpisodeNumber">FF474747</color>		
+	<color name="EpisodeNumber">FF474747</color>	
+
+	<!-- Viewtype colours -->
+
+	<color name="viewheader">ffb7b7b7</color>
+	<color name="viewheadershadow">ff525252</color>	
 
 	<!-- Info dialog colours -->
 
