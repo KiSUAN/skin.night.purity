@@ -12,6 +12,8 @@
 	<color name="mainbluedarker">FF015582</color>
 	<color name="viewheader">ffb7b7b7</color>
 	<color name="viewheadershadow">ff525252</color>
+	<color name="PlayerAction">ffb7b7b7</color>
+	<color name="PlayerActionShadow">ff525252</color>
 	<!-- Theme Colours -->
 
 	<color name="BackgroundColor">ccFFFFFF</color>
