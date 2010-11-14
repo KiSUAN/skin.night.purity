@@ -121,10 +121,10 @@
 					<texture>posterframeNF.png</texture>
 				</control>
 				<control type="image">
-					<posx>140</posx>
-					<posy>268</posy>
-					<width>100</width>
-					<height>76</height>
+					<posx>170</posx>
+					<posy>278</posy>
+					<width>45</width>
+					<height>45</height>
 					<texture>dialogs/movies/$INFO[ListItem.Overlay]</texture>
 					<visible>[Skin.HasSetting(movieoverlays) | Skin.HasSetting(tvoverlays)]+ !IsEmpty(ListItem.Overlay)</visible>
 				</control>
@@ -168,19 +168,19 @@
 								<colordiffuse>39FFFFFF</colordiffuse>
 							</control>
 							<control type="image">
-								<posx>62</posx>
-								<posy>134</posy>
-								<width>70</width>
-								<height>53</height>
+								<posx>83</posx>
+								<posy>141</posy>
+								<width>30</width>
+								<height>30</height>
 								<texture>dialogs/movies/$INFO[ListItem.Overlay]</texture>
 								<animation effect="fade" start="60" end="60" time="0" condition="true">Conditional</animation>
 								<visible>Container.Content(Movies) + Skin.HasSetting(movieoverlays) + !IsEmpty(ListItem.Overlay)</visible>
 							</control>
 							<control type="image">
-								<posx>62</posx>
-								<posy>134</posy>
-								<width>70</width>
-								<height>53</height>
+								<posx>83</posx>
+								<posy>141</posy>
+								<width>30</width>
+								<height>30</height>
 								<texture>dialogs/movies/$INFO[ListItem.Overlay]</texture>
 								<animation effect="fade" start="60" end="60" time="0" condition="true">Conditional</animation>
 								<visible>Container.Content(tvshows) + Skin.HasSetting(tvoverlays) + !IsEmpty(ListItem.Overlay)</visible>
@@ -240,10 +240,10 @@
 					</animation>
 				</control>
 				<control type="image">
-					<posx>147</posx>
-					<posy>283</posy>
-					<width>100</width>
-					<height>76</height>
+					<posx>179</posx>
+					<posy>292</posy>
+					<width>45</width>
+					<height>45</height>
 					<texture>dialogs/movies/$INFO[ListItem.Overlay]</texture>
 					<animation type="Focus" reversible="false">
 						<effect type="zoom" center="auto" start="100" end="110" time="300" tween="back" easing="out" />
@@ -303,18 +303,18 @@
 							<aspectratio scalediffuse="false">stretch</aspectratio>
 						</control>
 						<control type="image">
-							<posx>62</posx>
-							<posy>134</posy>
-							<width>70</width>
-							<height>53</height>
+							<posx>83</posx>
+							<posy>142</posy>
+							<width>30</width>
+							<height>30</height>
 							<texture>dialogs/movies/$INFO[ListItem.Overlay]</texture>
 							<visible>Container.Content(Movies) + Skin.HasSetting(movieoverlays) + !IsEmpty(ListItem.Overlay)</visible>
 						</control>
 						<control type="image">
-							<posx>62</posx>
-							<posy>134</posy>
-							<width>70</width>
-							<height>53</height>
+							<posx>83</posx>
+							<posy>142</posy>
+							<width>30</width>
+							<height>30</height>
 							<texture>dialogs/movies/$INFO[ListItem.Overlay]</texture>
 							<visible>Container.Content(tvshows) + Skin.HasSetting(tvoverlays) + !IsEmpty(ListItem.Overlay)</visible>
 						</control>

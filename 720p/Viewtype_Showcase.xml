@@ -109,10 +109,10 @@
 					<animation effect="slide" start="0,0" end="0,20" time="0" tween="cubic" easing="inout" condition="Control.IsVisible(58) + Container.Content(movies) + Skin.HasSetting(ShowcaseFanart)">Conditional</animation>
 				</control>
 				<control type="image">
-					<posx>102</posx>
-					<posy>331</posy>
-					<width>80</width>
-					<height>60</height>
+					<posx>123</posx>
+					<posy>335</posy>
+					<width>40</width>
+					<height>40</height>
 					<texture>dialogs/movies/$INFO[ListItem.Overlay]</texture>
 					<visible>Skin.HasSetting(movieoverlays) + !IsEmpty(ListItem.Overlay)</visible>
 				</control>
@@ -169,10 +169,10 @@
 						</animation>
 					</control>
 					<control type="image">
-						<posx>134</posx>
-						<posy>344</posy>
-						<width>90</width>
-						<height>68</height>
+						<posx>152</posx>
+						<posy>342</posy>
+						<width>50</width>
+						<height>50</height>
 						<texture>dialogs/movies/$INFO[ListItem.Overlay]</texture>
 						<animation type="Focus" reversible="false">
 							<effect type="zoom" center="90,258" start="81" end="100" time="300" tween="back" easing="out" />

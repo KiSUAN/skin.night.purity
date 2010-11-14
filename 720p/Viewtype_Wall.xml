@@ -82,10 +82,10 @@
 							<animation effect="fade" start="100" end="0" time="400" delay="2800" condition="Skin.HasSetting(Wall_fanart) + Container.Content(movies) + ![Container(54).OnNext | Container(54).OnPrevious]">Conditional</animation>
 						</control>
 						<control type="image">
-							<posx>100</posx>
-							<posy>197</posy>
-							<width>53</width>
-							<height>53</height>
+							<posx>107</posx>
+							<posy>199</posy>
+							<width>35</width>
+							<height>35</height>
 							<texture>dialogs/movies/$INFO[ListItem.Overlay]</texture>
 							<colordiffuse>79FFFFFF</colordiffuse>
 							<visible>Skin.HasSetting(movieoverlays) + Container.Content(movies) + !IsEmpty(ListItem.Overlay)</visible>
@@ -136,10 +136,10 @@
 							<animation effect="fade" start="100" end="0" time="400" delay="2800" condition="Skin.HasSetting(Wall_fanart) + Container.Content(movies) + ![Container(54).OnNext | Container(54).OnPrevious]">Conditional</animation>
 						</control>
 						<control type="image">
-							<posx>102</posx>
-							<posy>214</posy>
-							<width>80</width>
-							<height>80</height>
+							<posx>109</posx>
+							<posy>213</posy>
+							<width>55</width>
+							<height>55</height>
 							<texture>dialogs/movies/$INFO[ListItem.Overlay]</texture>
 							<animation type="Focus" reversible="false">
 								<effect type="zoom" start="80" end="100" center="auto" time="400" tween="back" easing="out" />
