@@ -310,10 +310,10 @@
 				<aspectratio scalediffuse="false">stretch</aspectratio>
 			</control>
 			<control type="image">
-				<posx>280</posx>
-				<posy>470</posy>
-				<width>100</width>
-				<height>76</height>
+				<posx>290</posx>
+				<posy>464</posy>
+				<width>60</width>
+				<height>60</height>
 				<texture>dialogs/movies/$INFO[ListItem.Overlay]</texture>
 				<animation type="Focus" reversible="false">
 					<effect type="zoom" center="145,202" start="51" end="100" time="600" tween="back" easing="out" />
