@@ -101,10 +101,10 @@
 					<aspectratio scalediffuse="false">stretch</aspectratio>
 				</control>
 				<control type="image">
-					<posx>230</posx>
-					<posy>250</posy>
-					<width>100</width>
-					<height>76</height>
+					<posx>262</posx>
+					<posy>264</posy>
+					<width>40</width>
+					<height>35</height>
 					<texture>dialogs/movies/$INFO[ListItem.Overlay]</texture>
 					<visible>Skin.HasSetting(tvoverlays) + !Container.Content(episodes) + !IsEmpty(ListItem.Overlay)</visible>
 				</control>
@@ -192,10 +192,10 @@
 					</animation>
 				</control>
 				<control type="image">
-					<posx>230</posx>
-					<posy>250</posy>
-					<width>100</width>
-					<height>76</height>
+					<posx>262</posx>
+					<posy>264</posy>
+					<width>40</width>
+					<height>35</height>
 					<texture>dialogs/movies/$INFO[ListItem.Overlay]</texture>
 					<animation type="Focus" reversible="false">
 						<effect type="zoom" center="145,202" start="51" end="100" time="600" tween="back" easing="out" />

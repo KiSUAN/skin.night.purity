@@ -158,8 +158,8 @@
 						<visible>Container.Content(Genres)</visible>
 					</control>
 					<control type="image">
-						<posx>-29</posx>
-						<posy>332</posy>
+						<posx>-31</posx>
+						<posy>331</posy>
 						<width>40</width>
 						<height>40</height>
 						<texture>dialogs/movies/$INFO[ListItem.Overlay]</texture>
@@ -299,8 +299,8 @@
 						<visible>Container.Content(Genres)</visible>
 					</control>
 					<control type="image">
-						<posx>11</posx>
-						<posy>340</posy>
+						<posx>9</posx>
+						<posy>339</posy>
 						<width>50</width>
 						<height>50</height>
 						<texture>dialogs/movies/$INFO[ListItem.Overlay]</texture>
@@ -310,8 +310,8 @@
 						<visible>Skin.HasSetting(movieoverlays) + Container.Content(movies) + !IsEmpty(ListItem.Overlay)</visible>
 					</control>
 					<control type="image">
-						<posx>11</posx>
-						<posy>340</posy>
+						<posx>9</posx>
+						<posy>339</posy>
 						<width>50</width>
 						<height>50</height>
 						<texture>dialogs/movies/$INFO[ListItem.Overlay]</texture>

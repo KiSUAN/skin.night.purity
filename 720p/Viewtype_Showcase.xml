@@ -34,14 +34,14 @@
 			<animation effect="slide" start="0,0" end="0,-70" time="1000" delay="600" tween="cubic" easing="inout" condition="Control.IsVisible(58) + Container.Content(movies) + Skin.HasSetting(ShowcaseFanart)">Conditional</animation>
 			<animation effect="slide" start="0,0" end="0,-110" time="1000" delay="600" tween="cubic" easing="inout" condition="Control.IsVisible(58) + Container.Content(movies)">Conditional</animation>
 			<posx>0</posx>
-			<posy>470</posy>
+			<posy>520</posy>
 			<width>1280</width>
 			<height>50</height>
 			<align>center</align>
-			<font>Font_Bartowski_BigMusic</font>
-			<shadowcolor>678b8b8b</shadowcolor>
-			<textcolor>678b8b8b</textcolor>
-			<label>$INFO[ListItem.label]</label>
+			<font>Font_Bartowski_Movies_Title</font>
+			<shadowcolor>viewheadershadow</shadowcolor>
+			<textcolor>viewheader</textcolor>
+			<label>[B]$INFO[ListItem.label][/B]</label>
 			<include>Animation_Bartowski_Context_Zoom</include>
 		</control>
 		
@@ -114,6 +114,7 @@
 					<width>40</width>
 					<height>40</height>
 					<texture>dialogs/movies/$INFO[ListItem.Overlay]</texture>
+					<animation effect="slide" start="0,0" end="0,20" time="0" tween="cubic" easing="inout" condition="Control.IsVisible(58) + Container.Content(movies) + Skin.HasSetting(ShowcaseFanart)">Conditional</animation>
 					<visible>Skin.HasSetting(movieoverlays) + !IsEmpty(ListItem.Overlay)</visible>
 				</control>
 			</itemlayout>

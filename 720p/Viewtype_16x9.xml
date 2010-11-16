@@ -221,6 +221,7 @@
 						<width>65</width>
 						<height>55</height>
 						<texture>dialogs/movies/$INFO[ListItem.Overlay]</texture>
+						<colordiffuse>79FFFFFF</colordiffuse>
 						<aspectratio scalediffuse="false">stretch</aspectratio>
 						<animation type="Focus" reversible="false">
 							<effect type="zoom" center="191,440" start="90" end="100" time="400" tween="back" easing="out" />
@@ -234,6 +235,7 @@
 						<width>65</width>
 						<height>55</height>
 						<texture>dialogs/movies/$INFO[ListItem.Overlay]</texture>
+						<colordiffuse>79FFFFFF</colordiffuse>
 						<aspectratio scalediffuse="false">stretch</aspectratio>
 						<animation type="Focus" reversible="false">
 							<effect type="zoom" center="191,440" start="90" end="100" time="400" tween="back" easing="out" />
