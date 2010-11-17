@@ -15,30 +15,30 @@
 		</control>
 		<control type="label"><!--Big Title-->
 			<visible>Control.IsVisible(598) + ![Container.Content(tvshows) | Container.Content(seasons) | Container.Content(movies)]</visible>
-			<animation effect="slide" start="0,0" end="0,-70" time="1000" delay="600" tween="cubic" easing="inout" condition="Control.IsVisible(598) + ![Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(movies)]">Conditional</animation>
+			<animation effect="slide" start="0,150" end="0,-70" time="1000" delay="600" tween="cubic" easing="inout" condition="Control.IsVisible(598) + ![Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(movies)]">Conditional</animation>
 			<posx>0</posx>
-			<posy>235</posy>
+			<posy>255</posy>
 			<width>1280</width>
 			<height>50</height>
 			<align>center</align>
-			<font>Font_Bartowski_BigMusic</font>
-			<shadowcolor>678b8b8b</shadowcolor>
-			<textcolor>678b8b8b</textcolor>
-			<label>$INFO[ListItem.label]</label>
+			<font>Font_Bartowski_Movies_Title</font>
+			<shadowcolor>viewheadershadow</shadowcolor>
+			<textcolor>viewheader</textcolor>
+			<label>[B]$INFO[ListItem.label][/B]</label>
 			<include>Animation_Bartowski_Context_Zoom</include>
 		</control>
 		<control type="label"><!--Big Title-->
 			<visible>Control.IsVisible(598) + Container.Content(movies) + IsEmpty(ListItem.Title) + !Window.IsVisible(VideoFiles)</visible>
-			<animation effect="slide" start="0,0" end="0,-70" time="1000" delay="600" tween="cubic" easing="inout" condition="Control.IsVisible(598) + Container.Content(movies) + IsEmpty(ListItem.Title)">Conditional</animation>
+			<animation effect="slide" start="0,150" end="0,-70" time="1000" delay="600" tween="cubic" easing="inout" condition="Control.IsVisible(598) + Container.Content(movies) + IsEmpty(ListItem.Title)">Conditional</animation>
 			<posx>0</posx>
-			<posy>235</posy>
+			<posy>255</posy>
 			<width>1280</width>
 			<height>50</height>
 			<align>center</align>
-			<font>Font_Bartowski_BigMusic</font>
-			<shadowcolor>678b8b8b</shadowcolor>
-			<textcolor>678b8b8b</textcolor>
-			<label>$LOCALIZE[31235]</label>
+			<font>Font_Bartowski_Movies_Title</font>
+			<shadowcolor>viewheadershadow</shadowcolor>
+			<textcolor>viewheader</textcolor>
+			<label>[B]$LOCALIZE[31235][/B]</label>
 			<include>Animation_Bartowski_Context_Zoom</include>
 		</control>
 		
@@ -90,7 +90,7 @@
 						<posy>131</posy>
 						<width>162</width>
 						<height>241</height>
-						<texture>movie-poster/posterview_diffuse.png</texture>
+						<texture>movie-poster/posterview_diffuse_2.png</texture>
 					</control>
 					<control type="image">
 						<posx>-149</posx>
@@ -174,7 +174,7 @@
 						<posy>90</posy>
 						<width>211</width>
 						<height>300</height>
-						<texture>movie-poster/posterview_diffuse.png</texture>
+						<texture>movie-poster/posterview_diffuse_2.png</texture>
 						<fadetime>200</fadetime>
 						<aspectratio scalediffuse="false">stretch</aspectratio>
 						<animation type="Focus" reversible="false">

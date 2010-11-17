@@ -37,16 +37,16 @@
 		</control>
 		<control type="label"><!--Big Title-->
 			<visible>Control.IsVisible(55) + Container.Content(movies) + IsEmpty(ListItem.Title) + !Window.IsVisible(VideoFiles)</visible>
-			<animation effect="slide" start="0,0" end="0,-70" time="1000" delay="600" tween="cubic" easing="inout" condition="Control.IsVisible(55) + Container.Content(movies) + IsEmpty(ListItem.Title)">Conditional</animation>
+			<animation effect="slide" start="0,150" end="0,-70" time="1000" delay="600" tween="cubic" easing="inout" condition="Control.IsVisible(55) + Container.Content(movies) + IsEmpty(ListItem.Title)">Conditional</animation>
 			<posx>0</posx>
-			<posy>235</posy>
+			<posy>255</posy>
 			<width>1280</width>
 			<height>50</height>
 			<align>center</align>
-			<font>Font_Bartowski_BigMusic</font>
-			<shadowcolor>678b8b8b</shadowcolor>
-			<textcolor>678b8b8b</textcolor>
-			<label>$LOCALIZE[31235]</label>
+			<font>Font_Bartowski_Movies_Title</font>
+			<textcolor>viewheader</textcolor>
+			<shadowcolor>viewheadershadow</shadowcolor>
+			<label>[B]$LOCALIZE[31235][/B]</label>
 			<include>Animation_Bartowski_Context_Zoom</include>
 		</control>
 		
