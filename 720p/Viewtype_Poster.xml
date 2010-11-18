@@ -461,7 +461,7 @@
 		<width>600</width>
 		<include>Animation_ZoomInZoomOut</include>
 		<animation effect="slide" start="0,600" end="0,0" time="400" delay="3400" condition="Container.Content(movies) + !Skin.HasSetting(Poster_Fanart) + ![Container(55).OnNext | Container(55).OnPrevious]">Conditional</animation>
-		<visible>Control.IsVisible(55) + !SubString(ListItem.Icon,DefaultFolderBack.png,Left) + [Container.Content(tvshows) | Container.Content(seasons)] + !Skin.HasSetting(Poster_Fanart) + !Player.HasVideo</visible>
+		<visible>Control.IsVisible(55) + Skin.HasSetting(PosterPlus) + !SubString(ListItem.Icon,DefaultFolderBack.png,Left) + Container.Content(movies) + !Skin.HasSetting(Poster_Fanart)</visible>
 			<control type="label">
 				<width>600</width>
 				<height>20</height>
