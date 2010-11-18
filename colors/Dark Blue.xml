@@ -8,8 +8,6 @@
 	<color name="blue">FF0055be</color>
 	<color name="selected">FFEB9E17</color>
 	<color name="dialogheader">DDced8da</color>
-	<color name="mainblue">FF015582</color>
-	<color name="mainbluedarker">FF015582</color>
 
 	<!-- Theme Colours -->
 
@@ -81,8 +79,6 @@
 	<color name="OSDStatusBackground">11FFFFFF</color>
 	<color name="OSDStatus">33FFFFFF</color>
 	<color name="OSDPlayingDuration">FF474747</color>
-	<color name="PlayerAction">ffb7b7b7</color>
-	<color name="PlayerActionShadow">ff525252</color>
 
 	<!-- Window menu colours -->
 
@@ -95,11 +91,6 @@
 	<color name="EpisodeLabelF">FF474747</color>	
 	<color name="EpisodePlot">DD202020</color>	
 	<color name="EpisodeNumber">FF474747</color>	
-
-	<!-- Viewtype colours -->
-
-	<color name="viewheader">ffb7b7b7</color>
-	<color name="viewheadershadow">ff525252</color>	
 
 	<!-- Info dialog colours -->
 
@@ -159,5 +150,18 @@
 	<color name="FM_ListUnfocused">dc777777</color>
 	<color name="FM_ListFocusSelected">CCcccccc</color>
 	<color name="FM_Focusbar">ff777777</color>
+	
+<!-- Night easier to mod colors 11-16 -->
+
+	<color name="mainblue">FF015582</color>
+	<color name="mainbluedarker">FF015582</color>
+	<color name="highlight_selection">FFFFFFFF</color>
+	<color name="poster_glow">FFFFFFFF</color>
+	<color name="episode_view_unfocused">ff959494</color>
+	<color name="episode_view_focus">FFffffff</color>
+	<color name="viewheader">ffb7b7b7</color>
+	<color name="viewheadershadow">ff525252</color>	
+	<color name="PlayerAction">ffb7b7b7</color>
+	<color name="PlayerActionShadow">ff525252</color>
 
 </colors>

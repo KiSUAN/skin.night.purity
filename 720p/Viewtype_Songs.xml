@@ -64,7 +64,7 @@
 					<visible>!Container.Content(songs)</visible>
 				</control>
 			</itemlayout>
-			<animation effect="slide" start="0,0" end="-40,0" time="400" tween="cubic" easing="inout" condition="Control.HasFocus(62)">Conditional</animation>	
+			<animation effect="slide" start="0,0" end="-40,0" time="400" tween="cubic" easing="inout" condition="Control.HasFocus(62)">Conditional</animation>
 			<focusedlayout width="1210" height="36">
 				<control type="image">
 					<posx>0</posx>
@@ -83,7 +83,7 @@
 					<height>46</height>
 					<aligny>center</aligny>
 					<font>Font_Bartowski_List_Main</font>
-					<textcolor>ffffffff</textcolor>
+					<textcolor>white</textcolor>
 					<label>$INFO[ListItem.Label]</label>
 					<visible>!Container.Content(songs)</visible>
 				</control>
@@ -94,7 +94,7 @@
 					<height>46</height>
 					<aligny>center</aligny>
 					<font>Font_Bartowski_List_Main</font>
-					<label>[COLOR white]$INFO[ListItem.TrackNumber]$INFO[ListItem.Title,. ]$INFO[ListItem.Duration, - ][/COLOR]</label>				
+					<label>[COLOR white]$INFO[ListItem.TrackNumber]$INFO[ListItem.Title,. ]$INFO[ListItem.Duration, - ][/COLOR]</label>
 					<visible>Container.Content(songs)</visible>
 				</control>
 			</focusedlayout>
@@ -128,7 +128,7 @@
 			<height>50</height>
 			<aligny>center</aligny>
 			<font>Font_Bartowski_Movies_Duration</font>
-			<textcolor>ffffffff</textcolor>
+			<textcolor>white</textcolor>
 			<label>$INFO[ListItem.artist]</label>
 		</control>
 		<control type="label">
@@ -138,7 +138,7 @@
 			<height>50</height>
 			<aligny>center</aligny>
 			<font>Font_Bartowski_Movies_Duration</font>
-			<textcolor>ffffffff</textcolor>
+			<textcolor>white</textcolor>
 			<label>$INFO[ListItem.year]</label>
 		</control>
 		<control type="image" id="9171">
@@ -195,7 +195,7 @@
 			<aligny>center</aligny>
 			<font>Font_RSS_Big</font>
 			<textcolor>mainblue</textcolor>
-			<label>[B]$LOCALIZE[21898]:[/B] [COLOR=ffffffff]$INFO[ListItem.Property(Artist_YearsActive)][/COLOR]</label>
+			<label>[B]$LOCALIZE[21898]:[/B] [COLOR=white]$INFO[ListItem.Property(Artist_YearsActive)][/COLOR]</label>
 			<visible>!IsEmpty(ListItem.Property(Artist_YearsActive))</visible>
 		</control>
 		<control type="label">
@@ -206,7 +206,7 @@
 			<aligny>center</aligny>
 			<font>Font_RSS_Big</font>
 			<textcolor>mainblue</textcolor>
-			<label>[B]$LOCALIZE[21900]:[/B] [COLOR=ffffffff]$INFO[ListItem.Property(Artist_Born)][/COLOR]</label>
+			<label>[B]$LOCALIZE[21900]:[/B] [COLOR=white]$INFO[ListItem.Property(Artist_Born)][/COLOR]</label>
 			<visible>!IsEmpty(ListItem.Property(Artist_Born))</visible>
 		</control>
 		<control type="label">
@@ -217,7 +217,7 @@
 			<aligny>center</aligny>
 			<font>Font_RSS_Big</font>
 			<textcolor>mainblue</textcolor>
-			<label>[B]$LOCALIZE[21900]:[/B] [COLOR=ffffffff]$INFO[ListItem.Property(Artist_Formed)][/COLOR]</label>
+			<label>[B]$LOCALIZE[21900]:[/B] [COLOR=white]$INFO[ListItem.Property(Artist_Formed)][/COLOR]</label>
 			<visible>!IsEmpty(ListItem.Property(Artist_Formed))</visible>
 		</control>
 		<control type="label">
@@ -228,7 +228,7 @@
 			<aligny>center</aligny>
 			<font>Font_RSS_Big</font>
 			<textcolor>mainblue</textcolor>
-			<label>[B]$LOCALIZE[515]:[/B] [COLOR=ffffffff]$INFO[ListItem.Property(Artist_Genre)][/COLOR]</label>
+			<label>[B]$LOCALIZE[515]:[/B] [COLOR=white]$INFO[ListItem.Property(Artist_Genre)][/COLOR]</label>
 			<visible>!IsEmpty(ListItem.Property(Artist_Genre))</visible>
 		</control>
 	</control>
@@ -240,7 +240,7 @@
 		<width>540</width>
 		<height>246</height>
 		<font>Font_Bartowski_Showcase_plot</font>
-		<textcolor>ffffffff</textcolor>
+		<textcolor>white</textcolor>
 		<label>$INFO[ListItem.Property(Artist_Description)]</label>
 		<align>justify</align>
 		<autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
@@ -254,7 +254,7 @@
 		<width>540</width>
 		<height>318</height>
 		<font>Font_Bartowski_Showcase_plot</font>
-		<textcolor>ffffffff</textcolor>
+		<textcolor>white</textcolor>
 		<label>$INFO[ListItem.Property(Artist_Description)]</label>
 		<align>justify</align>
 		<autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>

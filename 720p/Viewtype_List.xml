@@ -101,7 +101,7 @@
 						<texture>list/3d_back_overlay1.png</texture>
 						<fadetime>200</fadetime>
 						<aspectratio scalediffuse="false">stretch</aspectratio>
-						<visible>!IsEmpty(ListItem.Title) + [Container.Content(episodes) | Window.IsActive(videoplaylist)]</visible>
+						<visible>!SubString(ListItem.Icon,DefaultFolderBack.png,Left) + [Container.Content(episodes) | Window.IsActive(videoplaylist)]</visible>
 					</control>
 					<control type="label"><!-- Episode Description -->
 						<posx>5</posx>
@@ -110,10 +110,10 @@
 						<height>50</height>
 						<align>center</align>
 						<font>Font_Landscape_TitleTVShow</font>
-						<textcolor>ffffffff</textcolor>
+						<textcolor>white</textcolor>
 						<label>$INFO[ListItem.Label]</label>
 						<animation effect="fade" start="60" end="60" time="0" condition="stringcompare(ListItem.Overlay,OverlayWatched.png)">Conditional</animation>
-						<visible>!IsEmpty(ListItem.Title) + [Container.Content(episodes) | Window.IsActive(videoplaylist)]</visible>
+						<visible>!SubString(ListItem.Icon,DefaultFolderBack.png,Left) + [Container.Content(episodes) | Window.IsActive(videoplaylist)]</visible>
 					</control>
 					
 					<control type="label"><!-- Episode Description -->
@@ -123,10 +123,10 @@
 						<height>50</height>
 						<align>center</align>
 						<font>Font_Landscape_TitleTVShow</font>
-						<textcolor>ffffffff</textcolor>
+						<textcolor>white</textcolor>
 						<label>$INFO[ListItem.Label]</label>
 						<animation effect="rotatex" start="180" end="180" center="330" time="0" condition="true">Conditional</animation>
-						<visible>!IsEmpty(ListItem.Title) + [Container.Content(episodes) | Window.IsActive(videoplaylist)]</visible>
+						<visible>!SubString(ListItem.Icon,DefaultFolderBack.png,Left) + [Container.Content(episodes) | Window.IsActive(videoplaylist)]</visible>
 					</control>
 					<control type="image">
 						<posx>-150</posx>
@@ -166,7 +166,7 @@
 						<texture flipy="true">list/3d_back_overlay1.png</texture>
 						<fadetime>200</fadetime>
 						<aspectratio scalediffuse="false">stretch</aspectratio>
-						<visible>!IsEmpty(ListItem.Title) + [Container.Content(episodes) | Window.IsActive(videoplaylist)]</visible>
+						<visible>!SubString(ListItem.Icon,DefaultFolderBack.png,Left) + [Container.Content(episodes) | Window.IsActive(videoplaylist)]</visible>
 					</control>
 					<control type="image">
 						<visible>Container.Content(episodes)</visible>
@@ -336,7 +336,7 @@
 						<animation type="Focus" reversible="false">
 							<effect type="zoom" center="60,238" start="80" end="100" time="600" tween="back" easing="out" />
 						</animation>
-						<visible>!IsEmpty(ListItem.Title) + [Container.Content(episodes) | Window.IsActive(videoplaylist)]</visible>
+						<visible>!SubString(ListItem.Icon,DefaultFolderBack.png,Left) + [Container.Content(episodes) | Window.IsActive(videoplaylist)]</visible>
 					</control>
 					<control type="image">
 						<visible>Container.Content(episodes)</visible>
@@ -369,13 +369,13 @@
 						<height>50</height>
 						<align>center</align>
 						<font>Font_Bartowski_Press_S</font>
-						<textcolor>ffffffff</textcolor>
+						<textcolor>white</textcolor>
 						<label>$INFO[ListItem.Label]</label>
 						<animation effect="fade" start="60" end="60" time="0" condition="stringcompare(ListItem.Overlay,OverlayWatched.png)">Conditional</animation>
 						<animation type="Focus" reversible="false">
 							<effect type="zoom" center="60,238" start="80" end="100" time="600" tween="back" easing="out" />
 						</animation>
-						<visible>!IsEmpty(ListItem.Title) + [Container.Content(episodes) | Window.IsActive(videoplaylist)]</visible>
+						<visible>!SubString(ListItem.Icon,DefaultFolderBack.png,Left) + [Container.Content(episodes) | Window.IsActive(videoplaylist)]</visible>
 					</control>
 					<control type="label"><!-- Episode Description -->
 						<posx>56</posx>
@@ -384,13 +384,13 @@
 						<height>50</height>
 						<align>center</align>
 						<font>Font_Bartowski_Press_S</font>
-						<textcolor>ffffffff</textcolor>
+						<textcolor>white</textcolor>
 						<label>$INFO[ListItem.Label]</label>
 						<animation effect="rotatex" start="180" end="180" center="350" time="0" condition="true">Conditional</animation>
 						<animation type="Focus" reversible="false">
 							<effect type="fade" center="60,238" start="0" end="100" time="300" delay="300" tween="back" easing="out" />
 						</animation>
-						<visible>!IsEmpty(ListItem.Title) + [Container.Content(episodes) | Window.IsActive(videoplaylist)]</visible>
+						<visible>!SubString(ListItem.Icon,DefaultFolderBack.png,Left) + [Container.Content(episodes) | Window.IsActive(videoplaylist)]</visible>
 					</control>
 					<!--<control type="textbox">
 						<visible>ControlGroup(28374).HasFocus + Container.Content(episodes) + Skin.HasSetting(3dLandscape_Fanart)</visible>
@@ -399,7 +399,7 @@
 						<width>384</width>
 						<height>190</height>
 						<font>Font_KeyboardKeys_Plot</font>
-						<textcolor>ffffffff</textcolor>
+						<textcolor>white</textcolor>
 						<label>$INFO[ListItem.Plot]</label>
 						<align>justify</align>
 						<autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
@@ -419,7 +419,7 @@
 						<animation type="Focus" reversible="false">
 							<effect type="zoom" center="60,238" start="80" end="100" time="600" tween="back" easing="out" />
 						</animation>
-						<visible>!IsEmpty(ListItem.Title) + [Container.Content(episodes) | Window.IsActive(videoplaylist)]</visible>
+						<visible>!SubString(ListItem.Icon,DefaultFolderBack.png,Left) + [Container.Content(episodes) | Window.IsActive(videoplaylist)]</visible>
 					</control>
 				</control>	
 			</focusedlayout>
@@ -546,7 +546,7 @@
 					<align>justify</align>
 					<info>ListItem.Plot</info>
 					<font>Font_3dland_plot</font>
-					<textcolor>ffffffff</textcolor>
+					<textcolor>white</textcolor>
 					<autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
 					<animation effect="slide" start="0,0" end="0,-26" time="0" condition="IsEmpty(ListItem.Year)">Conditional</animation>
 					<animation effect="slide" start="0,0" end="0,-52" time="0" condition="IsEmpty(ListItem.genre) + IsEmpty(ListItem.Year)">Conditional</animation>
@@ -556,7 +556,7 @@
 			<posx>0</posx>
 			<posy>30</posy><!-- 240 -->
 			<include>Animation_Viewtype_3dland_Lefttop</include>
-			<visible>Control.IsVisible(53) + !Skin.HasSetting(3dLandscape_Fanart) + [Container.Content(episodes) | Window.IsActive(videoplaylist)] + !IsEmpty(ListItem.Title)</visible>
+			<visible>Control.IsVisible(53) + !Skin.HasSetting(3dLandscape_Fanart) + [Container.Content(episodes) | Window.IsActive(videoplaylist)] + !SubString(ListItem.Icon,DefaultFolderBack.png,Left)</visible>
 				<control type="label">
 					<posx>20</posx>
 					<posy>55</posy>
@@ -564,7 +564,7 @@
 					<height>50</height>
 					<aligny>center</aligny>
 					<font>Font_TVShow</font>
-					<textcolor>ffffffff</textcolor>
+					<textcolor>white</textcolor>
 					<label>$LOCALIZE[20373] $INFO[ListItem.Season]/$LOCALIZE[20359] $INFO[ListItem.Episode]</label>
 				</control>
 				<control type="textbox">
@@ -576,7 +576,7 @@
 					<align>justify</align>
 					<info>ListItem.Plot</info>
 					<font>Font_3dland_plot</font>
-					<textcolor>ffffffff</textcolor>
+					<textcolor>white</textcolor>
 					<autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
 				</control>
 				<control type="label">
@@ -586,12 +586,12 @@
 					<height>50</height>
 					<aligny>center</aligny>
 					<font>Font_TVShow</font>
-					<textcolor>ffffffff</textcolor>
+					<textcolor>white</textcolor>
 					<label>$LOCALIZE[31231]: $INFO[ListItem.Date]</label>
 				</control>
 		</control>
 	<control type="group">
-		<visible>Control.IsVisible(53) + !Skin.HasSetting(3dLandscape_Fanart) + !Window.IsActive(videoplaylist) + !IsEmpty(ListItem.Title)</visible>
+		<visible>Control.IsVisible(53) + !Skin.HasSetting(3dLandscape_Fanart) + !Window.IsActive(videoplaylist) + !SubString(ListItem.Icon,DefaultFolderBack.png,Left)</visible>
 		<posx>20</posx>
 		<posy>90</posy>
 		<include>Animation_Viewtype_3dland_Lefttop</include>

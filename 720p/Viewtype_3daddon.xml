@@ -295,7 +295,7 @@
 			<height>50</height>
 			<aligny>center</aligny>
 			<font>Font_Bartowski_Movies_Duration</font>
-			<textcolor>ffffffff</textcolor>
+			<textcolor>white</textcolor>
 			<label>$INFO[ListItem.artist]</label>
 		</control>
 		<control type="label">
@@ -305,7 +305,7 @@
 			<height>50</height>
 			<aligny>center</aligny>
 			<font>Font_Bartowski_Movies_Duration</font>
-			<textcolor>ffffffff</textcolor>
+			<textcolor>white</textcolor>
 			<label>$INFO[ListItem.year]</label>
 		</control>
 	</control>
@@ -331,7 +331,7 @@
 			<height>50</height>
 			<aligny>center</aligny>
 			<font>Font_Bartowski_Movies_Duration</font>
-			<textcolor>ffffffff</textcolor>
+			<textcolor>white</textcolor>
 			<label>$INFO[ListItem.Label2]</label>
 		</control>
 	</control>
