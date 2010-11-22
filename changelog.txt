@@ -1,0 +1,47 @@
+11/17/2010
+  -Fixed Jukebox label error
+  -More converting Poster glows to white
+  -Added a Movie set flag
+  -Added a banner.jpg option
+
+11/16/2010
+  -behind the scenes cleanup
+  -change all poster glows/highlights to white
+  -started to organize my /colors/default.xml for easier modding
+
+11/13/2010
+  -*Trial Balloon - New Flags*
+  -Bumped spacing on title on Episode view up a few pixels
+  -Changed spacing on the list in Song view
+
+11/9/2010
+  -Moved extras - Genre icons/fanart - out of /media to top of skin.night folder
+  -Added music Genre fanart support
+
+11/6/2010
+  -German Flag Support
+  -Little more Launcher Rom support, 3dLandscape now available
+
+11/4/2010
+  -Added logo on episode level of "Info" screen
+  -Added 'Next Aired on "Info" screen
+  -Added plot on Season level of "Poster Half"
+  -Added French and Spanish translations
+
+11/2/2010
+  -Fixed 'Info' screen cast and label overlap issues
+  -*Trial Balloon* Poster Half view
+  -updated French flags
+
+10/30/2010
+  -Added more submenu fav and playlists options
+  -Added option for titles on Showcase w/fanart option enabled
+  -Added smaller, wall-ish thumb view for "Panel" view 
+  -Freshed up the 'info' screens
+
+10/25/2010
+  -Some more fine tuning for TvTune Script
+  -Added French flag support
+
+10/24/2010
+  -Added support for TvTune Script
