@@ -222,14 +222,14 @@
 		<width>211</width>
 		<height>192</height>
 		<texture diffuse="music/music_cover_diffuse.png">$INFO[MusicPlayer.Cover]</texture>
-		<visible>Control.IsVisible(54) + Player.HasMedia</visible>
+		<visible>Control.IsVisible(54) + Player.HasMedia + IsEmpty($INFO[Player.FolderPath]cdart.png)</visible>
 	</control>
 	<control type="image">
 		<posx>565</posx>
 		<posy>488</posy>
 		<width>188</width>
 		<height>170</height>
-		<texture>$INFO[Player.FolderPath]cdart.png</texture>
+		<texture fallback="music/no_cd2.png">$INFO[Player.FolderPath]cdart.png</texture>
 		<include>cdartspinjukebox</include>
 		<visible>Control.IsVisible(54) + Player.HasMedia</visible>
 	</control>
