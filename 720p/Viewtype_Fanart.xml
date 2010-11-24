@@ -121,6 +121,14 @@
 					<texture>posterframeNF.png</texture>
 				</control>
 				<control type="image">
+					<posx>168</posx>
+					<posy>278</posy>
+					<width>40</width>
+					<height>35</height>
+					<texture>dialogs/movies/movieset.png</texture>
+					<visible>Container.Content(movies) + IsEmpty(ListItem.foldername) + !substring(Container.Listitem.Label,..,left) + !Container.Content(genres) + Window.IsActive(videolibrary)</visible>
+				</control>
+				<control type="image">
 					<posx>170</posx>
 					<posy>278</posy>
 					<width>45</width>
@@ -166,6 +174,15 @@
 								<height>184</height>
 								<texture>posterframeF.png</texture>
 								<colordiffuse>39FFFFFF</colordiffuse>
+							</control>
+							<control type="image">
+								<posx>87</posx>
+								<posy>149</posy>
+								<width>21</width>
+								<height>16</height>
+								<texture>dialogs/movies/movieset.png</texture>
+								<animation effect="fade" start="60" end="60" time="0" condition="true">Conditional</animation>
+								<visible>Container.Content(movies) + IsEmpty(ListItem.foldername) + !substring(Container.Listitem.Label,..,left) + !Container.Content(genres) + Window.IsActive(videolibrary)</visible>
 							</control>
 							<control type="image">
 								<posx>83</posx>
@@ -240,6 +257,17 @@
 					</animation>
 				</control>
 				<control type="image">
+					<posx>174</posx>
+					<posy>287</posy>
+					<width>42</width>
+					<height>39</height>
+					<texture>dialogs/movies/movieset.png</texture>
+					<animation type="Focus" reversible="false">
+						<effect type="zoom" center="auto" start="100" end="110" time="300" tween="back" easing="out" />
+					</animation>
+					<visible>Container.Content(movies) + IsEmpty(ListItem.foldername) + !substring(Container.Listitem.Label,..,left) + !Container.Content(genres) + Window.IsActive(videolibrary)</visible>
+				</control>
+				<control type="image">
 					<posx>179</posx>
 					<posy>292</posy>
 					<width>45</width>
@@ -301,6 +329,14 @@
 							<texture background="true" diffuse="postermatteNF.png">$INFO[ListItem.Icon]</texture>
 							<fadetime>200</fadetime>
 							<aspectratio scalediffuse="false">stretch</aspectratio>
+						</control>
+						<control type="image">
+							<posx>86</posx>
+							<posy>147</posy>
+							<width>23</width>
+							<height>18</height>
+							<texture>dialogs/movies/movieset.png</texture>
+							<visible>Container.Content(movies) + IsEmpty(ListItem.foldername) + !substring(Container.Listitem.Label,..,left) + !Container.Content(genres) + Window.IsActive(videolibrary)</visible>
 						</control>
 						<control type="image">
 							<posx>83</posx>

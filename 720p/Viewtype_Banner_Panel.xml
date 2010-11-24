@@ -156,7 +156,7 @@
 					<animation type="Focus" reversible="false">
 						<effect type="zoom" center="auto" start="51" end="104" time="600" tween="back" easing="out" />
 					</animation>
-					<animation effect="slide" start="0,-2" end="-10,-2" time="0" tween="cubic" easing="inout" condition="Control.HasFocus(5920) | Control.HasFocus(20) | Control.HasFocus(3) | Control.HasFocus(4) | Control.HasFocus(14) | Control.HasFocus(21) | Control.HasFocus(8)">Conditional</animation>
+					<animation effect="slide" start="0,-2" end="-10,-2" time="0" tween="cubic" easing="inout" condition="Control.HasFocus(5920) | Control.HasFocus(20) | Control.HasFocus(3) | Control.HasFocus(4) | Control.HasFocus(14) | Control.HasFocus(21) | Control.HasFocus(8) | Control.HasFocus(3110) | Control.HasFocus(3111) | Control.HasFocus(3112) | Control.HasFocus(3113) | Control.HasFocus(3114) | Control.HasFocus(3115) | Control.HasFocus(3117)">Conditional</animation>
 					<visible>[Skin.HasSetting(movieoverlays) | Skin.HasSetting(tvoverlays)]+ !IsEmpty(ListItem.Overlay)</visible>
 				</control>
 				<control type="image">

@@ -126,10 +126,10 @@
 					<visible>Window.IsActive(videofiles)</visible>
 				</control>
 				<control type="image">
-					<posx>6</posx>
+					<posx>10</posx>
 					<posy>6</posy>
-					<width>47</width>
-					<height>36</height>
+					<width>35</width>
+					<height>35</height>
 					<texture>dialogs/movies/movieset.png</texture>
 					<visible>Container.Content(movies) + IsEmpty(ListItem.foldername) + !substring(Container.Listitem.Label,..,left) + !Container.Content(genres) + Window.IsActive(videolibrary)</visible>
 				</control>
@@ -241,10 +241,10 @@
 					<visible>Window.IsActive(videofiles)</visible>
 				</control>
 				<control type="image">
-					<posx>6</posx>
+					<posx>10</posx>
 					<posy>6</posy>
-					<width>47</width>
-					<height>36</height>
+					<width>35</width>
+					<height>35</height>
 					<texture>dialogs/movies/movieset.png</texture>
 					<visible>Container.Content(movies) + IsEmpty(ListItem.foldername) + !substring(Container.Listitem.Label,..,left) + !Container.Content(genres) + Window.IsActive(videolibrary)</visible>
 				</control>

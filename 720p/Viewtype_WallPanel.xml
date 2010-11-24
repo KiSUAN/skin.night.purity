@@ -287,10 +287,10 @@
 					<animation effect="slide" start="0,0" end="20,0" time="0" condition="[stringcompare(ListItem.Overlay,OverlayWatched.png) + Skin.HasSetting(movieoverlays)] | [Container.Content(movies) + IsEmpty(ListItem.foldername) + !substring(Container.Listitem.Label,..,left) + !Container.Content(genres) + Window.IsActive(videolibrary)]">Conditional</animation>
 				</control>
 				<control type="image">
-					<posx>0</posx>
-					<posy>14</posy>
-					<width>52</width>
-					<height>40</height>
+					<posx>10</posx>
+					<posy>19</posy>
+					<width>30</width>
+					<height>30</height>
 					<texture>dialogs/movies/movieset.png</texture>
 					<visible>Container.Content(movies) + IsEmpty(ListItem.foldername) + !substring(Container.Listitem.Label,..,left) + !Container.Content(genres) + Window.IsActive(videolibrary)</visible>
 				</control>
@@ -328,10 +328,10 @@
 					<animation effect="slide" start="0,0" end="20,0" time="0" condition="[stringcompare(ListItem.Overlay,OverlayWatched.png) + Skin.HasSetting(movieoverlays)] | [Container.Content(movies) + IsEmpty(ListItem.foldername) + !substring(Container.Listitem.Label,..,left) + !Container.Content(genres) + Window.IsActive(videolibrary)]">Conditional</animation>
 				</control>
 				<control type="image">
-					<posx>0</posx>
-					<posy>14</posy>
-					<width>52</width>
-					<height>40</height>
+					<posx>10</posx>
+					<posy>19</posy>
+					<width>30</width>
+					<height>30</height>
 					<texture>dialogs/movies/movieset.png</texture>
 					<visible>Container.Content(movies) + IsEmpty(ListItem.foldername) + !substring(Container.Listitem.Label,..,left) + !Container.Content(genres) + Window.IsActive(videolibrary)</visible>
 				</control>

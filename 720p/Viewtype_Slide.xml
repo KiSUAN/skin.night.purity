@@ -63,10 +63,10 @@
 							<visible>[Skin.HasSetting(movieoverlays) | Skin.HasSetting(tvoverlays)] + !IsEmpty(ListItem.Overlay)</visible>
 						</control>
 						<control type="image">
-							<posx>154</posx>
-							<posy>268</posy>
-							<width>80</width>
-							<height>60</height>
+							<posx>175</posx>
+							<posy>278</posy>
+							<width>37</width>
+							<height>30</height>
 							<texture>dialogs/movies/movieset.png</texture>
 						<visible>Container.Content(movies) + IsEmpty(ListItem.foldername) + !substring(Container.Listitem.Label,..,left) + !Container.Content(genres) + Window.IsActive(videolibrary)</visible>
 					</control>
@@ -144,10 +144,10 @@
 				<visible>[Skin.HasSetting(movieoverlays) | Skin.HasSetting(tvoverlays)] + !IsEmpty(ListItem.Overlay)</visible>
 			</control>
 			<control type="image">
-				<posx>256</posx>
+				<posx>270</posx>
 				<posy>418</posy>
-				<width>100</width>
-				<height>76</height>
+				<width>60</width>
+				<height>50</height>
 				<texture>dialogs/movies/movieset.png</texture>
 				<visible>Container.Content(movies) + IsEmpty(ListItem.foldername) + !substring(Container.Listitem.Label,..,left) + !Container.Content(genres) + Window.IsActive(videolibrary)</visible>
 			</control>

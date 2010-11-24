@@ -82,10 +82,10 @@
 							<animation effect="fade" start="100" end="0" time="400" delay="2800" condition="Skin.HasSetting(Wall_fanart) + Container.Content(movies) + ![Container(54).OnNext | Container(54).OnPrevious]">Conditional</animation>
 						</control>
 						<control type="image">
-							<posx>92</posx>
-							<posy>194</posy>
-							<width>70</width>
-							<height>53</height>
+							<posx>113</posx>
+							<posy>202</posy>
+							<width>28</width>
+							<height>28</height>
 							<colordiffuse>79FFFFFF</colordiffuse>
 							<texture>dialogs/movies/movieset.png</texture>
 							<visible>Container.Content(movies) + IsEmpty(ListItem.foldername) + !substring(Container.Listitem.Label,..,left) + !Container.Content(genres) + Window.IsActive(videolibrary)</visible>
@@ -146,10 +146,10 @@
 							<animation effect="fade" start="100" end="0" time="400" delay="2800" condition="Skin.HasSetting(Wall_fanart) + Container.Content(movies) + ![Container(54).OnNext | Container(54).OnPrevious]">Conditional</animation>
 						</control>
 						<control type="image">
-							<posx>104</posx>
-							<posy>224</posy>
-							<width>80</width>
-							<height>60</height>
+							<posx>119</posx>
+							<posy>220</posy>
+							<width>40</width>
+							<height>40</height>
 							<texture>dialogs/movies/movieset.png</texture>
 							<animation type="Focus" reversible="false">
 								<effect type="zoom" start="80" end="100" center="auto" time="400" tween="back" easing="out" />

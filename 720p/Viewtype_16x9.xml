@@ -97,6 +97,15 @@
 						<posy>273</posy>
 						<width>45</width>
 						<height>35</height>
+						<texture>dialogs/movies/movieset.png</texture>
+						<aspectratio scalediffuse="false">stretch</aspectratio>
+						<visible>Container.Content(movies) + IsEmpty(ListItem.foldername) + !substring(Container.Listitem.Label,..,left) + !Container.Content(genres) + Window.IsActive(videolibrary)</visible>
+					</control>
+					<control type="image">
+						<posx>286</posx>
+						<posy>273</posy>
+						<width>45</width>
+						<height>35</height>
 						<texture>dialogs/movies/$INFO[ListItem.Overlay]</texture>
 						<aspectratio scalediffuse="false">stretch</aspectratio>
 						<visible>Skin.HasSetting(tvoverlays) + !IsEmpty(ListItem.Overlay) + [Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)]</visible>
@@ -215,6 +224,20 @@
 							<effect type="zoom" center="191,440" start="90" end="100" time="400" tween="back" easing="out" />
 							<effect type="fade" start="80" end="100" time="400" />
 						</animation>
+					</control>
+					<control type="image">
+						<posx>528</posx>
+						<posy>396</posy>
+						<width>75</width>
+						<height>65</height>
+						<texture>dialogs/movies/movieset.png</texture>
+						<colordiffuse>79FFFFFF</colordiffuse>
+						<aspectratio scalediffuse="false">stretch</aspectratio>
+						<animation type="Focus" reversible="false">
+							<effect type="zoom" center="191,440" start="90" end="100" time="400" tween="back" easing="out" />
+							<effect type="fade" start="80" end="100" time="400" />
+						</animation>
+						<visible>Container.Content(movies) + IsEmpty(ListItem.foldername) + !substring(Container.Listitem.Label,..,left) + !Container.Content(genres) + Window.IsActive(videolibrary)</visible>
 					</control>
 					<control type="image">
 						<posx>537</posx>
