@@ -145,20 +145,13 @@
 			<label>-</label>
 			<textcolor>TextSelected</textcolor>
 			<focusedcolor>white</focusedcolor>
+			<texturefocus>confluence/button-focus-big.png</texturefocus>
 			<width>500</width>
 			<align>left</align>
 			<onup>10</onup>
 			<onleft>12</onleft>
 			<onright>18</onright>
 			<ondown>18</ondown>
-		</control>
-		<control type="image">
-			<posx>0</posx>
-			<posy>358</posy>
-			<width>500</width>
-			<height>30</height>
-			<texture>confluence/button-focus-big.png</texture>
-			<visible>Control.HasFocus(12)</visible>
 		</control>
 
 		<control type="button" id="20">

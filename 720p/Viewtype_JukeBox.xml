@@ -209,10 +209,11 @@
 </control>
 	<control type="image">
 		<posx>550</posx>
-		<posy>476</posy>
+		<posy>276</posy>
 		<width>218</width>
 		<height>200</height>
 		<texture>music/no_cd.png</texture>
+		<include>cdartspinjukebox</include>
 		<visible>Control.IsVisible(54) + !Player.HasMedia + !Container.Content(songs)</visible>
 	</control>
 	<control type="image">
@@ -221,6 +222,15 @@
 		<width>211</width>
 		<height>192</height>
 		<texture diffuse="music/music_cover_diffuse.png">$INFO[MusicPlayer.Cover]</texture>
+		<visible>Control.IsVisible(54) + Player.HasMedia</visible>
+	</control>
+	<control type="image">
+		<posx>565</posx>
+		<posy>488</posy>
+		<width>188</width>
+		<height>170</height>
+		<texture>$INFO[Player.FolderPath]cdart.png</texture>
+		<include>cdartspinjukebox</include>
 		<visible>Control.IsVisible(54) + Player.HasMedia</visible>
 	</control>
 	<control type="image">
@@ -239,11 +249,81 @@
 		<texture diffuse="music/jukebox_fanart_diffuse.png" fallback="backgrounds/jukebox.jpg" background="true">$INFO[ListItem.Property(Fanart_Image)]</texture>
 		<visible>Control.IsVisible(54) + ![Container.Content(albums) | Container.Content(artists)]</visible>
 	</control>
+	<control type="image">
+		<posx>365</posx>
+		<posy>146</posy>
+		<width>585</width>
+		<height>295</height>
+		<texture>music/jukebox-light-inner.png</texture>
+		<animation effect="fade" start="0" end="100" time="1400" pulse="true" tween="bounce" reversible="false" condition="Player.Playing">Conditional</animation>
+		<animation effect="fade" start="100" end="0" time="300">Hidden</animation>
+		<visible>Control.IsVisible(54) + Player.HasMedia</visible>
+	</control>
 	
 	<control type="image">
 		<include>Dimensions_Fullscreen</include>
 		<texture>music/jukebox1.png</texture>
 		<visible>Control.IsVisible(54)</visible>
+	</control>
+	<control type="image">
+		<posx>295</posx>
+		<posy>483</posy>
+		<width>30</width>
+		<height>30</height>
+		<texture>music/jukebox-light.png</texture>
+		<animation effect="slide" start="0," end="-90,0" time="2000" pulse="true" reversible="false" condition="Player.Playing">Conditional</animation>
+		<animation effect="fade" start="100" end="0" time="300">Hidden</animation>
+		<visible>Control.IsVisible(54) + Player.HasMedia</visible>
+	</control>
+	<control type="image">
+		<posx>295</posx>
+		<posy>538</posy>
+		<width>30</width>
+		<height>30</height>
+		<texture>music/jukebox-light.png</texture>
+		<animation effect="slide" start="0," end="-90,0" time="2000" pulse="true" reversible="false" condition="Player.Playing">Conditional</animation>
+		<animation effect="fade" start="100" end="0" time="300">Hidden</animation>
+		<visible>Control.IsVisible(54) + Player.HasMedia</visible>
+	</control>
+	<control type="image">
+		<posx>985</posx>
+		<posy>483</posy>
+		<width>30</width>
+		<height>30</height>
+		<texture>music/jukebox-light.png</texture>
+		<animation effect="slide" start="0," end="90,0" time="2000" pulse="true" reversible="false" condition="Player.Playing">Conditional</animation>
+		<animation effect="fade" start="100" end="0" time="300">Hidden</animation>
+		<visible>Control.IsVisible(54) + Player.HasMedia</visible>
+	</control>
+	<control type="image">
+		<posx>985</posx>
+		<posy>538</posy>
+		<width>30</width>
+		<height>30</height>
+		<texture>music/jukebox-light.png</texture>
+		<animation effect="slide" start="0," end="90,0" time="2000" pulse="true" reversible="false" condition="Player.Playing">Conditional</animation>
+		<animation effect="fade" start="100" end="0" time="300">Hidden</animation>
+		<visible>Control.IsVisible(54) + Player.HasMedia</visible>
+	</control>
+	<control type="image">
+		<posx>569</posx>
+		<posy>5</posy>
+		<width>170</width>
+		<height>108</height>
+		<texture>music/jukebox-light-top.png</texture>
+		<animation effect="fade" start="0" end="100" time="1400" pulse="true" tween="bounce" reversible="false" condition="Player.Playing">Conditional</animation>
+		<animation effect="fade" start="100" end="0" time="300">Hidden</animation>
+		<visible>Control.IsVisible(54) + Player.HasMedia</visible>
+	</control>
+	<control type="image">
+		<posx>250</posx>
+		<posy>64</posy>
+		<width>808</width>
+		<height>656</height>
+		<texture>music/jukebox-light-contour.png</texture>
+		<animation effect="fade" start="0" end="100" time="1400" pulse="true" tween="bounce" reversible="false" condition="Player.Playing">Conditional</animation>
+		<animation effect="fade" start="100" end="0" time="300">Hidden</animation>
+		<visible>Control.IsVisible(54) + Player.HasMedia</visible>
 	</control>
 	
 	
@@ -257,12 +337,13 @@
 		<font>Font_Bartowski_Digital_Clock</font>
 		<textcolor>ffaa1622</textcolor>
 		<label>$LOCALIZE[31274]</label>
+		<animation effect="fade" start="0" end="100" time="800" pulse="true" reversible="false" condition="Player.Playing">Conditional</animation>
 		<visible>Control.IsVisible(54) + Player.HasMedia</visible>
 	</control>
 	<control type="label">
 		<description>Artists</description>
 		<posx>572</posx>
-		<posy>448</posy>
+		<posy>446</posy>
 		<width>170</width>
 		<height>40</height>
 		<align>center</align>
@@ -274,7 +355,7 @@
 	<control type="label">
 		<description>Albums</description>
 		<posx>572</posx>
-		<posy>448</posy>
+		<posy>446</posy>
 		<width>170</width>
 		<height>40</height>
 		<align>center</align>
@@ -286,7 +367,7 @@
 	<control type="label">
 		<description>Songs</description>
 		<posx>572</posx>
-		<posy>448</posy>
+		<posy>446</posy>
 		<width>170</width>
 		<height>40</height>
 		<align>center</align>
