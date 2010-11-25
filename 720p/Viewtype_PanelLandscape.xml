@@ -276,6 +276,7 @@
 				<font>Font_Bartowski_Smaller_MenuValue</font>
 				<textcolor>mainblue</textcolor>
 				<label>"$INFO[ListItem.Title]"</label>
+				<scroll>true</scroll>
 			</control>
 			<control type="label">
 				<visible>Container.Content(episodes) + !SubString(ListItem.Icon,DefaultFolderBack.png,Left)</visible>

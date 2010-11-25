@@ -210,25 +210,27 @@
 				<include>Animation_Viewtype_Episode_BottomArea</include>
 				<visible>!SubString(ListItem.Icon,DefaultFolderBack.png,Left)</visible>
 					<control type="label"><!-- Episode Title -->
-						<posx>0</posx>
+						<posx>10</posx>
 						<posy>-15</posy>
-						<width>556</width>
+						<width>575</width>
 						<height>50</height>
 						<align>center</align>
 						<font>Font_Bartowski_Title_TVShow</font>
 						<textcolor>mainblue</textcolor>
 						<label>[B]$INFO[ListItem.Title][/B]</label>
+						<scroll>true</scroll>
 						<visible>!IsEmpty(ListItem.Title) + !Window.IsActive(videoplaylist)</visible>
 					</control>
 					<control type="label"><!-- Episode Title -->
-						<posx>0</posx>
+						<posx>10</posx>
 						<posy>-10</posy>
-						<width>556</width>
+						<width>575</width>
 						<height>50</height>
 						<align>center</align>
 						<font>Font_Bartowski_Title_TVShow</font>
 						<textcolor>mainblue</textcolor>
 						<label>[B]$INFO[ListItem.Label][/B]</label>
+						<scroll>true</scroll>
 						<visible>Window.IsActive(videoplaylist)</visible>
 					</control>
 					<control type="label"><!-- Episode season episode -->

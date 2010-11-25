@@ -333,14 +333,15 @@
 				</control>
 				<control type="label"><!-- Episode Description -->
 					<visible>Container.Content(episodes)</visible>
-					<posx>5</posx>
+					<posx>13</posx>
 					<posy>362</posy>
-					<width>500</width>
+					<width>481</width>
 					<height>50</height>
 					<align>center</align>
 					<font>Font_Landscape_TitleTVShow</font>
 					<textcolor>white</textcolor>
 					<label>$INFO[ListItem.Title]</label>
+					<scroll>true</scroll>
 				</control>
 				<control type="image"><!-- USE POSTERS  -->
 					<visible>[Skin.HasSetting(TVPosters) + !Skin.HasSetting(landscape_jpg) + [Container.Content(tvshows) | Container.Content(seasons)]]</visible>

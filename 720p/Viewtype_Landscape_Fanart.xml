@@ -265,13 +265,14 @@
 			<texture>tv-landscape/landscapeframeFO.png</texture>
 		</control>
 		<control type="label">
-			<posx>460</posx>
+			<posx>463</posx>
 			<posy>612</posy>
-			<width>390</width>
+			<width>380</width>
 			<label>[B]$INFO[ListItem.Title][/B]</label>
 			<align>center</align>
 			<font>Font_Bartowski_Extras_Pause</font>
 			<textcolor>white</textcolor>
+			<scroll>true</scroll>
 			<visible>!SubString(ListItem.Icon,DefaultFolderBack.png,Left)</visible>
 		</control>
 	</control>
@@ -305,7 +306,7 @@
 			<posx>460</posx>
 			<posy>424</posy>
 			<width>386</width>
-			<height>188</height>
+			<height>180</height>
 			<font>Font_KeyboardKeys_Plot</font>
 			<textcolor>white</textcolor>
 			<label>$INFO[ListItem.Plot]</label>
