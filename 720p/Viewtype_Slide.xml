@@ -167,6 +167,7 @@
 			<aligny>center</aligny>
 			<font>Font_Bartowski_Movies_Title</font>
 			<textcolor>mainblue</textcolor>
+			<scroll>true</scroll>			
 			<label>[B]$INFO[ListItem.Label][/B]</label>
 		</control>
 		<control type="label">

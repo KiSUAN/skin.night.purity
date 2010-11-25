@@ -278,7 +278,7 @@
 				<control type="label">
 					<posx>20</posx>
 					<posy>10</posy>
-					<width>680</width>
+					<width>450</width>
 					<height>46</height>
 					<aligny>center</aligny>
 					<font>Font_Bartowski_Movies</font>
@@ -319,11 +319,12 @@
 				<control type="label">
 					<posx>20</posx>
 					<posy>10</posy>
-					<width>720</width>
+					<width>450</width>
 					<height>46</height>
 					<aligny>center</aligny>
 					<font>Font_Bartowski_Movies</font>
 					<textcolor>white</textcolor>
+					<scroll>true</scroll>
 					<label>[B]$INFO[ListItem.Label][/B]</label>
 					<animation effect="slide" start="0,0" end="20,0" time="0" condition="[stringcompare(ListItem.Overlay,OverlayWatched.png) + Skin.HasSetting(movieoverlays)] | [Container.Content(movies) + IsEmpty(ListItem.foldername) + !substring(Container.Listitem.Label,..,left) + !Container.Content(genres) + Window.IsActive(videolibrary)]">Conditional</animation>
 				</control>
@@ -385,6 +386,7 @@
 				<aligny>center</aligny>
 				<font>Font_Bartowski_Showcase_Title</font>
 				<textcolor>mainbluedarker</textcolor>
+				<scroll>true</scroll>				
 				<label>$INFO[ListItem.Label]</label>
 			</control>
 			<control type="label">

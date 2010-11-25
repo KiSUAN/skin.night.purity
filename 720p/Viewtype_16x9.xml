@@ -208,6 +208,7 @@
 						<height>50</height>
 						<font>Font_InfoYear2</font>
 						<textcolor>mainblue</textcolor>
+						<scroll>true</scroll>
 						<label>$INFO[ListItem.Label]</label>
 						<animation type="Focus" reversible="false">
 							<effect type="zoom" center="191,440" start="90" end="100" time="400" tween="back" easing="out" />

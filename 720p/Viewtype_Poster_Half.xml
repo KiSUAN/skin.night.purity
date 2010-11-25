@@ -9,7 +9,7 @@
 			<posx>0</posx>
 			<posy>0</posy>
 			<width>1280</width>
-			<height>720</height>
+			<height>760</height>
 			<texture>movie-poster/movie-back3.png</texture>
 			<aspectratio>stretch</aspectratio>
 		</control>
@@ -340,6 +340,7 @@
 				<aligny>center</aligny>
 				<font>Font_Bartowski_Movies_Title</font>
 				<textcolor>mainblue</textcolor>
+				<scroll>true</scroll>
 				<label>[B]$INFO[ListItem.Label][/B]</label>
 				<visible>Container.Content(movies)</visible>
 			</control>
@@ -361,6 +362,7 @@
 				<aligny>center</aligny>
 				<font>Font_Bartowski_Landscape_TV_Title</font>
 				<textcolor>mainblue</textcolor>
+				<scroll>true</scroll>
 				<label>[B]$INFO[ListItem.TVShowTitle][/B]</label>
 				<visible>[Container.Content(tvshows) | Container.Content(seasons)] + IsEmpty(Control.GetLabel(17015))</visible>
 			</control>

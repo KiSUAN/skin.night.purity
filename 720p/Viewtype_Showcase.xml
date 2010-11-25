@@ -41,6 +41,7 @@
 				<font>Font_Bartowski_Movies_Title</font>
 				<shadowcolor>viewheadershadow</shadowcolor>
 				<textcolor>viewheader</textcolor>
+				<scroll>true</scroll>
 				<label>[B]$INFO[ListItem.label][/B]</label>>
 				<include>Animation_Bartowski_Context_Zoom</include>
 			</control>
@@ -230,13 +231,14 @@
 				<visible>!SubString(ListItem.Icon,DefaultFolderBack.png,Left) + !Skin.HasSetting(ShowcaseFanart)</visible>
 				<include>Animation_Viewtype_Showcase_LeftArea</include>
 					<control type="label"><!--Movie title-->
-						<posx>15</posx>
+						<posx>25</posx>
 						<posy>245</posy>
-						<width>394</width>
+						<width>400</width>
 						<height>50</height>
 						<aligny>center</aligny>
 						<font>Font_Bartowski_Showcase_Title</font>
 						<textcolor>mainblue</textcolor>
+						<scroll>true</scroll>
 						<label>$INFO[ListItem.Label]</label>
 					</control>
 					<control type="label">
