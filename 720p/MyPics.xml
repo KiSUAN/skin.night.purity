@@ -64,14 +64,17 @@
 				<include>WindowMenuButton</include>
 				<label>103</label>
 			</control>
-			
+			<control type="button" id="6">
+				<include>WindowMenuButton</include>
+				<label>108</label>
+			</control>	
 			<control type="button" id="7">
 				<include>WindowMenuButton</include>
 				<label>361</label>
 			</control>	
-			<control type="button" id="9">
+			<control type="radiobutton" id="9">
 				<include>WindowMenuButton</include>
-				<label>$LOCALIZE[590]</label>
+				<label>13319</label>
 			</control>
 		</control>
 		
@@ -87,11 +90,14 @@
 				<include>WindowMenuLabel</include>
 				<label>$LOCALIZE[31090]</label>
 			</control>
-			
 			<control type="button" id="43">
 				<include>WindowMenuLabel</include>
 				<label>$LOCALIZE[31095]</label>
-			</control>	
+			</control>
+			<control type="button" id="43">
+				<include>WindowMenuLabel</include>
+				<label>$LOCALIZE[31095]</label>
+			</control>
 			<control type="button" id="44">
 				<include>WindowMenuLabel</include>
 				<label>$LOCALIZE[31093]</label>
