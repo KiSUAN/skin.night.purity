@@ -157,7 +157,7 @@
 		<control type="grouplist">
 			<visible>!Skin.HasSetting(LockViews)</visible>
 			<include>WindowMenuVars</include>
-			<posy>660</posy>
+			<posy>655</posy>
 			<control type="label">
 				<include>WindowMenuLabel</include>
 				<label>$LOCALIZE[31088]</label>

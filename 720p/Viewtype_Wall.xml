@@ -194,10 +194,10 @@
 						<width>365</width>
 						<height>50</height>
 						<aligny>center</aligny>
-						<font>Font_Bartowski_Showcase_Title</font>
+						<font>LiberationSans_Regular_28</font>
 						<textcolor>mainblue</textcolor>
 						<scroll>true</scroll>
-						<label>$INFO[ListItem.Label]</label>
+						<label>[B]$INFO[ListItem.Label][/B]</label>
 						<include>Animation_Viewtype_Wall_UnderInfo</include>
 					</control>
 					<control type="label">
@@ -206,7 +206,7 @@
 						<width>394</width>
 						<height>50</height>
 						<aligny>center</aligny>
-						<font>Font_RSS_Big</font>
+						<font>LiberationSans_Regular_24</font>
 						<textcolor>white</textcolor>
 						<label>31508</label>
 						<include>Animation_Viewtype_Wall_UnderInfo</include>
@@ -218,7 +218,7 @@
 						<width>394</width>
 						<height>50</height>
 						<aligny>center</aligny>
-						<font>Font_RSS_Big</font>
+						<font>LiberationSans_Regular_24</font>
 						<textcolor>white</textcolor>
 						<label>$INFO[ListItem.Duration] $LOCALIZE[12391]</label>
 						<include>Animation_Viewtype_Wall_UnderInfo</include>
@@ -230,7 +230,7 @@
 						<width>394</width>
 						<height>50</height>
 						<aligny>center</aligny>
-						<font>Font_RSS_Big</font>
+						<font>LiberationSans_Regular_24</font>
 						<textcolor>white</textcolor>
 						<label>$INFO[ListItem.Duration]</label>
 						<include>Animation_Viewtype_Wall_UnderInfo</include>
@@ -242,7 +242,7 @@
 						<width>406</width>
 						<height>50</height>
 						<aligny>center</aligny>
-						<font>Font_RSS_Big</font>
+						<font>LiberationSans_Regular_24</font>
 						<textcolor>white</textcolor>
 						<label>$INFO[ListItem.Property(releasedate)]</label>
 						<include>Animation_Viewtype_Wall_UnderInfo</include>
@@ -254,7 +254,7 @@
 						<width>394</width>
 						<height>50</height>
 						<aligny>center</aligny>
-						<font>Font_RSS_Big</font>
+						<font>LiberationSans_Regular_24</font>
 						<textcolor>white</textcolor>
 						<label>$INFO[ListItem.year]</label>
 						<include>Animation_Viewtype_Wall_UnderInfo</include>
@@ -267,7 +267,7 @@
 						<width>394</width>
 						<height>50</height>
 						<aligny>center</aligny>
-						<font>Font_RSS_Big</font>
+						<font>LiberationSans_Regular_24</font>
 						<textcolor>white</textcolor>
 						<label>$LOCALIZE[31226]</label>
 						<include>Animation_Viewtype_Wall_UnderInfo</include>
@@ -275,8 +275,9 @@
 					</control>
 					<control type="group">
 						<posx>60</posx>
-						<posy>177</posy>
-						<include>VideoMPAAFlaggingConditions</include>
+						<posy>181</posy>
+						<include condition="!Skin.HasSetting(vanilla_flags) + !Skin.HasSetting(flat_flags)">color_MPAAs</include>
+						<include condition="Skin.HasSetting(vanilla_flags) | Skin.HasSetting(flat_flags) + !Skin.HasSetting(original_flags)">vanilla_MPAAs</include>
 						<include>Animation_Viewtype_Wall_UnderInfo</include>
 						<animation effect="slide" start="0,0" end="-64,0" time="0" condition="IsEmpty(ListItem.Year)">Conditional</animation>
 						<animation effect="slide" start="0,0" end="0,-23" time="0" condition="IsEmpty(ListItem.Duration)">Conditional</animation>
@@ -285,27 +286,53 @@
 						<posx>0</posx>
 						<posy>224</posy>
 						<width>360</width>
-						<height>310</height>
+						<height>340</height>
 						<align>justify</align>
 						<info>ListItem.Plot</info>
-						<font>Font_Bartowski_Movies_Plot</font>
+						<font>LiberationSans_Regular_18</font>
 						<textcolor>white</textcolor>
 						<autoscroll time="2500" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
 						<include>Animation_Viewtype_Wall_Plot</include>
 					</control>
 			</control>
 			<control type="grouplist">
-				<visible>!Skin.HasSetting(no_media_flags) + !Player.HasMedia</visible>
+				<visible>!Skin.HasSetting(no_media_flags) + Skin.HasSetting(back_flags) + !Player.HasMedia</visible>
 				<description>Media Codec Flagging Images</description>
-				<posx>880</posx>
+				<posx>780</posx>
 				<posy>680</posy>
-				<width>380</width>
-				<align>center</align>
+				<width>500</width>
+				<align>right</align>
 				<itemgap>0</itemgap>
 				<orientation>horizontal</orientation>
-				<include condition="!Skin.HasSetting(grey_flags)">color_flags</include>
-				<include condition="Skin.HasSetting(grey_flags)">grey_flags</include>
-				<include>Animation_Viewtype_Wall_Fags</include>
+				<include>back_flags</include>
+				<include>Animation_ZoomInZoomOut</include>
+			</control>
+			<control type="grouplist">
+				<visible>!Skin.HasSetting(no_media_flags) + !Player.HasMedia</visible>
+				<description>Media Codec Flagging Images</description>
+				<posx>780</posx>
+				<posy>680</posy>
+				<width>500</width>
+				<align>right</align>
+				<itemgap>0</itemgap>
+				<orientation>horizontal</orientation>
+				<include condition="!Skin.HasSetting(vanilla_flags) + !Skin.HasSetting(original_flags) + !Skin.HasSetting(flat_flags)">color_flags</include>
+				<include condition="Skin.HasSetting(vanilla_flags) + !Skin.HasSetting(original_flags) + !Skin.HasSetting(flat_flags)">vanilla_flags</include>
+				<include condition="Skin.HasSetting(original_flags) + !Skin.HasSetting(vanilla_flags) + !Skin.HasSetting(flat_flags)">original_flags</include>
+				<include condition="Skin.HasSetting(flat_flags) + !Skin.HasSetting(vanilla_flags) + !Skin.HasSetting(original_flags)">flat_flags</include>
+				<include>Animation_ZoomInZoomOut</include>
+			</control>
+			<control type="grouplist">
+				<visible>!Skin.HasSetting(no_media_flags) + !Skin.HasSetting(no_frame_flags) + !Player.HasMedia</visible>
+				<description>Media Codec Flagging Images</description>
+				<posx>780</posx>
+				<posy>680</posy>
+				<width>500</width>
+				<align>right</align>
+				<itemgap>0</itemgap>
+				<orientation>horizontal</orientation>
+				<include>frame_flags</include>
+				<include>Animation_ZoomInZoomOut</include>
 			</control>
 	</control>
 

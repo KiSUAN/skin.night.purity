@@ -36,7 +36,7 @@
 				<description>Settings</description>
 				<height>30</height>
 				<width>170</width>
-				<textoffsety>2</textoffsety>
+				<textoffsety>-1</textoffsety>
 				<font>Font_Bartowski_Press_S</font>
 				<textcolor>MainBlack</textcolor>
 				<focusedcolor>white</focusedcolor>
@@ -50,7 +50,7 @@
 				<description>Filemanager</description>
 				<height>30</height>
 				<width>170</width>
-				<textoffsety>2</textoffsety>
+				<textoffsety>-1</textoffsety>
 				<font>Font_Bartowski_Press_S</font>
 				<textcolor>MainBlack</textcolor>
 				<focusedcolor>white</focusedcolor>
@@ -65,7 +65,7 @@
 				<description>Filemanager</description>
 				<height>30</height>
 				<width>170</width>
-				<textoffsety>2</textoffsety>
+				<textoffsety>-1</textoffsety>
 				<font>Font_Bartowski_Press_S</font>
 				<textcolor>MainBlack</textcolor>
 				<focusedcolor>white</focusedcolor>
@@ -80,7 +80,7 @@
 				<description>Favourites</description>
 				<height>30</height>
 				<width>170</width>
-				<textoffsety>2</textoffsety>
+				<textoffsety>-1</textoffsety>
 				<font>Font_Bartowski_Press_S</font>
 				<textcolor>MainBlack</textcolor>
 				<focusedcolor>white</focusedcolor>
@@ -95,7 +95,7 @@
 				<description>Reboot</description>
 				<height>30</height>
 				<width>170</width>
-				<textoffsety>2</textoffsety>
+				<textoffsety>-1</textoffsety>
 				<font>Font_Bartowski_Press_S</font>
 				<textcolor>MainBlack</textcolor>
 				<focusedcolor>white</focusedcolor>
@@ -109,7 +109,7 @@
 				<description>Shutdown</description>
 				<height>30</height>
 				<width>170</width>
-				<textoffsety>2</textoffsety>
+				<textoffsety>-1</textoffsety>
 				<font>Font_Bartowski_Press_S</font>
 				<textcolor>MainBlack</textcolor>
 				<focusedcolor>white</focusedcolor>
@@ -123,7 +123,7 @@
 				<description>Restart Xbmc</description>
 				<height>30</height>
 				<width>170</width>
-				<textoffsety>2</textoffsety>
+				<textoffsety>-1</textoffsety>
 				<font>Font_Bartowski_Press_S</font>
 				<textcolor>MainBlack</textcolor>
 				<focusedcolor>white</focusedcolor>
@@ -137,7 +137,7 @@
 				<description>System Info Button</description>
 				<height>30</height>
 				<width>170</width>
-				<textoffsety>2</textoffsety>
+				<textoffsety>-1</textoffsety>
 				<font>Font_Bartowski_Press_S</font>
 				<textcolor>MainBlack</textcolor>
 				<focusedcolor>white</focusedcolor>
@@ -151,6 +151,7 @@
 				<description>Reload Skin</description>
 				<height>30</height>
 				<width>150</width>
+				<textoffsety>-1</textoffsety>
 				<font>Font_Bartowski_Press_S</font>
 				<textcolor>MainBlack</textcolor>
 				<focusedcolor>white</focusedcolor>

@@ -38,7 +38,7 @@
 				<width>1280</width>
 				<height>50</height>
 				<align>center</align>
-				<font>Font_Bartowski_Movies_Title</font>
+				<font>LiberationSans_Regular_28</font>
 				<shadowcolor>viewheadershadow</shadowcolor>
 				<textcolor>viewheader</textcolor>
 				<scroll>true</scroll>
@@ -210,8 +210,8 @@
 				<posx>460</posx>
 				<posy>25</posy>
 				<width>540</width>
-				<height>336</height>
-				<font>Font_Bartowski_Showcase_plot</font>
+				<height>330</height>
+				<font>LiberationSans_Regular_22</font>
 				<textcolor>white</textcolor>
 				<label>$INFO[ListItem.Plot]</label>
 				<align>justify</align>
@@ -233,13 +233,13 @@
 					<control type="label"><!--Movie title-->
 						<posx>25</posx>
 						<posy>245</posy>
-						<width>400</width>
+						<width>420</width>
 						<height>50</height>
 						<aligny>center</aligny>
-						<font>Font_Bartowski_Showcase_Title</font>
+						<font>LiberationSans_Regular_28</font>
 						<textcolor>mainblue</textcolor>
 						<scroll>true</scroll>
-						<label>$INFO[ListItem.Label]</label>
+						<label>[B]$INFO[ListItem.Label][/B]</label>
 					</control>
 					<control type="label">
 						<posx>15</posx>
@@ -247,7 +247,7 @@
 						<width>394</width>
 						<height>50</height>
 						<aligny>center</aligny>
-						<font>Font_RSS_Big</font>
+						<font>LiberationSans_Regular_24</font>
 						<textcolor>white</textcolor>
 						<label>31508</label>
 						<visible>IsEmpty(ListItem.foldername) + !substring(Container.Listitem.Label,..,left) + !Container.Content(genres) + Window.IsActive(videolibrary)</visible>
@@ -258,7 +258,7 @@
 						<width>394</width>
 						<height>50</height>
 						<aligny>center</aligny>
-						<font>Font_RSS_Big</font>
+						<font>LiberationSans_Regular_24</font>
 						<textcolor>white</textcolor>
 						<label>$INFO[ListItem.Duration] $LOCALIZE[12391]</label>
 						<visible>!IsEmpty(ListItem.Duration) + !SubString(ListItem.Duration,min) + !substring(container.folderpath,plugin://plugin.video.apple.movie.trailers.lite)</visible>
@@ -269,7 +269,7 @@
 						<width>394</width>
 						<height>50</height>
 						<aligny>center</aligny>
-						<font>Font_RSS_Big</font>
+						<font>LiberationSans_Regular_24</font>
 						<textcolor>white</textcolor>
 						<label>$INFO[ListItem.Duration]</label>
 						<visible>!IsEmpty(ListItem.Duration) + SubString(ListItem.Duration,min) + !substring(container.folderpath,plugin://plugin.video.apple.movie.trailers.lite)</visible>
@@ -280,7 +280,7 @@
 						<width>406</width>
 						<height>50</height>
 						<aligny>center</aligny>
-						<font>Font_RSS_Big</font>
+						<font>LiberationSans_Regular_24</font>
 						<textcolor>white</textcolor>
 						<label>$LOCALIZE[172]: $INFO[ListItem.Property(releasedate)]</label>
 						<visible>substring(container.folderpath,plugin://plugin.video.apple.movie.trailers.lite)</visible>
@@ -291,7 +291,7 @@
 						<width>394</width>
 						<height>50</height>
 						<aligny>center</aligny>
-						<font>Font_RSS_Big</font>
+						<font>LiberationSans_Regular_24</font>
 						<textcolor>white</textcolor>
 						<label>$INFO[ListItem.year]</label>
 						<animation effect="slide" start="0,0" end="0,-23" time="0" condition="IsEmpty(ListItem.Duration)">Conditional</animation>
@@ -303,15 +303,16 @@
 						<width>394</width>
 						<height>50</height>
 						<aligny>center</aligny>
-						<font>Font_RSS_Big</font>
+						<font>LiberationSans_Regular_24</font>
 						<textcolor>white</textcolor>
 						<label>$LOCALIZE[31226]</label>
 						<visible>substring(container.folderpath,plugin://plugin.video.apple.movie.trailers.lite)</visible>
 					</control>
 					<control type="group">
 						<posx>76</posx>
-						<posy>307</posy>
-						<include>VideoMPAAFlaggingConditions</include>
+						<posy>311</posy>
+						<include condition="!Skin.HasSetting(vanilla_flags) + !Skin.HasSetting(flat_flags)">color_MPAAs</include>
+						<include condition="Skin.HasSetting(vanilla_flags) | Skin.HasSetting(flat_flags) + !Skin.HasSetting(original_flags)">vanilla_MPAAs</include>
 						<animation effect="slide" start="0,0" end="-64,0" time="0" condition="IsEmpty(ListItem.Year)">Conditional</animation>
 						<animation effect="slide" start="0,0" end="0,-23" time="0" condition="IsEmpty(ListItem.Duration)">Conditional</animation>
 					</control>
@@ -323,7 +324,7 @@
 				<width>370</width>
 				<height>50</height>
 				<aligny>center</aligny>
-				<font>Font_Alaya_Movie-trailer</font>
+				<font>LiberationSans_Regular_16</font>
 				<textcolor>white</textcolor>
 				<label>*$LOCALIZE[31237]*</label>
 				<shadowcolor>black</shadowcolor>
@@ -338,7 +339,7 @@
 				<width>370</width>
 				<height>50</height>
 				<aligny>center</aligny>
-				<font>Font_Alaya_Movie-trailer</font>
+				<font>LiberationSans_Regular_16</font>
 				<textcolor>white</textcolor>
 				<label>*$LOCALIZE[31238]*</label>
 				<shadowcolor>black</shadowcolor>
@@ -357,16 +358,16 @@
 						<posy>0</posy>
 						<width>390</width>
 						<height>24</height>
-						<font>Font_Bartowski_Showcase_Right_Main</font>
+						<font>LiberationSans_Regular_22</font>
 						<textcolor>mainblue</textcolor>
-						<label>$LOCALIZE[20339]</label>
+						<label>[B]$LOCALIZE[20339][/B]</label>
 					</control>
 					<control type="label"><!--Director-->
 						<posx>0</posx>
 						<posy>0</posy>
 						<width>390</width>
 						<height>24</height>
-						<font>Font_Bartowski_Showcase_Right_Under</font>
+						<font>LiberationSans_Regular_18</font>
 						<textcolor>white</textcolor>
 						<label fallback="Not Available">$INFO[ListItem.Director]</label>
 					</control>
@@ -375,7 +376,7 @@
 						<posy>0</posy>
 						<width>390</width>
 						<height>10</height>
-						<font>Font_Bartowski_Showcase_Right_Main</font>
+						<font>LiberationSans_Regular_22</font>
 						<textcolor>mainblue</textcolor>
 						<label></label>
 					</control>
@@ -384,16 +385,16 @@
 						<posy>0</posy>
 						<width>390</width>
 						<height>24</height>
-						<font>Font_Bartowski_Showcase_Right_Main</font>
+						<font>LiberationSans_Regular_22</font>
 						<textcolor>mainblue</textcolor>
-						<label>$LOCALIZE[20417]</label>
+						<label>[B]$LOCALIZE[20417][/B]</label>
 					</control>
 					<control type="label"><!--Writer-->
 						<posx>0</posx>
 						<posy>0</posy>
 						<width>390</width>
 						<height>24</height>
-						<font>Font_Bartowski_Showcase_Right_Under</font>
+						<font>LiberationSans_Regular_18</font>
 						<textcolor>white</textcolor>
 						<label fallback="Not Available">$INFO[ListItem.Writer]</label>
 					</control>
@@ -402,7 +403,7 @@
 						<posy>0</posy>
 						<width>390</width>
 						<height>10</height>
-						<font>Font_Bartowski_Showcase_Right_Main</font>
+						<font>LiberationSans_Regular_22</font>
 						<textcolor>mainblue</textcolor>
 						<label></label>
 					</control>
@@ -411,16 +412,16 @@
 						<posy>0</posy>
 						<width>390</width>
 						<height>24</height>
-						<font>Font_Bartowski_Showcase_Right_Main</font>
+						<font>LiberationSans_Regular_22</font>
 						<textcolor>mainblue</textcolor>
-						<label>$LOCALIZE[515]</label>
+						<label>[B]$LOCALIZE[515][/B]</label>
 					</control>
 					<control type="label"><!--Genre-->
 						<posx>0</posx>
 						<posy>0</posy>
 						<width>390</width>
 						<height>24</height>
-						<font>Font_Bartowski_Showcase_Right_Under</font>
+						<font>LiberationSans_Regular_18</font>
 						<textcolor>white</textcolor>
 						<label fallback="Not Available">$INFO[ListItem.Genre]</label>
 					</control>
@@ -429,7 +430,7 @@
 						<posy>0</posy>
 						<width>390</width>
 						<height>10</height>
-						<font>Font_Bartowski_Showcase_Right_Main</font>
+						<font>LiberationSans_Regular_22</font>
 						<textcolor>mainblue</textcolor>
 						<label></label>
 					</control>
@@ -438,16 +439,16 @@
 						<posy>0</posy>
 						<width>390</width>
 						<height>24</height>
-						<font>Font_Bartowski_Showcase_Right_Main</font>
+						<font>LiberationSans_Regular_22</font>
 						<textcolor>mainblue</textcolor>
-						<label>$LOCALIZE[563]</label>
+						<label>[B]$LOCALIZE[563][/B]</label>
 					</control>
 					<control type="label"><!--Rating-->
 						<posx>0</posx>
 						<posy>0</posy>
 						<width>390</width>
 						<height>24</height>
-						<font>Font_Bartowski_Showcase_Right_Under</font>
+						<font>LiberationSans_Regular_18</font>
 						<textcolor>white</textcolor>
 						<label fallback="Not Available">$INFO[ListItem.Rating]</label>
 					</control>
@@ -456,7 +457,7 @@
 						<posy>0</posy>
 						<width>390</width>
 						<height>10</height>
-						<font>Font_Bartowski_Showcase_Right_Main</font>
+						<font>LiberationSans_Regular_22</font>
 						<textcolor>mainblue</textcolor>
 						<label></label>
 					</control>
@@ -465,16 +466,16 @@
 						<posy>0</posy>
 						<width>390</width>
 						<height>24</height>
-						<font>Font_Bartowski_Showcase_Right_Main</font>
+						<font>LiberationSans_Regular_22</font>
 						<textcolor>mainblue</textcolor>
-						<label>$LOCALIZE[572]</label>
+						<label>[B]$LOCALIZE[572][/B]</label>
 					</control>
 					<control type="label"><!--Rating-->
 						<posx>0</posx>
 						<posy>0</posy>
 						<width>390</width>
 						<height>24</height>
-						<font>Font_Bartowski_Showcase_Right_Under</font>
+						<font>LiberationSans_Regular_18</font>
 						<textcolor>white</textcolor>
 						<label fallback="Not Available">$INFO[ListItem.studio]</label>
 					</control>
@@ -517,7 +518,19 @@
 				</control>
 			</control>
 			
-				
+			
+			<control type="grouplist">
+				<visible>!Skin.HasSetting(no_media_flags) + Skin.HasSetting(back_flags) + !Skin.HasSetting(ShowcaseFanart)</visible>
+				<description>Media Codec Flagging Images</description>
+				<posx>0</posx>
+				<posy>370</posy>
+				<width>1280</width>
+				<align>right</align>
+				<itemgap>0</itemgap>
+				<orientation>horizontal</orientation>
+				<include>back_flags</include>
+				<include>Animation_ZoomInZoomOut</include>
+			</control>
 			<control type="grouplist">
 				<visible>!Skin.HasSetting(no_media_flags) + !Skin.HasSetting(ShowcaseFanart)</visible>
 				<description>Media Codec Flagging Images</description>
@@ -527,9 +540,23 @@
 				<align>right</align>
 				<itemgap>0</itemgap>
 				<orientation>horizontal</orientation>
-				<include condition="!Skin.HasSetting(grey_flags)">color_flags</include>
-				<include condition="Skin.HasSetting(grey_flags)">grey_flags</include>
-				<include>Animation_Viewtype_Showcase_RightFlags</include>
+				<include condition="!Skin.HasSetting(vanilla_flags) + !Skin.HasSetting(original_flags) + !Skin.HasSetting(flat_flags)">color_flags</include>
+				<include condition="Skin.HasSetting(vanilla_flags) + !Skin.HasSetting(original_flags) + !Skin.HasSetting(flat_flags)">vanilla_flags</include>
+				<include condition="Skin.HasSetting(original_flags) + !Skin.HasSetting(vanilla_flags) + !Skin.HasSetting(flat_flags)">original_flags</include>
+				<include condition="Skin.HasSetting(flat_flags) + !Skin.HasSetting(vanilla_flags) + !Skin.HasSetting(original_flags)">flat_flags</include>
+				<include>Animation_ZoomInZoomOut</include>
+			</control>
+			<control type="grouplist">
+				<visible>!Skin.HasSetting(no_media_flags) + !Skin.HasSetting(no_frame_flags) + !Skin.HasSetting(ShowcaseFanart)</visible>
+				<description>Media Codec Flagging Images</description>
+				<posx>0</posx>
+				<posy>370</posy>
+				<width>1280</width>
+				<align>right</align>
+				<itemgap>0</itemgap>
+				<orientation>horizontal</orientation>
+				<include>frame_flags</include>
+				<include>Animation_ZoomInZoomOut</include>
 			</control>
 	</control>
 			

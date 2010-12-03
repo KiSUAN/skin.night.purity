@@ -59,13 +59,6 @@
 	<color name="MainBlack">FF000000</color>
 	<color name="ContextHighlight">ff015582</color>
 
-	<!-- Flags -->
-
-	<color name="FlagDiffuse">CC474747</color>
-	<color name="FlagText">abFFFFFF</color>
-	<color name="FlagText2">CC474747</color>
-	<color name="StarDiffuse">FF727272</color>
-
 	<!-- OSD -->
 
 	<color name="OSDPlayingArtist">FF3c3c3c</color>
@@ -163,5 +156,8 @@
 	<color name="viewheadershadow">ff525252</color>	
 	<color name="PlayerAction">ffb7b7b7</color>
 	<color name="PlayerActionShadow">ff525252</color>
-
+	<color name="FlagDiffuse">FFFFFFFF</color>
+	<color name="FrameDiffuse">FFFFFFFF</color>
+	<color name="BackDiffuse">FF161616</color>
+	
 </colors>

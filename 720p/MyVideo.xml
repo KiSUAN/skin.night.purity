@@ -16,7 +16,7 @@
 			<fadetime>400</fadetime>
 			<texture>backdrops/curtains.png</texture>
 			<include>Animation_CommonFade</include>
-			<visible>IsEmpty(ListItem.Property(Fanart_Image)) + Control.IsVisible(54)</visible>
+			<visible>IsEmpty(ListItem.Property(Fanart_Image)) | Control.IsVisible(54)</visible>
 		</control>
 		<control type="image">
 			<include>Dimensions_Fullscreen</include>
@@ -156,7 +156,7 @@
 			<control type="grouplist">
 			<visible>!Skin.HasSetting(LockViews)</visible>
 			<include>WindowMenuVars</include>
-			<posy>658</posy>
+			<posy>655</posy>
 			<control type="button" id="40">
 				<include>WindowMenuLabel</include>
 				<!-- LOC -->

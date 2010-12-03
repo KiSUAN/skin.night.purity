@@ -37,10 +37,10 @@
 					<width>146</width>
 					<height>40</height>
 					<aligny>center</aligny>
-					<font>Bartowski_settings_small</font>
+					<font>LiberationSans_Regular_16</font>
 					<textcolor>black</textcolor>
 					<label>$INFO[ListItem.Label]</label>
-					<visible>IsEmpty(ListItem.Title) | Window.IsActive(501)</visible>
+					<visible>IsEmpty(ListItem.Title)</visible>
 				</control>
 				<control type="label">
 					<posx>92</posx>
@@ -48,18 +48,18 @@
 					<width>170</width>
 					<height>40</height>
 					<align>center</align>
-					<font>Font_Music_Jukebox</font>
+					<font>LiberationSans_Regular_16</font>
 					<textcolor>Date</textcolor>
 					<label>$INFO[ListItem.Artist]</label>
 					<visible>Container.Content(songs) | Container.Content(albums)</visible>
 				</control>
 				<control type="label">
 					<posx>92</posx>
-					<posy>44</posy>
+					<posy>47</posy>
 					<width>170</width>
 					<height>40</height>
 					<align>center</align>
-					<font>Font_Music_Jukebox</font>
+					<font>LiberationSans_Regular_16</font>
 					<textcolor>Date</textcolor>
 					<label>$INFO[ListItem.genre]</label>
 					<visible>Container.Content(albums)</visible>
@@ -70,18 +70,18 @@
 					<width>146</width>
 					<height>40</height>
 					<aligny>center</aligny>
-					<font>Bartowski_settings_small</font>
+					<font>LiberationSans_Regular_16</font>
 					<textcolor>black</textcolor>
 					<label>$INFO[ListItem.TrackNumber]$INFO[ListItem.Title,. ]</label>
 					<visible>!IsEmpty(ListItem.Duration) + !IsEmpty(ListItem.TrackNumber) + [Container.Content(songs) | Window.IsActive(500) | [Window.IsActive(502) + !Container.Content(artists) + !Container.Content(albums) + !Container.Content(songs)]]</visible>
 				</control>
 				<control type="label">
 					<posx>92</posx>
-					<posy>44</posy>
+					<posy>46</posy>
 					<width>170</width>
 					<height>40</height>
 					<align>center</align>
-					<font>Font_Music_Jukebox</font>
+					<font>LiberationSans_Regular_16</font>
 					<textcolor>Date</textcolor>
 					<label>$INFO[ListItem.Album]</label>
 					<visible>!IsEmpty(ListItem.Duration) + !IsEmpty(ListItem.TrackNumber) + [Container.Content(songs) | Window.IsActive(500) | [Window.IsActive(502) + !Container.Content(artists) + !Container.Content(albums) + !Container.Content(songs)]]</visible>
@@ -101,7 +101,7 @@
 					<width>146</width>
 					<height>40</height>
 					<aligny>center</aligny>
-					<font>Bartowski_settings_small</font>
+					<font>LiberationSans_Regular_16</font>
 					<textcolor>black</textcolor>
 					<label>$INFO[ListItem.Label]</label>
 					<visible>IsEmpty(ListItem.Title)</visible>
@@ -112,18 +112,18 @@
 					<width>170</width>
 					<height>40</height>
 					<align>center</align>
-					<font>Font_Music_Jukebox</font>
+					<font>LiberationSans_Regular_16</font>
 					<textcolor>Date</textcolor>
 					<label>$INFO[ListItem.Artist]</label>
 					<visible>Container.Content(songs) | Container.Content(albums)</visible>
 				</control>
 				<control type="label">
 					<posx>92</posx>
-					<posy>44</posy>
+					<posy>47</posy>
 					<width>170</width>
 					<height>40</height>
 					<align>center</align>
-					<font>Font_Music_Jukebox</font>
+					<font>LiberationSans_Regular_16</font>
 					<textcolor>Date</textcolor>
 					<label>$INFO[ListItem.genre]</label>
 					<visible>Container.Content(albums)</visible>
@@ -134,18 +134,18 @@
 					<width>146</width>
 					<height>40</height>
 					<aligny>center</aligny>
-					<font>Bartowski_settings_small</font>
+					<font>LiberationSans_Regular_16</font>
 					<textcolor>black</textcolor>
 					<label>$INFO[ListItem.TrackNumber]$INFO[ListItem.Title,. ]</label>
 					<visible>!IsEmpty(ListItem.Duration) + !IsEmpty(ListItem.TrackNumber) + [Container.Content(songs) | Window.IsActive(500) | [Window.IsActive(502) + !Container.Content(artists) + !Container.Content(albums) + !Container.Content(songs)]]</visible>
 				</control>
 				<control type="label">
 					<posx>92</posx>
-					<posy>44</posy>
+					<posy>46</posy>
 					<width>170</width>
 					<height>40</height>
 					<align>center</align>
-					<font>Font_Music_Jukebox</font>
+					<font>LiberationSans_Regular_16</font>
 					<textcolor>Date</textcolor>
 					<label>$INFO[ListItem.Album]</label>
 					<visible>!IsEmpty(ListItem.Duration) + !IsEmpty(ListItem.TrackNumber) + [Container.Content(songs) | Window.IsActive(500) | [Window.IsActive(502) + !Container.Content(artists) + !Container.Content(albums) + !Container.Content(songs)]]</visible>
@@ -208,10 +208,10 @@
 	</control>-->
 </control>
 	<control type="image">
-		<posx>550</posx>
-		<posy>276</posy>
-		<width>218</width>
-		<height>200</height>
+		<posx>565</posx>
+		<posy>288</posy>
+		<width>188</width>
+		<height>170</height>
 		<texture>music/no_cd.png</texture>
 		<include>cdartspinjukebox</include>
 		<visible>Control.IsVisible(54) + !Player.HasMedia + !Container.Content(songs)</visible>
@@ -334,7 +334,7 @@
 		<width>170</width>
 		<height>40</height>
 		<align>center</align>
-		<font>Font_Bartowski_Digital_Clock</font>
+		<font>Digital_Clock_20</font>
 		<textcolor>ffaa1622</textcolor>
 		<label>$LOCALIZE[31274]</label>
 		<animation effect="fade" start="0" end="100" time="800" pulse="true" reversible="false" condition="Player.Playing">Conditional</animation>
@@ -347,7 +347,7 @@
 		<width>170</width>
 		<height>40</height>
 		<align>center</align>
-		<font>Font_Bartowski_Digital_Clock</font>
+		<font>Digital_Clock_20</font>
 		<textcolor>ffaa1622</textcolor>
 		<label>$LOCALIZE[133]</label>
 		<visible>Control.IsVisible(54) + Container.Content(artists) + !Player.HasMedia</visible>
@@ -359,7 +359,7 @@
 		<width>170</width>
 		<height>40</height>
 		<align>center</align>
-		<font>Font_Bartowski_Digital_Clock</font>
+		<font>Digital_Clock_20</font>
 		<textcolor>ffaa1622</textcolor>
 		<label>$LOCALIZE[132]</label>
 		<visible>Control.IsVisible(54) + Container.Content(albums) + !Player.HasMedia</visible>
@@ -371,7 +371,7 @@
 		<width>170</width>
 		<height>40</height>
 		<align>center</align>
-		<font>Font_Bartowski_Digital_Clock</font>
+		<font>Digital_Clock_20</font>
 		<textcolor>ffaa1622</textcolor>
 		<label>$LOCALIZE[134]</label>
 		<visible>Control.IsVisible(54) + Container.Content(songs) + !Player.HasMedia</visible>
@@ -383,7 +383,7 @@
 		<width>200</width>
 		<height>40</height>
 		<align>center</align>
-		<font>Font_Bartowski_Digital_Clock</font>
+		<font>Digital_Clock_20</font>
 		<textcolor>ffaa1622</textcolor>
 		<label>$LOCALIZE[31233]</label>
 		<visible>Control.IsVisible(54) + !Player.HasMedia</visible>
@@ -396,7 +396,7 @@
 		<align>center</align>
 		<label>$INFO[MusicPlayer.Title]</label>
 		<textcolor>ffaa1622</textcolor>
-		<font>Font_Bartowski_Digital_Clock</font>
+		<font>Digital_Clock_20</font>
 		<align>center</align>
 		<visible>Control.IsVisible(54) + Player.HasMedia</visible>
 	</control>
@@ -408,7 +408,7 @@
 		<align>center</align>
 		<label>$INFO[MusicPlayer.album]</label>
 		<textcolor>ffaa1622</textcolor>
-		<font>Font_Bartowski_Digital_Clock</font>
+		<font>Digital_Clock_20</font>
 		<align>center</align>
 		<visible>Control.IsVisible(54) + Player.HasMedia</visible>
 		<animation type="Conditional" reversible="false" condition="Control.IsVisible(54) + Player.HasMedia" loop="true">
@@ -426,7 +426,7 @@
 		<align>center</align>
 		<label>$INFO[MusicPlayer.Time]/$INFO[MusicPlayer.Duration]</label>
 		<textcolor>ffaa1622</textcolor>
-		<font>Font_Bartowski_Digital_Clock</font>
+		<font>Digital_Clock_20</font>
 		<align>center</align>
 		<visible>Control.IsVisible(54) + Player.HasMedia</visible>
 		<animation type="Conditional" reversible="false" condition="Control.IsVisible(54) + Player.HasMedia" loop="true">

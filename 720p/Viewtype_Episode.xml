@@ -65,6 +65,20 @@
 					<textcolor>white</textcolor>
 					<visible>!SubString(ListItem.Icon,DefaultFolderBack.png,Left)</visible>
 				</control>
+				<control type="image">
+					<visible>Container.Content(episodes)</visible>
+					<posx>14</posx>
+					<posy>14</posy>
+					<width>236</width>
+					<height>90</height>
+					<texture>dialogs/tv/$INFO[ListItem.Overlay]</texture>
+					<aspectratio scalediffuse="false">stretch</aspectratio>
+					<animation type="Focus" reversible="false">
+						<effect type="zoom" center="127,70" start="50" end="100" time="200" tween="cubic" easing="out" />
+						<effect type="fade" start="0" end="100" time="200" />
+					</animation>
+					<visible>Skin.HasSetting(tvoverlays) + !IsEmpty(ListItem.Overlay)</visible>
+				</control>
 			</itemlayout>
 			<focusedlayout width="633" height="142">
 				<control type="image">
@@ -178,7 +192,7 @@
 				<align>justify</align>
 				<info>Container(51).ListItem.Plot</info>
 				<autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
-				<font>Font_Bartowski_Episodes</font>
+				<font>LiberationSans_Regular_20</font>
 				<textcolor>white</textcolor>
 				<include>Animation_Viewtype_Episode_LeftSide</include>
 			</control>
@@ -215,7 +229,7 @@
 						<width>575</width>
 						<height>50</height>
 						<align>center</align>
-						<font>Font_Bartowski_Title_TVShow</font>
+						<font>LiberationSans_Regular_30</font>
 						<textcolor>mainblue</textcolor>
 						<label>[B]$INFO[ListItem.Title][/B]</label>
 						<scroll>true</scroll>
@@ -227,7 +241,7 @@
 						<width>575</width>
 						<height>50</height>
 						<align>center</align>
-						<font>Font_Bartowski_Title_TVShow</font>
+						<font>LiberationSans_Regular_30</font>
 						<textcolor>mainblue</textcolor>
 						<label>[B]$INFO[ListItem.Label][/B]</label>
 						<scroll>true</scroll>
@@ -239,7 +253,7 @@
 						<width>556</width>
 						<height>50</height>
 						<align>center</align>
-						<font>Font_TVShow</font>
+						<font>LiberationSans_Regular_22</font>
 						<textcolor>white</textcolor>
 						<label>$LOCALIZE[20373] $INFO[ListItem.Season]/$LOCALIZE[20359] $INFO[ListItem.Episode]</label>
 						<visible>!IsEmpty(ListItem.Season)</visible>
@@ -250,26 +264,52 @@
 						<width>556</width>
 						<height>50</height>
 						<align>center</align>
-						<font>Font_TVShow</font>
+						<font>LiberationSans_Regular_22</font>
 						<textcolor>white</textcolor>
 						<label>$LOCALIZE[31231]: $INFO[ListItem.Date]</label>
 						<visible>!IsEmpty(ListItem.Date)</visible>
 					</control>
 			</control>
 			<control type="grouplist">
-					<visible>Container.Content(episodes) + !Skin.HasSetting(no_media_flags)</visible>
-					<description>Media Codec Flagging Images</description>
-					<posx>380</posx>
-					<posy>680</posy>
-					<width>556</width>
-					<align>center</align>
-					<itemgap>0</itemgap>
-					<orientation>horizontal</orientation>
-					<include condition="!Skin.HasSetting(grey_flags)">color_flags</include>
-					<include condition="Skin.HasSetting(grey_flags)">grey_flags</include>
-					<include>Animation_Viewtype_Episode_BottomArea</include>
-				</control>
-			<control type="image"><!-- 1st Background -->
+				<visible>Container.Content(episodes) + Skin.HasSetting(back_flags) + !Skin.HasSetting(no_media_flags)</visible>
+				<description>Media Codec Flagging Images</description>
+				<posx>380</posx>
+				<posy>680</posy>
+				<width>556</width>
+				<align>center</align>
+				<itemgap>0</itemgap>
+				<orientation>horizontal</orientation>
+				<include>back_flags</include>
+				<include>Animation_ZoomInZoomOut</include>
+			</control>
+			<control type="grouplist">
+				<visible>Container.Content(episodes) + !Skin.HasSetting(no_media_flags)</visible>
+				<description>Media Codec Flagging Images</description>
+				<posx>380</posx>
+				<posy>680</posy>
+				<width>556</width>
+				<align>center</align>
+				<itemgap>0</itemgap>
+				<orientation>horizontal</orientation>
+				<include condition="!Skin.HasSetting(vanilla_flags) + !Skin.HasSetting(original_flags) + !Skin.HasSetting(flat_flags)">color_flags</include>
+				<include condition="Skin.HasSetting(vanilla_flags) + !Skin.HasSetting(original_flags) + !Skin.HasSetting(flat_flags)">vanilla_flags</include>
+				<include condition="Skin.HasSetting(original_flags) + !Skin.HasSetting(vanilla_flags) + !Skin.HasSetting(flat_flags)">original_flags</include>
+				<include condition="Skin.HasSetting(flat_flags) + !Skin.HasSetting(vanilla_flags) + !Skin.HasSetting(original_flags)">flat_flags</include>
+				<include>Animation_ZoomInZoomOut</include>
+			</control>
+			<control type="grouplist">
+				<visible>Container.Content(episodes) + !Skin.HasSetting(no_frame_flags) + !Skin.HasSetting(no_media_flags)</visible>
+				<description>Media Codec Flagging Images</description>
+				<posx>380</posx>
+				<posy>680</posy>
+				<width>556</width>
+				<align>center</align>
+				<itemgap>0</itemgap>
+				<orientation>horizontal</orientation>
+				<include>frame_flags</include>
+				<include>Animation_ZoomInZoomOut</include>
+			</control>
+			<control type="image">
 				<visible>Container.Content(episodes) | Window.IsActive(videoplaylist)</visible>
 				<posx>0</posx>
 				<posy>0</posy>
@@ -278,12 +318,12 @@
 				<texture>tv-episodes/last-overlay.png</texture>
 				<aspectratio>stretch</aspectratio>
 			</control>
-			<control type="textbox"><!-- Uncheck Cleartitle -->
+			<control type="textbox">
 				<posx>10</posx>
 				<posy>10</posy>
 				<width>500</width><!--1200 50 -->
 				<height>300</height>
-				<font>Font_Episode_Landscape_TVTitle</font>
+				<font>DejaVuSans_Bold_38</font>
 				<textcolor>mainblue</textcolor>
 				<label>[B]$INFO[ListItem.TVShowtitle][/B]</label>
 				<include>Animation_Viewtype_Episode_LeftSide</include>

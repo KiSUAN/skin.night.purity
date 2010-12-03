@@ -188,7 +188,7 @@
 			<width>1280</width>
 			<height>100</height>
 			<align>center</align>
-			<font>Font_Alaya_Movie-trailer</font>
+			<font>LiberationSans_Regular_16</font>
 			<textcolor>mainblue</textcolor>
 			<label>[B]$INFO[System.CurrentControl][/B]</label>
 			<include>Animation_CommonFade</include>
@@ -206,7 +206,7 @@
 				<align>center</align>
 				<aligny>top</aligny>
 				<label>[B]$LOCALIZE[112][/B]</label>
-				<font>Font_Bartowski_Movies_Title</font>
+				<font>LiberationSans_Regular_28</font>
 				<textcolor>PlayerAction</textcolor>
 				<shadowcolor>PlayerActionShadow</shadowcolor>
 				<visible>player.paused</visible>
@@ -218,7 +218,7 @@
 				<align>center</align>
 				<aligny>top</aligny>
 				<label>[B]FFx2[/B]</label>
-				<font>Font_Bartowski_Movies_Title</font>
+				<font>LiberationSans_Regular_28</font>
 				<textcolor>PlayerAction</textcolor>
 				<shadowcolor>PlayerActionShadow</shadowcolor>
 				<visible>player.forwarding2x</visible>
@@ -230,7 +230,7 @@
 				<align>center</align>
 				<aligny>top</aligny>
 				<label>[B]FFx4[/B]</label>
-				<font>Font_Bartowski_Movies_Title</font>
+				<font>LiberationSans_Regular_28</font>
 				<textcolor>PlayerAction</textcolor>
 				<shadowcolor>PlayerActionShadow</shadowcolor>
 				<visible>player.forwarding4x</visible>
@@ -242,7 +242,7 @@
 				<align>center</align>
 				<aligny>top</aligny>
 				<label>[B]FFx8[/B]</label>
-				<font>Font_Bartowski_Movies_Title</font>
+				<font>LiberationSans_Regular_28</font>
 				<textcolor>PlayerAction</textcolor>
 				<shadowcolor>PlayerActionShadow</shadowcolor>
 				<visible>player.forwarding8x</visible>
@@ -254,7 +254,7 @@
 				<align>center</align>
 				<aligny>top</aligny>
 				<label>[B]FFx16[/B]</label>
-				<font>Font_Bartowski_Movies_Title</font>
+				<font>LiberationSans_Regular_28</font>
 				<textcolor>PlayerAction</textcolor>
 				<shadowcolor>PlayerActionShadow</shadowcolor>
 				<visible>player.forwarding16x</visible>
@@ -266,7 +266,7 @@
 				<align>center</align>
 				<aligny>top</aligny>
 				<label>[B]FFx32[/B]</label>
-				<font>Font_Bartowski_Movies_Title</font>
+				<font>LiberationSans_Regular_28</font>
 				<textcolor>PlayerAction</textcolor>
 				<shadowcolor>PlayerActionShadow</shadowcolor>
 				<visible>player.forwarding32x</visible>
@@ -278,7 +278,7 @@
 				<align>center</align>
 				<aligny>top</aligny>
 				<label>[B]RWx2[/B]</label>
-				<font>Font_Bartowski_Movies_Title</font>
+				<font>LiberationSans_Regular_28</font>
 				<textcolor>PlayerAction</textcolor>
 				<shadowcolor>PlayerActionShadow</shadowcolor>
 				<visible>player.rewinding2x</visible>
@@ -290,7 +290,7 @@
 				<align>center</align>
 				<aligny>top</aligny>
 				<label>[B]RWx4[/B]</label>
-				<font>Font_Bartowski_Movies_Title</font>
+				<font>LiberationSans_Regular_28</font>
 				<textcolor>PlayerAction</textcolor>
 				<shadowcolor>PlayerActionShadow</shadowcolor>
 				<visible>player.rewinding4x</visible>
@@ -302,7 +302,7 @@
 				<align>center</align>
 				<aligny>top</aligny>
 				<label>[B]RWx8[/B]</label>
-				<font>Font_Bartowski_Movies_Title</font>
+				<font>LiberationSans_Regular_28</font>
 				<textcolor>PlayerAction</textcolor>
 				<shadowcolor>PlayerActionShadow</shadowcolor>
 				<visible>player.rewinding8x</visible>
@@ -314,7 +314,7 @@
 				<align>center</align>
 				<aligny>top</aligny>
 				<label>[B]RWx16[/B]</label>
-				<font>Font_Bartowski_Movies_Title</font>
+				<font>LiberationSans_Regular_28</font>
 				<textcolor>PlayerAction</textcolor>
 				<shadowcolor>PlayerActionShadow</shadowcolor>
 				<visible>player.rewinding16x</visible>
@@ -326,7 +326,7 @@
 				<align>center</align>
 				<aligny>top</aligny>
 				<label>[B]RWx32[/B]</label>
-				<font>Font_Bartowski_Movies_Title</font>
+				<font>LiberationSans_Regular_28</font>
 				<textcolor>PlayerAction</textcolor>
 				<shadowcolor>PlayerActionShadow</shadowcolor>
 				<visible>player.rewinding32x</visible>

@@ -41,7 +41,7 @@
 			<itemgap>0</itemgap>
 			<visible allowhiddenfocus="true">ControlGroup(7000).HasFocus + !Skin.HasSetting(LockViews)</visible>
 			<orientation>horizontal</orientation>
-			<posy>678</posy>
+			<posy>680</posy>
 			<!-- shuffle -->
 			<control type="button" id="30">
 				<include>WindowMenuButton</include>
