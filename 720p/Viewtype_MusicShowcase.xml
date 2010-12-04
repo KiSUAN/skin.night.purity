@@ -144,7 +144,7 @@
 							<posx>-204</posx>
 							<posy>-161</posy>
 							<width>618</width>
-							<height>417</height>
+							<height>435</height>
 							<texture>music/musci_focus_glow.png</texture>
 							<colordiffuse>poster_glow</colordiffuse>
 							<aspectratio scalediffuse="false">stretch</aspectratio>
