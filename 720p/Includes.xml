@@ -1433,7 +1433,7 @@
 		<textcolor>MenuValue</textcolor>
 		<textureradioon>common/radioUnderline.png</textureradioon>
 		<textureradiooff>-</textureradiooff>
-		<colordiffuse>FlagDiffuse</colordiffuse>
+		<colordiffuse>flagicon</colordiffuse>
 	</include>
 	<include name="WindowMenuLabel">
 		<posx>0</posx>

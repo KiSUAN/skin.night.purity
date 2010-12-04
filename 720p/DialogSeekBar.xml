@@ -276,7 +276,7 @@
 			<aligny>top</aligny>
 			<label>[B]$LOCALIZE[112][/B]</label>
 			<font>LiberationSans_Regular_28</font>
-			<textcolor>PlayerActionShadow</textcolor>
+			<textcolor>playeractionshadow</textcolor>
 			<visible>player.paused</visible>
 		</control>
 		<control type="label" id="0">
@@ -287,7 +287,7 @@
 			<aligny>top</aligny>
 			<label>[B]FFx2[/B]</label>
 			<font>LiberationSans_Regular_28</font>
-			<textcolor>PlayerActionShadow</textcolor>
+			<textcolor>playeractionshadow</textcolor>
 			<visible>player.forwarding2x</visible>
 		</control>
 		<control type="label" id="0">
@@ -298,7 +298,7 @@
 			<aligny>top</aligny>
 			<label>[B]FFx4[/B]</label>
 			<font>LiberationSans_Regular_28</font>
-			<textcolor>PlayerActionShadow</textcolor>
+			<textcolor>playeractionshadow</textcolor>
 			<visible>player.forwarding4x</visible>
 		</control>
 		<control type="label" id="0">
@@ -309,7 +309,7 @@
 			<aligny>top</aligny>
 			<label>[B]FFx8[/B]</label>
 			<font>LiberationSans_Regular_28</font>
-			<textcolor>PlayerActionShadow</textcolor>
+			<textcolor>playeractionshadow</textcolor>
 			<visible>player.forwarding8x</visible>
 		</control>
 		<control type="label" id="0">
@@ -320,7 +320,7 @@
 			<aligny>top</aligny>
 			<label>[B]FFx16[/B]</label>
 			<font>LiberationSans_Regular_28</font>
-			<textcolor>PlayerActionShadow</textcolor>
+			<textcolor>playeractionshadow</textcolor>
 			<visible>player.forwarding16x</visible>
 		</control>
 		<control type="label" id="0">
@@ -331,7 +331,7 @@
 			<aligny>top</aligny>
 			<label>[B]FFx32[/B]</label>
 			<font>LiberationSans_Regular_28</font>
-			<textcolor>PlayerActionShadow</textcolor>
+			<textcolor>playeractionshadow</textcolor>
 			<visible>player.forwarding32x</visible>
 		</control>
 		<control type="label" id="0">
@@ -342,7 +342,7 @@
 			<aligny>top</aligny>
 			<label>[B]RWx2[/B]</label>
 			<font>LiberationSans_Regular_28</font>
-			<textcolor>PlayerActionShadow</textcolor>
+			<textcolor>playeractionshadow</textcolor>
 			<visible>player.rewinding2x</visible>
 		</control>
 		<control type="label" id="0">
@@ -353,7 +353,7 @@
 			<aligny>top</aligny>
 			<label>[B]RWx4[/B]</label>
 			<font>LiberationSans_Regular_28</font>
-			<textcolor>PlayerActionShadow</textcolor>
+			<textcolor>playeractionshadow</textcolor>
 			<visible>player.rewinding4x</visible>
 		</control>
 		<control type="label" id="0">
@@ -364,7 +364,7 @@
 			<aligny>top</aligny>
 			<label>[B]RWx8[/B]</label>
 			<font>LiberationSans_Regular_28</font>
-			<textcolor>PlayerActionShadow</textcolor>
+			<textcolor>playeractionshadow</textcolor>
 			<visible>player.rewinding8x</visible>
 		</control>
 		<control type="label" id="0">
@@ -375,7 +375,7 @@
 			<aligny>top</aligny>
 			<label>[B]RWx16[/B]</label>
 			<font>LiberationSans_Regular_28</font>
-			<textcolor>PlayerActionShadow</textcolor>
+			<textcolor>playeractionshadow</textcolor>
 			<visible>player.rewinding16x</visible>
 		</control>
 		<control type="label" id="0">
@@ -386,7 +386,7 @@
 			<aligny>top</aligny>
 			<label>[B]RWx32[/B]</label>
 			<font>LiberationSans_Regular_28</font>
-			<textcolor>PlayerActionShadow</textcolor>
+			<textcolor>playeractionshadow</textcolor>
 			<visible>player.rewinding32x</visible>
 		</control>
 	</control>
