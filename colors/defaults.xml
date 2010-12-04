@@ -8,13 +8,15 @@
 	<color name="blue">FF0055be</color>
 	<color name="selected">FFEB9E17</color>
 	<color name="dialogheader">DDced8da</color>
+
 	<!-- Theme Colours -->
 
 	<color name="BackgroundColor">ccFFFFFF</color>
 	<color name="BackgroundFilterColor">dd727272</color>
 	<color name="BackgroundFilterColor1">dd000000</color>
-	<color name="ButtonFilterColor">FF67FFFF</color>
+	<color name="ButtonFilterColor">FFffffff</color>
 	<color name="plotdiffuse">bb000000</color>
+	
 	<!-- Home 1 Colours -->
 
 	<color name="HomeFrameColor">FFE0E0E0</color>
@@ -28,7 +30,7 @@
 	<!-- Background Test Colours
 	
 	<color name="BackgroundColor">ee000025</color>
-	<color name="BackgroundFilterColor">44009ACD</color>
+	<color name="BackgroundFilterColor">44015582</color>
 	<color name="BackgroundColor">dd000025</color>
 	<color name="BackgroundFilterColor">cc151579</color>
 	<color name="BackgroundColor">bb4aff46</color>
@@ -53,16 +55,9 @@
 	<color name="Text-Filemode">67a1a1a1</color>
 	<color name="TextDisabled">FFff5858</color>
 	<color name="TextSelected">FFb8b8b8</color>
-	<color name="MainBlue">FF67ffff</color>
+	<color name="MainBlue">FF015582</color>
 	<color name="MainBlack">FF000000</color>
-	<color name="ContextHighlight">ff13b6a5</color>
-
-	<!-- Flags -->
-
-	<color name="FlagDiffuse">CC474747</color>
-	<color name="FlagText">abFFFFFF</color>
-	<color name="FlagText2">CC474747</color>
-	<color name="StarDiffuse">FF727272</color>
+	<color name="ContextHighlight">ff015582</color>
 
 	<!-- OSD -->
 
@@ -88,7 +83,7 @@
 	<color name="PosterTitle">FF474747</color>
 	<color name="EpisodeLabelF">FF474747</color>	
 	<color name="EpisodePlot">DD202020</color>	
-	<color name="EpisodeNumber">FF474747</color>		
+	<color name="EpisodeNumber">FF474747</color>	
 
 	<!-- Info dialog colours -->
 
@@ -151,12 +146,18 @@
 	
 <!-- Night easier to mod colors 11-16 -->
 
-	<color name="mainblue">FF67ffff</color>
-	<color name="mainbluedarker">FF15efd9</color>
+	<color name="mainblue">FF015582</color>
+	<color name="mainbluedarker">FF015582</color>
 	<color name="highlight_selection">FFFFFFFF</color>
 	<color name="poster_glow">FFFFFFFF</color>
 	<color name="episode_view_unfocused">ff959494</color>
-	<color name="episode_view_focus">FF67ffff</color>
+	<color name="episode_view_focus">FFffffff</color>
+	<color name="viewheader">ffb7b7b7</color>
+	<color name="viewheadershadow">ff525252</color>	
+	<color name="PlayerAction">ffb7b7b7</color>
+	<color name="PlayerActionShadow">ff525252</color>
+	<color name="FlagDiffuse">FFFFFFFF</color>
+	<color name="FrameDiffuse">FFFFFFFF</color>
+	<color name="BackDiffuse">FF161616</color>
 	
-
 </colors>
