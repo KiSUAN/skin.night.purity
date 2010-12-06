@@ -671,7 +671,7 @@
 				<label>[B][COLOR=ListTrackF]$LOCALIZE[515][/COLOR] [B][COLOR=white]$INFO[ListItem.Genre][/B][/COLOR]</label>
 			</control>
 			<control type="label">
-				<visible>Container.Content(tvshows) + !IsEmpty(ListItem.Date)</visible>
+				<visible>Container.Content(tvshows) + !IsEmpty(ListItem.Date) + !Window.IsActive(videofiles)</visible>
 				<posx>790</posx>
 				<posy>30</posy>
 				<width>490</width>

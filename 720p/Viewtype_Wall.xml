@@ -291,12 +291,12 @@
 						<info>ListItem.Plot</info>
 						<font>LiberationSans_Regular_18</font>
 						<textcolor>white</textcolor>
-						<autoscroll time="2500" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
+						<autoscroll time="2500" delay="5000" repeat="5000">Skin.HasSetting(autoscroll) + !Window.IsActive(videofiles)</autoscroll>
 						<include>Animation_Viewtype_Wall_Plot</include>
 					</control>
 			</control>
 			<control type="grouplist">
-				<visible>!Skin.HasSetting(no_media_flags) + Skin.HasSetting(back_flags) + !Player.HasMedia</visible>
+				<visible>!Skin.HasSetting(no_media_flags) + Skin.HasSetting(back_flags) + !Player.HasMedia + !Window.IsActive(videofiles)</visible>
 				<description>Media Codec Flagging Images</description>
 				<posx>780</posx>
 				<posy>680</posy>
@@ -308,7 +308,7 @@
 				<include>Animation_ZoomInZoomOut</include>
 			</control>
 			<control type="grouplist">
-				<visible>!Skin.HasSetting(no_media_flags) + !Player.HasMedia</visible>
+				<visible>!Skin.HasSetting(no_media_flags) + !Player.HasMedia + !Window.IsActive(videofiles)</visible>
 				<description>Media Codec Flagging Images</description>
 				<posx>780</posx>
 				<posy>680</posy>
@@ -323,7 +323,7 @@
 				<include>Animation_ZoomInZoomOut</include>
 			</control>
 			<control type="grouplist">
-				<visible>!Skin.HasSetting(no_media_flags) + !Skin.HasSetting(no_frame_flags) + !Player.HasMedia</visible>
+				<visible>!Skin.HasSetting(no_media_flags) + !Skin.HasSetting(no_frame_flags) + !Player.HasMedia + !Window.IsActive(videofiles)</visible>
 				<description>Media Codec Flagging Images</description>
 				<posx>780</posx>
 				<posy>680</posy>

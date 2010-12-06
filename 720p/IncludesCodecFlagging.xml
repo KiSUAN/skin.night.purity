@@ -143,7 +143,7 @@
 			<height>46</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/video/custom/dvd.png</texture>
-			<visible>substring(ListItem.FilenameAndPath,dvd) | substring(ListItem.Filename,.vob,Right) | substring(ListItem.Filename,.ifo,Right) + !substring(ListItem.FilenameAndPath,hddvd)</visible>
+			<visible>[substring(ListItem.FilenameAndPath,dvd) | substring(ListItem.Filename,.vob,Right) | substring(ListItem.Filename,.ifo,Right)] + !substring(ListItem.FilenameAndPath,hddvd)</visible>
 		</control>
 		<control type="image">
 			<description>Bluray Image</description>
@@ -493,7 +493,7 @@
 			<height>46</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/audio/custom/dolbydigital.png</texture>
-			<visible>substring(ListItem.AudioCodec,ac3) | substring(ListItem.AudioCodec,dolby digital)</visible>
+			<visible>[substring(ListItem.AudioCodec,ac3) | substring(ListItem.AudioCodec,dolby digital)] + substring(ListItem.AudioChannels,6)</visible>
 		</control>
 		<control type="image">
 			<description>DD Plus Image</description>
@@ -725,7 +725,7 @@
 			<height>46</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/video/original/dvd.png</texture>
-			<visible>substring(ListItem.FilenameAndPath,dvd) | substring(ListItem.Filename,.vob,Right) | substring(ListItem.Filename,.ifo,Right) + !substring(ListItem.FilenameAndPath,hddvd)</visible>
+			<visible>[substring(ListItem.FilenameAndPath,dvd) | substring(ListItem.Filename,.vob,Right) | substring(ListItem.Filename,.ifo,Right)] + !substring(ListItem.FilenameAndPath,hddvd)</visible>
 		</control>
 		<control type="image">
 			<description>Bluray Image</description>
@@ -894,7 +894,7 @@
 			<height>46</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/audio/original/dolbydigital.png</texture>
-			<visible>substring(ListItem.AudioCodec,ac3) | substring(ListItem.AudioCodec,dolby digital)</visible>
+			<visible>[substring(ListItem.AudioCodec,ac3) | substring(ListItem.AudioCodec,dolby digital)] + substring(ListItem.AudioChannels,6)</visible>
 		</control>
 		<control type="image">
 			<description>DD Plus Image</description>
@@ -1143,7 +1143,7 @@
 			<height>46</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/video/vanilla/dvd.png</texture>
-			<visible>substring(ListItem.FilenameAndPath,dvd) | substring(ListItem.Filename,.vob,Right) | substring(ListItem.Filename,.ifo,Right) + !substring(ListItem.FilenameAndPath,hddvd)</visible>
+			<visible>[substring(ListItem.FilenameAndPath,dvd) | substring(ListItem.Filename,.vob,Right) | substring(ListItem.Filename,.ifo,Right)] + !substring(ListItem.FilenameAndPath,hddvd)</visible>
 			<colordiffuse>flagicon</colordiffuse>
 		</control>
 		<control type="image">
@@ -1537,7 +1537,7 @@
 			<height>46</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/audio/vanilla/dolbydigital.png</texture>
-			<visible>substring(ListItem.AudioCodec,ac3) | substring(ListItem.AudioCodec,dolby digital)</visible>
+			<visible>[substring(ListItem.AudioCodec,ac3) | substring(ListItem.AudioCodec,dolby digital)] + substring(ListItem.AudioChannels,6)</visible>
 			<colordiffuse>flagicon</colordiffuse>
 		</control>
 		<control type="image">
@@ -1797,7 +1797,7 @@
 			<height>46</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/video/flat/dvd.png</texture>
-			<visible>substring(ListItem.FilenameAndPath,dvd) | substring(ListItem.Filename,.vob,Right) | substring(ListItem.Filename,.ifo,Right) + !substring(ListItem.FilenameAndPath,hddvd)</visible>
+			<visible>[substring(ListItem.FilenameAndPath,dvd) | substring(ListItem.Filename,.vob,Right) | substring(ListItem.Filename,.ifo,Right)] + !substring(ListItem.FilenameAndPath,hddvd)</visible>
 			<colordiffuse>flagicon</colordiffuse>
 		</control>
 		<control type="image">
@@ -1987,7 +1987,7 @@
 			<height>46</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/audio/flat/dolbydigital.png</texture>
-			<visible>substring(ListItem.AudioCodec,ac3) | substring(ListItem.AudioCodec,dolby digital)</visible>
+			<visible>[substring(ListItem.AudioCodec,ac3) | substring(ListItem.AudioCodec,dolby digital)] + substring(ListItem.AudioChannels,6)</visible>
 			<colordiffuse>flagicon</colordiffuse>
 		</control>
 		<control type="image">
@@ -2247,7 +2247,7 @@
 			<height>46</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/flag_frame.png</texture>
-			<visible>substring(ListItem.FilenameAndPath,dvd) | substring(ListItem.Filename,.vob,Right) | substring(ListItem.Filename,.ifo,Right) + !substring(ListItem.FilenameAndPath,hddvd)</visible>
+			<visible>[substring(ListItem.FilenameAndPath,dvd) | substring(ListItem.Filename,.vob,Right) | substring(ListItem.Filename,.ifo,Right)] + !substring(ListItem.FilenameAndPath,hddvd)</visible>
 			<colordiffuse>flagframe</colordiffuse>
 		</control>
 		<control type="image">
@@ -2437,7 +2437,7 @@
 			<height>46</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/flag_frame.png</texture>
-			<visible>substring(ListItem.AudioCodec,ac3) | substring(ListItem.AudioCodec,dolby digital)</visible>
+			<visible>[substring(ListItem.AudioCodec,ac3) | substring(ListItem.AudioCodec,dolby digital)] + substring(ListItem.AudioChannels,6)</visible>
 			<colordiffuse>flagframe</colordiffuse>
 		</control>
 		<control type="image">
@@ -2697,7 +2697,7 @@
 			<height>46</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/back_flag.png</texture>
-			<visible>substring(ListItem.FilenameAndPath,dvd) | substring(ListItem.Filename,.vob,Right) | substring(ListItem.Filename,.ifo,Right) + !substring(ListItem.FilenameAndPath,hddvd)</visible>
+			<visible>[substring(ListItem.FilenameAndPath,dvd) | substring(ListItem.Filename,.vob,Right) | substring(ListItem.Filename,.ifo,Right)] + !substring(ListItem.FilenameAndPath,hddvd)</visible>
 			<colordiffuse>flagback</colordiffuse>
 		</control>
 		<control type="image">
@@ -2887,7 +2887,7 @@
 			<height>46</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/back_flag.png</texture>
-			<visible>substring(ListItem.AudioCodec,ac3) | substring(ListItem.AudioCodec,dolby digital)</visible>
+			<visible>[substring(ListItem.AudioCodec,ac3) | substring(ListItem.AudioCodec,dolby digital)] + substring(ListItem.AudioChannels,6)</visible>
 			<colordiffuse>flagback</colordiffuse>
 		</control>
 		<control type="image">

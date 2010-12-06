@@ -111,6 +111,7 @@
 					</control>
 						<include>VideoInfo_Next_Aired</include>
 					<control type="grouplist">
+						<visible>!Container.Content(tvshows) + !Container.Content(seasons)</visible>
 						<description>Media Codec Flagging Images</description>
 						<posx>0</posx>
 						<posy>600</posy>
@@ -124,6 +125,7 @@
 						<include>Animation_ZoomInZoomOut</include>
 					</control>
 					<control type="grouplist">
+						<visible>!Container.Content(tvshows) + !Container.Content(seasons)</visible>
 						<description>Media Codec Flagging Images</description>
 						<posx>0</posx>
 						<posy>600</posy>
@@ -140,6 +142,7 @@
 						<include>Animation_ZoomInZoomOut</include>
 					</control>
 					<control type="grouplist">
+						<visible>!Container.Content(tvshows) + !Container.Content(seasons)</visible>
 						<description>Media Codec Flagging Images</description>
 						<posx>0</posx>
 						<posy>600</posy>
