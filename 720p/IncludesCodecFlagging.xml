@@ -969,7 +969,7 @@
 			<visible>substring(ListItem.AudioCodec,pcm)</visible>
 		</control>
 	</include>
-	<include name="AspectCodecFlaggingConditions_orginal">
+	<include name="AspectCodecFlaggingConditions_original">
 		<control type="image">
 			<description>Aspectratio Image</description>
 			<width>62</width>
