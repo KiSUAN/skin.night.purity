@@ -480,7 +480,7 @@
 					<visible>Container.Content(movies) + Skin.HasSetting(back_flags) + ![Player.HasAudio + !SubString(Window(10025).Property(TvTunesIsAlive),True)] + !Skin.HasSetting(no_media_flags)</visible>
 					<description>Media Codec Flagging Images</description>
 					<posx>20</posx>
-					<posy>680</posy>
+					<posy>674</posy>
 					<width>540</width>
 					<align>center</align>
 					<itemgap>0</itemgap>
@@ -492,7 +492,7 @@
 					<visible>Container.Content(movies) + ![Player.HasAudio + !SubString(Window(10025).Property(TvTunesIsAlive),True)] + !Skin.HasSetting(no_media_flags)</visible>
 					<description>Media Codec Flagging Images</description>
 					<posx>20</posx>
-					<posy>680</posy>
+					<posy>674</posy>
 					<width>540</width>
 					<align>center</align>
 					<itemgap>0</itemgap>
@@ -507,7 +507,7 @@
 					<visible>Container.Content(movies) + !Skin.HasSetting(no_frame_flags) + ![Player.HasAudio + !SubString(Window(10025).Property(TvTunesIsAlive),True)] + !Skin.HasSetting(no_media_flags)</visible>
 					<description>Media Codec Flagging Images</description>
 					<posx>20</posx>
-					<posy>680</posy>
+					<posy>674</posy>
 					<width>540</width>
 					<align>center</align>
 					<itemgap>0</itemgap>

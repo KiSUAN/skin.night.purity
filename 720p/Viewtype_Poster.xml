@@ -689,7 +689,7 @@
 				<visible>Container.Content(movies) + Skin.HasSetting(back_flags) + !Skin.HasSetting(clean_poster) + !Skin.HasSetting(no_media_flags) + !Control.IsVisible(65) + !Window.IsActive(videofiles)</visible>
 				<description>Media Codec Flagging Images</description>
 				<posx>20</posx>
-				<posy>680</posy>
+				<posy>676</posy>
 				<width>1280</width>
 				<align>left</align>
 				<itemgap>0</itemgap>
@@ -701,7 +701,7 @@
 				<visible>Container.Content(movies) + !Skin.HasSetting(clean_poster) + !Skin.HasSetting(no_media_flags) + !Control.IsVisible(65) + !Window.IsActive(videofiles)</visible>
 				<description>Media Codec Flagging Images</description>
 				<posx>20</posx>
-				<posy>680</posy>
+				<posy>676</posy>
 				<width>1280</width>
 				<align>left</align>
 				<itemgap>0</itemgap>
@@ -716,7 +716,7 @@
 				<visible>Container.Content(movies) + !Skin.HasSetting(no_frame_flags) + !Skin.HasSetting(clean_poster) + !Skin.HasSetting(no_media_flags) + !Control.IsVisible(65) + !Window.IsActive(videofiles)</visible>
 				<description>Media Codec Flagging Images</description>
 				<posx>20</posx>
-				<posy>680</posy>
+				<posy>676</posy>
 				<width>1280</width>
 				<align>left</align>
 				<itemgap>0</itemgap>

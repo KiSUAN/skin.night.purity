@@ -299,7 +299,7 @@
 				<posx>15</posx>
 				<posy>450</posy>
 				<width>555</width>
-				<height>220</height>
+				<height>210</height>
 				<font>LiberationSans_Regular_20</font>
 				<textcolor>white</textcolor>
 				<label>$INFO[ListItem.Plot]</label>
@@ -362,7 +362,7 @@
 			<visible>Control.IsVisible(57) + Skin.HasSetting(back_flags) + Container.Content(episodes) + !Skin.HasSetting(no_media_flags) + !Player.HasAudio + !Skin.HasSetting(library_global_clock)</visible>
 			<description>Media Codec Flagging Images</description>
 			<posx>20</posx>
-			<posy>680</posy>
+			<posy>674</posy>
 			<width>540</width>
 			<align>center</align>
 			<itemgap>0</itemgap>
@@ -374,7 +374,7 @@
 			<visible>Control.IsVisible(57) + Container.Content(episodes) + !Skin.HasSetting(no_media_flags) + !Player.HasAudio + !Skin.HasSetting(library_global_clock)</visible>
 			<description>Media Codec Flagging Images</description>
 			<posx>20</posx>
-			<posy>680</posy>
+			<posy>674</posy>
 			<width>540</width>
 			<align>center</align>
 			<itemgap>0</itemgap>
@@ -389,7 +389,7 @@
 			<visible>Control.IsVisible(57) + !Skin.HasSetting(no_frame_flags) + Container.Content(episodes) + !Skin.HasSetting(no_media_flags) + !Player.HasAudio + !Skin.HasSetting(library_global_clock)</visible>
 			<description>Media Codec Flagging Images</description>
 			<posx>20</posx>
-			<posy>680</posy>
+			<posy>674</posy>
 			<width>540</width>
 			<align>center</align>
 			<itemgap>0</itemgap>

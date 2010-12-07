@@ -299,7 +299,7 @@
 				<visible>!Skin.HasSetting(no_media_flags) + Skin.HasSetting(back_flags) + !Player.HasMedia + !Window.IsActive(videofiles)</visible>
 				<description>Media Codec Flagging Images</description>
 				<posx>780</posx>
-				<posy>680</posy>
+				<posy>674</posy>
 				<width>500</width>
 				<align>right</align>
 				<itemgap>0</itemgap>
@@ -311,7 +311,7 @@
 				<visible>!Skin.HasSetting(no_media_flags) + !Player.HasMedia + !Window.IsActive(videofiles)</visible>
 				<description>Media Codec Flagging Images</description>
 				<posx>780</posx>
-				<posy>680</posy>
+				<posy>674</posy>
 				<width>500</width>
 				<align>right</align>
 				<itemgap>0</itemgap>
@@ -326,7 +326,7 @@
 				<visible>!Skin.HasSetting(no_media_flags) + !Skin.HasSetting(no_frame_flags) + !Player.HasMedia + !Window.IsActive(videofiles)</visible>
 				<description>Media Codec Flagging Images</description>
 				<posx>780</posx>
-				<posy>680</posy>
+				<posy>674</posy>
 				<width>500</width>
 				<align>right</align>
 				<itemgap>0</itemgap>

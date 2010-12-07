@@ -274,7 +274,7 @@
 				<visible>Container.Content(episodes) + Skin.HasSetting(back_flags) + !Skin.HasSetting(no_media_flags)</visible>
 				<description>Media Codec Flagging Images</description>
 				<posx>380</posx>
-				<posy>680</posy>
+				<posy>674</posy>
 				<width>556</width>
 				<align>center</align>
 				<itemgap>0</itemgap>
@@ -286,7 +286,7 @@
 				<visible>Container.Content(episodes) + !Skin.HasSetting(no_media_flags)</visible>
 				<description>Media Codec Flagging Images</description>
 				<posx>380</posx>
-				<posy>680</posy>
+				<posy>674</posy>
 				<width>556</width>
 				<align>center</align>
 				<itemgap>0</itemgap>
@@ -301,7 +301,7 @@
 				<visible>Container.Content(episodes) + !Skin.HasSetting(no_frame_flags) + !Skin.HasSetting(no_media_flags)</visible>
 				<description>Media Codec Flagging Images</description>
 				<posx>380</posx>
-				<posy>680</posy>
+				<posy>674</posy>
 				<width>556</width>
 				<align>center</align>
 				<itemgap>0</itemgap>
