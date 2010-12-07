@@ -73,7 +73,7 @@
 						<posy>130</posy>
 						<width>304</width>
 						<height>172</height>
-						<texture>movie-poster/xper_test.png</texture>
+						<texture>movie-poster/xper_test_2.png</texture>
 						<colordiffuse>BackgroundColor</colordiffuse>
 					</control>
 					<control type="image">
@@ -227,7 +227,7 @@
 						<posy>86</posy>
 						<width>407</width>
 						<height>232</height>
-						<texture>movie-poster/xper_test.png</texture>
+						<texture>movie-poster/xper_test_2.png</texture>
 						<aspectratio scalediffuse="false">stretch</aspectratio>
 						<animation type="Focus" reversible="false">
 							<effect type="zoom" center="60,238" start="80" end="100" time="600" tween="back" easing="out" />
@@ -588,7 +588,7 @@
 					<posx>20</posx>
 					<posy>120</posy>
 					<width>600</width>
-					<height>226</height>
+					<height>197</height>
 					<align>justify</align>
 					<info>ListItem.Plot</info>
 					<font>Font_3dland_plot</font>
@@ -645,7 +645,7 @@
 			<visible>!Skin.HasSetting(3dLandscape_Fanart) + Skin.HasSetting(back_flags) + !Skin.HasSetting(no_media_flags)</visible>
 			<description>Media Codec Flagging Images</description>
 			<posx>20</posx>
-			<posy>390</posy>
+			<posy>350</posy>
 			<width>1280</width>
 			<align>left</align>
 			<itemgap>0</itemgap>
@@ -657,7 +657,7 @@
 			<visible>!Skin.HasSetting(3dLandscape_Fanart) + !Skin.HasSetting(no_media_flags)</visible>
 			<description>Media Codec Flagging Images</description>
 			<posx>20</posx>
-			<posy>390</posy>
+			<posy>350</posy>
 			<width>1280</width>
 			<align>left</align>
 			<itemgap>0</itemgap>
@@ -672,7 +672,7 @@
 			<visible>!Skin.HasSetting(3dLandscape_Fanart) + !Skin.HasSetting(no_frame_flags) + !Skin.HasSetting(no_media_flags)</visible>
 			<description>Media Codec Flagging Images</description>
 			<posx>20</posx>
-			<posy>390</posy>
+			<posy>350</posy>
 			<width>1280</width>
 			<align>left</align>
 			<itemgap>0</itemgap>

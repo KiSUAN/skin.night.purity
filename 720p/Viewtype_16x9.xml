@@ -904,6 +904,7 @@
 				<orientation>horizontal</orientation>
 				<include>back_flags</include>
 				<include>Animation_ZoomInZoomOut</include>
+				<animation effect="slide" start="0,0" end="-1000,0" time="600" delay="2800" condition="Container.Content(movies) + ![Container(59).OnNext | Container(59).OnPrevious]">Conditional</animation>
 			</control>
 			<control type="grouplist">
 				<visible>Control.IsVisible(59) + [Container.Content(movies) | Container.Content(episodes)] + !Skin.HasSetting(no_media_flags) + !Window.IsActive(videofiles) + ![Player.HasAudio + !SubString(Window(10025).Property(TvTunesIsAlive),True)]</visible>
@@ -919,6 +920,7 @@
 				<include condition="Skin.HasSetting(original_flags) + !Skin.HasSetting(vanilla_flags) + !Skin.HasSetting(flat_flags)">original_flags</include>
 				<include condition="Skin.HasSetting(flat_flags) + !Skin.HasSetting(vanilla_flags) + !Skin.HasSetting(original_flags)">flat_flags</include>
 				<include>Animation_ZoomInZoomOut</include>
+				<animation effect="slide" start="0,0" end="-1000,0" time="600" delay="2800" condition="Container.Content(movies) + ![Container(59).OnNext | Container(59).OnPrevious]">Conditional</animation>
 			</control>
 			<control type="grouplist">
 				<visible>Control.IsVisible(59) + !Skin.HasSetting(no_frame_flags) + [Container.Content(movies) | Container.Content(episodes)] + !Skin.HasSetting(no_media_flags) + !Window.IsActive(videofiles) + ![Player.HasAudio + !SubString(Window(10025).Property(TvTunesIsAlive),True)]</visible>
@@ -931,6 +933,7 @@
 				<orientation>horizontal</orientation>
 				<include>frame_flags</include>
 				<include>Animation_ZoomInZoomOut</include>
+				<animation effect="slide" start="0,0" end="-1000,0" time="600" delay="2800" condition="Container.Content(movies) + ![Container(59).OnNext | Container(59).OnPrevious]">Conditional</animation>
 			</control>
 		
 		<control type="scrollbar" id="69">
