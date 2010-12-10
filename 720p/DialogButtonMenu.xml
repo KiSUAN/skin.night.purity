@@ -113,6 +113,7 @@
 				<align>center</align>
 				<aligny>middle</aligny>
 				<label>$LOCALIZE[13313]</label>
+				<onclick>ActivateWindow(home)</onclick>
 				<onclick>Reset()</onclick>
 			</control>
 			<control type="button" id="3113">
@@ -127,6 +128,7 @@
 				<align>center</align>
 				<aligny>middle</aligny>
 				<label>$LOCALIZE[13005]</label>
+				<onclick>ActivateWindow(home)</onclick>
 				<onclick>ShutDown()</onclick>
 			</control>
 			<control type="button" id="3114">
@@ -141,6 +143,8 @@
 				<align>center</align>
 				<aligny>middle</aligny>
 				<label>$LOCALIZE[13313] XBMC</label>
+				<onclick>ActivateWindow(home)</onclick>
+				
 				<onclick>RestartApp()</onclick>
 			</control>
 			<control type="button" id="3115">

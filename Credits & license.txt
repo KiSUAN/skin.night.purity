@@ -10,6 +10,9 @@ Credits go to
 mcborzu - http://forum.xbmc.org/member.php?u=44509 (skin http://forum.xbmc.org/showthread.php?t=82628)
 
 
+ronie - http://forum.xbmc.org/member.php?u=42570
+
+
 ^vhm-alex - http://ofsoundandvision.com/
 
 
@@ -17,7 +20,6 @@ mcborzu - http://forum.xbmc.org/member.php?u=44509 (skin http://forum.xbmc.org/s
 
 
 http://icons.mysitemyway.com/
-
 
 
 chip http://community.mediabrowser.tv/users/1163 & neil18 http://community.mediabrowser.tv/users/240
