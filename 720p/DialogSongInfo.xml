@@ -221,6 +221,16 @@
 				<width>400</width>
 				<height>60</height>
 				<texture>backdrops/test2.png</texture>
+				<visible>!Skin.HasSetting(hide_menuback)</visible>
+				<colordiffuse>menuback</colordiffuse>
+			</control>
+			<control type="image"><!-- Gradient -->
+				<posx>100</posx>
+				<posy>650</posy>
+				<width>400</width>
+				<height>60</height>
+				<texture>backdrops/test3.png</texture>
+				<colordiffuse>menugradient</colordiffuse>
 			</control>
 			<control type="image"><!-- Floor -->
 				<posx>520</posx>
@@ -228,6 +238,16 @@
 				<width>660</width>
 				<height>60</height>
 				<texture>backdrops/test2.png</texture>
+				<visible>!Skin.HasSetting(hide_menuback)</visible>
+				<colordiffuse>menuback</colordiffuse>
+			</control>
+			<control type="image"><!-- Gradient -->
+				<posx>520</posx>
+				<posy>650</posy>
+				<width>660</width>
+				<height>60</height>
+				<texture>backdrops/test3.png</texture>
+				<colordiffuse>menugradient</colordiffuse>
 			</control>
 			<control type="group">
 				<posx>146</posx>

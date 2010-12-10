@@ -19,6 +19,16 @@
 				<width>1280</width>
 				<height>70</height>
 				<texture>backdrops/test2.png</texture>
+				<visible>!Skin.HasSetting(hide_menuback)</visible>
+				<colordiffuse>menuback</colordiffuse>
+			</control>
+			<control type="image"><!-- Gradient -->
+				<posx>0</posx>
+				<posy>650</posy>
+				<width>1280</width>
+				<height>70</height>
+				<texture>backdrops/test3.png</texture>
+				<colordiffuse>menugradient</colordiffuse>
 			</control>
 			<control type="group">
 				<control type="label">

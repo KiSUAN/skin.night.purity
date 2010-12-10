@@ -152,14 +152,24 @@
 		
 	<control type="group">
 		<visible>!Skin.HasSetting(LockViews)</visible>
-		<include>Animation_CommonFade_ViewOptions</include>	
+		<include>Animation_CommonFade_ViewOptions</include>
 		<control type="image"><!-- Floor -->
 			<posx>0</posx>
 			<posy>650</posy>
 			<width>1280</width>
 			<height>70</height>
 			<texture>backdrops/test2.png</texture>
+			<visible allowhiddenfocus="true">ControlGroup(7000).HasFocus + !Skin.HasSetting(LockViews) + !Skin.HasSetting(hide_menuback)</visible>
+			<colordiffuse>menuback</colordiffuse>
+		</control>
+		<control type="image"><!-- Gradient -->
+			<posx>0</posx>
+			<posy>650</posy>
+			<width>1280</width>
+			<height>70</height>
+			<texture>backdrops/test3.png</texture>
 			<visible allowhiddenfocus="true">ControlGroup(7000).HasFocus + !Skin.HasSetting(LockViews)</visible>
+			<colordiffuse>menugradient</colordiffuse>
 		</control>
 			
 			

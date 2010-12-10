@@ -241,6 +241,12 @@
 						<onclick>Skin.SetAddon(LyricScript_Path,xbmc.python.lyrics)</onclick>
 						<visible>Skin.HasSetting(show_lyrics)</visible>
 					</control>
+					<control type="radiobutton" id="118">
+						<include>skin_settings_labels</include>
+						<label>Hide Back in Menus</label>
+						<onclick>Skin.ToggleSetting(hide_menuback)</onclick>
+						<selected>Skin.HasSetting(hide_menuback)</selected>
+					</control>
 					<!--<control type="radiobutton" id="111">
 						<include>skin_settings_labels</include>
 						<label>$LOCALIZE[31278]</label>

@@ -77,8 +77,19 @@
 			<width>1280</width>
 			<height>70</height>
 			<texture>backdrops/test2.png</texture>
+			<visible allowhiddenfocus="true">ControlGroup(7000).HasFocus + !Skin.HasSetting(LockViews) + !Skin.HasSetting(hide_menuback)</visible>
+			<include>Animation_ViewOptions_whitebar</include>
+			<colordiffuse>menuback</colordiffuse>
+		</control>
+		<control type="image"><!-- Gradient -->
+			<posx>0</posx>
+			<posy>650</posy>
+			<width>1280</width>
+			<height>70</height>
+			<texture>backdrops/test3.png</texture>
 			<visible allowhiddenfocus="true">ControlGroup(7000).HasFocus + !Skin.HasSetting(LockViews)</visible>
 			<include>Animation_ViewOptions_whitebar</include>
+			<colordiffuse>menugradient</colordiffuse>
 		</control>
 		
 		<control type="grouplist" id="7000">

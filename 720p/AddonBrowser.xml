@@ -28,14 +28,24 @@
 		</control>
 		
 	<control type="group">
-		<include>Animation_CommonFade_ViewOptions</include>	
+		<include>Animation_CommonFade_ViewOptions</include>
 			<control type="image"><!-- Floor -->
 				<posx>300</posx>
 				<posy>650</posy>
 				<width>700</width>
 				<height>70</height>
 				<texture>backdrops/test2.png</texture>
+				<visible allowhiddenfocus="true">ControlGroup(7000).HasFocus + !Skin.HasSetting(LockViews) + !Skin.HasSetting(hide_menuback)</visible>
+				<colordiffuse>menuback</colordiffuse>
+			</control>
+			<control type="image"><!-- Gradient -->
+				<posx>300</posx>
+				<posy>650</posy>
+				<width>700</width>
+				<height>70</height>
+				<texture>backdrops/test3.png</texture>
 				<visible allowhiddenfocus="true">ControlGroup(7000).HasFocus + !Skin.HasSetting(LockViews)</visible>
+				<colordiffuse>menugradient</colordiffuse>
 			</control>
 			
 			<control type="grouplist" id="7000">
@@ -60,7 +70,7 @@
 					<focusedcolor>white</focusedcolor>
 					<texturefocus border="5">confluence/button-focus.png</texturefocus>
 					<label>24063</label>
-					<textoffsetx>10</textoffsetx>
+					<textoffsetx>5</textoffsetx>
 					<width>150</width>
 				</control>
 			</control>

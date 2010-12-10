@@ -15,6 +15,8 @@
 	<color name="flagicon">FFFFFFFF</color>
 	<color name="flagframe">FFFFFFFF</color>
 	<color name="flagback">FF161616</color>
+	<color name="menuback">FF636363</color>
+	<color name="menugradient">FFFFFFFF</color>
 	
 	<!-- Basic colors-->
 	
