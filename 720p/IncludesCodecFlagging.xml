@@ -2,111 +2,112 @@
 	<include name="VideoCodecFlaggingConditions"><!--Custom Flags-->
 		<control type="image">
 			<description>Video rez Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>$INFO[ListItem.VideoResolution,flagging/video/custom/,.png]</texture>
+			<visible>!IsEmpty(ListItem.VideoResolution)</visible>
 		</control>
 		<control type="image">
 			<description>Xvid Codec Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/video/custom/xvid.png</texture>
 			<visible>substring(ListItem.VideoCodec,xvid)</visible>
 		</control>
 		<control type="image">
 			<description>Divx Codec Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/video/custom/divx.png</texture>
 			<visible>substring(ListItem.VideoCodec,divx)| substring(ListItem.VideoCodec,dx50) | substring(ListItem.VideoCodec,div3) |substring(ListItem.VideoCodec,div4) | substring(ListItem.VideoCodec,div5)</visible>
 		</control>
 		<control type="image">
 			<description>Theora Codec Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/video/custom/oggtheora.png</texture>
 			<visible>substring(ListItem.VideoCodec,ther)</visible>
 		</control>
 		<control type="image">
 			<description>h264 Codec Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/video/custom/h264.png</texture>
 			<visible>substring(ListItem.VideoCodec,h264)</visible>
 		</control>
 		<control type="image">
 			<description>h263 Codec Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/video/custom/h263.png</texture>
 			<visible>substring(ListItem.VideoCodec,h263)</visible>
 		</control>
 		<control type="image">
 			<description>h262 Codec Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/video/custom/h262.png</texture>
 			<visible>substring(ListItem.VideoCodec,h262)</visible>
 		</control>
 		<control type="image">
 			<description>avc1 Codec Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/video/custom/avc1.png</texture>
 			<visible>substring(ListItem.VideoCodec,avc1)</visible>
 		</control>
 		<control type="image">
 			<description>wvc1 Codec Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/video/custom/wvc1.png</texture>
 			<visible>substring(ListItem.VideoCodec,wvc1)</visible>
 		</control>
 		<control type="image">
 			<description>WmvHD Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/video/custom/wmvhd.png</texture>
 			<visible>substring(ListItem.VideoCodec,wmv3) | substring(ListItem.VideoCodec,wmva)</visible>
 		</control>
 		<control type="image">
 			<description>Wmv Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/video/custom/wmv.png</texture>
 			<visible>substring(ListItem.VideoCodec,wmv1) | substring(ListItem.VideoCodec,wmv2)</visible>
 		</control>
 		<control type="image">
 			<description>mpeg1video Codec Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/video/custom/mpeg1video.png</texture>
 			<visible>substring(ListItem.VideoCodec,mpeg1video) | substring(ListItem.VideoCodec,mpeg1)</visible>
 		</control>
 		<control type="image">
 			<description>mpeg2video Codec Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/video/custom/mpeg2video.png</texture>
 			<visible>substring(ListItem.VideoCodec,mpeg2video) | substring(ListItem.VideoCodec,v_mpeg2) | substring(ListItem.VideoCodec,mpeg2)</visible>
 		</control>
 		<control type="image">
 			<description>mpeg4video Codec Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/video/custom/mpeg4video.png</texture>
 			<visible>substring(ListItem.VideoCodec,mpeg4video) | substring(ListItem.VideoCodec,mpeg4) | substring(ListItem.VideoCodec,fmp4)</visible>
@@ -115,136 +116,136 @@
 	<include name="VideoTypeHackFlaggingConditions">
 		<control type="image">
 			<description>TV Types Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/video/custom/tv.png</texture>
 			<visible>substring(ListItem.FilenameAndPath,pdtv) | substring(ListItem.FilenameAndPath,dsr)</visible>
 		</control>
 		<control type="image">
 			<description>HDTV Types Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/video/custom/hdtv.png</texture>
 			<visible>substring(ListItem.FilenameAndPath,hdtv)</visible>
 		</control>
 		<control type="image">
 			<description>SDTV Types Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/video/custom/sd.png</texture>
 			<visible>substring(ListItem.FilenameAndPath,sdtv) | substring(ListItem.FilenameAndPath,tvrip)</visible>
 		</control>
 		<control type="image">
 			<description>DVD Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/video/custom/dvd.png</texture>
 			<visible>[substring(ListItem.FilenameAndPath,dvd) | substring(ListItem.Filename,.vob,Right) | substring(ListItem.Filename,.ifo,Right)] + !substring(ListItem.FilenameAndPath,hddvd)</visible>
 		</control>
 		<control type="image">
 			<description>Bluray Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/video/custom/bluray.png</texture>
 			<visible>substring(ListItem.FilenameAndPath,bluray) | substring(ListItem.FilenameAndPath,blu-ray) | substring(ListItem.Filename,brrip) | substring(ListItem.Filename,.m2ts,Right) | substring(ListItem.Filename,.bdmv,Right)</visible>
 		</control>
 		<control type="image">
 			<description>HDDVD Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/video/custom/hddvd.png</texture>
 			<visible>substring(ListItem.FilenameAndPath,hddvd) | substring(ListItem.Filename,.evo,Right)</visible>
 		</control>
 		<control type="image">
 			<description>Avi Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/video/custom/avi.png</texture>
 			<visible>substring(ListItem.Filename,.avi,Right)</visible>
 		</control>
 		<control type="image">
 			<description>Wmv Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/video/custom/wmv.png</texture>
 			<visible>substring(ListItem.Filename,.wmv,Right)</visible>
 		</control>
 		<control type="image">
 			<description>Asf Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/video/custom/asf.png</texture>
 			<visible>substring(ListItem.Filename,.asf,Right)</visible>
 		</control>
 		<control type="image">
 			<description>Mpeg4 Codec Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/video/custom/mp4.png</texture>
 			<visible>substring(ListItem.Filename,.mp4,Right) | substring(ListItem.Filename,.m4v,Right)</visible>
 		</control>
 		<control type="image">
 			<description>3gp Codec Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/video/custom/3gp.png</texture>
 			<visible>substring(ListItem.Filename,.3gp,Right) | substring(ListItem.Filename,.3g2,Right)</visible>
 		</control>
 		<control type="image">
 			<description>Quicktime Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/video/custom/mov.png</texture>
 			<visible>substring(ListItem.Filename,.mov,Right) | substring(ListItem.Filename,.qt,Right)</visible>
 		</control>
 		<control type="image">
 			<description>Flash Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/video/custom/mov.png</texture>
 			<visible>substring(ListItem.Filename,.flv,Right) | substring(ListItem.Filename,.f4v,Right) | substring(ListItem.Filename,.f4a,Right) | substring(ListItem.Filename,.f4p,Right) | substring(ListItem.Filename,.f4b,Right)</visible>
 		</control>
 		<control type="image">
 			<description>Ogg Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/video/custom/ogg.png</texture>
 			<visible>substring(ListItem.Filename,.ogv,Right) | substring(ListItem.Filename,.ogg,Right) | substring(ListItem.Filename,.oga,Right) | substring(ListItem.Filename,.ogx,Right) | substring(ListItem.Filename,.spx,Right)</visible>
 		</control>
 		<control type="image">
 			<description>MKV Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/video/custom/mkv.png</texture>
 			<visible>substring(ListItem.Filename,.mkv,Right)</visible>
 		</control>
 		<control type="image">
 			<description>ISO Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/video/custom/iso.png</texture>
 			<visible>substring(ListItem.Filename,.iso,Right)</visible>
 		</control>
 		<control type="image">
 			<description>RealPlayer Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/video/custom/real.png</texture>
 			<visible>substring(ListItem.Filename,.rmvb,Right)</visible>
@@ -434,135 +435,136 @@
 	<include name="AudioCodecFlaggingConditions">
 		<control type="image">
 			<description>Audio Channels Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>$INFO[ListItem.AudioChannels,flagging/audio/custom/,.png]</texture>
+			<visible>!IsEmpty(ListItem.AudioChannels)</visible>
 		</control>
 		<control type="image">
 			<description>dts Codec Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/audio/custom/dts.png</texture>
 			<visible>substring(ListItem.AudioCodec,dca)</visible>
 		</control>
 		<control type="image">
 			<description>dts MA Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/audio/custom/dtsma.png</texture>
 			<visible>substring(ListItem.AudioCodec,dtsma) + substring(ListItem.AudioChannels,6)</visible>
 		</control>
 		<control type="image">
 			<description>dts 96/24 Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/audio/custom/dts9624.png</texture>
 			<visible>substring(ListItem.AudioCodec,dts9624) | substring(ListItem.AudioCodec,dts 96/24)</visible>
 		</control>
 		<control type="image">
 			<description>dts ES Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/audio/custom/dtses.png</texture>
 			<visible>substring(ListItem.AudioCodec,dtses) | substring(ListItem.AudioCodec,dts-es)</visible>
 		</control>
 		<control type="image">
 			<description>dts EX Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/audio/custom/dtsex.png</texture>
 			<visible>substring(ListItem.AudioCodec,dtsex) | substring(ListItem.AudioCodec,dts-ex)</visible>
 		</control>
 		<control type="image">
 			<description>dts Hra Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/audio/custom/dtshra.png</texture>
 			<visible>substring(ListItem.AudioCodec,dtshra) | substring(ListItem.AudioCodec,dts-hd hra)</visible>
 		</control>
 		<control type="image">
 			<description>Dolby Digital Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/audio/custom/dolbydigital.png</texture>
 			<visible>[substring(ListItem.AudioCodec,ac3) | substring(ListItem.AudioCodec,dolby digital)] + substring(ListItem.AudioChannels,6)</visible>
 		</control>
 		<control type="image">
 			<description>DD Plus Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/audio/custom/dolbydigitalplus.png</texture>
 			<visible>substring(ListItem.AudioCodec,plus) | substring(ListItem.AudioCodec,dolby digital plus) | substring(ListItem.AudioCodec,eac3)</visible>
 		</control>
 		<control type="image">
 			<description>DD Truehd Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/audio/custom/truehd.png</texture>
 			<visible>substring(ListItem.AudioCodec,truehd) | substring(ListItem.AudioCodec,dolby truehd) | substring(ListItem.AudioCodec,ac3 truehd)</visible>
 		</control>
 		<control type="image">
 			<description>ac3 Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/audio/custom/ac3.png</texture>
 			<visible>substring(ListItem.AudioCodec,ac3) + !substring(ListItem.AudioChannels,6)</visible>
 		</control>
 		<control type="image">
 			<description>aac Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/audio/custom/aac.png</texture>
 			<visible>substring(ListItem.AudioCodec,aac) | substring(ListItem.AudioCodec,a_aac)</visible>
 		</control>
 		<control type="image">
 			<description>WMA Pro Codec Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/audio/custom/wmapro.png</texture>
 			<visible>substring(ListItem.AudioCodec,wmapro) | substring(ListItem.AudioCodec,wma)</visible>
 		</control>
 		 <control type="image">
 			<description>vorbis Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/audio/custom/vorbis.png</texture>
 			<visible>substring(ListItem.AudioCodec,vorbis)</visible>
 		</control>
 		<control type="image">
 			<description>mp3 Codec Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/audio/custom/mp3.png</texture>
 			<visible>substring(ListItem.AudioCodec,mp3)</visible>
 		</control>
 		<control type="image">
 			<description>flac Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/audio/custom/flac.png</texture>
 			<visible>substring(ListItem.AudioCodec,flac) + substring(ListItem.AudioChannels,6)</visible>
 		</control>
 		<control type="image">
 			<description>pcm Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/audio/custom/pcm.png</texture>
 			<visible>substring(ListItem.AudioCodec,pcm)</visible>
@@ -571,10 +573,11 @@
 	<include name="AspectCodecFlaggingConditions">
 		<control type="image">
 			<description>Aspectratio Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>$INFO[ListItem.VideoAspect,flagging/aspectratio/custom/,.png]</texture>
+			<visible>!IsEmpty(ListItem.VideoAspect)</visible>
 		</control>
 	</include>
 	
@@ -584,111 +587,112 @@
 	<include name="VideoCodecFlaggingConditions_original"><!--Original Flags-->
 		<control type="image">
 			<description>Video rez Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>$INFO[ListItem.VideoResolution,flagging/video/original/,.png]</texture>
+			<visible>!IsEmpty(ListItem.VideoResolution)</visible>
 		</control>
 		<control type="image">
 			<description>Xvid Codec Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/video/original/xvid.png</texture>
 			<visible>substring(ListItem.VideoCodec,xvid)</visible>
 		</control>
 		<control type="image">
 			<description>Divx Codec Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/video/original/divx.png</texture>
 			<visible>substring(ListItem.VideoCodec,divx)| substring(ListItem.VideoCodec,dx50) | substring(ListItem.VideoCodec,div3) |substring(ListItem.VideoCodec,div4) | substring(ListItem.VideoCodec,div5)</visible>
 		</control>
 		<control type="image">
 			<description>Theora Codec Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/video/original/oggtheora.png</texture>
 			<visible>substring(ListItem.VideoCodec,ther)</visible>
 		</control>
 		<control type="image">
 			<description>h264 Codec Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/video/original/h264.png</texture>
 			<visible>substring(ListItem.VideoCodec,h264)</visible>
 		</control>
 		<control type="image">
 			<description>h263 Codec Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/video/original/h263.png</texture>
 			<visible>substring(ListItem.VideoCodec,h263)</visible>
 		</control>
 		<control type="image">
 			<description>h262 Codec Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/video/original/h262.png</texture>
 			<visible>substring(ListItem.VideoCodec,h262)</visible>
 		</control>
 		<control type="image">
 			<description>avc1 Codec Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/video/original/avc1.png</texture>
 			<visible>substring(ListItem.VideoCodec,avc1)</visible>
 		</control>
 		<control type="image">
 			<description>wvc1 Codec Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/video/original/wvc1.png</texture>
 			<visible>substring(ListItem.VideoCodec,wvc1)</visible>
 		</control>
 		<control type="image">
 			<description>WmvHD Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/video/original/wmvhd.png</texture>
 			<visible>substring(ListItem.VideoCodec,wmv3) | substring(ListItem.VideoCodec,wmva)</visible>
 		</control>
 		<control type="image">
 			<description>Wmv Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/video/original/wmv.png</texture>
 			<visible>substring(ListItem.VideoCodec,wmv1) | substring(ListItem.VideoCodec,wmv2)</visible>
 		</control>
 		<control type="image">
 			<description>mpeg1video Codec Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/video/original/mpeg1video.png</texture>
 			<visible>substring(ListItem.VideoCodec,mpeg1video) | substring(ListItem.VideoCodec,mpeg1)</visible>
 		</control>
 		<control type="image">
 			<description>mpeg2video Codec Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/video/original/mpeg2video.png</texture>
 			<visible>substring(ListItem.VideoCodec,mpeg2video) | substring(ListItem.VideoCodec,v_mpeg2) | substring(ListItem.VideoCodec,mpeg2)</visible>
 		</control>
 		<control type="image">
 			<description>mpeg4video Codec Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/video/original/mpeg4video.png</texture>
 			<visible>substring(ListItem.VideoCodec,mpeg4video) | substring(ListItem.VideoCodec,mpeg4) | substring(ListItem.VideoCodec,fmp4)</visible>
@@ -697,136 +701,136 @@
 	<include name="VideoTypeHackFlaggingConditions_original">
 		<control type="image">
 			<description>TV Types Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/video/original/tv.png</texture>
 			<visible>substring(ListItem.FilenameAndPath,pdtv) | substring(ListItem.FilenameAndPath,dsr)</visible>
 		</control>
 		<control type="image">
 			<description>HDTV Types Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/video/original/hdtv.png</texture>
 			<visible>substring(ListItem.FilenameAndPath,hdtv)</visible>
 		</control>
 		<control type="image">
 			<description>SDTV Types Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/video/original/sd.png</texture>
 			<visible>substring(ListItem.FilenameAndPath,sdtv) | substring(ListItem.FilenameAndPath,tvrip)</visible>
 		</control>
 		<control type="image">
 			<description>DVD Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/video/original/dvd.png</texture>
 			<visible>[substring(ListItem.FilenameAndPath,dvd) | substring(ListItem.Filename,.vob,Right) | substring(ListItem.Filename,.ifo,Right)] + !substring(ListItem.FilenameAndPath,hddvd)</visible>
 		</control>
 		<control type="image">
 			<description>Bluray Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/video/original/bluray.png</texture>
 			<visible>substring(ListItem.FilenameAndPath,bluray) | substring(ListItem.FilenameAndPath,blu-ray) | substring(ListItem.Filename,brrip) | substring(ListItem.Filename,.m2ts,Right) | substring(ListItem.Filename,.bdmv,Right)</visible>
 		</control>
 		<control type="image">
 			<description>HDDVD Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/video/original/hddvd.png</texture>
 			<visible>substring(ListItem.FilenameAndPath,hddvd) | substring(ListItem.Filename,.evo,Right)</visible>
 		</control>
 		<control type="image">
 			<description>Avi Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/video/original/avi.png</texture>
 			<visible>substring(ListItem.Filename,.avi,Right)</visible>
 		</control>
 		<control type="image">
 			<description>Wmv Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/video/original/wmv.png</texture>
 			<visible>substring(ListItem.Filename,.wmv,Right)</visible>
 		</control>
 		<control type="image">
 			<description>Asf Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/video/original/asf.png</texture>
 			<visible>substring(ListItem.Filename,.asf,Right)</visible>
 		</control>
 		<control type="image">
 			<description>Mpeg4 Codec Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/video/original/mp4.png</texture>
 			<visible>substring(ListItem.Filename,.mp4,Right) | substring(ListItem.Filename,.m4v,Right)</visible>
 		</control>
 		<control type="image">
 			<description>3gp Codec Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/video/original/3gp.png</texture>
 			<visible>substring(ListItem.Filename,.3gp,Right) | substring(ListItem.Filename,.3g2,Right)</visible>
 		</control>
 		<control type="image">
 			<description>Quicktime Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/video/original/mov.png</texture>
 			<visible>substring(ListItem.Filename,.mov,Right) | substring(ListItem.Filename,.qt,Right)</visible>
 		</control>
 		<control type="image">
 			<description>Flash Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/video/original/mov.png</texture>
 			<visible>substring(ListItem.Filename,.flv,Right) | substring(ListItem.Filename,.f4v,Right) | substring(ListItem.Filename,.f4a,Right) | substring(ListItem.Filename,.f4p,Right) | substring(ListItem.Filename,.f4b,Right)</visible>
 		</control>
 		<control type="image">
 			<description>Ogg Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/video/original/ogg.png</texture>
 			<visible>substring(ListItem.Filename,.ogv,Right) | substring(ListItem.Filename,.ogg,Right) | substring(ListItem.Filename,.oga,Right) | substring(ListItem.Filename,.ogx,Right) | substring(ListItem.Filename,.spx,Right)</visible>
 		</control>
 		<control type="image">
 			<description>MKV Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/video/original/mkv.png</texture>
 			<visible>substring(ListItem.Filename,.mkv,Right)</visible>
 		</control>
 		<control type="image">
 			<description>ISO Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/video/original/iso.png</texture>
 			<visible>substring(ListItem.Filename,.iso,Right)</visible>
 		</control>
 		<control type="image">
 			<description>RealPlayer Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/video/original/real.png</texture>
 			<visible>substring(ListItem.Filename,.rmvb,Right)</visible>
@@ -835,135 +839,136 @@
 	<include name="AudioCodecFlaggingConditions_original">
 		<control type="image">
 			<description>Audio Channels Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>$INFO[ListItem.AudioChannels,flagging/audio/original/,.png]</texture>
+			<visible>!IsEmpty(ListItem.AudioChannels)</visible>
 		</control>
 		<control type="image">
 			<description>dts Codec Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/audio/original/dts.png</texture>
 			<visible>substring(ListItem.AudioCodec,dca)</visible>
 		</control>
 		<control type="image">
 			<description>dts MA Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/audio/original/dtsma.png</texture>
 			<visible>substring(ListItem.AudioCodec,dtsma) + substring(ListItem.AudioChannels,6)</visible>
 		</control>
 		<control type="image">
 			<description>dts 96/24 Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/audio/original/dts9624.png</texture>
 			<visible>substring(ListItem.AudioCodec,dts9624) | substring(ListItem.AudioCodec,dts 96/24)</visible>
 		</control>
 		<control type="image">
 			<description>dts ES Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/audio/original/dtses.png</texture>
 			<visible>substring(ListItem.AudioCodec,dtses) | substring(ListItem.AudioCodec,dts-es)</visible>
 		</control>
 		<control type="image">
 			<description>dts EX Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/audio/original/dtsex.png</texture>
 			<visible>substring(ListItem.AudioCodec,dtsex) | substring(ListItem.AudioCodec,dts-ex)</visible>
 		</control>
 		<control type="image">
 			<description>dts Hra Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/audio/original/dtshra.png</texture>
 			<visible>substring(ListItem.AudioCodec,dtshra) | substring(ListItem.AudioCodec,dts-hd hra)</visible>
 		</control>
 		<control type="image">
 			<description>Dolby Digital Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/audio/original/dolbydigital.png</texture>
 			<visible>[substring(ListItem.AudioCodec,ac3) | substring(ListItem.AudioCodec,dolby digital)] + substring(ListItem.AudioChannels,6)</visible>
 		</control>
 		<control type="image">
 			<description>DD Plus Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/audio/original/dolbydigitalplus.png</texture>
 			<visible>substring(ListItem.AudioCodec,plus) | substring(ListItem.AudioCodec,dolby digital plus) | substring(ListItem.AudioCodec,eac3)</visible>
 		</control>
 		<control type="image">
 			<description>DD Truehd Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/audio/original/truehd.png</texture>
 			<visible>substring(ListItem.AudioCodec,truehd) | substring(ListItem.AudioCodec,dolby truehd) | substring(ListItem.AudioCodec,ac3 truehd)</visible>
 		</control>
 		<control type="image">
 			<description>ac3 Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/audio/original/ac3.png</texture>
 			<visible>substring(ListItem.AudioCodec,ac3) + !substring(ListItem.AudioChannels,6)</visible>
 		</control>
 		<control type="image">
 			<description>aac Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/audio/original/aac.png</texture>
 			<visible>substring(ListItem.AudioCodec,aac) | substring(ListItem.AudioCodec,a_aac)</visible>
 		</control>
 		<control type="image">
 			<description>WMA Pro Codec Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/audio/original/wmapro.png</texture>
 			<visible>substring(ListItem.AudioCodec,wmapro) | substring(ListItem.AudioCodec,wma)</visible>
 		</control>
 		 <control type="image">
 			<description>vorbis Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/audio/original/vorbis.png</texture>
 			<visible>substring(ListItem.AudioCodec,vorbis)</visible>
 		</control>
 		<control type="image">
 			<description>mp3 Codec Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/audio/original/mp3.png</texture>
 			<visible>substring(ListItem.AudioCodec,mp3)</visible>
 		</control>
 		<control type="image">
 			<description>flac Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/audio/original/flac.png</texture>
 			<visible>substring(ListItem.AudioCodec,flac) + substring(ListItem.AudioChannels,6)</visible>
 		</control>
 		<control type="image">
 			<description>pcm Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/audio/original/pcm.png</texture>
 			<visible>substring(ListItem.AudioCodec,pcm)</visible>
@@ -972,10 +977,11 @@
 	<include name="AspectCodecFlaggingConditions_original">
 		<control type="image">
 			<description>Aspectratio Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>$INFO[ListItem.VideoAspect,flagging/aspectratio/original/,.png]</texture>
+			<visible>!IsEmpty(ListItem.VideoAspect)</visible>
 		</control>
 	</include>
 	
@@ -985,16 +991,17 @@
 	<include name="VideoCodecFlaggingConditions_vanilla"><!--Vanilla Flags-->
 		<control type="image">
 			<description>Video rez Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>$INFO[ListItem.VideoResolution,flagging/video/vanilla/,.png]</texture>
 			<colordiffuse>flagicon</colordiffuse>
+			<visible>!IsEmpty(ListItem.VideoResolution)</visible>
 		</control>
 		<control type="image">
 			<description>Xvid Codec Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/video/vanilla/xvid.png</texture>
 			<visible>substring(ListItem.VideoCodec,xvid)</visible>
@@ -1002,8 +1009,8 @@
 		</control>
 		<control type="image">
 			<description>Divx Codec Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/video/vanilla/divx.png</texture>
 			<visible>substring(ListItem.VideoCodec,divx)| substring(ListItem.VideoCodec,dx50) | substring(ListItem.VideoCodec,div3) |substring(ListItem.VideoCodec,div4) | substring(ListItem.VideoCodec,div5)</visible>
@@ -1011,8 +1018,8 @@
 		</control>
 		<control type="image">
 			<description>Theora Codec Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/video/vanilla/oggtheora.png</texture>
 			<visible>substring(ListItem.VideoCodec,ther)</visible>
@@ -1020,8 +1027,8 @@
 		</control>
 		<control type="image">
 			<description>h264 Codec Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/video/vanilla/h264.png</texture>
 			<visible>substring(ListItem.VideoCodec,h264)</visible>
@@ -1029,8 +1036,8 @@
 		</control>
 		<control type="image">
 			<description>h263 Codec Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/video/vanilla/h263.png</texture>
 			<visible>substring(ListItem.VideoCodec,h263)</visible>
@@ -1038,8 +1045,8 @@
 		</control>
 		<control type="image">
 			<description>h262 Codec Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/video/vanilla/h262.png</texture>
 			<visible>substring(ListItem.VideoCodec,h262)</visible>
@@ -1047,8 +1054,8 @@
 		</control>
 		<control type="image">
 			<description>avc1 Codec Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/video/vanilla/avc1.png</texture>
 			<visible>substring(ListItem.VideoCodec,avc1)</visible>
@@ -1056,8 +1063,8 @@
 		</control>
 		<control type="image">
 			<description>wvc1 Codec Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/video/vanilla/wvc1.png</texture>
 			<visible>substring(ListItem.VideoCodec,wvc1)</visible>
@@ -1065,8 +1072,8 @@
 		</control>
 		<control type="image">
 			<description>WmvHD Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/video/vanilla/wmvhd.png</texture>
 			<visible>substring(ListItem.VideoCodec,wmv3) | substring(ListItem.VideoCodec,wmva)</visible>
@@ -1074,8 +1081,8 @@
 		</control>
 		<control type="image">
 			<description>Wmv Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/video/vanilla/wmv.png</texture>
 			<visible>substring(ListItem.VideoCodec,wmv1) | substring(ListItem.VideoCodec,wmv2)</visible>
@@ -1083,8 +1090,8 @@
 		</control>
 		<control type="image">
 			<description>mpeg1video Codec Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/video/vanilla/mpeg1video.png</texture>
 			<visible>substring(ListItem.VideoCodec,mpeg1video) | substring(ListItem.VideoCodec,mpeg1)</visible>
@@ -1092,8 +1099,8 @@
 		</control>
 		<control type="image">
 			<description>mpeg2video Codec Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/video/vanilla/mpeg2video.png</texture>
 			<visible>substring(ListItem.VideoCodec,mpeg2video) | substring(ListItem.VideoCodec,v_mpeg2) | substring(ListItem.VideoCodec,mpeg2)</visible>
@@ -1101,8 +1108,8 @@
 		</control>
 		<control type="image">
 			<description>mpeg4video Codec Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/video/vanilla/mpeg4video.png</texture>
 			<visible>substring(ListItem.VideoCodec,mpeg4video) | substring(ListItem.VideoCodec,mpeg4) | substring(ListItem.VideoCodec,fmp4)</visible>
@@ -1112,8 +1119,8 @@
 	<include name="VideoTypeHackFlaggingConditions_vanilla">
 		<control type="image">
 			<description>TV Types Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/video/vanilla/tv.png</texture>
 			<visible>substring(ListItem.FilenameAndPath,pdtv) | substring(ListItem.FilenameAndPath,dsr)</visible>
@@ -1121,8 +1128,8 @@
 		</control>
 		<control type="image">
 			<description>HDTV Types Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/video/vanilla/hdtv.png</texture>
 			<visible>substring(ListItem.FilenameAndPath,hdtv)</visible>
@@ -1130,8 +1137,8 @@
 		</control>
 		<control type="image">
 			<description>SDTV Types Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/video/vanilla/sd.png</texture>
 			<visible>substring(ListItem.FilenameAndPath,sdtv) | substring(ListItem.FilenameAndPath,tvrip)</visible>
@@ -1139,8 +1146,8 @@
 		</control>
 		<control type="image">
 			<description>DVD Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/video/vanilla/dvd.png</texture>
 			<visible>[substring(ListItem.FilenameAndPath,dvd) | substring(ListItem.Filename,.vob,Right) | substring(ListItem.Filename,.ifo,Right)] + !substring(ListItem.FilenameAndPath,hddvd)</visible>
@@ -1148,8 +1155,8 @@
 		</control>
 		<control type="image">
 			<description>Bluray Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/video/vanilla/bluray.png</texture>
 			<visible>substring(ListItem.FilenameAndPath,bluray) | substring(ListItem.FilenameAndPath,blu-ray) | substring(ListItem.Filename,brrip) | substring(ListItem.Filename,.m2ts,Right) | substring(ListItem.Filename,.bdmv,Right)</visible>
@@ -1157,8 +1164,8 @@
 		</control>
 		<control type="image">
 			<description>HDDVD Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/video/vanilla/hddvd.png</texture>
 			<visible>substring(ListItem.FilenameAndPath,hddvd) | substring(ListItem.Filename,.evo,Right)</visible>
@@ -1166,8 +1173,8 @@
 		</control>
 		<control type="image">
 			<description>Avi Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/video/vanilla/avi.png</texture>
 			<visible>substring(ListItem.Filename,.avi,Right)</visible>
@@ -1175,8 +1182,8 @@
 		</control>
 		<control type="image">
 			<description>Wmv Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/video/vanilla/wmv.png</texture>
 			<visible>substring(ListItem.Filename,.wmv,Right)</visible>
@@ -1184,8 +1191,8 @@
 		</control>
 		<control type="image">
 			<description>Asf Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/video/vanilla/asf.png</texture>
 			<visible>substring(ListItem.Filename,.asf,Right)</visible>
@@ -1193,8 +1200,8 @@
 		</control>
 		<control type="image">
 			<description>Mpeg4 Codec Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/video/vanilla/mp4.png</texture>
 			<visible>substring(ListItem.Filename,.mp4,Right) | substring(ListItem.Filename,.m4v,Right)</visible>
@@ -1202,8 +1209,8 @@
 		</control>
 		<control type="image">
 			<description>3gp Codec Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/video/vanilla/3gp.png</texture>
 			<visible>substring(ListItem.Filename,.3gp,Right) | substring(ListItem.Filename,.3g2,Right)</visible>
@@ -1211,8 +1218,8 @@
 		</control>
 		<control type="image">
 			<description>Quicktime Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/video/vanilla/mov.png</texture>
 			<visible>substring(ListItem.Filename,.mov,Right) | substring(ListItem.Filename,.qt,Right)</visible>
@@ -1220,8 +1227,8 @@
 		</control>
 		<control type="image">
 			<description>Flash Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/video/vanilla/mov.png</texture>
 			<visible>substring(ListItem.Filename,.flv,Right) | substring(ListItem.Filename,.f4v,Right) | substring(ListItem.Filename,.f4a,Right) | substring(ListItem.Filename,.f4p,Right) | substring(ListItem.Filename,.f4b,Right)</visible>
@@ -1229,8 +1236,8 @@
 		</control>
 		<control type="image">
 			<description>Ogg Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/video/vanilla/ogg.png</texture>
 			<visible>substring(ListItem.Filename,.ogv,Right) | substring(ListItem.Filename,.ogg,Right) | substring(ListItem.Filename,.oga,Right) | substring(ListItem.Filename,.ogx,Right) | substring(ListItem.Filename,.spx,Right)</visible>
@@ -1238,8 +1245,8 @@
 		</control>
 		<control type="image">
 			<description>MKV Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/video/vanilla/mkv.png</texture>
 			<visible>substring(ListItem.Filename,.mkv,Right)</visible>
@@ -1247,8 +1254,8 @@
 		</control>
 		<control type="image">
 			<description>ISO Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/video/vanilla/iso.png</texture>
 			<visible>substring(ListItem.Filename,.iso,Right)</visible>
@@ -1256,8 +1263,8 @@
 		</control>
 		<control type="image">
 			<description>RealPlayer Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/video/vanilla/real.png</texture>
 			<visible>substring(ListItem.Filename,.rmvb,Right)</visible>
@@ -1470,16 +1477,17 @@
 	<include name="AudioCodecFlaggingConditions_vanilla">
 		<control type="image">
 			<description>Audio Channels Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>$INFO[ListItem.AudioChannels,flagging/audio/vanilla/,.png]</texture>
 			<colordiffuse>flagicon</colordiffuse>
+			<visible>!IsEmpty(ListItem.AudioChannels)</visible>
 		</control>
 		<control type="image">
 			<description>dts Codec Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/audio/vanilla/dts.png</texture>
 			<visible>substring(ListItem.AudioCodec,dca)</visible>
@@ -1487,8 +1495,8 @@
 		</control>
 		<control type="image">
 			<description>dts MA Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/audio/vanilla/dtsma.png</texture>
 			<visible>substring(ListItem.AudioCodec,dtsma) + substring(ListItem.AudioChannels,6)</visible>
@@ -1496,8 +1504,8 @@
 		</control>
 		<control type="image">
 			<description>dts 96/24 Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/audio/vanilla/dts9624.png</texture>
 			<visible>substring(ListItem.AudioCodec,dts9624) | substring(ListItem.AudioCodec,dts 96/24)</visible>
@@ -1505,8 +1513,8 @@
 		</control>
 		<control type="image">
 			<description>dts ES Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/audio/vanilla/dtses.png</texture>
 			<visible>substring(ListItem.AudioCodec,dtses) | substring(ListItem.AudioCodec,dts-es)</visible>
@@ -1514,8 +1522,8 @@
 		</control>
 		<control type="image">
 			<description>dts EX Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/audio/vanilla/dtsex.png</texture>
 			<visible>substring(ListItem.AudioCodec,dtsex) | substring(ListItem.AudioCodec,dts-ex)</visible>
@@ -1523,8 +1531,8 @@
 		</control>
 		<control type="image">
 			<description>dts Hra Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/audio/vanilla/dtshra.png</texture>
 			<visible>substring(ListItem.AudioCodec,dtshra) | substring(ListItem.AudioCodec,dts-hd hra)</visible>
@@ -1532,8 +1540,8 @@
 		</control>
 		<control type="image">
 			<description>Dolby Digital Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/audio/vanilla/dolbydigital.png</texture>
 			<visible>[substring(ListItem.AudioCodec,ac3) | substring(ListItem.AudioCodec,dolby digital)] + substring(ListItem.AudioChannels,6)</visible>
@@ -1541,8 +1549,8 @@
 		</control>
 		<control type="image">
 			<description>DD Plus Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/audio/vanilla/dolbydigitalplus.png</texture>
 			<visible>substring(ListItem.AudioCodec,plus) | substring(ListItem.AudioCodec,dolby digital plus) | substring(ListItem.AudioCodec,eac3)</visible>
@@ -1550,8 +1558,8 @@
 		</control>
 		<control type="image">
 			<description>DD Truehd Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/audio/vanilla/truehd.png</texture>
 			<visible>substring(ListItem.AudioCodec,truehd) | substring(ListItem.AudioCodec,dolby truehd) | substring(ListItem.AudioCodec,ac3 truehd)</visible>
@@ -1559,8 +1567,8 @@
 		</control>
 		<control type="image">
 			<description>ac3 Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/audio/vanilla/ac3.png</texture>
 			<visible>substring(ListItem.AudioCodec,ac3) + !substring(ListItem.AudioChannels,6)</visible>
@@ -1568,8 +1576,8 @@
 		</control>
 		<control type="image">
 			<description>aac Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/audio/vanilla/aac.png</texture>
 			<visible>substring(ListItem.AudioCodec,aac) | substring(ListItem.AudioCodec,a_aac)</visible>
@@ -1577,8 +1585,8 @@
 		</control>
 		<control type="image">
 			<description>WMA Pro Codec Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/audio/vanilla/wmapro.png</texture>
 			<visible>substring(ListItem.AudioCodec,wmapro) | substring(ListItem.AudioCodec,wma)</visible>
@@ -1586,8 +1594,8 @@
 		</control>
 		 <control type="image">
 			<description>vorbis Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/audio/vanilla/vorbis.png</texture>
 			<visible>substring(ListItem.AudioCodec,vorbis)</visible>
@@ -1595,8 +1603,8 @@
 		</control>
 		<control type="image">
 			<description>mp3 Codec Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/audio/vanilla/mp3.png</texture>
 			<visible>substring(ListItem.AudioCodec,mp3)</visible>
@@ -1604,8 +1612,8 @@
 		</control>
 		<control type="image">
 			<description>flac Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/audio/vanilla/flac.png</texture>
 			<visible>substring(ListItem.AudioCodec,flac) + substring(ListItem.AudioChannels,6)</visible>
@@ -1613,8 +1621,8 @@
 		</control>
 		<control type="image">
 			<description>pcm Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/audio/vanilla/pcm.png</texture>
 			<visible>substring(ListItem.AudioCodec,pcm)</visible>
@@ -1624,11 +1632,12 @@
 	<include name="AspectCodecFlaggingConditions_vanilla">
 		<control type="image">
 			<description>Aspectratio Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>$INFO[ListItem.VideoAspect,flagging/aspectratio/vanilla/,.png]</texture>
 			<colordiffuse>flagicon</colordiffuse>
+			<visible>!IsEmpty(ListItem.VideoAspect)</visible>
 		</control>
 	</include>
 	
@@ -1638,16 +1647,17 @@
 	<include name="VideoCodecFlaggingConditions_flat"><!--Flat Flags-->
 		<control type="image">
 			<description>Video rez Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>$INFO[ListItem.VideoResolution,flagging/video/flat/,.png]</texture>
 			<colordiffuse>flagicon</colordiffuse>
+			<visible>!IsEmpty(ListItem.VideoResolution)</visible>
 		</control>
 		<control type="image">
 			<description>Xvid Codec Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/video/flat/xvid.png</texture>
 			<visible>substring(ListItem.VideoCodec,xvid)</visible>
@@ -1655,8 +1665,8 @@
 		</control>
 		<control type="image">
 			<description>Divx Codec Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/video/flat/divx.png</texture>
 			<visible>substring(ListItem.VideoCodec,divx)| substring(ListItem.VideoCodec,dx50) | substring(ListItem.VideoCodec,div3) |substring(ListItem.VideoCodec,div4) | substring(ListItem.VideoCodec,div5)</visible>
@@ -1664,8 +1674,8 @@
 		</control>
 		<control type="image">
 			<description>Theora Codec Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/video/flat/oggtheora.png</texture>
 			<visible>substring(ListItem.VideoCodec,ther)</visible>
@@ -1673,8 +1683,8 @@
 		</control>
 		<control type="image">
 			<description>h264 Codec Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/video/flat/h264.png</texture>
 			<visible>substring(ListItem.VideoCodec,h264)</visible>
@@ -1682,8 +1692,8 @@
 		</control>
 		<control type="image">
 			<description>h263 Codec Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/video/flat/h263.png</texture>
 			<visible>substring(ListItem.VideoCodec,h263)</visible>
@@ -1691,8 +1701,8 @@
 		</control>
 		<control type="image">
 			<description>h262 Codec Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/video/flat/h262.png</texture>
 			<visible>substring(ListItem.VideoCodec,h262)</visible>
@@ -1700,8 +1710,8 @@
 		</control>
 		<control type="image">
 			<description>avc1 Codec Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/video/flat/avc1.png</texture>
 			<visible>substring(ListItem.VideoCodec,avc1)</visible>
@@ -1709,8 +1719,8 @@
 		</control>
 		<control type="image">
 			<description>wvc1 Codec Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/video/flat/wvc1.png</texture>
 			<visible>substring(ListItem.VideoCodec,wvc1)</visible>
@@ -1718,8 +1728,8 @@
 		</control>
 		<control type="image">
 			<description>WmvHD Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/video/flat/wmvhd.png</texture>
 			<visible>substring(ListItem.VideoCodec,wmv3) | substring(ListItem.VideoCodec,wmva)</visible>
@@ -1727,8 +1737,8 @@
 		</control>
 		<control type="image">
 			<description>Wmv Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/video/flat/wmv.png</texture>
 			<visible>substring(ListItem.VideoCodec,wmv1) | substring(ListItem.VideoCodec,wmv2)</visible>
@@ -1736,8 +1746,8 @@
 		</control>
 		<control type="image">
 			<description>mpeg1video Codec Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/video/flat/mpeg1video.png</texture>
 			<visible>substring(ListItem.VideoCodec,mpeg1video) | substring(ListItem.VideoCodec,mpeg1)</visible>
@@ -1745,8 +1755,8 @@
 		</control>
 		<control type="image">
 			<description>mpeg2video Codec Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/video/flat/mpeg2video.png</texture>
 			<visible>substring(ListItem.VideoCodec,mpeg2video) | substring(ListItem.VideoCodec,v_mpeg2) | substring(ListItem.VideoCodec,mpeg2)</visible>
@@ -1754,8 +1764,8 @@
 		</control>
 		<control type="image">
 			<description>mpeg4video Codec Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/video/flat/mpeg4video.png</texture>
 			<visible>substring(ListItem.VideoCodec,mpeg4video) | substring(ListItem.VideoCodec,mpeg4) | substring(ListItem.VideoCodec,fmp4)</visible>
@@ -1765,8 +1775,8 @@
 	<include name="VideoTypeHackFlaggingConditions_flat">
 		<control type="image">
 			<description>TV Types Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/video/flat/tv.png</texture>
 			<visible>substring(ListItem.FilenameAndPath,pdtv) | substring(ListItem.FilenameAndPath,dsr)</visible>
@@ -1774,8 +1784,8 @@
 		</control>
 		<control type="image">
 			<description>HDTV Types Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/video/flat/hdtv.png</texture>
 			<visible>substring(ListItem.FilenameAndPath,hdtv)</visible>
@@ -1783,8 +1793,8 @@
 		</control>
 		<control type="image">
 			<description>SDTV Types Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/video/flat/sd.png</texture>
 			<visible>substring(ListItem.FilenameAndPath,sdtv) | substring(ListItem.FilenameAndPath,tvrip)</visible>
@@ -1792,8 +1802,8 @@
 		</control>
 		<control type="image">
 			<description>DVD Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/video/flat/dvd.png</texture>
 			<visible>[substring(ListItem.FilenameAndPath,dvd) | substring(ListItem.Filename,.vob,Right) | substring(ListItem.Filename,.ifo,Right)] + !substring(ListItem.FilenameAndPath,hddvd)</visible>
@@ -1801,8 +1811,8 @@
 		</control>
 		<control type="image">
 			<description>Bluray Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/video/flat/bluray.png</texture>
 			<visible>substring(ListItem.FilenameAndPath,bluray) | substring(ListItem.FilenameAndPath,blu-ray) | substring(ListItem.Filename,brrip) | substring(ListItem.Filename,.m2ts,Right) | substring(ListItem.Filename,.bdmv,Right)</visible>
@@ -1810,8 +1820,8 @@
 		</control>
 		<control type="image">
 			<description>HDDVD Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/video/flat/hddvd.png</texture>
 			<visible>substring(ListItem.FilenameAndPath,hddvd) | substring(ListItem.Filename,.evo,Right)</visible>
@@ -1819,8 +1829,8 @@
 		</control>
 		<control type="image">
 			<description>Avi Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/video/flat/avi.png</texture>
 			<visible>substring(ListItem.Filename,.avi,Right)</visible>
@@ -1828,8 +1838,8 @@
 		</control>
 		<control type="image">
 			<description>Wmv Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/video/flat/wmv.png</texture>
 			<visible>substring(ListItem.Filename,.wmv,Right)</visible>
@@ -1837,8 +1847,8 @@
 		</control>
 		<control type="image">
 			<description>Asf Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/video/flat/asf.png</texture>
 			<visible>substring(ListItem.Filename,.asf,Right)</visible>
@@ -1846,8 +1856,8 @@
 		</control>
 		<control type="image">
 			<description>Mpeg4 Codec Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/video/flat/mp4.png</texture>
 			<visible>substring(ListItem.Filename,.mp4,Right) | substring(ListItem.Filename,.m4v,Right)</visible>
@@ -1855,8 +1865,8 @@
 		</control>
 		<control type="image">
 			<description>3gp Codec Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/video/flat/3gp.png</texture>
 			<visible>substring(ListItem.Filename,.3gp,Right) | substring(ListItem.Filename,.3g2,Right)</visible>
@@ -1864,8 +1874,8 @@
 		</control>
 		<control type="image">
 			<description>Quicktime Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/video/flat/mov.png</texture>
 			<visible>substring(ListItem.Filename,.mov,Right) | substring(ListItem.Filename,.qt,Right)</visible>
@@ -1873,8 +1883,8 @@
 		</control>
 		<control type="image">
 			<description>Flash Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/video/flat/mov.png</texture>
 			<visible>substring(ListItem.Filename,.flv,Right) | substring(ListItem.Filename,.f4v,Right) | substring(ListItem.Filename,.f4a,Right) | substring(ListItem.Filename,.f4p,Right) | substring(ListItem.Filename,.f4b,Right)</visible>
@@ -1882,8 +1892,8 @@
 		</control>
 		<control type="image">
 			<description>Ogg Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/video/flat/ogg.png</texture>
 			<visible>substring(ListItem.Filename,.ogv,Right) | substring(ListItem.Filename,.ogg,Right) | substring(ListItem.Filename,.oga,Right) | substring(ListItem.Filename,.ogx,Right) | substring(ListItem.Filename,.spx,Right)</visible>
@@ -1891,8 +1901,8 @@
 		</control>
 		<control type="image">
 			<description>MKV Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/video/flat/mkv.png</texture>
 			<visible>substring(ListItem.Filename,.mkv,Right)</visible>
@@ -1900,8 +1910,8 @@
 		</control>
 		<control type="image">
 			<description>ISO Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/video/flat/iso.png</texture>
 			<visible>substring(ListItem.Filename,.iso,Right)</visible>
@@ -1909,8 +1919,8 @@
 		</control>
 		<control type="image">
 			<description>RealPlayer Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/video/flat/real.png</texture>
 			<visible>substring(ListItem.Filename,.rmvb,Right)</visible>
@@ -1920,16 +1930,17 @@
 	<include name="AudioCodecFlaggingConditions_flat">
 		<control type="image">
 			<description>Audio Channels Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>$INFO[ListItem.AudioChannels,flagging/audio/flat/,.png]</texture>
 			<colordiffuse>flagicon</colordiffuse>
+			<visible>!IsEmpty(ListItem.AudioChannels)</visible>
 		</control>
 		<control type="image">
 			<description>dts Codec Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/audio/flat/dts.png</texture>
 			<visible>substring(ListItem.AudioCodec,dca)</visible>
@@ -1937,8 +1948,8 @@
 		</control>
 		<control type="image">
 			<description>dts MA Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/audio/flat/dtsma.png</texture>
 			<visible>substring(ListItem.AudioCodec,dtsma) + substring(ListItem.AudioChannels,6)</visible>
@@ -1946,8 +1957,8 @@
 		</control>
 		<control type="image">
 			<description>dts 96/24 Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/audio/flat/dts9624.png</texture>
 			<visible>substring(ListItem.AudioCodec,dts9624) | substring(ListItem.AudioCodec,dts 96/24)</visible>
@@ -1955,8 +1966,8 @@
 		</control>
 		<control type="image">
 			<description>dts ES Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/audio/flat/dtses.png</texture>
 			<visible>substring(ListItem.AudioCodec,dtses) | substring(ListItem.AudioCodec,dts-es)</visible>
@@ -1964,8 +1975,8 @@
 		</control>
 		<control type="image">
 			<description>dts EX Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/audio/flat/dtsex.png</texture>
 			<visible>substring(ListItem.AudioCodec,dtsex) | substring(ListItem.AudioCodec,dts-ex)</visible>
@@ -1973,8 +1984,8 @@
 		</control>
 		<control type="image">
 			<description>dts Hra Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/audio/flat/dtshra.png</texture>
 			<visible>substring(ListItem.AudioCodec,dtshra) | substring(ListItem.AudioCodec,dts-hd hra)</visible>
@@ -1982,8 +1993,8 @@
 		</control>
 		<control type="image">
 			<description>Dolby Digital Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/audio/flat/dolbydigital.png</texture>
 			<visible>[substring(ListItem.AudioCodec,ac3) | substring(ListItem.AudioCodec,dolby digital)] + substring(ListItem.AudioChannels,6)</visible>
@@ -1991,8 +2002,8 @@
 		</control>
 		<control type="image">
 			<description>DD Plus Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/audio/flat/dolbydigitalplus.png</texture>
 			<visible>substring(ListItem.AudioCodec,plus) | substring(ListItem.AudioCodec,dolby digital plus) | substring(ListItem.AudioCodec,eac3)</visible>
@@ -2000,8 +2011,8 @@
 		</control>
 		<control type="image">
 			<description>DD Truehd Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/audio/flat/truehd.png</texture>
 			<visible>substring(ListItem.AudioCodec,truehd) | substring(ListItem.AudioCodec,dolby truehd) | substring(ListItem.AudioCodec,ac3 truehd)</visible>
@@ -2009,8 +2020,8 @@
 		</control>
 		<control type="image">
 			<description>ac3 Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/audio/flat/ac3.png</texture>
 			<visible>substring(ListItem.AudioCodec,ac3) + !substring(ListItem.AudioChannels,6)</visible>
@@ -2018,8 +2029,8 @@
 		</control>
 		<control type="image">
 			<description>aac Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/audio/flat/aac.png</texture>
 			<visible>substring(ListItem.AudioCodec,aac) | substring(ListItem.AudioCodec,a_aac)</visible>
@@ -2027,8 +2038,8 @@
 		</control>
 		<control type="image">
 			<description>WMA Pro Codec Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/audio/flat/wmapro.png</texture>
 			<visible>substring(ListItem.AudioCodec,wmapro) | substring(ListItem.AudioCodec,wma)</visible>
@@ -2036,8 +2047,8 @@
 		</control>
 		 <control type="image">
 			<description>vorbis Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/audio/flat/vorbis.png</texture>
 			<visible>substring(ListItem.AudioCodec,vorbis)</visible>
@@ -2045,8 +2056,8 @@
 		</control>
 		<control type="image">
 			<description>mp3 Codec Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/audio/flat/mp3.png</texture>
 			<visible>substring(ListItem.AudioCodec,mp3)</visible>
@@ -2054,8 +2065,8 @@
 		</control>
 		<control type="image">
 			<description>flac Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/audio/flat/flac.png</texture>
 			<visible>substring(ListItem.AudioCodec,flac) + substring(ListItem.AudioChannels,6)</visible>
@@ -2063,8 +2074,8 @@
 		</control>
 		<control type="image">
 			<description>pcm Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/audio/flat/pcm.png</texture>
 			<visible>substring(ListItem.AudioCodec,pcm)</visible>
@@ -2074,11 +2085,12 @@
 	<include name="AspectCodecFlaggingConditions_flat">
 		<control type="image">
 			<description>Aspectratio Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>$INFO[ListItem.VideoAspect,flagging/aspectratio/flat/,.png]</texture>
 			<colordiffuse>flagicon</colordiffuse>
+			<visible>!IsEmpty(ListItem.VideoAspect)</visible>
 		</control>
 	</include>
 	
@@ -2088,8 +2100,8 @@
 	<include name="VideoCodecFlaggingConditions_frame"><!--Frame Flags-->
 		<control type="image">
 			<description>Video rez Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/flag_frame.png</texture>
 			<colordiffuse>flagframe</colordiffuse>
@@ -2097,8 +2109,8 @@
 		</control>
 		<control type="image">
 			<description>Xvid Codec Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/flag_frame.png</texture>
 			<visible>substring(ListItem.VideoCodec,xvid)</visible>
@@ -2106,8 +2118,8 @@
 		</control>
 		<control type="image">
 			<description>Divx Codec Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/flag_frame.png</texture>
 			<visible>substring(ListItem.VideoCodec,divx)| substring(ListItem.VideoCodec,dx50) | substring(ListItem.VideoCodec,div3) |substring(ListItem.VideoCodec,div4) | substring(ListItem.VideoCodec,div5)</visible>
@@ -2115,8 +2127,8 @@
 		</control>
 		<control type="image">
 			<description>Theora Codec Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/flag_frame.png</texture>
 			<visible>substring(ListItem.VideoCodec,ther)</visible>
@@ -2124,8 +2136,8 @@
 		</control>
 		<control type="image">
 			<description>h264 Codec Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/flag_frame.png</texture>
 			<visible>substring(ListItem.VideoCodec,h264)</visible>
@@ -2133,8 +2145,8 @@
 		</control>
 		<control type="image">
 			<description>h263 Codec Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/flag_frame.png</texture>
 			<visible>substring(ListItem.VideoCodec,h263)</visible>
@@ -2142,8 +2154,8 @@
 		</control>
 		<control type="image">
 			<description>h262 Codec Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/flag_frame.png</texture>
 			<visible>substring(ListItem.VideoCodec,h262)</visible>
@@ -2151,8 +2163,8 @@
 		</control>
 		<control type="image">
 			<description>avc1 Codec Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/flag_frame.png</texture>
 			<visible>substring(ListItem.VideoCodec,avc1)</visible>
@@ -2160,8 +2172,8 @@
 		</control>
 		<control type="image">
 			<description>wvc1 Codec Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/flag_frame.png</texture>
 			<visible>substring(ListItem.VideoCodec,wvc1)</visible>
@@ -2169,8 +2181,8 @@
 		</control>
 		<control type="image">
 			<description>WmvHD Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/flag_frame.png</texture>
 			<visible>substring(ListItem.VideoCodec,wmv3) | substring(ListItem.VideoCodec,wmva)</visible>
@@ -2178,8 +2190,8 @@
 		</control>
 		<control type="image">
 			<description>Wmv Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/flag_frame.png</texture>
 			<visible>substring(ListItem.VideoCodec,wmv1) | substring(ListItem.VideoCodec,wmv2)</visible>
@@ -2187,8 +2199,8 @@
 		</control>
 		<control type="image">
 			<description>mpeg1video Codec Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/flag_frame.png</texture>
 			<visible>substring(ListItem.VideoCodec,mpeg1video) | substring(ListItem.VideoCodec,mpeg1)</visible>
@@ -2196,8 +2208,8 @@
 		</control>
 		<control type="image">
 			<description>mpeg2video Codec Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/flag_frame.png</texture>
 			<visible>substring(ListItem.VideoCodec,mpeg2video) | substring(ListItem.VideoCodec,v_mpeg2) | substring(ListItem.VideoCodec,mpeg2)</visible>
@@ -2205,8 +2217,8 @@
 		</control>
 		<control type="image">
 			<description>mpeg4video Codec Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/flag_frame.png</texture>
 			<visible>substring(ListItem.VideoCodec,mpeg4video) | substring(ListItem.VideoCodec,mpeg4) | substring(ListItem.VideoCodec,fmp4)</visible>
@@ -2216,8 +2228,8 @@
 	<include name="VideoTypeHackFlaggingConditions_frame">
 		<control type="image">
 			<description>TV Types Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/flag_frame.png</texture>
 			<visible>substring(ListItem.FilenameAndPath,pdtv) | substring(ListItem.FilenameAndPath,dsr)</visible>
@@ -2225,8 +2237,8 @@
 		</control>
 		<control type="image">
 			<description>HDTV Types Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/flag_frame.png</texture>
 			<visible>substring(ListItem.FilenameAndPath,hdtv)</visible>
@@ -2234,8 +2246,8 @@
 		</control>
 		<control type="image">
 			<description>SDTV Types Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/flag_frame.png</texture>
 			<visible>substring(ListItem.FilenameAndPath,sdtv) | substring(ListItem.FilenameAndPath,tvrip)</visible>
@@ -2243,8 +2255,8 @@
 		</control>
 		<control type="image">
 			<description>DVD Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/flag_frame.png</texture>
 			<visible>[substring(ListItem.FilenameAndPath,dvd) | substring(ListItem.Filename,.vob,Right) | substring(ListItem.Filename,.ifo,Right)] + !substring(ListItem.FilenameAndPath,hddvd)</visible>
@@ -2252,8 +2264,8 @@
 		</control>
 		<control type="image">
 			<description>Bluray Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/flag_frame.png</texture>
 			<visible>substring(ListItem.FilenameAndPath,bluray) | substring(ListItem.FilenameAndPath,blu-ray) | substring(ListItem.Filename,brrip) | substring(ListItem.Filename,.m2ts,Right) | substring(ListItem.Filename,.bdmv,Right)</visible>
@@ -2261,8 +2273,8 @@
 		</control>
 		<control type="image">
 			<description>HDDVD Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/flag_frame.png</texture>
 			<visible>substring(ListItem.FilenameAndPath,hddvd) | substring(ListItem.Filename,.evo,Right)</visible>
@@ -2270,8 +2282,8 @@
 		</control>
 		<control type="image">
 			<description>Avi Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/flag_frame.png</texture>
 			<visible>substring(ListItem.Filename,.avi,Right)</visible>
@@ -2279,8 +2291,8 @@
 		</control>
 		<control type="image">
 			<description>Wmv Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/flag_frame.png</texture>
 			<visible>substring(ListItem.Filename,.wmv,Right)</visible>
@@ -2288,8 +2300,8 @@
 		</control>
 		<control type="image">
 			<description>Asf Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/flag_frame.png</texture>
 			<visible>substring(ListItem.Filename,.asf,Right)</visible>
@@ -2297,8 +2309,8 @@
 		</control>
 		<control type="image">
 			<description>Mpeg4 Codec Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/flag_frame.png</texture>
 			<visible>substring(ListItem.Filename,.mp4,Right) | substring(ListItem.Filename,.m4v,Right)</visible>
@@ -2306,8 +2318,8 @@
 		</control>
 		<control type="image">
 			<description>3gp Codec Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/flag_frame.png</texture>
 			<visible>substring(ListItem.Filename,.3gp,Right) | substring(ListItem.Filename,.3g2,Right)</visible>
@@ -2315,8 +2327,8 @@
 		</control>
 		<control type="image">
 			<description>Quicktime Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/flag_frame.png</texture>
 			<visible>substring(ListItem.Filename,.mov,Right) | substring(ListItem.Filename,.qt,Right)</visible>
@@ -2324,8 +2336,8 @@
 		</control>
 		<control type="image">
 			<description>Flash Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/flag_frame.png</texture>
 			<visible>substring(ListItem.Filename,.flv,Right) | substring(ListItem.Filename,.f4v,Right) | substring(ListItem.Filename,.f4a,Right) | substring(ListItem.Filename,.f4p,Right) | substring(ListItem.Filename,.f4b,Right)</visible>
@@ -2333,8 +2345,8 @@
 		</control>
 		<control type="image">
 			<description>Ogg Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/flag_frame.png</texture>
 			<visible>substring(ListItem.Filename,.ogv,Right) | substring(ListItem.Filename,.ogg,Right) | substring(ListItem.Filename,.oga,Right) | substring(ListItem.Filename,.ogx,Right) | substring(ListItem.Filename,.spx,Right)</visible>
@@ -2342,8 +2354,8 @@
 		</control>
 		<control type="image">
 			<description>MKV Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/flag_frame.png</texture>
 			<visible>substring(ListItem.Filename,.mkv,Right)</visible>
@@ -2351,8 +2363,8 @@
 		</control>
 		<control type="image">
 			<description>ISO Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/flag_frame.png</texture>
 			<visible>substring(ListItem.Filename,.iso,Right)</visible>
@@ -2360,8 +2372,8 @@
 		</control>
 		<control type="image">
 			<description>RealPlayer Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/flag_frame.png</texture>
 			<visible>substring(ListItem.Filename,.rmvb,Right)</visible>
@@ -2371,8 +2383,8 @@
 	<include name="AudioCodecFlaggingConditions_frame">
 		<control type="image">
 			<description>Audio Channels Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/flag_frame.png</texture>
 			<colordiffuse>flagframe</colordiffuse>
@@ -2380,8 +2392,8 @@
 		</control>
 		<control type="image">
 			<description>dts Codec Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/flag_frame.png</texture>
 			<visible>substring(ListItem.AudioCodec,dca)</visible>
@@ -2389,8 +2401,8 @@
 		</control>
 		<control type="image">
 			<description>dts MA Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/flag_frame.png</texture>
 			<visible>substring(ListItem.AudioCodec,dtsma) + substring(ListItem.AudioChannels,6)</visible>
@@ -2398,8 +2410,8 @@
 		</control>
 		<control type="image">
 			<description>dts 96/24 Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/flag_frame.png</texture>
 			<visible>substring(ListItem.AudioCodec,dts9624) | substring(ListItem.AudioCodec,dts 96/24)</visible>
@@ -2407,8 +2419,8 @@
 		</control>
 		<control type="image">
 			<description>dts ES Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/flag_frame.png</texture>
 			<visible>substring(ListItem.AudioCodec,dtses) | substring(ListItem.AudioCodec,dts-es)</visible>
@@ -2416,8 +2428,8 @@
 		</control>
 		<control type="image">
 			<description>dts EX Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/flag_frame.png</texture>
 			<visible>substring(ListItem.AudioCodec,dtsex) | substring(ListItem.AudioCodec,dts-ex)</visible>
@@ -2425,8 +2437,8 @@
 		</control>
 		<control type="image">
 			<description>dts Hra Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/flag_frame.png</texture>
 			<visible>substring(ListItem.AudioCodec,dtshra) | substring(ListItem.AudioCodec,dts-hd hra)</visible>
@@ -2434,8 +2446,8 @@
 		</control>
 		<control type="image">
 			<description>Dolby Digital Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/flag_frame.png</texture>
 			<visible>[substring(ListItem.AudioCodec,ac3) | substring(ListItem.AudioCodec,dolby digital)] + substring(ListItem.AudioChannels,6)</visible>
@@ -2443,8 +2455,8 @@
 		</control>
 		<control type="image">
 			<description>DD Plus Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/flag_frame.png</texture>
 			<visible>substring(ListItem.AudioCodec,plus) | substring(ListItem.AudioCodec,dolby digital plus) | substring(ListItem.AudioCodec,eac3)</visible>
@@ -2452,8 +2464,8 @@
 		</control>
 		<control type="image">
 			<description>DD Truehd Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/flag_frame.png</texture>
 			<visible>substring(ListItem.AudioCodec,truehd) | substring(ListItem.AudioCodec,dolby truehd) | substring(ListItem.AudioCodec,ac3 truehd)</visible>
@@ -2461,8 +2473,8 @@
 		</control>
 		<control type="image">
 			<description>ac3 Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/flag_frame.png</texture>
 			<visible>substring(ListItem.AudioCodec,ac3) + !substring(ListItem.AudioChannels,6)</visible>
@@ -2470,8 +2482,8 @@
 		</control>
 		<control type="image">
 			<description>aac Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/flag_frame.png</texture>
 			<visible>substring(ListItem.AudioCodec,aac) | substring(ListItem.AudioCodec,a_aac)</visible>
@@ -2479,8 +2491,8 @@
 		</control>
 		<control type="image">
 			<description>WMA Pro Codec Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/flag_frame.png</texture>
 			<visible>substring(ListItem.AudioCodec,wmapro) | substring(ListItem.AudioCodec,wma)</visible>
@@ -2488,8 +2500,8 @@
 		</control>
 		 <control type="image">
 			<description>vorbis Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/flag_frame.png</texture>
 			<visible>substring(ListItem.AudioCodec,vorbis)</visible>
@@ -2497,8 +2509,8 @@
 		</control>
 		<control type="image">
 			<description>mp3 Codec Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/flag_frame.png</texture>
 			<visible>substring(ListItem.AudioCodec,mp3)</visible>
@@ -2506,8 +2518,8 @@
 		</control>
 		<control type="image">
 			<description>flac Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/flag_frame.png</texture>
 			<visible>substring(ListItem.AudioCodec,flac) + substring(ListItem.AudioChannels,6)</visible>
@@ -2515,8 +2527,8 @@
 		</control>
 		<control type="image">
 			<description>pcm Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/flag_frame.png</texture>
 			<visible>substring(ListItem.AudioCodec,pcm)</visible>
@@ -2526,8 +2538,8 @@
 	<include name="AspectCodecFlaggingConditions_frame">
 		<control type="image">
 			<description>Aspectratio Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/flag_frame.png</texture>
 			<colordiffuse>flagframe</colordiffuse>
@@ -2541,8 +2553,8 @@
 	<include name="VideoCodecFlaggingConditions_back"><!--Back Flags-->
 		<control type="image">
 			<description>Video rez Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/back_flag.png</texture>
 			<colordiffuse>flagback</colordiffuse>
@@ -2550,8 +2562,8 @@
 		</control>
 		<control type="image">
 			<description>Xvid Codec Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/back_flag.png</texture>
 			<visible>substring(ListItem.VideoCodec,xvid)</visible>
@@ -2559,8 +2571,8 @@
 		</control>
 		<control type="image">
 			<description>Divx Codec Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/back_flag.png</texture>
 			<visible>substring(ListItem.VideoCodec,divx)| substring(ListItem.VideoCodec,dx50) | substring(ListItem.VideoCodec,div3) |substring(ListItem.VideoCodec,div4) | substring(ListItem.VideoCodec,div5)</visible>
@@ -2568,8 +2580,8 @@
 		</control>
 		<control type="image">
 			<description>Theora Codec Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/back_flag.png</texture>
 			<visible>substring(ListItem.VideoCodec,ther)</visible>
@@ -2577,8 +2589,8 @@
 		</control>
 		<control type="image">
 			<description>h264 Codec Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/back_flag.png</texture>
 			<visible>substring(ListItem.VideoCodec,h264)</visible>
@@ -2586,8 +2598,8 @@
 		</control>
 		<control type="image">
 			<description>h263 Codec Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/back_flag.png</texture>
 			<visible>substring(ListItem.VideoCodec,h263)</visible>
@@ -2595,8 +2607,8 @@
 		</control>
 		<control type="image">
 			<description>h262 Codec Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/back_flag.png</texture>
 			<visible>substring(ListItem.VideoCodec,h262)</visible>
@@ -2604,8 +2616,8 @@
 		</control>
 		<control type="image">
 			<description>avc1 Codec Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/back_flag.png</texture>
 			<visible>substring(ListItem.VideoCodec,avc1)</visible>
@@ -2613,8 +2625,8 @@
 		</control>
 		<control type="image">
 			<description>wvc1 Codec Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/back_flag.png</texture>
 			<visible>substring(ListItem.VideoCodec,wvc1)</visible>
@@ -2622,8 +2634,8 @@
 		</control>
 		<control type="image">
 			<description>WmvHD Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/back_flag.png</texture>
 			<visible>substring(ListItem.VideoCodec,wmv3) | substring(ListItem.VideoCodec,wmva)</visible>
@@ -2631,8 +2643,8 @@
 		</control>
 		<control type="image">
 			<description>Wmv Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/back_flag.png</texture>
 			<visible>substring(ListItem.VideoCodec,wmv1) | substring(ListItem.VideoCodec,wmv2)</visible>
@@ -2640,8 +2652,8 @@
 		</control>
 		<control type="image">
 			<description>mpeg1video Codec Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/back_flag.png</texture>
 			<visible>substring(ListItem.VideoCodec,mpeg1video) | substring(ListItem.VideoCodec,mpeg1)</visible>
@@ -2649,8 +2661,8 @@
 		</control>
 		<control type="image">
 			<description>mpeg2video Codec Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/back_flag.png</texture>
 			<visible>substring(ListItem.VideoCodec,mpeg2video) | substring(ListItem.VideoCodec,v_mpeg2) | substring(ListItem.VideoCodec,mpeg2)</visible>
@@ -2658,8 +2670,8 @@
 		</control>
 		<control type="image">
 			<description>mpeg4video Codec Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/back_flag.png</texture>
 			<visible>substring(ListItem.VideoCodec,mpeg4video) | substring(ListItem.VideoCodec,mpeg4) | substring(ListItem.VideoCodec,fmp4)</visible>
@@ -2669,8 +2681,8 @@
 	<include name="VideoTypeHackFlaggingConditions_back">
 		<control type="image">
 			<description>TV Types Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/back_flag.png</texture>
 			<visible>substring(ListItem.FilenameAndPath,pdtv) | substring(ListItem.FilenameAndPath,dsr)</visible>
@@ -2678,8 +2690,8 @@
 		</control>
 		<control type="image">
 			<description>HDTV Types Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/back_flag.png</texture>
 			<visible>substring(ListItem.FilenameAndPath,hdtv)</visible>
@@ -2687,8 +2699,8 @@
 		</control>
 		<control type="image">
 			<description>SDTV Types Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/back_flag.png</texture>
 			<visible>substring(ListItem.FilenameAndPath,sdtv) | substring(ListItem.FilenameAndPath,tvrip)</visible>
@@ -2696,8 +2708,8 @@
 		</control>
 		<control type="image">
 			<description>DVD Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/back_flag.png</texture>
 			<visible>[substring(ListItem.FilenameAndPath,dvd) | substring(ListItem.Filename,.vob,Right) | substring(ListItem.Filename,.ifo,Right)] + !substring(ListItem.FilenameAndPath,hddvd)</visible>
@@ -2705,8 +2717,8 @@
 		</control>
 		<control type="image">
 			<description>Bluray Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/back_flag.png</texture>
 			<visible>substring(ListItem.FilenameAndPath,bluray) | substring(ListItem.FilenameAndPath,blu-ray) | substring(ListItem.Filename,brrip) | substring(ListItem.Filename,.m2ts,Right) | substring(ListItem.Filename,.bdmv,Right)</visible>
@@ -2714,8 +2726,8 @@
 		</control>
 		<control type="image">
 			<description>HDDVD Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/back_flag.png</texture>
 			<visible>substring(ListItem.FilenameAndPath,hddvd) | substring(ListItem.Filename,.evo,Right)</visible>
@@ -2723,8 +2735,8 @@
 		</control>
 		<control type="image">
 			<description>Avi Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/back_flag.png</texture>
 			<visible>substring(ListItem.Filename,.avi,Right)</visible>
@@ -2732,8 +2744,8 @@
 		</control>
 		<control type="image">
 			<description>Wmv Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/back_flag.png</texture>
 			<visible>substring(ListItem.Filename,.wmv,Right)</visible>
@@ -2741,8 +2753,8 @@
 		</control>
 		<control type="image">
 			<description>Asf Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/back_flag.png</texture>
 			<visible>substring(ListItem.Filename,.asf,Right)</visible>
@@ -2750,8 +2762,8 @@
 		</control>
 		<control type="image">
 			<description>Mpeg4 Codec Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/back_flag.png</texture>
 			<visible>substring(ListItem.Filename,.mp4,Right) | substring(ListItem.Filename,.m4v,Right)</visible>
@@ -2759,8 +2771,8 @@
 		</control>
 		<control type="image">
 			<description>3gp Codec Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/back_flag.png</texture>
 			<visible>substring(ListItem.Filename,.3gp,Right) | substring(ListItem.Filename,.3g2,Right)</visible>
@@ -2768,8 +2780,8 @@
 		</control>
 		<control type="image">
 			<description>Quicktime Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/back_flag.png</texture>
 			<visible>substring(ListItem.Filename,.mov,Right) | substring(ListItem.Filename,.qt,Right)</visible>
@@ -2777,8 +2789,8 @@
 		</control>
 		<control type="image">
 			<description>Flash Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/back_flag.png</texture>
 			<visible>substring(ListItem.Filename,.flv,Right) | substring(ListItem.Filename,.f4v,Right) | substring(ListItem.Filename,.f4a,Right) | substring(ListItem.Filename,.f4p,Right) | substring(ListItem.Filename,.f4b,Right)</visible>
@@ -2786,8 +2798,8 @@
 		</control>
 		<control type="image">
 			<description>Ogg Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/back_flag.png</texture>
 			<visible>substring(ListItem.Filename,.ogv,Right) | substring(ListItem.Filename,.ogg,Right) | substring(ListItem.Filename,.oga,Right) | substring(ListItem.Filename,.ogx,Right) | substring(ListItem.Filename,.spx,Right)</visible>
@@ -2795,8 +2807,8 @@
 		</control>
 		<control type="image">
 			<description>MKV Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/back_flag.png</texture>
 			<visible>substring(ListItem.Filename,.mkv,Right)</visible>
@@ -2804,8 +2816,8 @@
 		</control>
 		<control type="image">
 			<description>ISO Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/back_flag.png</texture>
 			<visible>substring(ListItem.Filename,.iso,Right)</visible>
@@ -2813,8 +2825,8 @@
 		</control>
 		<control type="image">
 			<description>RealPlayer Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/back_flag.png</texture>
 			<visible>substring(ListItem.Filename,.rmvb,Right)</visible>
@@ -2824,8 +2836,8 @@
 	<include name="AudioCodecFlaggingConditions_back">
 		<control type="image">
 			<description>Audio Channels Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/back_flag.png</texture>
 			<colordiffuse>flagback</colordiffuse>
@@ -2833,8 +2845,8 @@
 		</control>
 		<control type="image">
 			<description>dts Codec Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/back_flag.png</texture>
 			<visible>substring(ListItem.AudioCodec,dca)</visible>
@@ -2842,8 +2854,8 @@
 		</control>
 		<control type="image">
 			<description>dts MA Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/back_flag.png</texture>
 			<visible>substring(ListItem.AudioCodec,dtsma) + substring(ListItem.AudioChannels,6)</visible>
@@ -2851,8 +2863,8 @@
 		</control>
 		<control type="image">
 			<description>dts 96/24 Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/back_flag.png</texture>
 			<visible>substring(ListItem.AudioCodec,dts9624) | substring(ListItem.AudioCodec,dts 96/24)</visible>
@@ -2860,8 +2872,8 @@
 		</control>
 		<control type="image">
 			<description>dts ES Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/back_flag.png</texture>
 			<visible>substring(ListItem.AudioCodec,dtses) | substring(ListItem.AudioCodec,dts-es)</visible>
@@ -2869,8 +2881,8 @@
 		</control>
 		<control type="image">
 			<description>dts EX Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/back_flag.png</texture>
 			<visible>substring(ListItem.AudioCodec,dtsex) | substring(ListItem.AudioCodec,dts-ex)</visible>
@@ -2878,8 +2890,8 @@
 		</control>
 		<control type="image">
 			<description>dts Hra Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/back_flag.png</texture>
 			<visible>substring(ListItem.AudioCodec,dtshra) | substring(ListItem.AudioCodec,dts-hd hra)</visible>
@@ -2887,8 +2899,8 @@
 		</control>
 		<control type="image">
 			<description>Dolby Digital Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/back_flag.png</texture>
 			<visible>[substring(ListItem.AudioCodec,ac3) | substring(ListItem.AudioCodec,dolby digital)] + substring(ListItem.AudioChannels,6)</visible>
@@ -2896,8 +2908,8 @@
 		</control>
 		<control type="image">
 			<description>DD Plus Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/back_flag.png</texture>
 			<visible>substring(ListItem.AudioCodec,plus) | substring(ListItem.AudioCodec,dolby digital plus) | substring(ListItem.AudioCodec,eac3)</visible>
@@ -2905,8 +2917,8 @@
 		</control>
 		<control type="image">
 			<description>DD Truehd Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/back_flag.png</texture>
 			<visible>substring(ListItem.AudioCodec,truehd) | substring(ListItem.AudioCodec,dolby truehd) | substring(ListItem.AudioCodec,ac3 truehd)</visible>
@@ -2914,8 +2926,8 @@
 		</control>
 		<control type="image">
 			<description>ac3 Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/back_flag.png</texture>
 			<visible>substring(ListItem.AudioCodec,ac3) + !substring(ListItem.AudioChannels,6)</visible>
@@ -2923,8 +2935,8 @@
 		</control>
 		<control type="image">
 			<description>aac Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/back_flag.png</texture>
 			<visible>substring(ListItem.AudioCodec,aac) | substring(ListItem.AudioCodec,a_aac)</visible>
@@ -2932,8 +2944,8 @@
 		</control>
 		<control type="image">
 			<description>WMA Pro Codec Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/back_flag.png</texture>
 			<visible>substring(ListItem.AudioCodec,wmapro) | substring(ListItem.AudioCodec,wma)</visible>
@@ -2941,8 +2953,8 @@
 		</control>
 		 <control type="image">
 			<description>vorbis Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/back_flag.png</texture>
 			<visible>substring(ListItem.AudioCodec,vorbis)</visible>
@@ -2950,8 +2962,8 @@
 		</control>
 		<control type="image">
 			<description>mp3 Codec Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/back_flag.png</texture>
 			<visible>substring(ListItem.AudioCodec,mp3)</visible>
@@ -2959,8 +2971,8 @@
 		</control>
 		<control type="image">
 			<description>flac Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/back_flag.png</texture>
 			<visible>substring(ListItem.AudioCodec,flac) + substring(ListItem.AudioChannels,6)</visible>
@@ -2968,8 +2980,8 @@
 		</control>
 		<control type="image">
 			<description>pcm Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/back_flag.png</texture>
 			<visible>substring(ListItem.AudioCodec,pcm)</visible>
@@ -2979,8 +2991,8 @@
 	<include name="AspectCodecFlaggingConditions_back">
 		<control type="image">
 			<description>Aspectratio Image</description>
-			<width>62</width>
-			<height>46</height>
+			<width>54</width>
+			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/back_flag.png</texture>
 			<colordiffuse>flagback</colordiffuse>

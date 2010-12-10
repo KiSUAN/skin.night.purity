@@ -686,7 +686,7 @@
 				<include>Animation_ZoomInZoomOut</include>
 			</control>
 			<control type="grouplist">
-				<visible>Container.Content(movies) + Skin.HasSetting(back_flags) + !Skin.HasSetting(clean_poster) + !Skin.HasSetting(no_media_flags) + !Control.IsVisible(65) + !Window.IsActive(videofiles)</visible>
+				<visible>Container.Content(movies) + Skin.HasSetting(back_flags) + !Skin.HasSetting(clean_poster) + !Skin.HasSetting(no_media_flags) + !Control.IsVisible(65)</visible>
 				<description>Media Codec Flagging Images</description>
 				<posx>20</posx>
 				<posy>676</posy>
@@ -698,7 +698,7 @@
 				<include>Animation_ZoomInZoomOut</include>
 			</control>
 			<control type="grouplist">
-				<visible>Container.Content(movies) + !Skin.HasSetting(clean_poster) + !Skin.HasSetting(no_media_flags) + !Control.IsVisible(65) + !Window.IsActive(videofiles)</visible>
+				<visible>Container.Content(movies) + !Skin.HasSetting(clean_poster) + !Skin.HasSetting(no_media_flags) + !Control.IsVisible(65)</visible>
 				<description>Media Codec Flagging Images</description>
 				<posx>20</posx>
 				<posy>676</posy>
@@ -713,7 +713,7 @@
 				<include>Animation_ZoomInZoomOut</include>
 			</control>
 			<control type="grouplist">
-				<visible>Container.Content(movies) + !Skin.HasSetting(no_frame_flags) + !Skin.HasSetting(clean_poster) + !Skin.HasSetting(no_media_flags) + !Control.IsVisible(65) + !Window.IsActive(videofiles)</visible>
+				<visible>Container.Content(movies) + !Skin.HasSetting(no_frame_flags) + !Skin.HasSetting(clean_poster) + !Skin.HasSetting(no_media_flags) + !Control.IsVisible(65)</visible>
 				<description>Media Codec Flagging Images</description>
 				<posx>20</posx>
 				<posy>676</posy>
