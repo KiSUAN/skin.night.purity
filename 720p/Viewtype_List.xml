@@ -11,7 +11,7 @@
 			<posx>0</posx>
 			<posy>0</posy>
 			<width>1280</width>
-			<height>720</height>
+			<height>800</height>
 			<texture>movie-poster/movie-back3.png</texture>
 			<aspectratio>stretch</aspectratio>
 		</control>
@@ -20,7 +20,7 @@
 			<posx>0</posx>
 			<posy>0</posy>
 			<width>1280</width>
-			<height>720</height>
+			<height>960</height>
 			<texture>movie-poster/3dlandscape_fanart.png</texture>
 			<aspectratio>stretch</aspectratio>
 		</control>
@@ -73,8 +73,8 @@
 						<posy>130</posy>
 						<width>304</width>
 						<height>172</height>
-						<texture>movie-poster/xper_test_2.png</texture>
-						<colordiffuse>BackgroundColor</colordiffuse>
+						<texture>movie-poster/xper_test.png</texture>
+						<colordiffuse>black</colordiffuse>
 					</control>
 					<control type="image">
 						<posx>-150</posx>
@@ -227,11 +227,12 @@
 						<posy>86</posy>
 						<width>407</width>
 						<height>232</height>
-						<texture>movie-poster/xper_test_2.png</texture>
+						<texture>movie-poster/xper_test.png</texture>
 						<aspectratio scalediffuse="false">stretch</aspectratio>
 						<animation type="Focus" reversible="false">
 							<effect type="zoom" center="60,238" start="80" end="100" time="600" tween="back" easing="out" />
 						</animation>
+						<colordiffuse>black</colordiffuse>
 					</control>
 					<control type="image">
 						<posx>-148</posx>

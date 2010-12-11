@@ -91,7 +91,8 @@
 						<posy>131</posy>
 						<width>162</width>
 						<height>241</height>
-						<texture>movie-poster/posterview_diffuse_2.png</texture>
+						<texture>movie-poster/posterview_diffuse.png</texture>
+						<colordiffuse>black</colordiffuse>
 					</control>
 					<control type="image">
 						<posx>-149</posx>
@@ -183,12 +184,13 @@
 						<posy>90</posy>
 						<width>211</width>
 						<height>300</height>
-						<texture>movie-poster/posterview_diffuse_2.png</texture>
+						<texture>movie-poster/posterview_diffuse.png</texture>
 						<fadetime>200</fadetime>
 						<aspectratio scalediffuse="false">stretch</aspectratio>
 						<animation type="Focus" reversible="false">
 							<effect type="zoom" center="60,238" start="80" end="100" time="600" tween="back" easing="out" />
 						</animation>
+						<colordiffuse>black</colordiffuse>
 					</control>
 					<control type="image">
 						<posx>-148</posx>

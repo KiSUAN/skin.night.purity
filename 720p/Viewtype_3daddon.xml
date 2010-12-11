@@ -74,7 +74,8 @@
 						<posy>131</posy>
 						<width>162</width>
 						<height>162</height>
-						<texture>movie-poster/music_square_diffuse_2.png</texture>
+						<texture>movie-poster/music_square_diffuse.png</texture>
+						<colordiffuse>black</colordiffuse>
 					</control>
 					<control type="image">
 						<posx>-149</posx>
@@ -166,12 +167,13 @@
 						<posy>90</posy>
 						<width>211</width>
 						<height>211</height>
-						<texture>movie-poster/music_square_diffuse_2.png</texture>
+						<texture>movie-poster/music_square_diffuse.png</texture>
 						<fadetime>200</fadetime>
 						<aspectratio scalediffuse="false">stretch</aspectratio>
 						<animation type="Focus" reversible="false">
 							<effect type="zoom" center="60,238" start="80" end="100" time="600" tween="back" easing="out" />
 						</animation>
+						<colordiffuse>black</colordiffuse>
 					</control>
 					<!--<control type="image">
 						<posx>-148</posx>
@@ -217,13 +219,14 @@
 						<posy>298</posy>
 						<width>211</width>
 						<height>211</height>
-						<texture flipy="true">movie-poster/music_square_diffuse_2.png</texture>
+						<texture flipy="true">movie-poster/music_square_diffuse.png</texture>
 						<fadetime>200</fadetime>
 						<aspectratio scalediffuse="false">stretch</aspectratio>
 						<animation type="Focus" reversible="false">
 							<effect type="zoom" center="60,238" start="80" end="100" time="600" tween="back" easing="out" />
 							<effect type="fade" start="0" end="30" time="600" />
 						</animation>
+						<colordiffuse>black</colordiffuse>
 					</control>
 					<control type="image">
 						<posx>-148</posx>

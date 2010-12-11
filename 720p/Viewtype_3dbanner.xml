@@ -10,7 +10,7 @@
 				<posx>0</posx>
 				<posy>0</posy>
 				<width>1280</width>
-				<height>800</height>
+				<height>740</height>
 				<texture>movie-poster/movie-back3.png</texture>
 				<aspectratio>stretch</aspectratio>
 				<include>Animation_BackdropFade</include>
@@ -74,7 +74,7 @@
 						<width>304</width>
 						<height>80</height>
 						<texture>movie-poster/xper_test.png</texture>
-						<colordiffuse>BackgroundColor</colordiffuse>
+						<colordiffuse>black</colordiffuse>
 					</control>
 					<control type="image">
 						<posx>-150</posx>
@@ -166,6 +166,7 @@
 						<animation type="Focus" reversible="false">
 							<effect type="zoom" center="60,238" start="80" end="100" time="600" tween="back" easing="out" />
 						</animation>
+						<colordiffuse>black</colordiffuse>
 					</control>
 					<control type="image">
 						<posx>-148</posx>
