@@ -7,7 +7,7 @@
 			<include>Window_OpenClose_Animation</include>		
 			<control type="largeimage">
 				<include>Dimensions_Fullscreen</include>
-				<texture>backdrops/curtains.png</texture>
+				<texture>backdrops/curtains.jpg</texture>
 				<aspectratio>scale</aspectratio>
 				<include>Animation_BackdropFade</include>
 			</control>

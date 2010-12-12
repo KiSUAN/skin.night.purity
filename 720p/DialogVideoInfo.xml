@@ -9,7 +9,7 @@
 		<animation effect="fade" start="100" end="0" time="600" delay="200" >WindowClose</animation>
 			<control type="image">
 				<include>Dimensions_Fullscreen</include>
-				<texture>backdrops/curtains.png</texture>
+				<texture>backdrops/curtains.jpg</texture>
 				<aspectratio>stretch</aspectratio>
 				<fadetime>400</fadetime>
 			</control>

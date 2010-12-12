@@ -5,7 +5,7 @@
 			<include>Dimensions_Fullscreen</include>
 			<width>1280</width>
 			<height>720</height>
-			<texture>backdrops/curtains_diffuse.png</texture>
+			<texture>backdrops/curtains_diffuse.jpg</texture>
 			<aspectratio>stretch</aspectratio>
 			<include>VisibleFadeEffect</include>
 		</control>
@@ -894,7 +894,7 @@
 							<item id="18">
 								<label>1036</label>
 								<onclick>-</onclick>
-								<icon>special://skin/backgrounds/favourites.png</icon>
+								<icon>special://skin/backgrounds/favourites.jpg</icon>
 								<thumb>$INFO[Skin.String(CustomfavouritesFolder)]</thumb>
 							</item>
 							<item id="7">

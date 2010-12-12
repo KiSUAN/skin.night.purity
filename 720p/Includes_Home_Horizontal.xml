@@ -180,7 +180,7 @@
 				<!--<item id="7">
 					<description>programs</description>
 					<label>0</label>
-					<icon>special://skin/media/backgrounds/games.png</icon>
+					<icon>special://skin/media/backgrounds/games.jpg</icon>
 					<thumb>$INFO[Skin.String(CustomGamesFolder)]</thumb>				
 					<onclick>XBMC.ActivateWindow(MyPrograms)</onclick>
 					<visible>Skin.HasSetting(HomeMenuNoProgramsButton)</visible>
@@ -196,7 +196,7 @@
 				<item id="18">
 					<description>favourites</description>
 					<label>$LOCALIZE[1036]</label>
-					<icon>special://skin/backgrounds/favourites.png</icon>
+					<icon>special://skin/backgrounds/favourites.jpg</icon>
 					<thumb>$INFO[Skin.String(CustomfavouritesFolder)]</thumb>	
 					<onclick>XBMC.ActivateWindow(favourites)</onclick>
 					<visible>Skin.HasSetting(HomeMenuNofavouritesButton)</visible>

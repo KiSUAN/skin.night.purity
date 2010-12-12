@@ -101,7 +101,7 @@
 				<onclick>ActivateWindow(Favourites)</onclick>
 			</control>
 
-			<control type="button" id="3112">
+			<!--<control type="button" id="3112">
 				<description>Reboot</description>
 				<height>30</height>
 				<width>170</width>
@@ -114,8 +114,9 @@
 				<aligny>middle</aligny>
 				<label>$LOCALIZE[13313]</label>
 				<onclick>ActivateWindow(home)</onclick>
+				<onclick>-</onclick>
 				<onclick>Reset()</onclick>
-			</control>
+			</control>-->
 			<control type="button" id="3113">
 				<description>Shutdown</description>
 				<height>30</height>
@@ -129,6 +130,7 @@
 				<aligny>middle</aligny>
 				<label>$LOCALIZE[13005]</label>
 				<onclick>ActivateWindow(home)</onclick>
+				<onclick>-</onclick>
 				<onclick>ShutDown()</onclick>
 			</control>
 			<control type="button" id="3114">
@@ -144,7 +146,7 @@
 				<aligny>middle</aligny>
 				<label>$LOCALIZE[13313] XBMC</label>
 				<onclick>ActivateWindow(home)</onclick>
-				
+				<onclick>-</onclick>
 				<onclick>RestartApp()</onclick>
 			</control>
 			<control type="button" id="3115">
