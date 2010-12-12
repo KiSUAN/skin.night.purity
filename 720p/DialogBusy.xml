@@ -18,11 +18,11 @@
 				<description>Busy animation</description>
 				<posx>185</posx>
 				<posy>20</posy>
-				<width>80</width>
+				<width>90</width>
 				<height>80</height>
 				<imagepath>busy</imagepath>
-				<timeperimage>100</timeperimage>
-				<fadetime>0</fadetime>
+				<timeperimage>50</timeperimage>
+				<fadetime>10</fadetime>
 			</control>
 		</control>
 	</controls>
