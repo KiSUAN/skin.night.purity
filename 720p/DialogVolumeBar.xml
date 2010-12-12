@@ -11,13 +11,13 @@
 						<texture>volume/volume.png</texture>
 						<posy>20</posy>
 						<posx>-100</posx>
-						<visible>IntegerGreaterThan(player.volume,-59)</visible>
+						<visible>IntegerGreaterThan(player.volume,-60)</visible>
 					</control>
 					<control type="image">
 						<texture>volume/mute.png</texture>
 						<posy>20</posy>
 						<posx>-100</posx>
-						<visible>!IntegerGreaterThan(player.volume,-59)</visible>
+						<visible>!IntegerGreaterThan(player.volume,-60)</visible>
 					</control>
 				</control>
 				<control type="group">
@@ -25,38 +25,258 @@
 					<posy>88</posy>
 					<control type="image">
 						<texture>volume/vol.png</texture>
-						<animation effect="rotate" end="34,0" center="9,150" time="500" tween="back" easing="inout" reversible="false" condition="IntegerGreaterThan(player.volume,-61)">Conditional</animation>
-						<visible>IntegerGreaterThan(player.volume,-61) + !IntegerGreaterThan(player.volume,-50)</visible>
+						<animation effect="rotate" start="29,0" end="34,0" center="9,150" time="500" tween="back" easing="inout" reversible="false" condition="!IntegerGreaterThan(player.volume,-60)">Conditional</animation>
+						<visible>!IntegerGreaterThan(player.volume,-60)</visible>
 					</control>
 					<control type="image">
 						<texture>volume/vol.png</texture>
-						<animation effect="rotate" start="34,0" end="23,0" center="9,150" time="500" tween="back" easing="inout" reversible="false" condition="IntegerGreaterThan(player.volume,-50)">Conditional</animation>
-						<visible>IntegerGreaterThan(player.volume,-50) + !IntegerGreaterThan(player.volume,-40)</visible>
+						<animation effect="rotate" start="29,0" end="27.9,0" center="9,150" time="500" tween="back" easing="inout" reversible="false" condition="IntegerGreaterThan(player.volume,-60)">Conditional</animation>
+						<visible>IntegerGreaterThan(player.volume,-60) + !IntegerGreaterThan(player.volume,-58.8)</visible>
 					</control>
 					<control type="image">
 						<texture>volume/vol.png</texture>
-						<animation effect="rotate" start="23,0" end="12,0" center="9,150" time="500" tween="back" easing="inout" reversible="false" condition="IntegerGreaterThan(player.volume,-40)">Conditional</animation>
-						<visible>IntegerGreaterThan(player.volume,-40) + !IntegerGreaterThan(player.volume,-30)</visible>
+						<animation effect="rotate" start="27.9,0" end="26.8,0" center="9,150" time="500" tween="back" easing="inout" reversible="false" condition="IntegerGreaterThan(player.volume,-58.8)">Conditional</animation>
+						<visible>IntegerGreaterThan(player.volume,-58.8) + !IntegerGreaterThan(player.volume,-57.6)</visible>
 					</control>
 					<control type="image">
 						<texture>volume/vol.png</texture>
-						<animation effect="rotate" start="12,0" end="1,0" center="9,150" time="500" tween="back" easing="inout" reversible="false" condition="IntegerGreaterThan(player.volume,-30)">Conditional</animation>
-						<visible>IntegerGreaterThan(player.volume,-30) + !IntegerGreaterThan(player.volume,-20)</visible>
+						<animation effect="rotate" start="26.8,0" end="25.7,0" center="9,150" time="500" tween="back" easing="inout" reversible="false" condition="IntegerGreaterThan(player.volume,-57.6)">Conditional</animation>
+						<visible>IntegerGreaterThan(player.volume,-57.6) + !IntegerGreaterThan(player.volume,-56.4)</visible>
 					</control>
 					<control type="image">
 						<texture>volume/vol.png</texture>
-						<animation effect="rotate" start="1,0" end="-10,0" center="9,150" time="500" tween="back" easing="inout" reversible="false" condition="IntegerGreaterThan(player.volume,-20)">Conditional</animation>
-						<visible>IntegerGreaterThan(player.volume,-20) + !IntegerGreaterThan(player.volume,-10)</visible>
+						<animation effect="rotate" start="25.7,0" end="24.6,0" center="9,150" time="500" tween="back" easing="inout" reversible="false" condition="IntegerGreaterThan(player.volume,-56.4)">Conditional</animation>
+						<visible>IntegerGreaterThan(player.volume,-56.4) + !IntegerGreaterThan(player.volume,-55.2)</visible>
 					</control>
 					<control type="image">
 						<texture>volume/vol.png</texture>
-						<animation effect="rotate" start="-10,0" end="-20,0" center="9,150" time="500" tween="back" easing="inout" reversible="false" condition="IntegerGreaterThan(player.volume,-10)">Conditional</animation>
-						<visible>IntegerGreaterThan(player.volume,-10) + !IntegerGreaterThan(player.volume,-1)</visible>
+						<animation effect="rotate" start="24.6,0" end="23.5,0" center="9,150" time="500" tween="back" easing="inout" reversible="false" condition="IntegerGreaterThan(player.volume,-55.2)">Conditional</animation>
+						<visible>IntegerGreaterThan(player.volume,-55.2) + !IntegerGreaterThan(player.volume,-54)</visible>
 					</control>
 					<control type="image">
 						<texture>volume/vol.png</texture>
-						<animation effect="rotate" start="-20,0" end="-31,0" center="9,150" time="500" tween="back" easing="inout" reversible="false" condition="IntegerGreaterThan(player.volume,-1)">Conditional</animation>
-						<visible>IntegerGreaterThan(player.volume,-1)</visible>
+						<animation effect="rotate" start="23.5,0" end="22.4,0" center="9,150" time="500" tween="back" easing="inout" reversible="false" condition="IntegerGreaterThan(player.volume,-54)">Conditional</animation>
+						<visible>IntegerGreaterThan(player.volume,-54) + !IntegerGreaterThan(player.volume,-52.8)</visible>
+					</control>
+					<control type="image">
+						<texture>volume/vol.png</texture>
+						<animation effect="rotate" start="22.4,0" end="21.3,0" center="9,150" time="500" tween="back" easing="inout" reversible="false" condition="IntegerGreaterThan(player.volume,-52.8)">Conditional</animation>
+						<visible>IntegerGreaterThan(player.volume,-52.8) + !IntegerGreaterThan(player.volume,-51.6)</visible>
+					</control>
+					<control type="image">
+						<texture>volume/vol.png</texture>
+						<animation effect="rotate" start="21.3,0" end="20.2,0" center="9,150" time="500" tween="back" easing="inout" reversible="false" condition="IntegerGreaterThan(player.volume,-51.6)">Conditional</animation>
+						<visible>IntegerGreaterThan(player.volume,-51.6) + !IntegerGreaterThan(player.volume,-50.4)</visible>
+					</control>
+					<control type="image">
+						<texture>volume/vol.png</texture>
+						<animation effect="rotate" start="20.2,0" end="19.1,0" center="9,150" time="500" tween="back" easing="inout" reversible="false" condition="IntegerGreaterThan(player.volume,-50.4)">Conditional</animation>
+						<visible>IntegerGreaterThan(player.volume,-50.4) + !IntegerGreaterThan(player.volume,-49.2)</visible>
+					</control>
+					<control type="image">
+						<texture>volume/vol.png</texture>
+						<animation effect="rotate" start="19.1,0" end="18,0" center="9,150" time="500" tween="back" easing="inout" reversible="false" condition="IntegerGreaterThan(player.volume,-49.2)">Conditional</animation>
+						<visible>IntegerGreaterThan(player.volume,-49.2) + !IntegerGreaterThan(player.volume,-48)</visible>
+					</control>
+					<control type="image">
+						<texture>volume/vol.png</texture>
+						<animation effect="rotate" start="18,0" end="16.9,0" center="9,150" time="500" tween="back" easing="inout" reversible="false" condition="IntegerGreaterThan(player.volume,-48)">Conditional</animation>
+						<visible>IntegerGreaterThan(player.volume,-48) + !IntegerGreaterThan(player.volume,-46.8)</visible>
+					</control>
+					<control type="image">
+						<texture>volume/vol.png</texture>
+						<animation effect="rotate" start="16.9,0" end="15.8,0" center="9,150" time="500" tween="back" easing="inout" reversible="false" condition="IntegerGreaterThan(player.volume,-46.8)">Conditional</animation>
+						<visible>IntegerGreaterThan(player.volume,-46.8) + !IntegerGreaterThan(player.volume,-45.6)</visible>
+					</control>
+					<control type="image">
+						<texture>volume/vol.png</texture>
+						<animation effect="rotate" start="15.8,0" end="14.7,0" center="9,150" time="500" tween="back" easing="inout" reversible="false" condition="IntegerGreaterThan(player.volume,-45.6)">Conditional</animation>
+						<visible>IntegerGreaterThan(player.volume,-45.6) + !IntegerGreaterThan(player.volume,-44.4)</visible>
+					</control>
+					<control type="image">
+						<texture>volume/vol.png</texture>
+						<animation effect="rotate" start="14.7,0" end="13.6,0" center="9,150" time="500" tween="back" easing="inout" reversible="false" condition="IntegerGreaterThan(player.volume,-44.4)">Conditional</animation>
+						<visible>IntegerGreaterThan(player.volume,-44.4) + !IntegerGreaterThan(player.volume,-43.2)</visible>
+					</control>
+					<control type="image">
+						<texture>volume/vol.png</texture>
+						<animation effect="rotate" start="13.6,0" end="12.5,0" center="9,150" time="500" tween="back" easing="inout" reversible="false" condition="IntegerGreaterThan(player.volume,-43.2)">Conditional</animation>
+						<visible>IntegerGreaterThan(player.volume,-43.2) + !IntegerGreaterThan(player.volume,-42)</visible>
+					</control>
+					<control type="image">
+						<texture>volume/vol.png</texture>
+						<animation effect="rotate" start="12.5,0" end="11.4,0" center="9,150" time="500" tween="back" easing="inout" reversible="false" condition="IntegerGreaterThan(player.volume,-42)">Conditional</animation>
+						<visible>IntegerGreaterThan(player.volume,-42) + !IntegerGreaterThan(player.volume,-40.8)</visible>
+					</control>
+					<control type="image">
+						<texture>volume/vol.png</texture>
+						<animation effect="rotate" start="11.4,0" end="10.3,0" center="9,150" time="500" tween="back" easing="inout" reversible="false" condition="IntegerGreaterThan(player.volume,-40.8)">Conditional</animation>
+						<visible>IntegerGreaterThan(player.volume,-40.8) + !IntegerGreaterThan(player.volume,-39.6)</visible>
+					</control>
+					<control type="image">
+						<texture>volume/vol.png</texture>
+						<animation effect="rotate" start="10.3,0" end="9.2,0" center="9,150" time="500" tween="back" easing="inout" reversible="false" condition="IntegerGreaterThan(player.volume,-39.6)">Conditional</animation>
+						<visible>IntegerGreaterThan(player.volume,-39.6) + !IntegerGreaterThan(player.volume,-38.4)</visible>
+					</control>
+					<control type="image">
+						<texture>volume/vol.png</texture>
+						<animation effect="rotate" start="9.2,0" end="8.1,0" center="9,150" time="500" tween="back" easing="inout" reversible="false" condition="IntegerGreaterThan(player.volume,-38.4)">Conditional</animation>
+						<visible>IntegerGreaterThan(player.volume,-38.4) + !IntegerGreaterThan(player.volume,-37.2)</visible>
+					</control>
+					<control type="image">
+						<texture>volume/vol.png</texture>
+						<animation effect="rotate" start="8.1,0" end="7,0" center="9,150" time="500" tween="back" easing="inout" reversible="false" condition="IntegerGreaterThan(player.volume,-37.2)">Conditional</animation>
+						<visible>IntegerGreaterThan(player.volume,-37.2) + !IntegerGreaterThan(player.volume,-36)</visible>
+					</control>
+					<control type="image">
+						<texture>volume/vol.png</texture>
+						<animation effect="rotate" start="7,0" end="5.9,0" center="9,150" time="500" tween="back" easing="inout" reversible="false" condition="IntegerGreaterThan(player.volume,-36)">Conditional</animation>
+						<visible>IntegerGreaterThan(player.volume,-36) + !IntegerGreaterThan(player.volume,-34.8)</visible>
+					</control>
+					<control type="image">
+						<texture>volume/vol.png</texture>
+						<animation effect="rotate" start="5.9" end="4.8,0" center="9,150" time="500" tween="back" easing="inout" reversible="false" condition="IntegerGreaterThan(player.volume,-34.8)">Conditional</animation>
+						<visible>IntegerGreaterThan(player.volume,-34.8) + !IntegerGreaterThan(player.volume,-33.6)</visible>
+					</control>
+					<control type="image">
+						<texture>volume/vol.png</texture>
+						<animation effect="rotate" start="4.8,0" end="3.7,0" center="9,150" time="500" tween="back" easing="inout" reversible="false" condition="IntegerGreaterThan(player.volume,-33.6)">Conditional</animation>
+						<visible>IntegerGreaterThan(player.volume,-33.6) + !IntegerGreaterThan(player.volume,-32.4)</visible>
+					</control>
+					<control type="image">
+						<texture>volume/vol.png</texture>
+						<animation effect="rotate" start="3.7,0" end="2.6,0" center="9,150" time="500" tween="back" easing="inout" reversible="false" condition="IntegerGreaterThan(player.volume,-32.4)">Conditional</animation>
+						<visible>IntegerGreaterThan(player.volume,-32.4) + !IntegerGreaterThan(player.volume,-31.2)</visible>
+					</control>
+					<control type="image">
+						<texture>volume/vol.png</texture>
+						<animation effect="rotate" start="2.6,0" end="1.5,0" center="9,150" time="500" tween="back" easing="inout" reversible="false" condition="IntegerGreaterThan(player.volume,-31.2)">Conditional</animation>
+						<visible>IntegerGreaterThan(player.volume,-31.2) + !IntegerGreaterThan(player.volume,-30)</visible>
+					</control>
+					<control type="image">
+						<texture>volume/vol.png</texture>
+						<animation effect="rotate" start="1.5,0" end="0.4,0" center="9,150" time="500" tween="back" easing="inout" reversible="false" condition="IntegerGreaterThan(player.volume,-30)">Conditional</animation>
+						<visible>IntegerGreaterThan(player.volume,-30) + !IntegerGreaterThan(player.volume,-28.8)</visible>
+					</control>
+					<control type="image">
+						<texture>volume/vol.png</texture>
+						<animation effect="rotate" start="0.4,0" end="-0.7,0" center="9,150" time="500" tween="back" easing="inout" reversible="false" condition="IntegerGreaterThan(player.volume,-28.8)">Conditional</animation>
+						<visible>IntegerGreaterThan(player.volume,-28.8) + !IntegerGreaterThan(player.volume,-27.6)</visible>
+					</control>
+					<control type="image">
+						<texture>volume/vol.png</texture>
+						<animation effect="rotate" start="-0.7,0" end="-1.8,0" center="9,150" time="500" tween="back" easing="inout" reversible="false" condition="IntegerGreaterThan(player.volume,-27.6)">Conditional</animation>
+						<visible>IntegerGreaterThan(player.volume,-27.6) + !IntegerGreaterThan(player.volume,-26.4)</visible>
+					</control>
+					<control type="image">
+						<texture>volume/vol.png</texture>
+						<animation effect="rotate" start="-1.8,0" end="-2.9,0" center="9,150" time="500" tween="back" easing="inout" reversible="false" condition="IntegerGreaterThan(player.volume,-26.4)">Conditional</animation>
+						<visible>IntegerGreaterThan(player.volume,-26.4) + !IntegerGreaterThan(player.volume,-25.2)</visible>
+					</control>
+					<control type="image">
+						<texture>volume/vol.png</texture>
+						<animation effect="rotate" start="-2.9,0" end="-4,0" center="9,150" time="500" tween="back" easing="inout" reversible="false" condition="IntegerGreaterThan(player.volume,-25.2)">Conditional</animation>
+						<visible>IntegerGreaterThan(player.volume,-25.2) + !IntegerGreaterThan(player.volume,-24)</visible>
+					</control>
+					<control type="image">
+						<texture>volume/vol.png</texture>
+						<animation effect="rotate" start="-4,0" end="-4.1,0" center="9,150" time="500" tween="back" easing="inout" reversible="false" condition="IntegerGreaterThan(player.volume,-24)">Conditional</animation>
+						<visible>IntegerGreaterThan(player.volume,-24) + !IntegerGreaterThan(player.volume,-22.8)</visible>
+					</control>
+					<control type="image">
+						<texture>volume/vol.png</texture>
+						<animation effect="rotate" start="-4.1,0" end="-5.2,0" center="9,150" time="500" tween="back" easing="inout" reversible="false" condition="IntegerGreaterThan(player.volume,-22.8)">Conditional</animation>
+						<visible>IntegerGreaterThan(player.volume,-22.8) + !IntegerGreaterThan(player.volume,-21.6)</visible>
+					</control>
+					<control type="image">
+						<texture>volume/vol.png</texture>
+						<animation effect="rotate" start="-5.2,0" end="-6.3,0" center="9,150" time="500" tween="back" easing="inout" reversible="false" condition="IntegerGreaterThan(player.volume,-21.6)">Conditional</animation>
+						<visible>IntegerGreaterThan(player.volume,-21.6) + !IntegerGreaterThan(player.volume,-20.4)</visible>
+					</control>
+					<control type="image">
+						<texture>volume/vol.png</texture>
+						<animation effect="rotate" start="-6.3,0" end="-7.4,0" center="9,150" time="500" tween="back" easing="inout" reversible="false" condition="IntegerGreaterThan(player.volume,-20.4)">Conditional</animation>
+						<visible>IntegerGreaterThan(player.volume,-20.4) + !IntegerGreaterThan(player.volume,-19.2)</visible>
+					</control>
+					<control type="image">
+						<texture>volume/vol.png</texture>
+						<animation effect="rotate" start="-7.4,0" end="-8.5,0" center="9,150" time="500" tween="back" easing="inout" reversible="false" condition="IntegerGreaterThan(player.volume,-19.2)">Conditional</animation>
+						<visible>IntegerGreaterThan(player.volume,-19.2) + !IntegerGreaterThan(player.volume,-18)</visible>
+					</control>
+					<control type="image">
+						<texture>volume/vol.png</texture>
+						<animation effect="rotate" start="-8.5,0" end="-9.6,0" center="9,150" time="500" tween="back" easing="inout" reversible="false" condition="IntegerGreaterThan(player.volume,-18)">Conditional</animation>
+						<visible>IntegerGreaterThan(player.volume,-18) + !IntegerGreaterThan(player.volume,-16.8)</visible>
+					</control>
+					<control type="image">
+						<texture>volume/vol.png</texture>
+						<animation effect="rotate" start="-9.6,0" end="-10.7,0" center="9,150" time="500" tween="back" easing="inout" reversible="false" condition="IntegerGreaterThan(player.volume,-16.8)">Conditional</animation>
+						<visible>IntegerGreaterThan(player.volume,-16.8) + !IntegerGreaterThan(player.volume,-15.6)</visible>
+					</control>
+					<control type="image">
+						<texture>volume/vol.png</texture>
+						<animation effect="rotate" start="-10.7,0" end="-11.8,0" center="9,150" time="500" tween="back" easing="inout" reversible="false" condition="IntegerGreaterThan(player.volume,-15.6)">Conditional</animation>
+						<visible>IntegerGreaterThan(player.volume,-15.6) + !IntegerGreaterThan(player.volume,-14.4)</visible>
+					</control>
+					<control type="image">
+						<texture>volume/vol.png</texture>
+						<animation effect="rotate" start="-11.8,0" end="-12.9,0" center="9,150" time="500" tween="back" easing="inout" reversible="false" condition="IntegerGreaterThan(player.volume,-14.4)">Conditional</animation>
+						<visible>IntegerGreaterThan(player.volume,-14.4) + !IntegerGreaterThan(player.volume,-13.2)</visible>
+					</control>
+					<control type="image">
+						<texture>volume/vol.png</texture>
+						<animation effect="rotate" start="-12.9,0" end="-13,0" center="9,150" time="500" tween="back" easing="inout" reversible="false" condition="IntegerGreaterThan(player.volume,-13.2)">Conditional</animation>
+						<visible>IntegerGreaterThan(player.volume,-13.2) + !IntegerGreaterThan(player.volume,-12)</visible>
+					</control>
+					<control type="image">
+						<texture>volume/vol.png</texture>
+						<animation effect="rotate" start="-13,0" end="-14.1,0" center="9,150" time="500" tween="back" easing="inout" reversible="false" condition="IntegerGreaterThan(player.volume,-12)">Conditional</animation>
+						<visible>IntegerGreaterThan(player.volume,-12) + !IntegerGreaterThan(player.volume,-10.8)</visible>
+					</control>
+					<control type="image">
+						<texture>volume/vol.png</texture>
+						<animation effect="rotate" start="-14.1,0" end="-15.2,0" center="9,150" time="500" tween="back" easing="inout" reversible="false" condition="IntegerGreaterThan(player.volume,-10.8)">Conditional</animation>
+						<visible>IntegerGreaterThan(player.volume,-10.8) + !IntegerGreaterThan(player.volume,-9.6)</visible>
+					</control>
+					<control type="image">
+						<texture>volume/vol.png</texture>
+						<animation effect="rotate" start="-15.2,0" end="-16.3,0" center="9,150" time="500" tween="back" easing="inout" reversible="false" condition="IntegerGreaterThan(player.volume,-9.6)">Conditional</animation>
+						<visible>IntegerGreaterThan(player.volume,-9.6) + !IntegerGreaterThan(player.volume,-8.4)</visible>
+					</control>
+					<control type="image">
+						<texture>volume/vol.png</texture>
+						<animation effect="rotate" start="-16.3,0" end="-17.4,0" center="9,150" time="500" tween="back" easing="inout" reversible="false" condition="IntegerGreaterThan(player.volume,-8.4)">Conditional</animation>
+						<visible>IntegerGreaterThan(player.volume,-8.4) + !IntegerGreaterThan(player.volume,-7.2)</visible>
+					</control>
+					<control type="image">
+						<texture>volume/vol.png</texture>
+						<animation effect="rotate" start="-17.4,0" end="-18.5,0" center="9,150" time="500" tween="back" easing="inout" reversible="false" condition="IntegerGreaterThan(player.volume,-7.2)">Conditional</animation>
+						<visible>IntegerGreaterThan(player.volume,-7.2) + !IntegerGreaterThan(player.volume,-6)</visible>
+					</control>
+					<control type="image">
+						<texture>volume/vol.png</texture>
+						<animation effect="rotate" start="-18.5,0" end="-19.6,0" center="9,150" time="500" tween="back" easing="inout" reversible="false" condition="IntegerGreaterThan(player.volume,-6)">Conditional</animation>
+						<visible>IntegerGreaterThan(player.volume,-6) + !IntegerGreaterThan(player.volume,-4.8)</visible>
+					</control>
+					<control type="image">
+						<texture>volume/vol.png</texture>
+						<animation effect="rotate" start="-19.6,0" end="-20.7,0" center="9,150" time="500" tween="back" easing="inout" reversible="false" condition="IntegerGreaterThan(player.volume,-4.8)">Conditional</animation>
+						<visible>IntegerGreaterThan(player.volume,-4.8) + !IntegerGreaterThan(player.volume,-3.6)</visible>
+					</control>
+					<control type="image">
+						<texture>volume/vol.png</texture>
+						<animation effect="rotate" start="-20.7,0" end="-21.8,0" center="9,150" time="500" tween="back" easing="inout" reversible="false" condition="IntegerGreaterThan(player.volume,-3.6)">Conditional</animation>
+						<visible>IntegerGreaterThan(player.volume,-3.6) + !IntegerGreaterThan(player.volume,-2.4)</visible>
+					</control>
+					<control type="image">
+						<texture>volume/vol.png</texture>
+						<animation effect="rotate" start="-21.8,0" end="-22.9,0" center="9,150" time="500" tween="back" easing="inout" reversible="false" condition="IntegerGreaterThan(player.volume,-2.4)">Conditional</animation>
+						<visible>IntegerGreaterThan(player.volume,-2.4) + !IntegerGreaterThan(player.volume,-1.2)</visible>
+					</control>
+					<control type="image">
+						<texture>volume/vol.png</texture>
+						<animation effect="rotate" start="-22.9,0" end="-30" center="9,150" time="500" tween="back" easing="inout" reversible="false" condition="IntegerGreaterThan(player.volume,-1.2)">Conditional</animation>
+						<visible>IntegerGreaterThan(player.volume,-1.2)</visible>
 					</control>
 				</control>
 			</control>
