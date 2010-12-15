@@ -2,62 +2,59 @@
   <actions>
     <action>
       <name>left</name>
-      <file>sound7.wav</file>
+      <file>swoosh.wav</file>
     </action>
     <action>
       <name>right</name>
-      <file>sound7.wav</file>
+      <file>swoosh.wav</file>
     </action>
     <action>
       <name>up</name>
-      <file>up.wav</file>
+      <file>swords.clashing.wav</file>
     </action>
     <action>
       <name>down</name>
-      <file>down.wav</file>
+      <file>knife.wav</file>
     </action>
     <action>
       <name>select</name>
-      <file>select.wav</file>
+      <file>click.wav</file>
     </action>
     <action>
       <name>parentdir</name>
-      <file>back.wav</file>
+      <file>branch.break.wav</file>
     </action>
     <action>
       <name>previousmenu</name>
-      <file>back.wav</file>
+      <file>branch.break.wav</file>
     </action>
     <action>
       <name>screenshot</name>
-      <file>-</file>
+      <file>camera.shutter.wav</file>
     </action>
 	<action>
       <name>ContextMenu</name>
-      <file>pop.wav</file>
+      <file>door.wav</file>
     </action>
 	<action>
       <name>Info</name>
-      <file>action.wav</file>
+      <file>throw.knife.wav</file>
     </action>
 	<action>
       <name>Close</name>
-      <file>action.wav</file>
+      <file>close.wav</file>
     </action>
   </actions>
 
   <windows>
     <window>
       <name>startup</name>
-      <activate>01_-_alpha.wav</activate>
+      <activate>dun.dun.dun.wav</activate>
     </window>
     <window>
-      <name>0</name>
-      <deactivate>-</deactivate>
-    </window>
-    <window>
-      <name>4</name>
-      <deactivate>-</deactivate>
+      <name>infodialog</name>
+      <activate>bomb.wav</activate>
+      <deactivate>drop.wav</deactivate>
     </window>
   </windows>
 </sounds>
