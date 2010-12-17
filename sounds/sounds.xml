@@ -52,6 +52,10 @@
       <activate>dun.dun.dun.wav</activate>
     </window>
     <window>
+      <name>shutdownmenu</name>
+      <activate>door.wav</activate>
+    </window>
+    <window>
       <name>infodialog</name>
       <activate>bomb.wav</activate>
       <deactivate>drop.wav</deactivate>
