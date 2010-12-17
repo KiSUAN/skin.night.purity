@@ -1257,7 +1257,7 @@
 					<align>right</align>
 				</control>
 				<control type="label">
-					<posy>24</posy>
+					<posy>28</posy>
 					<width>300</width>
 					<font>LiberationSans_Regular_18</font>
 					<textcolor>white</textcolor>
