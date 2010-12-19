@@ -17,6 +17,8 @@
 	<color name="flagback">FF161616</color>
 	<color name="menuback">FF636363</color>
 	<color name="menugradient">FFFFFFFF</color>
+	<color name="Qlockfocus">FFb4b4b4</color>
+	<color name="Qlocknofocus">33FFFFFF</color>
 	
 	<!-- Basic colors-->
 	

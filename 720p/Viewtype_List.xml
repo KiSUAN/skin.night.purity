@@ -439,7 +439,7 @@
 			<visible allowhiddenfocus="true">ControlGroup(28374).HasFocus + Skin.HasSetting(3dLandscape_Fanart) + Container.Content(episodes)</visible>
 		</control>
 	</control>-->
-				
+		
 	<control type="group">
 		<visible>Control.IsVisible(53)</visible>
 			<control type="image">
@@ -555,6 +555,7 @@
 					<autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
 					<animation effect="slide" start="0,0" end="0,-26" time="0" condition="IsEmpty(ListItem.Year)">Conditional</animation>
 					<animation effect="slide" start="0,0" end="0,-52" time="0" condition="IsEmpty(ListItem.genre) + IsEmpty(ListItem.Year)">Conditional</animation>
+					<visible>Skin.HasSetting(launcher_plot)</visible>
 				</control>
 		</control>
 		<control type="group">

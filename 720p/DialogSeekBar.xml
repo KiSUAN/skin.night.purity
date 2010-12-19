@@ -236,7 +236,7 @@
 			<aligny>center</aligny> 
 			<font>DejaVuSans_Bold_32</font>
 			<textcolor>mainblue</textcolor>
-			<visible>VideoPlayer.Content(movies)</visible>
+			<visible>!VideoPlayer.Content(episodes)</visible>
 		</control>
 		<control type="label">
 			<posx>0</posx>
@@ -275,7 +275,7 @@
 			<align>center</align>
 			<aligny>top</aligny>
 			<label>[B]$LOCALIZE[112][/B]</label>
-			<font>LiberationSans_Regular_28</font>
+			<font>LiberationSans_Regular_34</font>
 			<textcolor>playeractionshadow</textcolor>
 			<visible>player.paused</visible>
 		</control>
@@ -286,7 +286,7 @@
 			<align>center</align>
 			<aligny>top</aligny>
 			<label>[B]FFx2[/B]</label>
-			<font>LiberationSans_Regular_28</font>
+			<font>LiberationSans_Regular_34</font>
 			<textcolor>playeractionshadow</textcolor>
 			<visible>player.forwarding2x</visible>
 		</control>
@@ -297,7 +297,7 @@
 			<align>center</align>
 			<aligny>top</aligny>
 			<label>[B]FFx4[/B]</label>
-			<font>LiberationSans_Regular_28</font>
+			<font>LiberationSans_Regular_34</font>
 			<textcolor>playeractionshadow</textcolor>
 			<visible>player.forwarding4x</visible>
 		</control>
@@ -308,7 +308,7 @@
 			<align>center</align>
 			<aligny>top</aligny>
 			<label>[B]FFx8[/B]</label>
-			<font>LiberationSans_Regular_28</font>
+			<font>LiberationSans_Regular_34</font>
 			<textcolor>playeractionshadow</textcolor>
 			<visible>player.forwarding8x</visible>
 		</control>
@@ -319,7 +319,7 @@
 			<align>center</align>
 			<aligny>top</aligny>
 			<label>[B]FFx16[/B]</label>
-			<font>LiberationSans_Regular_28</font>
+			<font>LiberationSans_Regular_34</font>
 			<textcolor>playeractionshadow</textcolor>
 			<visible>player.forwarding16x</visible>
 		</control>
@@ -330,7 +330,7 @@
 			<align>center</align>
 			<aligny>top</aligny>
 			<label>[B]FFx32[/B]</label>
-			<font>LiberationSans_Regular_28</font>
+			<font>LiberationSans_Regular_34</font>
 			<textcolor>playeractionshadow</textcolor>
 			<visible>player.forwarding32x</visible>
 		</control>
@@ -341,7 +341,7 @@
 			<align>center</align>
 			<aligny>top</aligny>
 			<label>[B]RWx2[/B]</label>
-			<font>LiberationSans_Regular_28</font>
+			<font>LiberationSans_Regular_34</font>
 			<textcolor>playeractionshadow</textcolor>
 			<visible>player.rewinding2x</visible>
 		</control>
@@ -352,7 +352,7 @@
 			<align>center</align>
 			<aligny>top</aligny>
 			<label>[B]RWx4[/B]</label>
-			<font>LiberationSans_Regular_28</font>
+			<font>LiberationSans_Regular_34</font>
 			<textcolor>playeractionshadow</textcolor>
 			<visible>player.rewinding4x</visible>
 		</control>
@@ -363,7 +363,7 @@
 			<align>center</align>
 			<aligny>top</aligny>
 			<label>[B]RWx8[/B]</label>
-			<font>LiberationSans_Regular_28</font>
+			<font>LiberationSans_Regular_34</font>
 			<textcolor>playeractionshadow</textcolor>
 			<visible>player.rewinding8x</visible>
 		</control>
@@ -374,7 +374,7 @@
 			<align>center</align>
 			<aligny>top</aligny>
 			<label>[B]RWx16[/B]</label>
-			<font>LiberationSans_Regular_28</font>
+			<font>LiberationSans_Regular_34</font>
 			<textcolor>playeractionshadow</textcolor>
 			<visible>player.rewinding16x</visible>
 		</control>
@@ -385,7 +385,7 @@
 			<align>center</align>
 			<aligny>top</aligny>
 			<label>[B]RWx32[/B]</label>
-			<font>LiberationSans_Regular_28</font>
+			<font>LiberationSans_Regular_34</font>
 			<textcolor>playeractionshadow</textcolor>
 			<visible>player.rewinding32x</visible>
 		</control>

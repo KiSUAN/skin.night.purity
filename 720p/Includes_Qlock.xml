@@ -1,0 +1,3985 @@
+<includes>
+    <include name="WordQlock">
+	
+		<!-- 	Common to all	-->
+		
+		<!-- 		Intervall Controls 		-->
+	
+		<control type="label" id="10004">
+			<description>0-4</description>
+			<visible>substring(system.time(mm),00)|substring(system.time(mm),01)|substring(system.time(mm),02)|substring(system.time(mm),03)|substring(system.time(mm),04)</visible>
+		</control>
+		<control type="label" id="10009">
+			<description>5-9</description>
+			<visible>substring(system.time(mm),05)|substring(system.time(mm),06)|substring(system.time(mm),07)|substring(system.time(mm),08)|substring(system.time(mm),09)</visible>
+		</control>
+		<control type="label" id="10014">
+			<description>10-14</description>
+			<visible>substring(system.time(mm),10)|substring(system.time(mm),11)|substring(system.time(mm),12)|substring(system.time(mm),13)|substring(system.time(mm),14)</visible>
+		</control>
+		<control type="label" id="10019">
+			<description>15-19</description>
+			<visible>substring(system.time(mm),15)|substring(system.time(mm),16)|substring(system.time(mm),17)|substring(system.time(mm),18)|substring(system.time(mm),19)</visible>
+		</control>
+		<control type="label" id="10024">
+			<description>20-24</description>
+			<visible>substring(system.time(mm),20)|substring(system.time(mm),21)|substring(system.time(mm),22)|substring(system.time(mm),23)|substring(system.time(mm),24)</visible>
+		</control>
+		<control type="label" id="10029">
+			<description>25-29</description>
+			<visible>substring(system.time(mm),25)|substring(system.time(mm),26)|substring(system.time(mm),27)|substring(system.time(mm),28)|substring(system.time(mm),29)</visible>
+		</control>
+		<control type="label" id="10034">
+			<description>30-34</description>
+			<visible>substring(system.time(mm),30)|substring(system.time(mm),31)|substring(system.time(mm),32)|substring(system.time(mm),33)|substring(system.time(mm),34)</visible>
+		</control>
+		<control type="label" id="10039">
+			<description>35-39</description>
+			<visible>substring(system.time(mm),35)|substring(system.time(mm),36)|substring(system.time(mm),37)|substring(system.time(mm),38)|substring(system.time(mm),39)</visible>
+		</control>
+		<control type="label" id="10044">
+			<description>40-44</description>
+			<visible>substring(system.time(mm),40)|substring(system.time(mm),41)|substring(system.time(mm),42)|substring(system.time(mm),43)|substring(system.time(mm),44)</visible>
+		</control>
+		<control type="label" id="10049">
+			<description>45-49</description>
+			<visible>substring(system.time(mm),45)|substring(system.time(mm),46)|substring(system.time(mm),47)|substring(system.time(mm),48)|substring(system.time(mm),49)</visible>
+		</control>
+		<control type="label" id="10054">
+			<description>50-54</description>
+			<visible>substring(system.time(mm),50)|substring(system.time(mm),51)|substring(system.time(mm),52)|substring(system.time(mm),53)|substring(system.time(mm),54)</visible>
+		</control>
+		<control type="label" id="10059">
+			<description>55-59</description>
+			<visible>substring(system.time(mm),55)|substring(system.time(mm),56)|substring(system.time(mm),57)|substring(system.time(mm),58)|substring(system.time(mm),59)</visible>
+		</control>
+	
+		<!--	GERMAN		-->
+	
+		<control type="group" id="10">
+		<visible>Skin.HasSetting(home_qlock) + SubString(System.Language,German) + [Control.HasFocus(300)|  Skin.HasSetting(horizontal_bottom_align)]</visible>
+		<posy>30</posy>
+		<animation effect="slide" end="330,70" time="0" condition="Control.HasFocus(300)">Conditional</animation>
+			
+			<!--		Minutes		-->
+			
+			<control type="label" id="10005">
+				<description>fünf</description>
+				<visible>Control.isVisible(10009)|Control.isVisible(10029)|Control.isVisible(10039)|Control.isVisible(10059)</visible>
+			</control>
+			<control type="label" id="10010">
+				<description>zehn</description>
+				<visible>Control.isVisible(10014)|Control.isVisible(10054)</visible>
+			</control>
+			<control type="label"  id="10015">
+				<description>viertel</description>
+				<visible>Control.isVisible(10019)|Control.isVisible(10049)</visible>
+			</control>
+			<control type="label"  id="10020">
+				<description>zwanzig</description>
+				<visible>Control.isVisible(10024)|Control.isVisible(10044)</visible>
+			</control>
+			<control type="label" id="10030">
+				<description>halb</description>
+				<visible>Control.isVisible(10029)|Control.isVisible(10034)|Control.isVisible(10039)</visible>
+			</control>
+			<control type="label" id="10103">
+				<description>nach4</description>
+				<visible>Control.isVisible(10009)|Control.isVisible(10014)|Control.isVisible(10019)|Control.isVisible(10024)|Control.isVisible(10039)</visible>
+			</control>
+			<control type="label" id="10104">
+				<description>vor4</description>
+				<visible>Control.isVisible(10049)|Control.isVisible(10044)|Control.isVisible(10029)|Control.isVisible(10054)|Control.isVisible(10059)</visible>
+			</control>
+			<control type="label" id="10102">
+				<description>Uhr</description>
+				<visible>Control.isVisible(10004) + !System.Time(01:00,01:05)</visible>
+			</control>
+			<control type="label" id="10110">
+				<description>Clock ON Minute1</description>
+				<visible>substring(system.time(mm),01)|substring(system.time(mm),06)|substring(system.time(mm),11)|substring(system.time(mm),16)|substring(system.time(mm),21)|substring(system.time(mm),26)|substring(system.time(mm),31)|substring(system.time(mm),36)|substring(system.time(mm),41)|substring(system.time(mm),46)|substring(system.time(mm),51)|substring(system.time(mm),56)|Control.isVisible(10111)</visible>
+			</control>
+			<control type="label" id="10111">
+				<description>Clock ON Minute2</description>
+				<visible>substring(system.time(mm),02)|substring(system.time(mm),07)|substring(system.time(mm),12)|substring(system.time(mm),17)|substring(system.time(mm),22)|substring(system.time(mm),27)|substring(system.time(mm),32)|substring(system.time(mm),37)|substring(system.time(mm),42)|substring(system.time(mm),47)|substring(system.time(mm),52)|substring(system.time(mm),57)|Control.isVisible(10112)</visible>
+			</control>
+			<control type="label" id="10112">
+				<description>Clock ON Minute3</description>
+				<visible>substring(system.time(mm),03)|substring(system.time(mm),08)|substring(system.time(mm),13)|substring(system.time(mm),18)|substring(system.time(mm),23)|substring(system.time(mm),28)|substring(system.time(mm),33)|substring(system.time(mm),38)|substring(system.time(mm),43)|substring(system.time(mm),48)|substring(system.time(mm),53)|substring(system.time(mm),58)|Control.isVisible(10113)</visible>
+			</control>
+			<control type="label" id="10113">
+				<description>Clock ON Minute4</description>
+				<visible>substring(system.time(mm),04)|substring(system.time(mm),09)|substring(system.time(mm),14)|substring(system.time(mm),19)|substring(system.time(mm),24)|substring(system.time(mm),29)|substring(system.time(mm),34)|substring(system.time(mm),39)|substring(system.time(mm),44)|substring(system.time(mm),49)|substring(system.time(mm),54)|substring(system.time(mm),59)</visible>
+			</control>
+			
+			<!--		Hours		-->
+			
+			<control type="label" id="10201">
+				<description>Eins</description>
+				<visible>System.Time(00:25,01:25)|System.Time(12:25,13:25)</visible>
+			</control>
+			<control type="label" id="10202">
+				<description>Zwei</description>
+				<visible>System.Time(01:25,02:25)|System.Time(13:25,14:25)</visible>
+			</control>
+			 
+			<control type="label" id="10203">
+				<description>Drei</description>
+				<visible>System.Time(02:25,03:25)|System.Time(14:25,15:25)</visible>
+			</control>
+			 
+			<control type="label" id="10204">
+				<description>Vier</description>
+				<visible>System.Time(03:25,04:25)|System.Time(15:25,16:25)</visible>
+			</control>
+			 
+			<control type="label" id="10205">
+				<description>Fünf</description>
+				<visible>System.Time(04:25,05:25)|System.Time(16:25,17:25)</visible>
+			</control>
+			 
+			<control type="label" id="10206">
+				<description>Sechs</description>
+				<visible>System.Time(05:25,06:25)|System.Time(17:25,18:25)</visible>
+			</control>
+			 
+			<control type="label" id="10207">
+				<description>Sieben</description>
+				<visible>System.Time(06:25,07:25)|System.Time(18:25,19:25)</visible>
+			</control>
+			 
+			<control type="label" id="10208">
+				<description>Acht</description>
+				<visible>System.Time(07:25,08:25)|System.Time(19:25,20:25)</visible>
+			</control>
+			 
+			<control type="label" id="10209">
+				<description>Neun</description>
+				<visible>System.Time(08:25,09:25)|System.Time(20:25,21:25)</visible>
+			</control>
+			 
+			<control type="label" id="10210">
+				<description>Zehn</description>
+				<visible>System.Time(09:25,10:25)|System.Time(21:25,22:25)</visible>
+			</control>
+			 
+			<control type="label" id="10211">
+				<description>Elf</description>
+				<visible>System.Time(10:25,11:25)|System.Time(22:25,23:25)</visible>
+			</control>
+			 
+			<control type="label" id="10212">
+				<description>Zwölf</description>
+				<visible>System.Time(11:25,12:25)|System.Time(23:25,00:25)</visible>
+			</control>
+			
+			<!-- 		Clock Position		-->
+			
+			<control type="group" id="50">
+				<posx>375</posx>
+				<posy>50</posy>
+				<width>600</width>
+				<height>450</height>
+				
+				<!-- OFF ALL ROW 1-->
+				
+				<control type="grouplist" id="50">
+					<orientation>horizontal</orientation>
+					<width>600</width>
+					<height>450</height>
+					<itemgap>12</itemgap>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>E</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>S</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>K</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>I</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>S</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>T</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>A</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>F</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>Ü</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>N</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>F</label>
+					</control>						
+				</control>
+				
+				<!-- OFF ALL ROW 2 -->
+				
+				<control type="grouplist" id="50">
+					<orientation>horizontal</orientation>
+					<posy>45</posy>
+					<width>600</width>
+					<height>450</height>
+					<itemgap>12</itemgap>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>Z</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>E</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>H</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>N</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>Z</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>W</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>A</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>N</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>Z</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>I</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>G</label>
+					</control>						
+				</control>
+				
+				<!-- OFF ALL ROW 3-->
+				
+				<control type="grouplist" id="50">
+					<orientation>horizontal</orientation>
+					<posy>90</posy>
+					<width>600</width>
+					<height>450</height>
+					<itemgap>12</itemgap>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>V</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>I</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>E</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>R</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>T</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>E</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>L</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>X</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>V</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>O</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>R</label>
+					</control>						
+				</control>
+				
+				<!-- OFF ALL ROW 4-->
+				
+				<control type="grouplist" id="50">
+					<orientation>horizontal</orientation>
+					<posy>135</posy>
+					<width>600</width>
+					<height>450</height>
+					<itemgap>12</itemgap>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>N</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>A</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>C</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>H</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>A</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>J</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>U</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>H</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>A</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>L</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>B</label>
+					</control>						
+				</control>
+				
+				<!-- OFF ALL ROW 5-->
+				
+				<control type="grouplist" id="50">
+					<orientation>horizontal</orientation>
+					<posy>180</posy>
+					<width>600</width>
+					<height>450</height>
+					<itemgap>12</itemgap>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>E</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>I</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>N</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>S</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>L</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>M</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>E</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>Z</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>W</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>E</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>I</label>
+					</control>						
+				</control>
+				
+				<!-- OFF ALL ROW 6-->
+				
+				<control type="grouplist" id="50">
+					<orientation>horizontal</orientation>
+					<posy>225</posy>
+					<width>600</width>
+					<height>450</height>
+					<itemgap>12</itemgap>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>D</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>R</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>E</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>I</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>A</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>U</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>J</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>V</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>I</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>E</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>R</label>
+					</control>						
+				</control>
+				
+				<!-- OFF ALL ROW 7-->
+				
+				<control type="grouplist" id="50">
+					<orientation>horizontal</orientation>
+					<posy>270</posy>
+					<width>600</width>
+					<height>450</height>
+					<itemgap>12</itemgap>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>F</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>Ü</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>N</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>F</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>T</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>O</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>S</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>E</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>C</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>H</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>S</label>
+					</control>						
+				</control>
+				
+				<!-- OFF ALL ROW 8-->
+				
+				<control type="grouplist" id="50">
+					<orientation>horizontal</orientation>
+					<posy>315</posy>
+					<width>600</width>
+					<height>450</height>
+					<itemgap>12</itemgap>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>S</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>I</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>E</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>B</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>E</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>N</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>L</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>A</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>C</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>H</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>T</label>
+					</control>						
+				</control>
+				
+				<!-- OFF ALL ROW 9-->
+				
+				<control type="grouplist" id="50">
+					<orientation>horizontal</orientation>
+					<posy>360</posy>
+					<width>600</width>
+					<height>450</height>
+					<itemgap>12</itemgap>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>N</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>E</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>U</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>N</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>Z</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>E</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>H</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>N</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>E</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>L</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>F</label>
+					</control>						
+				</control>
+				
+				<!-- OFF ALL ROW 10-->
+				
+				<control type="grouplist" id="50">
+					<orientation>horizontal</orientation>
+					<posy>405</posy>
+					<width>600</width>
+					<height>450</height>
+					<itemgap>12</itemgap>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>Z</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>W</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>Ö</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>L</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>F</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>U</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>N</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>K</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>U</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>H</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>R</label>
+					</control>						
+				</control>
+				
+				<!-- ON GROUPS -->
+				<!-- E S ON ROW 1-->
+				
+				<control type="grouplist" id="50">
+					<visible>true</visible>
+					<orientation>horizontal</orientation>
+					<width>600</width>
+					<height>450</height>
+					<itemgap>12</itemgap>
+					<control type="label">
+						<width>37</width> 
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>E</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>S</label>
+					</control>
+				</control>
+				
+				<!-- I S T ON ROW 1-->
+				
+				<control type="grouplist" id="50">
+					<orientation>horizontal</orientation>
+					<width>600</width>
+					<height>450</height>
+					<posx>147</posx>
+					<itemgap>12</itemgap>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>I</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>S</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>T</label>
+					</control>
+					<visible>true</visible>
+				</control>
+				
+				<!-- F Ü N F ON ROW 1-->
+				
+				<control type="grouplist" id="50">
+					<orientation>horizontal</orientation>
+					<posx>343</posx>
+					<width>600</width>
+					<height>450</height>
+					<itemgap>12</itemgap>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>	
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>F</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>Ü</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>N</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>F</label>
+					</control>						
+					<visible>Control.isVisible(10005)</visible>	
+				</control>
+				
+				<!-- Z E H N ON ROW 2-->
+				
+				<control type="grouplist" id="50">
+					<orientation>horizontal</orientation>
+					<posy>45</posy>
+					<width>600</width>
+					<height>450</height>
+					<itemgap>12</itemgap>
+					<control type="label">
+						<width>37</width>     
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>Z</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>E</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>H</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>N</label>
+					</control>
+					<visible>Control.isVisible(10010)</visible>
+				</control>
+					
+				<!-- Z W A N Z I G ON ROW 2-->
+				
+				<control type="grouplist" id="50">
+					<orientation>horizontal</orientation>
+					<posy>45</posy>
+					<width>600</width>
+					<height>450</height>
+					<itemgap>12</itemgap>
+					<posx>196</posx>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>Z</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>W</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>A</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>N</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>Z</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>I</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>G</label>
+					</control>						
+					<visible>Control.isVisible(10020)</visible>	
+				</control>
+				
+				<!-- V O R ON ROW 3-->
+				
+				<control type="grouplist" id="50">
+					<orientation>horizontal</orientation>
+					<posy>90</posy>
+					<posx>391</posx>
+					<width>600</width>
+					<height>450</height>
+					<itemgap>12</itemgap>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>V</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>O</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>R</label>
+					</control>
+					<visible>Control.isVisible(10104)</visible>		
+				</control>
+				
+				<!-- V I E R T E L ON ROW 3-->
+				
+				<control type="grouplist" id="50">
+					<orientation>horizontal</orientation>
+					<posy>90</posy>
+					<width>600</width>
+					<height>450</height>
+					<itemgap>12</itemgap>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>V</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>I</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>E</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>R</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>T</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>E</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>L</label>
+					</control>
+					<visible>Control.isVisible(10015)</visible>
+				</control>
+				
+				<!-- N A C H ON ROW 4-->
+				
+				<control type="grouplist" id="50">
+					<orientation>horizontal</orientation>
+					<posy>135</posy>
+					<width>600</width>
+					<height>450</height>
+					<itemgap>12</itemgap>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>N</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>A</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>C</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>H</label>
+					</control>
+					<visible>Control.isVisible(10103)</visible>
+				</control>
+				
+				<!-- H A L B ON ROW 4-->
+				
+				<control type="grouplist" id="50">
+					<orientation>horizontal</orientation>
+					<posy>135</posy>
+					<posx>343</posx>
+					<width>600</width>
+					<height>450</height>
+					<itemgap>12</itemgap>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>H</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>A</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>L</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>B</label>
+					</control>
+					<visible>Control.isVisible(10030)</visible>		
+				</control>
+				
+				<!-- E I N S ON ROW 5-->
+				
+				<control type="grouplist" id="50">
+					<orientation>horizontal</orientation>
+					<posy>180</posy>
+					<width>600</width>
+					<height>450</height>
+					<itemgap>12</itemgap>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>E</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>I</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>N</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>S</label>
+					</control>
+					<visible>Control.isVisible(10201)</visible>
+				</control>
+				
+				<!-- Z W E I ALL ROW 5-->
+				
+				<control type="grouplist" id="50">
+					<orientation>horizontal</orientation>
+					<posy>180</posy>
+					<posx>343</posx>
+					<width>600</width>
+					<height>450</height>
+					<itemgap>12</itemgap>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>Z</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>W</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>E</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>I</label>
+					</control>						
+					<visible>Control.isVisible(10202)</visible>
+				</control>
+				
+				<!-- D R E I ON ROW 6-->
+				
+				<control type="grouplist" id="50">
+					<orientation>horizontal</orientation>
+					<posy>225</posy>
+					<width>600</width>
+					<height>450</height>
+					<itemgap>12</itemgap>
+					<control type="label">
+						<width>37</width>     
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>D</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>	
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>R</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>	
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>E</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>		
+						<textcolor>Qlockfocus</textcolor>	
+						<align>center</align>
+						<label>I</label>
+					</control>
+					<visible>Control.isVisible(10203)</visible>
+				</control>
+				
+				<!-- V I E R ON ROW 6-->
+				
+				<control type="grouplist" id="50">
+					<orientation>horizontal</orientation>
+					<posy>225</posy>
+					<posx>343</posx>
+					<width>600</width>
+					<height>450</height>
+					<itemgap>12</itemgap>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>V</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>		
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>I</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>E</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>R</label>
+					</control>
+					<visible>Control.isVisible(10204)</visible>		
+				</control>
+				
+				<!-- F Ü N F ON ROW 7-->
+				
+				<control type="grouplist" id="50">
+					<orientation>horizontal</orientation>
+					<posy>270</posy>
+					<width>600</width>
+					<height>450</height>
+					<itemgap>12</itemgap>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>F</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>	
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>Ü</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>N</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>F</label>
+					</control>
+					<visible>Control.isVisible(10205)</visible>
+				</control>
+				
+				<!-- S E C H S ON ROW 7-->
+				
+				<control type="grouplist" id="50">
+					<orientation>horizontal</orientation>
+					<posy>270</posy>
+					<posx>293</posx>
+					<width>600</width>
+					<height>450</height>
+					<itemgap>12</itemgap>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>		
+						<textcolor>Qlockfocus</textcolor>	
+						<align>center</align>
+						<label>S</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>E</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>C</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>H</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>S</label>
+					</control>						
+					<visible>Control.isVisible(10206)</visible>	
+				</control>
+				
+				<!-- S I E B E N ON ROW 8-->
+				
+				<control type="grouplist" id="50">
+					<orientation>horizontal</orientation>
+					<posy>315</posy>
+					<width>600</width>
+					<height>450</height>
+					<itemgap>12</itemgap>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>S</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>	
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>I</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>E</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>B</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>E</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>N</label>
+					</control>
+					<visible>Control.isVisible(10207)</visible>
+				</control>
+				
+				<!-- A C H T ON ROW 8-->
+				
+				<control type="grouplist" id="50">
+					<orientation>horizontal</orientation>
+					<posy>315</posy>
+					<posx>343</posx>
+					<width>600</width>
+					<height>450</height>
+					<itemgap>12</itemgap>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>		
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>A</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>		
+						<textcolor>Qlockfocus</textcolor>	
+						<align>center</align>
+						<label>C</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>H</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>T</label>
+					</control>						
+					<visible>Control.isVisible(10208)</visible>	
+				</control>
+				
+				<!-- N E U N ON	ROW 9-->
+				
+				<control type="grouplist" id="50">
+					<orientation>horizontal</orientation>
+					<posy>360</posy>
+					<width>600</width>
+					<height>450</height>
+					<itemgap>12</itemgap>
+					<control type="label">
+						<width>37</width>      
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>N</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>	
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>E</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>U</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>	
+						<textcolor>Qlockfocus</textcolor>		
+						<align>center</align>
+						<label>N</label>
+					</control>
+					<visible>Control.isVisible(10209)</visible>
+				</control>
+				
+				<!-- Z E H N ON ROW 9-->
+				
+				<control type="grouplist" id="50">
+					<orientation>horizontal</orientation>
+					<posy>360</posy>
+					<posx>195</posx>
+					<width>600</width>
+					<height>450</height>
+					<itemgap>12</itemgap>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>	
+						<textcolor>Qlockfocus</textcolor>		
+						<align>center</align>
+						<label>Z</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>E</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>H</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>N</label>
+					</control>
+					<visible>Control.isVisible(10210)</visible>
+				</control>
+				
+				<!-- E L F ON ROW 9-->
+				
+				<control type="grouplist" id="50">
+					<orientation>horizontal</orientation>
+					<posy>360</posy>
+					<posx>391</posx>
+					<width>600</width>
+					<height>450</height>
+					<itemgap>12</itemgap>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>	
+						<textcolor>Qlockfocus</textcolor>		
+						<align>center</align>
+						<label>E</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>L</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>F</label>
+					</control>						
+					<visible>Control.isVisible(10211)</visible>	
+				</control>
+				
+				<!-- Z W Ö L ON ROW 10-->
+				
+				<control type="grouplist" id="50">
+					<orientation>horizontal</orientation>
+					<posy>405</posy>
+					<width>600</width>
+					<height>450</height>
+					<itemgap>12</itemgap>
+					<control type="label">
+						<width>37</width>      
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>Z</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>W</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>		
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>Ö</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>L</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>F</label>
+					</control>
+					<visible>Control.isVisible(10212)</visible>
+				</control>
+				
+				<!-- U H R ON ROW 10-->
+				
+				<control type="grouplist" id="50">
+					<orientation>horizontal</orientation>
+					<posy>405</posy>
+					<posx>391</posx>
+					<width>600</width>
+					<height>450</height>
+					<itemgap>12</itemgap>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>U</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>	
+						<textcolor>Qlockfocus</textcolor>		
+						<align>center</align>
+						<label>H</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>R</label>
+					</control>						
+					<visible>Control.isVisible(10102)</visible>
+				</control>
+			</control>
+			
+			<!--	Minutes		-->
+			
+			<control type="label">
+				<description>Clock ON Minute1</description>
+				<posx>357</posx>
+				<posy>27</posy>
+				<label>•</label>
+				<font>LiberationSans_Regular_24</font>
+				<textcolor>Qlockfocus</textcolor>
+				<visible>Control.isVisible(10110)</visible>
+			</control>
+			<control type="label">
+				<description>Clock ON Minute2</description>
+				<posx>912</posx>
+				<posy>27</posy>
+				<label>•</label>
+				<font>LiberationSans_Regular_24</font>
+				<textcolor>Qlockfocus</textcolor>
+				<visible>Control.isVisible(10111)</visible>
+			</control>
+			
+			<control type="label">
+				<description>Clock ON Minute3</description>
+				<posx>912</posx>
+				<posy>487</posy>
+				<label>•</label>
+				<font>LiberationSans_Regular_24</font>
+				<textcolor>Qlockfocus</textcolor>
+				<visible>Control.isVisible(10112)</visible>
+			</control>
+			<control type="label">
+				<description>Clock ON Minute4</description>
+				<posx>357</posx>
+				<posy>487</posy>
+				<label>•</label>
+				<font>LiberationSans_Regular_24</font>
+				<textcolor>Qlockfocus</textcolor>
+				<visible>Control.isVisible(10113)</visible>
+			</control>
+			<control type="label">
+				<description>Clock OFF Minute1</description>
+				<posx>355</posx>
+				<posy>30</posy>
+				<label>°</label>
+				<font>LiberationSans_Regular_30</font>
+				<textcolor>Qlocknofocus</textcolor>
+			</control>
+			<control type="label">
+				<description>Clock OFF  Minute2</description>
+				<posx>910</posx>
+				<posy>30</posy>
+				<label>°</label>
+				<font>LiberationSans_Regular_30</font>
+				<textcolor>Qlocknofocus</textcolor>
+			</control>
+			<control type="label">
+				<description>Clock  OFF Minute3</description>
+				<posx>355</posx>
+				<posy>490</posy>
+				<label>°</label>
+				<font>LiberationSans_Regular_30</font>
+				<textcolor>Qlocknofocus</textcolor>
+			</control>
+			<control type="label">
+				<description>Clock OFF  Minute4</description>
+				<posx>910</posx>
+				<posy>490</posy>
+				<font>LiberationSans_Regular_30</font>
+				<textcolor>Qlocknofocus</textcolor>
+				<label>°</label>
+			</control>
+		</control>
+		
+		<!-- 	ENGLISH		-->
+		
+		<control type="group" id="20">
+		<visible>Skin.HasSetting(home_qlock) + SubString(System.Language,English) + [Control.HasFocus(300)|  Skin.HasSetting(horizontal_bottom_align)]</visible>
+		<posy>30</posy>
+		<animation effect="slide" end="250,70" time="0" condition="Control.HasFocus(300)">Conditional</animation>
+					
+			<!--		Minutes		-->
+			
+			<control type="label" id="20005">
+				<description>Five</description>
+				<visible>Control.isVisible(10009)|Control.isVisible(10029)|Control.isVisible(10039)|Control.isVisible(10059)</visible>
+			</control>
+			<control type="label" id="20010">
+				<description>Ten</description>
+				<visible>Control.isVisible(10014)|Control.isVisible(10054)</visible>
+			</control>
+			<control type="label"  id="20015">
+				<description>Quarter</description>
+				<visible>Control.isVisible(10019)|Control.isVisible(10049)</visible>
+			</control>
+			<control type="label"  id="20020">
+				<description>Twenty</description>
+				<visible>Control.isVisible(10024)|Control.isVisible(10029)|Control.isVisible(10039)|Control.isVisible(10044)</visible>
+			</control>
+			<control type="label" id="20030">
+				<description>Half</description>
+				<visible>Control.isVisible(10034)</visible>
+			</control>
+			<control type="label" id="20103">
+				<description>Past4</description>
+				<visible>Control.isVisible(10009)|Control.isVisible(10014)|Control.isVisible(10019)|Control.isVisible(10024)|Control.isVisible(10029)|Control.isVisible(10034)</visible>
+			</control>
+			<control type="label" id="20104">
+				<description>To4</description>
+				<visible>Control.isVisible(10039)|Control.isVisible(10044)|Control.isVisible(10049)|Control.isVisible(10054)|Control.isVisible(10059)</visible>
+			</control>
+			<control type="label" id="20102">
+				<description>O´clock</description>
+				<visible>Control.isVisible(10004) + !System.Time(01:00,01:05)</visible>
+			</control>
+			<control type="label" id="20110">
+				<description>Clock ON Minute1</description>
+				<visible>substring(system.time(mm),01)|substring(system.time(mm),06)|substring(system.time(mm),11)|substring(system.time(mm),16)|substring(system.time(mm),21)|substring(system.time(mm),26)|substring(system.time(mm),31)|substring(system.time(mm),36)|substring(system.time(mm),41)|substring(system.time(mm),46)|substring(system.time(mm),51)|substring(system.time(mm),56)|Control.isVisible(10111)</visible>
+			</control>
+			<control type="label" id="20111">
+				<description>Clock ON Minute2</description>
+				<visible>substring(system.time(mm),02)|substring(system.time(mm),07)|substring(system.time(mm),12)|substring(system.time(mm),17)|substring(system.time(mm),22)|substring(system.time(mm),27)|substring(system.time(mm),32)|substring(system.time(mm),37)|substring(system.time(mm),42)|substring(system.time(mm),47)|substring(system.time(mm),52)|substring(system.time(mm),57)|Control.isVisible(10112)</visible>
+			</control>
+			<control type="label" id="20112">
+				<description>Clock ON Minute3</description>
+				<visible>substring(system.time(mm),03)|substring(system.time(mm),08)|substring(system.time(mm),13)|substring(system.time(mm),18)|substring(system.time(mm),23)|substring(system.time(mm),28)|substring(system.time(mm),33)|substring(system.time(mm),38)|substring(system.time(mm),43)|substring(system.time(mm),48)|substring(system.time(mm),53)|substring(system.time(mm),58)|Control.isVisible(10113)</visible>
+			</control>
+			<control type="label" id="20113">
+				<description>Clock ON Minute4</description>
+				<visible>substring(system.time(mm),04)|substring(system.time(mm),09)|substring(system.time(mm),14)|substring(system.time(mm),19)|substring(system.time(mm),24)|substring(system.time(mm),29)|substring(system.time(mm),34)|substring(system.time(mm),39)|substring(system.time(mm),44)|substring(system.time(mm),49)|substring(system.time(mm),54)|substring(system.time(mm),59)</visible>
+			</control>
+			
+			<!--		Hours		-->
+			
+			<control type="label" id="20201">
+				<description>One</description>
+				<visible>System.Time(00:35,01:35)|System.Time(12:35,13:35)</visible>
+			</control>
+			<control type="label" id="20202">
+				<description>Two</description>
+				<visible>System.Time(01:35,02:35)|System.Time(13:35,14:35)</visible>
+			</control>
+			 
+			<control type="label" id="20203">
+				<description>Three</description>
+				<visible>System.Time(02:35,03:35)|System.Time(14:35,15:35)</visible>
+			</control>
+			 
+			<control type="label" id="20204">
+				<description>Four</description>
+				<visible>System.Time(03:35,04:35)|System.Time(15:35,16:35)</visible>
+			</control>
+			 
+			<control type="label" id="20205">
+				<description>Five</description>
+				<visible>System.Time(04:35,05:35)|System.Time(16:35,17:35)</visible>
+			</control>
+			 
+			<control type="label" id="20206">
+				<description>Six</description>
+				<visible>System.Time(05:35,06:35)|System.Time(17:35,18:35)</visible>
+			</control>
+			 
+			<control type="label" id="20207">
+				<description>Seven</description>
+				<visible>System.Time(06:35,07:35)|System.Time(18:35,19:35)</visible>
+			</control>
+			 
+			<control type="label" id="20208">
+				<description>Eight</description>
+				<visible>System.Time(07:35,08:35)|System.Time(19:35,20:35)</visible>
+			</control>
+			 
+			<control type="label" id="20209">
+				<description>Nine</description>
+				<visible>System.Time(08:35,09:35)|System.Time(20:35,21:35)</visible>
+			</control>
+			 
+			<control type="label" id="20210">
+				<description>Ten</description>
+				<visible>System.Time(09:35,10:35)|System.Time(21:35,22:35)</visible>
+			</control>
+			 
+			<control type="label" id="20211">
+				<description>Eleven</description>
+				<visible>System.Time(10:35,11:35)|System.Time(22:35,23:35)</visible>
+			</control>
+			 
+			<control type="label" id="20212">
+				<description>Twelve</description>
+				<visible>System.Time(11:35,12:35)|System.Time(23:35,00:35)</visible>
+			</control>
+			
+			<!-- 		Clock Position		-->
+			
+			<control type="group" id="50">
+				<posx>375</posx>
+				<posy>50</posy>
+				<width>600</width>
+				<height>450</height>
+				
+				<!-- OFF ALL ROW 1-->
+				
+				<control type="grouplist" id="50">
+					<orientation>horizontal</orientation>
+					<width>600</width>
+					<height>450</height>
+					<itemgap>12</itemgap>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>I</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>T</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>L</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>I</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>S</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>A</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>S</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>T</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>I</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>M</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>E</label>
+					</control>						
+				</control>
+				
+				<!-- OFF ALL ROW 2 -->
+				
+				<control type="grouplist" id="50">
+					<orientation>horizontal</orientation>
+					<posy>45</posy>
+					<width>600</width>
+					<height>450</height>
+					<itemgap>12</itemgap>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>A</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>C</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>Q</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>U</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>A</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>R</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>T</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>E</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>R</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>D</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>C</label>
+					</control>						
+				</control>
+				
+				<!-- OFF ALL ROW 3-->
+				
+				<control type="grouplist" id="50">
+					<orientation>horizontal</orientation>
+					<posy>90</posy>
+					<width>600</width>
+					<height>450</height>
+					<itemgap>12</itemgap>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>T</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>W</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>E</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>N</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>T</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>Y</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>F</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>I</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>V</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>E</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>X</label>
+					</control>						
+				</control>
+				
+				<!-- OFF ALL ROW 4-->
+				
+				<control type="grouplist" id="50">
+					<orientation>horizontal</orientation>
+					<posy>135</posy>
+					<width>600</width>
+					<height>450</height>
+					<itemgap>12</itemgap>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>H</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>A</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>L</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>F</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>B</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>T</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>E</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>N</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>F</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>T</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>O</label>
+					</control>						
+				</control>
+				
+				<!-- OFF ALL ROW 5-->
+				
+				<control type="grouplist" id="50">
+					<orientation>horizontal</orientation>
+					<posy>180</posy>
+					<width>600</width>
+					<height>450</height>
+					<itemgap>12</itemgap>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>P</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>A</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>S</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>T</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>E</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>R</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>U</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>N</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>I</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>N</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>E</label>
+					</control>						
+				</control>
+				
+				<!-- OFF ALL ROW 6-->
+				
+				<control type="grouplist" id="50">
+					<orientation>horizontal</orientation>
+					<posy>225</posy>
+					<width>600</width>
+					<height>450</height>
+					<itemgap>12</itemgap>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>O</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>N</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>E</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>S</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>I</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>X</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>T</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>H</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>R</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>E</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>E</label>
+					</control>						
+				</control>
+				
+				<!-- OFF ALL ROW 7-->
+				
+				<control type="grouplist" id="50">
+					<orientation>horizontal</orientation>
+					<posy>270</posy>
+					<width>600</width>
+					<height>450</height>
+					<itemgap>12</itemgap>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>F</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>O</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>U</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>R</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>F</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>I</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>V</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>E</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>T</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>W</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>O</label>
+					</control>						
+				</control>
+				
+				<!-- OFF ALL ROW 8-->
+				
+				<control type="grouplist" id="50">
+					<orientation>horizontal</orientation>
+					<posy>315</posy>
+					<width>600</width>
+					<height>450</height>
+					<itemgap>12</itemgap>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>E</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>I</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>G</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>H</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>T</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>E</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>L</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>E</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>V</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>E</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>N</label>
+					</control>						
+				</control>
+				
+				<!-- OFF ALL ROW 9-->
+				
+				<control type="grouplist" id="50">
+					<orientation>horizontal</orientation>
+					<posy>360</posy>
+					<width>600</width>
+					<height>450</height>
+					<itemgap>12</itemgap>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>S</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>E</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>V</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>E</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>N</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>T</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>W</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>E</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>L</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>V</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>E</label>
+					</control>						
+				</control>
+				
+				<!-- OFF ALL ROW 10-->
+				
+				<control type="grouplist" id="50">
+					<orientation>horizontal</orientation>
+					<posy>405</posy>
+					<width>600</width>
+					<height>450</height>
+					<itemgap>12</itemgap>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>T</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>E</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>N</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>S</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>E</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>right</align>
+						<label>O´</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>C</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>L</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>O</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>C</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>K</label>
+					</control>						
+				</control>
+				
+				<!-- ON GROUPS -->
+				<!-- I T ON ROW 1-->
+				
+				<control type="grouplist" id="50">
+					<visible>true</visible>
+					<orientation>horizontal</orientation>
+					<width>600</width>
+					<height>450</height>
+					<itemgap>12</itemgap>
+					<control type="label">
+						<width>37</width> 
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>I</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>T</label>
+					</control>
+					<visible>true</visible>
+				</control>
+				
+				<!-- I S ON ROW 1-->
+				
+				<control type="grouplist" id="50">
+					<orientation>horizontal</orientation>
+					<posx>147</posx>
+					<width>600</width>
+					<height>450</height>
+					<itemgap>12</itemgap>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>I</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>S</label>
+					</control>
+					<visible>true</visible>
+				</control>
+				
+				<!-- Q U A R T E R ON ROW 2-->
+				
+				<control type="grouplist" id="50">
+					<orientation>horizontal</orientation>
+					<posy>45</posy>
+					<posx>98</posx>
+					<width>600</width>
+					<height>450</height>
+					<itemgap>12</itemgap>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>Q</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>U</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>A</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>R</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>T</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>E</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>R</label>
+					</control>
+					<visible>Control.isVisible(20015)</visible>
+				</control>
+					
+				<!-- T W E N T Y ON ROW 3-->
+				
+				<control type="grouplist" id="50">
+					<orientation>horizontal</orientation>
+					<posy>90</posy>
+					<width>600</width>
+					<height>450</height>
+					<itemgap>12</itemgap>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>T</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>W</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>E</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>N</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>T</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>Y</label>
+					</control>					
+					<visible>Control.isVisible(20020)</visible>	
+				</control>
+				
+				<!-- F I V E ON ROW 3-->
+				
+				<control type="grouplist" id="50">
+					<orientation>horizontal</orientation>
+					<posy>90</posy>
+					<posx>294</posx>
+					<width>600</width>
+					<height>450</height>
+					<itemgap>12</itemgap>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>	
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>F</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>I</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>V</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>E</label>
+					</control>
+					<visible>Control.isVisible(20005)</visible>	
+				</control>
+				
+				<!-- H A L F ON ROW 4-->
+				
+				<control type="grouplist" id="50">
+					<orientation>horizontal</orientation>
+					<posy>135</posy>
+					<width>600</width>
+					<height>450</height>
+					<itemgap>12</itemgap>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>H</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>A</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>L</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>F</label>
+					</control>
+					<visible>Control.isVisible(20030)</visible>		
+				</control>
+				
+				<!-- T E N ON ROW 4-->
+				
+				<control type="grouplist" id="50">
+					<orientation>horizontal</orientation>
+					<posy>135</posy>
+					<posx>245</posx>
+					<width>600</width>
+					<height>450</height>
+					<itemgap>12</itemgap>
+					<control type="label">
+						<width>37</width>     
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>T</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>E</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>N</label>
+					</control>
+					<visible>Control.isVisible(20010)</visible>
+				</control>
+				
+				<!-- T O ON ROW 4-->
+				
+				<control type="grouplist" id="50">
+					<orientation>horizontal</orientation>
+					<posy>135</posy>
+					<posx>442</posx>
+					<width>600</width>
+					<height>450</height>
+					<itemgap>12</itemgap>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>T</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>O</label>
+					</control>
+					<visible>Control.isVisible(20104)</visible>		
+				</control>
+				
+				<!-- P A S T ON ROW 5-->
+				
+				<control type="grouplist" id="50">
+					<orientation>horizontal</orientation>
+					<posy>180</posy>
+					<width>600</width>
+					<height>450</height>
+					<itemgap>12</itemgap>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>P</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>A</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>S</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>T</label>
+					</control>
+					<visible>Control.isVisible(20103)</visible>
+				</control>
+				
+				<!-- N I N E ON	ROW 5-->
+				
+				<control type="grouplist" id="50">
+					<orientation>horizontal</orientation>
+					<posy>180</posy>
+					<posx>343</posx>
+					<width>600</width>
+					<height>450</height>
+					<itemgap>12</itemgap>
+					<control type="label">
+						<width>37</width>      
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>N</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>	
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>I</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>N</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>	
+						<textcolor>Qlockfocus</textcolor>		
+						<align>center</align>
+						<label>E</label>
+					</control>
+					<visible>Control.isVisible(20209)</visible>
+				</control>
+				
+				<!-- O N E ON ROW 6-->
+				
+				<control type="grouplist" id="50">
+					<orientation>horizontal</orientation>
+					<posy>225</posy>
+					<width>600</width>
+					<height>450</height>
+					<itemgap>12</itemgap>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>O</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>N</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>E</label>
+					</control>
+					<visible>Control.isVisible(20201)</visible>
+				</control>
+				
+				<!-- S I X ON ROW 6-->
+				
+				<control type="grouplist" id="50">
+					<orientation>horizontal</orientation>
+					<posy>225</posy>
+					<posx>147</posx>
+					<width>600</width>
+					<height>450</height>
+					<itemgap>12</itemgap>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>		
+						<textcolor>Qlockfocus</textcolor>	
+						<align>center</align>
+						<label>S</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>I</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>X</label>
+					</control>
+					<visible>Control.isVisible(20206)</visible>	
+				</control>
+				
+				<!-- T H R E E ON ROW 6-->
+				
+				<control type="grouplist" id="50">
+					<orientation>horizontal</orientation>
+					<posy>225</posy>
+					<posx>294</posx>
+					<width>600</width>
+					<height>450</height>
+					<itemgap>12</itemgap>
+					<control type="label">
+						<width>37</width>     
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>T</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>	
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>H</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>	
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>R</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>		
+						<textcolor>Qlockfocus</textcolor>	
+						<align>center</align>
+						<label>E</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>		
+						<textcolor>Qlockfocus</textcolor>	
+						<align>center</align>
+						<label>E</label>
+					</control>
+					<visible>Control.isVisible(20203)</visible>
+				</control>
+				
+				<!-- F O U R ON ROW 7-->
+				
+				<control type="grouplist" id="50">
+					<orientation>horizontal</orientation>
+					<posy>270</posy>
+					<width>600</width>
+					<height>450</height>
+					<itemgap>12</itemgap>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>F</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>		
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>O</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>U</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>R</label>
+					</control>
+					<visible>Control.isVisible(20204)</visible>		
+				</control>
+				
+				<!-- F I V E ON ROW 7-->
+				
+				<control type="grouplist" id="50">
+					<orientation>horizontal</orientation>
+					<posy>270</posy>
+					<posx>196</posx>
+					<width>600</width>
+					<height>450</height>
+					<itemgap>12</itemgap>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>F</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>	
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>I</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>V</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>E</label>
+					</control>
+					<visible>Control.isVisible(20205)</visible>
+				</control>
+				
+				<!-- T W O ALL ROW 7-->
+				
+				<control type="grouplist" id="50">
+					<orientation>horizontal</orientation>
+					<posy>270</posy>
+					<posx>392</posx>
+					<width>600</width>
+					<height>450</height>
+					<itemgap>12</itemgap>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>T</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>W</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>O</label>
+					</control>
+					<visible>Control.isVisible(20202)</visible>
+				</control>
+				
+				<!-- E I G H T ON ROW 8-->
+				
+				<control type="grouplist" id="50">
+					<orientation>horizontal</orientation>
+					<posy>315</posy>
+					<width>600</width>
+					<height>450</height>
+					<itemgap>12</itemgap>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>		
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>E</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>		
+						<textcolor>Qlockfocus</textcolor>	
+						<align>center</align>
+						<label>I</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>G</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>H</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>T</label>
+					</control>						
+					<visible>Control.isVisible(20208)</visible>	
+				</control>
+				
+				<!-- E L E V E N ON ROW 8-->
+				
+				<control type="grouplist" id="50">
+					<orientation>horizontal</orientation>
+					<posy>315</posy>
+					<posx>245</posx>
+					<width>600</width>
+					<height>450</height>
+					<itemgap>12</itemgap>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>	
+						<textcolor>Qlockfocus</textcolor>		
+						<align>center</align>
+						<label>E</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>L</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>E</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>V</label>
+					</control>	
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>E</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>N</label>
+					</control>
+					<visible>Control.isVisible(20211)</visible>	
+				</control>
+				
+				<!-- S E V E N ON ROW 9-->
+				
+				<control type="grouplist" id="50">
+					<orientation>horizontal</orientation>
+					<posy>360</posy>
+					<width>600</width>
+					<height>450</height>
+					<itemgap>12</itemgap>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>S</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>E</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>V</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>E</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>N</label>
+					</control>
+					<visible>Control.isVisible(20207)</visible>
+				</control>
+				
+				<!-- T W E L V E ON ROW 9-->
+				
+				<control type="grouplist" id="50">
+					<orientation>horizontal</orientation>
+					<posy>360</posy>
+					<posx>245</posx>
+					<width>600</width>
+					<height>450</height>
+					<itemgap>12</itemgap>
+					<control type="label">
+						<width>37</width>      
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>T</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>W</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>		
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>E</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>L</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>V</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>E</label>
+					</control>
+					<visible>Control.isVisible(20212)</visible>
+				</control>
+				
+				<!-- T E N ON ROW 10-->
+				
+				<control type="grouplist" id="50">
+					<orientation>horizontal</orientation>
+					<posy>405</posy>
+					<width>600</width>
+					<height>450</height>
+					<itemgap>12</itemgap>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>	
+						<textcolor>Qlockfocus</textcolor>		
+						<align>center</align>
+						<label>T</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>E</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>N</label>
+					</control>
+					<visible>Control.isVisible(20210)</visible>
+				</control>
+				
+				<!-- O´ C L O C K ON ROW 10-->
+				
+				<control type="grouplist" id="50">
+					<orientation>horizontal</orientation>
+					<posy>405</posy>
+					<posx>245</posx>
+					<width>600</width>
+					<height>450</height>
+					<itemgap>12</itemgap>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>right</align>
+						<label>O´</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>	
+						<textcolor>Qlockfocus</textcolor>		
+						<align>center</align>
+						<label>C</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>L</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>O</label>
+					</control>	
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>C</label>
+					</control>	
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>K</label>
+					</control>
+					<visible>Control.isVisible(20102)</visible>
+				</control>
+			</control>
+			
+			<!--	Minutes		-->
+			
+			<control type="label">
+				<description>Clock ON Minute1</description>
+				<posx>357</posx>
+				<posy>27</posy>
+				<label>•</label>
+				<font>LiberationSans_Regular_24</font>
+				<textcolor>Qlockfocus</textcolor>
+				<visible>Control.isVisible(10110)</visible>
+			</control>
+			<control type="label">
+				<description>Clock ON Minute2</description>
+				<posx>912</posx>
+				<posy>27</posy>
+				<label>•</label>
+				<font>LiberationSans_Regular_24</font>
+				<textcolor>Qlockfocus</textcolor>
+				<visible>Control.isVisible(10111)</visible>
+			</control>
+			
+			<control type="label">
+				<description>Clock ON Minute3</description>
+				<posx>912</posx>
+				<posy>487</posy>
+				<label>•</label>
+				<font>LiberationSans_Regular_24</font>
+				<textcolor>Qlockfocus</textcolor>
+				<visible>Control.isVisible(10112)</visible>
+			</control>
+			<control type="label">
+				<description>Clock ON Minute4</description>
+				<posx>357</posx>
+				<posy>487</posy>
+				<label>•</label>
+				<font>LiberationSans_Regular_24</font>
+				<textcolor>Qlockfocus</textcolor>
+				<visible>Control.isVisible(10113)</visible>
+			</control>
+			<control type="label">
+				<description>Clock OFF Minute1</description>
+				<posx>355</posx>
+				<posy>30</posy>
+				<label>°</label>
+				<font>LiberationSans_Regular_30</font>
+				<textcolor>Qlocknofocus</textcolor>
+			</control>
+			<control type="label">
+				<description>Clock OFF  Minute2</description>
+				<posx>910</posx>
+				<posy>30</posy>
+				<label>°</label>
+				<font>LiberationSans_Regular_30</font>
+				<textcolor>Qlocknofocus</textcolor>
+			</control>
+			<control type="label">
+				<description>Clock  OFF Minute3</description>
+				<posx>355</posx>
+				<posy>490</posy>
+				<label>°</label>
+				<font>LiberationSans_Regular_30</font>
+				<textcolor>Qlocknofocus</textcolor>
+			</control>
+			<control type="label">
+				<description>Clock OFF  Minute4</description>
+				<posx>910</posx>
+				<posy>490</posy>
+				<font>LiberationSans_Regular_30</font>
+				<textcolor>Qlocknofocus</textcolor>
+				<label>°</label>
+			</control>
+		</control>
+    </include>
+</includes>

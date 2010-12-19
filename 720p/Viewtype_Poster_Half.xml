@@ -14,34 +14,6 @@
 				<texture>movie-poster/movie-back3.png</texture>
 				<aspectratio>stretch</aspectratio>
 			</control>
-			<control type="label"><!--Big Title-->
-				<visible>![Container.Content(tvshows) | Container.Content(seasons) | Container.Content(movies)]</visible>
-				<animation effect="slide" start="0,150" end="0,-70" time="1000" delay="600" tween="cubic" easing="inout" condition="Control.IsVisible(598) + ![Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(movies)]">Conditional</animation>
-				<posx>0</posx>
-				<posy>255</posy>
-				<width>1280</width>
-				<height>50</height>
-				<align>center</align>
-				<font>LiberationSans_Regular_28</font>
-				<shadowcolor>viewheadershadow</shadowcolor>
-				<textcolor>viewheader</textcolor>
-				<label>[B]$INFO[ListItem.label][/B]</label>
-				<include>Animation_Bartowski_Context_Zoom</include>
-			</control>
-			<control type="label"><!--Big Title-->
-				<visible>Container.Content(movies) + SubString(ListItem.Icon,DefaultFolderBack.png,Left) + !Window.IsVisible(VideoFiles)</visible>
-				<animation effect="slide" start="0,0" end="0,-70" time="1000" delay="600" tween="cubic" easing="inout" condition="Control.IsVisible(598) + Container.Content(movies) + SubString(ListItem.Icon,DefaultFolderBack.png,Left)">Conditional</animation>
-				<posx>0</posx>
-				<posy>255</posy>
-				<width>1280</width>
-				<height>50</height>
-				<align>center</align>
-				<font>LiberationSans_Regular_28</font>
-				<shadowcolor>viewheadershadow</shadowcolor>
-				<textcolor>viewheader</textcolor>
-				<label>[B]$LOCALIZE[31235][/B]</label>
-				<include>Animation_Bartowski_Context_Zoom</include>
-			</control>
 	</control>
 		
 		
@@ -309,6 +281,18 @@
 				<posx>0</posx>
 				<posy>0</posy>
 				<include>Animation_ZoomInZoomOut</include>
+				<control type="label"><!--Big Title-->
+					<visible>![Container.Content(tvshows) | Container.Content(seasons) | Container.Content(movies)]</visible>
+					<posx>10</posx>
+					<posy>0</posy>
+					<width>1200</width>
+					<height>50</height>
+					<aligny>center</aligny>
+					<font>LiberationSans_Regular_40</font>
+					<textcolor>viewheader</textcolor>
+					<shadowcolor>viewheadershadow</shadowcolor>
+					<label>[B]$INFO[ListItem.Label][/B]</label>
+				</control>
 				<control type="textbox">
 					<description>Plot Movie</description>
 					<posx>10</posx>
@@ -338,7 +322,7 @@
 				<control type="label">
 					<posx>20</posx>
 					<posy>0</posy>
-					<width>1200</width>
+					<width>1000</width>
 					<height>50</height>
 					<aligny>center</aligny>
 					<font>LiberationSans_Regular_40</font>
@@ -360,7 +344,7 @@
 				<control type="label">
 					<posx>20</posx>
 					<posy>6</posy>
-					<width>1200</width>
+					<width>1000</width>
 					<height>50</height>
 					<aligny>center</aligny>
 					<font>LiberationSans_Regular_40</font>
@@ -374,7 +358,7 @@
 
 				<control type="label">
 					<posx>20</posx>
-					<posy>30</posy>
+					<posy>34</posy>
 					<width>604</width>
 					<height>50</height>
 					<aligny>center</aligny>
@@ -385,7 +369,7 @@
 				</control>
 				<control type="label">
 					<posx>20</posx>
-					<posy>30</posy>
+					<posy>34</posy>
 					<width>604</width>
 					<height>50</height>
 					<aligny>center</aligny>
@@ -396,7 +380,7 @@
 				</control>
 				<control type="label">
 					<posx>20</posx>
-					<posy>30</posy>
+					<posy>34</posy>
 					<width>604</width>
 					<height>50</height>
 					<aligny>center</aligny>
@@ -407,7 +391,7 @@
 				</control>
 				<control type="label">
 					<posx>20</posx>
-					<posy>55</posy>
+					<posy>59</posy>
 					<width>604</width>
 					<height>50</height>
 					<aligny>center</aligny>
@@ -419,7 +403,7 @@
 				</control>
 				<control type="group">
 					<posx>77</posx>
-					<posy>69</posy>
+					<posy>73</posy>
 					<include condition="!Skin.HasSetting(vanilla_flags) + !Skin.HasSetting(flat_flags)">color_MPAAs</include>
 					<include condition="Skin.HasSetting(vanilla_flags) | Skin.HasSetting(flat_flags) + !Skin.HasSetting(original_flags)">vanilla_MPAAs</include>
 					<animation effect="slide" start="0,0" end="-64,0" time="0" condition="IsEmpty(ListItem.Year)">Conditional</animation>
@@ -480,7 +464,7 @@
 			<control type="label"><!--Trailer Start-->
 				<visible>Control.IsVisible(598) + Container.Content(movies) + !IsEmpty(ListItem.Trailer) + !Player.HasVideo</visible>
 				<posx>20</posx>
-				<posy>78</posy>
+				<posy>86</posy>
 				<width>370</width>
 				<height>50</height>
 				<aligny>center</aligny>
@@ -508,10 +492,10 @@
 			<control type="grouplist">
 				<visible>Control.IsVisible(598) + Skin.HasSetting(back_flags) + Container.Content(movies) + !Skin.HasSetting(no_media_flags) + !Control.IsVisible(6598)</visible>
 				<description>Media Codec Flagging Images</description>
-				<posx>20</posx>
+				<posx>0</posx>
 				<posy>674</posy>
-				<width>1280</width>
-				<align>left</align>
+				<width>380</width>
+				<align>center</align>
 				<itemgap>0</itemgap>
 				<orientation>horizontal</orientation>
 				<include>back_flags</include>
@@ -520,10 +504,10 @@
 			<control type="grouplist">
 				<visible>Control.IsVisible(598) + Container.Content(movies) + !Skin.HasSetting(no_media_flags) + !Control.IsVisible(6598)</visible>
 				<description>Media Codec Flagging Images</description>
-				<posx>20</posx>
+				<posx>0</posx>
 				<posy>674</posy>
-				<width>1280</width>
-				<align>left</align>
+				<width>380</width>
+				<align>center</align>
 				<itemgap>0</itemgap>
 				<orientation>horizontal</orientation>
 				<include condition="!Skin.HasSetting(vanilla_flags) + !Skin.HasSetting(original_flags) + !Skin.HasSetting(flat_flags)">color_flags</include>
@@ -535,10 +519,10 @@
 			<control type="grouplist">
 				<visible>Control.IsVisible(598) + !Skin.HasSetting(no_frame_flags) + Container.Content(movies) + !Skin.HasSetting(no_media_flags) + !Control.IsVisible(6598)</visible>
 				<description>Media Codec Flagging Images</description>
-				<posx>20</posx>
+				<posx>0</posx>
 				<posy>674</posy>
-				<width>1280</width>
-				<align>left</align>
+				<width>380</width>
+				<align>center</align>
 				<itemgap>0</itemgap>
 				<orientation>horizontal</orientation>
 				<include>frame_flags</include>

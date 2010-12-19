@@ -413,14 +413,14 @@
 					</control>
 					
 					<control type="radiobutton" id="201">
-						<description>Show Recently added info</description>
+						<description>Horizontal Home</description>
 						<include>skin_settings_labels</include>
 						<label>31244</label>
 						<onclick>Skin.ToggleSetting(horizontal_home)</onclick>
 						<selected>Skin.HasSetting(horizontal_home)</selected>
 					</control>
 					<control type="radiobutton" id="202">
-						<description>Show Recently added info</description>
+						<description>Horizontal Home Bottom</description>
 						<width>860</width>
 						<height>26</height>
 						<font>LiberationSans_Regular_16</font>
@@ -436,6 +436,13 @@
 						<onclick>Skin.ToggleSetting(horizontal_bottom_align)</onclick>
 						<selected>Skin.HasSetting(horizontal_bottom_align)</selected>
 						<visible>Skin.HasSetting(horizontal_home)</visible>
+					</control>
+					<control type="radiobutton" id="223">
+						<description>Home Qlock Settings</description>
+						<include>skin_settings_labels</include>
+						<label>Enable Home Qlock</label>
+						<onclick>Skin.ToggleSetting(home_qlock)</onclick>
+						<selected>Skin.HasSetting(home_qlock)</selected>
 					</control>
 					<control type="radiobutton" id="203">
 						<description>Show Recently added info</description>
@@ -610,14 +617,14 @@
 						<onclick>Skin.ToggleSetting(HomeMenuNoShutdownButton)</onclick>
 						<selected>!Skin.HasSetting(HomeMenuNoShutdownButton)</selected>
 					</control>
-					<control type="radiobutton" id="230">
+					<control type="radiobutton" id="221">
 						<description>Hide Settings Button</description>
 						<include>skin_settings_labels</include>
 						<label>$LOCALIZE[31111] - $LOCALIZE[5]</label>
 						<onclick>Skin.ToggleSetting(HomeMenuNoSettingsButton)</onclick>
 						<selected>Skin.HasSetting(HomeMenuNoSettingsButton)</selected>
 					</control>
-					<control type="radiobutton" id="231">
+					<control type="radiobutton" id="222">
 						<description>Hide Settings Button</description>
 						<include>skin_settings_labels</include>
 						<label>$LOCALIZE[31111] - $LOCALIZE[341]</label>
