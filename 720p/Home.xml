@@ -191,7 +191,7 @@
 					<label>$LOCALIZE[10006]</label>
 					<icon>7000_focus.png</icon>
 					<thumb>7000_focus.png</thumb>
-					<onclick>XBMC.ActivateWindow(MyMusic,return)</onclick>
+					<onclick>XBMC.ActivateWindow(MyVideoFiles)</onclick>
 					<visible>!Skin.HasSetting(HomeMenuNoVideosButton) + Skin.HasSetting(home_qlock)</visible>
 				</item>
 				<item id="3">
