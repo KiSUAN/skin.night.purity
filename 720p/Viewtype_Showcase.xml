@@ -17,7 +17,8 @@
 			<control type="label">
 				<visible>Skin.HasSetting(ShowcaseFanart) + Skin.HasSetting(showcase_fanart_title)</visible>
 				<animation effect="slide" start="0,0" end="0,-70" time="1000" delay="600" tween="cubic" easing="inout" condition="Control.IsVisible(58) + Container.Content(movies) + Skin.HasSetting(ShowcaseFanart)">Conditional</animation>
-				<posx>0</posx>
+				<animation effect="slide" start="0,0" end="0,-110" time="1000" delay="600" tween="cubic" easing="inout" condition="Control.IsVisible(58) + Container.Content(movies)">Conditional</animation>
+ 				<posx>0</posx>
 				<posy>520</posy>
 				<width>1280</width>
 				<height>50</height>
