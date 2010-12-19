@@ -726,7 +726,7 @@
 					<onup>301</onup>
 					<ondown>301</ondown>
 					<itemgap>0</itemgap>
-					<visible>Container(301).HasFocus(9)</visible>
+					<visible>Container(301).HasFocus(22)</visible>
 					<itemlayout width="320" height="245">
 						<control type="group">	
 							<posx>20</posx>
@@ -793,7 +793,7 @@
 					<scrolltime>200</scrolltime>
 					<preloaditems>2</preloaditems>
 					<itemgap>0</itemgap>
-					<visible>Container(301).HasFocus(10)</visible>
+					<visible>Container(301).HasFocus(18)</visible>
 					<itemlayout width="350" height="245">
 						<control type="label"><!--Movie title-->
 							<width>350</width>
@@ -975,7 +975,7 @@
 					<ondown>301</ondown>
 					<preloaditems>2</preloaditems>
 					<itemgap>0</itemgap>
-					<visible>Container(301).HasFocus(8) | Container(301).HasFocus(14)</visible>
+					<visible>Container(301).HasFocus(20) | Container(301).HasFocus(21)</visible>
 					<itemlayout width="320" height="245">
 						<control type="group">	
 							<posx>100</posx>
@@ -1033,7 +1033,7 @@
 					<scrolltime>200</scrolltime>
 					<preloaditems>2</preloaditems>
 					<itemgap>0</itemgap>
-					<visible>Container(301).HasFocus(13)</visible>
+					<visible>Container(301).HasFocus(24)</visible>
 					<itemlayout width="320" height="245">
 						<control type="group">	
 							<posx>20</posx>
@@ -1105,7 +1105,7 @@
 					<scrolltime>200</scrolltime>
 					<preloaditems>2</preloaditems>
 					<itemgap>0</itemgap>
-					<visible>Container(301).HasFocus(11)</visible>
+					<visible>Container(301).HasFocus(25)</visible>
 					<itemlayout width="400" height="245">
 						<control type="label"><!--Movie title-->
 							<width>400</width>
