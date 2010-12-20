@@ -306,7 +306,7 @@
 			<height>27</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/ratings/custom/mpaa_unrated.png</texture>
-			<visible>substring(ListItem.FilenameAndPath,unrated)</visible>
+			<visible>substring(ListItem.FilenameAndPath,unrated) | substring(listitem.mpaa,Rated Unrated)</visible>
 		</control>
 		
 		<control type="image">
@@ -1348,7 +1348,7 @@
 			<height>27</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/ratings/vanilla/mpaa_unrated.png</texture>
-			<visible>substring(ListItem.FilenameAndPath,unrated)</visible>
+			<visible>substring(ListItem.FilenameAndPath,unrated) | substring(listitem.mpaa,Rated Unrated)</visible>
 			<colordiffuse>flagicon</colordiffuse>
 		</control>
 		
