@@ -2515,40 +2515,50 @@
 							<aligny>center</aligny>
 						</control>
 
-						<control type="radiobutton" id="512"> 
-                            <include>skin_settings_labels</include> 
-                            <label>$LOCALIZE[31044]</label> 
-							<onclick>Skin.ToggleSetting(TVPosters)</onclick> 
-                            <onclick>Skin.Reset(TVBanners)</onclick> 
-                            <selected>Skin.HasSetting(TVPosters)</selected> 
-                        </control> 
-                        <control type="radiobutton" id="513"> 
-                            <include>skin_settings_labels</include>
-                            <label>$LOCALIZE[31045]</label> 
-                            <onclick>Skin.ToggleSetting(TVBanners)</onclick> 
-                            <onclick>Skin.Reset(TVPosters)</onclick> 
-                            <selected>Skin.HasSetting(TVBanners)</selected> 
-                        </control> 
-						<control type="radiobutton" id="514">
+						<control type="radiobutton" id="512">
 							<include>skin_settings_labels</include>
 							<label>$LOCALIZE[31033]</label>
 							<onclick>Skin.ToggleSetting(autoscroll)</onclick>
 							<selected>Skin.HasSetting(autoscroll)</selected>
 						</control>
-						<control type="radiobutton" id="515">
+						<control type="radiobutton" id="513">
 							<include>skin_settings_labels</include>
-							<label>$LOCALIZE[31282]</label>
-							<onclick>Skin.ToggleSetting(genrefanart)</onclick>
-							<onclick>Skin.Reset(extrafanart)</onclick> 
-							<selected>Skin.HasSetting(genrefanart)</selected>
+							<label>Use TV Themes in Library</label>
+							<onclick>Skin.ToggleSetting(tv_theme)</onclick>
+							<selected>Skin.HasSetting(tv_theme)</selected>
+							<!--<visible>system.hasaddon(script.TvTunes)</visible>-->
 						</control>
-						<control type="radiobutton" id="516">
+						<control type="radiobutton" id="514"> 
+                            <include>skin_settings_labels</include> 
+                            <label>$LOCALIZE[31044]</label> 
+							<onclick>Skin.ToggleSetting(TVPosters)</onclick> 
+                            <onclick>Skin.Reset(TVBanners)</onclick> 
+                            <onclick>Skin.Reset(landscape_thumbs)</onclick> 
+                            <selected>Skin.HasSetting(TVPosters)</selected> 
+                        </control> 
+                        <control type="radiobutton" id="515"> 
+                            <include>skin_settings_labels</include>
+                            <label>$LOCALIZE[31045]</label> 
+                            <onclick>Skin.ToggleSetting(TVBanners)</onclick> 
+                            <onclick>Skin.Reset(TVPosters)</onclick> 
+                            <onclick>Skin.Reset(landscape_thumbs)</onclick> 
+                            <selected>Skin.HasSetting(TVBanners)</selected> 
+                        </control> 
+						<control type="radiobutton" id="516"> 
+                            <include>skin_settings_labels</include>
+                            <label>$LOCALIZE[31531]</label> 
+                            <onclick>Skin.ToggleSetting(landscape_thumbs)</onclick> 
+                            <onclick>Skin.Reset(TVPosters)</onclick> 
+							<onclick>Skin.Reset(TVBanners)</onclick> 
+                            <selected>Skin.HasSetting(landscape_thumbs)</selected> 
+                        </control>
+						<control type="radiobutton" id="517">
 							<include>skin_settings_labels</include>
 							<label>$LOCALIZE[31269]</label>
 							<onclick>Skin.ToggleSetting(landscape_jpg)</onclick>
 							<selected>Skin.HasSetting(landscape_jpg)</selected>
 						</control>
-						<control type="label" id="517">
+						<control type="label" id="518">
 							<width>860</width>
 							<height>26</height>
 							<font>LiberationSans_Regular_16</font>
@@ -2559,14 +2569,14 @@
 							<align>left</align>
 							<aligny>top</aligny>
 						</control>
-						<control type="radiobutton" id="518">
+						<control type="radiobutton" id="519">
 							<include>skin_settings_labels</include>
 							<label>$LOCALIZE[31529]</label>
 							<onclick>Skin.Reset(TVBanners)</onclick> 
 							<onclick>Skin.ToggleSetting(banner_jpg)</onclick>
 							<selected>Skin.HasSetting(banner_jpg)</selected>
 						</control>
-						<control type="label" id="519">
+						<control type="label" id="520">
 							<width>860</width>
 							<height>26</height>
 							<font>LiberationSans_Regular_16</font>
@@ -2577,13 +2587,13 @@
 							<align>left</align>
 							<aligny>top</aligny>
 						</control>
-						<control type="radiobutton" id="520">
+						<control type="radiobutton" id="521">
 							<include>skin_settings_labels</include>
 							<label>$LOCALIZE[31266]</label>
 							<onclick>Skin.ToggleSetting(extrafanart)</onclick>
 							<selected>Skin.HasSetting(extrafanart)</selected>
 						</control>
-						<control type="label" id="521">
+						<control type="label" id="522">
 							<width>860</width>
 							<height>26</height>
 							<font>LiberationSans_Regular_16</font>
@@ -2594,14 +2604,25 @@
 							<align>left</align>
 							<aligny>top</aligny>
 						</control>
-						<control type="radiobutton" id="522">
+						<control type="radiobutton" id="523">
 							<include>skin_settings_labels</include>
-							<label>Use TV Themes in Library</label>
-							<onclick>Skin.ToggleSetting(tv_theme)</onclick>
-							<selected>Skin.HasSetting(tv_theme)</selected>
-							<!--<visible>system.hasaddon(script.TvTunes)</visible>-->
+							<label>$LOCALIZE[31282]</label>
+							<onclick>Skin.ToggleSetting(genrefanart)</onclick>
+							<onclick>Skin.Reset(extrafanart)</onclick> 
+							<selected>Skin.HasSetting(genrefanart)</selected>
 						</control>
-						<control type="label" id="523">
+						<control type="label" id="524">
+							<width>860</width>
+							<height>26</height>
+							<font>LiberationSans_Regular_16</font>
+							<textoffsetx>40</textoffsetx>
+							<label>*$LOCALIZE[31530]*</label>
+							<textcolor>grey2</textcolor>
+							<focusedcolor>white</focusedcolor>
+							<align>left</align>
+							<aligny>top</aligny>
+						</control>
+						<control type="label" id="525">
 							<width>860</width>
 							<height>45</height>
 							<font>DejaVuSans_Bold_20</font>
@@ -2611,7 +2632,7 @@
 							<align>left</align>
 							<aligny>center</aligny>
 						</control>
-						<control type="button" id="524">
+						<control type="button" id="526">
 							<width>280</width>
 							<height>40</height>
 							<font>LiberationSans_Regular_20</font>
@@ -2626,7 +2647,7 @@
 							<onclick>XBMC.RunScript(script.logo-downloader,mode=bulk,clearart=False,logo=True,showthumb=False)</onclick>
 						</control>
 					</control>
-						<!--<control type="textbox" id="525">
+						<!--<control type="textbox" id="527">
 							<posx>330</posx>
 							<posy>586</posy>
 							<width>830</width>
