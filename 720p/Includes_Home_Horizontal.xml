@@ -3,7 +3,7 @@
 	<include name="HorizontalHome">
 
 		<control type="fixedlist" id="301">
-			<posx>-100</posx>
+			<posx>-120</posx>
 			<posy>190</posy>
 			<height>466</height>
 			<width>1541</width>
@@ -20,7 +20,7 @@
 			<include condition="!Skin.HasSetting(horizontal_bottom_align)">Animation_Bartowski_Context_Zoom</include>
 			<include condition="Skin.HasSetting(horizontal_bottom_align)">Animation_Bartowski_Context_Zoom_Bottom</include>
 			<visible>Skin.HasSetting(horizontal_home)</visible>	
-			<animation effect="slide" end="0,330" time="0" condition="Skin.HasSetting(horizontal_bottom_align)">conditional</animation>
+			<animation effect="slide" end="0,327" time="0" condition="Skin.HasSetting(horizontal_bottom_align)">conditional</animation>
 			<itemlayout width="301" height="61">
 				<control type="label">
 					<width>500</width>
@@ -45,7 +45,9 @@
 					<textcolor>white</textcolor>
 					<shadowcolor>black</shadowcolor>
 					<label>$INFO[ListItem.label]</label>
-					<animation effect="slide" end="0,-60" time="301" condition="ControlGroup(9001).HasFocus">conditional</animation>
+					<animation effect="slide" end="0,-60" time="301" condition="ControlGroup(9001).HasFocus + !Control.HasFocus(9014) + !Skin.HasSetting(horizontal_bottom_align)">conditional</animation>
+					<animation effect="slide" end="0,-80" time="301" condition="ControlGroup(9001).HasFocus + Control.HasFocus(9014) + !Skin.HasSetting(horizontal_bottom_align)">conditional</animation>
+					<animation effect="slide" end="0,-60" time="301" condition="ControlGroup(9001).HasFocus + Skin.HasSetting(horizontal_bottom_align)">conditional</animation>
 				</control>
 			</focusedlayout>
 			<content>
@@ -438,14 +440,14 @@
 		</control>
 		
 		<control type="group" id="9001">
-				<posx>30</posx>
+				<posx>0</posx>
 				<posy>274</posy>
 				<animation effect="fade" start="100" end="0" time="0" condition="!ControlGroup(9001).HasFocus">conditional</animation>
 				<animation effect="fade" start="0" end="100" delay="301" time="200" condition="ControlGroup(9001).HasFocus">conditional</animation>
 				<animation effect="fade" start="100" end="0" time="0" condition="ControlGroup(9001).HasFocus">WindowClose</animation>
 				<animation effect="slide" end="0,350" time="0" condition="Skin.HasSetting(horizontal_bottom_align)">conditional</animation>
 <!--VIDEOS -->	<control type="wraplist" id="9010">
-					<posx>-30</posx>
+					<posx>-20</posx>
 					<posy>30</posy>
 					<width>1380</width>
 					<height>465</height>
@@ -514,7 +516,7 @@
 						</content>
 				</control>
 <!--MOVIES -->	<control type="wraplist" id="9011">
-					<posx>-30</posx>
+					<posx>-20</posx>
 					<posy>30</posy>
 					<width>1380</width>
 					<height>465</height>
@@ -620,7 +622,7 @@
 						</content>
 				</control>
 <!--TV SHOWS --><control type="wraplist" id="9012">
-					<posx>-30</posx>
+					<posx>-20</posx>
 					<posy>30</posy>
 					<width>1380</width>
 					<height>465</height>
@@ -713,7 +715,7 @@
 						</content>
 				</control>
 <!--SETTINGS --><control type="wraplist" id="9014">
-					<posx>-30</posx>
+					<posx>-20</posx>
 					<posy>30</posy>
 					<width>1380</width>
 					<height>465</height>
@@ -780,7 +782,7 @@
 						</content>
 				</control>
 <!--SCRIPTS --> <control type="fixedlist" id="9015">
-					<posx>-30</posx>
+					<posx>0</posx>
 					<posy>30</posy>
 					<width>1380</width>
 					<height>465</height>
@@ -796,7 +798,7 @@
 					<visible>Container(301).HasFocus(18)</visible>
 					<itemlayout width="350" height="245">
 						<control type="label"><!--Movie title-->
-							<width>350</width>
+							<width>500</width>
 							<height>56</height>
 							<label>$INFO[ListItem.Label]</label>
 							<align>center</align>
@@ -807,7 +809,7 @@
 					<focusedlayout width="350" height="515">
 						<control type="group">	
 							<control type="label"><!--Movie title-->
-								<width>350</width>
+								<width>500</width>
 								<height>56</height>
 								<label>[B]$INFO[ListItem.Label][/B]</label>
 								<align>center</align>
@@ -860,7 +862,7 @@
 						</content>
 				</control>
 <!--MUSIC --><control type="wraplist" id="9017">
-					<posx>-30</posx>
+					<posx>-20</posx>
 					<posy>30</posy>
 					<width>1380</width>
 					<height>465</height>
@@ -1020,7 +1022,7 @@
 						</content>
 				</control>
 <!--Shutdown --><control type="wraplist" id="9019">
-					<posx>-30</posx>
+					<posx>-20</posx>
 					<posy>30</posy>
 					<width>1380</width>
 					<height>465</height>
@@ -1092,7 +1094,7 @@
 						</content>
 				</control>
 <!--DVD      --><control type="fixedlist" id="9014">
-					<posx>-30</posx>
+					<posx>-20</posx>
 					<posy>30</posy>
 					<width>1380</width>
 					<height>465</height>

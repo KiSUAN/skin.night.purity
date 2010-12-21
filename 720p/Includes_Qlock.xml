@@ -57,9 +57,13 @@
 		<!--	GERMAN		-->
 	
 		<control type="group" id="10">
-		<visible>Skin.HasSetting(home_qlock) + SubString(System.Language,German) + [Control.HasFocus(300)|  Skin.HasSetting(horizontal_bottom_align)]</visible>
+		<visible>Skin.HasSetting(home_qlock) + SubString(System.Language,German) + [[Window.IsActive(home) + !Skin.HasSetting(horizontal_home)] | Skin.HasSetting(horizontal_bottom_align)]</visible>
 		<posy>30</posy>
-		<animation effect="slide" end="330,70" time="0" condition="Control.HasFocus(300)">Conditional</animation>
+		<animation effect="slide" end="250,70" time="0" condition="Skin.HasSetting(home_qlock) + !Skin.HasSetting(horizontal_home)">Conditional</animation>
+		<animation effect="slide" start="0,0" end="-200,0" time="600" delay="200" tween="cubic" easing="inout" condition="Skin.HasSetting(horizontal_home) + Skin.HasSetting(horizontal_bottom_align) + [[Skin.String(Weather,3) | Skin.String(Weather,2)] + Container(301).HasFocus(20) | Container(301).HasFocus(21)]">Conditional</animation>
+		<animation effect="zoom" start="100,100" end="77,77" center="100,340" time="3500" tween="elastic" easing="out" reversible="true" condition="Skin.HasSetting(home_qlock) + Skin.HasSetting(horizontal_home) + !Skin.HasSetting(horizontal_bottom_align) + [[Skin.HasSetting(HomepageWeatherWidget) + [ Container(301).HasFocus(3) |  Container(301).HasFocus(5) |  Container(301).HasFocus(1)]] | [Skin.HasSetting(homepageHideRecentlyAdded) +  [Container(301).HasFocus(20) | Container(301).HasFocus(21)]]]">Conditional</animation>
+		<animation effect="zoom" start="100,100" end="90,90" center="220,-200" time="3500" tween="elastic" easing="out" reversible="true" condition="Skin.HasSetting(home_qlock) + !Skin.HasSetting(horizontal_home) + [[Skin.HasSetting(homepageHideRecentlyAdded) + [ Container(300).HasFocus(3) |  Container(300).HasFocus(1)]] | [Skin.HasSetting(HomepageWeatherWidget) +  [Container(300).HasFocus(20) | Container(300).HasFocus(21)]]]">Conditional</animation>
+		<animation effect="zoom" start="100,100" end="72,72" center="220,-200" time="3500" tween="elastic" easing="out" reversible="true" condition="Skin.HasSetting(home_qlock) + !Skin.HasSetting(horizontal_home) + [Skin.HasSetting(homepageHideRecentlyAdded) + Container(300).HasFocus(5)]">Conditional</animation>
 			
 			<!--		Minutes		-->
 			
@@ -93,7 +97,7 @@
 			</control>
 			<control type="label" id="10102">
 				<description>Uhr</description>
-				<visible>Control.isVisible(10004) + !System.Time(01:00,01:05)</visible>
+				<visible>Control.isVisible(10004) + ![System.Time(01:00,01:05)|System.Time(13:00,13:05)]</visible>
 			</control>
 			<control type="label" id="10110">
 				<description>Clock ON Minute1</description>
@@ -2023,9 +2027,13 @@
 		<!-- 	ENGLISH		-->
 		
 		<control type="group" id="20">
-		<visible>Skin.HasSetting(home_qlock) + SubString(System.Language,English) + [Control.HasFocus(300)|  Skin.HasSetting(horizontal_bottom_align)]</visible>
+		<visible>Skin.HasSetting(home_qlock) + SubString(System.Language,English) + Window.IsActive(home)</visible>
 		<posy>30</posy>
-		<animation effect="slide" end="250,70" time="0" condition="Control.HasFocus(300)">Conditional</animation>
+		<animation effect="slide" end="250,70" time="0" condition="Skin.HasSetting(home_qlock) + !Skin.HasSetting(horizontal_home)">Conditional</animation>
+		<animation effect="slide" start="0,0" end="-200,0" time="600" delay="200" tween="cubic" easing="inout" condition="Skin.HasSetting(horizontal_home) + Skin.HasSetting(horizontal_bottom_align) + [[Skin.String(Weather,3) | Skin.String(Weather,2)] + Container(301).HasFocus(20) | Container(301).HasFocus(21)]">Conditional</animation>
+		<animation effect="zoom" start="100,100" end="77,77" center="100,340" time="3500" tween="elastic" easing="out" reversible="true" condition="Skin.HasSetting(home_qlock) + Skin.HasSetting(horizontal_home) + !Skin.HasSetting(horizontal_bottom_align) + [[Skin.HasSetting(HomepageWeatherWidget) + [ Container(301).HasFocus(3) |  Container(301).HasFocus(5) |  Container(301).HasFocus(1)]] | [Skin.HasSetting(homepageHideRecentlyAdded) +  [Container(301).HasFocus(20) | Container(301).HasFocus(21)]]]">Conditional</animation>
+		<animation effect="zoom" start="100,100" end="90,90" center="220,-200" time="3500" tween="elastic" easing="out" reversible="true" condition="Skin.HasSetting(home_qlock) + !Skin.HasSetting(horizontal_home) + [[Skin.HasSetting(homepageHideRecentlyAdded) + [ Container(300).HasFocus(3) |  Container(300).HasFocus(1)]] | [Skin.HasSetting(HomepageWeatherWidget) +  [Container(300).HasFocus(20) | Container(300).HasFocus(21)]]]">Conditional</animation>
+		<animation effect="zoom" start="100,100" end="72,72" center="220,-200" time="3500" tween="elastic" easing="out" reversible="true" condition="Skin.HasSetting(home_qlock) + !Skin.HasSetting(horizontal_home) + [Skin.HasSetting(homepageHideRecentlyAdded) + Container(300).HasFocus(5)]">Conditional</animation>
 					
 			<!--		Minutes		-->
 			
@@ -2059,7 +2067,7 @@
 			</control>
 			<control type="label" id="20102">
 				<description>O´clock</description>
-				<visible>Control.isVisible(10004) + !System.Time(01:00,01:05)</visible>
+				<visible>Control.isVisible(10004) + ![System.Time(01:00,01:05)|System.Time(13:00,13:05)]</visible>
 			</control>
 			<control type="label" id="20110">
 				<description>Clock ON Minute1</description>
@@ -2150,6 +2158,7 @@
 				<!-- OFF ALL ROW 1-->
 				
 				<control type="grouplist" id="50">
+				<animation effect="slide" end="-280,340" time="0" condition="Skin.HasSetting(home_qlock) + Skin.HasSetting(horizontal_home) + !Skin.HasSetting(horizontal_bottom_align)">Conditional</animation>
 					<orientation>horizontal</orientation>
 					<width>600</width>
 					<height>450</height>
@@ -2236,6 +2245,7 @@
 				<!-- OFF ALL ROW 2 -->
 				
 				<control type="grouplist" id="50">
+				<animation effect="slide" end="260,295" time="0" condition="Skin.HasSetting(home_qlock) + Skin.HasSetting(horizontal_home) + !Skin.HasSetting(horizontal_bottom_align)">Conditional</animation>
 					<orientation>horizontal</orientation>
 					<posy>45</posy>
 					<width>600</width>
@@ -2323,6 +2333,7 @@
 				<!-- OFF ALL ROW 3-->
 				
 				<control type="grouplist" id="50">
+				<animation effect="slide" end="-280,295" time="0" condition="Skin.HasSetting(home_qlock) + Skin.HasSetting(horizontal_home) + !Skin.HasSetting(horizontal_bottom_align)">Conditional</animation>
 					<orientation>horizontal</orientation>
 					<posy>90</posy>
 					<width>600</width>
@@ -2410,6 +2421,7 @@
 				<!-- OFF ALL ROW 4-->
 				
 				<control type="grouplist" id="50">
+				<animation effect="slide" end="260,250" time="0" condition="Skin.HasSetting(home_qlock) + Skin.HasSetting(horizontal_home) + !Skin.HasSetting(horizontal_bottom_align)">Conditional</animation>
 					<orientation>horizontal</orientation>
 					<posy>135</posy>
 					<width>600</width>
@@ -2497,6 +2509,7 @@
 				<!-- OFF ALL ROW 5-->
 				
 				<control type="grouplist" id="50">
+				<animation effect="slide" end="-280,250" time="0" condition="Skin.HasSetting(home_qlock) + Skin.HasSetting(horizontal_home) + !Skin.HasSetting(horizontal_bottom_align)">Conditional</animation>
 					<orientation>horizontal</orientation>
 					<posy>180</posy>
 					<width>600</width>
@@ -2584,6 +2597,7 @@
 				<!-- OFF ALL ROW 6-->
 				
 				<control type="grouplist" id="50">
+				<animation effect="slide" end="260,205" time="0" condition="Skin.HasSetting(home_qlock) + Skin.HasSetting(horizontal_home) + !Skin.HasSetting(horizontal_bottom_align)">Conditional</animation>
 					<orientation>horizontal</orientation>
 					<posy>225</posy>
 					<width>600</width>
@@ -2671,6 +2685,7 @@
 				<!-- OFF ALL ROW 7-->
 				
 				<control type="grouplist" id="50">
+				<animation effect="slide" end="-280,205" time="0" condition="Skin.HasSetting(home_qlock) + Skin.HasSetting(horizontal_home) + !Skin.HasSetting(horizontal_bottom_align)">Conditional</animation>
 					<orientation>horizontal</orientation>
 					<posy>270</posy>
 					<width>600</width>
@@ -2758,6 +2773,7 @@
 				<!-- OFF ALL ROW 8-->
 				
 				<control type="grouplist" id="50">
+				<animation effect="slide" end="260,160" time="0" condition="Skin.HasSetting(home_qlock) + Skin.HasSetting(horizontal_home) + !Skin.HasSetting(horizontal_bottom_align)">Conditional</animation>
 					<orientation>horizontal</orientation>
 					<posy>315</posy>
 					<width>600</width>
@@ -2845,6 +2861,7 @@
 				<!-- OFF ALL ROW 9-->
 				
 				<control type="grouplist" id="50">
+				<animation effect="slide" end="-280,160" time="0" condition="Skin.HasSetting(home_qlock) + Skin.HasSetting(horizontal_home) + !Skin.HasSetting(horizontal_bottom_align)">Conditional</animation>
 					<orientation>horizontal</orientation>
 					<posy>360</posy>
 					<width>600</width>
@@ -2932,6 +2949,7 @@
 				<!-- OFF ALL ROW 10-->
 				
 				<control type="grouplist" id="50">
+				<animation effect="slide" end="260,115" time="0" condition="Skin.HasSetting(home_qlock) + Skin.HasSetting(horizontal_home) + !Skin.HasSetting(horizontal_bottom_align)">Conditional</animation>
 					<orientation>horizontal</orientation>
 					<posy>405</posy>
 					<width>600</width>
@@ -3020,6 +3038,7 @@
 				<!-- I T ON ROW 1-->
 				
 				<control type="grouplist" id="50">
+				<animation effect="slide" end="-280,340" time="0" condition="Skin.HasSetting(home_qlock) + Skin.HasSetting(horizontal_home) + !Skin.HasSetting(horizontal_bottom_align)">Conditional</animation>
 					<visible>true</visible>
 					<orientation>horizontal</orientation>
 					<width>600</width>
@@ -3045,6 +3064,7 @@
 				<!-- I S ON ROW 1-->
 				
 				<control type="grouplist" id="50">
+				<animation effect="slide" end="-280,340" time="0" condition="Skin.HasSetting(home_qlock) + Skin.HasSetting(horizontal_home) + !Skin.HasSetting(horizontal_bottom_align)">Conditional</animation>
 					<orientation>horizontal</orientation>
 					<posx>147</posx>
 					<width>600</width>
@@ -3070,6 +3090,7 @@
 				<!-- Q U A R T E R ON ROW 2-->
 				
 				<control type="grouplist" id="50">
+				<animation effect="slide" end="260,295" time="0" condition="Skin.HasSetting(home_qlock) + Skin.HasSetting(horizontal_home) + !Skin.HasSetting(horizontal_bottom_align)">Conditional</animation>
 					<orientation>horizontal</orientation>
 					<posy>45</posy>
 					<posx>98</posx>
@@ -3131,6 +3152,7 @@
 				<!-- T W E N T Y ON ROW 3-->
 				
 				<control type="grouplist" id="50">
+				<animation effect="slide" end="-280,295" time="0" condition="Skin.HasSetting(home_qlock) + Skin.HasSetting(horizontal_home) + !Skin.HasSetting(horizontal_bottom_align)">Conditional</animation>
 					<orientation>horizontal</orientation>
 					<posy>90</posy>
 					<width>600</width>
@@ -3184,6 +3206,7 @@
 				<!-- F I V E ON ROW 3-->
 				
 				<control type="grouplist" id="50">
+				<animation effect="slide" end="-280,295" time="0" condition="Skin.HasSetting(home_qlock) + Skin.HasSetting(horizontal_home) + !Skin.HasSetting(horizontal_bottom_align)">Conditional</animation>
 					<orientation>horizontal</orientation>
 					<posy>90</posy>
 					<posx>294</posx>
@@ -3224,6 +3247,7 @@
 				<!-- H A L F ON ROW 4-->
 				
 				<control type="grouplist" id="50">
+				<animation effect="slide" end="260,250" time="0" condition="Skin.HasSetting(home_qlock) + Skin.HasSetting(horizontal_home) + !Skin.HasSetting(horizontal_bottom_align)">Conditional</animation>
 					<orientation>horizontal</orientation>
 					<posy>135</posy>
 					<width>600</width>
@@ -3263,6 +3287,7 @@
 				<!-- T E N ON ROW 4-->
 				
 				<control type="grouplist" id="50">
+				<animation effect="slide" end="260,250" time="0" condition="Skin.HasSetting(home_qlock) + Skin.HasSetting(horizontal_home) + !Skin.HasSetting(horizontal_bottom_align)">Conditional</animation>
 					<orientation>horizontal</orientation>
 					<posy>135</posy>
 					<posx>245</posx>
@@ -3296,6 +3321,7 @@
 				<!-- T O ON ROW 4-->
 				
 				<control type="grouplist" id="50">
+				<animation effect="slide" end="260,250" time="0" condition="Skin.HasSetting(home_qlock) + Skin.HasSetting(horizontal_home) + !Skin.HasSetting(horizontal_bottom_align)">Conditional</animation>
 					<orientation>horizontal</orientation>
 					<posy>135</posy>
 					<posx>442</posx>
@@ -3322,6 +3348,7 @@
 				<!-- P A S T ON ROW 5-->
 				
 				<control type="grouplist" id="50">
+				<animation effect="slide" end="-280,250" time="0" condition="Skin.HasSetting(home_qlock) + Skin.HasSetting(horizontal_home) + !Skin.HasSetting(horizontal_bottom_align)">Conditional</animation>
 					<orientation>horizontal</orientation>
 					<posy>180</posy>
 					<width>600</width>
@@ -3361,6 +3388,7 @@
 				<!-- N I N E ON	ROW 5-->
 				
 				<control type="grouplist" id="50">
+				<animation effect="slide" end="-280,250" time="0" condition="Skin.HasSetting(home_qlock) + Skin.HasSetting(horizontal_home) + !Skin.HasSetting(horizontal_bottom_align)">Conditional</animation>
 					<orientation>horizontal</orientation>
 					<posy>180</posy>
 					<posx>343</posx>
@@ -3401,6 +3429,7 @@
 				<!-- O N E ON ROW 6-->
 				
 				<control type="grouplist" id="50">
+				<animation effect="slide" end="260,205" time="0" condition="Skin.HasSetting(home_qlock) + Skin.HasSetting(horizontal_home) + !Skin.HasSetting(horizontal_bottom_align)">Conditional</animation>
 					<orientation>horizontal</orientation>
 					<posy>225</posy>
 					<width>600</width>
@@ -3433,6 +3462,7 @@
 				<!-- S I X ON ROW 6-->
 				
 				<control type="grouplist" id="50">
+				<animation effect="slide" end="260,205" time="0" condition="Skin.HasSetting(home_qlock) + Skin.HasSetting(horizontal_home) + !Skin.HasSetting(horizontal_bottom_align)">Conditional</animation>
 					<orientation>horizontal</orientation>
 					<posy>225</posy>
 					<posx>147</posx>
@@ -3466,6 +3496,7 @@
 				<!-- T H R E E ON ROW 6-->
 				
 				<control type="grouplist" id="50">
+				<animation effect="slide" end="260,205" time="0" condition="Skin.HasSetting(home_qlock) + Skin.HasSetting(horizontal_home) + !Skin.HasSetting(horizontal_bottom_align)">Conditional</animation>
 					<orientation>horizontal</orientation>
 					<posy>225</posy>
 					<posx>294</posx>
@@ -3513,6 +3544,7 @@
 				<!-- F O U R ON ROW 7-->
 				
 				<control type="grouplist" id="50">
+				<animation effect="slide" end="-280,205" time="0" condition="Skin.HasSetting(home_qlock) + Skin.HasSetting(horizontal_home) + !Skin.HasSetting(horizontal_bottom_align)">Conditional</animation>
 					<orientation>horizontal</orientation>
 					<posy>270</posy>
 					<width>600</width>
@@ -3552,6 +3584,7 @@
 				<!-- F I V E ON ROW 7-->
 				
 				<control type="grouplist" id="50">
+				<animation effect="slide" end="-280,205" time="0" condition="Skin.HasSetting(home_qlock) + Skin.HasSetting(horizontal_home) + !Skin.HasSetting(horizontal_bottom_align)">Conditional</animation>
 					<orientation>horizontal</orientation>
 					<posy>270</posy>
 					<posx>196</posx>
@@ -3592,6 +3625,7 @@
 				<!-- T W O ALL ROW 7-->
 				
 				<control type="grouplist" id="50">
+				<animation effect="slide" end="-280,205" time="0" condition="Skin.HasSetting(home_qlock) + Skin.HasSetting(horizontal_home) + !Skin.HasSetting(horizontal_bottom_align)">Conditional</animation>
 					<orientation>horizontal</orientation>
 					<posy>270</posy>
 					<posx>392</posx>
@@ -3625,6 +3659,7 @@
 				<!-- E I G H T ON ROW 8-->
 				
 				<control type="grouplist" id="50">
+				<animation effect="slide" end="260,160" time="0" condition="Skin.HasSetting(home_qlock) + Skin.HasSetting(horizontal_home) + !Skin.HasSetting(horizontal_bottom_align)">Conditional</animation>
 					<orientation>horizontal</orientation>
 					<posy>315</posy>
 					<width>600</width>
@@ -3671,6 +3706,7 @@
 				<!-- E L E V E N ON ROW 8-->
 				
 				<control type="grouplist" id="50">
+				<animation effect="slide" end="260,160" time="0" condition="Skin.HasSetting(home_qlock) + Skin.HasSetting(horizontal_home) + !Skin.HasSetting(horizontal_bottom_align)">Conditional</animation>
 					<orientation>horizontal</orientation>
 					<posy>315</posy>
 					<posx>245</posx>
@@ -3725,6 +3761,7 @@
 				<!-- S E V E N ON ROW 9-->
 				
 				<control type="grouplist" id="50">
+				<animation effect="slide" end="-280,160" time="0" condition="Skin.HasSetting(home_qlock) + Skin.HasSetting(horizontal_home) + !Skin.HasSetting(horizontal_bottom_align)">Conditional</animation>
 					<orientation>horizontal</orientation>
 					<posy>360</posy>
 					<width>600</width>
@@ -3771,6 +3808,7 @@
 				<!-- T W E L V E ON ROW 9-->
 				
 				<control type="grouplist" id="50">
+				<animation effect="slide" end="-280,160" time="0" condition="Skin.HasSetting(home_qlock) + Skin.HasSetting(horizontal_home) + !Skin.HasSetting(horizontal_bottom_align)">Conditional</animation>
 					<orientation>horizontal</orientation>
 					<posy>360</posy>
 					<posx>245</posx>
@@ -3825,6 +3863,7 @@
 				<!-- T E N ON ROW 10-->
 				
 				<control type="grouplist" id="50">
+				<animation effect="slide" end="260,115" time="0" condition="Skin.HasSetting(home_qlock) + Skin.HasSetting(horizontal_home) + !Skin.HasSetting(horizontal_bottom_align)">Conditional</animation>
 					<orientation>horizontal</orientation>
 					<posy>405</posy>
 					<width>600</width>
@@ -3857,6 +3896,7 @@
 				<!-- O´ C L O C K ON ROW 10-->
 				
 				<control type="grouplist" id="50">
+				<animation effect="slide" end="260,115" time="0" condition="Skin.HasSetting(home_qlock) + Skin.HasSetting(horizontal_home) + !Skin.HasSetting(horizontal_bottom_align)">Conditional</animation>
 					<orientation>horizontal</orientation>
 					<posy>405</posy>
 					<posx>245</posx>
@@ -3912,6 +3952,7 @@
 			<!--	Minutes		-->
 			
 			<control type="label">
+			<animation effect="slide" end="-280,340" time="0" condition="Skin.HasSetting(home_qlock) + Skin.HasSetting(horizontal_home) + !Skin.HasSetting(horizontal_bottom_align)">Conditional</animation>
 				<description>Clock ON Minute1</description>
 				<posx>357</posx>
 				<posy>27</posy>
@@ -3921,6 +3962,7 @@
 				<visible>Control.isVisible(10110)</visible>
 			</control>
 			<control type="label">
+			<animation effect="slide" end="260,340" time="0" condition="Skin.HasSetting(home_qlock) + Skin.HasSetting(horizontal_home) + !Skin.HasSetting(horizontal_bottom_align)">Conditional</animation>
 				<description>Clock ON Minute2</description>
 				<posx>912</posx>
 				<posy>27</posy>
@@ -3928,9 +3970,9 @@
 				<font>LiberationSans_Regular_24</font>
 				<textcolor>Qlockfocus</textcolor>
 				<visible>Control.isVisible(10111)</visible>
-			</control>
-			
+			</control>			
 			<control type="label">
+			<animation effect="slide" end="260,115" time="0" condition="Skin.HasSetting(home_qlock) + Skin.HasSetting(horizontal_home) + !Skin.HasSetting(horizontal_bottom_align)">Conditional</animation>
 				<description>Clock ON Minute3</description>
 				<posx>912</posx>
 				<posy>487</posy>
@@ -3940,6 +3982,7 @@
 				<visible>Control.isVisible(10112)</visible>
 			</control>
 			<control type="label">
+			<animation effect="slide" end="-280,115" time="0" condition="Skin.HasSetting(home_qlock) + Skin.HasSetting(horizontal_home) + !Skin.HasSetting(horizontal_bottom_align)">Conditional</animation>
 				<description>Clock ON Minute4</description>
 				<posx>357</posx>
 				<posy>487</posy>
@@ -3948,7 +3991,9 @@
 				<textcolor>Qlockfocus</textcolor>
 				<visible>Control.isVisible(10113)</visible>
 			</control>
+			
 			<control type="label">
+			<animation effect="slide" end="-280,340" time="0" condition="Skin.HasSetting(home_qlock) + Skin.HasSetting(horizontal_home) + !Skin.HasSetting(horizontal_bottom_align)">Conditional</animation>
 				<description>Clock OFF Minute1</description>
 				<posx>355</posx>
 				<posy>30</posy>
@@ -3957,6 +4002,7 @@
 				<textcolor>Qlocknofocus</textcolor>
 			</control>
 			<control type="label">
+			<animation effect="slide" end="260,340" time="0" condition="Skin.HasSetting(home_qlock) + Skin.HasSetting(horizontal_home) + !Skin.HasSetting(horizontal_bottom_align)">Conditional</animation>
 				<description>Clock OFF  Minute2</description>
 				<posx>910</posx>
 				<posy>30</posy>
@@ -3965,6 +4011,7 @@
 				<textcolor>Qlocknofocus</textcolor>
 			</control>
 			<control type="label">
+			<animation effect="slide" end="-280,115" time="0" condition="Skin.HasSetting(home_qlock) + Skin.HasSetting(horizontal_home) + !Skin.HasSetting(horizontal_bottom_align)">Conditional</animation>
 				<description>Clock  OFF Minute3</description>
 				<posx>355</posx>
 				<posy>490</posy>
@@ -3973,6 +4020,7 @@
 				<textcolor>Qlocknofocus</textcolor>
 			</control>
 			<control type="label">
+			<animation effect="slide" end="260,115" time="0" condition="Skin.HasSetting(home_qlock) + Skin.HasSetting(horizontal_home) + !Skin.HasSetting(horizontal_bottom_align)">Conditional</animation>
 				<description>Clock OFF  Minute4</description>
 				<posx>910</posx>
 				<posy>490</posy>

@@ -122,7 +122,7 @@
 		<include condition="Skin.HasSetting(horizontal_home) + Skin.HasSetting(HomepageWeatherWidget)">HomepageWeatherWidget_2</include>
 		<control type="fixedlist" id="300">
 			<posx>-131</posx>
-			<posy>100</posy>
+			<posy>80</posy>
 			<height>468</height>
 			<width>1541</width>
 			<onup>300</onup>
