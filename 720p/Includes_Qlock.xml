@@ -53,16 +53,996 @@
 			<description>55-59</description>
 			<visible>substring(system.time(mm),55)|substring(system.time(mm),56)|substring(system.time(mm),57)|substring(system.time(mm),58)|substring(system.time(mm),59)</visible>
 		</control>
-	
+		
+		<control type="group" id="10">
+		<visible>Skin.HasSetting(home_qlock) + Window.IsActive(home)</visible>
+		<posy>30</posy>
+		<animation effect="slide" end="250,70" time="0" condition="Skin.HasSetting(home_qlock) + !Skin.HasSetting(horizontal_home)">Conditional</animation>
+		<animation effect="slide" end="80,0" time="0" condition="Skin.HasSetting(home_qlock) + !Skin.HasSetting(horizontal_home) + SubString(System.Language,German) + [Container(300).HasFocus(22) | Container(300).HasFocus(24)]">Conditional</animation>
+		<animation effect="slide" start="0,0" end="-200,0" time="600" delay="200" tween="cubic" easing="inout" condition="Skin.HasSetting(horizontal_home) + Skin.HasSetting(horizontal_bottom_align) + [[Skin.String(Weather,3) | Skin.String(Weather,2)] + Container(301).HasFocus(20) | Container(301).HasFocus(21)]">Conditional</animation>
+		<animation effect="zoom" start="100,100" end="77,77" center="100,340" time="3500" tween="elastic" easing="out" reversible="true" condition="Skin.HasSetting(home_qlock) + Skin.HasSetting(horizontal_home) + !Skin.HasSetting(horizontal_bottom_align) + [[Skin.HasSetting(HomepageWeatherWidget) + [ Container(301).HasFocus(3) |  Container(301).HasFocus(5) |  Container(301).HasFocus(1)]] | [Skin.HasSetting(homepageHideRecentlyAdded) +  [Container(301).HasFocus(20) | Container(301).HasFocus(21)]]]">Conditional</animation>
+		<animation effect="zoom" start="100,100" end="90,90" center="220,-200" time="3500" tween="elastic" easing="out" reversible="true" condition="Skin.HasSetting(home_qlock) + !Skin.HasSetting(horizontal_home) + [[Skin.HasSetting(homepageHideRecentlyAdded) + [Container(300).HasFocus(3) | Container(300).HasFocus(1)]] | [Skin.HasSetting(HomepageWeatherWidget) +  [Container(300).HasFocus(20) | Container(300).HasFocus(21)]]]">Conditional</animation>
+		<animation effect="zoom" start="100,100" end="72,72" center="220,-200" time="3500" tween="elastic" easing="out" reversible="true" condition="Skin.HasSetting(home_qlock) + !Skin.HasSetting(horizontal_home) + [Skin.HasSetting(homepageHideRecentlyAdded) + Container(300).HasFocus(5)]">Conditional</animation>
+		
+		<!--	Minute Signs	-->
+		
+			<control type="label">
+			<animation effect="slide" end="-280,340" time="0" condition="Skin.HasSetting(home_qlock) + Skin.HasSetting(horizontal_home) + !Skin.HasSetting(horizontal_bottom_align)">Conditional</animation>
+				<description>Clock ON Minute1</description>
+				<posx>357</posx>
+				<posy>27</posy>
+				<label>•</label>
+				<font>LiberationSans_Regular_24</font>
+				<textcolor>Qlockfocus</textcolor>
+				<visible>Control.isVisible(10110)</visible>
+			</control>
+			<control type="label">
+			<animation effect="slide" end="260,340" time="0" condition="Skin.HasSetting(home_qlock) + Skin.HasSetting(horizontal_home) + !Skin.HasSetting(horizontal_bottom_align)">Conditional</animation>
+				<description>Clock ON Minute2</description>
+				<posx>912</posx>
+				<posy>27</posy>
+				<label>•</label>
+				<font>LiberationSans_Regular_24</font>
+				<textcolor>Qlockfocus</textcolor>
+				<visible>Control.isVisible(10111)</visible>
+			</control>			
+			<control type="label">
+			<animation effect="slide" end="260,115" time="0" condition="Skin.HasSetting(home_qlock) + Skin.HasSetting(horizontal_home) + !Skin.HasSetting(horizontal_bottom_align)">Conditional</animation>
+				<description>Clock ON Minute3</description>
+				<posx>912</posx>
+				<posy>487</posy>
+				<label>•</label>
+				<font>LiberationSans_Regular_24</font>
+				<textcolor>Qlockfocus</textcolor>
+				<visible>Control.isVisible(10112)</visible>
+			</control>
+			<control type="label">
+			<animation effect="slide" end="-280,115" time="0" condition="Skin.HasSetting(home_qlock) + Skin.HasSetting(horizontal_home) + !Skin.HasSetting(horizontal_bottom_align)">Conditional</animation>
+				<description>Clock ON Minute4</description>
+				<posx>357</posx>
+				<posy>487</posy>
+				<label>•</label>
+				<font>LiberationSans_Regular_24</font>
+				<textcolor>Qlockfocus</textcolor>
+				<visible>Control.isVisible(10113)</visible>
+			</control>
+			
+			<control type="label">
+			<animation effect="slide" end="-280,340" time="0" condition="Skin.HasSetting(home_qlock) + Skin.HasSetting(horizontal_home) + !Skin.HasSetting(horizontal_bottom_align)">Conditional</animation>
+				<description>Clock OFF Minute1</description>
+				<posx>355</posx>
+				<posy>30</posy>
+				<label>°</label>
+				<font>LiberationSans_Regular_30</font>
+				<textcolor>Qlocknofocus</textcolor>
+			</control>
+			<control type="label">
+			<animation effect="slide" end="260,340" time="0" condition="Skin.HasSetting(home_qlock) + Skin.HasSetting(horizontal_home) + !Skin.HasSetting(horizontal_bottom_align)">Conditional</animation>
+				<description>Clock OFF  Minute2</description>
+				<posx>910</posx>
+				<posy>30</posy>
+				<label>°</label>
+				<font>LiberationSans_Regular_30</font>
+				<textcolor>Qlocknofocus</textcolor>
+			</control>
+			<control type="label">
+			<animation effect="slide" end="-280,115" time="0" condition="Skin.HasSetting(home_qlock) + Skin.HasSetting(horizontal_home) + !Skin.HasSetting(horizontal_bottom_align)">Conditional</animation>
+				<description>Clock  OFF Minute3</description>
+				<posx>355</posx>
+				<posy>490</posy>
+				<label>°</label>
+				<font>LiberationSans_Regular_30</font>
+				<textcolor>Qlocknofocus</textcolor>
+			</control>
+			<control type="label">
+			<animation effect="slide" end="260,115" time="0" condition="Skin.HasSetting(home_qlock) + Skin.HasSetting(horizontal_home) + !Skin.HasSetting(horizontal_bottom_align)">Conditional</animation>
+				<description>Clock OFF  Minute4</description>
+				<posx>910</posx>
+				<posy>490</posy>
+				<font>LiberationSans_Regular_30</font>
+				<textcolor>Qlocknofocus</textcolor>
+				<label>°</label>
+			</control>
+		
+			<!--	Clock OFF Poss	-->
+			
+			<control type="group" id="50">
+				<posx>375</posx>
+				<posy>50</posy>
+				<width>600</width>
+				<height>450</height>
+				
+				<!-- OFF ALL ROW 1-->
+				
+				<control type="grouplist" id="50">
+				<animation effect="slide" end="-280,340" time="0" condition="Skin.HasSetting(home_qlock) + Skin.HasSetting(horizontal_home) + !Skin.HasSetting(horizontal_bottom_align)">Conditional</animation>
+					<orientation>horizontal</orientation>
+					<width>600</width>
+					<height>450</height>
+					<itemgap>12</itemgap>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>$LOCALIZE[50000]</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>$LOCALIZE[50001]</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>$LOCALIZE[50002]</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>$LOCALIZE[50003]</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>$LOCALIZE[50004]</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>$LOCALIZE[50005]</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>$LOCALIZE[50006]</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>$LOCALIZE[50007]</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>$LOCALIZE[50008]</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>$LOCALIZE[50009]</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>$LOCALIZE[50010]</label>
+					</control>
+				</control>
+				
+				<!-- OFF ALL ROW 2 -->
+				
+				<control type="grouplist" id="50">
+				<animation effect="slide" end="260,295" time="0" condition="Skin.HasSetting(home_qlock) + Skin.HasSetting(horizontal_home) + !Skin.HasSetting(horizontal_bottom_align)">Conditional</animation>
+					<orientation>horizontal</orientation>
+					<posy>45</posy>
+					<width>600</width>
+					<height>450</height>
+					<itemgap>12</itemgap>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>$LOCALIZE[50011]</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>$LOCALIZE[50012]</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>$LOCALIZE[50013]</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>$LOCALIZE[50014]</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>$LOCALIZE[50015]</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>$LOCALIZE[50016]</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>$LOCALIZE[50017]</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>$LOCALIZE[50018]</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>$LOCALIZE[50019]</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>$LOCALIZE[50020]</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>$LOCALIZE[50021]</label>
+					</control>
+				</control>
+				
+				<!-- OFF ALL ROW 3-->
+				
+				<control type="grouplist" id="50">
+				<animation effect="slide" end="-280,295" time="0" condition="Skin.HasSetting(home_qlock) + Skin.HasSetting(horizontal_home) + !Skin.HasSetting(horizontal_bottom_align)">Conditional</animation>
+					<orientation>horizontal</orientation>
+					<posy>90</posy>
+					<width>600</width>
+					<height>450</height>
+					<itemgap>12</itemgap>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>$LOCALIZE[50022]</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>$LOCALIZE[50023]</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>$LOCALIZE[50024]</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>$LOCALIZE[50025]</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>$LOCALIZE[50026]</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>$LOCALIZE[50027]</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>$LOCALIZE[50028]</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>$LOCALIZE[50029]</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>$LOCALIZE[50030]</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>$LOCALIZE[50031]</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>$LOCALIZE[50032]</label>
+					</control>					
+				</control>
+				
+				<!-- OFF ALL ROW 4-->
+				
+				<control type="grouplist" id="50">
+				<animation effect="slide" end="260,250" time="0" condition="Skin.HasSetting(home_qlock) + Skin.HasSetting(horizontal_home) + !Skin.HasSetting(horizontal_bottom_align)">Conditional</animation>
+					<orientation>horizontal</orientation>
+					<posy>135</posy>
+					<width>600</width>
+					<height>450</height>
+					<itemgap>12</itemgap>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>$LOCALIZE[50033]</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>$LOCALIZE[50034]</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>$LOCALIZE[50035]</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>$LOCALIZE[50036]</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>$LOCALIZE[50037]</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>$LOCALIZE[50038]</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>$LOCALIZE[50039]</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>$LOCALIZE[50040]</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>$LOCALIZE[50041]</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>$LOCALIZE[50042]</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>$LOCALIZE[50043]</label>
+					</control>					
+				</control>
+				
+				<!-- OFF ALL ROW 5-->
+				
+				<control type="grouplist" id="50">
+				<animation effect="slide" end="-280,250" time="0" condition="Skin.HasSetting(home_qlock) + Skin.HasSetting(horizontal_home) + !Skin.HasSetting(horizontal_bottom_align)">Conditional</animation>
+					<orientation>horizontal</orientation>
+					<posy>180</posy>
+					<width>600</width>
+					<height>450</height>
+					<itemgap>12</itemgap>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>$LOCALIZE[50044]</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>$LOCALIZE[50045]</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>$LOCALIZE[50046]</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>$LOCALIZE[50047]</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>$LOCALIZE[50048]</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>$LOCALIZE[50049]</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>$LOCALIZE[50050]</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>$LOCALIZE[50051]</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>$LOCALIZE[50052]</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>$LOCALIZE[50053]</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>$LOCALIZE[50054]</label>
+					</control>				
+				</control>
+				
+				<!-- OFF ALL ROW 6-->
+				
+				<control type="grouplist" id="50">
+				<animation effect="slide" end="260,205" time="0" condition="Skin.HasSetting(home_qlock) + Skin.HasSetting(horizontal_home) + !Skin.HasSetting(horizontal_bottom_align)">Conditional</animation>
+					<orientation>horizontal</orientation>
+					<posy>225</posy>
+					<width>600</width>
+					<height>450</height>
+					<itemgap>12</itemgap>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>$LOCALIZE[50055]</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>$LOCALIZE[50056]</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>$LOCALIZE[50057]</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>$LOCALIZE[50058]</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>$LOCALIZE[50059]</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>$LOCALIZE[50060]</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>$LOCALIZE[50061]</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>$LOCALIZE[50062]</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>$LOCALIZE[50063]</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>$LOCALIZE[50064]</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>$LOCALIZE[50065]</label>
+					</control>					
+				</control>
+				
+				<!-- OFF ALL ROW 7-->
+				
+				<control type="grouplist" id="50">
+				<animation effect="slide" end="-280,205" time="0" condition="Skin.HasSetting(home_qlock) + Skin.HasSetting(horizontal_home) + !Skin.HasSetting(horizontal_bottom_align)">Conditional</animation>
+					<orientation>horizontal</orientation>
+					<posy>270</posy>
+					<width>600</width>
+					<height>450</height>
+					<itemgap>12</itemgap>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>$LOCALIZE[50066]</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>$LOCALIZE[50067]</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>$LOCALIZE[50068]</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>$LOCALIZE[50069]</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>$LOCALIZE[50070]</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>$LOCALIZE[50071]</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>$LOCALIZE[50072]</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>$LOCALIZE[50073]</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>$LOCALIZE[50074]</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>$LOCALIZE[50075]</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>$LOCALIZE[50076]</label>
+					</control>				
+				</control>
+				
+				<!-- OFF ALL ROW 8-->
+				
+				<control type="grouplist" id="50">
+				<animation effect="slide" end="260,160" time="0" condition="Skin.HasSetting(home_qlock) + Skin.HasSetting(horizontal_home) + !Skin.HasSetting(horizontal_bottom_align)">Conditional</animation>
+					<orientation>horizontal</orientation>
+					<posy>315</posy>
+					<width>600</width>
+					<height>450</height>
+					<itemgap>12</itemgap>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>$LOCALIZE[50077]</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>$LOCALIZE[50078]</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>$LOCALIZE[50079]</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>$LOCALIZE[50080]</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>$LOCALIZE[50081]</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>$LOCALIZE[50082]</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>$LOCALIZE[50083]</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>$LOCALIZE[50084]</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>$LOCALIZE[50085]</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>$LOCALIZE[50086]</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>$LOCALIZE[50087]</label>
+					</control>					
+				</control>
+				
+				<!-- OFF ALL ROW 9-->
+				
+				<control type="grouplist" id="50">
+				<animation effect="slide" end="-280,160" time="0" condition="Skin.HasSetting(home_qlock) + Skin.HasSetting(horizontal_home) + !Skin.HasSetting(horizontal_bottom_align)">Conditional</animation>
+					<orientation>horizontal</orientation>
+					<posy>360</posy>
+					<width>600</width>
+					<height>450</height>
+					<itemgap>12</itemgap>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>$LOCALIZE[50088]</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>$LOCALIZE[50089]</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>$LOCALIZE[50090]</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>$LOCALIZE[50091]</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>$LOCALIZE[50092]</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>$LOCALIZE[50093]</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>$LOCALIZE[50094]</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>$LOCALIZE[50095]</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>$LOCALIZE[50096]</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>$LOCALIZE[50097]</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>$LOCALIZE[50098]</label>
+					</control>					
+				</control>
+				
+				<!-- OFF ALL ROW 10-->
+				
+				<control type="grouplist" id="50">
+				<animation effect="slide" end="260,115" time="0" condition="Skin.HasSetting(home_qlock) + Skin.HasSetting(horizontal_home) + !Skin.HasSetting(horizontal_bottom_align)">Conditional</animation>
+					<orientation>horizontal</orientation>
+					<posy>405</posy>
+					<width>600</width>
+					<height>450</height>
+					<itemgap>12</itemgap>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>$LOCALIZE[50099]</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>$LOCALIZE[50100]</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>$LOCALIZE[50101]</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>$LOCALIZE[50102]</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>$LOCALIZE[50103]</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>$LOCALIZE[50104]</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>$LOCALIZE[50105]</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>$LOCALIZE[50106]</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>$LOCALIZE[50107]</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>$LOCALIZE[50108]</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlocknofocus</textcolor>
+						<align>center</align>
+						<label>$LOCALIZE[50109]</label>
+					</control>				
+				</control>
+			</control>
+		</control>	
+
 		<!--	GERMAN		-->
 	
 		<control type="group" id="10">
 		<visible>Skin.HasSetting(home_qlock) + SubString(System.Language,German) + [[Window.IsActive(home) + !Skin.HasSetting(horizontal_home)] | Skin.HasSetting(horizontal_bottom_align)]</visible>
 		<posy>30</posy>
 		<animation effect="slide" end="250,70" time="0" condition="Skin.HasSetting(home_qlock) + !Skin.HasSetting(horizontal_home)">Conditional</animation>
+		<animation effect="slide" end="80,0" time="0" condition="Skin.HasSetting(home_qlock) + !Skin.HasSetting(horizontal_home) + [Container(300).HasFocus(22) | Container(300).HasFocus(24)]">Conditional</animation>
 		<animation effect="slide" start="0,0" end="-200,0" time="600" delay="200" tween="cubic" easing="inout" condition="Skin.HasSetting(horizontal_home) + Skin.HasSetting(horizontal_bottom_align) + [[Skin.String(Weather,3) | Skin.String(Weather,2)] + Container(301).HasFocus(20) | Container(301).HasFocus(21)]">Conditional</animation>
 		<animation effect="zoom" start="100,100" end="77,77" center="100,340" time="3500" tween="elastic" easing="out" reversible="true" condition="Skin.HasSetting(home_qlock) + Skin.HasSetting(horizontal_home) + !Skin.HasSetting(horizontal_bottom_align) + [[Skin.HasSetting(HomepageWeatherWidget) + [ Container(301).HasFocus(3) |  Container(301).HasFocus(5) |  Container(301).HasFocus(1)]] | [Skin.HasSetting(homepageHideRecentlyAdded) +  [Container(301).HasFocus(20) | Container(301).HasFocus(21)]]]">Conditional</animation>
-		<animation effect="zoom" start="100,100" end="90,90" center="220,-200" time="3500" tween="elastic" easing="out" reversible="true" condition="Skin.HasSetting(home_qlock) + !Skin.HasSetting(horizontal_home) + [[Skin.HasSetting(homepageHideRecentlyAdded) + [ Container(300).HasFocus(3) |  Container(300).HasFocus(1)]] | [Skin.HasSetting(HomepageWeatherWidget) +  [Container(300).HasFocus(20) | Container(300).HasFocus(21)]]]">Conditional</animation>
+		<animation effect="zoom" start="100,100" end="90,90" center="220,-200" time="3500" tween="elastic" easing="out" reversible="true" condition="Skin.HasSetting(home_qlock) + !Skin.HasSetting(horizontal_home) + [[Skin.HasSetting(homepageHideRecentlyAdded) + [Container(300).HasFocus(3) | Container(300).HasFocus(1)]] | [Skin.HasSetting(HomepageWeatherWidget) +  [Container(300).HasFocus(20) | Container(300).HasFocus(21)]]]">Conditional</animation>
 		<animation effect="zoom" start="100,100" end="72,72" center="220,-200" time="3500" tween="elastic" easing="out" reversible="true" condition="Skin.HasSetting(home_qlock) + !Skin.HasSetting(horizontal_home) + [Skin.HasSetting(homepageHideRecentlyAdded) + Container(300).HasFocus(5)]">Conditional</animation>
 			
 			<!--		Minutes		-->
@@ -176,888 +1156,19 @@
 				<description>Zwölf</description>
 				<visible>System.Time(11:25,12:25)|System.Time(23:25,00:25)</visible>
 			</control>
-			
-			<!-- 		Clock Position		-->
-			
+				
+			<!-- 	Clock ON Poss	-->
+				
 			<control type="group" id="50">
 				<posx>375</posx>
 				<posy>50</posy>
 				<width>600</width>
-				<height>450</height>
+				<height>450</height>				
 				
-				<!-- OFF ALL ROW 1-->
-				
-				<control type="grouplist" id="50">
-					<orientation>horizontal</orientation>
-					<width>600</width>
-					<height>450</height>
-					<itemgap>12</itemgap>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>E</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>S</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>K</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>I</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>S</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>T</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>A</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>F</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>Ü</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>N</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>F</label>
-					</control>						
-				</control>
-				
-				<!-- OFF ALL ROW 2 -->
-				
-				<control type="grouplist" id="50">
-					<orientation>horizontal</orientation>
-					<posy>45</posy>
-					<width>600</width>
-					<height>450</height>
-					<itemgap>12</itemgap>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>Z</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>E</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>H</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>N</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>Z</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>W</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>A</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>N</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>Z</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>I</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>G</label>
-					</control>						
-				</control>
-				
-				<!-- OFF ALL ROW 3-->
-				
-				<control type="grouplist" id="50">
-					<orientation>horizontal</orientation>
-					<posy>90</posy>
-					<width>600</width>
-					<height>450</height>
-					<itemgap>12</itemgap>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>V</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>I</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>E</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>R</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>T</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>E</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>L</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>X</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>V</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>O</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>R</label>
-					</control>						
-				</control>
-				
-				<!-- OFF ALL ROW 4-->
-				
-				<control type="grouplist" id="50">
-					<orientation>horizontal</orientation>
-					<posy>135</posy>
-					<width>600</width>
-					<height>450</height>
-					<itemgap>12</itemgap>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>N</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>A</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>C</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>H</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>A</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>J</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>U</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>H</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>A</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>L</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>B</label>
-					</control>						
-				</control>
-				
-				<!-- OFF ALL ROW 5-->
-				
-				<control type="grouplist" id="50">
-					<orientation>horizontal</orientation>
-					<posy>180</posy>
-					<width>600</width>
-					<height>450</height>
-					<itemgap>12</itemgap>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>E</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>I</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>N</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>S</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>L</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>M</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>E</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>Z</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>W</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>E</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>I</label>
-					</control>						
-				</control>
-				
-				<!-- OFF ALL ROW 6-->
-				
-				<control type="grouplist" id="50">
-					<orientation>horizontal</orientation>
-					<posy>225</posy>
-					<width>600</width>
-					<height>450</height>
-					<itemgap>12</itemgap>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>D</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>R</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>E</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>I</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>A</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>U</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>J</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>V</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>I</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>E</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>R</label>
-					</control>						
-				</control>
-				
-				<!-- OFF ALL ROW 7-->
-				
-				<control type="grouplist" id="50">
-					<orientation>horizontal</orientation>
-					<posy>270</posy>
-					<width>600</width>
-					<height>450</height>
-					<itemgap>12</itemgap>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>F</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>Ü</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>N</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>F</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>T</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>O</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>S</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>E</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>C</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>H</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>S</label>
-					</control>						
-				</control>
-				
-				<!-- OFF ALL ROW 8-->
-				
-				<control type="grouplist" id="50">
-					<orientation>horizontal</orientation>
-					<posy>315</posy>
-					<width>600</width>
-					<height>450</height>
-					<itemgap>12</itemgap>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>S</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>I</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>E</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>B</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>E</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>N</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>L</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>A</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>C</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>H</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>T</label>
-					</control>						
-				</control>
-				
-				<!-- OFF ALL ROW 9-->
-				
-				<control type="grouplist" id="50">
-					<orientation>horizontal</orientation>
-					<posy>360</posy>
-					<width>600</width>
-					<height>450</height>
-					<itemgap>12</itemgap>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>N</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>E</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>U</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>N</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>Z</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>E</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>H</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>N</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>E</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>L</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>F</label>
-					</control>						
-				</control>
-				
-				<!-- OFF ALL ROW 10-->
-				
-				<control type="grouplist" id="50">
-					<orientation>horizontal</orientation>
-					<posy>405</posy>
-					<width>600</width>
-					<height>450</height>
-					<itemgap>12</itemgap>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>Z</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>W</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>Ö</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>L</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>F</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>U</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>N</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>K</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>U</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>H</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>R</label>
-					</control>						
-				</control>
-				
-				<!-- ON GROUPS -->
 				<!-- E S ON ROW 1-->
 				
 				<control type="grouplist" id="50">
+				<animation effect="slide" end="-280,340" time="0" condition="Skin.HasSetting(home_qlock) + Skin.HasSetting(horizontal_home) + !Skin.HasSetting(horizontal_bottom_align)">Conditional</animation>
 					<visible>true</visible>
 					<orientation>horizontal</orientation>
 					<width>600</width>
@@ -1082,6 +1193,7 @@
 				<!-- I S T ON ROW 1-->
 				
 				<control type="grouplist" id="50">
+				<animation effect="slide" end="-280,340" time="0" condition="Skin.HasSetting(home_qlock) + Skin.HasSetting(horizontal_home) + !Skin.HasSetting(horizontal_bottom_align)">Conditional</animation>
 					<orientation>horizontal</orientation>
 					<width>600</width>
 					<height>450</height>
@@ -1114,6 +1226,7 @@
 				<!-- F Ü N F ON ROW 1-->
 				
 				<control type="grouplist" id="50">
+				<animation effect="slide" end="-280,340" time="0" condition="Skin.HasSetting(home_qlock) + Skin.HasSetting(horizontal_home) + !Skin.HasSetting(horizontal_bottom_align)">Conditional</animation>
 					<orientation>horizontal</orientation>
 					<posx>343</posx>
 					<width>600</width>
@@ -1153,6 +1266,7 @@
 				<!-- Z E H N ON ROW 2-->
 				
 				<control type="grouplist" id="50">
+				<animation effect="slide" end="260,295" time="0" condition="Skin.HasSetting(home_qlock) + Skin.HasSetting(horizontal_home) + !Skin.HasSetting(horizontal_bottom_align)">Conditional</animation>
 					<orientation>horizontal</orientation>
 					<posy>45</posy>
 					<width>600</width>
@@ -1192,6 +1306,7 @@
 				<!-- Z W A N Z I G ON ROW 2-->
 				
 				<control type="grouplist" id="50">
+				<animation effect="slide" end="260,295" time="0" condition="Skin.HasSetting(home_qlock) + Skin.HasSetting(horizontal_home) + !Skin.HasSetting(horizontal_bottom_align)">Conditional</animation>
 					<orientation>horizontal</orientation>
 					<posy>45</posy>
 					<width>600</width>
@@ -1253,6 +1368,7 @@
 				<!-- V O R ON ROW 3-->
 				
 				<control type="grouplist" id="50">
+				<animation effect="slide" end="-280,295" time="0" condition="Skin.HasSetting(home_qlock) + Skin.HasSetting(horizontal_home) + !Skin.HasSetting(horizontal_bottom_align)">Conditional</animation>
 					<orientation>horizontal</orientation>
 					<posy>90</posy>
 					<posx>391</posx>
@@ -1286,6 +1402,7 @@
 				<!-- V I E R T E L ON ROW 3-->
 				
 				<control type="grouplist" id="50">
+				<animation effect="slide" end="-280,295" time="0" condition="Skin.HasSetting(home_qlock) + Skin.HasSetting(horizontal_home) + !Skin.HasSetting(horizontal_bottom_align)">Conditional</animation>
 					<orientation>horizontal</orientation>
 					<posy>90</posy>
 					<width>600</width>
@@ -1346,6 +1463,7 @@
 				<!-- N A C H ON ROW 4-->
 				
 				<control type="grouplist" id="50">
+				<animation effect="slide" end="260,250" time="0" condition="Skin.HasSetting(home_qlock) + Skin.HasSetting(horizontal_home) + !Skin.HasSetting(horizontal_bottom_align)">Conditional</animation>
 					<orientation>horizontal</orientation>
 					<posy>135</posy>
 					<width>600</width>
@@ -1385,6 +1503,7 @@
 				<!-- H A L B ON ROW 4-->
 				
 				<control type="grouplist" id="50">
+				<animation effect="slide" end="260,250" time="0" condition="Skin.HasSetting(home_qlock) + Skin.HasSetting(horizontal_home) + !Skin.HasSetting(horizontal_bottom_align)">Conditional</animation>
 					<orientation>horizontal</orientation>
 					<posy>135</posy>
 					<posx>343</posx>
@@ -1425,6 +1544,7 @@
 				<!-- E I N S ON ROW 5-->
 				
 				<control type="grouplist" id="50">
+				<animation effect="slide" end="-280,250" time="0" condition="Skin.HasSetting(home_qlock) + Skin.HasSetting(horizontal_home) + !Skin.HasSetting(horizontal_bottom_align)">Conditional</animation>
 					<orientation>horizontal</orientation>
 					<posy>180</posy>
 					<width>600</width>
@@ -1464,6 +1584,7 @@
 				<!-- Z W E I ALL ROW 5-->
 				
 				<control type="grouplist" id="50">
+				<animation effect="slide" end="-280,250" time="0" condition="Skin.HasSetting(home_qlock) + Skin.HasSetting(horizontal_home) + !Skin.HasSetting(horizontal_bottom_align)">Conditional</animation>
 					<orientation>horizontal</orientation>
 					<posy>180</posy>
 					<posx>343</posx>
@@ -1504,6 +1625,7 @@
 				<!-- D R E I ON ROW 6-->
 				
 				<control type="grouplist" id="50">
+				<animation effect="slide" end="260,205" time="0" condition="Skin.HasSetting(home_qlock) + Skin.HasSetting(horizontal_home) + !Skin.HasSetting(horizontal_bottom_align)">Conditional</animation>
 					<orientation>horizontal</orientation>
 					<posy>225</posy>
 					<width>600</width>
@@ -1543,6 +1665,7 @@
 				<!-- V I E R ON ROW 6-->
 				
 				<control type="grouplist" id="50">
+				<animation effect="slide" end="260,205" time="0" condition="Skin.HasSetting(home_qlock) + Skin.HasSetting(horizontal_home) + !Skin.HasSetting(horizontal_bottom_align)">Conditional</animation>
 					<orientation>horizontal</orientation>
 					<posy>225</posy>
 					<posx>343</posx>
@@ -1622,6 +1745,7 @@
 				<!-- S E C H S ON ROW 7-->
 				
 				<control type="grouplist" id="50">
+				<animation effect="slide" end="-280,205" time="0" condition="Skin.HasSetting(home_qlock) + Skin.HasSetting(horizontal_home) + !Skin.HasSetting(horizontal_bottom_align)">Conditional</animation>
 					<orientation>horizontal</orientation>
 					<posy>270</posy>
 					<posx>293</posx>
@@ -1669,6 +1793,7 @@
 				<!-- S I E B E N ON ROW 8-->
 				
 				<control type="grouplist" id="50">
+				<animation effect="slide" end="260,160" time="0" condition="Skin.HasSetting(home_qlock) + Skin.HasSetting(horizontal_home) + !Skin.HasSetting(horizontal_bottom_align)">Conditional</animation>
 					<orientation>horizontal</orientation>
 					<posy>315</posy>
 					<width>600</width>
@@ -1722,6 +1847,7 @@
 				<!-- A C H T ON ROW 8-->
 				
 				<control type="grouplist" id="50">
+				<animation effect="slide" end="260,160" time="0" condition="Skin.HasSetting(home_qlock) + Skin.HasSetting(horizontal_home) + !Skin.HasSetting(horizontal_bottom_align)">Conditional</animation>
 					<orientation>horizontal</orientation>
 					<posy>315</posy>
 					<posx>343</posx>
@@ -1762,6 +1888,7 @@
 				<!-- N E U N ON	ROW 9-->
 				
 				<control type="grouplist" id="50">
+				<animation effect="slide" end="-280,160" time="0" condition="Skin.HasSetting(home_qlock) + Skin.HasSetting(horizontal_home) + !Skin.HasSetting(horizontal_bottom_align)">Conditional</animation>
 					<orientation>horizontal</orientation>
 					<posy>360</posy>
 					<width>600</width>
@@ -1801,6 +1928,7 @@
 				<!-- Z E H N ON ROW 9-->
 				
 				<control type="grouplist" id="50">
+				<animation effect="slide" end="-280,160" time="0" condition="Skin.HasSetting(home_qlock) + Skin.HasSetting(horizontal_home) + !Skin.HasSetting(horizontal_bottom_align)">Conditional</animation>
 					<orientation>horizontal</orientation>
 					<posy>360</posy>
 					<posx>195</posx>
@@ -1841,6 +1969,7 @@
 				<!-- E L F ON ROW 9-->
 				
 				<control type="grouplist" id="50">
+				<animation effect="slide" end="-280,160" time="0" condition="Skin.HasSetting(home_qlock) + Skin.HasSetting(horizontal_home) + !Skin.HasSetting(horizontal_bottom_align)">Conditional</animation>
 					<orientation>horizontal</orientation>
 					<posy>360</posy>
 					<posx>391</posx>
@@ -1874,6 +2003,7 @@
 				<!-- Z W Ö L ON ROW 10-->
 				
 				<control type="grouplist" id="50">
+				<animation effect="slide" end="260,115" time="0" condition="Skin.HasSetting(home_qlock) + Skin.HasSetting(horizontal_home) + !Skin.HasSetting(horizontal_bottom_align)">Conditional</animation>
 					<orientation>horizontal</orientation>
 					<posy>405</posy>
 					<width>600</width>
@@ -1920,6 +2050,7 @@
 				<!-- U H R ON ROW 10-->
 				
 				<control type="grouplist" id="50">
+				<animation effect="slide" end="260,115" time="0" condition="Skin.HasSetting(home_qlock) + Skin.HasSetting(horizontal_home) + !Skin.HasSetting(horizontal_bottom_align)">Conditional</animation>
 					<orientation>horizontal</orientation>
 					<posy>405</posy>
 					<posx>391</posx>
@@ -1950,78 +2081,6 @@
 					<visible>Control.isVisible(10102)</visible>
 				</control>
 			</control>
-			
-			<!--	Minutes		-->
-			
-			<control type="label">
-				<description>Clock ON Minute1</description>
-				<posx>357</posx>
-				<posy>27</posy>
-				<label>•</label>
-				<font>LiberationSans_Regular_24</font>
-				<textcolor>Qlockfocus</textcolor>
-				<visible>Control.isVisible(10110)</visible>
-			</control>
-			<control type="label">
-				<description>Clock ON Minute2</description>
-				<posx>912</posx>
-				<posy>27</posy>
-				<label>•</label>
-				<font>LiberationSans_Regular_24</font>
-				<textcolor>Qlockfocus</textcolor>
-				<visible>Control.isVisible(10111)</visible>
-			</control>
-			
-			<control type="label">
-				<description>Clock ON Minute3</description>
-				<posx>912</posx>
-				<posy>487</posy>
-				<label>•</label>
-				<font>LiberationSans_Regular_24</font>
-				<textcolor>Qlockfocus</textcolor>
-				<visible>Control.isVisible(10112)</visible>
-			</control>
-			<control type="label">
-				<description>Clock ON Minute4</description>
-				<posx>357</posx>
-				<posy>487</posy>
-				<label>•</label>
-				<font>LiberationSans_Regular_24</font>
-				<textcolor>Qlockfocus</textcolor>
-				<visible>Control.isVisible(10113)</visible>
-			</control>
-			<control type="label">
-				<description>Clock OFF Minute1</description>
-				<posx>355</posx>
-				<posy>30</posy>
-				<label>°</label>
-				<font>LiberationSans_Regular_30</font>
-				<textcolor>Qlocknofocus</textcolor>
-			</control>
-			<control type="label">
-				<description>Clock OFF  Minute2</description>
-				<posx>910</posx>
-				<posy>30</posy>
-				<label>°</label>
-				<font>LiberationSans_Regular_30</font>
-				<textcolor>Qlocknofocus</textcolor>
-			</control>
-			<control type="label">
-				<description>Clock  OFF Minute3</description>
-				<posx>355</posx>
-				<posy>490</posy>
-				<label>°</label>
-				<font>LiberationSans_Regular_30</font>
-				<textcolor>Qlocknofocus</textcolor>
-			</control>
-			<control type="label">
-				<description>Clock OFF  Minute4</description>
-				<posx>910</posx>
-				<posy>490</posy>
-				<font>LiberationSans_Regular_30</font>
-				<textcolor>Qlocknofocus</textcolor>
-				<label>°</label>
-			</control>
 		</control>
 		
 		<!-- 	ENGLISH		-->
@@ -2032,7 +2091,7 @@
 		<animation effect="slide" end="250,70" time="0" condition="Skin.HasSetting(home_qlock) + !Skin.HasSetting(horizontal_home)">Conditional</animation>
 		<animation effect="slide" start="0,0" end="-200,0" time="600" delay="200" tween="cubic" easing="inout" condition="Skin.HasSetting(horizontal_home) + Skin.HasSetting(horizontal_bottom_align) + [[Skin.String(Weather,3) | Skin.String(Weather,2)] + Container(301).HasFocus(20) | Container(301).HasFocus(21)]">Conditional</animation>
 		<animation effect="zoom" start="100,100" end="77,77" center="100,340" time="3500" tween="elastic" easing="out" reversible="true" condition="Skin.HasSetting(home_qlock) + Skin.HasSetting(horizontal_home) + !Skin.HasSetting(horizontal_bottom_align) + [[Skin.HasSetting(HomepageWeatherWidget) + [ Container(301).HasFocus(3) |  Container(301).HasFocus(5) |  Container(301).HasFocus(1)]] | [Skin.HasSetting(homepageHideRecentlyAdded) +  [Container(301).HasFocus(20) | Container(301).HasFocus(21)]]]">Conditional</animation>
-		<animation effect="zoom" start="100,100" end="90,90" center="220,-200" time="3500" tween="elastic" easing="out" reversible="true" condition="Skin.HasSetting(home_qlock) + !Skin.HasSetting(horizontal_home) + [[Skin.HasSetting(homepageHideRecentlyAdded) + [ Container(300).HasFocus(3) |  Container(300).HasFocus(1)]] | [Skin.HasSetting(HomepageWeatherWidget) +  [Container(300).HasFocus(20) | Container(300).HasFocus(21)]]]">Conditional</animation>
+		<animation effect="zoom" start="100,100" end="90,90" center="220,-200" time="3500" tween="elastic" easing="out" reversible="true" condition="Skin.HasSetting(home_qlock) + !Skin.HasSetting(horizontal_home) + [[Skin.HasSetting(homepageHideRecentlyAdded) + [Container(300).HasFocus(3) | Container(300).HasFocus(1)]] | [Skin.HasSetting(HomepageWeatherWidget) +  [Container(300).HasFocus(20) | Container(300).HasFocus(21)]]]">Conditional</animation>
 		<animation effect="zoom" start="100,100" end="72,72" center="220,-200" time="3500" tween="elastic" easing="out" reversible="true" condition="Skin.HasSetting(home_qlock) + !Skin.HasSetting(horizontal_home) + [Skin.HasSetting(homepageHideRecentlyAdded) + Container(300).HasFocus(5)]">Conditional</animation>
 					
 			<!--		Minutes		-->
@@ -2146,895 +2205,15 @@
 				<description>Twelve</description>
 				<visible>System.Time(11:35,12:35)|System.Time(23:35,00:35)</visible>
 			</control>
-			
-			<!-- 		Clock Position		-->
-			
+				
+			<!-- 	Clock ON	-->
+				
 			<control type="group" id="50">
 				<posx>375</posx>
 				<posy>50</posy>
 				<width>600</width>
-				<height>450</height>
+				<height>450</height>	
 				
-				<!-- OFF ALL ROW 1-->
-				
-				<control type="grouplist" id="50">
-				<animation effect="slide" end="-280,340" time="0" condition="Skin.HasSetting(home_qlock) + Skin.HasSetting(horizontal_home) + !Skin.HasSetting(horizontal_bottom_align)">Conditional</animation>
-					<orientation>horizontal</orientation>
-					<width>600</width>
-					<height>450</height>
-					<itemgap>12</itemgap>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>I</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>T</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>L</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>I</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>S</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>A</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>S</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>T</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>I</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>M</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>E</label>
-					</control>						
-				</control>
-				
-				<!-- OFF ALL ROW 2 -->
-				
-				<control type="grouplist" id="50">
-				<animation effect="slide" end="260,295" time="0" condition="Skin.HasSetting(home_qlock) + Skin.HasSetting(horizontal_home) + !Skin.HasSetting(horizontal_bottom_align)">Conditional</animation>
-					<orientation>horizontal</orientation>
-					<posy>45</posy>
-					<width>600</width>
-					<height>450</height>
-					<itemgap>12</itemgap>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>A</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>C</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>Q</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>U</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>A</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>R</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>T</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>E</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>R</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>D</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>C</label>
-					</control>						
-				</control>
-				
-				<!-- OFF ALL ROW 3-->
-				
-				<control type="grouplist" id="50">
-				<animation effect="slide" end="-280,295" time="0" condition="Skin.HasSetting(home_qlock) + Skin.HasSetting(horizontal_home) + !Skin.HasSetting(horizontal_bottom_align)">Conditional</animation>
-					<orientation>horizontal</orientation>
-					<posy>90</posy>
-					<width>600</width>
-					<height>450</height>
-					<itemgap>12</itemgap>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>T</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>W</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>E</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>N</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>T</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>Y</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>F</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>I</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>V</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>E</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>X</label>
-					</control>						
-				</control>
-				
-				<!-- OFF ALL ROW 4-->
-				
-				<control type="grouplist" id="50">
-				<animation effect="slide" end="260,250" time="0" condition="Skin.HasSetting(home_qlock) + Skin.HasSetting(horizontal_home) + !Skin.HasSetting(horizontal_bottom_align)">Conditional</animation>
-					<orientation>horizontal</orientation>
-					<posy>135</posy>
-					<width>600</width>
-					<height>450</height>
-					<itemgap>12</itemgap>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>H</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>A</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>L</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>F</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>B</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>T</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>E</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>N</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>F</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>T</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>O</label>
-					</control>						
-				</control>
-				
-				<!-- OFF ALL ROW 5-->
-				
-				<control type="grouplist" id="50">
-				<animation effect="slide" end="-280,250" time="0" condition="Skin.HasSetting(home_qlock) + Skin.HasSetting(horizontal_home) + !Skin.HasSetting(horizontal_bottom_align)">Conditional</animation>
-					<orientation>horizontal</orientation>
-					<posy>180</posy>
-					<width>600</width>
-					<height>450</height>
-					<itemgap>12</itemgap>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>P</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>A</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>S</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>T</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>E</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>R</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>U</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>N</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>I</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>N</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>E</label>
-					</control>						
-				</control>
-				
-				<!-- OFF ALL ROW 6-->
-				
-				<control type="grouplist" id="50">
-				<animation effect="slide" end="260,205" time="0" condition="Skin.HasSetting(home_qlock) + Skin.HasSetting(horizontal_home) + !Skin.HasSetting(horizontal_bottom_align)">Conditional</animation>
-					<orientation>horizontal</orientation>
-					<posy>225</posy>
-					<width>600</width>
-					<height>450</height>
-					<itemgap>12</itemgap>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>O</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>N</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>E</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>S</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>I</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>X</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>T</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>H</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>R</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>E</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>E</label>
-					</control>						
-				</control>
-				
-				<!-- OFF ALL ROW 7-->
-				
-				<control type="grouplist" id="50">
-				<animation effect="slide" end="-280,205" time="0" condition="Skin.HasSetting(home_qlock) + Skin.HasSetting(horizontal_home) + !Skin.HasSetting(horizontal_bottom_align)">Conditional</animation>
-					<orientation>horizontal</orientation>
-					<posy>270</posy>
-					<width>600</width>
-					<height>450</height>
-					<itemgap>12</itemgap>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>F</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>O</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>U</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>R</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>F</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>I</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>V</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>E</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>T</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>W</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>O</label>
-					</control>						
-				</control>
-				
-				<!-- OFF ALL ROW 8-->
-				
-				<control type="grouplist" id="50">
-				<animation effect="slide" end="260,160" time="0" condition="Skin.HasSetting(home_qlock) + Skin.HasSetting(horizontal_home) + !Skin.HasSetting(horizontal_bottom_align)">Conditional</animation>
-					<orientation>horizontal</orientation>
-					<posy>315</posy>
-					<width>600</width>
-					<height>450</height>
-					<itemgap>12</itemgap>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>E</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>I</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>G</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>H</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>T</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>E</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>L</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>E</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>V</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>E</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>N</label>
-					</control>						
-				</control>
-				
-				<!-- OFF ALL ROW 9-->
-				
-				<control type="grouplist" id="50">
-				<animation effect="slide" end="-280,160" time="0" condition="Skin.HasSetting(home_qlock) + Skin.HasSetting(horizontal_home) + !Skin.HasSetting(horizontal_bottom_align)">Conditional</animation>
-					<orientation>horizontal</orientation>
-					<posy>360</posy>
-					<width>600</width>
-					<height>450</height>
-					<itemgap>12</itemgap>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>S</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>E</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>V</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>E</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>N</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>T</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>W</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>E</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>L</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>V</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>E</label>
-					</control>						
-				</control>
-				
-				<!-- OFF ALL ROW 10-->
-				
-				<control type="grouplist" id="50">
-				<animation effect="slide" end="260,115" time="0" condition="Skin.HasSetting(home_qlock) + Skin.HasSetting(horizontal_home) + !Skin.HasSetting(horizontal_bottom_align)">Conditional</animation>
-					<orientation>horizontal</orientation>
-					<posy>405</posy>
-					<width>600</width>
-					<height>450</height>
-					<itemgap>12</itemgap>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>T</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>E</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>N</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>S</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>E</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>right</align>
-						<label>O´</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>C</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>L</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>O</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>C</label>
-					</control>
-					<control type="label">
-						<width>37</width>
-						<font>LiberationSans_Regular_30</font>
-						<textcolor>Qlocknofocus</textcolor>
-						<align>center</align>
-						<label>K</label>
-					</control>						
-				</control>
-				
-				<!-- ON GROUPS -->
 				<!-- I T ON ROW 1-->
 				
 				<control type="grouplist" id="50">
@@ -3907,7 +3086,7 @@
 						<width>37</width>
 						<font>LiberationSans_Regular_30</font>
 						<textcolor>Qlockfocus</textcolor>
-						<align>right</align>
+						<align>center</align>
 						<label>O´</label>
 					</control>
 					<control type="label">
@@ -3947,86 +3126,6 @@
 					</control>
 					<visible>Control.isVisible(20102)</visible>
 				</control>
-			</control>
-			
-			<!--	Minutes		-->
-			
-			<control type="label">
-			<animation effect="slide" end="-280,340" time="0" condition="Skin.HasSetting(home_qlock) + Skin.HasSetting(horizontal_home) + !Skin.HasSetting(horizontal_bottom_align)">Conditional</animation>
-				<description>Clock ON Minute1</description>
-				<posx>357</posx>
-				<posy>27</posy>
-				<label>•</label>
-				<font>LiberationSans_Regular_24</font>
-				<textcolor>Qlockfocus</textcolor>
-				<visible>Control.isVisible(10110)</visible>
-			</control>
-			<control type="label">
-			<animation effect="slide" end="260,340" time="0" condition="Skin.HasSetting(home_qlock) + Skin.HasSetting(horizontal_home) + !Skin.HasSetting(horizontal_bottom_align)">Conditional</animation>
-				<description>Clock ON Minute2</description>
-				<posx>912</posx>
-				<posy>27</posy>
-				<label>•</label>
-				<font>LiberationSans_Regular_24</font>
-				<textcolor>Qlockfocus</textcolor>
-				<visible>Control.isVisible(10111)</visible>
-			</control>			
-			<control type="label">
-			<animation effect="slide" end="260,115" time="0" condition="Skin.HasSetting(home_qlock) + Skin.HasSetting(horizontal_home) + !Skin.HasSetting(horizontal_bottom_align)">Conditional</animation>
-				<description>Clock ON Minute3</description>
-				<posx>912</posx>
-				<posy>487</posy>
-				<label>•</label>
-				<font>LiberationSans_Regular_24</font>
-				<textcolor>Qlockfocus</textcolor>
-				<visible>Control.isVisible(10112)</visible>
-			</control>
-			<control type="label">
-			<animation effect="slide" end="-280,115" time="0" condition="Skin.HasSetting(home_qlock) + Skin.HasSetting(horizontal_home) + !Skin.HasSetting(horizontal_bottom_align)">Conditional</animation>
-				<description>Clock ON Minute4</description>
-				<posx>357</posx>
-				<posy>487</posy>
-				<label>•</label>
-				<font>LiberationSans_Regular_24</font>
-				<textcolor>Qlockfocus</textcolor>
-				<visible>Control.isVisible(10113)</visible>
-			</control>
-			
-			<control type="label">
-			<animation effect="slide" end="-280,340" time="0" condition="Skin.HasSetting(home_qlock) + Skin.HasSetting(horizontal_home) + !Skin.HasSetting(horizontal_bottom_align)">Conditional</animation>
-				<description>Clock OFF Minute1</description>
-				<posx>355</posx>
-				<posy>30</posy>
-				<label>°</label>
-				<font>LiberationSans_Regular_30</font>
-				<textcolor>Qlocknofocus</textcolor>
-			</control>
-			<control type="label">
-			<animation effect="slide" end="260,340" time="0" condition="Skin.HasSetting(home_qlock) + Skin.HasSetting(horizontal_home) + !Skin.HasSetting(horizontal_bottom_align)">Conditional</animation>
-				<description>Clock OFF  Minute2</description>
-				<posx>910</posx>
-				<posy>30</posy>
-				<label>°</label>
-				<font>LiberationSans_Regular_30</font>
-				<textcolor>Qlocknofocus</textcolor>
-			</control>
-			<control type="label">
-			<animation effect="slide" end="-280,115" time="0" condition="Skin.HasSetting(home_qlock) + Skin.HasSetting(horizontal_home) + !Skin.HasSetting(horizontal_bottom_align)">Conditional</animation>
-				<description>Clock  OFF Minute3</description>
-				<posx>355</posx>
-				<posy>490</posy>
-				<label>°</label>
-				<font>LiberationSans_Regular_30</font>
-				<textcolor>Qlocknofocus</textcolor>
-			</control>
-			<control type="label">
-			<animation effect="slide" end="260,115" time="0" condition="Skin.HasSetting(home_qlock) + Skin.HasSetting(horizontal_home) + !Skin.HasSetting(horizontal_bottom_align)">Conditional</animation>
-				<description>Clock OFF  Minute4</description>
-				<posx>910</posx>
-				<posy>490</posy>
-				<font>LiberationSans_Regular_30</font>
-				<textcolor>Qlocknofocus</textcolor>
-				<label>°</label>
 			</control>
 		</control>
     </include>

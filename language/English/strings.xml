@@ -4,9 +4,6 @@
 
 	<!-- Main Labels -->
 	
-	
-	
-	
 	<string id="31007">Plugins</string><!-- GOOD -->
 	<string id="31024">Page</string><!-- GOOD -->
 	<string id="31025">Items</string><!-- GOOD -->
@@ -78,7 +75,7 @@
 	<string id="31209">TV</string><!-- GOOD -->
 	<string id="31210">Fanart Thumbs</string>
 	<string id="31211">16x9 Thumbs</string>
-	<string id="31212">Theater</string>
+	<string id="31212">Cinema</string>
 	<string id="31214">Dark View</string><!-- GOOD -->
 	<string id="31215">Show subtitle script button in OSD</string><!-- GOOD -->
 	<string id="31216">Script path:</string><!-- GOOD -->
@@ -122,8 +119,130 @@
 	<string id="31264">Click to Run the logo script</string>
 	<string id="31265">By clicking the above button, the script will automatically match whatever TV shows you have and then download the correct logo, if there is one, and save it as logo.png in the root of that TV shows folder[CR]**Go to www.lockstockmods.net if you want to download one by one**</string>
 	
+<!-- Qlock -->	
 
+	<!--Row 1-->
+	<string id="50000">I</string>
+	<string id="50001">T</string>
+	<string id="50002">L</string>
+	<string id="50003">I</string>
+	<string id="50004">S</string>
+	<string id="50005">A</string>
+	<string id="50006">S</string>
+	<string id="50007">T</string>
+	<string id="50008">I</string>
+	<string id="50009">M</string>
+	<string id="50010">E</string>
+	<!--Row 2-->
+	<string id="50011">A</string>
+	<string id="50012">C</string>
+	<string id="50013">Q</string>
+	<string id="50014">U</string>
+	<string id="50015">A</string>
+	<string id="50016">R</string>
+	<string id="50017">T</string>
+	<string id="50018">E</string>
+	<string id="50019">R</string>
+	<string id="50020">D</string>
+	<string id="50021">C</string>
+	<!--Row 3-->
+	<string id="50022">T</string>
+	<string id="50023">W</string>
+	<string id="50024">E</string>
+	<string id="50025">N</string>
+	<string id="50026">T</string>
+	<string id="50027">Y</string>
+	<string id="50028">F</string>
+	<string id="50029">I</string>
+	<string id="50030">V</string>
+	<string id="50031">E</string>
+	<string id="50032">X</string>
+	<!--Row 4-->
+	<string id="50033">H</string>
+	<string id="50034">A</string>
+	<string id="50035">L</string>
+	<string id="50036">F</string>
+	<string id="50037">B</string>
+	<string id="50038">T</string>
+	<string id="50039">E</string>
+	<string id="50040">N</string>
+	<string id="50041">F</string>
+	<string id="50042">T</string>
+	<string id="50043">O</string>
+	<!--Row 5-->
+	<string id="50044">P</string>
+	<string id="50045">A</string>
+	<string id="50046">S</string>
+	<string id="50047">T</string>
+	<string id="50048">E</string>
+	<string id="50049">R</string>
+	<string id="50050">U</string>
+	<string id="50051">N</string>
+	<string id="50052">I</string>
+	<string id="50053">N</string>
+	<string id="50054">E</string>
+	<!--Row 6-->
+	<string id="50055">O</string>
+	<string id="50056">N</string>
+	<string id="50057">E</string>
+	<string id="50058">S</string>
+	<string id="50059">I</string>
+	<string id="50060">X</string>
+	<string id="50061">T</string>
+	<string id="50062">H</string>
+	<string id="50063">R</string>
+	<string id="50064">E</string>
+	<string id="50065">E</string>
+	<!--Row 7-->
+	<string id="50066">F</string>
+	<string id="50067">O</string>
+	<string id="50068">U</string>
+	<string id="50069">R</string>
+	<string id="50070">F</string>
+	<string id="50071">I</string>
+	<string id="50072">V</string>
+	<string id="50073">E</string>
+	<string id="50074">T</string>
+	<string id="50075">W</string>
+	<string id="50076">O</string>
+	<!--Row 8-->
+	<string id="50077">E</string>
+	<string id="50078">I</string>
+	<string id="50079">G</string>
+	<string id="50080">H</string>
+	<string id="50081">T</string>
+	<string id="50082">E</string>
+	<string id="50083">L</string>
+	<string id="50084">E</string>
+	<string id="50085">V</string>
+	<string id="50086">E</string>
+	<string id="50087">N</string>
+	<!--Row 9-->
+	<string id="50088">S</string>
+	<string id="50089">E</string>
+	<string id="50090">V</string>
+	<string id="50091">E</string>
+	<string id="50092">N</string>
+	<string id="50093">T</string>
+	<string id="50094">W</string>
+	<string id="50095">E</string>
+	<string id="50096">L</string>
+	<string id="50097">V</string>
+	<string id="50098">E</string>
+	<!--Row 10-->
+	<string id="50099">T</string>
+	<string id="50100">E</string>
+	<string id="50101">N</string>
+	<string id="50102">S</string>
+	<string id="50103">E</string>
+	<string id="50104">O'</string>
+	<string id="50105">C</string>
+	<string id="50106">L</string>
+	<string id="50107">O</string>
+	<string id="50108">C</string>
+	<string id="50109">K</string>
 
+	
 <!-- 
 These last blocks are from Confluence and you can 
 just copy the translations from Confluence to here
@@ -274,6 +393,8 @@ just copy the translations from Confluence to here
   <string id="31529">Use banner.jpg on TV level</string>
   
   
+  <string id="31530">User needs episodes organized in Season folders. Fanart.jpg must reside inside Season folder</string>
+  <string id="31531">Use Landscape Thumbs on TV Section</string>
   
   </strings>
 
