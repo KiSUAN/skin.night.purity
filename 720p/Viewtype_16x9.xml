@@ -49,6 +49,7 @@
 							<width>429</width>
 							<height>239</height>
 							<texture>common/back.png</texture>
+							<colordiffuse>black</colordiffuse>
 							<fadetime>200</fadetime>					
 							<aspectratio scalediffuse="false">stretch</aspectratio>
 						</control>
@@ -67,7 +68,7 @@
 							<posy>0</posy>
 							<width>429</width>
 							<height>239</height>
-							<texture background="true" fallback="DefaultFolderBack.png">$INFO[ListItem.Property(Fanart_Image)]</texture>
+							<texture background="true" fallback="ListItem.Icon">$INFO[ListItem.Property(Fanart_Image)]</texture>
 							<fadetime>200</fadetime>					
 							<aspectratio scalediffuse="false">stretch</aspectratio>
 							<visible>!Container.Content(episodes)</visible>
@@ -156,6 +157,7 @@
 							<width>550</width>
 							<height>305</height>
 							<texture>common/back.png</texture>
+							<colordiffuse>black</colordiffuse>
 							<fadetime>200</fadetime>					
 							<aspectratio scalediffuse="false">stretch</aspectratio>
 						</control>
@@ -174,7 +176,7 @@
 							<posy>0</posy>
 							<width>550</width>
 							<height>305</height>
-							<texture background="true" fallback="DefaultFolderBack.png">$INFO[ListItem.Property(Fanart_Image)]</texture>
+							<texture background="true" fallback="ListItem.Icon">$INFO[ListItem.Property(Fanart_Image)]</texture>
 							<fadetime>200</fadetime>					
 							<aspectratio scalediffuse="false">stretch</aspectratio>
 							<visible>!Container.Content(episodes)</visible>
