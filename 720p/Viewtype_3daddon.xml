@@ -4,13 +4,13 @@
 	<include name="Viewtype_3daddon">
 		
 	<control type="group">
-		<visible>Control.IsVisible(56)</visible>
+		<visible>Control.IsVisible(621)</visible>
 			<control type="image">
 				<visible>![Container.Content(albums) + Skin.HasSetting(3dmusic_Fanart)]</visible>
 				<posx>0</posx>
 				<posy>0</posy>
 				<width>1280</width>
-				<height>720</height>
+				<height>780</height>
 				<texture>movie-poster/movie-back3.png</texture>
 				<aspectratio>stretch</aspectratio>
 			</control>
@@ -26,13 +26,13 @@
 	</control>
 		
 		
-	<control type="fixedlist" id="56">
+	<control type="fixedlist" id="621">
 		<posx>-30</posx>
 		<posy>250</posy>
 		<height>615</height>
-		<width>1400</width><!-- 1400 -->
-		<onleft>56</onleft>
-		<onright>56</onright>
+		<width>1400</width>
+		<onleft>621</onleft>
+		<onright>621</onright>
 		<onup>7000</onup>
 		<ondown>66</ondown>
 		<viewtype label="$LOCALIZE[31500]">list</viewtype>
@@ -43,15 +43,14 @@
 		<pagecontrol>66</pagecontrol>
 		<include>Animation_ZoomInZoomOut</include>
 		<animation effect="slide" end="0,40" time="0" condition="Skin.HasSetting(3dmusic_Fanart)">conditional</animation>
-		<!--<visible>Window.IsVisible(AddonBrowser.xml) | Container.Content(albums) | Window.IsActive(Programs)</visible>-->
 		<camera x="1340" y="380" />
 		<animation effect="rotatey" center="50" start="8" end="8" time="0" condition="true">Conditional</animation>
-		<visible></visible>
+		<visible>!Window.IsActive(videolibrary)</visible>
 		<itemlayout width="176" height="245">
 			<control type="group">
 				<posx>150</posx>
 				<posy>60</posy>
-				<animation effect="fade" start="100" end="0" time="400" delay="2800" condition="Skin.HasSetting(PosterPlus) + Container.Content(movies) + !Skin.HasSetting(Poster_Fanart) + ![Container(56).OnNext | Container(56).OnPrevious]">Conditional</animation>
+				<animation effect="fade" start="100" end="0" time="400" delay="2800" condition="Skin.HasSetting(PosterPlus) + Container.Content(movies) + !Skin.HasSetting(Poster_Fanart) + ![Container(621).OnNext | Container(621).OnPrevious]">Conditional</animation>
 					<control type="image">
 						<posx>-2</posx>
 						<posy>133</posy>
@@ -136,8 +135,8 @@
 			<control type="group">
 				<posx>140</posx>
 				<posy>60</posy>
-				<animation effect="zoom" start="100" end="120" time="600" delay="2800" condition="Skin.HasSetting(PosterPlus) + Container.Content(movies) + !Skin.HasSetting(Poster_Fanart) + ![Container(56).OnNext | Container(56).OnPrevious]">Conditional</animation>
-				<animation effect="slide" start="0,0" end="-280,-80" time="600" delay="2800" condition="Skin.HasSetting(PosterPlus) + Container.Content(movies) + !Skin.HasSetting(Poster_Fanart) + ![Container(56).OnNext | Container(56).OnPrevious]">Conditional</animation>
+				<animation effect="zoom" start="100" end="120" time="600" delay="2800" condition="Skin.HasSetting(PosterPlus) + Container.Content(movies) + !Skin.HasSetting(Poster_Fanart) + ![Container(621).OnNext | Container(621).OnPrevious]">Conditional</animation>
+				<animation effect="slide" start="0,0" end="-280,-80" time="600" delay="2800" condition="Skin.HasSetting(PosterPlus) + Container.Content(movies) + !Skin.HasSetting(Poster_Fanart) + ![Container(621).OnNext | Container(621).OnPrevious]">Conditional</animation>
 					<control type="image">
 						<posx>44</posx>
 						<posy>93</posy>
@@ -263,7 +262,7 @@
 	
 	
 	<control type="group">
-		<visible>Control.IsVisible(56)</visible>
+		<visible>Control.IsVisible(621)</visible>
 			<control type="image">
 				<visible>!Skin.HasSetting(Poster_Fanart)</visible>
 				<posx>0</posx>
@@ -362,13 +361,55 @@
 				<visible allowhiddenfocus="true">Control.HasFocus(66)</visible>
 				<texturesliderbackground>osd/osd_progress_back1.png</texturesliderbackground>
 				<textureslidernibfocus>ScrollBarV_Nib_Focus1.png</textureslidernibfocus>
-				<onup>56</onup>
-				<ondown>56</ondown>
+				<onup>621</onup>
+				<ondown>621</ondown>
 				<showonepage>true</showonepage>
 				<orientation>horizontal</orientation>
 				<include>Animation_CommonFade</include>
 				<animation effect="slide" start="0,0" end="0,-220" time="400" tween="cubic" easing="inout" condition="Control.HasFocus(66)">Conditional</animation>
 			</control>
+			
+			<control type="group">
+			<posx>0</posx>
+			<posy>0</posy>
+			<include>Animation_Viewtype_3dland_Lefttop</include>
+			<visible>Window.IsActive(Programs) + substring(container.folderpath,plugin://plugin.program.advanced.launcher)</visible>
+				<control type="label">
+					<posx>20</posx>
+					<posy>45</posy>
+					<width>630</width>
+					<height>89</height>
+					<font>LiberationSans_Regular_22</font>
+					<label>[B][COLOR=ListTrackF]$LOCALIZE[515][/COLOR] [B][COLOR=white]$INFO[ListItem.Genre][/B][/COLOR]</label>
+					<visible>!IsEmpty(ListItem.Genre)</visible>
+				</control>
+				<control type="label">
+					<posx>20</posx>
+					<posy>69</posy>
+					<width>630</width>
+					<height>89</height>
+					<font>LiberationSans_Regular_22</font>
+					<label>[B][COLOR=ListTrackF]$LOCALIZE[345][/COLOR] [B][COLOR=white]$INFO[ListItem.Year][/B][/COLOR]</label>
+					<animation effect="slide" start="0,0" end="0,-26" time="0" condition="IsEmpty(ListItem.Genre)">Conditional</animation>
+					<visible>!IsEmpty(ListItem.Year)</visible>
+				</control>
+				<control type="textbox">
+					<description>Plot Movie</description>
+					<posx>40</posx>
+					<posy>95</posy>
+					<width>600</width>
+					<height>230</height>
+					<align>justify</align>
+					<info>ListItem.Plot</info>
+					<font>Font_3dland_plot</font>
+					<textcolor>white</textcolor>
+					<autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
+					<animation effect="slide" start="0,0" end="0,-21" time="0" condition="IsEmpty(ListItem.Year)">Conditional</animation>
+					<animation effect="slide" start="0,0" end="0,-47" time="0" condition="IsEmpty(ListItem.genre) + IsEmpty(ListItem.Year)">Conditional</animation>
+					<visible>Skin.HasSetting(launcher_plot_poster)</visible>
+				</control>
+			</control>
+			
 	</control>
 				
 				

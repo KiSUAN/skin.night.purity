@@ -3,7 +3,7 @@
 <window id="502">
 	<defaultcontrol>50</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
-	<views>50,56,58,51,52,54</views>
+	<views>58,621,54,51,52,50</views>
 	<controls>
 		
 
@@ -18,7 +18,7 @@
 			<fadetime>400</fadetime>
 			<include>Animation_BackdropFade</include>
 			<include>global_kenburns_fanart</include>
-			<visible>![Control.IsVisible(54) | Control.IsVisible(53) | Control.IsVisible(51) | [Control.IsVisible(52) + Container.Content(artists)]]</visible>
+			<visible>![Control.IsVisible(54) | Control.IsVisible(51) | [Control.IsVisible(52) + Container.Content(artists)]]</visible>
 		</control>
 		<control type="image">
 			<description>artist level fanart</description>
@@ -31,7 +31,7 @@
 			<fadetime>400</fadetime>
 			<include>Animation_BackdropFade</include>
 			<include>global_kenburns_fanart</include>
-			<visible>![Control.IsVisible(54) | Control.IsVisible(53) | Control.IsVisible(51) | [Control.IsVisible(52) + Container.Content(artists)]]</visible>
+			<visible>![Control.IsVisible(54) | Control.IsVisible(51) | [Control.IsVisible(52) + Container.Content(artists)]]</visible>
 		</control>
 		<control type="image">
 			<description>album and song level fanart</description>
@@ -51,7 +51,7 @@
 			<fadetime>400</fadetime>
 			<texture>backdrops/curtains.jpg</texture>
 			<include>Animation_BackdropFade</include>
-			<visible>Control.IsVisible(53) | Control.IsVisible(52)</visible>
+			<visible>Control.IsVisible(52)</visible>
 		</control>
 		<control type="image"> <!-- genre fanart -->
 			<include>Dimensions_Fullscreen</include>
@@ -65,11 +65,11 @@
 	<control type="group">
 		<include>Animation_HiddenByInfo</include>
 			<include>Viewtype_Files</include><!-- 50 -->
-			<include>Viewtype_MusicShowcase</include><!-- 58 -->
-			<include>Viewtype_3daddon</include><!-- 56 -->
-			<include>Viewtype_Songs</include><!-- 52 -->
 			<include>Viewtype_Shelf</include><!-- 51 -->
+			<include>Viewtype_Songs</include><!-- 52 -->
 			<include>Viewtype_JukeBox</include><!-- 54 -->
+			<include>Viewtype_MusicShowcase</include><!-- 58 -->
+			<include>Viewtype_3daddon</include><!-- 621 -->
 	</control>
 		
 		
@@ -134,7 +134,7 @@
 				<altlabel>$LOCALIZE[31214]</altlabel>
 				<onclick>Skin.ToggleSetting(3dmusic_Fanart)</onclick>
 				<selected>Skin.HasSetting(3dmusic_Fanart)</selected>
-				<visible>Control.IsVisible(56)</visible>
+				<visible>Control.IsVisible(621)</visible>
 			</control>
 			<control type="togglebutton" id="29">
 				<description>Toggle MoviesFanart</description>
@@ -175,7 +175,7 @@
 			<control type="label">
 				<include>WindowMenuLabel</include>
 				<label>$LOCALIZE[14018]</label>
-				<visible>Control.IsVisible(50) | Control.IsVisible(56) | Control.IsVisible(58)</visible>		
+				<visible>Control.IsVisible(50) | Control.IsVisible(621) | Control.IsVisible(58)</visible>		
 			</control>
 			<control type="label">
 				<include>WindowMenuLabel</include>

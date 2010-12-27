@@ -297,7 +297,7 @@
 			</control>
 			
 			<control type="group"> 
-				<visible>!SubString(ListItem.Icon,DefaultFolderBack.png,Left) + Container.Content(movies)</visible>
+				<visible>!SubString(ListItem.Icon,DefaultFolderBack.png,Left) + Container.Content(movies) + !Window.IsActive(videofiles)</visible>
 				<posx>120</posx>
 				<posy>60</posy>
 				<animation effect="slide" start="0,0" end="0,120" time="0" tween="cubic" easing="inout" condition="Control.IsVisible(52) + [Skin.HasSetting(TVPosters) + !Skin.HasSetting(landscape_jpg) + [Container.Content(tvshows) | Container.Content(seasons)]]">Conditional</animation>
@@ -334,7 +334,7 @@
 					</control>
 			</control>
 				<control type="grouplist">
-					<visible>!SubString(ListItem.Icon,DefaultFolderBack.png,Left) + Container.Content(movies)</visible>
+					<visible>!SubString(ListItem.Icon,DefaultFolderBack.png,Left) + Container.Content(movies) + !Window.IsActive(videofiles)</visible>
 					<animation effect="slide" start="0,0" end="0,120" time="0" tween="cubic" easing="inout" condition="Control.IsVisible(52) + [Skin.HasSetting(TVPosters) + !Skin.HasSetting(landscape_jpg) + [Container.Content(tvshows) | Container.Content(seasons)]]">Conditional</animation>
 					<include>Animation_ZoomInZoomOut</include>
 					<posx>125</posx>
@@ -354,7 +354,7 @@
 				</control>
 				
 			<control type="group"> 
-				<visible>!SubString(ListItem.Icon,DefaultFolderBack.png,Left)</visible>
+				<visible>!SubString(ListItem.Icon,DefaultFolderBack.png,Left) + !Window.IsActive(videofiles)</visible>
 				<posx>120</posx>
 				<posy>60</posy>
 				<animation effect="slide" start="0,0" end="0,120" time="0" tween="cubic" easing="inout" condition="Control.IsVisible(52) + [Skin.HasSetting(TVPosters) + !Skin.HasSetting(landscape_jpg) + [Container.Content(tvshows) | Container.Content(seasons)]]">Conditional</animation>
@@ -426,7 +426,7 @@
 					</control>
 				</control>
 				<control type="grouplist">
-					<visible>!SubString(ListItem.Icon,DefaultFolderBack.png,Left)</visible>
+					<visible>!SubString(ListItem.Icon,DefaultFolderBack.png,Left) + !Window.IsActive(videofiles)</visible>
 					<animation effect="slide" start="0,0" end="0,120" time="0" tween="cubic" easing="inout" condition="Control.IsVisible(52) + [Skin.HasSetting(TVPosters) + !Skin.HasSetting(landscape_jpg) + [Container.Content(tvshows) | Container.Content(seasons)]]">Conditional</animation>
 					<include>Animation_ZoomInZoomOut</include>
 					<posx>125</posx>
@@ -458,7 +458,6 @@
 						<width>70</width>
 						<height>47</height>
 						<texture>$INFO[listitem.studio,extras/Studios/,.png]</texture>
-						<colordiffuse>mainblue</colordiffuse>
 						<visible>Container.Content(tvshows)</visible>
 						<animation effect="slide" start="0,0" end="-6,-12" time="0" tween="cubic" easing="inout" condition="Container.Content(tvshows)">Conditional</animation>
 					</control>
@@ -488,7 +487,6 @@
 						<width>70</width>
 						<height>47</height>
 						<texture>$INFO[listitem.studio,extras/Studios/,.png]</texture>
-						<colordiffuse>mainblue</colordiffuse>
 						<visible>Container.Content(episodes)</visible>
 						<animation effect="slide" start="0,0" end="-10,-12" time="0" tween="cubic" easing="inout" condition="Container.Content(episodes)">Conditional</animation>
 					</control>

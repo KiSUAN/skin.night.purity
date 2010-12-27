@@ -251,7 +251,7 @@
 							<visible>!IsEmpty(Control.GetLabel(9171))</visible>
 						</control>
 				</control>
-				<control type="list" id="49">
+				<control type="list" id="49"><!--Movies-->
 						<posx>445</posx>
 						<posy>240</posy>
 						<width>830</width>
@@ -263,7 +263,7 @@
 						<pagecontrol>-</pagecontrol>
 						<scrolltime>200</scrolltime>
 						<animation effect="slide" end="0,-100" time="0" condition="IsEmpty(Control.GetLabel(9170)) + IsEmpty(Control.GetLabel(9171))">conditional</animation>
-						<animation effect="slide" end="-1200,0" time="400" condition="Control.IsVisible(50)">conditional</animation>
+						<animation effect="slide" end="-1300,0" time="400" condition="Control.IsVisible(50)">conditional</animation>
 						<itemlayout height="30">
 							<control type="label">
 								<posx>0</posx>

@@ -3,7 +3,7 @@
 <window id="25">
 	<defaultcontrol always="true">9999</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
-	<views>50,55,598,58,595,51,52,633,53,54,597,56,57,59,592,593,594,596</views>
+	<views>621,50,55,598,58,595,51,52,633,53,54,597,56,57,59,592,593,594,596,50</views>
 	<controls>
 		<control type="button" id="9999">
             <description>trigger</description>
@@ -113,24 +113,25 @@
 		
 	<control type="group">
 		<include>Animation_HiddenByInfo</include>
-			<include>Viewtype_Showcase</include><!--  58  -->
-			<include>Viewtype_Poster</include><!--  55  -->
 			<include>Viewtype_Files</include><!--  50  -->
-			<include>Viewtype_Landscape</include><!--  52  -->
-			<include>Viewtype_Landscape_Fanart</include><!--  633  -->
-			<include>Viewtype_List</include><!--  53  -->
 			<include>Viewtype_Episode</include><!--  51  -->
+			<include>Viewtype_Landscape</include><!--  52  -->
+			<include>Viewtype_List</include><!--  53  -->
 			<include>Viewtype_Wall</include><!--  54  -->
+			<include>Viewtype_Poster</include><!--  55  -->
 			<include>Viewtype_Fanart</include><!--  56  -->
 			<include>Viewtype_PanelLandscape</include><!--  57  -->
-			<include>Viewtype_BannerPanel</include><!--  592  -->
-			<include>Viewtype_WallPanel</include><!--  597  -->
+			<include>Viewtype_Showcase</include><!--  58  -->
 			<include>Viewtype_16x9</include><!--  59  -->
+			<include>Viewtype_BannerPanel</include><!--  592  -->
 			<include>Viewtype_3dbanner</include><!--  593  -->
 			<include>Viewtype_Logo</include><!--  594  -->
 			<include>Viewtype_Slide</include><!--  595  -->
 			<include>Viewtype_Newest_Episodes</include><!--  596  -->
+			<include>Viewtype_WallPanel</include><!--  597  -->
 			<include>Viewtype_Poster_Half</include><!--  598  -->
+			<include>Viewtype_3daddon</include><!--  621  -->
+			<include>Viewtype_Landscape_Fanart</include><!--  633  -->
 	</control>
 		
 		
@@ -196,6 +197,24 @@
 					<onclick>Skin.ToggleSetting(ShowcaseFanart)</onclick>
 					<selected>Skin.HasSetting(ShowcaseFanart)</selected>
 					<visible>Control.IsVisible(58)</visible>
+				</control>
+				<!--<control type="togglebutton" id="23">
+					<description>Toggle MoviesFanart</description>
+					<include>WindowMenuButton</include>
+					<label>No Text</label>
+					<altlabel>Show Text</altlabel>
+					<onclick>Skin.ToggleSetting(No_Text)</onclick>
+					<selected>Skin.Hassetting(No_Text)</selected>
+					<visible>Control.IsVisible(54)</visible>
+				</control>-->
+				<control type="togglebutton" id="24">
+					<description>Toggle MoviesFanart</description>
+					<include>WindowMenuButton</include>
+					<label>$LOCALIZE[31202]</label>
+					<altlabel>$LOCALIZE[31203]</altlabel>
+					<onclick>Skin.ToggleSetting(ClearTitle)</onclick>
+					<selected>Skin.HasSetting(ClearTitle)</selected>
+					<visible>Control.IsVisible(59) + Container.Content(tvshows)</visible>
 				</control>
 				<control type="togglebutton" id="25">
 					<description>Toggle MoviesFanart</description>
@@ -280,15 +299,6 @@
 					<selected>Skin.HasSetting(Wall_fanart)</selected>
 					<visible>Control.IsVisible(54)</visible>
 				</control>-->
-				<control type="togglebutton" id="24">
-					<description>Toggle MoviesFanart</description>
-					<include>WindowMenuButton</include>
-					<label>$LOCALIZE[31202]</label>
-					<altlabel>$LOCALIZE[31203]</altlabel>
-					<onclick>Skin.ToggleSetting(ClearTitle)</onclick>
-					<selected>Skin.HasSetting(ClearTitle)</selected>
-					<visible>Control.IsVisible(59) + Container.Content(tvshows)</visible>
-				</control>
 				<control type="togglebutton" id="35">
 					<description>Toggle Showcase Fanart Title</description>
 					<include>WindowMenuButton</include>
@@ -346,10 +356,15 @@
 				<!-- LOC -->
 				<label>$LOCALIZE[31088]</label>
 			</control>
+			<!--<control type="label">
+				<include>WindowMenuLabel</include>
+				<label>$LOCALIZE[14018]</label>
+				<visible>Control.IsVisible(54)</visible>		
+			</control>-->
 			<control type="label">
 				<include>WindowMenuLabel</include>
 				<label>$LOCALIZE[14018]</label>
-				<visible>[Control.IsVisible(55) | Control.IsVisible(53) | Control.IsVisible(56) | Control.IsVisible(58)] + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)] | [Control.IsVisible(50) + Container.Content(movies)] | [Control.IsVisible(59) + Container.Content(tvshows)] | [Control.IsVisible(55) + Container.Content(Genres)]</visible>		
+				<visible>[Control.IsVisible(55) | Control.IsVisible(53) | Control.IsVisible(56) | Control.IsVisible(58)] + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)] | [Control.IsVisible(50) + Container.Content(movies)] | [Control.IsVisible(59) + Container.Content(tvshows)] | [Control.IsVisible(55) + Window.IsVisible(VideoLibrary)]</visible>		
 			</control>
 			<control type="label">
 				<include>WindowMenuLabel</include>

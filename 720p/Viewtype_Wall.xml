@@ -51,7 +51,7 @@
 	
 	
 	<control type="panel" id="54">
-			<visible>!Skin.HasSetting(no_Wall) + [Container.Content(Movies) | Window.IsActive(videofiles) | substring(container.folderpath,plugin://plugin.video.apple.movie.trailers.lite)]</visible>
+			<visible>!Skin.HasSetting(no_Wall) + [Container.Content(Movies) | Container.Content(Years) | Container.Content(Actors) | Container.Content(Studios) | Window.IsActive(videofiles) | substring(container.folderpath,plugin://plugin.video.apple.movie.trailers.lite)]</visible>
 			<posx>0</posx>
 			<posy>-170</posy><!-- -105 -->
 			<width>1258</width>
@@ -80,6 +80,44 @@
 							<aspectratio align="center" scalediffuse="false">stretch</aspectratio>
 							<colordiffuse>79FFFFFF</colordiffuse>
 							<animation effect="fade" start="100" end="0" time="400" delay="2800" condition="Skin.HasSetting(Wall_fanart) + Container.Content(movies) + ![Container(54).OnNext | Container(54).OnPrevious]">Conditional</animation>
+							<visible>![Container.Content(Studios) | Container.Content(Years)]</visible>
+						</control>
+						<control type="image">
+							<description>Poster</description>
+							<posx>15</posx>
+							<posy>15</posy>
+							<width>120</width>
+							<height>210</height>
+							<texture background="true" diffuse="movie-poster/posterview_diffuse.png" fallback="logo_miss.png">$INFO[ListItem.Label,extras/Studios/,.png]</texture>
+							<aspectratio align="center" scalediffuse="false">stretch</aspectratio>
+							<colordiffuse>79FFFFFF</colordiffuse>
+							<animation effect="fade" start="100" end="0" time="400" delay="2800" condition="Skin.HasSetting(Wall_fanart) + Container.Content(movies) + ![Container(54).OnNext | Container(54).OnPrevious]">Conditional</animation>
+							<visible>Container.Content(Studios)</visible>
+						</control>
+						<control type="label">
+							<posx>77</posx>
+							<posy>5</posy>
+							<width>80</width>
+							<height>230</height>
+							<align>center</align>
+							<aligny>center</aligny>
+							<font>LiberationSans_Regular_28</font>
+							<textcolor>mainblue</textcolor>
+							<label>[B]$INFO[ListItem.Label][/B]</label>
+							<animation effect="fade" start="100" end="0" time="400" delay="2800" condition="Skin.HasSetting(Wall_fanart) + Container.Content(movies) + ![Container(54).OnNext | Container(54).OnPrevious]">Conditional</animation>
+							<visible>Container.Content(Years)</visible>
+						</control>
+						<control type="image">
+							<description>Poster</description>
+							<posx>5</posx>
+							<posy>5</posy>
+							<width>140</width>
+							<height>230</height>
+							<texture>posterframeF_blur.png</texture>
+							<aspectratio align="center" scalediffuse="false">stretch</aspectratio>
+							<colordiffuse>79FFFFFF</colordiffuse>
+							<animation effect="fade" start="100" end="0" time="400" delay="2800" condition="Skin.HasSetting(Wall_fanart) + Container.Content(movies) + ![Container(54).OnNext | Container(54).OnPrevious]">Conditional</animation>
+							<visible>Container.Content(Studios) | Container.Content(Years)</visible>
 						</control>
 						<control type="image">
 							<posx>113</posx>
@@ -121,6 +159,21 @@
 						</control>
 						<control type="image">
 							<description>Poster</description>
+							<posx>7</posx>
+							<posy>8</posy>
+							<width>112</width>
+							<height>184</height>
+							<texture>postermatte.png</texture>
+							<colordiffuse>black</colordiffuse>
+							<aspectratio align="center" scalediffuse="false">stretch</aspectratio>
+							<animation type="Focus" reversible="false">
+								<effect type="zoom" start="110" end="180" center="auto" time="400" tween="back" easing="out" />
+							</animation>
+							<animation effect="fade" start="100" end="0" time="400" delay="2800" condition="Skin.HasSetting(Wall_fanart) + Container.Content(movies) + ![Container(54).OnNext | Container(54).OnPrevious]">Conditional</animation>
+							<visible>Container.Content(Actors) | Container.Content(Studios) | Container.Content(Years)</visible>
+						</control>
+						<control type="image">
+							<description>Poster</description>
 							<posx>5</posx>
 							<posy>5</posy>
 							<width>116</width>
@@ -131,6 +184,37 @@
 								<effect type="zoom" start="110" end="180" center="auto" time="400" tween="back" easing="out" />
 							</animation>
 							<animation effect="fade" start="100" end="0" time="400" delay="2800" condition="Skin.HasSetting(Wall_fanart) + Container.Content(movies) + ![Container(54).OnNext | Container(54).OnPrevious]">Conditional</animation>
+							<visible>![Container.Content(Studios) | Container.Content(Years)]</visible>
+						</control>
+						<control type="image">
+							<description>Poster</description>
+							<posx>10</posx>
+							<posy>7</posy>
+							<width>106</width>
+							<height>180</height>
+							<texture background="true" diffuse="movie-poster/posterview_diffuse.png" fallback="logo_miss.png">$INFO[ListItem.Label,extras/Studios/,.png]</texture>
+							<aspectratio align="center" scalediffuse="false">stretch</aspectratio>
+							<animation type="Focus" reversible="false">
+								<effect type="zoom" start="110" end="180" center="auto" time="400" tween="back" easing="out" />
+							</animation>
+							<animation effect="fade" start="100" end="0" time="400" delay="2800" condition="Skin.HasSetting(Wall_fanart) + Container.Content(movies) + ![Container(54).OnNext | Container(54).OnPrevious]">Conditional</animation>
+							<visible>Container.Content(Studios)</visible>
+						</control>
+						<control type="label">
+							<posx>94</posx>
+							<posy>7</posy>
+							<width>80</width>
+							<height>180</height>
+							<align>center</align>
+							<aligny>center</aligny>
+							<font>LiberationSans_Regular_28</font>
+							<textcolor>mainblue</textcolor>
+							<label>[B]$INFO[ListItem.Label][/B]</label>
+							<animation type="Focus" reversible="false">
+								<effect type="zoom" start="110" end="180" center="auto" time="400" tween="back" easing="out" />
+							</animation>
+							<animation effect="fade" start="100" end="0" time="400" delay="2800" condition="Skin.HasSetting(Wall_fanart) + Container.Content(movies) + ![Container(54).OnNext | Container(54).OnPrevious]">Conditional</animation>
+							<visible>Container.Content(Years)</visible>
 						</control>
 						<control type="image">
 							<description>Poster</description>
@@ -144,6 +228,21 @@
 								<effect type="zoom" start="110" end="180" center="auto" time="400" tween="back" easing="out" />
 							</animation>
 							<animation effect="fade" start="100" end="0" time="400" delay="2800" condition="Skin.HasSetting(Wall_fanart) + Container.Content(movies) + ![Container(54).OnNext | Container(54).OnPrevious]">Conditional</animation>
+							<visible>!Container.Content(Studios)</visible>
+						</control>
+						<control type="image">
+							<description>Poster</description>
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>126</width>
+							<height>200</height>
+							<texture>posterframeF.png</texture>
+							<aspectratio align="center" scalediffuse="false">stretch</aspectratio>
+							<animation type="Focus" reversible="false">
+								<effect type="zoom" start="110" end="180" center="auto" time="400" tween="back" easing="out" />
+							</animation>
+							<animation effect="fade" start="100" end="0" time="400" delay="2800" condition="Skin.HasSetting(Wall_fanart) + Container.Content(movies) + ![Container(54).OnNext | Container(54).OnPrevious]">Conditional</animation>
+							<visible>Container.Content(Studios)</visible>
 						</control>
 						<control type="image">
 							<posx>119</posx>
@@ -185,25 +284,28 @@
 				<include>Animation_CommonFade</include>
 			</control>
 			<control type="group">
-				<posx>910</posx>
+				<posx>990</posx>
 				<posy>-40</posy>
-				<visible>!SubString(ListItem.Icon,DefaultFolderBack.png,Left)</visible>
+				<animation effect="slide" end="-50,0" time="800" tween="cubic" easing="inout" condition="Container(54).Column(7)">Conditional</animation>
+				<animation effect="slide" end="-10,0" time="800" tween="cubic" easing="inout" condition="Container(54).Column(1) | Container(54).Column(2) | Container(54).Column(3) | Container(54).Column(4) | Container(54).Column(5) | Container(54).Column(6)">Conditional</animation>
+				<visible>!SubString(ListItem.Icon,DefaultFolderBack.png,Left) + !Skin.Hassetting(No_Text)</visible>
 					<control type="label"><!--Movie title-->
 						<posx>0</posx>
 						<posy>115</posy>
-						<width>365</width>
-						<height>50</height>
+						<width>300</width>
+						<height>40</height>
 						<aligny>center</aligny>
 						<font>LiberationSans_Regular_28</font>
 						<textcolor>mainblue</textcolor>
-						<scroll>true</scroll>
+						<wrapmultiline>true</wrapmultiline>
 						<label>[B]$INFO[ListItem.Label][/B]</label>
 						<include>Animation_Viewtype_Wall_UnderInfo</include>
+						<visible>!Container.Content(Years)</visible>
 					</control>
 					<control type="label">
 						<posx>0</posx>
-						<posy>143</posy>
-						<width>394</width>
+						<posy>160</posy>
+						<width>300</width>
 						<height>50</height>
 						<aligny>center</aligny>
 						<font>LiberationSans_Regular_24</font>
@@ -214,8 +316,8 @@
 					</control>
 					<control type="label"><!--Duration-->
 						<posx>0</posx>
-						<posy>143</posy>
-						<width>394</width>
+						<posy>200</posy>
+						<width>300</width>
 						<height>50</height>
 						<aligny>center</aligny>
 						<font>LiberationSans_Regular_24</font>
@@ -226,8 +328,8 @@
 					</control>
 					<control type="label"><!--Duration-->
 						<posx>0</posx>
-						<posy>143</posy>
-						<width>394</width>
+						<posy>200</posy>
+						<width>300</width>
 						<height>50</height>
 						<aligny>center</aligny>
 						<font>LiberationSans_Regular_24</font>
@@ -238,8 +340,8 @@
 					</control>
 					<control type="label"><!--Duration-->
 						<posx>0</posx>
-						<posy>140</posy>
-						<width>406</width>
+						<posy>200</posy>
+						<width>300</width>
 						<height>50</height>
 						<aligny>center</aligny>
 						<font>LiberationSans_Regular_24</font>
@@ -251,20 +353,19 @@
 					<control type="label"><!--Year-->
 						<posx>0</posx>
 						<posy>166</posy>
-						<width>394</width>
+						<width>300</width>
 						<height>50</height>
 						<aligny>center</aligny>
 						<font>LiberationSans_Regular_24</font>
 						<textcolor>white</textcolor>
 						<label>$INFO[ListItem.year]</label>
 						<include>Animation_Viewtype_Wall_UnderInfo</include>
-						<animation effect="slide" start="0,0" end="0,-23" time="0" condition="IsEmpty(ListItem.Duration)">Conditional</animation>
 						<visible>!substring(container.folderpath,plugin://plugin.video.apple.movie.trailers.lite)</visible>
 					</control>
 					<control type="label"><!--Year-->
 						<posx>0</posx>
 						<posy>166</posy>
-						<width>394</width>
+						<width>300</width>
 						<height>50</height>
 						<aligny>center</aligny>
 						<font>LiberationSans_Regular_24</font>
@@ -280,12 +381,11 @@
 						<include condition="Skin.HasSetting(vanilla_flags) | Skin.HasSetting(flat_flags) + !Skin.HasSetting(original_flags)">vanilla_MPAAs</include>
 						<include>Animation_Viewtype_Wall_UnderInfo</include>
 						<animation effect="slide" start="0,0" end="-64,0" time="0" condition="IsEmpty(ListItem.Year)">Conditional</animation>
-						<animation effect="slide" start="0,0" end="0,-23" time="0" condition="IsEmpty(ListItem.Duration)">Conditional</animation>
 					</control>
 					<control type="textbox">
 						<posx>0</posx>
-						<posy>224</posy>
-						<width>360</width>
+						<posy>245</posy>
+						<width>285</width>
 						<height>340</height>
 						<align>justify</align>
 						<info>ListItem.Plot</info>
@@ -293,10 +393,37 @@
 						<textcolor>white</textcolor>
 						<autoscroll time="2500" delay="5000" repeat="5000">Skin.HasSetting(autoscroll) + !Window.IsActive(videofiles)</autoscroll>
 						<include>Animation_Viewtype_Wall_Plot</include>
+						<visible>Container(54).Column(0)</visible>						
+					</control>
+					<control type="textbox">
+						<posx>0</posx>
+						<posy>245</posy>
+						<width>295</width>
+						<height>340</height>
+						<align>justify</align>
+						<info>ListItem.Plot</info>
+						<font>LiberationSans_Regular_18</font>
+						<textcolor>white</textcolor>
+						<autoscroll time="2500" delay="5000" repeat="5000">Skin.HasSetting(autoscroll) + !Window.IsActive(videofiles)</autoscroll>
+						<include>Animation_Viewtype_Wall_Plot</include>
+						<visible>Container(54).Column(1) | Container(54).Column(2) | Container(54).Column(3) | Container(54).Column(4) | Container(54).Column(5) | Container(54).Column(6)</visible>
+					</control>
+					<control type="textbox">
+						<posx>0</posx>
+						<posy>245</posy>
+						<width>335</width>
+						<height>340</height>
+						<align>justify</align>
+						<info>ListItem.Plot</info>
+						<font>LiberationSans_Regular_18</font>
+						<textcolor>white</textcolor>
+						<autoscroll time="2500" delay="5000" repeat="5000">Skin.HasSetting(autoscroll) + !Window.IsActive(videofiles)</autoscroll>
+						<include>Animation_Viewtype_Wall_Plot</include>
+						<visible>Container(54).Column(7)</visible>
 					</control>
 			</control>
 			<control type="grouplist">
-				<visible>!Skin.HasSetting(no_media_flags) + Skin.HasSetting(back_flags) + !Player.HasMedia</visible>
+				<visible>Container.Content(movies) + !Skin.HasSetting(no_media_flags) + Skin.HasSetting(back_flags) + !Player.HasMedia</visible>
 				<description>Media Codec Flagging Images</description>
 				<posx>780</posx>
 				<posy>674</posy>
@@ -306,9 +433,10 @@
 				<orientation>horizontal</orientation>
 				<include>back_flags</include>
 				<include>Animation_ZoomInZoomOut</include>
+				<animation effect="slide" end="0,-675" time="0" condition="Container(54).Row(0)">Conditional</animation>
 			</control>
 			<control type="grouplist">
-				<visible>!Skin.HasSetting(no_media_flags) + !Player.HasMedia</visible>
+				<visible>Container.Content(movies) + !Skin.HasSetting(no_media_flags) + !Player.HasMedia</visible>
 				<description>Media Codec Flagging Images</description>
 				<posx>780</posx>
 				<posy>674</posy>
@@ -321,9 +449,10 @@
 				<include condition="Skin.HasSetting(original_flags) + !Skin.HasSetting(vanilla_flags) + !Skin.HasSetting(flat_flags)">original_flags</include>
 				<include condition="Skin.HasSetting(flat_flags) + !Skin.HasSetting(vanilla_flags) + !Skin.HasSetting(original_flags)">flat_flags</include>
 				<include>Animation_ZoomInZoomOut</include>
+				<animation effect="slide" end="0,-675" time="0" condition="Container(54).Row(0)">Conditional</animation>
 			</control>
 			<control type="grouplist">
-				<visible>!Skin.HasSetting(no_media_flags) + !Skin.HasSetting(no_frame_flags) + !Player.HasMedia</visible>
+				<visible>Container.Content(movies) + !Skin.HasSetting(no_media_flags) + !Skin.HasSetting(no_frame_flags) + !Player.HasMedia</visible>
 				<description>Media Codec Flagging Images</description>
 				<posx>780</posx>
 				<posy>674</posy>
@@ -333,6 +462,7 @@
 				<orientation>horizontal</orientation>
 				<include>frame_flags</include>
 				<include>Animation_ZoomInZoomOut</include>
+				<animation effect="slide" end="0,-675" time="0" condition="Container(54).Row(0)">Conditional</animation>
 			</control>
 	</control>
 

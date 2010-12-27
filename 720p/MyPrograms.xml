@@ -3,7 +3,7 @@
 <window id="1">
 	<defaultcontrol>50</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
-	<views>50,53,55,56</views>
+	<views>621,55,53,595,56,50</views>
 	<controls>
 		
 		<control type="image">
@@ -11,7 +11,7 @@
 			<fadetime>400</fadetime>
 			<texture>backdrops/curtains.jpg</texture>
 			<include>Animation_CommonFade</include>
-			<visible></visible>
+			<visible>Control.IsVisible(56)</visible>
 		</control>
 		<control type="image">
 			<description>dirty hack for (inside folder) fanart in programs pictures scripts</description>
@@ -23,7 +23,7 @@
 			<aspectratio>scale</aspectratio>
 			<fadetime>400</fadetime> 
 			<include>Animation_MyVideoNav_Fanart</include> 
-			<visible>!substring(ListItem.Path,plugin://) + !substring(ListItem.Path,special://) + !substring(Container.FolderPath,plugin://) + !substring(Container.FolderPath,special://)</visible>
+			<visible>!substring(ListItem.Path,plugin://) + !substring(ListItem.Path,special://) + !substring(Container.FolderPath,plugin://) + !substring(Container.FolderPath,special://) + !Control.IsVisible(56)</visible>
 		</control>
 		<control type="image">
 			<description>dirty hack for (inside folder) fanart in programs pictures scripts</description>
@@ -35,7 +35,7 @@
 			<aspectratio>scale</aspectratio>
 			<fadetime>400</fadetime> 
 			<include>Animation_MyVideoNav_Fanart</include> 
-			<visible>!substring(ListItem.Path,plugin://) + !substring(ListItem.Path,special://) + !substring(Container.FolderPath,plugin://) + !substring(Container.FolderPath,special://)</visible>
+			<visible>!substring(ListItem.Path,plugin://) + !substring(ListItem.Path,special://) + !substring(Container.FolderPath,plugin://) + !substring(Container.FolderPath,special://) + !Control.IsVisible(56)</visible>
 		</control>
 		<control type="image">
 			<description>dirty hack for (folder) fanart in programs pictures scripts</description>
@@ -47,7 +47,7 @@
 			<aspectratio>scale</aspectratio>
 			<fadetime>400</fadetime> 
 			<include>Animation_MyVideoNav_Fanart</include> 
-			<visible>!substring(ListItem.Path,plugin://) + !substring(ListItem.Path,special://) + !substring(Container.FolderPath,plugin://) + !substring(Container.FolderPath,special://)</visible>
+			<visible>!substring(ListItem.Path,plugin://) + !substring(ListItem.Path,special://) + !substring(Container.FolderPath,plugin://) + !substring(Container.FolderPath,special://) + !Control.IsVisible(56)</visible>
 		</control>
 		<control type="image">
 			<include>Dimensions_Fullscreen</include>
@@ -55,16 +55,18 @@
 			<texture background="true" fallback="backdrops/curtains.jpg">$INFO[ListItem.Property(Fanart_Image)]</texture>
 			<include>global_kenburns_fanart</include>
 			<include>Animation_CommonFade</include>
-			<visible>!Control.IsVisible(54)</visible>
+			<visible>!Control.IsVisible(56)</visible>
 		</control>
 		
 		
 	<control type="group">
 		<include>Animation_HiddenByInfo</include>
-			<include>Viewtype_Files</include>
-			<include>Viewtype_Poster</include>
-			<include>Viewtype_3daddon</include><!--  56  -->
-			<include>Viewtype_List</include><!--  56  -->
+			<include>Viewtype_Files</include><!--  50  -->
+			<include>Viewtype_List</include><!-- 53  -->
+			<include>Viewtype_Poster</include><!--  55  -->
+			<include>Viewtype_Fanart</include><!--  56  -->
+			<include>Viewtype_Slide</include><!--  595  -->
+			<include>Viewtype_3daddon</include><!--  621  -->
 	</control>
 	
 	
@@ -106,7 +108,7 @@
 				<label>$INFO[Container.ViewMode]</label>
 				<onclick>Container.NextViewMode</onclick>
 			</control>
-			<control type="togglebutton" id="25">
+			<control type="togglebutton" id="21">
 				<description>Toggle Launcher Plot</description>
 				<include>WindowMenuButton</include>
 				<label>Show Plot</label>
@@ -115,7 +117,7 @@
 				<selected>Skin.HasSetting(launcher_plot)</selected>
 				<visible>Control.IsVisible(53) + [Window.IsActive(Programs) + substring(container.folderpath,plugin://plugin.program.advanced.launcher)]</visible>
 			</control>
-			<control type="togglebutton" id="26">
+			<control type="togglebutton" id="22">
 				<description>Toggle Launcher Plot</description>
 				<include>WindowMenuButton</include>
 				<label>Show Plot</label>
@@ -123,6 +125,24 @@
 				<onclick>Skin.ToggleSetting(launcher_plot_poster)</onclick>
 				<selected>Skin.HasSetting(launcher_plot_poster)</selected>
 				<visible>Control.IsVisible(55) + [Window.IsActive(Programs) + substring(container.folderpath,plugin://plugin.program.advanced.launcher)]</visible>
+			</control>
+			<control type="togglebutton" id="23">
+				<description>Toggle Launcher Plot</description>
+				<include>WindowMenuButton</include>
+				<label>Show Plot</label>
+				<altlabel>Disable Plot</altlabel>
+				<onclick>Skin.ToggleSetting(launcher_plot_poster)</onclick>
+				<selected>Skin.HasSetting(launcher_plot_poster)</selected>
+				<visible>Control.IsVisible(621) + [Window.IsActive(Programs) + substring(container.folderpath,plugin://plugin.program.advanced.launcher)]</visible>
+			</control>
+			<control type="togglebutton" id="24">
+				<description>Toggle Showcase Fanart Title</description>
+				<include>WindowMenuButton</include>
+				<label>More Posters</label>
+				<altlabel>Bigger Posters</altlabel>
+				<onclick>Skin.ToggleSetting(panelview_more_posters)</onclick>
+				<selected>Skin.HasSetting(panelview_more_posters)</selected>
+				<visible>Control.IsVisible(56)</visible>	
 			</control>
 		</control>
 
@@ -139,7 +159,12 @@
 				<include>WindowMenuLabel</include>
 				<!-- LOC -->
 				<label>Plot</label>
-				<visible>[Control.IsVisible(53) | Control.IsVisible(55)] + [Window.IsActive(Programs) + substring(container.folderpath,plugin://plugin.program.advanced.launcher)]</visible>
+				<visible>[Control.IsVisible(53) | Control.IsVisible(55) | Control.IsVisible(621)] + [Window.IsActive(Programs) + substring(container.folderpath,plugin://plugin.program.advanced.launcher)]</visible>
+			</control>
+			<control type="button" id="42">
+				<include>WindowMenuLabel</include>
+				<label>$LOCALIZE[14018]</label>
+				<visible>Control.IsVisible(56) + Window.IsActive(Programs) + substring(container.folderpath,plugin://plugin.program.advanced.launcher)</visible>		
 			</control>
 		</control>
 	</control>

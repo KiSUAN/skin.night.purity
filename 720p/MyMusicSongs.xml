@@ -3,6 +3,7 @@
 <window id="501">
 	<defaultcontrol>50</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
+	<views>58,621,54,50</views>
 	<controls>
 		<control type="image" id="5019">
 			<include>Dimensions_Fullscreen</include>
@@ -31,10 +32,10 @@
 			<visible>IsEmpty(ListItem.Property(Fanart_Image))</visible>
 		</control>
 
-		<include>Viewtype_Files</include><!-- 55  -->
+		<include>Viewtype_Files</include><!-- 50  -->
 		<include>Viewtype_JukeBox</include><!-- 54 -->
 		<include>Viewtype_MusicShowcase</include><!-- 58 -->
-		<include>Viewtype_3daddon</include><!-- 56 -->
+		<include>Viewtype_3daddon</include><!-- 621 -->
 		
 		<include>Global_Time_TopRight_Files</include>
 		

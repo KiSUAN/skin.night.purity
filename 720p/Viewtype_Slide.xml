@@ -30,7 +30,7 @@
 			<preloaditems>2</preloaditems>
 			<pagecontrol>5950</pagecontrol>
 			<include>Animation_CommonFade</include>
-			<visible>!Skin.HasSetting(no_Slide) + Container.Content(Movies) + !substring(container.folderpath,plugin://plugin.video.apple.movie.trailers.lite)</visible>
+			<visible>!Skin.HasSetting(no_Slide) + Container.Content(Movies) + !substring(container.folderpath,plugin://plugin.video.apple.movie.trailers.lite) | [Window.IsActive(programs) + substring(container.folderpath,plugin://plugin.program.advanced.launcher)]</visible>
 				<itemlayout width="210" height="700">
 					<control type="group">
 					<posx>0</posx>
@@ -139,7 +139,7 @@
 	<posx>640</posx>
 	<posy>290</posy>
 	<animation effect="slide" start="0,0" end="0,-400" time="200" delay="600" condition="Control.HasFocus(8241)">Conditional</animation>
-	<visible>Control.IsVisible(595) + Container.Content(movies) + !SubString(ListItem.Icon,DefaultFolderBack.png,Left)</visible>
+	<visible>Control.IsVisible(595) + [[Container.Content(movies) + !SubString(ListItem.Icon,DefaultFolderBack.png,Left)] | [Window.IsActive(programs) + substring(container.folderpath,plugin://plugin.program.advanced.launcher)]]</visible>
 	<include>Animation_BackdropFade</include>
 		<control type="label"><!--Movie title-->
 			<posx>15</posx>
@@ -196,6 +196,15 @@
 			<label>$INFO[ListItem.year]</label>
 			<animation effect="slide" start="0,0" end="0,-23" time="0" condition="IsEmpty(ListItem.Duration)">Conditional</animation>
 		</control>
+		<control type="label"><!--Genre-->
+			<visible>substring(container.folderpath,plugin://plugin.program.advanced.launcher)</visible>
+			<posx>15</posx>
+			<posy>290</posy>
+			<width>394</width>
+			<height>50</height>
+			<font>LiberationSans_Regular_22</font>
+			<label>[B][COLOR=ListTrackF]$LOCALIZE[515][/COLOR] [B][COLOR=white]$INFO[ListItem.Genre][/B][/COLOR]</label>
+		</control>
 		<control type="group">
 			<posx>76</posx>
 			<posy>311</posy>
@@ -208,7 +217,7 @@
 	
 	<control type="group">
 		<posy>40</posy>
-		<animation effect="slide" start="1000,0" end="0,0" time="400" delay="900">Visible</animation>
+		<animation effect="slide" start="1000,0" end="0,0" time="400" delay="600" condition="![IsEmpty(Control.GetLabel(8241)) + IsEmpty(Control.GetLabel(8242))]">Conditional</animation>
 		<visible>Control.IsVisible(595) + Container.Content(movies) + Control.HasFocus(8241) + ![Control.HasFocus(8241) + Player.HasVideo]</visible>
 		<include>Animation_BackdropFade</include>
 			<control type="image" id="8241">
@@ -252,7 +261,7 @@
 		<posx>660</posx>
 		<posy>230</posy>
 		<width>600</width>
-		<height>236</height>
+		<height>230</height>
 		<align>justify</align>
 		<info>ListItem.Plot</info>
 		<font>LiberationSans_Regular_20</font>
@@ -261,7 +270,7 @@
 		<animation effect="slide" start="1000,0" end="0,0" time="400" delay="600">Visible</animation>
 		<autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
 		<include>Animation_BackdropFade</include>
-		<visible>Control.IsVisible(595) + Container.Content(movies) + Control.HasFocus(8241) + ![Control.HasFocus(8241) + Player.HasVideo]</visible>
+		<visible>Control.IsVisible(595) + [[Container.Content(movies) + Control.HasFocus(8241) + ![Control.HasFocus(8241) + Player.HasVideo]] | [Window.IsActive(programs) + substring(container.folderpath,plugin://plugin.program.advanced.launcher) + Control.HasFocus(8241)]]</visible>
 	</control>
 	
 	<control type="group">
@@ -300,7 +309,7 @@
 		<animation effect="fade"  start="0" end="100" time="400" delay="1000" condition="![Container(595).OnNext | Container(595).OnPrevious]">Conditional</animation>
 	</control>	
 	<control type="label">
-		<visible>Control.IsVisible(595) + Control.HasFocus(8241) + !Player.HasVideo</visible>
+		<visible>Control.IsVisible(595) + Control.HasFocus(8241) + !Player.HasVideo + !substring(container.folderpath,plugin://plugin.program.advanced.launcher)</visible>
 		<posx>410</posx>
 		<posy>668</posy>
 		<width>370</width>

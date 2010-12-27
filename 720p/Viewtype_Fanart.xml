@@ -14,7 +14,7 @@
 				<texture>panel/last-overlay.png</texture>
 			</control>
 			<control type="image"><!-- 1st overlay -->
-				<visible>Container.Content(movies) | Container.Content(tvshows)</visible>
+				<visible>Container.Content(movies) | Container.Content(tvshows) | [Window.IsActive(programs) + substring(container.folderpath,plugin://plugin.program.advanced.launcher)]</visible>
 				<posx>0</posx>
 				<posy>0</posy>
 				<width>1280</width>
@@ -22,7 +22,7 @@
 				<texture>panel/panel-back.png</texture>
 			</control>
 			<control type="image">
-				<visible>[Container.Content(movies) | Container.Content(tvshows)] + !Player.HasVideo + !SubString(ListItem.Icon,DefaultFolderBack.png,Left)</visible>
+				<visible>[Container.Content(movies) | Container.Content(tvshows)] + !Player.HasVideo + !SubString(ListItem.Icon,DefaultFolderBack.png,Left) | [Window.IsActive(programs) + substring(container.folderpath,plugin://plugin.program.advanced.launcher)]</visible>
 				<posx>0</posx>
 				<posy>0</posy>
 				<width>570</width>
@@ -37,7 +37,7 @@
 		
 		
 		<control type="panel" id="56">
-			<visible>!Skin.HasSetting(no_Panel) + [Container.Content(Movies) | [Container.Content(tvshows) + Skin.HasSetting(TVPosters)]] + !substring(container.folderpath,plugin://plugin.video.apple.movie.trailers.lite) + !Container.Content(Genres)</visible>
+			<visible>!Skin.HasSetting(no_Panel) + [Container.Content(Movies) | [Container.Content(tvshows) + Skin.HasSetting(TVPosters)]] + !substring(container.folderpath,plugin://plugin.video.apple.movie.trailers.lite) + !Container.Content(Genres) | [Window.IsActive(programs) + substring(container.folderpath,plugin://plugin.program.advanced.launcher)]</visible>
 			<posx>520</posx>
 			<posy>12</posy><!-- -105 -->
 			<width>800</width>
@@ -334,7 +334,7 @@
 			<control type="group">
 				<include>Animation_Viewtype_Panel_Title</include>
 					<control type="label"><!--Movie title-->
-						<visible>Container.Content(movies)</visible>
+						<visible>Container.Content(movies) | [Window.IsActive(programs) + substring(container.folderpath,plugin://plugin.program.advanced.launcher)]</visible>
 						<posx>20</posx>
 						<posy>320</posy>
 						<width>545</width>
@@ -366,6 +366,16 @@
 						<textcolor>mainblue</textcolor>
 						<scroll>true</scroll>
 						<label>[B]$INFO[ListItem.Label][/B]</label>
+					</control>
+					<control type="label">
+						<visible>Window.IsActive(programs) + substring(container.folderpath,plugin://plugin.program.advanced.launcher)</visible>
+						<posx>15</posx>
+						<posy>358</posy>
+						<width>555</width>
+						<height>50</height>
+						<align>center</align>
+						<font>LiberationSans_Regular_22</font>
+						<label>[B][COLOR=ListTrackF]$LOCALIZE[515][/COLOR] [B][COLOR=white]$INFO[ListItem.Genre][/B][/COLOR]</label>
 					</control>
 					<control type="label">
 						<visible>Container.Content(tvshows) + IsEmpty(Control.GetLabel(7017))</visible>
@@ -414,7 +424,7 @@
 			</control>
 			<control type="group">
 				<control type="textbox">
-					<visible>[Container.Content(movies) | Container.Content(tvshows)] + ![Player.HasAudio + !SubString(Window(10025).Property(TvTunesIsAlive),True)]</visible>
+					<visible>[Container.Content(movies) | Container.Content(tvshows)] + ![Player.HasAudio + !SubString(Window(10025).Property(TvTunesIsAlive),True)] | [Window.IsActive(programs) + substring(container.folderpath,plugin://plugin.program.advanced.launcher)]</visible>
 					<posx>15</posx>
 					<posy>390</posy>
 					<width>540</width>
