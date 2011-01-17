@@ -45,7 +45,7 @@
 		<animation effect="slide" end="0,40" time="0" condition="Skin.HasSetting(3dmusic_Fanart)">conditional</animation>
 		<camera x="1340" y="380" />
 		<animation effect="rotatey" center="50" start="8" end="8" time="0" condition="true">Conditional</animation>
-		<visible>!Window.IsActive(videolibrary)</visible>
+		<visible>![[Container.Content(movies) + Window.IsActive(videolibrary)] | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(genres) | Container.Content(directors)]</visible>
 		<itemlayout width="176" height="245">
 			<control type="group">
 				<posx>150</posx>
