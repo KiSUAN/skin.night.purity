@@ -298,7 +298,7 @@
 			<height>27</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/ratings/custom/mpaa_notrated.png</texture>
-			<visible>IsEmpty(listitem.mpaa) + !IsEmpty(ListItem.foldername) + !substring(ListItem.FilenameAndPath,unrated) + Window.IsActive(videolibrary)</visible>
+			<visible>IsEmpty(listitem.mpaa) + !IsEmpty(ListItem.foldername) + !substring(ListItem.FilenameAndPath,unrated) + Container.Content(movies)</visible>
 		</control>
 		<control type="image">
 			<description>Rated UnRated</description>

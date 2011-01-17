@@ -7,27 +7,22 @@
 		<control type="image">
 			<include>Dimensions_Fullscreen</include>
 			<texture>list/file-black-background1.png</texture>
-			<visible>Control.IsVisible(50) + Container.Content(movies) + !Skin.HasSetting(Files_Fanart)</visible>
+			<visible>Control.IsVisible(50) + !Skin.HasSetting(Files_Fanart) + ![Window.IsActive(musiclibrary) | Window.IsActive(musicfiles)]</visible>
 		</control>
 		<control type="image">
 			<include>Dimensions_Fullscreen</include>
 			<texture>list/file-black-background1.png</texture>
-			<visible>Control.IsVisible(50) + Window.IsActive(musiclibrary) + !Skin.HasSetting(music_files_fanart)</visible>
-		</control>
-		<control type="image">
-			<include>Dimensions_Fullscreen</include>
-			<texture>list/file-black-background1.png</texture>
-			<visible>Control.IsVisible(50) + ![Container.Content(movies) | Window.IsActive(musiclibrary)]</visible>
+			<visible>Control.IsVisible(50) + !Skin.HasSetting(music_files_fanart) + [Window.IsActive(musiclibrary) | Window.IsActive(musicfiles)]</visible>
 		</control>
 		<control type="image">
 			<include>Dimensions_Fullscreen</include>
 			<texture>list/files_fanart_background.png</texture>
-			<visible>Control.IsVisible(50) + Container.Content(movies) + Skin.HasSetting(Files_Fanart)</visible>
+			<visible>Control.IsVisible(50) + Skin.HasSetting(Files_Fanart) + ![Window.IsActive(musiclibrary) | Window.IsActive(musicfiles)]</visible>
 		</control>
 		<control type="image">
 			<include>Dimensions_Fullscreen</include>
 			<texture>list/files_fanart_background.png</texture>
-			<visible>Control.IsVisible(50) + Window.IsActive(musiclibrary) + Skin.HasSetting(music_files_fanart)</visible>
+			<visible>Control.IsVisible(50) + Skin.HasSetting(music_files_fanart) + [Window.IsActive(musiclibrary) | Window.IsActive(musicfiles)]</visible>
 		</control>
 		
 		
@@ -82,7 +77,7 @@
 					<height>4</height>
 					<aspectratio>stretch</aspectratio>
 					<texture>confluence/separator.png</texture>
-					<visible>Control.IsVisible(50) + Container.Content(movies) + !Skin.HasSetting(Files_Fanart)</visible>
+					<visible>Control.IsVisible(50) + !Skin.HasSetting(Files_Fanart) + ![Window.IsActive(musiclibrary) | Window.IsActive(musicfiles)]</visible>
 				</control>
 				<control type="image">
 					<posx>0</posx>
@@ -91,16 +86,7 @@
 					<height>4</height>
 					<aspectratio>stretch</aspectratio>
 					<texture>confluence/separator.png</texture>
-					<visible>Control.IsVisible(50) + Window.IsActive(musiclibrary) + !Skin.HasSetting(music_files_fanart)</visible>
-				</control>
-				<control type="image">
-					<posx>0</posx>
-					<posy>38</posy>
-					<width>880</width>
-					<height>4</height>
-					<aspectratio>stretch</aspectratio>
-					<texture>confluence/separator.png</texture>
-					<visible>Control.IsVisible(50) + ![Container.Content(movies) | Window.IsActive(musiclibrary)]</visible>
+					<visible>Control.IsVisible(50) + !Skin.HasSetting(music_files_fanart) + [Window.IsActive(musiclibrary) | Window.IsActive(musicfiles)]</visible>
 				</control>
 				<control type="label">
 					<posx>756</posx>
@@ -111,7 +97,7 @@
 					<font>LiberationSans_Regular_24</font>
 					<textcolor>Text-Filemode</textcolor>
 					<label>$INFO[ListItem.year]</label>
-					<visible>Container.Content(movies) + !Skin.HasSetting(Files_Fanart) + !SubString(ListItem.Icon,DefaultFolderBack.png,Left)</visible>
+					<visible>![Window.IsActive(musiclibrary) + Skin.HasSetting(Files_Fanart) + SubString(ListItem.Icon,DefaultFolderBack.png,Left)]</visible>
 				</control>
 				<control type="label">
 					<posx>810</posx>
@@ -162,7 +148,7 @@
 					<height>4</height>
 					<aspectratio>stretch</aspectratio>
 					<texture>confluence/separator.png</texture>
-					<visible>Control.IsVisible(50) + Container.Content(movies) + !Skin.HasSetting(Files_Fanart)</visible>
+					<visible>Control.IsVisible(50)+ !Skin.HasSetting(Files_Fanart) + ![Window.IsActive(musiclibrary) | Window.IsActive(musicfiles)]</visible>
 				</control>
 				<control type="image">
 					<posx>0</posx>
@@ -171,16 +157,7 @@
 					<height>4</height>
 					<aspectratio>stretch</aspectratio>
 					<texture>confluence/separator.png</texture>
-					<visible>Control.IsVisible(50) + Window.IsActive(musiclibrary) + !Skin.HasSetting(music_files_fanart)</visible>
-				</control>
-				<control type="image">
-					<posx>0</posx>
-					<posy>38</posy>
-					<width>880</width>
-					<height>4</height>
-					<aspectratio>stretch</aspectratio>
-					<texture>confluence/separator.png</texture>
-					<visible>Control.IsVisible(50) + ![Container.Content(movies) | Window.IsActive(musiclibrary)]</visible>
+					<visible>Control.IsVisible(50) + !Skin.HasSetting(music_files_fanart) + [Window.IsActive(musiclibrary) | Window.IsActive(musicfiles)]</visible>
 				</control>
 				<control type="image">
 					<posx>-70</posx>
@@ -226,7 +203,7 @@
 					<font>LiberationSans_Regular_24</font>
 					<textcolor>white</textcolor>
 					<label>$INFO[ListItem.year]</label>
-					<visible>Container.Content(movies) + !Skin.HasSetting(Files_Fanart) + !SubString(ListItem.Icon,DefaultFolderBack.png,Left)</visible>
+					<visible>![Window.IsActive(musiclibrary) + Skin.HasSetting(Files_Fanart) + SubString(ListItem.Icon,DefaultFolderBack.png,Left)]</visible>
 				</control>
 				<control type="label">
 					<posx>810</posx>
@@ -369,12 +346,12 @@
 	</control>-->
 	
 	<control type="group">
-	<visible>Control.IsVisible(50) + !SubString(ListItem.Icon,DefaultFolderBack.png,Left) + [Container.Content(tvshows) | Container.Content(seasons)]</visible>
+	<visible>Control.IsVisible(50) + !SubString(ListItem.Icon,DefaultFolderBack.png,Left) + !Skin.HasSetting(Files_Fanart) + [Container.Content(tvshows) | Container.Content(seasons)]</visible>
 	<include>Animation_Viewtype_Files_RightArea</include>	
 		<control type="image">
-			<posx>770</posx>
+			<posx>830</posx>
 			<posy>190</posy>
-			<width>500</width>
+			<width>450</width>
 			<height>530</height>
 			<aspectratio align="right" aligny="bottom">keep</aspectratio>
 			<texture background="true">$INFO[ListItem.Icon]</texture>
@@ -394,9 +371,9 @@
 			<fadetime>100</fadetime>
 		</control>-->
 		<control type="image">
-			<posx>770</posx>
+			<posx>830</posx>
 			<posy>190</posy>
-			<width>500</width>
+			<width>450</width>
 			<height>530</height>
 			<aspectratio align="right" aligny="bottom">keep</aspectratio>
 			<texture background="true">$INFO[ListItem(-1).Icon]</texture>
@@ -409,9 +386,9 @@
 			<visible>Container(50).OnNext + !SubString(ListItem.Icon,DefaultFolderBack.png,Left)</visible>
 		</control>
 		<control type="image">
-			<posx>770</posx>
+			<posx>830</posx>
 			<posy>190</posy>
-			<width>500</width>
+			<width>450</width>
 			<height>530</height>
 			<aspectratio align="right" aligny="bottom">keep</aspectratio>
 			<texture background="true">$INFO[ListItem(1).Icon]</texture>
@@ -425,7 +402,7 @@
 		</control>
 	</control>
 	<control type="group">
-		<visible>Control.IsVisible(50) + ![Window.IsActive(musicfiles) | Container.Content(movies) | Container.Content(Genres) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(albums) | Container.Content(songs) | [Window.IsActive(musiclibrary) + Skin.HasSetting(music_files_fanart)]]</visible>
+		<visible>Control.IsVisible(50) + !Skin.HasSetting(Files_Fanart) + ![Window.IsActive(musicfiles) | Container.Content(movies) | Container.Content(Genres) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(albums) | Container.Content(songs) | [Window.IsActive(musiclibrary) + Skin.HasSetting(music_files_fanart)]]</visible>
 		<include>Animation_Viewtype_Files_RightArea</include>	
 			<control type="image">
 				<posx>870</posx>
@@ -440,7 +417,7 @@
 			</control>
 	</control>
 	<control type="group">
-	<visible>Control.IsVisible(50) + Window.IsActive(musicfiles)</visible>
+	<visible>Control.IsVisible(50) + Window.IsActive(musicfiles) + !Skin.HasSetting(music_files_fanart)</visible>
 	<include>Animation_Viewtype_Files_RightArea</include>	
 		<control type="image">
 			<posx>770</posx>
@@ -610,8 +587,8 @@
 		</control>
 	</control>
 		<control type="image" id="7019">
-			<visible>Control.IsVisible(50) + [Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)]</visible>
-			<posx>920</posx>
+			<visible>Control.IsVisible(50) + Window.IsActive(videolibrary) + [Container.Content(seasons) | Container.Content(episodes)]</visible>
+			<posx>930</posx>
 			<posy>0</posy>
 			<width>230</width>
 			<height>89</height>
@@ -621,8 +598,8 @@
 			<include>Animation_Viewtype_Files_RightArea</include>
 		</control>
 		<control type="image" id="9019">
-			<visible>Control.IsVisible(50) + [Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)]</visible>
-			<posx>920</posx>
+			<visible>Control.IsVisible(50) + Window.IsActive(videolibrary) + [Container.Content(seasons) | Container.Content(episodes)]</visible>
+			<posx>930</posx>
 			<posy>0</posy>
 			<width>230</width>
 			<height>89</height>
@@ -644,7 +621,7 @@
 			<visible>Control.IsVisible(50) + [Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)] + IsEmpty(Control.GetLabel(7019)) + IsEmpty(Control.GetLabel(9019))</visible>
 		</control>
 	<control type="group">
-		<visible>Control.IsVisible(50) + !Window.IsActive(videoplaylist) + !SubString(ListItem.Icon,DefaultFolderBack.png,Left)</visible>
+		<visible>Control.IsVisible(50) + !Skin.HasSetting(Files_Fanart) + !Window.IsActive(videoplaylist) + !SubString(ListItem.Icon,DefaultFolderBack.png,Left)</visible>
 		<posx>0</posx>
 		<posy>96</posy>
 		<include>Animation_Viewtype_Wall_UnderInfo</include>
@@ -695,9 +672,9 @@
 			<posx>40</posx>
 			<posy>0</posy>
 			<include>Animation_Viewtype_Files_RightArea</include>
-			<visible>Control.IsVisible(50) + Container.Content(episodes) + !SubString(ListItem.Icon,DefaultFolderBack.png,Left)</visible>
+			<visible>Control.IsVisible(50) + Container.Content(episodes) + !Skin.HasSetting(Files_Fanart) + !SubString(ListItem.Icon,DefaultFolderBack.png,Left)</visible>
 				<control type="label">
-					<posx>770</posx>
+					<posx>780</posx>
 					<posy>90</posy>
 					<width>480</width>
 					<height>89</height>
@@ -707,7 +684,7 @@
 					<label>[B]$LOCALIZE[20373] $INFO[ListItem.Season]     $LOCALIZE[20359] $INFO[ListItem.Episode][/B]</label>
 				</control>
 				<control type="label">
-					<posx>770</posx>
+					<posx>780</posx>
 					<posy>136</posy>
 					<width>480</width>
 					<height>89</height>
@@ -715,7 +692,7 @@
 					<label>[COLOR=ListTrackF][B]$LOCALIZE[31231][/COLOR] [COLOR=white]$INFO[ListItem.Date][/COLOR][/B]</label>
 				</control>
 				<control type="label">
-					<posx>770</posx>
+					<posx>780</posx>
 					<posy>162</posy>
 					<width>480</width>
 					<height>89</height>
@@ -723,9 +700,9 @@
 					<label>[COLOR=ListTrackF][B]$LOCALIZE[368][/COLOR] [COLOR=white]$INFO[ListItem.Rating][/COLOR][/B]      [COLOR=ListTrackF][B]$LOCALIZE[31226][/COLOR] [COLOR=white]$INFO[ListItem.mpaa][/COLOR][/B]</label>
 				</control>
 				<control type="textbox"><!-- Plot TV -->
-					<posx>750</posx>
+					<posx>780</posx>
 					<posy>190</posy>
-					<width>476</width>
+					<width>450</width>
 					<height>280</height>
 					<align>justify</align>
 					<info>ListItem.Plot</info>

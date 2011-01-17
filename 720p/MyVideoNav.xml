@@ -3,7 +3,7 @@
 <window id="25">
 	<defaultcontrol always="true">9999</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
-	<views>621,50,55,598,58,595,51,52,633,53,54,597,56,57,59,592,593,594,596,50</views>
+	<views>621,55,598,58,595,51,52,633,53,54,597,56,57,59,592,593,594,596,50</views>
 	<controls>
 		<control type="button" id="9999">
             <description>trigger</description>
@@ -250,7 +250,7 @@
 					<altlabel>$LOCALIZE[31214]</altlabel>
 					<onclick>Skin.ToggleSetting(Files_Fanart)</onclick>
 					<selected>Skin.HasSetting(Files_Fanart)</selected>
-					<visible>Control.IsVisible(50) + Container.Content(movies)</visible>
+					<visible>Control.IsVisible(50)</visible>
 				</control>
 				<control type="togglebutton" id="29">
 					<description>Toggle MoviesFanart</description>
@@ -364,7 +364,7 @@
 			<control type="label">
 				<include>WindowMenuLabel</include>
 				<label>$LOCALIZE[14018]</label>
-				<visible>[Control.IsVisible(55) | Control.IsVisible(53) | Control.IsVisible(56) | Control.IsVisible(58)] + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)] | [Control.IsVisible(50) + Container.Content(movies)] | [Control.IsVisible(59) + Container.Content(tvshows)] | [Control.IsVisible(55) + Window.IsVisible(VideoLibrary)]</visible>		
+				<visible>[Control.IsVisible(55) | Control.IsVisible(53) | Control.IsVisible(56) | Control.IsVisible(58)] + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)] | Control.IsVisible(50) | [Control.IsVisible(59) + Container.Content(tvshows)] | [Control.IsVisible(55) + Window.IsVisible(VideoLibrary)]</visible>		
 			</control>
 			<control type="label">
 				<include>WindowMenuLabel</include>

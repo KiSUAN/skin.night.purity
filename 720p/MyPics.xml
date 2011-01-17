@@ -71,6 +71,15 @@
 				<label>$INFO[Container.ViewMode]</label>
 				<onclick>Container.NextViewMode</onclick>
 			</control>
+			<control type="togglebutton" id="21">
+				<description>Toggle MoviesFanart</description>
+				<include>WindowMenuButton</include>
+				<label>$LOCALIZE[31086]</label>
+				<altlabel>$LOCALIZE[31214]</altlabel>
+				<onclick>Skin.ToggleSetting(Files_Fanart)</onclick>
+				<selected>Skin.HasSetting(Files_Fanart)</selected>
+				<visible>Control.IsVisible(50)</visible>
+			</control>
 			<control type="button" id="3">
 				<include>WindowMenuButton</include>
 				<label>103</label>
@@ -98,6 +107,11 @@
 				<include>WindowMenuLabel</include>
 				<label>$LOCALIZE[31088]</label>
 			</control>
+			<control type="button" id="46">
+				<include>WindowMenuLabel</include>
+				<label>$LOCALIZE[14018]</label>
+				<visible>Control.IsVisible(50)</visible>		
+			</control>
 			<control type="button" id="41">
 				<include>WindowMenuLabel</include>
 				<label>$LOCALIZE[31090]</label>
@@ -113,7 +127,7 @@
 			<control type="button" id="45">
 				<include>WindowMenuLabel</include>
 				<label>$LOCALIZE[31093]</label>
-			</control>				
+			</control>	
 		</control>
 	</control>
 		
