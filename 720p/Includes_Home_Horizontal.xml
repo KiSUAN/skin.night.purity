@@ -87,8 +87,9 @@
 					<description>movies</description>
 					<label>$LOCALIZE[20342]</label>
 					<icon>special://skin/backgrounds/movies.jpg</icon>
-					<thumb>$INFO[Skin.String(CustomMoviesFolder)]</thumb>			
-					<onclick>XBMC.ActivateWindow(MyVideoLibrary,movietitles,return)</onclick>
+					<thumb>$INFO[Skin.String(CustomMoviesFolder)]</thumb>
+					<include condition="!Skin.HasSetting(Custom_Movie_Link)">Movie_Regular</include>
+					<include condition="Skin.HasSetting(Custom_Movie_Link)">Movie_Playlist</include>
 					<visible>!Skin.HasSetting(HomeMenuNoMoviesButton) + Library.HasContent(Movies) + !Skin.HasSetting(home_qlock)</visible>
 				</item>
 				<item id="3">
@@ -96,11 +97,12 @@
 					<label>$LOCALIZE[20342]</label>
 					<icon>7000_focus.png</icon>
 					<thumb>7000_focus.png</thumb>
-					<onclick>XBMC.ActivateWindow(MyVideoLibrary,movietitles,return)</onclick>
+					<include condition="!Skin.HasSetting(Custom_Movie_Link)">Movie_Regular</include>
+					<include condition="Skin.HasSetting(Custom_Movie_Link)">Movie_Playlist</include>
 					<visible>!Skin.HasSetting(HomeMenuNoMoviesButton) + Library.HasContent(Movies) + Skin.HasSetting(home_qlock)</visible>
 				</item>
 				<item id="4">
-					<description>movies</description>
+					<description>HD movies</description>
 					<label>$LOCALIZE[31280]</label>
 					<icon>special://skin/backgrounds/HDmovies.jpg</icon>
 					<thumb>$INFO[Skin.String(CustomHDMoviesFolder)]</thumb>			
@@ -108,7 +110,7 @@
 					<visible>!Skin.HasSetting(HomeMenuNoHDMoviesButton) + Library.HasContent(Movies) + !Skin.HasSetting(home_qlock)</visible>
 				</item>
 				<item id="4">
-					<description>movies</description>
+					<description>HD movies</description>
 					<label>$LOCALIZE[31280]</label>
 					<icon>7000_focus.png</icon>
 					<thumb>7000_focus.png</thumb>
@@ -531,7 +533,7 @@
 					<onup>301</onup>
 					<ondown>301</ondown>
 					<itemgap>0</itemgap>
-					<visible>Container(301).HasFocus(3)</visible>
+					<visible>Container(301).HasFocus(3) | Container(301).HasFocus(4)</visible>
 					<itemlayout width="320" height="245">
 						<control type="group">	
 							<posx>20</posx>
