@@ -9,40 +9,40 @@
 			<control type="group">
 				<posx>275r</posx>
 				<posy>200</posy>
-				<visible>Library.HasContent(Movies) + Container(300).Hasfocus(3)</visible>
+				<visible>Library.HasContent(Movies) + [Container(300).Hasfocus(3) | Container(300).Hasfocus(4)]</visible>
 				<include>VisibleFadeEffect</include>
 				<control type="label">
 					<description>Title label</description>
-					<posx>120</posx>
+					<posx>260</posx>
 					<posy>330</posy>
 					<height>20</height>
 					<width>230</width>
 					<label>31323</label>
-					<align>left</align>
+					<align>right</align>
 					<aligny>center</aligny>
 					<font>LiberationSans_Regular_20</font>
 					<textcolor>white</textcolor>
 					<shadowcolor>black</shadowcolor>
-					<animation effect="slide" start="220,0" end="0,0" time="600" delay="2400" tween="cubic" easing="inout" condition="Container(300).HasFocus(3)">Conditional</animation>
+					<animation effect="slide" start="220,0" end="0,0" time="600" delay="2400" tween="cubic" easing="inout" condition="Container(300).Hasfocus(3) | Container(300).Hasfocus(4)">Conditional</animation>
 					<visible>!Skin.HasSetting(random_items)</visible>
 				</control>
 				<control type="label">
 					<description>Title label</description>
-					<posx>120</posx>
+					<posx>260</posx>
 					<posy>330</posy>
 					<height>20</height>
 					<width>230</width>
 					<label>31517</label>
-					<align>left</align>
+					<align>right</align>
 					<aligny>center</aligny>
 					<font>LiberationSans_Regular_20</font>
 					<textcolor>white</textcolor>
 					<shadowcolor>black</shadowcolor>
-					<animation effect="slide" start="220,0" end="0,0" time="600" delay="2400" tween="cubic" easing="inout" condition="Container(300).HasFocus(3)">Conditional</animation>
+					<animation effect="slide" start="220,0" end="0,0" time="600" delay="2400" tween="cubic" easing="inout" condition="Container(300).Hasfocus(3) | Container(300).Hasfocus(4)">Conditional</animation>
 					<visible>Skin.HasSetting(random_items)</visible>
 				</control>
 				<control type="wraplist" id="8000">
-					<posx>-120</posx>
+					<posx>-114</posx>
 					<posy>270</posy>
 					<width>390</width>
 					<height>1000</height>
@@ -55,7 +55,7 @@
 					<focusposition>0</focusposition>
 					<pagecontrol>-</pagecontrol>
 					<scrolltime>0</scrolltime>
-					<animation effect="slide" start="400,0" end="0,0" time="600" delay="2000" tween="cubic" easing="inout" condition="Container(300).HasFocus(3)">Conditional</animation>
+					<animation effect="slide" start="400,0" end="0,0" time="600" delay="2000" tween="cubic" easing="inout" condition="Container(300).Hasfocus(3) | Container(300).Hasfocus(4)">Conditional</animation>
 					<itemlayout width="110" height="160">
 						<control type="largeimage">
 							<posx>60</posx>
@@ -276,12 +276,12 @@
 				<!--<animation effect="slide" end="0,0" time="600" condition="Skin.HasSetting(horizontal_home) + Skin.HasSetting(horizontal_bottom_align)">conditional</animation>-->
 				<control type="label">
 					<description>Title label</description>
-					<posx>-74</posx>
+					<posx>80</posx>
 					<posy>330</posy>
 					<height>20</height>
 					<width>230</width>
 					<label>$LOCALIZE[31253]</label>
-					<align>left</align>
+					<align>right</align>
 					<aligny>center</aligny>
 					<font>LiberationSans_Regular_20</font>
 					<textcolor>white</textcolor>
@@ -291,12 +291,12 @@
 				</control>
 				<control type="label">
 					<description>Title label</description>
-					<posx>-74</posx>
+					<posx>80</posx>
 					<posy>330</posy>
 					<height>20</height>
 					<width>230</width>
 					<label>$LOCALIZE[31518]</label>
-					<align>left</align>
+					<align>right</align>
 					<aligny>center</aligny>
 					<font>LiberationSans_Regular_20</font>
 					<textcolor>white</textcolor>
@@ -381,40 +381,40 @@
 			<control type="group">
 				<posx>275r</posx>
 				<posy>200</posy>
-				<visible>Library.HasContent(Movies) + Container(301).Hasfocus(3)</visible>
+				<visible>Library.HasContent(Movies) + [Container(301).Hasfocus(3) | Container(301).Hasfocus(4)]</visible>
 				<include>VisibleFadeEffect</include>
 				<control type="label">
 					<description>Title label</description>
-					<posx>120</posx>
+					<posx>260</posx>
 					<posy>330</posy>
 					<height>20</height>
 					<width>230</width>
 					<label>31323</label>
-					<align>left</align>
+					<align>right</align>
 					<aligny>center</aligny>
 					<font>LiberationSans_Regular_20</font>
 					<textcolor>white</textcolor>
 					<shadowcolor>black</shadowcolor>
-					<animation effect="slide" start="220,0" end="0,0" time="600" delay="2400" tween="cubic" easing="inout" condition="Container(301).HasFocus(3)">Conditional</animation>
+					<animation effect="slide" start="220,0" end="0,0" time="600" delay="2400" tween="cubic" easing="inout" condition="Container(301).Hasfocus(3) | Container(301).Hasfocus(4)">Conditional</animation>
 					<visible>!Skin.HasSetting(random_items)</visible>
 				</control>
 				<control type="label">
 					<description>Title label</description>
-					<posx>120</posx>
+					<posx>260</posx>
 					<posy>330</posy>
 					<height>20</height>
 					<width>230</width>
 					<label>31517</label>
-					<align>left</align>
+					<align>right</align>
 					<aligny>center</aligny>
 					<font>LiberationSans_Regular_20</font>
 					<textcolor>white</textcolor>
 					<shadowcolor>black</shadowcolor>
-					<animation effect="slide" start="220,0" end="0,0" time="600" delay="2400" tween="cubic" easing="inout" condition="Container(301).HasFocus(3)">Conditional</animation>
+					<animation effect="slide" start="220,0" end="0,0" time="600" delay="2400" tween="cubic" easing="inout" condition="Container(301).Hasfocus(3) | Container(301).Hasfocus(4)">Conditional</animation>
 					<visible>Skin.HasSetting(random_items)</visible>
 				</control>
 				<control type="wraplist" id="8000">
-					<posx>-120</posx>
+					<posx>-114</posx>
 					<posy>270</posy>
 					<width>390</width>
 					<height>1000</height>
@@ -427,7 +427,7 @@
 					<focusposition>0</focusposition>
 					<pagecontrol>-</pagecontrol>
 					<scrolltime>0</scrolltime>
-					<animation effect="slide" start="400,0" end="0,0" time="600" delay="2000" tween="cubic" easing="inout" condition="Container(301).HasFocus(3)">Conditional</animation>
+					<animation effect="slide" start="400,0" end="0,0" time="600" delay="2000" tween="cubic" easing="inout" condition="Container(301).Hasfocus(3) | Container(301).Hasfocus(4)">Conditional</animation>
 					<itemlayout width="110" height="160">
 						<control type="largeimage">
 							<posx>60</posx>
@@ -648,12 +648,12 @@
 				<!--<animation effect="slide" end="0,0" time="600" condition="Skin.HasSetting(horizontal_home) + Skin.HasSetting(horizontal_bottom_align)">conditional</animation>-->
 				<control type="label">
 					<description>Title label</description>
-					<posx>-74</posx>
+					<posx>80</posx>
 					<posy>330</posy>
 					<height>20</height>
 					<width>230</width>
 					<label>$LOCALIZE[31253]</label>
-					<align>left</align>
+					<align>right</align>
 					<aligny>center</aligny>
 					<font>LiberationSans_Regular_20</font>
 					<textcolor>white</textcolor>
@@ -663,12 +663,12 @@
 				</control>
 				<control type="label">
 					<description>Title label</description>
-					<posx>-74</posx>
+					<posx>80</posx>
 					<posy>330</posy>
 					<height>20</height>
 					<width>230</width>
 					<label>$LOCALIZE[31518]</label>
-					<align>left</align>
+					<align>right</align>
 					<aligny>center</aligny>
 					<font>LiberationSans_Regular_20</font>
 					<textcolor>white</textcolor>

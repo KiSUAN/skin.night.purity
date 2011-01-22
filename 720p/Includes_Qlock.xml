@@ -58,10 +58,10 @@
 		<visible>Skin.HasSetting(home_qlock) + Window.IsActive(home)</visible>
 		<posy>30</posy>
 		<animation effect="slide" end="250,70" time="0" condition="Skin.HasSetting(home_qlock) + !Skin.HasSetting(horizontal_home)">Conditional</animation>
-		<animation effect="slide" end="80,0" time="0" condition="Skin.HasSetting(home_qlock) + !Skin.HasSetting(horizontal_home) + SubString(System.Language,German) + [Container(300).HasFocus(22) | Container(300).HasFocus(24)]">Conditional</animation>
+		<animation effect="slide" end="80,0" time="0" condition="Skin.HasSetting(home_qlock) + !Skin.HasSetting(horizontal_home) + [[SubString(System.Language,German) + [Container(300).HasFocus(22) | Container(300).HasFocus(24)]] | [SubString(System.Language,Spanish) + Container(300).HasFocus(4)]]">Conditional</animation>
 		<animation effect="slide" start="0,0" end="-200,0" time="600" delay="200" tween="cubic" easing="inout" condition="Skin.HasSetting(horizontal_home) + Skin.HasSetting(horizontal_bottom_align) + Skin.HasSetting(HomepageWeatherWidget) + [Skin.String(Weather,3) | Skin.String(Weather,2)] + [Container(301).HasFocus(20) | Container(301).HasFocus(21)]">Conditional</animation>
-		<animation effect="zoom" start="100,100" end="77,77" center="100,340" time="3500" tween="elastic" easing="out" reversible="true" condition="Skin.HasSetting(home_qlock) + Skin.HasSetting(horizontal_home) + !Skin.HasSetting(horizontal_bottom_align) + [[Skin.HasSetting(homepageHideRecentlyAdded) + [Container(301).HasFocus(3) | Container(301).HasFocus(5) | Container(301).HasFocus(1)]] | [Skin.HasSetting(HomepageWeatherWidget) + [Container(301).HasFocus(20) | Container(301).HasFocus(21)]]]">Conditional</animation>
-		<animation effect="zoom" start="100,100" end="90,90" center="220,-200" time="3500" tween="elastic" easing="out" reversible="true" condition="Skin.HasSetting(home_qlock) + !Skin.HasSetting(horizontal_home) + [[Skin.HasSetting(homepageHideRecentlyAdded) + [Container(300).HasFocus(3) | Container(300).HasFocus(1)]] | [Skin.HasSetting(HomepageWeatherWidget) +  [Container(300).HasFocus(20) | Container(300).HasFocus(21)]]]">Conditional</animation>
+		<animation effect="zoom" start="100,100" end="77,77" center="100,340" time="3500" tween="elastic" easing="out" reversible="true" condition="Skin.HasSetting(home_qlock) + Skin.HasSetting(horizontal_home) + !Skin.HasSetting(horizontal_bottom_align) + [[Skin.HasSetting(homepageHideRecentlyAdded) + [Container(301).HasFocus(3) | Container(301).HasFocus(4) | Container(301).HasFocus(5) | Container(301).HasFocus(1)]] | [Skin.HasSetting(HomepageWeatherWidget) + [Container(301).HasFocus(20) | Container(301).HasFocus(21)]]]">Conditional</animation>
+		<animation effect="zoom" start="100,100" end="90,90" center="220,-200" time="3500" tween="elastic" easing="out" reversible="true" condition="Skin.HasSetting(home_qlock) + !Skin.HasSetting(horizontal_home) + [[Skin.HasSetting(homepageHideRecentlyAdded) + [Container(300).HasFocus(3) | Container(300).HasFocus(4) | Container(300).HasFocus(1)]] | [Skin.HasSetting(HomepageWeatherWidget) +  [Container(300).HasFocus(20) | Container(300).HasFocus(21)]]]">Conditional</animation>
 		<animation effect="zoom" start="100,100" end="72,72" center="220,-200" time="3500" tween="elastic" easing="out" reversible="true" condition="Skin.HasSetting(home_qlock) + !Skin.HasSetting(horizontal_home) + [Skin.HasSetting(homepageHideRecentlyAdded) + Container(300).HasFocus(5)]">Conditional</animation>
 		
 		<!--	Minute Signs	-->
@@ -143,6 +143,23 @@
 				<textcolor>Qlocknofocus</textcolor>
 				<label>°</label>
 			</control>
+			<control type="label" id="10110">
+				<description>Clock ON Minute1</description>
+				<visible>substring(system.time(mm),01)|substring(system.time(mm),06)|substring(system.time(mm),11)|substring(system.time(mm),16)|substring(system.time(mm),21)|substring(system.time(mm),26)|substring(system.time(mm),31)|substring(system.time(mm),36)|substring(system.time(mm),41)|substring(system.time(mm),46)|substring(system.time(mm),51)|substring(system.time(mm),56)|Control.isVisible(10111)</visible>
+			</control>
+			<control type="label" id="10111">
+				<description>Clock ON Minute2</description>
+				<visible>substring(system.time(mm),02)|substring(system.time(mm),07)|substring(system.time(mm),12)|substring(system.time(mm),17)|substring(system.time(mm),22)|substring(system.time(mm),27)|substring(system.time(mm),32)|substring(system.time(mm),37)|substring(system.time(mm),42)|substring(system.time(mm),47)|substring(system.time(mm),52)|substring(system.time(mm),57)|Control.isVisible(10112)</visible>
+			</control>
+			<control type="label" id="10112">
+				<description>Clock ON Minute3</description>
+				<visible>substring(system.time(mm),03)|substring(system.time(mm),08)|substring(system.time(mm),13)|substring(system.time(mm),18)|substring(system.time(mm),23)|substring(system.time(mm),28)|substring(system.time(mm),33)|substring(system.time(mm),38)|substring(system.time(mm),43)|substring(system.time(mm),48)|substring(system.time(mm),53)|substring(system.time(mm),58)|Control.isVisible(10113)</visible>
+			</control>
+			<control type="label" id="10113">
+				<description>Clock ON Minute4</description>
+				<visible>substring(system.time(mm),04)|substring(system.time(mm),09)|substring(system.time(mm),14)|substring(system.time(mm),19)|substring(system.time(mm),24)|substring(system.time(mm),29)|substring(system.time(mm),34)|substring(system.time(mm),39)|substring(system.time(mm),44)|substring(system.time(mm),49)|substring(system.time(mm),54)|substring(system.time(mm),59)</visible>
+			</control>
+			
 		
 			<!--	Clock OFF Poss	-->
 			
@@ -1041,8 +1058,8 @@
 		<animation effect="slide" end="250,70" time="0" condition="Skin.HasSetting(home_qlock) + !Skin.HasSetting(horizontal_home)">Conditional</animation>
 		<animation effect="slide" end="80,0" time="0" condition="Skin.HasSetting(home_qlock) + !Skin.HasSetting(horizontal_home) + [Container(300).HasFocus(22) | Container(300).HasFocus(24)]">Conditional</animation>
 		<animation effect="slide" start="0,0" end="-200,0" time="600" delay="200" tween="cubic" easing="inout" condition="Skin.HasSetting(horizontal_home) + Skin.HasSetting(horizontal_bottom_align) + Skin.HasSetting(HomepageWeatherWidget) + [Skin.String(Weather,3) | Skin.String(Weather,2)] + [Container(301).HasFocus(20) | Container(301).HasFocus(21)]">Conditional</animation>
-		<animation effect="zoom" start="100,100" end="77,77" center="100,340" time="3500" tween="elastic" easing="out" reversible="true" condition="Skin.HasSetting(home_qlock) + Skin.HasSetting(horizontal_home) + !Skin.HasSetting(horizontal_bottom_align) + [[Skin.HasSetting(homepageHideRecentlyAdded) + [Container(301).HasFocus(3) | Container(301).HasFocus(5) | Container(301).HasFocus(1)]] | [Skin.HasSetting(HomepageWeatherWidget) + [Container(301).HasFocus(20) | Container(301).HasFocus(21)]]]">Conditional</animation>
-		<animation effect="zoom" start="100,100" end="90,90" center="220,-200" time="3500" tween="elastic" easing="out" reversible="true" condition="Skin.HasSetting(home_qlock) + !Skin.HasSetting(horizontal_home) + [[Skin.HasSetting(homepageHideRecentlyAdded) + [Container(300).HasFocus(3) | Container(300).HasFocus(1)]] | [Skin.HasSetting(HomepageWeatherWidget) +  [Container(300).HasFocus(20) | Container(300).HasFocus(21)]]]">Conditional</animation>
+		<animation effect="zoom" start="100,100" end="77,77" center="100,340" time="3500" tween="elastic" easing="out" reversible="true" condition="Skin.HasSetting(home_qlock) + Skin.HasSetting(horizontal_home) + !Skin.HasSetting(horizontal_bottom_align) + [[Skin.HasSetting(homepageHideRecentlyAdded) + [Container(301).HasFocus(3) | Container(301).HasFocus(4) | Container(301).HasFocus(5) | Container(301).HasFocus(1)]] | [Skin.HasSetting(HomepageWeatherWidget) + [Container(301).HasFocus(20) | Container(301).HasFocus(21)]]]">Conditional</animation>
+		<animation effect="zoom" start="100,100" end="90,90" center="220,-200" time="3500" tween="elastic" easing="out" reversible="true" condition="Skin.HasSetting(home_qlock) + !Skin.HasSetting(horizontal_home) + [[Skin.HasSetting(homepageHideRecentlyAdded) + [Container(300).HasFocus(3) | Container(300).HasFocus(4) | Container(300).HasFocus(1)]] | [Skin.HasSetting(HomepageWeatherWidget) +  [Container(300).HasFocus(20) | Container(300).HasFocus(21)]]]">Conditional</animation>
 		<animation effect="zoom" start="100,100" end="72,72" center="220,-200" time="3500" tween="elastic" easing="out" reversible="true" condition="Skin.HasSetting(home_qlock) + !Skin.HasSetting(horizontal_home) + [Skin.HasSetting(homepageHideRecentlyAdded) + Container(300).HasFocus(5)]">Conditional</animation>
 			
 			<!--		Minutes		-->
@@ -1078,22 +1095,6 @@
 			<control type="label" id="10102">
 				<description>Uhr</description>
 				<visible>Control.isVisible(10004) + ![System.Time(01:00,01:05)|System.Time(13:00,13:05)]</visible>
-			</control>
-			<control type="label" id="10110">
-				<description>Clock ON Minute1</description>
-				<visible>substring(system.time(mm),01)|substring(system.time(mm),06)|substring(system.time(mm),11)|substring(system.time(mm),16)|substring(system.time(mm),21)|substring(system.time(mm),26)|substring(system.time(mm),31)|substring(system.time(mm),36)|substring(system.time(mm),41)|substring(system.time(mm),46)|substring(system.time(mm),51)|substring(system.time(mm),56)|Control.isVisible(10111)</visible>
-			</control>
-			<control type="label" id="10111">
-				<description>Clock ON Minute2</description>
-				<visible>substring(system.time(mm),02)|substring(system.time(mm),07)|substring(system.time(mm),12)|substring(system.time(mm),17)|substring(system.time(mm),22)|substring(system.time(mm),27)|substring(system.time(mm),32)|substring(system.time(mm),37)|substring(system.time(mm),42)|substring(system.time(mm),47)|substring(system.time(mm),52)|substring(system.time(mm),57)|Control.isVisible(10112)</visible>
-			</control>
-			<control type="label" id="10112">
-				<description>Clock ON Minute3</description>
-				<visible>substring(system.time(mm),03)|substring(system.time(mm),08)|substring(system.time(mm),13)|substring(system.time(mm),18)|substring(system.time(mm),23)|substring(system.time(mm),28)|substring(system.time(mm),33)|substring(system.time(mm),38)|substring(system.time(mm),43)|substring(system.time(mm),48)|substring(system.time(mm),53)|substring(system.time(mm),58)|Control.isVisible(10113)</visible>
-			</control>
-			<control type="label" id="10113">
-				<description>Clock ON Minute4</description>
-				<visible>substring(system.time(mm),04)|substring(system.time(mm),09)|substring(system.time(mm),14)|substring(system.time(mm),19)|substring(system.time(mm),24)|substring(system.time(mm),29)|substring(system.time(mm),34)|substring(system.time(mm),39)|substring(system.time(mm),44)|substring(system.time(mm),49)|substring(system.time(mm),54)|substring(system.time(mm),59)</visible>
 			</control>
 			
 			<!--		Hours		-->
@@ -2090,8 +2091,8 @@
 		<posy>30</posy>
 		<animation effect="slide" end="250,70" time="0" condition="Skin.HasSetting(home_qlock) + !Skin.HasSetting(horizontal_home)">Conditional</animation>
 		<animation effect="slide" start="0,0" end="-200,0" time="600" delay="200" tween="cubic" easing="inout" condition="Skin.HasSetting(horizontal_home) + Skin.HasSetting(horizontal_bottom_align) + Skin.HasSetting(HomepageWeatherWidget) + [Skin.String(Weather,3) | Skin.String(Weather,2)] + [Container(301).HasFocus(20) | Container(301).HasFocus(21)]">Conditional</animation>
-		<animation effect="zoom" start="100,100" end="77,77" center="100,340" time="3500" tween="elastic" easing="out" reversible="true" condition="Skin.HasSetting(home_qlock) + Skin.HasSetting(horizontal_home) + !Skin.HasSetting(horizontal_bottom_align) + [[Skin.HasSetting(homepageHideRecentlyAdded) + [Container(301).HasFocus(3) | Container(301).HasFocus(5) | Container(301).HasFocus(1)]] | [Skin.HasSetting(HomepageWeatherWidget) + [Container(301).HasFocus(20) | Container(301).HasFocus(21)]]]">Conditional</animation>
-		<animation effect="zoom" start="100,100" end="90,90" center="220,-200" time="3500" tween="elastic" easing="out" reversible="true" condition="Skin.HasSetting(home_qlock) + !Skin.HasSetting(horizontal_home) + [[Skin.HasSetting(homepageHideRecentlyAdded) + [Container(300).HasFocus(3) | Container(300).HasFocus(1)]] | [Skin.HasSetting(HomepageWeatherWidget) +  [Container(300).HasFocus(20) | Container(300).HasFocus(21)]]]">Conditional</animation>
+		<animation effect="zoom" start="100,100" end="77,77" center="100,340" time="3500" tween="elastic" easing="out" reversible="true" condition="Skin.HasSetting(home_qlock) + Skin.HasSetting(horizontal_home) + !Skin.HasSetting(horizontal_bottom_align) + [[Skin.HasSetting(homepageHideRecentlyAdded) + [Container(301).HasFocus(3) | Container(301).HasFocus(4) | Container(301).HasFocus(5) | Container(301).HasFocus(1)]] | [Skin.HasSetting(HomepageWeatherWidget) + [Container(301).HasFocus(20) | Container(301).HasFocus(21)]]]">Conditional</animation>
+		<animation effect="zoom" start="100,100" end="90,90" center="220,-200" time="3500" tween="elastic" easing="out" reversible="true" condition="Skin.HasSetting(home_qlock) + !Skin.HasSetting(horizontal_home) + [[Skin.HasSetting(homepageHideRecentlyAdded) + [Container(300).HasFocus(3) | Container(300).HasFocus(4) | Container(300).HasFocus(1)]] | [Skin.HasSetting(HomepageWeatherWidget) +  [Container(300).HasFocus(20) | Container(300).HasFocus(21)]]]">Conditional</animation>
 		<animation effect="zoom" start="100,100" end="72,72" center="220,-200" time="3500" tween="elastic" easing="out" reversible="true" condition="Skin.HasSetting(home_qlock) + !Skin.HasSetting(horizontal_home) + [Skin.HasSetting(homepageHideRecentlyAdded) + Container(300).HasFocus(5)]">Conditional</animation>
 					
 			<!--		Minutes		-->
@@ -2127,22 +2128,6 @@
 			<control type="label" id="20102">
 				<description>O´clock</description>
 				<visible>Control.isVisible(10004) + ![System.Time(01:00,01:05)|System.Time(13:00,13:05)]</visible>
-			</control>
-			<control type="label" id="20110">
-				<description>Clock ON Minute1</description>
-				<visible>substring(system.time(mm),01)|substring(system.time(mm),06)|substring(system.time(mm),11)|substring(system.time(mm),16)|substring(system.time(mm),21)|substring(system.time(mm),26)|substring(system.time(mm),31)|substring(system.time(mm),36)|substring(system.time(mm),41)|substring(system.time(mm),46)|substring(system.time(mm),51)|substring(system.time(mm),56)|Control.isVisible(10111)</visible>
-			</control>
-			<control type="label" id="20111">
-				<description>Clock ON Minute2</description>
-				<visible>substring(system.time(mm),02)|substring(system.time(mm),07)|substring(system.time(mm),12)|substring(system.time(mm),17)|substring(system.time(mm),22)|substring(system.time(mm),27)|substring(system.time(mm),32)|substring(system.time(mm),37)|substring(system.time(mm),42)|substring(system.time(mm),47)|substring(system.time(mm),52)|substring(system.time(mm),57)|Control.isVisible(10112)</visible>
-			</control>
-			<control type="label" id="20112">
-				<description>Clock ON Minute3</description>
-				<visible>substring(system.time(mm),03)|substring(system.time(mm),08)|substring(system.time(mm),13)|substring(system.time(mm),18)|substring(system.time(mm),23)|substring(system.time(mm),28)|substring(system.time(mm),33)|substring(system.time(mm),38)|substring(system.time(mm),43)|substring(system.time(mm),48)|substring(system.time(mm),53)|substring(system.time(mm),58)|Control.isVisible(10113)</visible>
-			</control>
-			<control type="label" id="20113">
-				<description>Clock ON Minute4</description>
-				<visible>substring(system.time(mm),04)|substring(system.time(mm),09)|substring(system.time(mm),14)|substring(system.time(mm),19)|substring(system.time(mm),24)|substring(system.time(mm),29)|substring(system.time(mm),34)|substring(system.time(mm),39)|substring(system.time(mm),44)|substring(system.time(mm),49)|substring(system.time(mm),54)|substring(system.time(mm),59)</visible>
 			</control>
 			
 			<!--		Hours		-->
@@ -3125,6 +3110,1068 @@
 						<label>K</label>
 					</control>
 					<visible>Control.isVisible(20102)</visible>
+				</control>
+			</control>
+		</control>
+		
+		<!-- 	SPANISH		-->
+		
+		<control type="group" id="30">
+		<visible>Skin.HasSetting(home_qlock) + SubString(System.Language,Spanish) + Window.IsActive(home)</visible>
+		<posy>30</posy>
+		<animation effect="slide" end="250,70" time="0" condition="Skin.HasSetting(home_qlock) + !Skin.HasSetting(horizontal_home)">Conditional</animation>
+		<animation effect="slide" end="80,0" time="0" condition="Skin.HasSetting(home_qlock) + !Skin.HasSetting(horizontal_home) + Container(300).HasFocus(4)">Conditional</animation>
+		<animation effect="slide" start="0,0" end="-200,0" time="600" delay="200" tween="cubic" easing="inout" condition="Skin.HasSetting(horizontal_home) + Skin.HasSetting(horizontal_bottom_align) + Skin.HasSetting(HomepageWeatherWidget) + [Skin.String(Weather,3) | Skin.String(Weather,2)] + [Container(301).HasFocus(20) | Container(301).HasFocus(21)]">Conditional</animation>
+		<animation effect="zoom" start="100,100" end="77,77" center="100,340" time="3500" tween="elastic" easing="out" reversible="true" condition="Skin.HasSetting(home_qlock) + Skin.HasSetting(horizontal_home) + !Skin.HasSetting(horizontal_bottom_align) + [[Skin.HasSetting(homepageHideRecentlyAdded) + [Container(301).HasFocus(3) | Container(301).HasFocus(4) | Container(301).HasFocus(5) | Container(301).HasFocus(1)]] | [Skin.HasSetting(HomepageWeatherWidget) + [Container(301).HasFocus(20) | Container(301).HasFocus(21)]]]">Conditional</animation>
+		<animation effect="zoom" start="100,100" end="90,90" center="220,-200" time="3500" tween="elastic" easing="out" reversible="true" condition="Skin.HasSetting(home_qlock) + !Skin.HasSetting(horizontal_home) + [[Skin.HasSetting(homepageHideRecentlyAdded) + [Container(300).HasFocus(3) | Container(300).HasFocus(4) | Container(300).HasFocus(1)]] | [Skin.HasSetting(HomepageWeatherWidget) +  [Container(300).HasFocus(20) | Container(300).HasFocus(21)]]]">Conditional</animation>
+		<animation effect="zoom" start="100,100" end="72,72" center="220,-200" time="3500" tween="elastic" easing="out" reversible="true" condition="Skin.HasSetting(home_qlock) + !Skin.HasSetting(horizontal_home) + [Skin.HasSetting(homepageHideRecentlyAdded) + Container(300).HasFocus(5)]">Conditional</animation>
+					
+			<!--		Minutes		-->
+			
+			<control type="label" id="30005">
+				<description>Cinco</description>
+				<visible>Control.isVisible(10009)|Control.isVisible(10029)|Control.isVisible(10039)|Control.isVisible(10059)</visible>
+			</control>
+			<control type="label" id="30010">
+				<description>Diez</description>
+				<visible>Control.isVisible(10014)|Control.isVisible(10054)</visible>
+			</control>
+			<control type="label"  id="30015">
+				<description>Cuarto</description>
+				<visible>Control.isVisible(10019)|Control.isVisible(10049)</visible>
+			</control>
+			<control type="label"  id="30020">
+				<description>Veinte</description>
+				<visible>Control.isVisible(10024)|Control.isVisible(10044)</visible>
+			</control>
+			<control type="label"  id="30021">
+				<description>Veinti</description>
+				<visible>Control.isVisible(10029)|Control.isVisible(10039)</visible>
+			</control>
+			<control type="label" id="30030">
+				<description>Media</description>
+				<visible>Control.isVisible(10034)</visible>
+			</control>
+			<control type="label" id="30103">
+				<description>Y</description>
+				<visible>Control.isVisible(10009)|Control.isVisible(10014)|Control.isVisible(10019)|Control.isVisible(10024)|Control.isVisible(10029)|Control.isVisible(10034)</visible>
+			</control>
+			<control type="label" id="30104">
+				<description>Menos</description>
+				<visible>Control.isVisible(10039)|Control.isVisible(10044)|Control.isVisible(10049)|Control.isVisible(10054)|Control.isVisible(10059)</visible>
+			</control>
+			
+			<!--		Hours		-->
+			
+			<control type="label" id="30201">
+				<description>Una</description>
+				<visible>System.Time(00:35,01:35)|System.Time(12:35,13:35)</visible>
+			</control>
+			<control type="label" id="30202">
+				<description>Dos</description>
+				<visible>System.Time(01:35,02:35)|System.Time(13:35,14:35)</visible>
+			</control>
+			 
+			<control type="label" id="30203">
+				<description>Tres</description>
+				<visible>System.Time(02:35,03:35)|System.Time(14:35,15:35)</visible>
+			</control>
+			 
+			<control type="label" id="30204">
+				<description>Cuatro</description>
+				<visible>System.Time(03:35,04:35)|System.Time(15:35,16:35)</visible>
+			</control>
+			 
+			<control type="label" id="30205">
+				<description>Cinco</description>
+				<visible>System.Time(04:35,05:35)|System.Time(16:35,17:35)</visible>
+			</control>
+			 
+			<control type="label" id="30206">
+				<description>Seis</description>
+				<visible>System.Time(05:35,06:35)|System.Time(17:35,18:35)</visible>
+			</control>
+			 
+			<control type="label" id="30207">
+				<description>Siete</description>
+				<visible>System.Time(06:35,07:35)|System.Time(18:35,19:35)</visible>
+			</control>
+			 
+			<control type="label" id="30208">
+				<description>Ocho</description>
+				<visible>System.Time(07:35,08:35)|System.Time(19:35,20:35)</visible>
+			</control>
+			 
+			<control type="label" id="30209">
+				<description>Nueve</description>
+				<visible>System.Time(08:35,09:35)|System.Time(20:35,21:35)</visible>
+			</control>
+			 
+			<control type="label" id="30210">
+				<description>Diez</description>
+				<visible>System.Time(09:35,10:35)|System.Time(21:35,22:35)</visible>
+			</control>
+			 
+			<control type="label" id="30211">
+				<description>Once</description>
+				<visible>System.Time(10:35,11:35)|System.Time(22:35,23:35)</visible>
+			</control>
+			 
+			<control type="label" id="30212">
+				<description>Doce</description>
+				<visible>System.Time(11:35,12:35)|System.Time(23:35,00:35)</visible>
+			</control>
+				
+			<!-- 	Clock ON	-->
+				
+			<control type="group" id="50">
+				<posx>375</posx>
+				<posy>50</posy>
+				<width>600</width>
+				<height>450</height>	
+				
+				<!-- S O N ON ROW 1-->
+				
+				<control type="grouplist" id="50">
+				<animation effect="slide" end="-280,340" time="0" condition="Skin.HasSetting(home_qlock) + Skin.HasSetting(horizontal_home) + !Skin.HasSetting(horizontal_bottom_align)">Conditional</animation>
+					<visible>true</visible>
+					<orientation>horizontal</orientation>
+					<posx>49</posx>
+					<width>600</width>
+					<height>450</height>
+					<itemgap>12</itemgap>
+					<control type="label">
+						<width>37</width> 
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>S</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>O</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>N</label>
+					</control>
+					<visible>true</visible>
+				</control>
+				
+				<!-- L A S ON ROW 1-->
+				
+				<control type="grouplist" id="50">
+				<animation effect="slide" end="-280,340" time="0" condition="Skin.HasSetting(home_qlock) + Skin.HasSetting(horizontal_home) + !Skin.HasSetting(horizontal_bottom_align)">Conditional</animation>
+					<orientation>horizontal</orientation>
+					<posx>245</posx>
+					<width>600</width>
+					<height>450</height>
+					<itemgap>12</itemgap>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>L</label>
+						<visible>true</visible>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>A</label>
+						<visible>true</visible>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>S</label>
+						<visible>!Control.isVisible(30201)</visible>
+					</control>
+				</control>
+				
+				<!-- U N A ON ROW 1-->
+				
+				<control type="grouplist" id="50">
+				<animation effect="slide" end="-280,340" time="0" condition="Skin.HasSetting(home_qlock) + Skin.HasSetting(horizontal_home) + !Skin.HasSetting(horizontal_bottom_align)">Conditional</animation>
+					<orientation>horizontal</orientation>
+					<posx>392</posx>
+					<width>600</width>
+					<height>450</height>
+					<itemgap>12</itemgap>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>U</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>N</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>A</label>
+					</control>
+					<visible>Control.isVisible(30201)</visible>
+				</control>
+				
+				<!-- D O S ON ROW 2-->
+				
+				<control type="grouplist" id="50">
+				<animation effect="slide" end="260,295" time="0" condition="Skin.HasSetting(home_qlock) + Skin.HasSetting(horizontal_home) + !Skin.HasSetting(horizontal_bottom_align)">Conditional</animation>
+					<orientation>horizontal</orientation>
+					<posy>45</posy>
+					<width>600</width>
+					<height>450</height>
+					<itemgap>12</itemgap>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>D</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>O</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>S</label>
+					</control>
+					<visible>Control.isVisible(30202)</visible>
+				</control>
+				
+				<!-- T R E S ON ROW 2-->
+				
+				<control type="grouplist" id="50">
+				<animation effect="slide" end="260,295" time="0" condition="Skin.HasSetting(home_qlock) + Skin.HasSetting(horizontal_home) + !Skin.HasSetting(horizontal_bottom_align)">Conditional</animation>
+					<orientation>horizontal</orientation>
+					<posy>45</posy>
+					<posx>196</posx>
+					<width>600</width>
+					<height>450</height>
+					<itemgap>12</itemgap>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>T</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>R</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>E</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>S</label>
+					</control>
+					<visible>Control.isVisible(30203)</visible>
+				</control>
+				
+				<!-- C U A T R O ON ROW 3-->
+				
+				<control type="grouplist" id="50">
+				<animation effect="slide" end="-280,295" time="0" condition="Skin.HasSetting(home_qlock) + Skin.HasSetting(horizontal_home) + !Skin.HasSetting(horizontal_bottom_align)">Conditional</animation>
+					<orientation>horizontal</orientation>
+					<posy>90</posy>
+					<width>600</width>
+					<height>450</height>
+					<itemgap>12</itemgap>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>	
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>C</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>U</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>A</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>T</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>R</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>O</label>
+					</control>
+					<visible>Control.isVisible(30204)</visible>	
+				</control>
+				
+				<!-- C I N C O ON ROW 3-->
+				
+				<control type="grouplist" id="50">
+				<animation effect="slide" end="-280,295" time="0" condition="Skin.HasSetting(home_qlock) + Skin.HasSetting(horizontal_home) + !Skin.HasSetting(horizontal_bottom_align)">Conditional</animation>
+					<orientation>horizontal</orientation>
+					<posy>90</posy>
+					<posx>294</posx>
+					<width>600</width>
+					<height>450</height>
+					<itemgap>12</itemgap>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>	
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>C</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>I</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>N</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>C</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>O</label>
+					</control>
+					<visible>Control.isVisible(30205)</visible>	
+				</control>
+				
+				<!-- S E I S ON ROW 4-->
+				
+				<control type="grouplist" id="50">
+				<animation effect="slide" end="260,250" time="0" condition="Skin.HasSetting(home_qlock) + Skin.HasSetting(horizontal_home) + !Skin.HasSetting(horizontal_bottom_align)">Conditional</animation>
+					<orientation>horizontal</orientation>
+					<posy>135</posy>
+					<width>600</width>
+					<height>450</height>
+					<itemgap>12</itemgap>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>S</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>E</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>I</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>S</label>
+					</control>
+					<visible>Control.isVisible(30206)</visible>		
+				</control>
+				
+				<!-- S I E T E ON ROW 4-->
+				
+				<control type="grouplist" id="50">
+				<animation effect="slide" end="260,250" time="0" condition="Skin.HasSetting(home_qlock) + Skin.HasSetting(horizontal_home) + !Skin.HasSetting(horizontal_bottom_align)">Conditional</animation>
+					<orientation>horizontal</orientation>
+					<posy>135</posy>
+					<posx>245</posx>
+					<width>600</width>
+					<height>450</height>
+					<itemgap>12</itemgap>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>S</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>I</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>E</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>T</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>E</label>
+					</control>
+					<visible>Control.isVisible(30207)</visible>		
+				</control>
+				
+				<!-- O C H O ON ROW 5-->
+				
+				<control type="grouplist" id="50">
+				<animation effect="slide" end="-280,250" time="0" condition="Skin.HasSetting(home_qlock) + Skin.HasSetting(horizontal_home) + !Skin.HasSetting(horizontal_bottom_align)">Conditional</animation>
+					<orientation>horizontal</orientation>
+					<posy>180</posy>
+					<width>600</width>
+					<height>450</height>
+					<itemgap>12</itemgap>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>O</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>C</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>H</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>O</label>
+					</control>
+					<visible>Control.isVisible(30208)</visible>
+				</control>
+				
+				<!-- N U E V E ON ROW 5-->
+				
+				<control type="grouplist" id="50">
+				<animation effect="slide" end="-280,250" time="0" condition="Skin.HasSetting(home_qlock) + Skin.HasSetting(horizontal_home) + !Skin.HasSetting(horizontal_bottom_align)">Conditional</animation>
+					<orientation>horizontal</orientation>
+					<posy>180</posy>
+					<posx>196</posx>
+					<width>600</width>
+					<height>450</height>
+					<itemgap>12</itemgap>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>N</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>U</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>E</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>V</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>E</label>
+					</control>
+					<visible>Control.isVisible(30209)</visible>
+				</control>
+				
+				<!-- D I E Z ON ROW 6-->
+				
+				<control type="grouplist" id="50">
+				<animation effect="slide" end="260,205" time="0" condition="Skin.HasSetting(home_qlock) + Skin.HasSetting(horizontal_home) + !Skin.HasSetting(horizontal_bottom_align)">Conditional</animation>
+					<orientation>horizontal</orientation>
+					<posy>225</posy>
+					<posx>98</posx>
+					<width>600</width>
+					<height>450</height>
+					<itemgap>12</itemgap>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>D</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>I</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>E</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>Z</label>
+					</control>
+					<visible>Control.isVisible(30210)</visible>
+				</control>
+				
+				<!-- O N C E ON ROW 6-->
+				
+				<control type="grouplist" id="50">
+				<animation effect="slide" end="260,205" time="0" condition="Skin.HasSetting(home_qlock) + Skin.HasSetting(horizontal_home) + !Skin.HasSetting(horizontal_bottom_align)">Conditional</animation>
+					<orientation>horizontal</orientation>
+					<posy>225</posy>
+					<posx>343</posx>
+					<width>600</width>
+					<height>450</height>
+					<itemgap>12</itemgap>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>O</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>N</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>C</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>E</label>
+					</control>
+					<visible>Control.isVisible(30211)</visible>
+				</control>
+				
+				<!-- D O C E ON ROW 7-->
+				
+				<control type="grouplist" id="50">
+				<animation effect="slide" end="-280,205" time="0" condition="Skin.HasSetting(home_qlock) + Skin.HasSetting(horizontal_home) + !Skin.HasSetting(horizontal_bottom_align)">Conditional</animation>
+					<orientation>horizontal</orientation>
+					<posy>270</posy>
+					<width>600</width>
+					<height>450</height>
+					<itemgap>12</itemgap>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>D</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>		
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>O</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>C</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>E</label>
+					</control>
+					<visible>Control.isVisible(30212)</visible>		
+				</control>
+				
+				<!-- Y ON ROW 7-->
+				
+				<control type="grouplist" id="50">
+				<animation effect="slide" end="-280,205" time="0" condition="Skin.HasSetting(home_qlock) + Skin.HasSetting(horizontal_home) + !Skin.HasSetting(horizontal_bottom_align)">Conditional</animation>
+					<orientation>horizontal</orientation>
+					<posx>245</posx>
+					<posy>270</posy>
+					<width>600</width>
+					<height>450</height>
+					<itemgap>12</itemgap>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>Y</label>
+					</control>
+					<visible>Control.isVisible(30103)</visible>		
+				</control>
+				
+				<!-- M E N O S ON ROW 7-->
+				
+				<control type="grouplist" id="50">
+				<animation effect="slide" end="-280,205" time="0" condition="Skin.HasSetting(home_qlock) + Skin.HasSetting(horizontal_home) + !Skin.HasSetting(horizontal_bottom_align)">Conditional</animation>
+					<orientation>horizontal</orientation>
+					<posy>270</posy>
+					<posx>294</posx>
+					<width>600</width>
+					<height>450</height>
+					<itemgap>12</itemgap>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>M</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>		
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>E</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>N</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>O</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>S</label>
+					</control>
+					<visible>Control.isVisible(30104)</visible>		
+				</control>
+				
+				<!-- V E I N T E ON ROW 8-->
+				
+				<control type="grouplist" id="50">
+				<animation effect="slide" end="260,160" time="0" condition="Skin.HasSetting(home_qlock) + Skin.HasSetting(horizontal_home) + !Skin.HasSetting(horizontal_bottom_align)">Conditional</animation>
+					<orientation>horizontal</orientation>
+					<posy>315</posy>
+					<posx>49</posx>
+					<width>600</width>
+					<height>450</height>
+					<itemgap>12</itemgap>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>	
+						<textcolor>Qlockfocus</textcolor>		
+						<align>center</align>
+						<label>V</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>E</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>I</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>N</label>
+					</control>	
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>T</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>E</label>
+					</control>
+					<visible>Control.isVisible(30020)</visible>	
+				</control>
+				
+				<!-- D I E Z ON ROW 8-->
+				
+				<control type="grouplist" id="50">
+				<animation effect="slide" end="260,160" time="0" condition="Skin.HasSetting(home_qlock) + Skin.HasSetting(horizontal_home) + !Skin.HasSetting(horizontal_bottom_align)">Conditional</animation>
+					<orientation>horizontal</orientation>
+					<posy>315</posy>
+					<posx>343</posx>
+					<width>600</width>
+					<height>450</height>
+					<itemgap>12</itemgap>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>	
+						<textcolor>Qlockfocus</textcolor>		
+						<align>center</align>
+						<label>D</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>I</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>E</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>Z</label>
+					</control>
+					<visible>Control.isVisible(30010)</visible>	
+				</control>
+				
+				<!-- V E I N T I ON ROW 9-->
+				
+				<control type="grouplist" id="50">
+				<animation effect="slide" end="-280,160" time="0" condition="Skin.HasSetting(home_qlock) + Skin.HasSetting(horizontal_home) + !Skin.HasSetting(horizontal_bottom_align)">Conditional</animation>
+					<orientation>horizontal</orientation>
+					<posy>360</posy>
+					<width>600</width>
+					<height>450</height>
+					<itemgap>12</itemgap>
+					<control type="label">
+						<width>37</width>      
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>V</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>E</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>		
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>I</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>		
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>N</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>T</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>I</label>
+					</control>
+					<visible>Control.isVisible(30021)</visible>
+				</control>
+				
+				<!-- C I N C O ON ROW 9-->
+				
+				<control type="grouplist" id="50">
+				<animation effect="slide" end="-280,160" time="0" condition="Skin.HasSetting(home_qlock) + Skin.HasSetting(horizontal_home) + !Skin.HasSetting(horizontal_bottom_align)">Conditional</animation>
+					<orientation>horizontal</orientation>
+					<posx>294</posx>
+					<posy>360</posy>
+					<width>600</width>
+					<height>450</height>
+					<itemgap>12</itemgap>
+					<control type="label">
+						<width>37</width>      
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>C</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>I</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>		
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>N</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>C</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>O</label>
+					</control>
+					<visible>Control.isVisible(30005)</visible>
+				</control>
+				
+				<!-- M E D I A ON ROW 10-->
+				
+				<control type="grouplist" id="50">
+				<animation effect="slide" end="260,115" time="0" condition="Skin.HasSetting(home_qlock) + Skin.HasSetting(horizontal_home) + !Skin.HasSetting(horizontal_bottom_align)">Conditional</animation>
+					<orientation>horizontal</orientation>
+					<posy>405</posy>
+					<width>600</width>
+					<height>450</height>
+					<itemgap>12</itemgap>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>	
+						<textcolor>Qlockfocus</textcolor>		
+						<align>center</align>
+						<label>M</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>E</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>D</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>I</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>A</label>
+					</control>
+					<visible>Control.isVisible(30030)</visible>
+				</control>
+				
+				<!-- C U A R T O ON ROW 10-->
+				
+				<control type="grouplist" id="50">
+				<animation effect="slide" end="260,115" time="0" condition="Skin.HasSetting(home_qlock) + Skin.HasSetting(horizontal_home) + !Skin.HasSetting(horizontal_bottom_align)">Conditional</animation>
+					<orientation>horizontal</orientation>
+					<posy>405</posy>
+					<posx>245</posx>
+					<width>600</width>
+					<height>450</height>
+					<itemgap>12</itemgap>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>	
+						<textcolor>Qlockfocus</textcolor>		
+						<align>center</align>
+						<label>C</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>U</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>A</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>R</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>T</label>
+					</control>
+					<control type="label">
+						<width>37</width>
+						<font>LiberationSans_Regular_30</font>
+						<textcolor>Qlockfocus</textcolor>
+						<align>center</align>
+						<label>O</label>
+					</control>
+					<visible>Control.isVisible(30015)</visible>
 				</control>
 			</control>
 		</control>
