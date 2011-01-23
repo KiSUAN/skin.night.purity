@@ -240,18 +240,12 @@
 						<onclick>Skin.SetAddon(LyricScript_Path,xbmc.python.lyrics)</onclick>
 						<visible>Skin.HasSetting(show_lyrics)</visible>
 					</control>
-					<control type="radiobutton" id="118">
+					<control type="radiobutton" id="111">
 						<include>skin_settings_labels</include>
 						<label>Hide Back in Menus</label>
 						<onclick>Skin.ToggleSetting(hide_menuback)</onclick>
 						<selected>Skin.HasSetting(hide_menuback)</selected>
 					</control>
-					<!--<control type="radiobutton" id="111">
-						<include>skin_settings_labels</include>
-						<label>$LOCALIZE[31278]</label>
-						<onclick>Skin.ToggleSetting(background_nowplaying)</onclick>
-						<selected>Skin.HasSetting(background_nowplaying)</selected>
-					</control>-->
 					<control type="label" id="112">
 						<width>860</width>
 						<height>45</height>
@@ -316,78 +310,12 @@
 						<onclick>Skin.ToggleSetting(FullscreenJukebox)</onclick>
 						<selected>Skin.HasSetting(FullscreenJukebox)</selected>
 					</control>
-					
-					
-					<!--<control type="label" id="120">
-						<width>860</width>
-						<height>45</height>
-						<font>LiberationSans_Regular_20</font>
-						<label>512</label>
-						<textcolor>blue</textcolor>
-						<shadowcolor>black</shadowcolor>
-						<align>left</align>
-						<aligny>center</aligny>
+					<control type="radiobutton" id="118">
+						<include>skin_settings_labels</include>
+						<label>$LOCALIZE[31532]</label>
+						<onclick>Skin.ToggleSetting(vis_plus_fanart)</onclick>
+						<selected>Skin.HasSetting(vis_plus_fanart)</selected>
 					</control>
-					<control type="radiobutton" id="121">
-						<width>860</width>
-						<height>40</height>
-						<font>font13</font>
-						<label>21398</label>
-						<textcolor>grey2</textcolor>
-						<focusedcolor>white</focusedcolor>
-						<texturefocus>confluence/MenuItemFO1.png</texturefocus>
-						<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
-						<onclick>Skin.ToggleSetting(Use_Startup_Playlist)</onclick>
-						<selected>Skin.HasSetting(Use_Startup_Playlist)</selected>
-					</control>
-					<control type="button" id="122">
-						<description>Startup Playlist Path</description>
-						<width>860</width>
-						<height>40</height>
-						<font>font13</font>
-						<textcolor>grey2</textcolor>
-						<focusedcolor>white</focusedcolor>
-						<label>15311</label>
-						<label2>$INFO[Skin.String(Startup_Playlist_Path)]</label2>
-						<onclick>Skin.SetFile(Startup_Playlist_Path,.m3u,t:\playlists\music\)</onclick>
-						<texturefocus>MenuItemFO1.png</texturefocus>
-						<texturenofocus>MenuItemNF.png</texturenofocus>
-						<enable>Skin.HasSetting(Use_Startup_Playlist)</enable>
-					</control>
-					<control type="label" id="123">
-						<width>860</width>
-						<height>45</height>
-						<font>LiberationSans_Regular_20</font>
-						<label>31102</label>
-						<textcolor>blue</textcolor>
-						<shadowcolor>black</shadowcolor>
-						<align>left</align>
-						<aligny>center</aligny>
-					</control>
-					<control type="radiobutton" id="124">
-						<width>860</width>
-						<height>40</height>
-						<font>font13</font>
-						<label>31124</label>
-						<textcolor>grey2</textcolor>
-						<focusedcolor>white</focusedcolor>
-						<texturefocus>confluence/MenuItemFO1.png</texturefocus>
-						<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
-						<onclick>Skin.ToggleSetting(ShowBackgroundVideo)</onclick>
-						<selected>!Skin.HasSetting(ShowBackgroundVideo)</selected>
-					</control>
-					<control type="radiobutton" id="125">
-						<width>860</width>
-						<height>40</height>
-						<font>font13</font>
-						<label>31125</label>
-						<textcolor>grey2</textcolor>
-						<focusedcolor>white</focusedcolor>
-						<texturefocus>confluence/MenuItemFO1.png</texturefocus>
-						<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
-						<onclick>Skin.ToggleSetting(ShowBackgroundVis)</onclick>
-						<selected>!Skin.HasSetting(ShowBackgroundVis)</selected>
-					</control>-->
 				</control>
 				<control type="grouplist" id="9002">
 					<visible>Container(9000).Hasfocus(2)</visible>

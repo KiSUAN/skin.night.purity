@@ -111,7 +111,7 @@
 	<string id="31256">Global Settings</string>
 	<string id="31257">Use random music backdrops - Same ones used on Home</string>
 	<string id="31258">Use random photo backdrops - Same ones used on Home</string>
-	<string id="31259">Home Screen Options</string>
+	<string id="31259">Home screen options</string>
 	<string id="31260">Add Custom Items to Home Menu</string>
 	<string id="31261">Custom Favorite</string>
 	<string id="31262">Set Label</string>
@@ -395,6 +395,7 @@ just copy the translations from Confluence to here
   
   <string id="31530">User needs episodes organized in Season folders. Fanart.jpg must reside inside Season folder</string>
   <string id="31531">Use Landscape Thumbs on TV Section</string>
+  <string id="31532">Use Visualization and Fanart together</string>
   
   </strings>
 
