@@ -4,12 +4,12 @@
 	<defaultcontrol>50</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
 	<views>621,55,53,595,56,50</views>
-	<controls>
+	<controls> 
 		
 		<control type="image">
 			<include>Dimensions_Fullscreen</include>
 			<fadetime>400</fadetime>
-			<texture>backdrops/curtains.jpg</texture>
+			<texture background="true" fallback="backdrops/curtains.jpg">$INFO[ListItem.Writer,special://skin/extras/avlfanart/,.jpg]</texture>
 			<include>Animation_CommonFade</include>
 			<visible>Control.IsVisible(56)</visible>
 		</control>
@@ -182,6 +182,7 @@
 			</control>
 		</control>
 	</control>
+		
 	
 	</controls>
 </window>

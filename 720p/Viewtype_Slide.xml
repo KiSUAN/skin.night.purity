@@ -213,7 +213,7 @@
 			<animation effect="slide" start="0,0" end="-64,0" time="0" condition="IsEmpty(ListItem.Year)">Conditional</animation>
 			<animation effect="slide" start="0,0" end="0,-23" time="0" condition="IsEmpty(ListItem.Duration)">Conditional</animation>
 		</control>
-	</control>	
+	</control>
 	
 	<control type="group">
 		<posy>40</posy>
@@ -256,6 +256,47 @@
 			</control>
 	</control>
 	
+	<control type="group">
+		<posy>40</posy>
+		<animation effect="slide" start="1000,0" end="0,0" time="400" delay="600" condition="![IsEmpty(Control.GetLabel(8243)) + IsEmpty(Control.GetLabel(8244))]">Conditional</animation>
+		<visible>Control.IsVisible(595) + Window.IsActive(programs) + substring(container.folderpath,plugin://plugin.program.advanced.launcher) + Control.HasFocus(8241) + ![Control.HasFocus(8241) + Player.HasVideo]]</visible>
+		<include>Animation_BackdropFade</include>	
+			<control type="image" id="8243">
+				<posx>680</posx>
+				<posy>200</posy>
+				<width>261</width>
+				<height>147</height>
+				<aspectratio>stretch</aspectratio>
+				<texture background="true" diffuse="tv-landscape/landscapematteFO.png">special://skin/extras/avlfanart/$INFO[ListItem.label]/thumb1.jpg</texture>
+				<fadetime>200</fadetime>
+			</control>
+			<control type="image">
+				<posx>668</posx>
+				<posy>190</posy>
+				<width>284</width>
+				<height>166</height>
+				<texture>tv-landscape/landscapeframeFO.png</texture>
+				<visible>![IsEmpty(Control.GetLabel(8243)) + IsEmpty(Control.GetLabel(8244))]</visible>
+			</control>
+			<control type="image" id="8244">
+				<posx>980</posx>
+				<posy>200</posy>
+				<width>261</width>
+				<height>147</height>
+				<aspectratio>stretch</aspectratio>
+				<texture background="true" diffuse="tv-landscape/landscapematteFO.png">special://skin/extras/avlfanart/$INFO[ListItem.label]/thumb2.jpg</texture>
+				<fadetime>200</fadetime>
+			</control>
+			<control type="image">
+				<posx>968</posx>
+				<posy>190</posy>
+				<width>284</width>
+				<height>166</height>
+				<texture>tv-landscape/landscapeframeFO.png</texture>
+				<visible>![IsEmpty(Control.GetLabel(8243)) + IsEmpty(Control.GetLabel(8244))]</visible>
+			</control>
+	</control>	
+	
 	<control type="textbox">
 		<description>Plot Movie</description>
 		<posx>660</posx>
@@ -267,6 +308,7 @@
 		<font>LiberationSans_Regular_20</font>
 		<textcolor>white</textcolor>
 		<animation effect="slide" start="0,0" end="0,180" time="0" condition="![IsEmpty(Control.GetLabel(8241)) + IsEmpty(Control.GetLabel(8242))]">Conditional</animation>
+		<animation effect="slide" start="0,0" end="0,180" time="0" condition="![IsEmpty(Control.GetLabel(8243)) + IsEmpty(Control.GetLabel(8244))]">Conditional</animation>
 		<animation effect="slide" start="1000,0" end="0,0" time="400" delay="600">Visible</animation>
 		<autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
 		<include>Animation_BackdropFade</include>

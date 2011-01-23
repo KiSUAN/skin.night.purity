@@ -914,7 +914,7 @@
 			<posx>1270</posx>
 			<posy>0</posy>
 			<include>Animation_BackdropFade</include>
-			<visible>Skin.HasSetting(library_global_clock) + ![Player.HasAudio + !SubString(Window(10025).Property(TvTunesIsAlive),True)]</visible>
+			<visible>Skin.HasSetting(library_global_clock) + ![Player.HasAudio + !SubString(Window(10025).Property(TvTunesIsAlive),True) | Control.IsVisible(56)] </visible>
 				<control type="image"> 
 					<posx>-380</posx>
 					<posy>-10</posy>   
