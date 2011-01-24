@@ -526,7 +526,7 @@
 				</control>
 				<control type="label">
 					<posx>0</posx>
-					<posy>40</posy>
+					<posy>45</posy>
 					<width>630</width>
 					<height>89</height>
 					<font>LiberationSans_Regular_22</font>
@@ -534,12 +534,12 @@
 				</control>
 				<control type="label">
 					<posx>0</posx>
-					<posy>64</posy>
+					<posy>69</posy>
 					<width>630</width>
 					<height>89</height>
-					<font>LiberationSans_Regular_22</font>
-					<label>[B][COLOR=ListTrackF]$LOCALIZE[345][/COLOR] [B][COLOR=white]$INFO[ListItem.Year][/B][/COLOR]</label>
-					<visible>!IsEmpty(ListItem.Year)</visible>
+					<font>LiberationSans_Regular_18</font>
+					<label>[COLOR=white][B]$INFO[ListItem.Studio]$INFO[ListItem.Premiered,  (,)][/B][/COLOR]</label>
+					<animation effect="slide" start="0,0" end="0,-26" time="0" condition="IsEmpty(ListItem.Genre)">Conditional</animation>
 				</control>
 				<control type="textbox">
 					<description>Plot Movie</description>
@@ -549,11 +549,11 @@
 					<height>230</height>
 					<align>justify</align>
 					<info>ListItem.Plot</info>
-					<font>LiberationSans_Regular_20</font>
+					<font>LiberationSans_Regular_18</font>
 					<textcolor>white</textcolor>
 					<autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
-					<animation effect="slide" start="0,0" end="0,-26" time="0" condition="IsEmpty(ListItem.Year)">Conditional</animation>
-					<animation effect="slide" start="0,0" end="0,-52" time="0" condition="IsEmpty(ListItem.genre) + IsEmpty(ListItem.Year)">Conditional</animation>
+					<animation effect="slide" start="0,0" end="0,-21" time="0" condition="IsEmpty(ListItem.Studio) + IsEmpty(ListItem.Premiered) | IsEmpty(ListItem.Genre)">Conditional</animation>
+					<animation effect="slide" start="0,0" end="0,-47" time="0" condition="IsEmpty(ListItem.Genre) + IsEmpty(ListItem.Studio) + IsEmpty(ListItem.Premiered)">Conditional</animation>
 					<visible>Skin.HasSetting(launcher_plot)</visible>
 				</control>
 		</control>
