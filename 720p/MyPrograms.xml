@@ -3,7 +3,7 @@
 <window id="1">
 	<defaultcontrol>50</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
-	<views>621,55,53,595,56,50</views>
+	<views>621,55,53,58,595,56,50</views>
 	<controls> 
 		
 		<control type="image">
@@ -11,7 +11,7 @@
 			<fadetime>400</fadetime>
 			<texture background="true" fallback="backdrops/curtains.jpg">$INFO[ListItem.Writer,special://skin/extras/avlfanart/,.jpg]</texture>
 			<include>Animation_CommonFade</include>
-			<visible>Control.IsVisible(56)</visible>
+			<visible>Control.IsVisible(56) | [Control.IsVisible(58) + !Skin.HasSetting(ShowcaseFanart)]</visible>
 		</control>
 		<control type="image">
 			<description>dirty hack for (inside folder) fanart in programs pictures scripts</description>
@@ -23,7 +23,7 @@
 			<aspectratio>scale</aspectratio>
 			<fadetime>400</fadetime> 
 			<include>Animation_MyVideoNav_Fanart</include> 
-			<visible>!substring(ListItem.Path,plugin://) + !substring(ListItem.Path,special://) + !substring(Container.FolderPath,plugin://) + !substring(Container.FolderPath,special://) + !Control.IsVisible(56)</visible>
+			<visible>!substring(ListItem.Path,plugin://) + !substring(ListItem.Path,special://) + !substring(Container.FolderPath,plugin://) + !substring(Container.FolderPath,special://) + ![Control.IsVisible(56) | Control.IsVisible(58)]</visible>
 		</control>
 		<control type="image">
 			<description>dirty hack for (inside folder) fanart in programs pictures scripts</description>
@@ -35,7 +35,7 @@
 			<aspectratio>scale</aspectratio>
 			<fadetime>400</fadetime> 
 			<include>Animation_MyVideoNav_Fanart</include> 
-			<visible>!substring(ListItem.Path,plugin://) + !substring(ListItem.Path,special://) + !substring(Container.FolderPath,plugin://) + !substring(Container.FolderPath,special://) + !Control.IsVisible(56)</visible>
+			<visible>!substring(ListItem.Path,plugin://) + !substring(ListItem.Path,special://) + !substring(Container.FolderPath,plugin://) + !substring(Container.FolderPath,special://) + ![Control.IsVisible(56) | Control.IsVisible(58)]</visible>
 		</control>
 		<control type="image">
 			<description>dirty hack for (folder) fanart in programs pictures scripts</description>
@@ -47,7 +47,7 @@
 			<aspectratio>scale</aspectratio>
 			<fadetime>400</fadetime> 
 			<include>Animation_MyVideoNav_Fanart</include> 
-			<visible>!substring(ListItem.Path,plugin://) + !substring(ListItem.Path,special://) + !substring(Container.FolderPath,plugin://) + !substring(Container.FolderPath,special://) + !Control.IsVisible(56)</visible>
+			<visible>!substring(ListItem.Path,plugin://) + !substring(ListItem.Path,special://) + !substring(Container.FolderPath,plugin://) + !substring(Container.FolderPath,special://) + ![Control.IsVisible(56) | Control.IsVisible(58)]</visible>
 		</control>
 		<control type="image">
 			<include>Dimensions_Fullscreen</include>
@@ -55,7 +55,7 @@
 			<texture background="true" fallback="backdrops/curtains.jpg">$INFO[ListItem.Property(Fanart_Image)]</texture>
 			<include>global_kenburns_fanart</include>
 			<include>Animation_CommonFade</include>
-			<visible>!Control.IsVisible(56)</visible>
+			<visible>![Control.IsVisible(56) | [Control.IsVisible(58) + !Skin.HasSetting(ShowcaseFanart)]]</visible>
 		</control>
 		
 		
@@ -65,6 +65,7 @@
 			<include>Viewtype_List</include><!-- 53  -->
 			<include>Viewtype_Poster</include><!--  55  -->
 			<include>Viewtype_Fanart</include><!--  56  -->
+			<include>Viewtype_Showcase</include><!--  58  -->
 			<include>Viewtype_Slide</include><!--  595  -->
 			<include>Viewtype_3daddon</include><!--  621  -->
 	</control>
@@ -76,9 +77,9 @@
 		<include>7000_has_focus</include>
 		
 		<control type="image"><!-- Floor -->
-			<posx>460</posx>
+			<posx>300</posx>
 			<posy>650</posy>
-			<width>380</width>
+			<width>680</width>
 			<height>70</height>
 			<texture>backdrops/test2.png</texture>
 			<visible>ControlGroup(7000).HasFocus + !Skin.HasSetting(LockViews) + !Skin.HasSetting(hide_menuback)</visible>
@@ -86,9 +87,9 @@
 			<colordiffuse>menuback</colordiffuse>
 		</control>
 		<control type="image"><!-- Gradient -->
-			<posx>460</posx>
+			<posx>300</posx>
 			<posy>650</posy>
-			<width>380</width>
+			<width>680</width>
 			<height>70</height>
 			<texture>backdrops/test3.png</texture>
 			<visible>ControlGroup(7000).HasFocus + !Skin.HasSetting(LockViews)</visible>
@@ -103,12 +104,12 @@
 			<visible>!Skin.HasSetting(LockViews)</visible>
 			<include>WindowMenuVars</include>
 			<posy>680</posy>
-			<control type="button" id="20">
+			<control type="button" id="30">
 				<include>WindowMenuButton</include>
 				<label>$INFO[Container.ViewMode]</label>
 				<onclick>Container.NextViewMode</onclick>
 			</control>
-			<control type="togglebutton" id="21">
+			<control type="togglebutton" id="31">
 				<description>Toggle Launcher Plot</description>
 				<include>WindowMenuButton</include>
 				<label>Show Plot</label>
@@ -117,7 +118,7 @@
 				<selected>Skin.HasSetting(launcher_plot)</selected>
 				<visible>Control.IsVisible(53) + [Window.IsActive(Programs) + substring(container.folderpath,plugin://plugin.program.advanced.launcher)]</visible>
 			</control>
-			<control type="togglebutton" id="22">
+			<control type="togglebutton" id="32">
 				<description>Toggle Launcher Plot</description>
 				<include>WindowMenuButton</include>
 				<label>Show Plot</label>
@@ -126,16 +127,34 @@
 				<selected>Skin.HasSetting(launcher_plot_poster)</selected>
 				<visible>Control.IsVisible(55) + [Window.IsActive(Programs) + substring(container.folderpath,plugin://plugin.program.advanced.launcher)]</visible>
 			</control>
-			<control type="togglebutton" id="23">
+			<control type="togglebutton" id="33">
 				<description>Toggle Launcher Plot</description>
 				<include>WindowMenuButton</include>
 				<label>Show Plot</label>
 				<altlabel>Disable Plot</altlabel>
-				<onclick>Skin.ToggleSetting(launcher_plot_poster)</onclick>
-				<selected>Skin.HasSetting(launcher_plot_poster)</selected>
+				<onclick>Skin.ToggleSetting(launcher_plot_fanart)</onclick>
+				<selected>Skin.HasSetting(launcher_plot_fanart)</selected>
+				<visible>Control.IsVisible(56) + [Window.IsActive(Programs) + substring(container.folderpath,plugin://plugin.program.advanced.launcher)]</visible>
+			</control>
+			<control type="togglebutton" id="34">
+				<description>Toggle Launcher Plot</description>
+				<include>WindowMenuButton</include>
+				<label>Show Plot</label>
+				<altlabel>Disable Plot</altlabel>
+				<onclick>Skin.ToggleSetting(launcher_plot_case)</onclick>
+				<selected>Skin.HasSetting(launcher_plot_case)</selected>
+				<visible>Control.IsVisible(58) + [Window.IsActive(Programs) + substring(container.folderpath,plugin://plugin.program.advanced.launcher)] + !Skin.HasSetting(ShowcaseFanart)</visible>
+			</control>
+			<control type="togglebutton" id="35">
+				<description>Toggle Launcher Plot</description>
+				<include>WindowMenuButton</include>
+				<label>Show Plot</label>
+				<altlabel>Disable Plot</altlabel>
+				<onclick>Skin.ToggleSetting(launcher_plot_addon)</onclick>
+				<selected>Skin.HasSetting(launcher_plot_addon)</selected>
 				<visible>Control.IsVisible(621) + [Window.IsActive(Programs) + substring(container.folderpath,plugin://plugin.program.advanced.launcher)]</visible>
 			</control>
-			<control type="togglebutton" id="24">
+			<control type="togglebutton" id="36">
 				<description>Toggle Showcase Fanart Title</description>
 				<include>WindowMenuButton</include>
 				<label>More Posters</label>
@@ -144,7 +163,7 @@
 				<selected>Skin.HasSetting(panelview_more_posters)</selected>
 				<visible>Control.IsVisible(56)</visible>	
 			</control>
-			<control type="togglebutton" id="25">
+			<control type="togglebutton" id="37">
 				<description>Toggle MoviesFanart</description>
 				<include>WindowMenuButton</include>
 				<label>$LOCALIZE[31086]</label>
@@ -153,32 +172,71 @@
 				<selected>Skin.HasSetting(Files_Fanart)</selected>
 				<visible>Control.IsVisible(50)</visible>
 			</control>
+			<control type="togglebutton" id="38">
+				<description>Toggle MoviesFanart</description>
+				<include>WindowMenuButton</include>
+				<label>$LOCALIZE[31200]</label>
+				<altlabel>$LOCALIZE[31201]</altlabel>
+				<onclick>Skin.ToggleSetting(extrathumbs)</onclick>
+				<selected>Skin.HasSetting(extrathumbs)</selected>
+				<visible>Control.IsVisible(58) + !Skin.HasSetting(ShowcaseFanart)</visible>
+			</control>
+			<control type="togglebutton" id="39">
+				<description>Toggle MoviesFanart</description>
+				<include>WindowMenuButton</include>
+				<label>$LOCALIZE[31086]</label>
+				<altlabel>$LOCALIZE[31094]</altlabel>
+				<onclick>Skin.ToggleSetting(ShowcaseFanart)</onclick>
+				<onclick>ReloadSkin()</onclick>
+				<selected>Skin.HasSetting(ShowcaseFanart)</selected>
+				<visible>Control.IsVisible(58)</visible>
+			</control>
+			<control type="togglebutton" id="40">
+				<description>Toggle MoviesFanart</description>
+				<include>WindowMenuButton</include>
+				<label>$LOCALIZE[31086]</label>
+				<altlabel>$LOCALIZE[31214]</altlabel>
+				<onclick>Skin.ToggleSetting(Poster_Fanart)</onclick>
+				<onclick>ReloadSkin()</onclick>
+				<selected>Skin.HasSetting(Poster_Fanart)</selected>
+				<visible>Control.IsVisible(55)</visible>
+			</control>
 		</control>
 
 		<control type="grouplist">
 			<visible>!Skin.HasSetting(LockViews)</visible>
 			<include>WindowMenuVars</include>
 			<posy>655</posy>
-			<control type="button" id="40">
+			<control  type="label">
 				<include>WindowMenuLabel</include>
 				<!-- LOC -->
 				<label>$LOCALIZE[31088]</label>
 			</control>
-			<control type="button" id="41">
+			<control type="label">
 				<include>WindowMenuLabel</include>
 				<!-- LOC -->
 				<label>Plot</label>
-				<visible>[Control.IsVisible(53) | Control.IsVisible(55) | Control.IsVisible(621)] + [Window.IsActive(Programs) + substring(container.folderpath,plugin://plugin.program.advanced.launcher)]</visible>
+				<visible>[Control.IsVisible(53) | Control.IsVisible(55) | Control.IsVisible(56) | Control.IsVisible(621) | [!Skin.HasSetting(ShowcaseFanart) + Control.IsVisible(58)]] + [Window.IsActive(Programs) + substring(container.folderpath,plugin://plugin.program.advanced.launcher)]</visible>
 			</control>
-			<control type="button" id="42">
+			<control type="label">
 				<include>WindowMenuLabel</include>
 				<label>$LOCALIZE[14018]</label>
 				<visible>Control.IsVisible(56) + Window.IsActive(Programs) + substring(container.folderpath,plugin://plugin.program.advanced.launcher)</visible>		
 			</control>
-			<control type="button" id="43">
+			<control type="label">
 				<include>WindowMenuLabel</include>
 				<label>$LOCALIZE[14018]</label>
 				<visible>Control.IsVisible(50)</visible>		
+			</control>
+			<control type="label">
+				<include>WindowMenuLabel</include>
+				<label>$LOCALIZE[31206]</label>
+				<visible>Control.IsVisible(58) + !Skin.HasSetting(ShowcaseFanart)</visible>		
+			</control>
+			<control type="label">
+				<include>WindowMenuLabel</include>
+				<label>$LOCALIZE[14018]</label>
+				<visible>Control.IsVisible(58) | Control.IsVisible(55)</visible>		
 			</control>
 		</control>
 	</control>

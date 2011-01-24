@@ -195,6 +195,7 @@
 					<label>$LOCALIZE[31086]</label>
 					<altlabel>$LOCALIZE[31094]</altlabel>
 					<onclick>Skin.ToggleSetting(ShowcaseFanart)</onclick>
+					<onclick>ReloadSkin()</onclick>
 					<selected>Skin.HasSetting(ShowcaseFanart)</selected>
 					<visible>Control.IsVisible(58)</visible>
 				</control>

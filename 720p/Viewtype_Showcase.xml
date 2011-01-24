@@ -18,8 +18,8 @@
 				<visible>Skin.HasSetting(ShowcaseFanart) + Skin.HasSetting(showcase_fanart_title)</visible>
 				<animation effect="slide" start="0,0" end="0,-70" time="1000" delay="600" tween="cubic" easing="inout" condition="Control.IsVisible(58) + Container.Content(movies) + Skin.HasSetting(ShowcaseFanart)">Conditional</animation>
 				<animation effect="slide" start="0,0" end="0,-110" time="1000" delay="600" tween="cubic" easing="inout" condition="Control.IsVisible(58) + Container.Content(movies)">Conditional</animation>
- 				<posx>0</posx>
-				<posy>520</posy>
+ 				<posx>20</posx>
+				<posy>620</posy>
 				<width>1280</width>
 				<height>50</height>
 				<align>center</align>
@@ -47,7 +47,8 @@
 			<posx>-135</posx>
 			<posy>290</posy>
 			<height>515</height>
-			<width>1480</width>
+			<include condition="!Skin.HasSetting(ShowcaseFanart)">showcase_width_dark</include>
+			<include condition="Skin.HasSetting(ShowcaseFanart)">showcase_width_fanart</include>
 			<onleft>50</onleft>
 			<onright>50</onright>
 			<onup>68</onup>
@@ -55,12 +56,15 @@
 			<include condition="Skin.HasSetting(big_trailer)">ondown_big_trailer</include>
 			<viewtype label="$LOCALIZE[31063]">list</viewtype>
 			<orientation>horizontal</orientation>
-			<focusposition>4</focusposition>
+			<include condition="!Skin.HasSetting(ShowcaseFanart)">showcase_focusposition_dark</include>
+			<include condition="Skin.HasSetting(ShowcaseFanart)">showcase_focusposition_fanart</include>
 			<scrolltime>400</scrolltime>
 			<preloaditems>2</preloaditems>
 			<pagecontrol>68</pagecontrol>
+			<animation effect="zoom" start="100" end="72" time="700" condition="Skin.HasSetting(ShowcaseFanart)">Conditional</animation>
+			<animation effect="slide" start="0,0" end="0,160" time="700" condition="Skin.HasSetting(ShowcaseFanart)">Conditional</animation>
 			<include>Animation_Viewtype_Showcase_FocusArea</include>
-			<visible>!Skin.HasSetting(no_Showcase) + [Container.Content(movies) | substring(container.folderpath,plugin://plugin.video.apple.movie.trailers.lite)]</visible>
+			<visible>!Skin.HasSetting(no_Showcase) + [Container.Content(movies) | substring(container.folderpath,plugin://plugin.video.apple.movie.trailers.lite) | [Window.IsActive(programs) + substring(container.folderpath,plugin://plugin.program.advanced.launcher)]]</visible>
 			<itemlayout width="168" height="245">
 				<control type="group">
 					<animation effect="slide" start="0,0" end="0,20" time="0" tween="cubic" easing="inout" condition="Control.IsVisible(58) + Container.Content(movies) + Skin.HasSetting(ShowcaseFanart)">Conditional</animation>
@@ -191,16 +195,17 @@
 	<control type="group">
 		<visible>Control.IsVisible(58)</visible>
 			<control type="textbox">
-				<visible>!Skin.HasSetting(ShowcaseFanart)</visible>
-				<posx>460</posx>
-				<posy>25</posy>
-				<width>540</width>
-				<height>330</height>
-				<font>LiberationSans_Regular_22</font>
+				<visible>![Skin.HasSetting(ShowcaseFanart) | [Window.IsActive(programs) + substring(container.folderpath,plugin://plugin.program.advanced.launcher) + Skin.HasSetting(launcher_plot_case)]]</visible>
+				<posx>465</posx>
+				<posy>15</posy>
+				<width>520</width>
+				<height>320</height>
+				<font>LiberationSans_Regular_18</font>
 				<textcolor>white</textcolor>
 				<label>$INFO[ListItem.Plot]</label>
 				<align>justify</align>
 				<autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
+				<animation effect="slide" start="0,0" end="285,0" time="0" condition="Window.IsActive(programs) + substring(container.folderpath,plugin://plugin.program.advanced.launcher) + !Skin.HasSetting(extrathumbs)">Conditional</animation>
 				<include>Animation_Viewtype_Showcase_Plot</include>
 			</control>
 			<control type="image"><!-- Floor -->
@@ -216,7 +221,7 @@
 				<visible>!SubString(ListItem.Icon,DefaultFolderBack.png,Left) + !Skin.HasSetting(ShowcaseFanart)</visible>
 				<include>Animation_Viewtype_Showcase_LeftArea</include>
 					<control type="label"><!--Movie title-->
-						<posx>25</posx>
+						<posx>15</posx>
 						<posy>245</posy>
 						<width>420</width>
 						<height>50</height>
@@ -293,6 +298,27 @@
 						<label>$LOCALIZE[31226]</label>
 						<visible>substring(container.folderpath,plugin://plugin.video.apple.movie.trailers.lite)</visible>
 					</control>
+					<control type="label"><!--Genre-->
+						<posx>15</posx>
+						<posy>273</posy>
+						<width>394</width>
+						<height>50</height>
+						<aligny>center</aligny>
+						<font>LiberationSans_Regular_22</font>
+						<label>[B][COLOR=ListTrackF]$LOCALIZE[515][/COLOR] [B][COLOR=white]$INFO[ListItem.Genre][/B][/COLOR]</label>
+						<visible>Window.IsActive(programs) + substring(container.folderpath,plugin://plugin.program.advanced.launcher)</visible>
+					</control>
+					<control type="label"><!--Studio Year-->
+						<posx>15</posx>
+						<posy>296</posy>
+						<width>394</width>
+						<height>50</height>
+						<aligny>center</aligny>
+						<font>LiberationSans_Regular_18</font>
+						<textcolor>white</textcolor>
+						<label>[B]$INFO[ListItem.Studio]$INFO[ListItem.Premiered,  (,)][/B]</label>
+						<visible>substring(container.folderpath,plugin://plugin.program.advanced.launcher)</visible>
+					</control>
 					<control type="group">
 						<posx>76</posx>
 						<posy>311</posy>
@@ -333,7 +359,7 @@
 	<!--Plot and extrathumbs-->
 				
 			<control type="grouplist">
-				<visible>!SubString(ListItem.Icon,DefaultFolderBack.png,Left) + !Skin.HasSetting(extrathumbs) + !Skin.HasSetting(ShowcaseFanart) </visible>
+				<visible>!SubString(ListItem.Icon,DefaultFolderBack.png,Left) + !Skin.HasSetting(extrathumbs) + !Skin.HasSetting(ShowcaseFanart) + !Window.IsActive(programs)</visible>
 				<posx>1020</posx>
 				<posy>22</posy>
 				<itemgap>0</itemgap>
@@ -477,6 +503,17 @@
 					<aspectratio>stretch</aspectratio>
 					<texture background="true" diffuse="tv-landscape/landscapematteFO.png">$INFO[ListItem.Path,,extrathumbs/thumb1.jpg]</texture>
 					<fadetime>200</fadetime>
+					<visible>Container.Content(movies)</visible>
+				</control>
+				<control type="image">
+					<posx>1010</posx>
+					<posy>30</posy>
+					<width>261</width>
+					<height>147</height>
+					<aspectratio>stretch</aspectratio>
+					<texture background="true" diffuse="tv-landscape/landscapematteFO.png">special://skin/extras/avlfanart/$INFO[ListItem.label]/thumb1.jpg</texture>
+					<fadetime>200</fadetime>
+					<visible>Window.IsActive(programs) + substring(container.folderpath,plugin://plugin.program.advanced.launcher)</visible>
 				</control>
 				<control type="image">
 					<posx>998</posx>
@@ -493,6 +530,17 @@
 					<aspectratio>stretch</aspectratio>
 					<texture background="true" diffuse="tv-landscape/landscapematteFO.png">$INFO[ListItem.Path,,extrathumbs/thumb2.jpg]</texture>
 					<fadetime>200</fadetime>
+					<visible>Container.Content(movies)</visible>
+				</control>
+				<control type="image">
+					<posx>1010</posx>
+					<posy>200</posy>
+					<width>261</width>
+					<height>147</height>
+					<aspectratio>stretch</aspectratio>
+					<texture background="true" diffuse="tv-landscape/landscapematteFO.png">special://skin/extras/avlfanart/$INFO[ListItem.label]/thumb2.jpg</texture>
+					<fadetime>200</fadetime>
+					<visible>Window.IsActive(programs) + substring(container.folderpath,plugin://plugin.program.advanced.launcher)</visible>
 				</control>
 				<control type="image">
 					<posx>998</posx>
@@ -542,6 +590,15 @@
 				<orientation>horizontal</orientation>
 				<include>frame_flags</include>
 				<include>Animation_ZoomInZoomOut</include>
+			</control>
+			<control type="image"> <!-- Games Studioflags  -->
+				<width>80</width>
+				<height>55</height>
+				<posx>1195</posx>
+				<posy>665</posy>
+				<aspectratio align="center">keep</aspectratio>
+				<texture>$INFO[ListItem.Studio,extras/Studios/,.png]</texture>
+				<visible>Window.IsActive(programs) + substring(container.folderpath,plugin://plugin.program.advanced.launcher) + !Skin.HasSetting(ShowcaseFanart)</visible>
 			</control>
 	</control>
 			

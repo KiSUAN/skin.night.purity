@@ -404,7 +404,15 @@
 					<autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
 					<animation effect="slide" start="0,0" end="0,-21" time="0" condition="IsEmpty(ListItem.Studio) + IsEmpty(ListItem.Premiered) | IsEmpty(ListItem.Genre)">Conditional</animation>
 					<animation effect="slide" start="0,0" end="0,-47" time="0" condition="IsEmpty(ListItem.Genre) + IsEmpty(ListItem.Studio) + IsEmpty(ListItem.Premiered)">Conditional</animation>
-					<visible>Skin.HasSetting(launcher_plot_poster)</visible>
+					<visible>Skin.HasSetting(launcher_plot_addon)</visible>
+				</control>
+				<control type="image"> <!-- Games Studioflags  -->
+					<width>80</width>
+					<height>55</height>
+					<posx>20</posx>
+					<posy>660</posy>
+					<aspectratio align="center">keep</aspectratio>
+					<texture>$INFO[ListItem.Studio,extras/Studios/,.png]</texture> 
 				</control>
 			</control>
 			

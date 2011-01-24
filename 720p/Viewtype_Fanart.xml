@@ -408,7 +408,7 @@
 			</control>
 			<control type="group">
 				<control type="textbox">
-					<visible>[Container.Content(movies) | Container.Content(tvshows)] + ![Player.HasAudio + !SubString(Window(10025).Property(TvTunesIsAlive),True)] | [Window.IsActive(programs) + substring(container.folderpath,plugin://plugin.program.advanced.launcher)]</visible>
+					<visible>[Container.Content(movies) | Container.Content(tvshows)] + ![Player.HasAudio + !SubString(Window(10025).Property(TvTunesIsAlive),True)] | [Window.IsActive(programs) + substring(container.folderpath,plugin://plugin.program.advanced.launcher) + !Skin.HasSetting(launcher_plot_fanart)]</visible>
 					<posx>15</posx>
 					<posy>390</posy>
 					<width>540</width>
