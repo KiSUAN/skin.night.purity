@@ -319,7 +319,7 @@
 					<selected>Skin.HasSetting(panelview_more_posters)</selected>
 					<visible>Control.IsVisible(56)</visible>	
 				</control>
-				<control type="togglebutton" id="32">
+				<control type="togglebutton" id="37">
 					<description>Toggle MoviesFanart</description>
 					<include>WindowMenuButton</include>
 					<label>BookPlus</label>
