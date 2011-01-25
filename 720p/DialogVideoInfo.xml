@@ -9,9 +9,7 @@
 		<animation effect="fade" start="100" end="0" time="600" delay="200" >WindowClose</animation>
 			<control type="image">
 				<include>Dimensions_Fullscreen</include>
-				<texture>backdrops/curtains.jpg</texture>
-				<aspectratio>stretch</aspectratio>
-				<fadetime>400</fadetime>
+				<texture background="true">$INFO[ListItem.Property(Fanart_Image)]</texture> 
 			</control>
 			<control type="image">
 				<include>Dimensions_Fullscreen</include>
@@ -159,9 +157,9 @@
 						<itemgap>0</itemgap>
 						<orientation>horizontal</orientation>
 						<include>VisibleFadeEffect</include>
-						<visible>!Control.IsVisible(50)</visible>
 						<include>frame_flags</include>
 						<include>Animation_ZoomInZoomOut</include>
+						<visible>!Control.IsVisible(50) + !Skin.HasSetting(no_frame_flags)</visible>
 					</control>
 					<control type="textbox"><!-- Plot and TV -->
 						<visible>Container.Content(movies)</visible>
