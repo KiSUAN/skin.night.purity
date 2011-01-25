@@ -3,6 +3,7 @@
 <window id="500">
 	<defaultcontrol>50</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
+	<views>50,54</views>
 	<controls>
 		<control type="image">
 			<description>artist level fanart</description>
@@ -15,8 +16,8 @@
 			<fadetime>400</fadetime>
 			<include>VisibleFadeEffect</include>
 		</control>
-		<include>Viewtype_JukeBox</include>
-		<include>Viewtype_Files</include>
+		<include>Viewtype_Files</include><!-- 50 -->
+		<include>Viewtype_JukeBox</include><!-- 54 -->
 
 		<!-- view options -->
 		<include>Global_Time</include>

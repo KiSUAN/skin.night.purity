@@ -73,7 +73,7 @@
 					<font>LiberationSans_Regular_16</font>
 					<textcolor>black</textcolor>
 					<label>$INFO[ListItem.TrackNumber]$INFO[ListItem.Title,. ]</label>
-					<visible>!IsEmpty(ListItem.Duration) + !IsEmpty(ListItem.TrackNumber) + [Container.Content(songs) | Window.IsActive(500) | [Window.IsActive(502) + !Container.Content(artists) + !Container.Content(albums) + !Container.Content(songs)]]</visible>
+					<visible>!IsEmpty(ListItem.Duration) + !IsEmpty(ListItem.TrackNumber) + [Container.Content(songs) | Window.IsActive(500) | Window.IsActive(501) | [Window.IsActive(502) + !Container.Content(artists) + !Container.Content(albums) + !Container.Content(songs)]]</visible>
 				</control>
 				<control type="label">
 					<posx>92</posx>
@@ -84,7 +84,7 @@
 					<font>LiberationSans_Regular_16</font>
 					<textcolor>Date</textcolor>
 					<label>$INFO[ListItem.Album]</label>
-					<visible>!IsEmpty(ListItem.Duration) + !IsEmpty(ListItem.TrackNumber) + [Container.Content(songs) | Window.IsActive(500) | [Window.IsActive(502) + !Container.Content(artists) + !Container.Content(albums) + !Container.Content(songs)]]</visible>
+					<visible>!IsEmpty(ListItem.Duration) + !IsEmpty(ListItem.TrackNumber) + [Container.Content(songs) | Window.IsActive(500) | Window.IsActive(501) | [Window.IsActive(502) + !Container.Content(artists) + !Container.Content(albums) + !Container.Content(songs)]]</visible>
 				</control>
 			</itemlayout>
 			<focusedlayout width="400" height="64">
@@ -137,7 +137,7 @@
 					<font>LiberationSans_Regular_16</font>
 					<textcolor>black</textcolor>
 					<label>$INFO[ListItem.TrackNumber]$INFO[ListItem.Title,. ]</label>
-					<visible>!IsEmpty(ListItem.Duration) + !IsEmpty(ListItem.TrackNumber) + [Container.Content(songs) | Window.IsActive(500) | [Window.IsActive(502) + !Container.Content(artists) + !Container.Content(albums) + !Container.Content(songs)]]</visible>
+					<visible>!IsEmpty(ListItem.Duration) + !IsEmpty(ListItem.TrackNumber) + [Container.Content(songs) | Window.IsActive(500) | Window.IsActive(501) | [Window.IsActive(502) + !Container.Content(artists) + !Container.Content(albums) + !Container.Content(songs)]]</visible>
 				</control>
 				<control type="label">
 					<posx>92</posx>
@@ -148,7 +148,7 @@
 					<font>LiberationSans_Regular_16</font>
 					<textcolor>Date</textcolor>
 					<label>$INFO[ListItem.Album]</label>
-					<visible>!IsEmpty(ListItem.Duration) + !IsEmpty(ListItem.TrackNumber) + [Container.Content(songs) | Window.IsActive(500) | [Window.IsActive(502) + !Container.Content(artists) + !Container.Content(albums) + !Container.Content(songs)]]</visible>
+					<visible>!IsEmpty(ListItem.Duration) + !IsEmpty(ListItem.TrackNumber) + [Container.Content(songs) | Window.IsActive(500) | Window.IsActive(501) | [Window.IsActive(502) + !Container.Content(artists) + !Container.Content(albums) + !Container.Content(songs)]]</visible>
 				</control>			
 			</focusedlayout>
 		</control>

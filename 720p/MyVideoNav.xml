@@ -3,7 +3,7 @@
 <window id="25">
 	<defaultcontrol always="true">9999</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
-	<views>621,55,598,58,595,51,52,633,53,54,597,56,57,59,592,593,594,596,50</views>
+	<views>621,55,598,58,595,51,52,633,53,54,597,56,57,59,592,593,594,596,50,622</views>
 	<controls>
 		<control type="button" id="9999">
             <description>trigger</description>
@@ -131,6 +131,7 @@
 			<include>Viewtype_WallPanel</include><!--  597  -->
 			<include>Viewtype_Poster_Half</include><!--  598  -->
 			<include>Viewtype_3daddon</include><!--  621  -->
+			<include>Viewtype_AudioBook</include><!--  622  -->
 			<include>Viewtype_Landscape_Fanart</include><!--  633  -->
 	</control>
 		
@@ -318,6 +319,15 @@
 					<selected>Skin.HasSetting(panelview_more_posters)</selected>
 					<visible>Control.IsVisible(56)</visible>	
 				</control>
+				<control type="togglebutton" id="32">
+					<description>Toggle MoviesFanart</description>
+					<include>WindowMenuButton</include>
+					<label>BookPlus</label>
+					<altlabel>$LOCALIZE[21375]</altlabel>
+					<onclick>Skin.ToggleSetting(BookPlus)</onclick>
+					<selected>Skin.HasSetting(BookPlus)</selected>
+					<visible>Control.IsVisible(622)</visible>
+				</control>
 				
 				<control type="button" id="3">
 					<include>WindowMenuButton</include>
@@ -380,7 +390,7 @@
 			<control type="label">
 				<include>WindowMenuLabel</include>
 				<label>$LOCALIZE[14018]</label>
-				<visible>[Control.IsVisible(55) + Container.Content(movies)] | [Control.IsVisible(593) + Container.Content(tvshows)]  | [Control.IsVisible(633) + Container.Content(episodes)] | [Control.IsVisible(58) + Container.Content(movies) + Skin.HasSetting(ShowcaseFanart)]</visible>		
+				<visible>[Control.IsVisible(55) + Container.Content(movies)] | Control.IsVisible(622) | [Control.IsVisible(593) + Container.Content(tvshows)] | [Control.IsVisible(633) + Container.Content(episodes)] | [Control.IsVisible(58) + Container.Content(movies) + Skin.HasSetting(ShowcaseFanart)]</visible>		
 			</control>
 			<control type="label">
 				<include>WindowMenuLabel</include>

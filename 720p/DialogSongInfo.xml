@@ -181,18 +181,6 @@
 				<label fallback="161">$INFO[ListItem.TrackNumber]</label>
 			</control>
 			<control type="label">
-				<description>Rating Title</description>
-				<posx>400</posx>
-				<posy>315</posy>
-				<width>130</width>
-				<height>25</height>
-				<align>right</align>
-				<aligny>center</aligny>
-				<font>LiberationSans_Regular_20</font>
-				<textcolor>mainblue</textcolor>
-				<label>$LOCALIZE[563]:</label>
-			</control>
-			<control type="label">
 				<description>Comment Title</description>
 				<posx>400</posx>
 				<posy>315</posy>
@@ -214,6 +202,18 @@
 				<textcolor>white</textcolor>
 				<pagecontrol>-</pagecontrol>
 				<label fallback="161">$INFO[ListItem.Comment]</label>
+			</control>
+			<control type="label">
+				<description>Rating Title</description>
+				<posx>400</posx>
+				<posy>350</posy>
+				<width>130</width>
+				<height>25</height>
+				<align>right</align>
+				<aligny>center</aligny>
+				<font>LiberationSans_Regular_20</font>
+				<textcolor>mainblue</textcolor>
+				<label>$LOCALIZE[563]:</label>
 			</control>
 		</control>
 			<control type="image"><!-- Floor -->
