@@ -17,7 +17,7 @@
 			</control>
 			<control type="image" id="9550">
 				<posx>710</posx>
-				<posy>20</posy>
+				<posy>0</posy>
 				<width>300</width>
 				<height>116</height>
 				<texture background="true">$INFO[ListItem.FileNameAndPath]logo.png</texture>
@@ -26,12 +26,21 @@
 			</control>
 			<control type="image" id="9551">
 				<posx>710</posx>
-				<posy>20</posy>
+				<posy>0</posy>
 				<width>300</width>
 				<height>116</height>
 				<texture background="true">$INFO[ListItem.Path]../logo.png</texture>
 				<fadetime>100</fadetime>
 				<aspectratio scalediffuse="false">stretch</aspectratio>
+			</control>
+			<control type="image"> <!-- Studioflags  -->
+				<posx>805</posx>
+				<posy>120</posy>
+				<width>106</width>
+				<height>109</height>
+				<aspectratio align="center">keep</aspectratio>
+				<texture>$INFO[ListItem.Studio,extras/Studios/,.png]</texture> 
+				<animation effect="slide" start="0,0" end="0,-65" time="0" condition="IsEmpty(Control.GetLabel(9170)) + IsEmpty(Control.GetLabel(9171))">conditional</animation>
 			</control>
 			<control type="image"><!-- Floor -->
 				<posx>0</posx>
@@ -96,7 +105,7 @@
 					<control type="label">
 						<description>header label</description>
 						<posx>446</posx>
-						<posy>124</posy>
+						<posy>110</posy>
 						<width>830</width>
 						<height>50</height>
 						<align>center</align>
@@ -123,7 +132,7 @@
 						<description>Media Codec Flagging Images</description>
 						<posx>0</posx>
 						<posy>600</posy>
-						<width>490</width>
+						<width>456</width>
 						<align>center</align>
 						<itemgap>0</itemgap>
 						<orientation>horizontal</orientation>
@@ -136,7 +145,7 @@
 						<description>Media Codec Flagging Images</description>
 						<posx>0</posx>
 						<posy>600</posy>
-						<width>490</width>
+						<width>456</width>
 						<align>center</align>
 						<itemgap>0</itemgap>
 						<orientation>horizontal</orientation>
@@ -152,7 +161,7 @@
 						<description>Media Codec Flagging Images</description>
 						<posx>0</posx>
 						<posy>600</posy>
-						<width>490</width>
+						<width>456</width>
 						<align>center</align>
 						<itemgap>0</itemgap>
 						<orientation>horizontal</orientation>
@@ -178,9 +187,9 @@
 					<control type="textbox"><!-- Plot and TV -->
 						<visible>!Container.Content(movies)</visible>
 						<posx>445</posx>
-						<posy>530</posy>
+						<posy>550</posy>
 						<width>770</width>
-						<height>280</height>
+						<height>185</height>
 						<align>justify</align>
 						<info>ListItem.Plot</info>
 						<font>LiberationSans_Regular_20</font>
@@ -232,7 +241,7 @@
 							<visible>!IsEmpty(Control.GetLabel(9170))</visible>
 						</control>
 						<control type="largeimage" id="9171">
-							<posx>910</posx>
+							<posx>940</posx>
 							<posy>30</posy>
 							<width>261</width>
 							<height>147</height>
@@ -241,7 +250,7 @@
 							<fadetime>200</fadetime>
 						</control>
 						<control type="image">
-							<posx>898</posx>
+							<posx>928</posx>
 							<posy>20</posy>
 							<width>284</width>
 							<height>166</height>
@@ -338,7 +347,7 @@
 					<animation effect="slide" start="0,0" end="-1200,0" time="400" delay="300" condition="Control.IsVisible(50)">conditional</animation>
 					<control type="list" id="49">
 						<posx>445</posx>
-						<posy>180</posy>
+						<posy>210</posy>
 						<width>830</width>
 						<height>330</height>
 						<onleft>49</onleft>
@@ -423,7 +432,7 @@
 					<animation effect="slide" end="-1800,0" time="200" delay="200" condition="Control.IsVisible(50)">conditional</animation>
 					<control type="list" id="49">
 						<posx>445</posx>
-						<posy>180</posy>
+						<posy>210</posy>
 						<width>830</width>
 						<height>330</height>
 						<onleft>49</onleft>

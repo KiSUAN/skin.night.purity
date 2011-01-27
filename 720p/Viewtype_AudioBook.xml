@@ -33,7 +33,7 @@
 			<include>Animation_ZoomInZoomOut</include>
 			<camera x="1340" y="380" />
 			<animation effect="rotatey" center="50" start="12" end="10" time="0" condition="true">Conditional</animation>
-			<visible>Container.Content(songs)</visible>
+			<visible>![Container.Content(files) | Container.Content(artists) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(musicvideos) | Container.Content(genres) | Container.Content(years) | Container.Content(actors) | Container.Content(playlists) | Container.Content(albums) Container.Content(studios) | Container.Content(plugings) | Container.Content(directors)]</visible>
 			<itemlayout width="176" height="245">
 				<control type="group">
 				<posx>150</posx>
