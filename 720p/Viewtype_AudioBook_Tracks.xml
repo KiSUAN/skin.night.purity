@@ -1,0 +1,154 @@
+<!--Alaska-->
+
+<includes>
+	<include name="Viewtype_AudioBook_Tracks">
+
+	<control type="group">
+		<visible>Control.IsVisible(623)</visible>
+			<control type="image">
+				<include>Dimensions_Fullscreen</include>
+				<texture>list/file-black-background1.png</texture>
+			</control>
+	</control>
+		
+		
+		<control type="fixedlist" id="623">
+			<posx>460</posx>
+			<posy>70</posy>
+			<height>615</height>
+			<width>900</width>
+			<onup>623</onup>
+			<ondown>623</ondown>
+			<onleft>7000</onleft>
+			<onright>92</onright>
+			<scrolltime>0</scrolltime>
+			<viewtype label="ABTracks">list</viewtype>
+			<orientation>vertical</orientation>
+			<focusposition>0</focusposition>
+			<movement>16</movement>
+			<pagecontrol>92</pagecontrol>
+			<include>Animation_Viewtype_Panel_FocusArea</include>
+			<visible>![Container.Content(albums) | Container.Content(files) | Container.Content(artists) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(musicvideos) | Container.Content(genres) | Container.Content(years) | Container.Content(actors) | Container.Content(playlists) | Container.Content(albums) Container.Content(studios) | Container.Content(plugings) | Container.Content(directors)]</visible>
+			<animation effect="slide" start="0,0" end="-40,0" time="400" tween="cubic" easing="inout" condition="Control.HasFocus(92)">Conditional</animation>
+			<itemlayout width="1210" height="36">
+				<control type="group">
+					<posx>40</posx>
+						<control type="label">
+							<posx>20</posx>
+							<posy>0</posy>
+							<width>800</width>
+							<height>46</height>
+							<aligny>center</aligny>
+							<font>LiberationSans_Regular_22</font>
+							<textcolor>Text-Filemode</textcolor>
+							<label>$INFO[ListItem.TrackNumber]$INFO[ListItem.Title,. ][COLOR Date]$INFO[ListItem.Duration, ][/COLOR]</label>
+						</control>
+				</control>
+			</itemlayout>
+			<focusedlayout width="1210" height="36">
+				<control type="group">
+					<posx>40</posx>
+						<control type="image">
+							<posx>6</posx>
+							<posy>-10</posy>
+							<width>800</width>
+							<height>68</height>
+							<texture>list/highlight_new.png</texture>
+							<animation type="Focus" reversible="false">
+								<effect type="fade" start="0" end="100" time="800" />
+							</animation>
+						</control>
+						<control type="label">
+							<posx>20</posx>
+							<posy>0</posy>
+							<width>800</width>
+							<height>46</height>
+							<aligny>center</aligny>
+							<font>LiberationSans_Regular_22</font>
+							<label>[COLOR white]$INFO[ListItem.TrackNumber]$INFO[ListItem.Title,. ]$INFO[ListItem.Duration, - ][/COLOR]</label>
+							<scroll>true</scroll>
+						</control>
+				</control>
+			</focusedlayout>
+		</control>		
+		
+	<control type="group">
+	<include>Animation_Viewtype_Showcase_ThumbArea</include>
+	<visible>Control.IsVisible(623)</visible>
+		<control type="label">
+			<posx>20</posx>
+			<posy>0</posy>
+			<width>1200</width>
+			<height>50</height>
+			<aligny>center</aligny>
+			<font>LiberationSans_Regular_40</font>
+			<textcolor>mainblue</textcolor>
+			<label>[B]$INFO[ListItem.Album][/B]</label>
+		</control>
+		<control type="label">
+			<posx>20</posx>
+			<posy>30</posy>
+			<width>604</width>
+			<height>50</height>
+			<aligny>center</aligny>
+			<font>LiberationSans_Regular_24</font>
+			<textcolor>white</textcolor>
+			<label>$INFO[ListItem.artist]</label>
+		</control>
+		<control type="label">
+			<posx>20</posx>
+			<posy>55</posy>
+			<width>604</width>
+			<height>50</height>
+			<aligny>center</aligny>
+			<font>LiberationSans_Regular_24</font>
+			<textcolor>white</textcolor>
+			<label>$INFO[ListItem.year]</label>
+		</control>
+		<control type="image">
+			<posx>0</posx>
+			<posy>70</posy>
+			<width>502</width>
+			<height>626</height>
+			<texture>Comics/comic_glow.png</texture>
+			<colordiffuse>poster_glow</colordiffuse>
+			<aspectratio scalediffuse="false">stretch</aspectratio>
+		</control>
+		<control type="image">
+			<posx>110</posx>
+			<posy>170</posy>
+			<width>300</width>
+			<height>432</height>
+			<texture background="true" diffuse="movie-poster/posterview_diffuse.png">$INFO[ListItem.Icon]</texture>
+			<fadetime>400</fadetime>
+			<aspectratio scalediffuse="false">stretch</aspectratio>
+		</control>
+		<control type="image">
+			<posx>170</posx>
+			<posy>620</posy>
+			<width>183</width>
+			<height>33</height>
+			<texture>$INFO[ListItem.StarRating]</texture>
+			<colordiffuse>mainblue</colordiffuse>
+			<visible>!Player.HasAudio</visible>
+		</control>
+	</control>
+
+		<control type="scrollbar" id="92">
+			<include>Animation_ZoomInZoomOut</include>
+			<posx>1280</posx>
+			<posy>100</posy>
+			<width>25</width>
+			<height>460</height>
+			<visible allowhiddenfocus="true">Control.IsVisible(623) + Control.HasFocus(92)</visible>
+			<texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
+			<textureslidernibfocus>ScrollBarV_Nib_Focus1.png</textureslidernibfocus>
+			<onleft>623</onleft>
+			<showonepage>true</showonepage>
+			<orientation>vertical</orientation>
+			<include>Animation_CommonFade</include>
+			<animation effect="slide" start="0,0" end="-40,0" time="400" tween="cubic" easing="inout" condition="Control.HasFocus(92)">Conditional</animation>
+		</control>
+		
+	</include>
+</includes>

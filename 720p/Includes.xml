@@ -40,6 +40,7 @@
 	<include file="Viewtype_Poster_Half.xml" />
 	<include file="Includes_Qlock.xml" />
 	<include file="Viewtype_AudioBook.xml" />
+	<include file="Viewtype_AudioBook_Tracks.xml" />
 	
 	
 	<include name="Movie_Regular">

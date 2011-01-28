@@ -23,17 +23,17 @@
 			<width>1400</width>
 			<onleft>622</onleft>
 			<onright>622</onright>
-			<onup>65</onup>
+			<onup>93</onup>
 			<viewtype label="AudioBook">list</viewtype>
 			<orientation>horizontal</orientation>
 			<focusposition>3</focusposition>
 			<scrolltime>400</scrolltime>
 			<preloaditems>2</preloaditems>
-			<pagecontrol>65</pagecontrol>
+			<pagecontrol>93</pagecontrol>
 			<include>Animation_ZoomInZoomOut</include>
 			<camera x="1340" y="380" />
 			<animation effect="rotatey" center="50" start="12" end="10" time="0" condition="true">Conditional</animation>
-			<visible>![Container.Content(files) | Container.Content(artists) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(musicvideos) | Container.Content(genres) | Container.Content(years) | Container.Content(actors) | Container.Content(playlists) | Container.Content(albums) Container.Content(studios) | Container.Content(plugings) | Container.Content(directors)]</visible>
+			<visible>Container.Content(albums)</visible>
 			<itemlayout width="176" height="245">
 				<control type="group">
 				<posx>150</posx>
@@ -238,28 +238,13 @@
 						<width>600</width>
 						<height>230</height>
 						<align>justify</align>
-						<info>ListItem.comment</info>
-						<font>LiberationSans_Regular_20</font>
-						<textcolor>white</textcolor>
-						<animation effect="fade"  start="0" end="100" time="400" delay="3000" condition="Control.IsVisible(622) + Skin.HasSetting(BookPlus) + ![Container(622).OnNext | Container(622).OnPrevious]">WindowOpen</animation>
-						<animation effect="slide" start="1000,0" end="0,0" time="400" delay="3600" condition="Skin.HasSetting(BookPlus) + ![Container(622).OnNext | Container(622).OnPrevious]">Conditional</animation>
-						<autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
-						<visible>Skin.HasSetting(PosterPlus) + !Container.Content(albums)</visible>
-					</control>
-					<control type="textbox">
-						<description>Description</description>
-						<posx>340</posx>
-						<posy>432</posy>
-						<width>600</width>
-						<height>230</height>
-						<align>justify</align>
 						<info>ListItem.Property(Album_Description)</info>
 						<font>LiberationSans_Regular_20</font>
 						<textcolor>white</textcolor>
 						<animation effect="fade"  start="0" end="100" time="400" delay="3000" condition="Control.IsVisible(622) + Skin.HasSetting(BookPlus) + ![Container(622).OnNext | Container(622).OnPrevious]">WindowOpen</animation>
 						<animation effect="slide" start="1000,0" end="0,0" time="400" delay="3600" condition="Skin.HasSetting(BookPlus) + ![Container(622).OnNext | Container(622).OnPrevious]">Conditional</animation>
 						<autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
-						<visible>Skin.HasSetting(PosterPlus) + Container.Content(albums)</visible>
+						<visible>Skin.HasSetting(PosterPlus)</visible>
 					</control>
 			</control>
 			
@@ -331,18 +316,18 @@
 				<width>1280</width>     
 				<height>192</height> 
 				<texture>common/scrollbar_back.png</texture>
-				<visible>Control.HasFocus(65)</visible>
+				<visible>Control.HasFocus(93)</visible>
 			</control>
 	</control>
 		
 		
-		<control type="scrollbar" id="65">
+		<control type="scrollbar" id="93">
 			<include>Animation_ZoomInZoomOut</include>
 			<posx>100</posx>
 			<posy>900</posy>
 			<width>1080</width>
 			<height>25</height>
-			<visible allowhiddenfocus="true">Control.IsVisible(622) + Control.HasFocus(65)</visible>
+			<visible allowhiddenfocus="true">Control.IsVisible(622) + Control.HasFocus(93)</visible>
 			<texturesliderbackground>osd/osd_progress_back1.png</texturesliderbackground>
 			<textureslidernibfocus>ScrollBarV_Nib_Focus1.png</textureslidernibfocus>
 			<onup>7000</onup>
@@ -350,7 +335,7 @@
 			<showonepage>true</showonepage>
 			<orientation>horizontal</orientation>
 			<include>Animation_CommonFade</include>
-			<animation effect="slide" start="0,0" end="0,-220" time="400" tween="cubic" easing="inout" condition="Control.HasFocus(65)">Conditional</animation>
+			<animation effect="slide" start="0,0" end="0,-220" time="400" tween="cubic" easing="inout" condition="Control.HasFocus(93)">Conditional</animation>
 		</control>
 	</include>
 	

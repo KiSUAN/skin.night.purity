@@ -3,7 +3,7 @@
 <window id="25">
 	<defaultcontrol always="true">9999</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
-	<views>621,55,598,58,595,51,52,633,53,54,597,56,57,59,592,593,594,596,50,622</views>
+	<views>621,55,598,58,595,51,52,633,53,54,597,56,57,59,592,593,594,596,50,622,623</views>
 	<controls>
 		<control type="button" id="9999">
             <description>trigger</description>
@@ -28,7 +28,7 @@
             <aspectratio>stretch</aspectratio> 
             <include>Animation_MyVideoNav_Fanart</include> 
 			<include>global_kenburns_fanart</include>
-			<visible>![Control.IsVisible(58) + !Skin.HasSetting(ShowcaseFanart) | Control.IsVisible(54) | [Control.IsVisible(59) + !Container.Content(episodes)] | Control.IsVisible(56) | Control.IsVisible(57) | Control.IsVisible(592) | Control.IsVisible(597) | Control.IsVisible(596)]</visible> 
+			<visible>![Control.IsVisible(58) + !Skin.HasSetting(ShowcaseFanart) | Control.IsVisible(54) | [Control.IsVisible(59) + !Container.Content(episodes)] | Control.IsVisible(56) | Control.IsVisible(57) | Control.IsVisible(592) | Control.IsVisible(597) | Control.IsVisible(596) | Control.IsVisible(623)]</visible> 
         </control>  
 		<control type="image">
 			<include>Dimensions_Fullscreen</include>
@@ -99,7 +99,7 @@
 			<fadetime>400</fadetime>
 			<texture>backdrops/curtains.jpg</texture>
 			<include>Animation_MyVideoNav_Fanart</include>
-			<visible>[Control.IsVisible(56) | Control.IsVisible(57) | Control.IsVisible(592) | substring(container.folderpath,plugin://)] + !Control.IsVisible(54)</visible>
+			<visible>[Control.IsVisible(56) | Control.IsVisible(57) | Control.IsVisible(592) | Control.IsVisible(623) | substring(container.folderpath,plugin://)] + !Control.IsVisible(54)</visible>
 		</control>
 		<control type="image">
 			<include>Dimensions_Fullscreen</include>
@@ -132,6 +132,7 @@
 			<include>Viewtype_Poster_Half</include><!--  598  -->
 			<include>Viewtype_3daddon</include><!--  621  -->
 			<include>Viewtype_AudioBook</include><!--  622  -->
+			<include>Viewtype_AudioBook_Tracks</include><!--  623  -->
 			<include>Viewtype_Landscape_Fanart</include><!--  633  -->
 	</control>
 		
