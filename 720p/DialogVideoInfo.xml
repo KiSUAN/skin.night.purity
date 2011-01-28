@@ -35,12 +35,13 @@
 			</control>
 			<control type="image"> <!-- Studioflags  -->
 				<posx>805</posx>
-				<posy>120</posy>
+				<posy>145</posy>
 				<width>106</width>
 				<height>109</height>
 				<aspectratio align="center">keep</aspectratio>
 				<texture>$INFO[ListItem.Studio,extras/Studios/,.png]</texture> 
-				<animation effect="slide" start="0,0" end="0,-65" time="0" condition="IsEmpty(Control.GetLabel(9170)) + IsEmpty(Control.GetLabel(9171))">conditional</animation>
+				<animation effect="slide" start="0,0" end="0,-25" time="0" condition="IsEmpty(Control.GetLabel(9170)) + IsEmpty(Control.GetLabel(9171))">conditional</animation>
+				<animation effect="slide" start="0,0" end="0,-65" time="0" condition="Container.Content(movies)">conditional</animation>
 			</control>
 			<control type="image"><!-- Floor -->
 				<posx>0</posx>
