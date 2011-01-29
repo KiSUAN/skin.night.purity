@@ -26,7 +26,7 @@
 		<control type="fixedlist" id="52">
 			<posx>660</posx>
 			<posy>74</posy>
-			<height>647</height>
+			<height>615</height>
 			<width>800</width>
 			<onup>52</onup>
 			<ondown>52</ondown>
@@ -35,7 +35,7 @@
 			<scrolltime>0</scrolltime>
 			<viewtype label="$LOCALIZE[134]">list</viewtype>
 			<orientation>vertical</orientation>
-			<focusposition>9</focusposition>
+			<focusposition>7</focusposition>
 			<movement>9</movement>
 			<pagecontrol>62</pagecontrol>
 			<include>Animation_Viewtype_Panel_FocusArea</include>
