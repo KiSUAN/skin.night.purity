@@ -329,7 +329,7 @@
 					</control>
 			</control>	
 			<control type="label"><!--Trailer Start-->
-				<visible>!IsEmpty(ListItem.Trailer) + !Player.HasVideo + !Skin.HasSetting(ShowcaseFanart)</visible>
+				<visible>!IsEmpty(ListItem.Trailer) + !Player.HasVideo + !Skin.HasSetting(ShowcaseFanart) + !substring(container.folderpath,plugin://plugin.program.advanced.launcher)</visible>
 				<posx>20</posx>
 				<posy>320</posy>
 				<width>370</width>
@@ -528,7 +528,7 @@
 					<width>261</width>
 					<height>147</height>
 					<aspectratio>stretch</aspectratio>
-					<texture background="true" diffuse="tv-landscape/landscapematteFO.png">$INFO[ListItem.Trailer]$INFO[ListItem.label]_extra2.jpg</texture>
+					<texture background="true" diffuse="tv-landscape/landscapematteFO.png">$INFO[ListItem.Path,,extrathumbs/thumb2.jpg]</texture>
 					<fadetime>200</fadetime>
 					<visible>Container.Content(movies)</visible>
 				</control>
@@ -538,7 +538,7 @@
 					<width>261</width>
 					<height>147</height>
 					<aspectratio>stretch</aspectratio>
-					<texture background="true" diffuse="tv-landscape/landscapematteFO.png">special://skin/extras/avlfanart/$INFO[ListItem.label]/thumb2.jpg</texture>
+					<texture background="true" diffuse="tv-landscape/landscapematteFO.png">$INFO[ListItem.Trailer]$INFO[ListItem.label]_extra2.jpg</texture>
 					<fadetime>200</fadetime>
 					<visible>Window.IsActive(programs) + substring(container.folderpath,plugin://plugin.program.advanced.launcher)</visible>
 				</control>
