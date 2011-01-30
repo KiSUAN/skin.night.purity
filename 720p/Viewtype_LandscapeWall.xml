@@ -1,0 +1,224 @@
+<!--Alaska-->
+
+<includes>
+	<include name="LandscapeWall_Antanimation">
+		<animation type="Conditional" condition="true">
+			<effect type="rotatey" start="0,0" end="-20,0" center="0,0" time="0" tween="sine" easing="out" />
+		</animation>
+		<animation type="WindowClose">
+			<effect type="zoom" time="400" center="640,360" start="100" end="280" delay="600" tween="cubic" easing="in" />
+			<effect type="fade" time="400" center="640,360" start="100" end="0" delay="600" />
+		</animation>
+	</include>
+	<include name="Animation_LandscapeWall_Float">
+		<animation effect="slide" end="0,160" time="800" tween="cubic" easing="inout" condition="Container(624).Row(0) | Container(624).Row(1)">Conditional</animation>
+		<animation effect="slide" end="-80,0" time="800" tween="cubic" easing="inout" condition="Container(624).Column(4)">Conditional</animation>
+		<animation effect="slide" end="60,0" time="800" tween="cubic" easing="inout" condition="Container(624).Column(0)">Conditional</animation>
+		<animation effect="slide" end="0,-90" time="800" tween="cubic" easing="inout" condition="Container(624).Row(5) + Container(624).Column(2) | Container(624).Row(5) + Container(624).Column(1) | Container(624).Row(5) + Container(624).Column(0)">Conditional</animation>
+	</include>
+	
+	<include name="Viewtype_LandscapeWall">	
+	
+	
+	<control type="panel" id="624">
+			<visible>Container.Content(Years) | Container.Content(Studios)</visible>
+			<posx>0</posx>
+			<posy>-170</posy><!-- -105 -->
+			<width>1258</width>
+			<height>980</height><!-- 1570  1280 -->
+			<pagecontrol>60</pagecontrol>
+			<scrolltime>400</scrolltime>
+			<orientation>horizontal</orientation>
+			<viewtype label="LandscapeWall">Wall</viewtype>
+			<onleft>624</onleft>
+			<onright>624</onright>
+			<onup>7000</onup>
+			<ondown>7000</ondown>
+			<include>LandscapeWall_Antanimation</include>
+			<include>Animation_LandscapeWall_Float</include>
+			<itemlayout width="210" height="142">
+				<control type="group">
+					<posx>0</posx>
+					<posy>60</posy>
+						<control type="image">
+							<description>Poster</description>
+							<posx>16</posx>
+							<posy>15</posy>
+							<width>187</width>
+							<height>120</height>
+							<texture background="true" diffuse="wall/wall_h_diffuse.png" fallback="logo_missing.png">$INFO[ListItem.Label,special://skin/extras/studios/,.png]</texture>
+							<aspectratio align="center" scalediffuse="false">stretch</aspectratio>
+							<colordiffuse>79FFFFFF</colordiffuse>
+							<animation effect="fade" start="100" end="0" time="400" delay="2800" condition="Skin.HasSetting(Wall_fanart) + Container.Content(movies) + ![Container(624).OnNext | Container(624).OnPrevious]">Conditional</animation>
+							<visible>Container.Content(Studios)</visible>
+						</control>
+						<control type="label">
+							<posx>110</posx>
+							<posy>38</posy>
+							<width>230</width>
+							<height>80</height>
+							<align>center</align>
+							<aligny>center</aligny>
+							<font>LiberationSans_Regular_28</font>
+							<textcolor>mainblue</textcolor>
+							<label>[B]$INFO[ListItem.Label][/B]</label>
+							<animation effect="fade" start="100" end="0" time="400" delay="2800" condition="Skin.HasSetting(Wall_fanart) + Container.Content(movies) + ![Container(624).OnNext | Container(624).OnPrevious]">Conditional</animation>
+							<visible>Container.Content(Years)</visible>
+						</control>
+						<control type="image">
+							<description>Poster</description>
+							<posx>5</posx>
+							<posy>5</posy>
+							<width>210</width>
+							<height>142</height>
+							<texture>wall/wall_h_frame_blur.png</texture>
+							<aspectratio align="center" scalediffuse="false">stretch</aspectratio>
+							<colordiffuse>79FFFFFF</colordiffuse>
+							<animation effect="fade" start="100" end="0" time="400" delay="2800" condition="Skin.HasSetting(Wall_fanart) + Container.Content(movies) + ![Container(624).OnNext | Container(624).OnPrevious]">Conditional</animation>
+							<visible>Container.Content(Studios) | Container.Content(Years)</visible>
+						</control>
+				</control>
+			</itemlayout>
+			<focusedlayout width="210" height="142">
+				<control type="group">
+					<posx>10</posx>
+					<posy>80</posy>
+						<control type="image">
+							<description>Poster</description>
+							<posx>-65</posx>
+							<posy>-125</posy>
+							<width>340</width>
+							<height>420</height>
+							<texture>wall/wall_h_glow_june.png</texture>
+							<colordiffuse>poster_glow</colordiffuse>
+							<aspectratio align="center" scalediffuse="false">stretch</aspectratio>
+							<animation type="Focus" reversible="false">
+								<effect type="zoom" start="110" end="180" center="auto" time="400" tween="back" easing="out" />
+							</animation>
+							<animation effect="fade" start="100" end="0" time="400" delay="2800" condition="Skin.HasSetting(Wall_fanart) + Container.Content(movies) + ![Container(624).OnNext | Container(624).OnPrevious]">Conditional</animation>
+						</control>
+						<control type="image">
+							<description>Poster</description>
+							<posx>8</posx>
+							<posy>8</posy>
+							<width>195</width>
+							<height>126</height>
+							<texture>episodematte.png</texture>
+							<colordiffuse>black</colordiffuse>
+							<aspectratio align="center" scalediffuse="false">stretch</aspectratio>
+							<animation type="Focus" reversible="false">
+								<effect type="zoom" start="110" end="180" center="auto" time="400" tween="back" easing="out" />
+							</animation>
+							<animation effect="fade" start="100" end="0" time="400" delay="2800" condition="Skin.HasSetting(Wall_fanart) + Container.Content(movies) + ![Container(624).OnNext | Container(624).OnPrevious]">Conditional</animation>
+							<visible>Container.Content(Studios) | Container.Content(Years)</visible>
+						</control>
+						<control type="image">
+							<description>Poster</description>
+							<posx>12</posx>
+							<posy>11</posy>
+							<width>187</width>
+							<height>120</height>
+							<texture background="true" diffuse="wall/wall_h_diffuse.png" fallback="logo_missing.png">$INFO[ListItem.Label,special://skin/extras/studios/,.png]</texture>
+							<aspectratio align="center" scalediffuse="false">stretch</aspectratio>
+							<animation type="Focus" reversible="false">
+								<effect type="zoom" start="110" end="180" center="auto" time="400" tween="back" easing="out" />
+							</animation>
+							<animation effect="fade" start="100" end="0" time="400" delay="2800" condition="Skin.HasSetting(Wall_fanart) + Container.Content(movies) + ![Container(624).OnNext | Container(624).OnPrevious]">Conditional</animation>
+							<visible>Container.Content(Studios)</visible>
+						</control>
+						<control type="label">
+							<posx>135</posx>
+							<posy>-17</posy>
+							<width>80</width>
+							<height>180</height>
+							<align>center</align>
+							<aligny>center</aligny>
+							<font>LiberationSans_Regular_28</font>
+							<textcolor>mainblue</textcolor>
+							<label>[B]$INFO[ListItem.Label][/B]</label>
+							<animation type="Focus" reversible="false">
+								<effect type="zoom" start="110" end="180" center="auto" time="400" tween="back" easing="out" />
+							</animation>
+							<animation effect="fade" start="100" end="0" time="400" delay="2800" condition="Skin.HasSetting(Wall_fanart) + Container.Content(movies) + ![Container(624).OnNext | Container(624).OnPrevious]">Conditional</animation>
+							<visible>Container.Content(Years)</visible>
+						</control>
+						<control type="image">
+							<description>Poster</description>
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>210</width>
+							<height>142</height>
+							<texture>wall/wall_h_frame_blur.png</texture>
+							<aspectratio align="center" scalediffuse="false">stretch</aspectratio>
+							<animation type="Focus" reversible="false">
+								<effect type="zoom" start="110" end="180" center="auto" time="400" tween="back" easing="out" />
+							</animation>
+							<animation effect="fade" start="100" end="0" time="400" delay="2800" condition="Skin.HasSetting(Wall_fanart) + Container.Content(movies) + ![Container(624).OnNext | Container(624).OnPrevious]">Conditional</animation>
+							<visible>Container.Content(Years)</visible>
+						</control>
+						<control type="image">
+							<description>Poster</description>
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>210</width>
+							<height>142</height>
+							<texture>episodeframeF.png</texture>
+							<aspectratio align="center" scalediffuse="false">stretch</aspectratio>
+							<animation type="Focus" reversible="false">
+								<effect type="zoom" start="110" end="180" center="auto" time="400" tween="back" easing="out" />
+							</animation>
+							<animation effect="fade" start="100" end="0" time="400" delay="2800" condition="Skin.HasSetting(Wall_fanart) + Container.Content(movies) + ![Container(624).OnNext | Container(624).OnPrevious]">Conditional</animation>
+							<visible>Container.Content(Studios)</visible>
+						</control>
+				</control>
+			</focusedlayout>
+	</control>
+	
+	<control type="group">
+		<visible>Control.IsVisible(624)</visible>
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1280</width>
+				<height>720</height>
+				<texture>wall/wall_lastoverlay.png</texture>
+				<aspectratio>stretch</aspectratio>
+				<include>Animation_CommonFade</include>
+			</control>
+			<control type="group">
+				<posx>990</posx>
+				<posy>-40</posy>
+				<animation effect="slide" end="20,0" time="800" tween="cubic" easing="inout" condition="Container(624).Column(0)">Conditional</animation>
+				<animation effect="slide" end="-50,0" time="800" tween="cubic" easing="inout" condition="Container(624).Column(4)">Conditional</animation>
+				<animation effect="slide" end="-10,0" time="800" tween="cubic" easing="inout" condition="Container(624).Column(1) | Container(624).Column(2) | Container(624).Column(3)">Conditional</animation>
+				<visible>!SubString(ListItem.Icon,DefaultFolderBack.png,Left) + !Skin.Hassetting(No_Text)</visible>
+					<control type="label"><!--Movie title-->
+						<posx>0</posx>
+						<posy>115</posy>
+						<width>260</width>
+						<height>40</height>
+						<aligny>center</aligny>
+						<font>LiberationSans_Regular_28</font>
+						<textcolor>mainblue</textcolor>
+						<wrapmultiline>true</wrapmultiline>
+						<label>[B]$INFO[ListItem.Label][/B]</label>
+						<include>Animation_Viewtype_Wall_UnderInfo</include>
+						<visible>Container.Content(Studios)</visible>
+					</control>
+					<control type="label">
+						<posx>0</posx>
+						<posy>160</posy>
+						<width>300</width>
+						<height>50</height>
+						<aligny>center</aligny>
+						<font>LiberationSans_Regular_24</font>
+						<textcolor>white</textcolor>
+						<label>31508</label>
+						<include>Animation_Viewtype_Wall_UnderInfo</include>
+						<visible>IsEmpty(ListItem.foldername) + !substring(Container.Listitem.Label,..,left) + !Container.Content(genres) + Window.IsActive(videolibrary)</visible>
+					</control>
+			</control>
+	</control>
+
+	</include>
+</includes>

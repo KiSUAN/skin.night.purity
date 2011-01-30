@@ -1,7 +1,7 @@
 <!--Alaska-->
 
 <includes>
-	<include name="wallpanelslantanimation">
+	<include name="Wall_Panel_Antanimation">
 		<animation type="Conditional" condition="true">
 			<effect type="rotatey" start="0,0" end="-20,0" center="0,0" time="0" tween="sine" easing="out" />
 		</animation>
@@ -14,13 +14,13 @@
 		<animation effect="slide" end="0,160" time="800" tween="cubic" easing="inout" condition="Container(54).Row(0)">Conditional</animation>
 		<animation effect="slide" end="-80,0" time="800" tween="cubic" easing="inout" condition="Container(54).Column(7)">Conditional</animation>
 		<animation effect="slide" end="20,0" time="800" tween="cubic" easing="inout" condition="Container(54).Column(0)">Conditional</animation>
-		<animation effect="slide" end="0,-100" time="800" tween="cubic" easing="inout" condition="Container(54).Row(3) + Container(54).Column(2) | Container(54).Row(3) + Container(54).Column(1) | Container(54).Row(3) + Container(54).Column(0)">Conditional</animation>
+		<animation effect="slide" end="0,-100" time="800" tween="cubic" easing="inout" condition="Container(54).Row(3) + Container(54).Column(5) |Container(54).Row(3) + Container(54).Column(4) | Container(54).Row(3) + Container(54).Column(3) | Container(54).Row(3) + Container(54).Column(2) | Container(54).Row(3) + Container(54).Column(1) | Container(54).Row(3) + Container(54).Column(0)">Conditional</animation>
 	</include>
-	<include name="Animation_NewWallFloatFanart">
+	<!--<include name="Animation_NewWallFloatFanart">
 		<animation effect="slide" end="0,100" time="800" tween="cubic" easing="inout" condition="Container(54).Row(0)">Conditional</animation>
 		<animation effect="slide" end="-38,0" time="800" tween="cubic" easing="inout" condition="Container(54).Column(7)">Conditional</animation>
 		<animation effect="slide" end="0,-60" time="800" tween="cubic" easing="inout" condition="Container(54).Row(3) + Container(54).Column(2) | Container(54).Row(3) + Container(54).Column(1) | Container(54).Row(3) + Container(54).Column(0)">Conditional</animation>
-	</include>
+	</include>-->
 	
 	<include name="Viewtype_Wall">
 	
@@ -51,7 +51,7 @@
 	
 	
 	<control type="panel" id="54">
-			<visible>!Skin.HasSetting(no_Wall) + [Container.Content(Movies) | Container.Content(Years) | Container.Content(Actors) | Container.Content(Studios) | Window.IsActive(videofiles) | substring(container.folderpath,plugin://plugin.video.apple.movie.trailers.lite)]</visible>
+			<visible>!Skin.HasSetting(no_Wall) + [Container.Content(Movies) | Container.Content(Actors) | Window.IsActive(videofiles) | substring(container.folderpath,plugin://plugin.video.apple.movie.trailers.lite)]</visible>
 			<posx>0</posx>
 			<posy>-170</posy><!-- -105 -->
 			<width>1258</width>
@@ -64,7 +64,7 @@
 			<onright>54</onright>
 			<onup>7000</onup>
 			<ondown>7000</ondown>
-			<include>wallpanelslantanimation</include>
+			<include>Wall_Panel_Antanimation</include>
 			<include>Animation_NewWallFloat</include>
 			<itemlayout width="140" height="230">
 				<control type="group">
@@ -80,44 +80,6 @@
 							<aspectratio align="center" scalediffuse="false">stretch</aspectratio>
 							<colordiffuse>79FFFFFF</colordiffuse>
 							<animation effect="fade" start="100" end="0" time="400" delay="2800" condition="Skin.HasSetting(Wall_fanart) + Container.Content(movies) + ![Container(54).OnNext | Container(54).OnPrevious]">Conditional</animation>
-							<visible>![Container.Content(Studios) | Container.Content(Years)]</visible>
-						</control>
-						<control type="image">
-							<description>Poster</description>
-							<posx>15</posx>
-							<posy>15</posy>
-							<width>120</width>
-							<height>210</height>
-							<texture background="true" diffuse="movie-poster/posterview_diffuse.png" fallback="logo_miss.png">$INFO[ListItem.Label,special://skin/extras/studios/,.png]</texture>
-							<aspectratio align="center" scalediffuse="false">stretch</aspectratio>
-							<colordiffuse>79FFFFFF</colordiffuse>
-							<animation effect="fade" start="100" end="0" time="400" delay="2800" condition="Skin.HasSetting(Wall_fanart) + Container.Content(movies) + ![Container(54).OnNext | Container(54).OnPrevious]">Conditional</animation>
-							<visible>Container.Content(Studios)</visible>
-						</control>
-						<control type="label">
-							<posx>77</posx>
-							<posy>5</posy>
-							<width>80</width>
-							<height>230</height>
-							<align>center</align>
-							<aligny>center</aligny>
-							<font>LiberationSans_Regular_28</font>
-							<textcolor>mainblue</textcolor>
-							<label>[B]$INFO[ListItem.Label][/B]</label>
-							<animation effect="fade" start="100" end="0" time="400" delay="2800" condition="Skin.HasSetting(Wall_fanart) + Container.Content(movies) + ![Container(54).OnNext | Container(54).OnPrevious]">Conditional</animation>
-							<visible>Container.Content(Years)</visible>
-						</control>
-						<control type="image">
-							<description>Poster</description>
-							<posx>5</posx>
-							<posy>5</posy>
-							<width>140</width>
-							<height>230</height>
-							<texture>posterframeF_blur.png</texture>
-							<aspectratio align="center" scalediffuse="false">stretch</aspectratio>
-							<colordiffuse>79FFFFFF</colordiffuse>
-							<animation effect="fade" start="100" end="0" time="400" delay="2800" condition="Skin.HasSetting(Wall_fanart) + Container.Content(movies) + ![Container(54).OnNext | Container(54).OnPrevious]">Conditional</animation>
-							<visible>Container.Content(Studios) | Container.Content(Years)</visible>
 						</control>
 						<control type="image">
 							<posx>113</posx>
@@ -170,7 +132,7 @@
 								<effect type="zoom" start="110" end="180" center="auto" time="400" tween="back" easing="out" />
 							</animation>
 							<animation effect="fade" start="100" end="0" time="400" delay="2800" condition="Skin.HasSetting(Wall_fanart) + Container.Content(movies) + ![Container(54).OnNext | Container(54).OnPrevious]">Conditional</animation>
-							<visible>Container.Content(Actors) | Container.Content(Studios) | Container.Content(Years)</visible>
+							<visible>Container.Content(Actors)</visible>
 						</control>
 						<control type="image">
 							<description>Poster</description>
@@ -184,37 +146,6 @@
 								<effect type="zoom" start="110" end="180" center="auto" time="400" tween="back" easing="out" />
 							</animation>
 							<animation effect="fade" start="100" end="0" time="400" delay="2800" condition="Skin.HasSetting(Wall_fanart) + Container.Content(movies) + ![Container(54).OnNext | Container(54).OnPrevious]">Conditional</animation>
-							<visible>![Container.Content(Studios) | Container.Content(Years)]</visible>
-						</control>
-						<control type="image">
-							<description>Poster</description>
-							<posx>10</posx>
-							<posy>7</posy>
-							<width>106</width>
-							<height>180</height>
-							<texture background="true" diffuse="movie-poster/posterview_diffuse.png" fallback="logo_miss.png">$INFO[ListItem.Label,special://skin/extras/studios/,.png]</texture>
-							<aspectratio align="center" scalediffuse="false">stretch</aspectratio>
-							<animation type="Focus" reversible="false">
-								<effect type="zoom" start="110" end="180" center="auto" time="400" tween="back" easing="out" />
-							</animation>
-							<animation effect="fade" start="100" end="0" time="400" delay="2800" condition="Skin.HasSetting(Wall_fanart) + Container.Content(movies) + ![Container(54).OnNext | Container(54).OnPrevious]">Conditional</animation>
-							<visible>Container.Content(Studios)</visible>
-						</control>
-						<control type="label">
-							<posx>94</posx>
-							<posy>7</posy>
-							<width>80</width>
-							<height>180</height>
-							<align>center</align>
-							<aligny>center</aligny>
-							<font>LiberationSans_Regular_28</font>
-							<textcolor>mainblue</textcolor>
-							<label>[B]$INFO[ListItem.Label][/B]</label>
-							<animation type="Focus" reversible="false">
-								<effect type="zoom" start="110" end="180" center="auto" time="400" tween="back" easing="out" />
-							</animation>
-							<animation effect="fade" start="100" end="0" time="400" delay="2800" condition="Skin.HasSetting(Wall_fanart) + Container.Content(movies) + ![Container(54).OnNext | Container(54).OnPrevious]">Conditional</animation>
-							<visible>Container.Content(Years)</visible>
 						</control>
 						<control type="image">
 							<description>Poster</description>
@@ -228,21 +159,6 @@
 								<effect type="zoom" start="110" end="180" center="auto" time="400" tween="back" easing="out" />
 							</animation>
 							<animation effect="fade" start="100" end="0" time="400" delay="2800" condition="Skin.HasSetting(Wall_fanart) + Container.Content(movies) + ![Container(54).OnNext | Container(54).OnPrevious]">Conditional</animation>
-							<visible>!Container.Content(Studios)</visible>
-						</control>
-						<control type="image">
-							<description>Poster</description>
-							<posx>0</posx>
-							<posy>0</posy>
-							<width>126</width>
-							<height>200</height>
-							<texture>posterframeF.png</texture>
-							<aspectratio align="center" scalediffuse="false">stretch</aspectratio>
-							<animation type="Focus" reversible="false">
-								<effect type="zoom" start="110" end="180" center="auto" time="400" tween="back" easing="out" />
-							</animation>
-							<animation effect="fade" start="100" end="0" time="400" delay="2800" condition="Skin.HasSetting(Wall_fanart) + Container.Content(movies) + ![Container(54).OnNext | Container(54).OnPrevious]">Conditional</animation>
-							<visible>Container.Content(Studios)</visible>
 						</control>
 						<control type="image">
 							<posx>119</posx>
@@ -300,7 +216,6 @@
 						<wrapmultiline>true</wrapmultiline>
 						<label>[B]$INFO[ListItem.Label][/B]</label>
 						<include>Animation_Viewtype_Wall_UnderInfo</include>
-						<visible>!Container.Content(Years)</visible>
 					</control>
 					<control type="label">
 						<posx>0</posx>
