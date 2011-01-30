@@ -88,7 +88,7 @@
 							<posy>15</posy>
 							<width>120</width>
 							<height>210</height>
-							<texture background="true" diffuse="movie-poster/posterview_diffuse.png" fallback="logo_miss.png">$INFO[ListItem.Label,extras/Studios/,.png]</texture>
+							<texture background="true" diffuse="movie-poster/posterview_diffuse.png" fallback="logo_miss.png">$INFO[ListItem.Label,special://skin/extras/studios/,.png]</texture>
 							<aspectratio align="center" scalediffuse="false">stretch</aspectratio>
 							<colordiffuse>79FFFFFF</colordiffuse>
 							<animation effect="fade" start="100" end="0" time="400" delay="2800" condition="Skin.HasSetting(Wall_fanart) + Container.Content(movies) + ![Container(54).OnNext | Container(54).OnPrevious]">Conditional</animation>
@@ -192,7 +192,7 @@
 							<posy>7</posy>
 							<width>106</width>
 							<height>180</height>
-							<texture background="true" diffuse="movie-poster/posterview_diffuse.png" fallback="logo_miss.png">$INFO[ListItem.Label,extras/Studios/,.png]</texture>
+							<texture background="true" diffuse="movie-poster/posterview_diffuse.png" fallback="logo_miss.png">$INFO[ListItem.Label,special://skin/extras/studios/,.png]</texture>
 							<aspectratio align="center" scalediffuse="false">stretch</aspectratio>
 							<animation type="Focus" reversible="false">
 								<effect type="zoom" start="110" end="180" center="auto" time="400" tween="back" easing="out" />
