@@ -511,7 +511,7 @@
 					<width>261</width>
 					<height>147</height>
 					<aspectratio>stretch</aspectratio>
-					<texture background="true" diffuse="tv-landscape/landscapematteFO.png">special://skin/extras/avlfanart/$INFO[ListItem.label]/thumb1.jpg</texture>
+					<texture background="true" diffuse="tv-landscape/landscapematteFO.png">$INFO[ListItem.Trailer]$INFO[ListItem.label]_extra1.jpg</texture>
 					<fadetime>200</fadetime>
 					<visible>Window.IsActive(programs) + substring(container.folderpath,plugin://plugin.program.advanced.launcher)</visible>
 				</control>
@@ -528,7 +528,7 @@
 					<width>261</width>
 					<height>147</height>
 					<aspectratio>stretch</aspectratio>
-					<texture background="true" diffuse="tv-landscape/landscapematteFO.png">$INFO[ListItem.Path,,extrathumbs/thumb2.jpg]</texture>
+					<texture background="true" diffuse="tv-landscape/landscapematteFO.png">$INFO[ListItem.Trailer]$INFO[ListItem.label]_extra2.jpg</texture>
 					<fadetime>200</fadetime>
 					<visible>Container.Content(movies)</visible>
 				</control>

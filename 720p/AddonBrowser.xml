@@ -15,7 +15,7 @@
 		
 		<control type="group">
 			<include>Animation_HiddenByInfo</include>
-				<include>Viewtype_Addons</include><!--  55  -->
+				<include>Viewtype_Addons</include><!--  50  -->
 				<include>Viewtype_3daddon</include><!--  621  -->
 		</control>
 		
