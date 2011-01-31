@@ -230,7 +230,7 @@
 						<aligny>center</aligny>
 						<font>LiberationSans_Regular_24</font>
 						<textcolor>white</textcolor>
-						<label>[B]$INFO[ListItem.Tagline][/B]</label>
+						<label>[B]$INFO[ListItem.Property(Album_Type)][/B]</label>
 					</control>
 					<control type="textbox">
 						<description>Description</description>
@@ -280,7 +280,7 @@
 					<aligny>center</aligny>
 					<font>LiberationSans_Regular_18</font>
 					<textcolor>white</textcolor>
-					<label>[B][COLOR=mainblue]$LOCALIZE[515]:[/COLOR][/B] $INFO[ListItem.Genre]</label>
+					<label>[B][COLOR=mainblue]$LOCALIZE[515]:[/COLOR][/B] $INFO[ListItem.Property(Album_Mood)]</label>
 					<animation effect="fade"  start="0" end="100" time="400" delay="3000" condition="Skin.HasSetting(BookPlus) + ![Container(622).OnNext | Container(622).OnPrevious]">WindowOpen</animation>
 				</control>
 				<control type="label">
