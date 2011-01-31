@@ -84,6 +84,7 @@
 			<font>LiberationSans_Regular_40</font>
 			<textcolor>mainblue</textcolor>
 			<label>[B]$INFO[ListItem.Album][/B]</label>
+			<scroll>true</scroll>
 		</control>
 		<control type="label">
 			<posx>20</posx>
