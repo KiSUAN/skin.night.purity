@@ -219,7 +219,7 @@
 						<font>LiberationSans_Regular_40</font>
 						<textcolor>viewheader</textcolor>
 						<shadowcolor>viewheadershadow</shadowcolor>
-						<label>[B]$INFO[ListItem.Album][/B][B]$INFO[ListItem.artist][/B]</label>
+						<label>[B]$INFO[ListItem.Album][/B]</label>
 						<scroll>true</scroll>
 					</control>
 					<control type="label">
@@ -230,14 +230,14 @@
 						<aligny>center</aligny>
 						<font>LiberationSans_Regular_24</font>
 						<textcolor>white</textcolor>
-						<label>[B]$INFO[ListItem.Title][/B]</label>
+						<label>[B]$INFO[ListItem.Tagline][/B]</label>
 					</control>
 					<control type="textbox">
 						<description>Description</description>
 						<posx>340</posx>
-						<posy>432</posy>
+						<posy>360</posy>
 						<width>600</width>
-						<height>230</height>
+						<height>300</height>
 						<align>justify</align>
 						<info>ListItem.Property(Album_Description)</info>
 						<font>LiberationSans_Regular_20</font>
@@ -272,24 +272,6 @@
 					<font>LiberationSans_Regular_18</font>
 					<textcolor>white</textcolor>
 					<label>[B][COLOR=mainblue]$LOCALIZE[562]:[/COLOR][/B] $INFO[ListItem.Year]</label>
-					<animation effect="fade"  start="0" end="100" time="400" delay="3000" condition="Skin.HasSetting(BookPlus) + ![Container(622).OnNext | Container(622).OnPrevious]">WindowOpen</animation>
-				</control>
-				<control type="label">
-					<width>600</width>
-					<height>20</height>
-					<aligny>center</aligny>
-					<font>LiberationSans_Regular_18</font>
-					<textcolor>white</textcolor>
-					<label>[B][COLOR=mainblue]$LOCALIZE[180]:[/COLOR][/B] $INFO[ListItem.Duration]</label>
-					<animation effect="fade"  start="0" end="100" time="400" delay="3000" condition="Skin.HasSetting(BookPlus) + ![Container(622).OnNext | Container(622).OnPrevious]">WindowOpen</animation>
-				</control>
-				<control type="label">
-					<width>600</width>
-					<height>20</height>
-					<aligny>center</aligny>
-					<font>LiberationSans_Regular_18</font>
-					<textcolor>white</textcolor>
-					<label>[B][COLOR=mainblue]$LOCALIZE[554]:[/COLOR][/B] $INFO[ListItem.TrackNumber]</label>
 					<animation effect="fade"  start="0" end="100" time="400" delay="3000" condition="Skin.HasSetting(BookPlus) + ![Container(622).OnNext | Container(622).OnPrevious]">WindowOpen</animation>
 				</control>
 				<control type="label">
