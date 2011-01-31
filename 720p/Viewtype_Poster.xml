@@ -50,7 +50,7 @@
 			<animation effect="rotatey" center="50" start="12" end="10" time="0" condition="true">Conditional</animation>
 			<animation effect="zoom" start="100" end="72" time="700" condition="Skin.HasSetting(Poster_Fanart)">Conditional</animation>
 			<animation effect="slide" start="0,0" end="0,160" time="700" condition="Skin.HasSetting(Poster_Fanart)">Conditional</animation>
-			<visible>!Skin.HasSetting(no_Poster) + [Window.IsActive(videofiles) | Window.IsActive(programs) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(genres)] + ![[Skin.HasSetting(landscape_thumbs) | Skin.HasSetting(TVBanners)] + Container.Content(tvshows)]</visible>
+			<visible>!Skin.HasSetting(no_Poster) + [Window.IsActive(videofiles) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(genres)] + ![[Skin.HasSetting(landscape_thumbs) | Skin.HasSetting(TVBanners)] + Container.Content(tvshows)]</visible>
 			<itemlayout width="176" height="245">
 				<control type="group">
 				<posx>150</posx>
@@ -604,53 +604,6 @@
 					<label>[COLOR=ListTrackF][B]$LOCALIZE[31226][/COLOR] [COLOR=white]$INFO[ListItem.mpaa][/COLOR][/B]</label>
 				</control>
 			</control>
-			
-		<control type="group">
-			<posx>10</posx>
-			<posy>0</posy>
-			<include>Animation_Viewtype_3dland_Lefttop</include>
-			<visible>Window.IsActive(Programs) + substring(container.folderpath,plugin://plugin.program.advanced.launcher)</visible>
-				<control type="label">
-					<posx>0</posx>
-					<posy>45</posy>
-					<width>630</width>
-					<height>89</height>
-					<font>LiberationSans_Regular_22</font>
-					<label>[B][COLOR=ListTrackF]$LOCALIZE[515][/COLOR] [B][COLOR=white]$INFO[ListItem.Genre][/B][/COLOR]</label>
-				</control>
-				<control type="label">
-					<posx>0</posx>
-					<posy>69</posy>
-					<width>630</width>
-					<height>89</height>
-					<font>LiberationSans_Regular_18</font>
-					<label>[COLOR=white][B]$INFO[ListItem.Studio]$INFO[ListItem.Premiered,  (,)][/B][/COLOR]</label>
-					<animation effect="slide" start="0,0" end="0,-26" time="0" condition="IsEmpty(ListItem.Genre)">Conditional</animation>
-				</control>
-				<control type="textbox">
-					<description>Plot Movie</description>
-					<posx>20</posx>
-					<posy>95</posy>
-					<width>600</width>
-					<height>233</height>
-					<align>justify</align>
-					<info>ListItem.Plot</info>
-					<font>LiberationSans_Regular_18</font>
-					<textcolor>white</textcolor>
-					<autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
-					<animation effect="slide" start="0,0" end="0,-21" time="0" condition="IsEmpty(ListItem.Studio) + IsEmpty(ListItem.Premiered) | IsEmpty(ListItem.Genre)">Conditional</animation>
-					<animation effect="slide" start="0,0" end="0,-47" time="0" condition="IsEmpty(ListItem.Genre) + IsEmpty(ListItem.Studio) + IsEmpty(ListItem.Premiered)">Conditional</animation>
-					<visible>Skin.HasSetting(launcher_plot_poster)</visible>
-				</control>
-				<control type="image"> <!-- Games Studioflags  -->
-					<width>80</width>
-					<height>55</height>
-					<posx>10</posx>
-					<posy>660</posy>
-					<aspectratio align="center">keep</aspectratio>
-					<texture>$INFO[ListItem.Studio,special://skin/extras/studios/,.png]</texture> 
-				</control>
-		</control>
 			
 			<control type="label"><!--Trailer Start-->
 				<visible>Container.Content(movies) + !Skin.HasSetting(clean_poster) + !IsEmpty(ListItem.Trailer) + !Player.HasVideo</visible>
