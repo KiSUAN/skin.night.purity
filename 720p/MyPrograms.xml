@@ -63,7 +63,7 @@
 		<include>Animation_HiddenByInfo</include>
 			<include>Viewtype_Files</include><!--  50  -->
 			<include>Viewtype_List</include><!-- 53  -->
-			<include>Viewtype_Poster_ALA</include><!--  55  -->
+			<include>Viewtype_Poster_Programs</include><!--  55  -->
 			<include>Viewtype_Fanart</include><!--  56  -->
 			<include>Viewtype_Showcase</include><!--  58  -->
 			<include>Viewtype_Slide</include><!--  595  -->
@@ -123,9 +123,9 @@
 				<include>WindowMenuButton</include>
 				<label>$LOCALIZE[31006]</label>
 				<altlabel>$LOCALIZE[21375]</altlabel>
-				<onclick>Skin.ToggleSetting(PosterPlus_ALA)</onclick>
-				<selected>Skin.HasSetting(PosterPlus_ALA)</selected>
-				<visible>Control.IsVisible(55) + !Skin.HasSetting(Poster_Fanart_ALA)</visible>
+				<onclick>Skin.ToggleSetting(PosterPlus_Programs)</onclick>
+				<selected>Skin.HasSetting(PosterPlus_Programs)</selected>
+				<visible>Control.IsVisible(55) + !Skin.HasSetting(Poster_Fanart_Programs)</visible>
 			</control>
 			<control type="togglebutton" id="33">
 				<description>Toggle Launcher Plot</description>
@@ -196,9 +196,9 @@
 				<include>WindowMenuButton</include>
 				<label>$LOCALIZE[31086]</label>
 				<altlabel>$LOCALIZE[31214]</altlabel>
-				<onclick>Skin.ToggleSetting(Poster_Fanart_ALA)</onclick>
+				<onclick>Skin.ToggleSetting(Poster_Fanart_Programs)</onclick>
 				<onclick>ReloadSkin()</onclick>
-				<selected>Skin.HasSetting(Poster_Fanart_ALA)</selected>
+				<selected>Skin.HasSetting(Poster_Fanart_Programs)</selected>
 				<visible>Control.IsVisible(55)</visible>
 			</control>
 		</control>
@@ -241,7 +241,7 @@
 			<control type="label">
 				<include>WindowMenuLabel</include>
 				<label>$LOCALIZE[14018]</label>
-				<visible>Control.IsVisible(55) + !Skin.HasSetting(Poster_Fanart_ALA)</visible>		
+				<visible>Control.IsVisible(55) + !Skin.HasSetting(Poster_Fanart_Programs)</visible>		
 			</control>
 		</control>
 	</control>
