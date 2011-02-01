@@ -40,7 +40,7 @@
 					<font>LiberationSans_Regular_16</font>
 					<textcolor>black</textcolor>
 					<label>$INFO[ListItem.Label]</label>
-					<visible>IsEmpty(ListItem.Title)</visible>
+					<visible>IsEmpty(ListItem.Title) | substring(container.folderpath,plugin)</visible>
 				</control>
 				<control type="label">
 					<posx>92</posx>
@@ -104,7 +104,7 @@
 					<font>LiberationSans_Regular_16</font>
 					<textcolor>black</textcolor>
 					<label>$INFO[ListItem.Label]</label>
-					<visible>IsEmpty(ListItem.Title)</visible>
+					<visible>IsEmpty(ListItem.Title) | substring(container.folderpath,plugin)</visible>
 				</control>
 				<control type="label">
 					<posx>92</posx>

@@ -139,6 +139,14 @@
 			<visible>substring(ListItem.FilenameAndPath,sdtv) | substring(ListItem.FilenameAndPath,tvrip)</visible>
 		</control>
 		<control type="image">
+			<description>Web-dl Types Image</description>
+			<width>54</width>
+			<height>40</height>
+			<aspectratio>keep</aspectratio>
+			<texture>flagging/video/custom/web-dl.png</texture>
+			<visible>substring(ListItem.FilenameAndPath,web-dl)</visible>
+		</control>
+		<control type="image">
 			<description>DVD Image</description>
 			<width>54</width>
 			<height>40</height>
@@ -215,7 +223,7 @@
 			<width>54</width>
 			<height>40</height>
 			<aspectratio>keep</aspectratio>
-			<texture>flagging/video/custom/mov.png</texture>
+			<texture>flagging/video/custom/flash.png</texture>
 			<visible>substring(ListItem.Filename,.flv,Right) | substring(ListItem.Filename,.f4v,Right) | substring(ListItem.Filename,.f4a,Right) | substring(ListItem.Filename,.f4p,Right) | substring(ListItem.Filename,.f4b,Right)</visible>
 		</control>
 		<control type="image">
@@ -308,7 +316,8 @@
 			<texture>flagging/ratings/custom/mpaa_unrated.png</texture>
 			<visible>[substring(ListItem.FilenameAndPath,unrated) | substring(listitem.mpaa,Rated Unrated)] + Window.IsActive(videolibrary)</visible>
 		</control>
-		
+
+<!--English -->	
 		<control type="image">
 			<description>Rated bbfc_u</description>
 			<width>72</width>
@@ -365,7 +374,74 @@
 			<texture>flagging/ratings/custom/bbfc_r18.png</texture>
 			<visible>substring(listitem.mpaa,UK:R18)</visible>
 		</control>
-		
+
+<!--Spain -->	
+		<control type="image">
+			<description>Rated spaTP</description>
+			<width>72</width>
+			<height>27</height>
+			<aspectratio>keep</aspectratio>
+			<texture>flagging/ratings/custom/spaTP.png</texture>
+			<visible>substring(listitem.mpaa,ES:TP)</visible>
+		</control>
+		<control type="image">
+			<description>Rated spaR7</description>
+			<width>72</width>
+			<height>27</height>
+			<aspectratio>keep</aspectratio>
+			<texture>flagging/ratings/custom/spaR7.png</texture>
+			<visible>substring(listitem.mpaa,ES:R7)</visible>
+		</control>
+		<control type="image">
+			<description>Rated spaITP</description>
+			<width>72</width>
+			<height>27</height>
+			<aspectratio>keep</aspectratio>
+			<texture>flagging/ratings/custom/spaITP.png</texture>
+			<visible>substring(listitem.mpaa,ES:ITP)</visible>
+		</control>
+		<control type="image">
+			<description>Rated spaIR7</description>
+			<width>72</width>
+			<height>27</height>
+			<aspectratio>keep</aspectratio>
+			<texture>flagging/ratings/custom/spaIR7.png</texture>
+			<visible>substring(listitem.mpaa,ES:IR7)</visible>
+		</control>
+		<control type="image">
+			<description>Rated spaR12</description>
+			<width>72</width>
+			<height>27</height>
+			<aspectratio>keep</aspectratio>
+			<texture>flagging/ratings/custom/spaR12.png</texture>
+			<visible>substring(listitem.mpaa,ES:R12)</visible>
+		</control>
+		<control type="image">
+			<description>Rated spaR16</description>
+			<width>72</width>
+			<height>27</height>
+			<aspectratio>keep</aspectratio>
+			<texture>flagging/ratings/custom/spaR16.png</texture>
+			<visible>substring(listitem.mpaa,ES:R16)</visible>
+		</control>
+		<control type="image">
+			<description>Rated spaR18</description>
+			<width>72</width>
+			<height>27</height>
+			<aspectratio>keep</aspectratio>
+			<texture>flagging/ratings/custom/spaR18.png</texture>
+			<visible>substring(listitem.mpaa,ES:R18)</visible>
+		</control>
+		<control type="image">
+			<description>Rated spaX</description>
+			<width>72</width>
+			<height>27</height>
+			<aspectratio>keep</aspectratio>
+			<texture>flagging/ratings/custom/spaX.png</texture>
+			<visible>substring(listitem.mpaa,ES:X)</visible>
+		</control>
+
+<!--France-->
 		<control type="image">
             <description>France:U</description>
             <width>72</width>
@@ -406,7 +482,8 @@
             <texture>flagging/ratings/custom/csa18.png</texture>
             <visible>substring(Listitem.mpaa,France:-18)</visible>
         </control>
-		
+
+<!--Germany-->	
 		<control type="image">
             <description>Germany:0</description>
             <width>72</width>
@@ -740,6 +817,14 @@
 			<visible>substring(ListItem.FilenameAndPath,sdtv) | substring(ListItem.FilenameAndPath,tvrip)</visible>
 		</control>
 		<control type="image">
+			<description>Web-dl Types Image</description>
+			<width>54</width>
+			<height>40</height>
+			<aspectratio>keep</aspectratio>
+			<texture>flagging/video/original/web-dl.png</texture>
+			<visible>substring(ListItem.FilenameAndPath,web-dl)</visible>
+		</control>
+		<control type="image">
 			<description>DVD Image</description>
 			<width>54</width>
 			<height>40</height>
@@ -816,7 +901,7 @@
 			<width>54</width>
 			<height>40</height>
 			<aspectratio>keep</aspectratio>
-			<texture>flagging/video/original/mov.png</texture>
+			<texture>flagging/video/original/flash.png</texture>
 			<visible>substring(ListItem.Filename,.flv,Right) | substring(ListItem.Filename,.f4v,Right) | substring(ListItem.Filename,.f4a,Right) | substring(ListItem.Filename,.f4p,Right) | substring(ListItem.Filename,.f4b,Right)</visible>
 		</control>
 		<control type="image">
@@ -1161,6 +1246,15 @@
 			<colordiffuse>flagicon</colordiffuse>
 		</control>
 		<control type="image">
+			<description>Web-dl Types Image</description>
+			<width>54</width>
+			<height>40</height>
+			<aspectratio>keep</aspectratio>
+			<texture>flagging/video/vanilla/web-dl.png</texture>
+			<visible>substring(ListItem.FilenameAndPath,web-dl)</visible>
+			<colordiffuse>flagicon</colordiffuse>
+		</control>
+		<control type="image">
 			<description>DVD Image</description>
 			<width>54</width>
 			<height>40</height>
@@ -1246,7 +1340,7 @@
 			<width>54</width>
 			<height>40</height>
 			<aspectratio>keep</aspectratio>
-			<texture>flagging/video/vanilla/mov.png</texture>
+			<texture>flagging/video/vanilla/flash.png</texture>
 			<visible>substring(ListItem.Filename,.flv,Right) | substring(ListItem.Filename,.f4v,Right) | substring(ListItem.Filename,.f4a,Right) | substring(ListItem.Filename,.f4p,Right) | substring(ListItem.Filename,.f4b,Right)</visible>
 			<colordiffuse>flagicon</colordiffuse>
 		</control>
@@ -1351,7 +1445,8 @@
 			<visible>[substring(ListItem.FilenameAndPath,unrated) | substring(listitem.mpaa,Rated Unrated)] + Window.IsActive(videolibrary)</visible>
 			<colordiffuse>flagicon</colordiffuse>
 		</control>
-		
+
+<!--English -->	
 		<control type="image">
 			<description>Rated bbfc_u</description>
 			<width>72</width>
@@ -1415,7 +1510,74 @@
 			<visible>substring(listitem.mpaa,UK:R18)</visible>
 			<colordiffuse>flagicon</colordiffuse>
 		</control>
-		
+
+<!--Spain -->	
+		<control type="image">
+			<description>Rated spaTP</description>
+			<width>72</width>
+			<height>27</height>
+			<aspectratio>keep</aspectratio>
+			<texture>flagging/ratings/vanilla/spaTP.png</texture>
+			<visible>substring(listitem.mpaa,ES:TP)</visible>
+		</control>
+		<control type="image">
+			<description>Rated spaR7</description>
+			<width>72</width>
+			<height>27</height>
+			<aspectratio>keep</aspectratio>
+			<texture>flagging/ratings/vanilla/spaR7.png</texture>
+			<visible>substring(listitem.mpaa,ES:R7)</visible>
+		</control>
+		<control type="image">
+			<description>Rated spaITP</description>
+			<width>72</width>
+			<height>27</height>
+			<aspectratio>keep</aspectratio>
+			<texture>flagging/ratings/vanilla/spaITP.png</texture>
+			<visible>substring(listitem.mpaa,ES:ITP)</visible>
+		</control>
+		<control type="image">
+			<description>Rated spaIR7</description>
+			<width>72</width>
+			<height>27</height>
+			<aspectratio>keep</aspectratio>
+			<texture>flagging/ratings/vanilla/spaIR7.png</texture>
+			<visible>substring(listitem.mpaa,ES:IR7)</visible>
+		</control>
+		<control type="image">
+			<description>Rated spaR12</description>
+			<width>72</width>
+			<height>27</height>
+			<aspectratio>keep</aspectratio>
+			<texture>flagging/ratings/vanilla/spaR12.png</texture>
+			<visible>substring(listitem.mpaa,ES:R12)</visible>
+		</control>
+		<control type="image">
+			<description>Rated spaR16</description>
+			<width>72</width>
+			<height>27</height>
+			<aspectratio>keep</aspectratio>
+			<texture>flagging/ratings/vanilla/spaR16.png</texture>
+			<visible>substring(listitem.mpaa,ES:R16)</visible>
+		</control>
+		<control type="image">
+			<description>Rated spaR18</description>
+			<width>72</width>
+			<height>27</height>
+			<aspectratio>keep</aspectratio>
+			<texture>flagging/ratings/vanilla/spaR18.png</texture>
+			<visible>substring(listitem.mpaa,ES:R18)</visible>
+		</control>
+		<control type="image">
+			<description>Rated spaX</description>
+			<width>72</width>
+			<height>27</height>
+			<aspectratio>keep</aspectratio>
+			<texture>flagging/ratings/vanilla/spaX.png</texture>
+			<visible>substring(listitem.mpaa,ES:X)</visible>
+		</control>
+
+<!--France-->		
 		<control type="image">
             <description>France:U</description>
             <width>72</width>
@@ -1461,7 +1623,8 @@
             <visible>substring(Listitem.mpaa,France:-18)</visible>
 			<colordiffuse>flagicon</colordiffuse>
         </control>
-		
+
+<!--Germany-->	
 		<control type="image">
             <description>Germany:0</description>
             <width>72</width>
@@ -1835,6 +1998,15 @@
 			<colordiffuse>flagicon</colordiffuse>
 		</control>
 		<control type="image">
+			<description>Web-dl Types Image</description>
+			<width>54</width>
+			<height>40</height>
+			<aspectratio>keep</aspectratio>
+			<texture>flagging/video/flat/web-dl.png</texture>
+			<visible>substring(ListItem.FilenameAndPath,web-dl)</visible>
+			<colordiffuse>flagicon</colordiffuse>
+		</control>
+		<control type="image">
 			<description>DVD Image</description>
 			<width>54</width>
 			<height>40</height>
@@ -1920,7 +2092,7 @@
 			<width>54</width>
 			<height>40</height>
 			<aspectratio>keep</aspectratio>
-			<texture>flagging/video/flat/mov.png</texture>
+			<texture>flagging/video/flat/flash.png</texture>
 			<visible>substring(ListItem.Filename,.flv,Right) | substring(ListItem.Filename,.f4v,Right) | substring(ListItem.Filename,.f4a,Right) | substring(ListItem.Filename,.f4p,Right) | substring(ListItem.Filename,.f4b,Right)</visible>
 			<colordiffuse>flagicon</colordiffuse>
 		</control>
@@ -2285,6 +2457,15 @@
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/flag_frame.png</texture>
 			<visible>substring(ListItem.FilenameAndPath,sdtv) | substring(ListItem.FilenameAndPath,tvrip)</visible>
+			<colordiffuse>flagframe</colordiffuse>
+		</control>
+		<control type="image">
+			<description>Web-dl Types Image</description>
+			<width>54</width>
+			<height>40</height>
+			<aspectratio>keep</aspectratio>
+			<texture>flagging/flag_frame.png</texture>
+			<visible>substring(ListItem.FilenameAndPath,web-dl)</visible>
 			<colordiffuse>flagframe</colordiffuse>
 		</control>
 		<control type="image">
@@ -2738,6 +2919,15 @@
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/back_flag.png</texture>
 			<visible>substring(ListItem.FilenameAndPath,sdtv) | substring(ListItem.FilenameAndPath,tvrip)</visible>
+			<colordiffuse>flagback</colordiffuse>
+		</control>
+		<control type="image">
+			<description>Web-dl Types Image</description>
+			<width>54</width>
+			<height>40</height>
+			<aspectratio>keep</aspectratio>
+			<texture>flagging/back_flag.png</texture>
+			<visible>substring(ListItem.FilenameAndPath,web-dl)</visible>
 			<colordiffuse>flagback</colordiffuse>
 		</control>
 		<control type="image">
