@@ -11,7 +11,7 @@
 			<fadetime>400</fadetime>
 			<texture background="true" fallback="backdrops/curtains.jpg">$INFO[ListItem.Writer,special://skin/extras/avlfanart/,.jpg]</texture>
 			<include>Animation_CommonFade</include>
-			<visible>Control.IsVisible(56) | [Control.IsVisible(58) + !Skin.HasSetting(ShowcaseFanart)]</visible>
+			<visible>Control.IsVisible(56) | [Control.IsVisible(58) + !Skin.HasSetting(ShowcaseFanart_Programs_Programs)]</visible>
 		</control>
 		<control type="image">
 			<description>dirty hack for (inside folder) fanart in programs pictures scripts</description>
@@ -55,7 +55,7 @@
 			<texture background="true" fallback="backdrops/curtains.jpg">$INFO[ListItem.Property(Fanart_Image)]</texture>
 			<include>global_kenburns_fanart</include>
 			<include>Animation_CommonFade</include>
-			<visible>![Control.IsVisible(56) | [Control.IsVisible(58) + !Skin.HasSetting(ShowcaseFanart)]]</visible>
+			<visible>![Control.IsVisible(56) | [Control.IsVisible(58) + !Skin.HasSetting(ShowcaseFanart_Programs)]]</visible>
 		</control>
 		
 		
@@ -65,7 +65,7 @@
 			<include>Viewtype_List</include><!-- 53  -->
 			<include>Viewtype_Poster_Programs</include><!--  55  -->
 			<include>Viewtype_Fanart</include><!--  56  -->
-			<include>Viewtype_Showcase</include><!--  58  -->
+			<include>Viewtype_Showcase_Programs</include><!--  58  -->
 			<include>Viewtype_Slide</include><!--  595  -->
 			<include>Viewtype_3daddon</include><!--  621  -->
 	</control>
@@ -143,7 +143,7 @@
 				<altlabel>Disable Plot</altlabel>
 				<onclick>Skin.ToggleSetting(launcher_plot_case)</onclick>
 				<selected>Skin.HasSetting(launcher_plot_case)</selected>
-				<visible>Control.IsVisible(58) + substring(container.folderpath,plugin://plugin.program.advanced.launcher) + !Skin.HasSetting(ShowcaseFanart)</visible>
+				<visible>Control.IsVisible(58) + substring(container.folderpath,plugin://plugin.program.advanced.launcher) + !Skin.HasSetting(ShowcaseFanart_Programs)</visible>
 			</control>
 			<control type="togglebutton" id="35">
 				<description>Toggle Launcher Plot</description>
@@ -177,18 +177,18 @@
 				<include>WindowMenuButton</include>
 				<label>$LOCALIZE[31200]</label>
 				<altlabel>$LOCALIZE[31201]</altlabel>
-				<onclick>Skin.ToggleSetting(extrathumbs)</onclick>
-				<selected>Skin.HasSetting(extrathumbs)</selected>
-				<visible>Control.IsVisible(58) + !Skin.HasSetting(ShowcaseFanart)</visible>
+				<onclick>Skin.ToggleSetting(extrathumbs_Programs)</onclick>
+				<selected>Skin.HasSetting(extrathumbs_Programs)</selected>
+				<visible>Control.IsVisible(58) + !Skin.HasSetting(ShowcaseFanart_Programs)</visible>
 			</control>
 			<control type="togglebutton" id="39">
 				<description>Toggle MoviesFanart</description>
 				<include>WindowMenuButton</include>
 				<label>$LOCALIZE[31086]</label>
 				<altlabel>$LOCALIZE[31094]</altlabel>
-				<onclick>Skin.ToggleSetting(ShowcaseFanart)</onclick>
+				<onclick>Skin.ToggleSetting(ShowcaseFanart_Programs)</onclick>
 				<onclick>ReloadSkin()</onclick>
-				<selected>Skin.HasSetting(ShowcaseFanart)</selected>
+				<selected>Skin.HasSetting(ShowcaseFanart_Programs)</selected>
 				<visible>Control.IsVisible(58)</visible>
 			</control>
 			<control type="togglebutton" id="40">
@@ -216,7 +216,7 @@
 				<include>WindowMenuLabel</include>
 				<!-- LOC -->
 				<label>Plot</label>
-				<visible>[Control.IsVisible(53) | Control.IsVisible(56) | Control.IsVisible(621) | [!Skin.HasSetting(ShowcaseFanart) + Control.IsVisible(58)]] + substring(container.folderpath,plugin://plugin.program.advanced.launcher)</visible>
+				<visible>[Control.IsVisible(53) | Control.IsVisible(56) | Control.IsVisible(621) | [!Skin.HasSetting(ShowcaseFanart_Programs) + Control.IsVisible(58)]] + substring(container.folderpath,plugin://plugin.program.advanced.launcher)</visible>
 			</control>
 			<control type="label">
 				<include>WindowMenuLabel</include>
@@ -231,7 +231,7 @@
 			<control type="label">
 				<include>WindowMenuLabel</include>
 				<label>$LOCALIZE[31206]</label>
-				<visible>Control.IsVisible(58) + !Skin.HasSetting(ShowcaseFanart)</visible>		
+				<visible>Control.IsVisible(58) + !Skin.HasSetting(ShowcaseFanart_Programs)</visible>		
 			</control>
 			<control type="label">
 				<include>WindowMenuLabel</include>

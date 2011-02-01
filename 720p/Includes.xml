@@ -43,6 +43,7 @@
 	<include file="Viewtype_AudioBook_Tracks.xml" />
 	<include file="Viewtype_LandscapeWall.xml" />
 	<include file="Viewtype_Poster_Programs.xml" />
+	<include file="Viewtype_Showcase_Programs.xml" />
 	
 	
 	<include name="Movie_Regular">
