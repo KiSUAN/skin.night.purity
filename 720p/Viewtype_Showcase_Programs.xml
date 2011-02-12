@@ -170,7 +170,8 @@
 						<height>50</height>
 						<aligny>center</aligny>
 						<font>LiberationSans_Regular_28</font>
-						<textcolor>mainblue</textcolor>
+						<textcolor>viewheader</textcolor>
+						<shadowcolor>viewheadershadow</shadowcolor>
 						<scroll>true</scroll>
 						<label>[B]$INFO[ListItem.Label][/B]</label>
 					</control>
