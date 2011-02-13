@@ -9,8 +9,9 @@
 		<control type="image">
 			<include>Dimensions_Fullscreen</include>
 			<fadetime>400</fadetime>
-			<texture background="true" fallback="backdrops/curtains.jpg">$INFO[ListItem.Writer,special://skin/extras/avlfanart/,.jpg]</texture>
+			<texture background="true" fallback="backdrops/curtains.jpg">$INFO[ListItem.Writer,special://skin/extras/avlfanart/,.png]</texture>
 			<include>Animation_CommonFade</include>
+			<aspectratio>keep</aspectratio>
 			<visible>Control.IsVisible(56) | [Control.IsVisible(58) + !Skin.HasSetting(ShowcaseFanart_Programs_Programs)]</visible>
 		</control>
 		<control type="image">
