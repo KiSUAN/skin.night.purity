@@ -23,6 +23,22 @@
 	<include file="Viewtype_WallPanel.xml" />
 	<include file="Viewtype_Shelf.xml" />
 	<include file="Viewtype_addons.xml" />
+	<include file="Viewtype_3dbanner.xml" />
+	<include file="Viewtype_Logo.xml" />
+	<include file="Viewtype_3daddon.xml" />
+	<include file="Viewtype_Slide.xml" />
+	<include file="Viewtype_Newest_Episodes.xml" />
+	<include file="Viewtype_Poster_Half.xml" />
+	<include file="Viewtype_AudioBook.xml" />
+	<include file="Viewtype_AudioBook_Tracks.xml" />
+	<include file="Viewtype_LandscapeWall.xml" />
+	<include file="Viewtype_Poster_Programs.xml" />
+	<include file="Viewtype_Showcase_Programs.xml" />
+	<include file="Viewtype_Slide_Programs.xml" />
+	<include file="Viewtype_Fanart_Programs.xml" />
+	<include file="Viewtype_List_Programs.xml" />
+	<include file="Viewtype_3daddon_Programs.xml" />
+	<include file="Viewtype_Arcade.xml" />
 	<include file="Includes_Animations.xml" />
 	<include file="Includes_Next_Aired.xml" />
 	<include file="Includes_Trailer.xml" />
@@ -32,19 +48,7 @@
 	<include file="IncludesCodecFlagging.xml" />
 	<include file="IncludesHomepageWeatherWidget.xml" />
 	<include file="Includes_Home_Horizontal.xml" />
-	<include file="Viewtype_3dbanner.xml" />
-	<include file="Viewtype_Logo.xml" />
-	<include file="Viewtype_3daddon.xml" />
-	<include file="Viewtype_Slide.xml" />
-	<include file="Viewtype_Newest_Episodes.xml" />
-	<include file="Viewtype_Poster_Half.xml" />
 	<include file="Includes_Qlock.xml" />
-	<include file="Viewtype_AudioBook.xml" />
-	<include file="Viewtype_AudioBook_Tracks.xml" />
-	<include file="Viewtype_LandscapeWall.xml" />
-	<include file="Viewtype_Poster_Programs.xml" />
-	<include file="Viewtype_Showcase_Programs.xml" />
-	<include file="Viewtype_Slide_Programs.xml" />
 	
 	
 	<include name="Movie_Regular">
@@ -934,7 +938,7 @@
 			<posx>1270</posx>
 			<posy>0</posy>
 			<include>Animation_BackdropFade</include>
-			<visible>Skin.HasSetting(library_global_clock) + ![Player.HasAudio + !SubString(Window(10025).Property(TvTunesIsAlive),True) | Control.IsVisible(56) | Control.IsVisible(58)] </visible>
+			<visible>Skin.HasSetting(library_global_clock) + ![Player.HasAudio + !SubString(Window(10025).Property(TvTunesIsAlive),True) | Control.IsVisible(56) | Control.IsVisible(58) | [Control.IsVisible(54) + Window.IsActive(programs)]] </visible>
 				<control type="image"> 
 					<posx>-380</posx>
 					<posy>-10</posy>   

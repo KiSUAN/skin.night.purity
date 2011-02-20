@@ -625,7 +625,7 @@
 	<include name="Landscape_Fanart_Next_Aired">
 		<control type="group">
 		<posx>0</posx>
-		<posy>146</posy>
+		<posy>30</posy>
 		<include>Animation_HiddenByInfo</include>
 		<include>Animation_Viewtype_Landscape_BottomInfo</include>
 		<animation effect="fade" start="0" end="100" time="400" delay="600" condition="![Container(633).OnNext | Container(633).OnPrevious]">Conditional</animation>

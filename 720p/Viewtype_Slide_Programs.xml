@@ -1,9 +1,10 @@
 <!--Alaska-->
 
 <includes>
+
 	<include name="Viewtype_Slide_Programs">
-	
-	<control type="image">
+
+		<control type="image">
 			<visible>Control.IsVisible(595)</visible>
 			<posx>0</posx>
 			<posy>0</posy>
@@ -35,7 +36,7 @@
 					<control type="group">
 					<posx>0</posx>
 					<posy>200</posy>
-					<animation effect="fade" start="100" end="0" time="400" delay="400" condition="Control.HasFocus(8241)">Conditional</animation>
+					<animation effect="fade" start="100" end="0" time="400" delay="400" condition="Control.HasFocus(8243)">Conditional</animation>
 						<control type="image">
 							<posx>16</posx>
 							<posy>10</posy>
@@ -54,203 +55,203 @@
 					</control>
 				</focusedlayout>
 		</control>
-	
-	<control type="image"><!-- Last Overlay -->
-		<visible>Control.IsVisible(595)</visible>
-		<posx>0</posx>
-		<posy>0</posy>
-		<width>1280</width>
-		<height>720</height>
-		<texture>tv-landscape/2nd-overlay.png</texture>
-		<aspectratio>stretch</aspectratio>
-		<include>Animation_BackdropFade</include>
-	</control>
-	
-	<control type="group" id="8240">
-		<control type="button" id="8241">
-			<onleft>595</onleft>
-			<onright>595</onright>
-			<onup>stop</onup>
-			<visible allowhiddenfocus="true">ControlGroup(8240).HasFocus</visible>
+
+		<control type="image"><!-- Last Overlay -->
+			<visible>Control.IsVisible(595)</visible>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<texture>tv-landscape/2nd-overlay.png</texture>
+			<aspectratio>stretch</aspectratio>
+			<include>Animation_BackdropFade</include>
 		</control>
-	</control>
-	
-	<control type="group">
-		<posx>300</posx>
-		<posy>120</posy>
-		<include>Animation_Bartowski_Context_Zoom</include>
-		<visible>Control.IsVisible(595)</visible>
-			<control type="image">
-				<posx>-108</posx>
-				<posy>-120</posy>
-				<width>583</width>
-				<height>720</height>
-				<texture>Comics/comic_glow.png</texture>
-				<colordiffuse>poster_glow</colordiffuse>
-				<aspectratio scalediffuse="false">stretch</aspectratio>
-				<animation effect="fade" start="0" end="100" time="1000" delay="1000" condition="![Container(595).OnNext | Container(595).OnPrevious]">Conditional</animation>
-			</control>
-			<control type="image">
-				<posx>39</posx>
-				<posy>21</posy>
-				<width>296</width>
-				<height>451</height>
-				<texture background="true" diffuse="Comics/poster_diffuse.png">$INFO[ListItem.Icon]</texture>
-				<fadetime>200</fadetime>
-				<aspectratio scalediffuse="false">stretch</aspectratio>
+
+		<control type="group" id="8240">
+			<control type="button" id="8243">
+				<onleft>595</onleft>
+				<onright>595</onright>
+				<visible allowhiddenfocus="true">ControlGroup(8240).HasFocus</visible>
 			</control>
 		</control>
-		
-	<control type="group">
-		<posx>640</posx>
-		<posy>290</posy>
-		<animation effect="slide" start="0,0" end="0,-400" time="200" delay="600" condition="Control.HasFocus(8241)">Conditional</animation>
-		<visible>Control.IsVisible(595) + !SubString(ListItem.Icon,DefaultFolderBack.png,Left)</visible>
-		<include>Animation_BackdropFade</include>
-			<control type="label"><!--Movie title-->
-				<posx>15</posx>
-				<posy>245</posy>
-				<width>600</width>
-				<height>50</height>
-				<aligny>center</aligny>
-				<font>LiberationSans_Regular_34</font>
-				<textcolor>mainblue</textcolor>
-				<scroll>true</scroll>			
-				<label>[B]$INFO[ListItem.Label][/B]</label>
-			</control>
-			<control type="label">
-				<posx>15</posx>
-				<posy>273</posy>
-				<width>394</width>
-				<height>50</height>
-				<aligny>center</aligny>
-				<font>LiberationSans_Regular_24</font>
-				<textcolor>white</textcolor>
-				<label>31508</label>
-				<visible>IsEmpty(ListItem.foldername) + !substring(Container.Listitem.Label,..,left)</visible>
-			</control>
-			<control type="label"><!--Studio Year-->
-				<posx>15</posx>
-				<posy>322</posy>
-				<width>394</width>
-				<height>50</height>
-				<aligny>center</aligny>
-				<font>LiberationSans_Regular_18</font>
-				<textcolor>white</textcolor>
-				<label>[B]$INFO[ListItem.Studio]$INFO[ListItem.Premiered,  (,)][/B]</label>
-				<animation effect="slide" start="0,0" end="0,-23" time="0" condition="IsEmpty(ListItem.Duration)">Conditional</animation>
-			</control>
-			<control type="label"><!--Genre-->
-				<posx>15</posx>
-				<posy>287</posy>
-				<width>394</width>
-				<height>50</height>
-				<font>LiberationSans_Regular_22</font>
-				<label>[B][COLOR=ListTrackF]$LOCALIZE[515][/COLOR] [B][COLOR=white]$INFO[ListItem.Genre][/B][/COLOR]</label>
-			</control>
-	</control>
-	
-	<control type="group">
-		<posy>40</posy>
-		<animation effect="slide" start="1000,0" end="0,0" time="400" delay="600" condition="![IsEmpty(Control.GetLabel(8243)) + IsEmpty(Control.GetLabel(8244))]">Conditional</animation>
-		<visible>Control.IsVisible(595) + Control.HasFocus(8241) + ![Control.HasFocus(8241) + Player.HasVideo]]</visible>
-		<include>Animation_BackdropFade</include>	
-			<control type="image" id="8243">
-				<posx>680</posx>
-				<posy>200</posy>
-				<width>261</width>
-				<height>147</height>
-				<aspectratio>stretch</aspectratio>
-				<texture background="true" diffuse="tv-landscape/landscapematteFO.png">$INFO[ListItem.Trailer]$INFO[ListItem.label]_extra1.jpg</texture>
-				<fadetime>200</fadetime>
-			</control>
-			<control type="image">
-				<posx>668</posx>
-				<posy>190</posy>
-				<width>284</width>
-				<height>166</height>
-				<texture>tv-landscape/landscapeframeFO.png</texture>
-				<visible>![IsEmpty(Control.GetLabel(8243)) + IsEmpty(Control.GetLabel(8244))]</visible>
-			</control>
-			<control type="image" id="8244">
-				<posx>980</posx>
-				<posy>200</posy>
-				<width>261</width>
-				<height>147</height>
-				<aspectratio>stretch</aspectratio>
-				<texture background="true" diffuse="tv-landscape/landscapematteFO.png">$INFO[ListItem.Trailer]$INFO[ListItem.label]_extra2.jpg</texture>
-				<fadetime>200</fadetime>
-			</control>
-			<control type="image">
-				<posx>968</posx>
-				<posy>190</posy>
-				<width>284</width>
-				<height>166</height>
-				<texture>tv-landscape/landscapeframeFO.png</texture>
-				<visible>![IsEmpty(Control.GetLabel(8243)) + IsEmpty(Control.GetLabel(8244))]</visible>
-			</control>
-	</control>	
-	
-	<control type="textbox">
-		<description>Plot Movie</description>
-		<posx>660</posx>
-		<posy>230</posy>
-		<width>600</width>
-		<height>230</height>
-		<align>justify</align>
-		<info>ListItem.Plot</info>
-		<font>LiberationSans_Regular_20</font>
-		<textcolor>white</textcolor>
-		<animation effect="slide" start="0,0" end="0,180" time="0" condition="![IsEmpty(Control.GetLabel(8241)) + IsEmpty(Control.GetLabel(8242))]">Conditional</animation>
-		<animation effect="slide" start="0,0" end="0,180" time="0" condition="![IsEmpty(Control.GetLabel(8243)) + IsEmpty(Control.GetLabel(8244))]">Conditional</animation>
-		<animation effect="slide" start="1000,0" end="0,0" time="400" delay="600">Visible</animation>
-		<autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
-		<include>Animation_BackdropFade</include>
-		<visible>Control.IsVisible(595) + Control.HasFocus(8241)</visible>
-	</control>
-		
-	<control type="label">
-		<visible>Control.IsVisible(595) + !Control.HasFocus(8241) + !SubString(ListItem.Icon,DefaultFolderBack.png,Left)</visible>
-		<posx>410</posx>
-		<posy>668</posy>
-		<width>370</width>
-		<height>50</height>
-		<aligny>center</aligny>
-		<font>LiberationSans_Regular_16</font>
-		<textcolor>mainblue</textcolor>
-		<label>31297</label>
-		<shadowcolor>black</shadowcolor>
-		<include>Animation_Viewtype_Showcase_Trailer</include>
-		<animation effect="fade"  start="0" end="100" time="400" delay="1000" condition="![Container(595).OnNext | Container(595).OnPrevious]">Conditional</animation>
-	</control>	
-	<control type="label">
-		<visible>Control.IsVisible(595) + Control.HasFocus(8241) + Player.HasVideo</visible>
-		<posx>410</posx>
-		<posy>668</posy>
-		<width>370</width>
-		<height>50</height>
-		<aligny>center</aligny>
-		<font>LiberationSans_Regular_16</font>
-		<textcolor>mainblue</textcolor>
-		<label>$LOCALIZE[31516]</label>
-		<include>Animation_Viewtype_Showcase_Trailer</include>
-	</control>
-	
-	<control type="scrollbar" id="5950">
-		<include>Animation_ZoomInZoomOut</include>
-		<posx>100</posx>
-		<posy>100</posy>
-		<width>1080</width>
-		<height>25</height>
-		<visible allowhiddenfocus="true">Control.IsVisible(595) + Control.HasFocus(5950)</visible>
-		<texturesliderbackground>osd/osd_progress_back1.png</texturesliderbackground>
-		<textureslidernibfocus>ScrollBarV_Nib_Focus1.png</textureslidernibfocus>
-		<onup>7000</onup>
-		<ondown>595</ondown>
-		<showonepage>true</showonepage>
-		<orientation>horizontal</orientation>
-		<include>Animation_CommonFade</include>
-		<animation effect="slide" start="0,-200" end="0,0" time="400" tween="cubic" easing="inout" condition="Control.HasFocus(5950)">Conditional</animation>
-	</control>		
+
+		<control type="group">
+			<posx>300</posx>
+			<posy>120</posy>
+			<include>Animation_Bartowski_Context_Zoom</include>
+			<visible>Control.IsVisible(595)</visible>
+				<control type="image">
+					<posx>-108</posx>
+					<posy>-120</posy>
+					<width>583</width>
+					<height>720</height>
+					<texture>Comics/comic_glow.png</texture>
+					<colordiffuse>poster_glow</colordiffuse>
+					<aspectratio scalediffuse="false">stretch</aspectratio>
+					<animation effect="fade" start="0" end="100" time="1000" delay="1000" condition="![Container(595).OnNext | Container(595).OnPrevious]">Conditional</animation>
+				</control>
+				<control type="image">
+					<posx>39</posx>
+					<posy>21</posy>
+					<width>296</width>
+					<height>451</height>
+					<texture background="true" diffuse="Comics/poster_diffuse.png">$INFO[ListItem.Icon]</texture>
+					<fadetime>200</fadetime>
+					<aspectratio scalediffuse="false">stretch</aspectratio>
+				</control>
+		</control>
+
+		<control type="group">
+			<posx>640</posx>
+			<posy>290</posy>
+			<animation effect="slide" start="0,0" end="0,-400" time="200" delay="600" condition="Control.HasFocus(8243)">Conditional</animation>
+			<visible>Control.IsVisible(595) + !SubString(ListItem.Icon,DefaultFolderBack.png,Left)</visible>
+			<include>Animation_BackdropFade</include>
+				<control type="label"><!--Movie title-->
+					<posx>15</posx>
+					<posy>245</posy>
+					<width>600</width>
+					<height>50</height>
+					<aligny>center</aligny>
+					<font>LiberationSans_Regular_34</font>
+					<textcolor>mainblue</textcolor>
+					<scroll>true</scroll>			
+					<label>[B]$INFO[ListItem.Label][/B]</label>
+				</control>
+				<control type="label">
+					<posx>15</posx>
+					<posy>273</posy>
+					<width>394</width>
+					<height>50</height>
+					<aligny>center</aligny>
+					<font>LiberationSans_Regular_24</font>
+					<textcolor>white</textcolor>
+					<label>31508</label>
+					<visible>IsEmpty(ListItem.foldername) + !substring(Container.Listitem.Label,..,left)</visible>
+				</control>
+				<control type="label"><!--Studio Year-->
+					<posx>15</posx>
+					<posy>322</posy>
+					<width>394</width>
+					<height>50</height>
+					<aligny>center</aligny>
+					<font>LiberationSans_Regular_18</font>
+					<textcolor>white</textcolor>
+					<label>[B]$INFO[ListItem.Studio]$INFO[ListItem.Premiered,  (,)][/B]</label>
+					<animation effect="slide" start="0,0" end="0,-23" time="0" condition="IsEmpty(ListItem.Duration)">Conditional</animation>
+				</control>
+				<control type="label"><!--Genre-->
+					<posx>15</posx>
+					<posy>287</posy>
+					<width>394</width>
+					<height>50</height>
+					<font>LiberationSans_Regular_22</font>
+					<label>[B][COLOR=ListTrackF]$LOCALIZE[515][/COLOR] [B][COLOR=white]$INFO[ListItem.Genre][/B][/COLOR]</label>
+				</control>
+		</control>
+
+		<control type="group">
+			<posy>40</posy>
+			<animation effect="slide" start="1000,0" end="0,0" time="400" delay="600" condition="![IsEmpty(Control.GetLabel(8243)) + IsEmpty(Control.GetLabel(8244))]">Conditional</animation>
+			<visible>Control.IsVisible(595) + Control.HasFocus(8243) + ![Control.HasFocus(8243) + Player.HasVideo]]</visible>
+			<include>Animation_BackdropFade</include>	
+				<control type="image" id="8243">
+					<posx>680</posx>
+					<posy>200</posy>
+					<width>261</width>
+					<height>147</height>
+					<aspectratio>stretch</aspectratio>
+					<texture background="true" diffuse="tv-landscape/landscapematteFO.png">$INFO[ListItem.Trailer]$INFO[ListItem.label]_extra1.jpg</texture>
+					<fadetime>200</fadetime>
+				</control>
+				<control type="image">
+					<posx>668</posx>
+					<posy>190</posy>
+					<width>284</width>
+					<height>166</height>
+					<texture>tv-landscape/landscapeframeFO.png</texture>
+					<visible>![IsEmpty(Control.GetLabel(8243)) + IsEmpty(Control.GetLabel(8244))]</visible>
+				</control>
+				<control type="image" id="8244">
+					<posx>980</posx>
+					<posy>200</posy>
+					<width>261</width>
+					<height>147</height>
+					<aspectratio>stretch</aspectratio>
+					<texture background="true" diffuse="tv-landscape/landscapematteFO.png">$INFO[ListItem.Trailer]$INFO[ListItem.label]_extra2.jpg</texture>
+					<fadetime>200</fadetime>
+				</control>
+				<control type="image">
+					<posx>968</posx>
+					<posy>190</posy>
+					<width>284</width>
+					<height>166</height>
+					<texture>tv-landscape/landscapeframeFO.png</texture>
+					<visible>![IsEmpty(Control.GetLabel(8243)) + IsEmpty(Control.GetLabel(8244))]</visible>
+				</control>
+		</control>	
+
+		<control type="textbox">
+			<description>Plot Movie</description>
+			<posx>660</posx>
+			<posy>230</posy>
+			<width>600</width>
+			<height>230</height>
+			<align>justify</align>
+			<info>ListItem.Plot</info>
+			<font>LiberationSans_Regular_20</font>
+			<textcolor>white</textcolor>
+			<animation effect="slide" start="0,0" end="0,180" time="0" condition="![IsEmpty(Control.GetLabel(8243)) + IsEmpty(Control.GetLabel(8244))]">Conditional</animation>
+			<animation effect="slide" start="1000,0" end="0,0" time="400" delay="600">Visible</animation>
+			<autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
+			<include>Animation_BackdropFade</include>
+			<visible>Control.IsVisible(595) + Control.HasFocus(8243)</visible>
+		</control>
+
+		<control type="label">
+			<visible>Control.IsVisible(595) + !Control.HasFocus(8243) + !SubString(ListItem.Icon,DefaultFolderBack.png,Left)</visible>
+			<posx>410</posx>
+			<posy>668</posy>
+			<width>370</width>
+			<height>50</height>
+			<aligny>center</aligny>
+			<font>LiberationSans_Regular_16</font>
+			<textcolor>mainblue</textcolor>
+			<label>31297</label>
+			<shadowcolor>black</shadowcolor>
+			<include>Animation_Viewtype_Showcase_Trailer</include>
+			<animation effect="fade"  start="0" end="100" time="400" delay="1000" condition="![Container(595).OnNext | Container(595).OnPrevious]">Conditional</animation>
+		</control>	
+		<control type="label">
+			<visible>Control.IsVisible(595) + Control.HasFocus(8243) + Player.HasVideo</visible>
+			<posx>410</posx>
+			<posy>668</posy>
+			<width>370</width>
+			<height>50</height>
+			<aligny>center</aligny>
+			<font>LiberationSans_Regular_16</font>
+			<textcolor>mainblue</textcolor>
+			<label>$LOCALIZE[31516]</label>
+			<include>Animation_Viewtype_Showcase_Trailer</include>
+		</control>
+
+		<control type="scrollbar" id="5950">
+			<include>Animation_ZoomInZoomOut</include>
+			<posx>100</posx>
+			<posy>100</posy>
+			<width>1080</width>
+			<height>25</height>
+			<visible allowhiddenfocus="true">Control.IsVisible(595) + Control.HasFocus(5950)</visible>
+			<texturesliderbackground>osd/osd_progress_back1.png</texturesliderbackground>
+			<textureslidernibfocus>ScrollBarV_Nib_Focus1.png</textureslidernibfocus>
+			<onup>7000</onup>
+			<ondown>595</ondown>
+			<showonepage>true</showonepage>
+			<orientation>horizontal</orientation>
+			<include>Animation_CommonFade</include>
+			<animation effect="slide" start="0,-200" end="0,0" time="400" tween="cubic" easing="inout" condition="Control.HasFocus(5950)">Conditional</animation>
+		</control>
+
 	</include>
+
 </includes>
