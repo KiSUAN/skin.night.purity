@@ -178,7 +178,7 @@
 					<width>374</width>
 					<height>91</height>
 					<aspectratio>keep</aspectratio>					
-					<texture>$INFO[ListItem.label,special://skin/extras/games/flags/,.png]</texture>
+					<texture>$INFO[ListItem.label,special://skin/extras/games/logos/,.png]</texture>
 				</control>
 				<control type="label">
 					<posx>305</posx>
