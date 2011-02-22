@@ -258,7 +258,22 @@
 							<animation effect="fade"  start="0" end="100" time="400" delay="3000" condition="Control.IsVisible(55) + Skin.HasSetting(PosterPlus_Programs) + !Skin.HasSetting(Poster_Fanart_Programs) + ![Container(55).OnNext | Container(55).OnPrevious]">WindowOpen</animation>
 							<animation effect="slide" start="1000,0" end="0,0" time="400" delay="3600" condition="Skin.HasSetting(PosterPlus_Programs) + !Skin.HasSetting(Poster_Fanart_Programs) + ![Container(55).OnNext | Container(55).OnPrevious]">Conditional</animation>
 							<autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
-							<visible>Skin.HasSetting(PosterPlus_Programs) + substring(container.folderpath,plugin://plugin.program.advanced.launcher) + !Skin.HasSetting(Poster_Fanart_Programs)</visible>
+							<visible>Skin.HasSetting(PosterPlus_Programs) + !Skin.HasSetting(Poster_Fanart_Programs)</visible>
+						</control>
+						<control type="textbox">
+							<description>Plot Movie</description>
+							<posx>340</posx>
+							<posy>362</posy>
+							<width>600</width>
+							<height>300</height>
+							<align>justify</align>
+							<info>ListItem.Property(Addon.Description)</info>
+							<font>LiberationSans_Regular_20</font>
+							<textcolor>white</textcolor>
+							<animation effect="fade"  start="0" end="100" time="400" delay="3000" condition="Control.IsVisible(55) + Skin.HasSetting(PosterPlus_Programs) + !Skin.HasSetting(Poster_Fanart_Programs) + ![Container(55).OnNext | Container(55).OnPrevious]">WindowOpen</animation>
+							<animation effect="slide" start="1000,0" end="0,0" time="400" delay="3600" condition="Skin.HasSetting(PosterPlus_Programs) + !Skin.HasSetting(Poster_Fanart_Programs) + ![Container(55).OnNext | Container(55).OnPrevious]">Conditional</animation>
+							<autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
+							<visible>Skin.HasSetting(PosterPlus_Programs) + !Skin.HasSetting(Poster_Fanart_Programs)</visible>
 						</control>
 						<control type="image"> <!-- Games Studioflags  -->
 							<width>80</width>
@@ -270,55 +285,95 @@
 						</control>
 				</control>
 
-			<control type="grouplist">
-				<posx>340</posx>
-				<posy>260</posy>
-				<width>600</width>
-				<include>Animation_ZoomInZoomOut</include>
-				<animation effect="slide" start="0,600" end="0,0" time="400" delay="3400" condition="Skin.HasSetting(PosterPlus_Programs) + !Skin.HasSetting(Poster_Fanart_Programs) + ![Container(55).OnNext | Container(55).OnPrevious]">Conditional</animation>
-				<animation effect="fade"  start="0" end="100" time="400" delay="3000" condition="Control.IsVisible(55) + Skin.HasSetting(PosterPlus_Programs) + !Skin.HasSetting(Poster_Fanart_Programs) + ![Container(55).OnNext | Container(55).OnPrevious]">WindowOpen</animation>
-				<visible>Skin.HasSetting(PosterPlus_Programs) + substring(container.folderpath,plugin://plugin.program.advanced.launcher) + !SubString(ListItem.Icon,DefaultFolderBack.png,Left) + !Skin.HasSetting(Poster_Fanart_Programs)</visible>
-					<control type="label">
-						<width>600</width>
-						<height>20</height>
-						<aligny>center</aligny>
-						<font>LiberationSans_Regular_18</font>
-						<textcolor>white</textcolor>
-						<label>[B][COLOR=mainblue]$LOCALIZE[515][/COLOR][/B] - $INFO[ListItem.Genre]</label>
-					</control>
-					<control type="label">
-						<width>600</width>
-						<height>20</height>
-						<aligny>center</aligny>
-						<font>LiberationSans_Regular_18</font>
-						<textcolor>white</textcolor>
-						<label>[B][COLOR=mainblue]$LOCALIZE[572][/COLOR][/B] - $INFO[ListItem.Studio]</label>
-					</control>
-					<control type="label">
-						<width>600</width>
-						<height>20</height>
-						<aligny>center</aligny>
-						<font>LiberationSans_Regular_18</font>
-						<textcolor>white</textcolor>
-						<label>[B][COLOR=mainblue]Platform[/COLOR][/B] - $INFO[ListItem.Writer]</label>
-					</control>
-					<control type="label">
-						<width>600</width>
-						<height>20</height>
-						<aligny>center</aligny>
-						<font>LiberationSans_Regular_18</font>
-						<textcolor>white</textcolor>
-						<label>[B][COLOR=mainblue]Premiered[/COLOR][/B] - $INFO[ListItem.Premiered]</label>
-					</control>
-			</control>
-			<control type="image"> 
-				<posx>0</posx>
-				<posy>528</posy>   
-				<width>1280</width>     
-				<height>192</height> 
-				<texture>common/scrollbar_back.png</texture>
-				<visible>Control.HasFocus(65)</visible>
-			</control>
+				<control type="grouplist">
+					<posx>340</posx>
+					<posy>260</posy>
+					<width>900</width>
+					<include>Animation_ZoomInZoomOut</include>
+					<animation effect="slide" start="0,600" end="0,0" time="400" delay="3400" condition="Skin.HasSetting(PosterPlus_Programs) + !Skin.HasSetting(Poster_Fanart_Programs) + ![Container(55).OnNext | Container(55).OnPrevious]">Conditional</animation>
+					<animation effect="fade"  start="0" end="100" time="400" delay="3000" condition="Control.IsVisible(55) + Skin.HasSetting(PosterPlus_Programs) + !Skin.HasSetting(Poster_Fanart_Programs) + ![Container(55).OnNext | Container(55).OnPrevious]">WindowOpen</animation>
+					<visible>Skin.HasSetting(PosterPlus_Programs) + !SubString(ListItem.Icon,DefaultFolderBack.png,Left) + !Skin.HasSetting(Poster_Fanart_Programs)</visible>
+						<control type="label">
+							<width>900</width>
+							<height>20</height>
+							<aligny>center</aligny>
+							<font>LiberationSans_Regular_18</font>
+							<textcolor>white</textcolor>
+							<label>[B][COLOR=mainblue]$LOCALIZE[515][/COLOR][/B] - $INFO[ListItem.Genre]</label>
+							<visible>!IsEmpty(ListItem.Genre)</visible>
+						</control>
+						<control type="label">
+							<width>900</width>
+							<height>20</height>
+							<aligny>center</aligny>
+							<font>LiberationSans_Regular_18</font>
+							<textcolor>white</textcolor>
+							<label>[B][COLOR=mainblue]$LOCALIZE[572][/COLOR][/B] - $INFO[ListItem.Studio]</label>
+							<visible>!IsEmpty(ListItem.Studio)</visible>
+						</control>
+						<control type="label">
+							<width>900</width>
+							<height>20</height>
+							<aligny>center</aligny>
+							<font>LiberationSans_Regular_18</font>
+							<textcolor>white</textcolor>
+							<label>[B][COLOR=mainblue]Platform[/COLOR][/B] - $INFO[ListItem.Writer]</label>
+							<visible>!IsEmpty(ListItem.Writer)</visible>
+						</control>
+						<control type="label">
+							<width>900</width>
+							<height>20</height>
+							<aligny>center</aligny>
+							<font>LiberationSans_Regular_18</font>
+							<textcolor>white</textcolor>
+							<label>[B][COLOR=mainblue]Premiered[/COLOR][/B] - $INFO[ListItem.Premiered]</label>
+							<visible>!IsEmpty(ListItem.Premiered)</visible>
+						</control>
+						<control type="label">
+							<width>900</width>
+							<height>20</height>
+							<aligny>center</aligny>
+							<font>LiberationSans_Regular_18</font>
+							<textcolor>white</textcolor>
+							<label>[B][COLOR=mainblue]$LOCALIZE[24051][/COLOR][/B] $INFO[ListItem.Property(Addon.Version)]</label>
+							<visible>!IsEmpty(ListItem.Property(Addon.Version))</visible>
+						</control>
+						<control type="label">
+							<width>900</width>
+							<height>20</height>
+							<aligny>center</aligny>
+							<font>LiberationSans_Regular_18</font>
+							<textcolor>white</textcolor>
+							<label>[B][COLOR=mainblue]$LOCALIZE[146][/COLOR][/B] $INFO[ListItem.Property(Addon.Type)]</label>
+							<visible>!IsEmpty(ListItem.Property(Addon.Type))</visible>
+						</control>
+						<control type="label">
+							<width>900</width>
+							<height>20</height>
+							<aligny>center</aligny>
+							<font>LiberationSans_Regular_18</font>
+							<textcolor>white</textcolor>
+							<label>[B][COLOR=mainblue]$LOCALIZE[21863]:[/COLOR][/B] $INFO[ListItem.Property(Addon.Creator)]</label>
+							<visible>!IsEmpty(ListItem.Property(Addon.Creator))</visible>
+						</control>
+						<control type="label">
+							<width>900</width>
+							<height>20</height>
+							<aligny>center</aligny>
+							<font>LiberationSans_Regular_18</font>15311
+							<textcolor>white</textcolor>
+							<label>[B][COLOR=mainblue]$LOCALIZE[15311][/COLOR][/B] $INFO[ListItem.Property(Addon.Path)]</label>
+							<visible>!IsEmpty(ListItem.Property(Addon.Path))</visible>
+						</control>
+				</control>
+				<control type="image"> 
+					<posx>0</posx>
+					<posy>528</posy>   
+					<width>1280</width>     
+					<height>192</height> 
+					<texture>common/scrollbar_back.png</texture>
+					<visible>Control.HasFocus(65)</visible>
+				</control>
 		</control>
 
 		<control type="scrollbar" id="65">

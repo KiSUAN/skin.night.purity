@@ -141,6 +141,15 @@
 				<selected>Skin.HasSetting(Poster_Fanart_Programs)</selected>
 				<visible>Control.IsVisible(55)</visible>
 			</control>
+			<control type="togglebutton" id="34">
+				<description>Toggle Launcher Plot</description>
+				<include>WindowMenuButton</include>
+				<label>$LOCALIZE[31006]</label>
+				<altlabel>$LOCALIZE[21375]</altlabel>
+				<onclick>Skin.ToggleSetting(3daddonPlus_Programs)</onclick>
+				<selected>Skin.HasSetting(3daddonPlus_Programs)</selected>
+				<visible>Control.IsVisible(621)</visible>
+			</control>
 			<control type="togglebutton" id="35">
 				<description>Toggle MoviesFanart</description>
 				<include>WindowMenuButton</include>
@@ -196,15 +205,6 @@
 				<selected>Skin.HasSetting(launcher_plot_case)</selected>
 				<visible>Control.IsVisible(58) + substring(container.folderpath,plugin://plugin.program.advanced.launcher) + !Skin.HasSetting(ShowcaseFanart_Programs)</visible>
 			</control>
-			<control type="togglebutton" id="41">
-				<description>Toggle Launcher Plot</description>
-				<include>WindowMenuButton</include>
-				<label>Show Plot</label>
-				<altlabel>Disable Plot</altlabel>
-				<onclick>Skin.ToggleSetting(launcher_plot_addon)</onclick>
-				<selected>Skin.HasSetting(launcher_plot_addon)</selected>
-				<visible>Control.IsVisible(621) + substring(container.folderpath,plugin://plugin.program.advanced.launcher)</visible>
-			</control>
 		</control>
 
 		<control type="grouplist">
@@ -219,7 +219,7 @@
 			<control type="label">
 				<include>WindowMenuLabel</include>
 				<label>$LOCALIZE[14018]</label>
-				<visible>Control.IsVisible(55) + !Skin.HasSetting(Poster_Fanart_Programs)</visible>		
+				<visible>Control.IsVisible(55) + !Skin.HasSetting(Poster_Fanart_Programs) | Control.IsVisible(621)</visible>		
 			</control>
 			<control type="label">
 				<include>WindowMenuLabel</include>
@@ -240,7 +240,7 @@
 				<include>WindowMenuLabel</include>
 				<!-- LOC -->
 				<label>Plot</label>
-				<visible>[Control.IsVisible(53) | Control.IsVisible(56) | Control.IsVisible(621) | [!Skin.HasSetting(ShowcaseFanart_Programs) + Control.IsVisible(58)]] + substring(container.folderpath,plugin://plugin.program.advanced.launcher)</visible>
+				<visible>[Control.IsVisible(53) | Control.IsVisible(56) | [!Skin.HasSetting(ShowcaseFanart_Programs) + Control.IsVisible(58)]] + substring(container.folderpath,plugin://plugin.program.advanced.launcher)</visible>
 			</control>
 		</control>
 	</control>
