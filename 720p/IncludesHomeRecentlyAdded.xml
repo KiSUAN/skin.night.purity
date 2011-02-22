@@ -563,7 +563,7 @@
 					</control>
 				</control>
 				<control type="wraplist" id="8001">
-					<posx>0</posx>
+					<posx>-100</posx>
 					<posy>310</posy>
 					<width>1000</width>
 					<height>176</height>
@@ -575,11 +575,11 @@
 					<focusposition>0</focusposition>
 					<pagecontrol>-</pagecontrol>
 					<scrolltime>0</scrolltime>
-					<itemlayout height="34" width="500">
+					<itemlayout height="34" width="600">
 						<control type="label">
-							<posx>260</posx>
+							<posx>360</posx>
 							<posy>0</posy>
-							<width>540</width>
+							<width>640</width>
 							<height>10</height>
 							<font>LiberationSans_Regular_20</font>
 							<textcolor>grey</textcolor>
@@ -590,9 +590,9 @@
 							<label>$INFO[ListItem.Label2]</label>
 						</control>
 						<control type="label">
-							<posx>260</posx>
+							<posx>360</posx>
 							<posy>12</posy>
-							<width>540</width>
+							<width>640</width>
 							<height>20</height>
 							<font>LiberationSans_Regular_16</font>
 							<textcolor>white</textcolor>
@@ -603,11 +603,11 @@
 							<label>$INFO[ListItem.Label]</label>
 						</control>
 					</itemlayout>
-					<focusedlayout height="44" width="500">
+					<focusedlayout height="44" width="600">
 						<control type="label">
-							<posx>260</posx>
+							<posx>360</posx>
 							<posy>6</posy>
-							<width>540</width>
+							<width>640</width>
 							<height>10</height>
 							<font>LiberationSans_Regular_20</font>
 							<textcolor>mainblue</textcolor>
@@ -618,9 +618,9 @@
 							<label>[B]$INFO[ListItem.Label2][/B]</label>
 						</control>
 						<control type="label">
-							<posx>260</posx>
+							<posx>360</posx>
 							<posy>18</posy>
-							<width>540</width>
+							<width>640</width>
 							<height>20</height>
 							<font>LiberationSans_Regular_16</font>
 							<textcolor>white</textcolor>

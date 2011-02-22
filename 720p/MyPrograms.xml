@@ -3,7 +3,7 @@
 <window id="1">
 	<defaultcontrol>50</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
-	<views>621,55,53,54,58,595,56,50</views>
+	<views>621,55,53,51,52,54,58,595,56,50</views>
 	<controls> 
 		
 		<control type="image">
@@ -13,7 +13,7 @@
 			<include>global_kenburns_fanart</include>
 			<include>Animation_CommonFade</include>
 			<aspectratio>strech</aspectratio>
-			<visible>Control.IsVisible(56) | [Control.IsVisible(54) + !Skin.HasSetting(Arcade_BackFanart)] | [Control.IsVisible(58) + !Skin.HasSetting(ShowcaseFanart_Programs)]</visible>
+			<visible>Control.IsVisible(56) | [[Control.IsVisible(51) | Control.IsVisible(52) | Control.IsVisible(54)] + !Skin.HasSetting(Arcade_BackFanart)] | [Control.IsVisible(58) + !Skin.HasSetting(ShowcaseFanart_Programs)]</visible>
 		</control>
 		<control type="image">
 			<include>Dimensions_Fullscreen</include>
@@ -21,7 +21,7 @@
 			<texture background="true" fallback="backdrops/curtains.jpg">$INFO[ListItem.Property(Fanart_Image)]</texture>
 			<include>global_kenburns_fanart</include>
 			<include>Animation_CommonFade</include>
-			<visible>![Control.IsVisible(56) | [Control.IsVisible(54) + !Skin.HasSetting(Arcade_BackFanart)] | [Control.IsVisible(58) + !Skin.HasSetting(ShowcaseFanart_Programs)]]</visible>
+			<visible>![Control.IsVisible(56) | [[Control.IsVisible(51) | Control.IsVisible(52) | Control.IsVisible(54)] + !Skin.HasSetting(Arcade_BackFanart)] | [Control.IsVisible(58) + !Skin.HasSetting(ShowcaseFanart_Programs)]]</visible>
 		</control>
 		<control type="image">
 			<description>dirty hack for (inside folder) fanart in programs pictures scripts</description>
@@ -64,6 +64,8 @@
 	<control type="group">
 		<include>Animation_HiddenByInfo</include>
 			<include>Viewtype_Files</include><!--  50  -->
+			<include>Viewtype_Arcade_Landscape</include><!-- 51  -->
+			<include>Viewtype_Arcade_Square</include><!-- 52  -->
 			<include>Viewtype_List_Programs</include><!-- 53  -->
 			<include>Viewtype_Arcade</include><!-- 54  -->
 			<include>Viewtype_Poster_Programs</include><!--  55  -->
@@ -127,7 +129,7 @@
 				<label>Switch Fanart</label>
 				<onclick>Skin.ToggleSetting(Arcade_BackFanart)</onclick>
 				<selected>Skin.HasSetting(Arcade_BackFanart)</selected>
-				<visible>Control.IsVisible(54)</visible>
+				<visible>Control.IsVisible(51) | Control.IsVisible(52) | Control.IsVisible(54)</visible>
 			</control>
 			<control type="togglebutton" id="33">
 				<description>Toggle MoviesFanart</description>
@@ -232,7 +234,7 @@
 			<control type="label">
 				<include>WindowMenuLabel</include>
 				<label>$LOCALIZE[14018]</label>
-				<visible>Control.IsVisible(58) | Control.IsVisible(55) | Control.IsVisible(54)</visible>		
+				<visible>Control.IsVisible(51) | Control.IsVisible(52) | Control.IsVisible(54) | Control.IsVisible(55) | Control.IsVisible(58)</visible>		
 			</control>
 			<control type="label">
 				<include>WindowMenuLabel</include>

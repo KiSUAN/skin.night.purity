@@ -2,7 +2,7 @@
 
 <includes>
 
-	<include name="Viewtype_Arcade">
+	<include name="Viewtype_Arcade_Square">
 
 		<control type="image">
 				<posx>0</posx>
@@ -11,57 +11,57 @@
 				<height>720</height>
 				<texture>list/files_fanart_background.png</texture>
 				<include>Animation_BackdropFade</include>
-				<visible>Control.IsVisible(54)</visible>
+				<visible>Control.IsVisible(52)</visible>
 		</control>
 
-		<control type="wraplist" id="54">
+		<control type="wraplist" id="52">
 			<posx>0</posx>
 			<posy>-150</posy>
 			<height>880</height>			
 			<width>600</width>
 			<onright>7000</onright>
-			<onleft>68</onleft>
+			<onleft>74</onleft>
 			<onup>50</onup>
 			<ondown>50</ondown>
-			<viewtype label="Arcade">list</viewtype>
+			<viewtype label="Arcade Square">list</viewtype>
 			<orientation>vertical</orientation>
-			<focusposition>2</focusposition>
+			<focusposition>3</focusposition>
 			<scrolltime>400</scrolltime>
 			<preloaditems>2</preloaditems>
-			<pagecontrol>68</pagecontrol>
+			<pagecontrol>74</pagecontrol>
 			<camera x="500" y="200" /> 
 			<visible>!Skin.HasSetting(no_Arcade) + substring(container.folderpath,plugin://plugin.program.advanced.launcher)</visible>
-			<animation effect="rotatey" end="295" center="-100,0" time="0" condition="Control.IsVisible(54)">Conditional</animation>
-			<animation effect="slide" start="0,0" end="30,0" time="400" tween="cubic" easing="inout" condition="Control.HasFocus(68)">Conditional</animation>
-			<itemlayout width="168" height="148">
+			<animation effect="rotatey" end="295" center="-100,0" time="0" condition="Control.IsVisible(52)">Conditional</animation>
+			<animation effect="slide" start="0,0" end="30,0" time="400" tween="cubic" easing="inout" condition="Control.HasFocus(74)">Conditional</animation>
+			<itemlayout width="168" height="100">
 				<control type="group">
 						<control type="image">
-							<posx>6</posx>
-							<posy>128</posy>
+							<posx>7</posx>
+							<posy>130</posy>
 							<width>95</width>
-							<height>142</height>
-							<texture background="true" diffuse="postermatteNF.png">$INFO[ListItem.Icon]</texture>
+							<height>94</height>
+							<texture background="true" diffuse="music/musicwallmatte.png">$INFO[ListItem.Icon]</texture>
 							<fadetime>200</fadetime>
 							<aspectratio scalediffuse="false">stretch</aspectratio>
 						</control>
 						<control type="image">
 							<posx>0</posx>
 							<posy>122</posy>
-							<width>107</width>
-							<height>154</height>
-							<texture>posterframeF.png</texture>
+							<width>110</width>
+							<height>110</height>
+							<texture>music/musicwallframeF.png</texture>
 							<colordiffuse>39FFFFFF</colordiffuse>
 						</control>
 				</control>
 			</itemlayout>
-			<focusedlayout width="210" height="251">
+			<focusedlayout width="210" height="170">
 				<control type="group">
 					<control type="image">
 						<posx>7</posx>
 						<posy>130</posy>
 						<width>160</width>
-						<height>238</height>
-						<texture background="true" diffuse="postermatte.png">$INFO[ListItem.Icon]</texture>
+						<height>160</height>
+						<texture background="true" diffuse="music/musicwallmatte.png">$INFO[ListItem.Icon]</texture>
 						<fadetime>200</fadetime>
 						<aspectratio scalediffuse="false">stretch</aspectratio>
 						<animation type="Focus" reversible="false">
@@ -69,11 +69,11 @@
 						</animation>
 					</control>
 					<control type="image">
-						<posx>-3</posx>
-						<posy>121</posy>
-						<width>180</width>
-						<height>257</height>
-						<texture>posterframeF.png</texture>
+						<posx>-7</posx>
+						<posy>117</posy>
+						<width>188</width>
+						<height>188</height>
+						<texture>music/musicwallframeF.png</texture>
 						<animation type="Focus" reversible="false">
 							<effect type="rotatey" end="65" center="0,0" time="400" tween="quadratic" easing="out" />
 							<effect type="fade" start="0" end="60" time="600" />
@@ -91,7 +91,7 @@
 
 		<control type="group">
 			<camera x="500" y="400" />
-			<visible>Control.IsVisible(54)</visible>
+			<visible>Control.IsVisible(52)</visible>
 				<control type="image">
 					<posx>0</posx>
 					<posy>0</posy>
@@ -142,8 +142,8 @@
 					<width>1304</width>
 					<height>720</height>
 					<aspectratio>stretch</aspectratio>
-					<texture background="true" diffuse="arcade/pad_diffuse.png">$INFO[Container(54).listitem.property(fanart_image)]</texture>
-					<animation effect="rotatex" end="89,5" center="795,70" condition="Control.IsVisible(54)">Conditional</animation>
+					<texture background="true" diffuse="arcade/pad_diffuse.png">$INFO[Container(52).listitem.property(fanart_image)]</texture>
+					<animation effect="rotatex" end="89,5" center="795,70" condition="Control.IsVisible(52)">Conditional</animation>
 					<visible>!Skin.HasSetting(Arcade_BackFanart)</visible>
 				</control>
 				<control type="image">
@@ -153,7 +153,7 @@
 					<height>720</height>
 					<aspectratio>stretch</aspectratio>
 					<texture background="true" diffuse="arcade/pad_diffuse.png">$INFO[ListItem.Writer,special://skin/extras/games/console/,.jpg]</texture>
-					<animation effect="rotatex" end="89,5" center="795,70" condition="Control.IsVisible(54)">Conditional</animation>
+					<animation effect="rotatex" end="89,5" center="795,70" condition="Control.IsVisible(52)">Conditional</animation>
 					<visible>Skin.HasSetting(Arcade_BackFanart)</visible>
 				</control>
 				<control type="image">
@@ -172,7 +172,7 @@
 					<aspectratio>keep</aspectratio>
 					<texture>arcade/screen_light.png</texture>
 				</control>
-				<control type="image" id="1">
+				<control type="image" id="2">
 					<posx>305</posx>
 					<posy>43</posy>
 					<width>374</width>
@@ -192,7 +192,7 @@
 					<shadowcolor>grey3</shadowcolor>
 					<wrapmultiline>true</wrapmultiline>
 					<label>[B]$INFO[ListItem.Label][/B]</label>
-					<visible>IsEmpty(Control.GetLabel(1))</visible>
+					<visible>IsEmpty(Control.GetLabel(2))</visible>
 				</control>
 				<control type="image">
 					<posx>417</posx>
@@ -201,7 +201,7 @@
 					<height>98</height>
 					<aspectratio align="center">keep</aspectratio>
 					<texture>$INFO[ListItem.Studio,special://skin/extras/studios/,.png]</texture>
-					<animation effect="rotatex" end="-80" center="0,0" condition="Control.IsVisible(54)">Conditional</animation>
+					<animation effect="rotatex" end="-80" center="0,0" condition="Control.IsVisible(52)">Conditional</animation>
 				</control>
 				<control type="label">
 					<posx>920</posx>
@@ -212,7 +212,7 @@
 					<align>right</align>
 					<font>LiberationSans_Regular_24</font>
 					<label>[B][COLOR=ListTrackF]Premiered |[/COLOR] [COLOR=white]$INFO[ListItem.Premiered][/COLOR][/B]</label>
-					<animation effect="fade" start="0" end="100" delay="2000" time="2000" condition="Control.IsVisible(54)">Conditional</animation>
+					<animation effect="fade" start="0" end="100" delay="2000" time="2000" condition="Control.IsVisible(52)">Conditional</animation>
 					<visible>!IsEmpty(ListItem.Premiered)</visible>
 				</control>
 				<control type="label">
@@ -224,21 +224,21 @@
 					<align>left</align>
 					<font>LiberationSans_Regular_24</font>
 					<label>[B][COLOR=ListTrackF]$LOCALIZE[515] |[/COLOR] [COLOR=white]$INFO[ListItem.Genre][/COLOR][/B]</label>
-					<animation effect="fade" start="0" end="100" delay="2000" time="2000" condition="Control.IsVisible(54)">Conditional</animation>
+					<animation effect="fade" start="0" end="100" delay="2000" time="2000" condition="Control.IsVisible(52)">Conditional</animation>
 					<visible>!IsEmpty(ListItem.Genre)</visible>
 				</control>
 		</control>
 
 		<control type="group">
-			<visible>Control.IsVisible(54)</visible>
-			<animation effect="rotatey" end="30" center="800,65" time="400" condition="Control.IsVisible(54)">Conditional</animation>
+			<visible>Control.IsVisible(52)</visible>
+			<animation effect="rotatey" end="30" center="800,65" time="400" condition="Control.IsVisible(52)">Conditional</animation>
 				<control type="image">
 					<posx>700</posx>
 					<posy>120</posy>
 					<width>600</width>
 					<height>500</height>
 					<texture>dialogs/trailer_diffuse_back.png</texture>
-					<animation effect="fade" end="80" condition="Control.IsVisible(54)">Conditional</animation>
+					<animation effect="fade" end="80" condition="Control.IsVisible(52)">Conditional</animation>
 				</control>
 				<control type="textbox">
 					<posx>810</posx>
@@ -253,20 +253,20 @@
 				</control>
 		</control>
 
-		<control type="scrollbar" id="68">
+		<control type="scrollbar" id="74">
 			<include>Animation_ZoomInZoomOut</include>
 			<posx>-150</posx>
 			<posy>100</posy>
 			<width>25</width>
 			<height>460</height>
-			<visible allowhiddenfocus="true">Control.IsVisible(54) + Control.HasFocus(68)</visible>
+			<visible allowhiddenfocus="true">Control.IsVisible(52) + Control.HasFocus(74)</visible>
 			<texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
 			<textureslidernibfocus>ScrollBarV_Nib_Focus1.png</textureslidernibfocus>
-			<onright>54</onright>
+			<onright>52</onright>
 			<showonepage>true</showonepage>
 			<orientation>vertical</orientation>
 			<include>Animation_CommonFade</include>
-			<animation effect="slide" start="0,0" end="150,0" time="400" tween="cubic" easing="inout" condition="Control.HasFocus(68)">Conditional</animation>
+			<animation effect="slide" start="0,0" end="150,0" time="400" tween="cubic" easing="inout" condition="Control.HasFocus(74)">Conditional</animation>
 		</control>
 	</include>
 	

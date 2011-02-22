@@ -2701,6 +2701,12 @@
 							<onclick>Skin.ToggleSetting(no_Slide)</onclick>
 							<selected>Skin.HasSetting(no_Slide)</selected>
 						</control>
+						<control type="radiobutton" id="621">
+							<include>skin_settings_labels</include>
+							<label>"Arcade"</label>
+							<onclick>Skin.ToggleSetting(no_Arcade)</onclick>
+							<selected>Skin.HasSetting(no_Arcade)</selected>
+						</control>
 						<control type="label" id="616">
 							<width>860</width>
 							<height>45</height>

@@ -39,6 +39,8 @@
 	<include file="Viewtype_List_Programs.xml" />
 	<include file="Viewtype_3daddon_Programs.xml" />
 	<include file="Viewtype_Arcade.xml" />
+	<include file="Viewtype_Arcade_Square.xml" />
+	<include file="Viewtype_Arcade_Landscape.xml" />
 	<include file="Includes_Animations.xml" />
 	<include file="Includes_Next_Aired.xml" />
 	<include file="Includes_Trailer.xml" />
