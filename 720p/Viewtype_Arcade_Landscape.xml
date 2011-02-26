@@ -80,7 +80,7 @@
 						</animation>
 					</control>
 					<control type="button">
-						<onfocus>XBMC.PlayMedia($INFO[ListItem.Trailer]$INFO[ListItem.label].flv,1,noresume)</onfocus>
+						<onfocus>XBMC.PlayMedia($INFO[ListItem.Trailer]$INFO[ListItem.label],1,noresume)</onfocus>
 						<animation type="Focus" reversible="false">
 							<effect type="fade" start="0" end="0" time="650" />
 						</animation>
