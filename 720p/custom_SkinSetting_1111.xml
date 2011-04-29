@@ -2341,7 +2341,7 @@
 							<label>Use TV Themes in Library</label>
 							<onclick>Skin.ToggleSetting(tv_theme)</onclick>
 							<selected>Skin.HasSetting(tv_theme)</selected>
-							<!--<visible>system.hasaddon(script.TvTunes)</visible>-->
+							<!--<visible>system.hasaddon(script.tvtunes)</visible>-->
 						</control>
 						<control type="radiobutton" id="514"> 
                             <include>skin_settings_labels</include> 

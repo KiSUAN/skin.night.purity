@@ -146,7 +146,7 @@
 		<include>Trailer_Poster</include>
 	
 	<control type="group">	
-		<visible>!SubString(Window(10025).Property(TvTunesIsAlive),True)</visible>
+		<visible>!SubString(Window(10025).Property(tvtunesIsAlive),True)</visible>
 			<include>Music_Global_TopRight</include>
 			<include>Music_Global_Showcase</include>
 			<include>Music_Global_LowerRight</include>

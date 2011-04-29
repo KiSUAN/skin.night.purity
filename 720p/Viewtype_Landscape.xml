@@ -212,7 +212,7 @@
 				<fadetime>100</fadetime>
 				<aspectratio scalediffuse="false">stretch</aspectratio>
 				<include>Animation_Viewtype_Landscape_RightArea</include>
-				<visible>!Container.Content(tvshows) + ![Player.HasAudio + !SubString(Window(10025).Property(TvTunesIsAlive),True)]</visible>
+				<visible>!Container.Content(tvshows) + ![Player.HasAudio + !SubString(Window(10025).Property(tvtunesIsAlive),True)]</visible>
 			</control>
 			<control type="image" id="9014">
 				<visible></visible>
@@ -224,7 +224,7 @@
 				<fadetime>100</fadetime>
 				<aspectratio scalediffuse="false">stretch</aspectratio>
 				<include>Animation_Viewtype_Landscape_RightArea</include>
-				<visible>Container.Content(episodes) + ![Player.HasAudio + !SubString(Window(10025).Property(TvTunesIsAlive),True)]</visible>
+				<visible>Container.Content(episodes) + ![Player.HasAudio + !SubString(Window(10025).Property(tvtunesIsAlive),True)]</visible>
 			</control>
 			
 			<control type="image"><!-- Last Overlay -->
@@ -246,7 +246,7 @@
 				<textcolor>mainblue</textcolor>
 				<label>[B]$INFO[ListItem.TVShowtitle][/B]</label>
 				<include>Animation_Viewtype_Landscape_RightArea</include>
-				<visible>IsEmpty(Control.GetLabel(7014)) + IsEmpty(Control.GetLabel(9014)) + !Container.Content(tvshows) + ![Player.HasAudio + !SubString(Window(10025).Property(TvTunesIsAlive),True)]</visible>
+				<visible>IsEmpty(Control.GetLabel(7014)) + IsEmpty(Control.GetLabel(9014)) + !Container.Content(tvshows) + ![Player.HasAudio + !SubString(Window(10025).Property(tvtunesIsAlive),True)]</visible>
 			</control>
 			
 			<control type="group">
