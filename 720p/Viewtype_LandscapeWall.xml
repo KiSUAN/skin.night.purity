@@ -29,7 +29,7 @@
 			<pagecontrol>60</pagecontrol>
 			<scrolltime>400</scrolltime>
 			<orientation>horizontal</orientation>
-			<viewtype label="LandscapeWall">Wall</viewtype>
+			<viewtype label="$LOCALIZE[31064]">Wall</viewtype>
 			<onleft>624</onleft>
 			<onright>624</onright>
 			<onup>7000</onup>
@@ -49,7 +49,6 @@
 							<texture background="true" diffuse="wall/wall_h_diffuse.png" fallback="logo_missing.png">$INFO[ListItem.Label,special://skin/extras/studios/,.png]</texture>
 							<aspectratio align="center" scalediffuse="false">stretch</aspectratio>
 							<colordiffuse>79FFFFFF</colordiffuse>
-							<animation effect="fade" start="100" end="0" time="400" delay="2800" condition="Skin.HasSetting(Wall_fanart) + Container.Content(movies) + ![Container(624).OnNext | Container(624).OnPrevious]">Conditional</animation>
 							<visible>Container.Content(Studios)</visible>
 						</control>
 						<control type="label">
@@ -62,7 +61,6 @@
 							<font>LiberationSans_Regular_28</font>
 							<textcolor>mainblue</textcolor>
 							<label>[B]$INFO[ListItem.Label][/B]</label>
-							<animation effect="fade" start="100" end="0" time="400" delay="2800" condition="Skin.HasSetting(Wall_fanart) + Container.Content(movies) + ![Container(624).OnNext | Container(624).OnPrevious]">Conditional</animation>
 							<visible>Container.Content(Years)</visible>
 						</control>
 						<control type="image">
@@ -74,7 +72,6 @@
 							<texture>wall/wall_h_frame_blur.png</texture>
 							<aspectratio align="center" scalediffuse="false">stretch</aspectratio>
 							<colordiffuse>79FFFFFF</colordiffuse>
-							<animation effect="fade" start="100" end="0" time="400" delay="2800" condition="Skin.HasSetting(Wall_fanart) + Container.Content(movies) + ![Container(624).OnNext | Container(624).OnPrevious]">Conditional</animation>
 							<visible>Container.Content(Studios) | Container.Content(Years)</visible>
 						</control>
 				</control>
@@ -95,7 +92,6 @@
 							<animation type="Focus" reversible="false">
 								<effect type="zoom" start="110" end="180" center="auto" time="400" tween="back" easing="out" />
 							</animation>
-							<animation effect="fade" start="100" end="0" time="400" delay="2800" condition="Skin.HasSetting(Wall_fanart) + Container.Content(movies) + ![Container(624).OnNext | Container(624).OnPrevious]">Conditional</animation>
 						</control>
 						<control type="image">
 							<description>Poster</description>
@@ -109,7 +105,6 @@
 							<animation type="Focus" reversible="false">
 								<effect type="zoom" start="110" end="180" center="auto" time="400" tween="back" easing="out" />
 							</animation>
-							<animation effect="fade" start="100" end="0" time="400" delay="2800" condition="Skin.HasSetting(Wall_fanart) + Container.Content(movies) + ![Container(624).OnNext | Container(624).OnPrevious]">Conditional</animation>
 							<visible>Container.Content(Studios) | Container.Content(Years)</visible>
 						</control>
 						<control type="image">
@@ -123,7 +118,6 @@
 							<animation type="Focus" reversible="false">
 								<effect type="zoom" start="110" end="180" center="auto" time="400" tween="back" easing="out" />
 							</animation>
-							<animation effect="fade" start="100" end="0" time="400" delay="2800" condition="Skin.HasSetting(Wall_fanart) + Container.Content(movies) + ![Container(624).OnNext | Container(624).OnPrevious]">Conditional</animation>
 							<visible>Container.Content(Studios)</visible>
 						</control>
 						<control type="label">
@@ -139,7 +133,6 @@
 							<animation type="Focus" reversible="false">
 								<effect type="zoom" start="110" end="180" center="auto" time="400" tween="back" easing="out" />
 							</animation>
-							<animation effect="fade" start="100" end="0" time="400" delay="2800" condition="Skin.HasSetting(Wall_fanart) + Container.Content(movies) + ![Container(624).OnNext | Container(624).OnPrevious]">Conditional</animation>
 							<visible>Container.Content(Years)</visible>
 						</control>
 						<control type="image">
@@ -153,7 +146,6 @@
 							<animation type="Focus" reversible="false">
 								<effect type="zoom" start="110" end="180" center="auto" time="400" tween="back" easing="out" />
 							</animation>
-							<animation effect="fade" start="100" end="0" time="400" delay="2800" condition="Skin.HasSetting(Wall_fanart) + Container.Content(movies) + ![Container(624).OnNext | Container(624).OnPrevious]">Conditional</animation>
 							<visible>Container.Content(Years)</visible>
 						</control>
 						<control type="image">
@@ -167,7 +159,6 @@
 							<animation type="Focus" reversible="false">
 								<effect type="zoom" start="110" end="180" center="auto" time="400" tween="back" easing="out" />
 							</animation>
-							<animation effect="fade" start="100" end="0" time="400" delay="2800" condition="Skin.HasSetting(Wall_fanart) + Container.Content(movies) + ![Container(624).OnNext | Container(624).OnPrevious]">Conditional</animation>
 							<visible>Container.Content(Studios)</visible>
 						</control>
 				</control>

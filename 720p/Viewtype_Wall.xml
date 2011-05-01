@@ -16,39 +16,18 @@
 		<animation effect="slide" end="20,0" time="800" tween="cubic" easing="inout" condition="Container(54).Column(0)">Conditional</animation>
 		<animation effect="slide" end="0,-100" time="800" tween="cubic" easing="inout" condition="Container(54).Row(3) + Container(54).Column(5) |Container(54).Row(3) + Container(54).Column(4) | Container(54).Row(3) + Container(54).Column(3) | Container(54).Row(3) + Container(54).Column(2) | Container(54).Row(3) + Container(54).Column(1) | Container(54).Row(3) + Container(54).Column(0)">Conditional</animation>
 	</include>
-	<!--<include name="Animation_NewWallFloatFanart">
-		<animation effect="slide" end="0,100" time="800" tween="cubic" easing="inout" condition="Container(54).Row(0)">Conditional</animation>
-		<animation effect="slide" end="-38,0" time="800" tween="cubic" easing="inout" condition="Container(54).Column(7)">Conditional</animation>
-		<animation effect="slide" end="0,-60" time="800" tween="cubic" easing="inout" condition="Container(54).Row(3) + Container(54).Column(2) | Container(54).Row(3) + Container(54).Column(1) | Container(54).Row(3) + Container(54).Column(0)">Conditional</animation>
-	</include>-->
 	
-	<include name="Viewtype_Wall">
-	
-	<!--<control type="image">
-			<include>Dimensions_Fullscreen</include>
-			<fadetime>400</fadetime>
-			<texture background="true">$INFO[ListItem.Property(Fanart_Image)]</texture>
-			<aspectratio>scale</aspectratio>
-			<include>Animation_BackdropFade</include>
-			<animation effect="fade" start="0" end="100" time="400" delay="2800" condition="Skin.HasSetting(Wall_fanart) + Container.Content(movies) + ![Container(54).OnNext | Container(54).OnPrevious]">Conditional</animation>
-			<visible>Control.IsVisible(54) + Skin.HasSetting(Wall_fanart)</visible>
-		</control>
-											
-	<control type="image">
-		<visible>Control.IsVisible(54)</visible>
-		<posx>0</posx>
-		<posy>0</posy>
-		<width>1280</width>
-		<height>720</height>
-		<texture>wall/wall_june_back.png</texture>
-		<aspectratio>stretch</aspectratio>
-		<animation effect="fade" start="100" end="0" time="400" delay="2800" condition="Skin.HasSetting(Wall_fanart) + Container.Content(movies) + ![Container(54).OnNext | Container(54).OnPrevious]">Conditional</animation>
-		<include>Animation_CommonFade</include>
-		<include>Animation_NewWallFloatFanart</include>
-	</control>-->
+	<include name="Viewtype_Wall">	
 
-	
-	
+	<control type="image">
+		<include>Dimensions_Fullscreen</include>
+		<fadetime>400</fadetime>
+		<texture background="true">$INFO[ListItem.Property(Fanart_Image)]</texture>
+		<aspectratio>scale</aspectratio>
+		<include>Animation_BackdropFade</include>
+		<animation effect="fade" start="0" end="100" time="4000" delay="2000" condition="Skin.HasSetting(Wall_fanart) + ![Container(54).OnNext | Container(54).OnPrevious]">Conditional</animation>
+		<visible>Control.IsVisible(54) + Skin.HasSetting(Wall_fanart)</visible>
+	</control>
 	
 	<control type="panel" id="54">
 			<visible>!Skin.HasSetting(no_Wall) + [Container.Content(Movies) | Container.Content(Actors) | Window.IsActive(videofiles) | substring(container.folderpath,plugin://plugin.video.apple.movie.trailers.lite)]</visible>
@@ -68,6 +47,7 @@
 			<include>Animation_NewWallFloat</include>
 			<itemlayout width="140" height="230">
 				<control type="group">
+					<animation effect="fade" start="100" end="0" time="1000" delay="2000" condition="Skin.HasSetting(Wall_fanart) + ![Container(54).OnNext | Container(54).OnPrevious]">Conditional</animation>
 					<posx>0</posx>
 					<posy>60</posy>
 						<control type="image">
@@ -79,7 +59,6 @@
 							<texture background="true" diffuse="movie-poster/posterview_diffuse.png">$INFO[ListItem.Icon]</texture>
 							<aspectratio align="center" scalediffuse="false">stretch</aspectratio>
 							<colordiffuse>79FFFFFF</colordiffuse>
-							<animation effect="fade" start="100" end="0" time="400" delay="2800" condition="Skin.HasSetting(Wall_fanart) + Container.Content(movies) + ![Container(54).OnNext | Container(54).OnPrevious]">Conditional</animation>
 						</control>
 						<control type="image">
 							<posx>113</posx>
@@ -103,6 +82,7 @@
 			</itemlayout>
 			<focusedlayout width="120" height="200">
 				<control type="group">
+					<animation effect="fade" start="100" end="0" time="1000" delay="2500" condition="Skin.HasSetting(Wall_fanart) + ![Container(54).OnNext | Container(54).OnPrevious]">Conditional</animation>
 					<posx>10</posx>
 					<posy>80</posy>
 						<control type="image">
@@ -117,7 +97,6 @@
 							<animation type="Focus" reversible="false">
 								<effect type="zoom" start="110" end="180" center="auto" time="400" tween="back" easing="out" />
 							</animation>
-							<animation effect="fade" start="100" end="0" time="400" delay="2800" condition="Skin.HasSetting(Wall_fanart) + Container.Content(movies) + ![Container(54).OnNext | Container(54).OnPrevious]">Conditional</animation>
 						</control>
 						<control type="image">
 							<description>Poster</description>
@@ -131,7 +110,6 @@
 							<animation type="Focus" reversible="false">
 								<effect type="zoom" start="110" end="180" center="auto" time="400" tween="back" easing="out" />
 							</animation>
-							<animation effect="fade" start="100" end="0" time="400" delay="2800" condition="Skin.HasSetting(Wall_fanart) + Container.Content(movies) + ![Container(54).OnNext | Container(54).OnPrevious]">Conditional</animation>
 							<visible>Container.Content(Actors)</visible>
 						</control>
 						<control type="image">
@@ -145,7 +123,6 @@
 							<animation type="Focus" reversible="false">
 								<effect type="zoom" start="110" end="180" center="auto" time="400" tween="back" easing="out" />
 							</animation>
-							<animation effect="fade" start="100" end="0" time="400" delay="2800" condition="Skin.HasSetting(Wall_fanart) + Container.Content(movies) + ![Container(54).OnNext | Container(54).OnPrevious]">Conditional</animation>
 						</control>
 						<control type="image">
 							<description>Poster</description>
@@ -158,7 +135,6 @@
 							<animation type="Focus" reversible="false">
 								<effect type="zoom" start="110" end="180" center="auto" time="400" tween="back" easing="out" />
 							</animation>
-							<animation effect="fade" start="100" end="0" time="400" delay="2800" condition="Skin.HasSetting(Wall_fanart) + Container.Content(movies) + ![Container(54).OnNext | Container(54).OnPrevious]">Conditional</animation>
 						</control>
 						<control type="image">
 							<posx>119</posx>
