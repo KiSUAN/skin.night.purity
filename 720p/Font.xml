@@ -20,6 +20,12 @@
 			<linespacing>1</linespacing>
 		</font>
 		<font>
+			<name>PlayerF</name>
+			<filename>alaska_thin.ttf</filename>
+			<size>400</size>
+			<linespacing>1</linespacing>
+		</font>
+		<font>
 			<name>alaska_thin_64</name>
 			<filename>alaska_thin.ttf</filename>
 			<size>64</size>
