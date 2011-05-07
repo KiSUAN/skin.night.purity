@@ -217,7 +217,7 @@
 							<info>ListItem.Plot</info>
 							<font>LiberationSans_Regular_20</font>
 							<textcolor>white</textcolor>
-							<animation effect="fade"  start="0" end="100" time="400" delay="3000" condition="Control.IsVisible(621) + Skin.HasSetting(3daddonPlus_Programs) + ![Container(621).OnNext | Container(621).OnPrevious]">WindowOpen</animation>
+							<animation effect="fade"  start="0" end="100" time="400" delay="3000" condition="Control.IsVisible(621)">WindowOpen</animation>
 							<animation effect="slide" start="1000,0" end="0,0" time="400" delay="3600" condition="Skin.HasSetting(3daddonPlus_Programs) + ![Container(621).OnNext | Container(621).OnPrevious]">Conditional</animation>
 							<autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
 							<visible>Skin.HasSetting(3daddonPlus_Programs)</visible>
@@ -232,7 +232,7 @@
 							<info>ListItem.Property(Addon.Description)</info>
 							<font>LiberationSans_Regular_20</font>
 							<textcolor>white</textcolor>
-							<animation effect="fade"  start="0" end="100" time="400" delay="3000" condition="Control.IsVisible(621) + Skin.HasSetting(3daddonPlus_Programs) + ![Container(621).OnNext | Container(621).OnPrevious]">WindowOpen</animation>
+							<animation effect="fade" start="0" end="100" time="400" delay="3000" condition="Control.IsVisible(621)">WindowOpen</animation>
 							<animation effect="slide" start="1000,0" end="0,0" time="400" delay="3600" condition="Skin.HasSetting(3daddonPlus_Programs) + ![Container(621).OnNext | Container(621).OnPrevious]">Conditional</animation>
 							<autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
 							<visible>Skin.HasSetting(3daddonPlus_Programs)</visible>
@@ -253,7 +253,6 @@
 					<width>900</width>
 					<include>Animation_ZoomInZoomOut</include>
 					<animation effect="slide" start="0,600" end="0,0" time="400" delay="3400" condition="Skin.HasSetting(3daddonPlus_Programs) + ![Container(621).OnNext | Container(621).OnPrevious]">Conditional</animation>
-					<animation effect="fade"  start="0" end="100" time="400" delay="3000" condition="Control.IsVisible(621) + Skin.HasSetting(3daddonPlus_Programs) + ![Container(621).OnNext | Container(621).OnPrevious]">WindowOpen</animation>
 					<visible>Skin.HasSetting(3daddonPlus_Programs) + !SubString(ListItem.Icon,DefaultFolderBack.png,Left)</visible>
 						<control type="label">
 							<width>900</width>
@@ -262,6 +261,7 @@
 							<font>LiberationSans_Regular_18</font>
 							<textcolor>white</textcolor>
 							<label>[B][COLOR=mainblue]$LOCALIZE[515][/COLOR][/B] - $INFO[ListItem.Genre]</label>
+							<animation effect="fade" start="0" end="100" time="400" delay="3000" condition="Control.IsVisible(621)">WindowOpen</animation>
 							<visible>!IsEmpty(ListItem.Genre)</visible>
 						</control>
 						<control type="label">
@@ -271,6 +271,7 @@
 							<font>LiberationSans_Regular_18</font>
 							<textcolor>white</textcolor>
 							<label>[B][COLOR=mainblue]$LOCALIZE[572][/COLOR][/B] - $INFO[ListItem.Studio]</label>
+							<animation effect="fade" start="0" end="100" time="400" delay="3000" condition="Control.IsVisible(621)">WindowOpen</animation>
 							<visible>!IsEmpty(ListItem.Studio)</visible>
 						</control>
 						<control type="label">
@@ -280,6 +281,7 @@
 							<font>LiberationSans_Regular_18</font>
 							<textcolor>white</textcolor>
 							<label>[B][COLOR=mainblue]Platform[/COLOR][/B] - $INFO[ListItem.Writer]</label>
+							<animation effect="fade" start="0" end="100" time="400" delay="3000" condition="Control.IsVisible(621)">WindowOpen</animation>
 							<visible>!IsEmpty(ListItem.Writer)</visible>
 						</control>
 						<control type="label">
@@ -289,6 +291,7 @@
 							<font>LiberationSans_Regular_18</font>
 							<textcolor>white</textcolor>
 							<label>[B][COLOR=mainblue]Premiered[/COLOR][/B] - $INFO[ListItem.Premiered]</label>
+							<animation effect="fade" start="0" end="100" time="400" delay="3000" condition="Control.IsVisible(621)">WindowOpen</animation>
 							<visible>!IsEmpty(ListItem.Premiered)</visible>
 						</control>
 						<control type="label">
@@ -298,6 +301,7 @@
 							<font>LiberationSans_Regular_18</font>
 							<textcolor>white</textcolor>
 							<label>[B][COLOR=mainblue]$LOCALIZE[24051][/COLOR][/B] $INFO[ListItem.Property(Addon.Version)]</label>
+							<animation effect="fade" start="0" end="100" time="400" delay="3000" condition="Control.IsVisible(621)">WindowOpen</animation>
 							<visible>!IsEmpty(ListItem.Property(Addon.Version))</visible>
 						</control>
 						<control type="label">
@@ -307,6 +311,7 @@
 							<font>LiberationSans_Regular_18</font>
 							<textcolor>white</textcolor>
 							<label>[B][COLOR=mainblue]$LOCALIZE[146][/COLOR][/B] $INFO[ListItem.Property(Addon.Type)]</label>
+							<animation effect="fade" start="0" end="100" time="400" delay="3000" condition="Control.IsVisible(621)">WindowOpen</animation>
 							<visible>!IsEmpty(ListItem.Property(Addon.Type))</visible>
 						</control>
 						<control type="label">
@@ -316,6 +321,7 @@
 							<font>LiberationSans_Regular_18</font>
 							<textcolor>white</textcolor>
 							<label>[B][COLOR=mainblue]$LOCALIZE[21863]:[/COLOR][/B] $INFO[ListItem.Property(Addon.Creator)]</label>
+							<animation effect="fade" start="0" end="100" time="400" delay="3000" condition="Control.IsVisible(621)">WindowOpen</animation>
 							<visible>!IsEmpty(ListItem.Property(Addon.Creator))</visible>
 						</control>
 						<control type="label">
@@ -325,6 +331,7 @@
 							<font>LiberationSans_Regular_18</font>15311
 							<textcolor>white</textcolor>
 							<label>[B][COLOR=mainblue]$LOCALIZE[15311][/COLOR][/B] $INFO[ListItem.Property(Addon.Path)]</label>
+							<animation effect="fade" start="0" end="100" time="400" delay="3000" condition="Control.IsVisible(621)">WindowOpen</animation>
 							<visible>!IsEmpty(ListItem.Property(Addon.Path))</visible>
 						</control>
 				</control>

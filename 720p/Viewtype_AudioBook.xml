@@ -242,7 +242,7 @@
 						<info>ListItem.Property(Album_Description)</info>
 						<font>LiberationSans_Regular_20</font>
 						<textcolor>white</textcolor>
-						<animation effect="fade"  start="0" end="100" time="400" delay="3000" condition="Control.IsVisible(622) + Skin.HasSetting(BookPlus) + ![Container(622).OnNext | Container(622).OnPrevious]">WindowOpen</animation>
+						<animation effect="fade" start="0" end="100" time="400" delay="3000" condition="Control.IsVisible(622)">WindowOpen</animation>
 						<animation effect="slide" start="1000,0" end="0,0" time="400" delay="3600" condition="Skin.HasSetting(BookPlus) + ![Container(622).OnNext | Container(622).OnPrevious]">Conditional</animation>
 						<autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
 						<visible>Skin.HasSetting(PosterPlus)</visible>
@@ -263,7 +263,7 @@
 					<font>LiberationSans_Regular_18</font>
 					<textcolor>white</textcolor>
 					<label>[B][COLOR=mainblue]$LOCALIZE[20417]:[/COLOR][/B] $INFO[ListItem.Artist]</label>
-					<animation effect="fade"  start="0" end="100" time="400" delay="3000" condition="Skin.HasSetting(BookPlus) + ![Container(622).OnNext | Container(622).OnPrevious]">WindowOpen</animation>
+						<animation effect="fade" start="0" end="100" time="400" delay="3000" condition="Control.IsVisible(622)">WindowOpen</animation>
 				</control>
 				<control type="label">
 					<width>600</width>
@@ -272,7 +272,7 @@
 					<font>LiberationSans_Regular_18</font>
 					<textcolor>white</textcolor>
 					<label>[B][COLOR=mainblue]Narrated/Read by:[/COLOR][/B] $INFO[ListItem.Property(Album_Label)]</label>
-					<animation effect="fade"  start="0" end="100" time="400" delay="3000" condition="Skin.HasSetting(BookPlus) + ![Container(622).OnNext | Container(622).OnPrevious]">WindowOpen</animation>
+						<animation effect="fade" start="0" end="100" time="400" delay="3000" condition="Control.IsVisible(622)">WindowOpen</animation>
 				</control>
 				<control type="label">
 					<width>600</width>
@@ -281,7 +281,7 @@
 					<font>LiberationSans_Regular_18</font>
 					<textcolor>white</textcolor>
 					<label>[B][COLOR=mainblue]$LOCALIZE[562]:[/COLOR][/B] $INFO[ListItem.Year]</label>
-					<animation effect="fade"  start="0" end="100" time="400" delay="3000" condition="Skin.HasSetting(BookPlus) + ![Container(622).OnNext | Container(622).OnPrevious]">WindowOpen</animation>
+						<animation effect="fade" start="0" end="100" time="400" delay="3000" condition="Control.IsVisible(622)">WindowOpen</animation>
 				</control>
 				<control type="label">
 					<width>600</width>
@@ -290,7 +290,7 @@
 					<font>LiberationSans_Regular_18</font>
 					<textcolor>white</textcolor>
 					<label>[B][COLOR=mainblue]$LOCALIZE[515]:[/COLOR][/B] $INFO[ListItem.Property(Album_Mood)]</label>
-					<animation effect="fade"  start="0" end="100" time="400" delay="3000" condition="Skin.HasSetting(BookPlus) + ![Container(622).OnNext | Container(622).OnPrevious]">WindowOpen</animation>
+						<animation effect="fade" start="0" end="100" time="400" delay="3000" condition="Control.IsVisible(622)">WindowOpen</animation>
 				</control>
 				<control type="label">
 					<width>600</width>
@@ -299,7 +299,7 @@
 					<font>LiberationSans_Regular_18</font>
 					<textcolor>white</textcolor>
 					<label>[B][COLOR=mainblue]$LOCALIZE[563]:[/COLOR][/B] $INFO[ListItem.Rating]</label>
-					<animation effect="fade"  start="0" end="100" time="400" delay="3000" condition="Skin.HasSetting(BookPlus) + ![Container(622).OnNext | Container(622).OnPrevious]">WindowOpen</animation>
+						<animation effect="fade" start="0" end="100" time="400" delay="3000" condition="Control.IsVisible(622)">WindowOpen</animation>
 				</control>
 		</control>
 			<control type="image"> 
