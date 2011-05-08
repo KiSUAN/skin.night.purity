@@ -2,219 +2,291 @@
 
 <window id="142">
 	<defaultcontrol>2</defaultcontrol>
-	<controls>	
-		<control type="group">		
+	<controls>
+
+		<control type="group">
+			<posx>20</posx>
 			<posy>560</posy>
 			<visible>!Control.IsVisible(10)</visible>
-			<animation type="WindowOpen">
-				<effect type="fade" start="0" end="100" time="600" />
-			</animation>
-			<animation type="WindowClose">
-				<effect type="fade" start="100" end="0" time="600" />
-			</animation>
-			
-			
-			<control type="image">
-				<posx>0</posx>
-				<posy>-560</posy>
-				<width>1280</width>
-				<height>720</height>
-				<texture>osd/pause-back1.png</texture>
-				<aspectratio>stretch</aspectratio>
-				<visible>!Control.IsVisible(10)</visible>
-			</control>
-			
-			<control type="progress" id="23">
-				<texturebg>osd/osd_progress_back1.png</texturebg>
-				<lefttexture>osd/left.png</lefttexture>
-				<midtexture>osd/mid.png</midtexture>
-				<righttexture>osd/new_pause2.png</righttexture>
-				<info>Player.Progress</info>
-				<posx>100</posx>
-				<posy>130</posy>
-				<width>1080</width>
-				<height>19</height>
-			</control>
-			<control type="label">
-				<posx>90</posx>
-				<posy>128</posy>
-				<width>300</width>
-				<height>25</height>
-				<align>right</align> 
-				<font>LiberationSans_Regular_18</font>
-				<textcolor>mainblue</textcolor>
-				<label>[B]$INFO[VideoPlayer.Time][/B]</label>
-			</control>
-			<control type="label">
-				<posx>1190</posx>
-				<posy>128</posy>
-				<width>300</width>
-				<height>25</height>
-				<font>LiberationSans_Regular_18</font>
-				<textcolor>white</textcolor>
-				<label>[B]$INFO[VideoPlayer.Duration][/B]</label>
-			</control>
-			<control type="group">
-				<posx>20</posx>
-				<posy>-190</posy>
-				<animation type="WindowOpen">
-					<effect type="fade" start="0" end="100" time="600" />
-				</animation>
-				<animation type="WindowClose">
-					<effect type="fade" start="100" end="0" time="600" />
-				</animation>
-				<animation effect="slide" start="0,0" end="0,70" time="0" condition="VideoPlayer.Content(episodes)">Conditional</animation>
-				<control type="label">
-					<posx>0</posx>
-					<posy>20</posy>
-					<width>750</width> 
-					<height>25</height> 
-					<label>$INFO[VideoPlayer.Title]</label>
-					<align>left</align> 
-					<aligny>center</aligny> 
-					<font>DejaVuSans_Bold_32</font>
-					<textcolor>mainblue</textcolor>
-					<visible>VideoPlayer.Content(episodes)</visible>
+				<control type="group">
+					<animation type="WindowOpen">
+						<effect type="fade" start="0" end="100" time="400" delay="400"/>
+					</animation>
+					<animation type="WindowClose">
+						<effect type="fade" start="100" end="0" time="400"/>
+					</animation>
+						<control type="image">
+							<posx>-20</posx>
+							<posy>-560</posy>
+							<width>1280</width>
+							<height>720</height>
+							<texture>osd/pause-back1.png</texture>
+							<aspectratio>stretch</aspectratio>
+						</control>
+						<control type="label">
+							<posy>0</posy>
+							<width>930</width> 
+							<height>25</height> 
+							<label>$INFO[VideoPlayer.Title]</label>
+							<align>left</align> 
+							<aligny>center</aligny> 
+							<font>DejaVuSans_Bold_32</font>
+							<textcolor>mainblue</textcolor>
+							<visible>![VideoPlayer.Content(episodes) | VideoPlayer.Content(movies)]</visible>
+						</control>
+						<control type="group">
+							<visible>VideoPlayer.Content(movies)</visible>
+								<control type="label">
+									<description>Director Info</description>
+									<posy>-142</posy>
+									<width>970</width>
+									<height>18</height>
+									<aligny>center</aligny>
+									<align>left</align>
+									<font>LiberationSans_Regular_18</font>
+									<label>[B][COLOR=mainblue]$LOCALIZE[20339]:[/COLOR][/B] [COLOR=white]$INFO[VideoPlayer.Director][/COLOR]</label>
+								</control>
+								<control type="label">
+									<description>Genre Info</description>
+									<posy>-118</posy>
+									<width>970</width>
+									<height>18</height>
+									<aligny>center</aligny>
+									<align>left</align>
+									<font>LiberationSans_Regular_18</font>
+									<label>[B][COLOR=mainblue]$LOCALIZE[515]:[/COLOR][/B] [COLOR=white]$INFO[VideoPlayer.Genre][/COLOR]</label>
+								</control>
+								<control type="label">
+									<description>Director Info</description>
+									<posy>-94</posy>
+									<width>970</width>
+									<height>18</height>
+									<aligny>center</aligny>
+									<align>left</align>
+									<font>LiberationSans_Regular_18</font>
+									<label>[B][COLOR=mainblue]$LOCALIZE[572]:[/COLOR][/B] [COLOR=white]$INFO[VideoPlayer.Studio][/COLOR]</label>
+									<visible>IsEmpty(Control.GetLabel(8125))</visible>
+								</control>
+								<control type="textbox">
+									<posy>-35</posy>
+									<width>970</width>
+									<height>120</height>
+									<align>justify</align>
+									<label>$INFO[VideoPlayer.Plot]</label>
+									<autoscroll time="3000" delay="8000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
+									<font>LiberationSans_Regular_20</font>
+									<textcolor>white</textcolor>
+									<include>Animation_HiddenByInfo</include>
+								</control>
+						</control>
+						<control type="textbox">
+							<posy>-35</posy>
+							<width>930</width>
+							<height>114</height>
+							<align>justify</align>
+							<label>$INFO[VideoPlayer.Plot]</label>
+							<autoscroll time="3000" delay="8000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
+							<font>LiberationSans_Regular_20</font>
+							<textcolor>white</textcolor>
+							<include>Animation_HiddenByInfo</include>
+							<visible>VideoPlayer.Content(episodes)</visible>
+						</control>
+						<control type="label">
+							<posx>80</posx>
+							<posy>92</posy>
+							<width>1080</width>
+							<height>25</height>
+							<label>$LOCALIZE[31074] [COLOR=mainblue][B]$INFO[System.Time][/COLOR][/B] | $LOCALIZE[31075]: [COLOR=mainblue][B]$INFO[Player.FinishTime][/B][/COLOR]</label>
+							<textcolor>white</textcolor>
+							<font>Font_Bartowski_Extras_Pause</font>
+							<align>center</align>
+						</control>
+						<control type="progress" id="23">
+							<texturebg>osd/osd_progress_back1.png</texturebg>
+							<lefttexture>osd/left.png</lefttexture>
+							<midtexture>osd/mid.png</midtexture>
+							<righttexture>osd/new_pause2.png</righttexture>
+							<info>Player.Progress</info>
+							<posx>80</posx>
+							<posy>130</posy>
+							<width>1080</width>
+							<height>19</height>
+						</control>
+						<control type="label">
+							<posx>70</posx>
+							<posy>128</posy>
+							<width>300</width>
+							<height>25</height>
+							<align>right</align> 
+							<font>LiberationSans_Regular_18</font>
+							<textcolor>mainblue</textcolor>
+							<label>[B]$INFO[VideoPlayer.Time][/B]</label>
+						</control>
+						<control type="label">
+							<posx>1170</posx>
+							<posy>128</posy>
+							<width>300</width>
+							<height>25</height>
+							<font>LiberationSans_Regular_18</font>
+							<textcolor>white</textcolor>
+							<label>[B]$INFO[VideoPlayer.Duration][/B]</label>
+						</control>
+						<control type ="image"> 
+							<description>tv show image</description>
+							<posx>950</posx>     
+							<posy>-220</posy>    
+							<width>300</width>
+							<height>340</height>
+							<aspectratio align="right" aligny="bottom">keep</aspectratio>
+							<texture>$INFO[VideoPlayer.Cover]</texture>
+							<bordertexture border="5">confluence/button-nofocus.png</bordertexture>
+							<bordersize>5</bordersize>
+						</control>
 				</control>
-				<control type="label">
-					<posx>0</posx>
-					<posy>40</posy>
-					<width>750</width> 
-					<height>25</height> 
-					<label>$INFO[VideoPlayer.Title]</label>
-					<align>left</align> 
-					<aligny>center</aligny> 
-					<font>DejaVuSans_Bold_32</font>
-					<textcolor>mainblue</textcolor>
-					<visible>VideoPlayer.Content(movies)</visible>
+				<control type="group">
+					<animation type="WindowOpen">
+						<effect type="fade" start="0" end="100" time="800"/>
+					</animation>
+					<animation type="WindowClose">
+						<effect type="fade" start="100" end="0" time="800"/>
+					</animation>
+						<control type="group">
+							<animation type="WindowOpen">
+								<effect type="slide" start="0,190" end="0,0" time="400" tween="cubic" easing="out" />
+							</animation>
+							<animation type="WindowClose">
+								<effect type="slide" start="0,0" end="0,190" time="400" delay="400" tween="cubic" easing="out" />
+							</animation>
+								<control type="group">
+									<visible>VideoPlayer.Content(episodes)</visible>
+										<control type="image" id="2555">
+											<posy>-205</posy>
+											<width>150</width>
+											<height>58</height>
+											<texture background="true">$INFO[Player.FolderPath]../logo.png</texture>
+											<fadetime>300</fadetime>
+											<aspectratio scalediffuse="false">stretch</aspectratio>
+										</control>
+										<control type="label">
+											<posy>-180</posy>
+											<width>930</width>
+											<height>25</height>
+											<label>$INFO[VideoPlayer.TVShowTitle]</label>
+											<align>left</align>
+											<aligny>center</aligny>
+											<font>DejaVuSans_Bold_32</font>
+											<textcolor>mainblue</textcolor>
+											<visible>IsEmpty(Control.GetLabel(2555))</visible>
+										</control>
+										<control type="label">
+											<posy>-140</posy>
+											<width>930</width>
+											<height>25</height>
+											<label>[B]$INFO[VideoPlayer.Title][/B]</label>
+											<align>left</align> 
+											<aligny>center</aligny>
+											<font>LiberationSans_Regular_28</font>
+											<textcolor>mainblue</textcolor>
+										</control>
+										<control type="label">
+											<posy>-115</posy>
+											<width>930</width>
+											<height>25</height>
+											<label>[B]$LOCALIZE[20373] $INFO[VideoPlayer.Season]/$LOCALIZE[20359] $INFO[VideoPlayer.Episode][/B]</label>
+											<align>left</align>
+											<aligny>center</aligny>
+											<font>LiberationSans_Regular_20</font>
+											<textcolor>white</textcolor>
+										</control>
+								</control>
+								<control type="group">
+									<visible>VideoPlayer.Content(movies)</visible>
+										<control type="label">
+											<posy>-210</posy>
+											<width>970</width>
+											<height>25</height>
+											<label>$INFO[VideoPlayer.Title]</label>
+											<align>left</align>
+											<aligny>center</aligny>
+											<font>DejaVuSans_Bold_32</font>
+											<textcolor>mainblue</textcolor>
+										</control>
+										<control type="label">
+											<posy>-174</posy>
+											<width>970</width>
+											<height>25</height>
+											<label>[B]$INFO[VideoPlayer.Year][/B]</label>
+											<align>left</align>
+											<aligny>center</aligny>
+											<font>LiberationSans_Regular_20</font>
+											<textcolor>white</textcolor>
+										</control>
+										<control type="group">
+											<posx>52</posx>
+											<posy>-174</posy>
+											<include condition="!Skin.HasSetting(vanilla_flags) + !Skin.HasSetting(flat_flags)">FScolor_MPAAs</include>
+											<include condition="Skin.HasSetting(vanilla_flags) | Skin.HasSetting(flat_flags) + !Skin.HasSetting(original_flags)">FSvanilla_MPAAs</include>
+										</control>
+								</control>
+						</control>
+						<control type="group">
+							<animation type="WindowOpen">
+								<effect type="slide" start="0,130" end="0,0" time="400" tween="cubic" easing="out" />
+							</animation>
+							<animation type="WindowClose">
+								<effect type="slide" start="0,0" end="0,130" time="400" delay="400" tween="cubic" easing="out" />
+							</animation>
+								<control type="image" id="8125"> <!-- Studioflags  -->
+									<posy>-100</posy>
+									<width>106</width>
+									<height>109</height>
+									<aspectratio align="center" aligny="top">keep</aspectratio>
+									<texture>$INFO[VideoPlayer.Studio,special://skin/extras/studios/,.png]</texture>
+								</control>
+								<control type="group">
+									<animation effect="slide" end="-108,13" time="0" condition="IsEmpty(Control.GetLabel(8125))">Conditional</animation>
+										<control type="grouplist">
+											<visible>!Skin.HasSetting(no_media_flags) + Skin.HasSetting(back_flags)</visible>
+											<description>Media Codec Flagging Images</description>
+											<posx>108</posx>
+											<posy>-87</posy>
+											<width>870</width>
+											<align>left</align>
+											<itemgap>0</itemgap>
+											<orientation>horizontal</orientation>
+											<include>FSback_flags</include>
+										</control>
+										<control type="grouplist">
+											<visible>!Skin.HasSetting(no_media_flags)</visible>
+											<description>Media Codec Flagging Images</description>
+											<posx>108</posx>
+											<posy>-87</posy>
+											<width>870</width>
+											<align>left</align>
+											<itemgap>0</itemgap>
+											<orientation>horizontal</orientation>
+											<include condition="!Skin.HasSetting(vanilla_flags) + !Skin.HasSetting(original_flags) + !Skin.HasSetting(flat_flags)">FScolor_flags</include>
+											<include condition="Skin.HasSetting(vanilla_flags) + !Skin.HasSetting(original_flags) + !Skin.HasSetting(flat_flags)">FSvanilla_flags</include>
+											<include condition="Skin.HasSetting(original_flags) + !Skin.HasSetting(vanilla_flags) + !Skin.HasSetting(flat_flags)">FSoriginal_flags</include>
+											<include condition="Skin.HasSetting(flat_flags) + !Skin.HasSetting(vanilla_flags) + !Skin.HasSetting(original_flags)">FSflat_flags</include>
+										</control>
+										<control type="grouplist">
+											<visible>!Skin.HasSetting(no_media_flags) + !Skin.HasSetting(no_frame_flags)</visible>
+											<description>Media Codec Flagging Images</description>
+											<posx>108</posx>
+											<posy>-87</posy>
+											<width>870</width>
+											<align>left</align>
+											<itemgap>0</itemgap>
+											<orientation>horizontal</orientation>
+											<include>FSframe_flags</include>
+										</control>
+								</control>
+						</control>
 				</control>
-				<control type="label">
-					<posx>0</posx>
-					<posy>250</posy>
-					<width>750</width> 
-					<height>25</height> 
-					<label>$INFO[VideoPlayer.Title]</label>
-					<align>left</align> 
-					<aligny>center</aligny> 
-					<font>DejaVuSans_Bold_32</font>
-					<textcolor>mainblue</textcolor>
-					<visible>![VideoPlayer.Content(episodes) | VideoPlayer.Content(movies)]</visible>
-				</control>
-				<control type="label">
-					<posx>0</posx>
-					<posy>70</posy>
-					<width>412</width> 
-					<height>25</height> 
-					<label>[B]$INFO[VideoPlayer.Year]/$INFO[VideoPlayer.Studio][/B]</label>
-					<align>left</align> 
-					<aligny>center</aligny> 
-					<font>LiberationSans_Regular_20</font>
-					<textcolor>white</textcolor>
-					<visible>VideoPlayer.Content(movies)</visible>
-				</control>
-				<control type="label">
-					<posx>0</posx>
-					<posy>50</posy>
-					<width>412</width> 
-					<height>25</height> 
-					<label>$LOCALIZE[20373] $INFO[VideoPlayer.Season]/$LOCALIZE[20359] $INFO[VideoPlayer.Episode]</label>
-					<align>left</align> 
-					<aligny>center</aligny> 
-					<font>LiberationSans_Regular_20</font>
-					<textcolor>white</textcolor>
-					<visible>VideoPlayer.Content(episodes)</visible>
-				</control>
-			</control>
-			<control type="textbox">
-				<posx>20</posx>
-				<posy>-30</posy>
-				<width>930</width>
-				<height>114</height>
-				<align>justify</align>
-				<label>$INFO[VideoPlayer.Plot]</label>
-				<autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
-				<font>LiberationSans_Regular_20</font>
-				<textcolor>white</textcolor>
-				<include>Animation_HiddenByInfo</include>
-				<visible>VideoPlayer.Content(episodes)</visible>
-			</control>
-			<control type="textbox">
-				<posx>20</posx>
-				<posy>-32</posy>
-				<width>980</width>
-				<height>120</height>
-				<align>justify</align>
-				<label>$INFO[VideoPlayer.Plot]</label>
-				<autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
-				<font>LiberationSans_Regular_20</font>
-				<textcolor>white</textcolor>
-				<include>Animation_HiddenByInfo</include>
-				<visible>VideoPlayer.Content(movies)</visible>
-			</control>
-			<control type="group">
-				<control type="label">
-					<posx>100</posx>
-					<posy>92</posy>
-					<width>1080</width>
-					<height>25</height>
-					<label>$LOCALIZE[31074] [COLOR=mainblue][B]$INFO[System.Time][/COLOR][/B] | $LOCALIZE[31075]: [COLOR=mainblue][B]$INFO[Player.FinishTime][/B][/COLOR]</label>
-					<textcolor>white</textcolor>
-					<font>Font_Bartowski_Extras_Pause</font>
-					<align>center</align>
-					<animation effect="fade" start="100" end="0" time="0">windowclose</animation>
-				</control>
-			</control>
-			<!-- Movie Info  -->
-			<control type="group">
-				<visible>VideoPlayer.Content(movies)</visible>
-				<posx>20</posx>
-				<posy>-116</posy>
-				<control type="label">
-					<description>Director Info</description>
-					<posx>0</posx>
-					<posy>24</posy>
-					<width>970</width>
-					<height>18</height>
-					<aligny>center</aligny>
-					<align>left</align>
-					<font>LiberationSans_Regular_18</font>
-					<label>[B][COLOR=mainblue]$LOCALIZE[20339]:[/COLOR][/B] [COLOR=white]$INFO[VideoPlayer.Director][/COLOR]</label>
-				</control>
-				<control type="label">
-					<description>Genre Info</description>
-					<posx>0</posx>
-					<posy>48</posy>
-					<width>970</width>
-					<height>18</height>
-					<aligny>center</aligny>
-					<align>left</align>
-					<font>LiberationSans_Regular_18</font>
-					<label>[B][COLOR=mainblue]$LOCALIZE[515]:[/COLOR][/B] [COLOR=white]$INFO[VideoPlayer.Genre][/COLOR]</label>
-				</control>
-			</control>
 		</control>
-	<control type="group">
-	<posy>560</posy>
-		<control type ="image"> 
-			<description>tv show image</description>
-			<posx>970</posx>     
-			<posy>-220</posy>    
-			<width>300</width>
-			<height>340</height>
-			<aspectratio align="right" aligny="bottom">keep</aspectratio>
-			<texture>$INFO[VideoPlayer.Cover]</texture>
-			<bordertexture border="5">confluence/button-nofocus.png</bordertexture>
-			<bordersize>5</bordersize>
-			<animation type="WindowOpen">
-				<effect type="fade" start="0" end="100" time="600" />
-			</animation>
-			<animation type="WindowClose">
-				<effect type="fade" start="100" end="0" time="600" />
-			</animation>
-			<visible>!Control.IsVisible(10)</visible>
-		</control>
-	</control>
-		
+
 		<include>Global_Time_TopRight_OSD</include>
+
 	</controls>
 </window>

@@ -2314,7 +2314,7 @@
 					<posx>290</posx>
 					<posy>60</posy>
 					<width>860</width>
-					<height>585</height>
+					<height>800</height>
 					<itemgap>-1</itemgap>
 					<pagecontrol>61</pagecontrol>
 					<onleft>9000</onleft>
@@ -3391,7 +3391,7 @@
 					<posx>290</posx>
 					<posy>60</posy>
 					<width>860</width>
-					<height>646</height>
+					<height>800</height>
 					<itemgap>-1</itemgap>
 					<pagecontrol>61</pagecontrol>
 					<onleft>9000</onleft>
@@ -3522,17 +3522,17 @@
 							<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
 							<onclick>XBMC.RunScript(script.logo-downloader,mode=bulk,clearart=True,logo=True,showthumb=False)</onclick>
 						</control>
-				</control>
-				<control type="textbox" id="529">
-					<posx>310</posx>
-					<posy>500</posy>
-					<width>830</width>
-					<height>290</height>
-					<align>justify</align>
-					<label>$LOCALIZE[31265]</label>
-					<font>LiberationSans_Regular_18</font>
-					<textcolor>white</textcolor>
-					<visible>Container(9000).Hasfocus(9)</visible>
+						<control type="textbox" id="529">
+							<posx>310</posx>
+							<posy>500</posy>
+							<width>830</width>
+							<height>290</height>
+							<align>justify</align>
+							<label>$LOCALIZE[31265]</label>
+							<font>LiberationSans_Regular_18</font>
+							<textcolor>white</textcolor>
+							<visible>Container(9000).Hasfocus(9)</visible>
+						</control>
 				</control>
 			</control>
 

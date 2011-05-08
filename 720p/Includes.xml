@@ -48,6 +48,7 @@
 	<include file="IncludesHomeRecentlyAdded.xml" />
 	<include file="Includes_Music_Global.xml" />
 	<include file="IncludesCodecFlagging.xml" />
+	<include file="IncludesCodecFlaggingFullScreen.xml" />
 	<include file="IncludesHomepageWeatherWidget.xml" />
 	<include file="Includes_Home_Horizontal.xml" />
 	<include file="Includes_Qlock.xml" />
@@ -117,7 +118,7 @@
 		 <onfocus>XBMC.RunScript(script.tvtunes,backend=True&amp;loop=True)</onfocus>
          <onfocus>SetFocus(50)</onfocus>
 	</include>
-	
+
 	<include name="posterview_width_dark">
 		<width>1400</width>
 	</include>
@@ -138,49 +139,116 @@
 	<include name="horizontal_onup_lower">
 		<onup>78881</onup>
 	</include>
-	
+
 	<include name="frame_flags">
-		<include>VideoCodecFlaggingConditions_frame</include>
-		<include>AudioCodecFlaggingConditions_frame</include>
-		<include>AspectCodecFlaggingConditions_frame</include>
-		<include>VideoTypeHackFlaggingConditions_frame</include>
+		<include>ResFlags_frame</include>
+		<include>AspectCodecFlags_frame</include>
+		<include>VideoCodecFlags_frame</include>
+		<include>AudioCodecFlags_frame</include>
+		<include>AudioChannelFlags_frame</include>
+		<include>VideoTypeHackFlags_frame</include>
 	</include>
 	<include name="back_flags">
-		<include>VideoCodecFlaggingConditions_back</include>
-		<include>AudioCodecFlaggingConditions_back</include>
-		<include>AspectCodecFlaggingConditions_back</include>
-		<include>VideoTypeHackFlaggingConditions_back</include>
+		<include>ResFlags_back</include>
+		<include>AspectCodecFlags_back</include>
+		<include>VideoCodecFlags_back</include>
+		<include>AudioCodecFlags_back</include>
+		<include>AudioChannelFlags_back</include>
+		<include>VideoTypeHackFlags_back</include>
 	</include>
 	<include name="color_flags">
-		<include>VideoCodecFlaggingConditions</include>
-		<include>AudioCodecFlaggingConditions</include>
-		<include>AspectCodecFlaggingConditions</include>
-		<include>VideoTypeHackFlaggingConditions</include>
+		<include>ResFlags</include>
+		<include>AspectCodecFlags</include>
+		<include>VideoCodecFlags</include>
+		<include>AudioCodecFlags</include>
+		<include>AudioChannelFlags</include>
+		<include>VideoTypeHackFlags</include>
 	</include>
 	<include name="original_flags">
-		<include>VideoCodecFlaggingConditions_original</include>
-		<include>AudioCodecFlaggingConditions_original</include>
-		<include>AspectCodecFlaggingConditions_original</include>
-		<include>VideoTypeHackFlaggingConditions_original</include>
+		<include>ResFlags_original</include>
+		<include>AspectCodecFlags_original</include>
+		<include>VideoCodecFlags_original</include>
+		<include>AudioCodecFlags_original</include>
+		<include>AudioChannelFlags_original</include>
+		<include>VideoTypeHackFlags_original</include>
 	</include>
 	<include name="vanilla_flags">
-		<include>VideoCodecFlaggingConditions_vanilla</include>
-		<include>AudioCodecFlaggingConditions_vanilla</include>
-		<include>AspectCodecFlaggingConditions_vanilla</include>
-		<include>VideoTypeHackFlaggingConditions_vanilla</include>
+		<include>ResFlags_vanilla</include>
+		<include>AspectCodecFlags_vanilla</include>
+		<include>VideoCodecFlags_vanilla</include>
+		<include>AudioCodecFlags_vanilla</include>
+		<include>AudioChannelFlags_vanilla</include>
+		<include>VideoTypeHackFlags_vanilla</include>
 	</include>
 	<include name="flat_flags">
-		<include>VideoCodecFlaggingConditions_flat</include>
-		<include>AudioCodecFlaggingConditions_flat</include>
-		<include>AspectCodecFlaggingConditions_flat</include>
-		<include>VideoTypeHackFlaggingConditions_flat</include>
+		<include>ResFlags_flat</include>
+		<include>AspectCodecFlags_flat</include>
+		<include>VideoCodecFlags_flat</include>
+		<include>AudioCodecFlags_flat</include>
+		<include>AudioChannelFlags_flat</include>
+		<include>VideoTypeHackFlags_flat</include>
 	</include>
 	<include name="color_MPAAs">
-		<include>VideoMPAAFlaggingConditions</include>	
+		<include>VideoMPAAFlags</include>
 	</include>
 	<include name="vanilla_MPAAs">
-		<include>VideoMPAAFlaggingConditions_vanilla</include>		
-	</include>			
+		<include>VideoMPAAFlags_vanilla</include>
+	</include>
+
+	<include name="FSframe_flags">
+		<include>ResFlagsFS_frame</include>
+		<include>AspectCodecFlagsFS_frame</include>
+		<include>VideoCodecFlagsFS_frame</include>
+		<include>AudioCodecFlagsFS_frame</include>
+		<include>AudioChannelFlagsFS_frame</include>
+		<include>VideoTypeHackFlagsFS_frame</include>
+	</include>
+	<include name="FSback_flags">
+		<include>ResFlagsFS_back</include>
+		<include>AspectCodecFlagsFS_back</include>
+		<include>VideoCodecFlagsFS_back</include>
+		<include>AudioCodecFlagsFS_back</include>
+		<include>AudioChannelFlagsFS_back</include>
+		<include>VideoTypeHackFlagsFS_back</include>
+	</include>
+	<include name="FScolor_flags">
+		<include>ResFlagsFS</include>
+		<include>AspectCodecFlagsFS</include>
+		<include>VideoCodecFlagsFS</include>
+		<include>AudioCodecFlagsFS</include>
+		<include>AudioChannelFlagsFS</include>
+		<include>VideoTypeHackFlagsFS</include>
+	</include>
+	<include name="FSoriginal_flags">
+		<include>ResFlagsFS_original</include>
+		<include>AspectCodecFlagsFS_original</include>
+		<include>VideoCodecFlagsFS_original</include>
+		<include>AudioCodecFlagsFS_original</include>
+		<include>AudioChannelFlagsFS_original</include>
+		<include>VideoTypeHackFlagsFS_original</include>
+	</include>
+	<include name="FSvanilla_flags">
+		<include>ResFlagsFS_vanilla</include>
+		<include>AspectCodecFlagsFS_vanilla</include>
+		<include>VideoCodecFlagsFS_vanilla</include>
+		<include>AudioCodecFlagsFS_vanilla</include>
+		<include>AudioChannelFlagsFS_vanilla</include>
+		<include>VideoTypeHackFlagsFS_vanilla</include>
+	</include>
+	<include name="FSflat_flags">
+		<include>ResFlagsFS_flat</include>
+		<include>AspectCodecFlagsFS_flat</include>
+		<include>VideoCodecFlagsFS_flat</include>
+		<include>AudioCodecFlagsFS_flat</include>
+		<include>AudioChannelFlagsFS_flat</include>
+		<include>VideoTypeHackFlagsFS_flat</include>
+	</include>
+	<include name="FScolor_MPAAs">
+		<include>VideoMPAAFlagsFS</include>
+	</include>
+	<include name="FSvanilla_MPAAs">
+		<include>VideoMPAAFlagsFS_vanilla</include>
+	</include>
 	
 	<include name="random_movies">
 		<onfocus>RunScript(script.recentlyadded,limit=10&amp;albums=True)</onfocus>

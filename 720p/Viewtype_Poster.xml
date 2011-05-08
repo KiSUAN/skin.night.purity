@@ -473,7 +473,7 @@
 					<visible>Skin.HasSetting(PosterPlus) + !SubString(ListItem.Icon,DefaultFolderBack.png,Left) + Container.Content(movies) + !Skin.HasSetting(Poster_Fanart) + !Window.IsActive(videofiles)</visible>
 						<control type="textbox">
 							<width>600</width>
-							<height>50</height>
+							<height>40</height>
 							<align>center</align>
 							<font>LiberationSans_Regular_20</font>
 							<textcolor>mainblue</textcolor>
