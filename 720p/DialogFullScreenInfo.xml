@@ -69,7 +69,7 @@
 								</control>
 								<control type="textbox">
 									<posy>-35</posy>
-									<width>970</width>
+									<width>960</width>
 									<height>120</height>
 									<align>justify</align>
 									<label>$INFO[VideoPlayer.Plot]</label>
