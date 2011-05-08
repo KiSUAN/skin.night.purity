@@ -28,7 +28,7 @@
 			<movement>9</movement>
 			<pagecontrol>92</pagecontrol>
 			<include>Animation_Viewtype_Panel_FocusArea</include>
-			<visible>![Container.Content(albums) | Container.Content(files) | Container.Content(artists) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(musicvideos) | Container.Content(genres) | Container.Content(years) | Container.Content(actors) | Container.Content(playlists) | Container.Content(albums) | Container.Content(Studios) | Container.Content(plugins) | Container.Content(directors)]</visible>
+			<visible>![Container.Content(albums) | Container.Content(files) | Container.Content(artists) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(musicvideos) | Container.Content(genres) | Container.Content(years) | Container.Content(actors) | Container.Content(playlists) | Container.Content(albums) | Container.Content(Studios) | Container.Content(plugins) | Container.Content(directors) | substring(container.folderpath,plugin://plugin.video)]</visible>
 			<animation effect="slide" start="0,0" end="-40,0" time="400" tween="cubic" easing="inout" condition="Control.HasFocus(92)">Conditional</animation>
 			<itemlayout width="1210" height="36">
 				<control type="group">

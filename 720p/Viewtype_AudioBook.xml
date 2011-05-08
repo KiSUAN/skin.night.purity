@@ -262,6 +262,7 @@
 					<aligny>center</aligny>
 					<font>LiberationSans_Regular_18</font>
 					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
 					<label>[B][COLOR=mainblue]$LOCALIZE[20417]:[/COLOR][/B] $INFO[ListItem.Artist]</label>
 						<animation effect="fade" start="0" end="100" time="400" delay="3000" condition="Control.IsVisible(622)">WindowOpen</animation>
 				</control>
@@ -271,6 +272,7 @@
 					<aligny>center</aligny>
 					<font>LiberationSans_Regular_18</font>
 					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
 					<label>[B][COLOR=mainblue]Narrated/Read by:[/COLOR][/B] $INFO[ListItem.Property(Album_Label)]</label>
 						<animation effect="fade" start="0" end="100" time="400" delay="3000" condition="Control.IsVisible(622)">WindowOpen</animation>
 				</control>
@@ -280,6 +282,7 @@
 					<aligny>center</aligny>
 					<font>LiberationSans_Regular_18</font>
 					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
 					<label>[B][COLOR=mainblue]$LOCALIZE[562]:[/COLOR][/B] $INFO[ListItem.Year]</label>
 						<animation effect="fade" start="0" end="100" time="400" delay="3000" condition="Control.IsVisible(622)">WindowOpen</animation>
 				</control>
@@ -289,6 +292,7 @@
 					<aligny>center</aligny>
 					<font>LiberationSans_Regular_18</font>
 					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
 					<label>[B][COLOR=mainblue]$LOCALIZE[515]:[/COLOR][/B] $INFO[ListItem.Property(Album_Mood)]</label>
 						<animation effect="fade" start="0" end="100" time="400" delay="3000" condition="Control.IsVisible(622)">WindowOpen</animation>
 				</control>
@@ -298,6 +302,7 @@
 					<aligny>center</aligny>
 					<font>LiberationSans_Regular_18</font>
 					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
 					<label>[B][COLOR=mainblue]$LOCALIZE[563]:[/COLOR][/B] $INFO[ListItem.Rating]</label>
 						<animation effect="fade" start="0" end="100" time="400" delay="3000" condition="Control.IsVisible(622)">WindowOpen</animation>
 				</control>

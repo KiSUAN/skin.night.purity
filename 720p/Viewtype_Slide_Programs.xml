@@ -102,13 +102,12 @@
 		</control>
 
 		<control type="group">
-			<posx>640</posx>
+			<posx>655</posx>
 			<posy>290</posy>
 			<animation effect="slide" start="0,0" end="0,-400" time="200" delay="600" condition="Control.HasFocus(8243)">Conditional</animation>
 			<visible>Control.IsVisible(595) + !SubString(ListItem.Icon,DefaultFolderBack.png,Left)</visible>
 			<include>Animation_BackdropFade</include>
 				<control type="label"><!--Movie title-->
-					<posx>15</posx>
 					<posy>245</posy>
 					<width>600</width>
 					<height>50</height>
@@ -118,41 +117,40 @@
 					<scroll>true</scroll>			
 					<label>[B]$INFO[ListItem.Label][/B]</label>
 				</control>
-				<control type="label">
-					<posx>15</posx>
-					<posy>273</posy>
-					<width>394</width>
-					<height>50</height>
-					<aligny>center</aligny>
-					<font>LiberationSans_Regular_24</font>
-					<textcolor>white</textcolor>
-					<label>31508</label>
-					<visible>IsEmpty(ListItem.foldername) + !substring(Container.Listitem.Label,..,left)</visible>
+				<control type="image" id="8180"> <!-- Studioflags  -->
+					<posy>290</posy>
+					<width>109</width>
+					<height>72</height>
+					<aspectratio align="center" aligny="top">keep</aspectratio>
+					<texture>$INFO[ListItem.Studio,special://skin/extras/studios/,.png]</texture>
+					<include>Animation_ZoomInZoomOut</include>
 				</control>
-				<control type="label"><!--Studio Year-->
-					<posx>15</posx>
-					<posy>322</posy>
-					<width>394</width>
-					<height>50</height>
-					<aligny>center</aligny>
-					<font>LiberationSans_Regular_18</font>
-					<textcolor>white</textcolor>
-					<label>[B]$INFO[ListItem.Studio]$INFO[ListItem.Premiered,  (,)][/B]</label>
-					<animation effect="slide" start="0,0" end="0,-23" time="0" condition="IsEmpty(ListItem.Duration)">Conditional</animation>
-				</control>
-				<control type="label"><!--Genre-->
-					<posx>15</posx>
-					<posy>287</posy>
-					<width>394</width>
-					<height>50</height>
-					<font>LiberationSans_Regular_22</font>
-					<label>[B][COLOR=ListTrackF]$LOCALIZE[515][/COLOR] [B][COLOR=white]$INFO[ListItem.Genre][/B][/COLOR]</label>
+				<control type="group">
+					<animation effect="slide" end="-110,0" time="0" condition="IsEmpty(Control.GetLabel(8180))">Conditional</animation>
+						<control type="label"><!--Studio Year-->
+							<posx>120</posx>
+							<posy>308</posy>
+							<width>394</width>
+							<height>50</height>
+							<aligny>center</aligny>
+							<font>LiberationSans_Regular_18</font>
+							<textcolor>white</textcolor>
+							<label>[B]$INFO[ListItem.Studio]$INFO[ListItem.Premiered,  (,)][/B]</label>
+						</control>
+						<control type="label"><!--Genre-->
+							<posx>120</posx>
+							<posy>292</posy>
+							<width>394</width>
+							<height>50</height>
+							<font>LiberationSans_Regular_22</font>
+							<label>[B][COLOR=ListTrackF]$LOCALIZE[515][/COLOR] [B][COLOR=white]$INFO[ListItem.Genre][/B][/COLOR]</label>
+						</control>
 				</control>
 		</control>
 
 		<control type="group">
-			<posy>40</posy>
-			<animation effect="slide" start="1000,0" end="0,0" time="400" delay="600" condition="![IsEmpty(Control.GetLabel(8243)) + IsEmpty(Control.GetLabel(8244))]">Conditional</animation>
+			<posy>60</posy>
+			<animation effect="slide" start="1000,0" end="0,0" time="400" delay="600">Visible</animation>
 			<visible>Control.IsVisible(595) + Control.HasFocus(8243) + ![Control.HasFocus(8243) + Player.HasVideo]]</visible>
 			<include>Animation_BackdropFade</include>	
 				<control type="image" id="8243">
@@ -194,7 +192,7 @@
 		<control type="textbox">
 			<description>Plot Movie</description>
 			<posx>660</posx>
-			<posy>230</posy>
+			<posy>250</posy>
 			<width>600</width>
 			<height>230</height>
 			<align>justify</align>
@@ -211,7 +209,7 @@
 		<control type="label">
 			<visible>Control.IsVisible(595) + !Control.HasFocus(8243) + !SubString(ListItem.Icon,DefaultFolderBack.png,Left)</visible>
 			<posx>410</posx>
-			<posy>668</posy>
+			<posy>608</posy>
 			<width>370</width>
 			<height>50</height>
 			<aligny>center</aligny>
@@ -225,7 +223,7 @@
 		<control type="label">
 			<visible>Control.IsVisible(595) + Control.HasFocus(8243) + Player.HasVideo</visible>
 			<posx>410</posx>
-			<posy>668</posy>
+			<posy>608</posy>
 			<width>370</width>
 			<height>50</height>
 			<aligny>center</aligny>

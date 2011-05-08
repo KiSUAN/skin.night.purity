@@ -234,38 +234,17 @@
 									<height>19</height>
 									<visible>![IsEmpty(Control.GetLabel(7657)) + IsEmpty(Control.GetLabel(7658))]</visible>
 								</control>
-								<control type="group">
+								<control type="label">
+									<posx>80</posx>
+									<posy>92</posy>
+									<width>1080</width>
+									<height>25</height>
+									<label>$LOCALIZE[31074]: [COLOR=mainblue][B]$INFO[System.Time][/COLOR][/B] | $LOCALIZE[31075]: [COLOR=mainblue][B]$INFO[Player.FinishTime][/B][/COLOR]</label>
+									<textcolor>white</textcolor>
+									<font>Font_Bartowski_Extras_Pause</font>
+									<align>center</align>
+									<visible>Player.Paused</visible>
 									<animation effect="slide" start="0,0" end="-140,8" time="0" tween="cubic" easing="inout" condition="![IsEmpty(Control.GetLabel(7657)) + IsEmpty(Control.GetLabel(7658))]">Conditional</animation>
-										<control type="label">
-											<posx>80</posx>
-											<posy>92</posy>
-											<width>1080</width>
-											<height>25</height>
-											<label>[B]"$INFO[VideoPlayer.Title]"[/B]</label>
-											<textcolor>white</textcolor>
-											<font>Font_Bartowski_Extras_Pause</font>
-											<align>center</align>
-											<animation type="Conditional" reversible="false" condition="Player.Paused" loop="true">
-												<effect type="fade" start="0" end="100" time="500" delay="0" />
-												<effect type="fade" start="100" end="0" time="500" delay="7000" />
-												<effect type="fade" start="100" end="0" time="500" delay="14000" />
-											</animation>
-										</control>
-										<control type="label">
-											<posx>80</posx>
-											<posy>92</posy>
-											<width>1080</width>
-											<height>25</height>
-											<label>$LOCALIZE[31074]: [COLOR=mainblue][B]$INFO[System.Time][/COLOR][/B] | $LOCALIZE[31075]: [COLOR=mainblue][B]$INFO[Player.FinishTime][/B][/COLOR]</label>
-											<textcolor>white</textcolor>
-											<font>Font_Bartowski_Extras_Pause</font>
-											<align>center</align>
-											<visible>Player.Paused</visible>
-											<animation type="Conditional" reversible="false" condition="Player.Paused" loop="true">
-												<effect type="fade" start="0" end="100" time="500" delay="7500" />
-												<effect type="fade" start="100" end="0" time="500" delay="14000" />
-											</animation>
-										</control>
 								</control>
 						</control>
 						<control type="label">

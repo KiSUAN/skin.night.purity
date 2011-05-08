@@ -298,6 +298,7 @@
 							<aligny>center</aligny>
 							<font>LiberationSans_Regular_18</font>
 							<textcolor>white</textcolor>
+							<shadowcolor>black</shadowcolor>
 							<label>[B][COLOR=mainblue]$LOCALIZE[515][/COLOR][/B] - $INFO[ListItem.Genre]</label>
 							<animation effect="fade" start="0" end="100" time="400" delay="3000" condition="Control.IsVisible(55)">WindowOpen</animation>
 							<visible>!IsEmpty(ListItem.Genre)</visible>
@@ -308,6 +309,7 @@
 							<aligny>center</aligny>
 							<font>LiberationSans_Regular_18</font>
 							<textcolor>white</textcolor>
+							<shadowcolor>black</shadowcolor>
 							<label>[B][COLOR=mainblue]$LOCALIZE[572][/COLOR][/B] - $INFO[ListItem.Studio]</label>
 							<animation effect="fade" start="0" end="100" time="400" delay="3000" condition="Control.IsVisible(55)">WindowOpen</animation>
 							<visible>!IsEmpty(ListItem.Studio)</visible>
@@ -318,6 +320,7 @@
 							<aligny>center</aligny>
 							<font>LiberationSans_Regular_18</font>
 							<textcolor>white</textcolor>
+							<shadowcolor>black</shadowcolor>
 							<label>[B][COLOR=mainblue]Platform[/COLOR][/B] - $INFO[ListItem.Writer]</label>
 							<animation effect="fade" start="0" end="100" time="400" delay="3000" condition="Control.IsVisible(55)">WindowOpen</animation>
 							<visible>!IsEmpty(ListItem.Writer)</visible>
@@ -328,6 +331,7 @@
 							<aligny>center</aligny>
 							<font>LiberationSans_Regular_18</font>
 							<textcolor>white</textcolor>
+							<shadowcolor>black</shadowcolor>
 							<label>[B][COLOR=mainblue]Premiered[/COLOR][/B] - $INFO[ListItem.Premiered]</label>
 							<animation effect="fade" start="0" end="100" time="400" delay="3000" condition="Control.IsVisible(55)">WindowOpen</animation>
 							<visible>!IsEmpty(ListItem.Premiered)</visible>
@@ -338,6 +342,7 @@
 							<aligny>center</aligny>
 							<font>LiberationSans_Regular_18</font>
 							<textcolor>white</textcolor>
+							<shadowcolor>black</shadowcolor>
 							<label>[B][COLOR=mainblue]$LOCALIZE[24051][/COLOR][/B] $INFO[ListItem.Property(Addon.Version)]</label>
 							<animation effect="fade" start="0" end="100" time="400" delay="3000" condition="Control.IsVisible(55)">WindowOpen</animation>
 							<visible>!IsEmpty(ListItem.Property(Addon.Version))</visible>
@@ -348,6 +353,7 @@
 							<aligny>center</aligny>
 							<font>LiberationSans_Regular_18</font>
 							<textcolor>white</textcolor>
+							<shadowcolor>black</shadowcolor>
 							<label>[B][COLOR=mainblue]$LOCALIZE[146][/COLOR][/B] $INFO[ListItem.Property(Addon.Type)]</label>
 							<animation effect="fade" start="0" end="100" time="400" delay="3000" condition="Control.IsVisible(55)">WindowOpen</animation>
 							<visible>!IsEmpty(ListItem.Property(Addon.Type))</visible>
@@ -358,6 +364,7 @@
 							<aligny>center</aligny>
 							<font>LiberationSans_Regular_18</font>
 							<textcolor>white</textcolor>
+							<shadowcolor>black</shadowcolor>
 							<label>[B][COLOR=mainblue]$LOCALIZE[21863]:[/COLOR][/B] $INFO[ListItem.Property(Addon.Creator)]</label>
 							<animation effect="fade" start="0" end="100" time="400" delay="3000" condition="Control.IsVisible(55)">WindowOpen</animation>
 							<visible>!IsEmpty(ListItem.Property(Addon.Creator))</visible>
@@ -368,6 +375,7 @@
 							<aligny>center</aligny>
 							<font>LiberationSans_Regular_18</font>15311
 							<textcolor>white</textcolor>
+							<shadowcolor>black</shadowcolor>
 							<label>[B][COLOR=mainblue]$LOCALIZE[15311][/COLOR][/B] $INFO[ListItem.Property(Addon.Path)]</label>
 							<animation effect="fade" start="0" end="100" time="400" delay="3000" condition="Control.IsVisible(55)">WindowOpen</animation>
 							<visible>!IsEmpty(ListItem.Property(Addon.Path))</visible>

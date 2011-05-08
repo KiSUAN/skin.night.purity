@@ -239,7 +239,7 @@
 								<control type="image" id="8125"> <!-- Studioflags  -->
 									<posy>-100</posy>
 									<width>106</width>
-									<height>109</height>
+									<height>72</height>
 									<aspectratio align="center" aligny="top">keep</aspectratio>
 									<texture>$INFO[VideoPlayer.Studio,special://skin/extras/studios/,.png]</texture>
 								</control>
