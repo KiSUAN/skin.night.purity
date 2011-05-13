@@ -1,7 +1,4 @@
-<!--Alaska-->
-
 <includes>
-
 	<include name="Viewtype_Poster_Programs">
 
 		<control type="group">
@@ -409,5 +406,4 @@
 		</control>
 
 	</include>
-
 </includes>

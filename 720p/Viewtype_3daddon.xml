@@ -1,7 +1,4 @@
-<!--Alaska-->
-
 <includes>
-
 	<include name="Viewtype_3daddon">
 
 		<control type="group">
@@ -367,5 +364,4 @@
 		</control>
 
 	</include>
-
 </includes>

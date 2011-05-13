@@ -1,7 +1,4 @@
-<!--Alaska-->
-
 <includes>
-
 	<include name="Viewtype_Fanart">
 
 		<control type="group">
@@ -456,5 +453,4 @@
 		</control>
 
 	</include>
-
 </includes>

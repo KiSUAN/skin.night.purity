@@ -1,5 +1,3 @@
-
-
 <includes>
 	<include name="Viewtype_JukeBox">
 
@@ -425,6 +423,5 @@
 				</control>
 		</control>
 	
-</include>
-
+	</include>
 </includes>

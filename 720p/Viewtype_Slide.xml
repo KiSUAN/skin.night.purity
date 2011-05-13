@@ -1,7 +1,4 @@
-<!--Alaska-->
-
 <includes>
-
 	<include name="Viewtype_Slide">
 
 		<control type="image">
@@ -397,5 +394,4 @@
 		</control>
 
 	</include>
-
 </includes>

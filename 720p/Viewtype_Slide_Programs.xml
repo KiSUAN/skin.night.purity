@@ -1,5 +1,3 @@
-<!--Alaska-->
-
 <includes>
 
 	<include name="Viewtype_Slide_Programs">
@@ -14,7 +12,7 @@
 			<aspectratio>stretch</aspectratio>
 			<include>Animation_BackdropFade</include>
 		</control>
-		
+
 		<control type="wraplist" id="595">
 			<posx>-100</posx>
 			<posy>0</posy>
@@ -34,24 +32,24 @@
 			<visible>!Skin.HasSetting(no_Slide) + substring(container.folderpath,plugin://plugin.program.advanced.launcher)</visible>
 				<itemlayout width="210" height="700">
 					<control type="group">
-					<posx>0</posx>
-					<posy>200</posy>
-					<animation effect="fade" start="100" end="0" time="400" delay="400" condition="Control.HasFocus(8243)">Conditional</animation>
-						<control type="image">
-							<posx>16</posx>
-							<posy>10</posy>
-							<width>201</width>
-							<height>301</height>
-							<texture background="true" diffuse="Comics/poster_diffuse_itemlist.png">$INFO[ListItem.Icon]</texture>
-							<fadetime>200</fadetime>
-							<aspectratio scalediffuse="false">stretch</aspectratio>
-						</control>
+						<posx>0</posx>
+						<posy>200</posy>
+						<animation effect="fade" start="100" end="0" time="400" delay="400" condition="Control.HasFocus(8243)">Conditional</animation>
+							<control type="image">
+								<posx>16</posx>
+								<posy>10</posy>
+								<width>201</width>
+								<height>301</height>
+								<texture background="true" diffuse="Comics/poster_diffuse_itemlist.png">$INFO[ListItem.Icon]</texture>
+								<fadetime>200</fadetime>
+								<aspectratio scalediffuse="false">stretch</aspectratio>
+							</control>
 					</control>
 				</itemlayout>
 				<focusedlayout width="304" height="800">
 					<control type="group">
-					<posx>10</posx>
-					<posy>200</posy>
+						<posx>10</posx>
+						<posy>200</posy>
 					</control>
 				</focusedlayout>
 		</control>
@@ -282,5 +280,4 @@
 		</control>
 
 	</include>
-
 </includes>

@@ -1,7 +1,4 @@
-
-
 <includes>
-
 	<include name="Viewtype_Showcase_Programs">
 
 		<control type="group">
@@ -89,7 +86,6 @@
 							</control>
 					</control>
 				</itemlayout>
-
 				<focusedlayout width="210" height="515">
 					<control type="group">	
 					<animation effect="slide" start="0,0" end="0,30" time="0" tween="cubic" easing="inout" condition="Control.IsVisible(58) + Skin.HasSetting(ShowcaseFanart_Programs)">Conditional</animation>
@@ -285,5 +281,4 @@
 		</control>
 
 	</include>
-
 </includes>

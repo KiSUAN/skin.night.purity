@@ -1,7 +1,4 @@
-
-
 <includes>
-
 	<include name="Viewtype_Showcase">
 
 		<control type="group">
@@ -65,128 +62,128 @@
 			<animation effect="slide" start="0,0" end="0,160" time="700" condition="Skin.HasSetting(ShowcaseFanart)">Conditional</animation>
 			<include>Animation_Viewtype_Showcase_FocusArea</include>
 			<visible>!Skin.HasSetting(no_Showcase) + [Container.Content(movies) | substring(container.folderpath,plugin://plugin.video.apple.movie.trailers.lite)]</visible>
-			<itemlayout width="168" height="245">
-				<control type="group">
+				<itemlayout width="168" height="245">
+					<control type="group">
+							<control type="image">
+								<posx>1</posx>
+								<posy>131</posy>
+								<width>162</width>
+								<height>241</height>
+								<texture background="true" diffuse="postermatteNF.png">$INFO[ListItem.Icon]</texture>
+								<fadetime>200</fadetime>
+								<aspectratio scalediffuse="false">stretch</aspectratio>
+							</control>
+							<control type="image">
+								<posx>-8</posx>
+								<posy>122</posy>
+								<width>180</width>
+								<height>260</height>
+								<texture>posterframeF.png</texture>
+								<colordiffuse>39FFFFFF</colordiffuse>
+							</control>
+							<control type="image">
+								<posx>1</posx>
+								<posy>374</posy>
+								<width>162</width>
+								<height>241</height>
+								<texture background="true" flipy="true" diffuse="movie-poster/Movie_Thumb_Mask.png">$INFO[ListItem.Icon]</texture>
+								<colordiffuse>69FFFFFF</colordiffuse>
+								<fadetime>200</fadetime>
+								<aspectratio scalediffuse="false">stretch</aspectratio>
+							</control>
+							<control type="image">
+								<posx>123</posx>
+								<posy>335</posy>
+								<width>40</width>
+								<height>40</height>
+								<texture>dialogs/movies/$INFO[ListItem.Overlay]</texture>
+								<visible>Skin.HasSetting(movieoverlays) + !IsEmpty(ListItem.Overlay)</visible>
+							</control>
+							<control type="image">
+								<posx>123</posx>
+								<posy>338</posy>
+								<width>33</width>
+								<height>28</height>
+								<texture>dialogs/movies/movieset.png</texture>
+								<visible>Container.Content(movies) + IsEmpty(ListItem.foldername) + !substring(Container.Listitem.Label,..,left) + !Container.Content(genres) + Window.IsActive(videolibrary)</visible>
+							</control>
+					</control>
+				</itemlayout>
+				<focusedlayout width="210" height="515">
+					<control type="group">
+					<animation effect="slide" start="0,0" end="0,30" time="0" tween="cubic" easing="inout" condition="Control.IsVisible(58) + Container.Content(movies) + Skin.HasSetting(ShowcaseFanart)">Conditional</animation>
 						<control type="image">
-							<posx>1</posx>
-							<posy>131</posy>
-							<width>162</width>
-							<height>241</height>
-							<texture background="true" diffuse="postermatteNF.png">$INFO[ListItem.Icon]</texture>
-							<fadetime>200</fadetime>
-							<aspectratio scalediffuse="false">stretch</aspectratio>
+							<posx>-94</posx>
+							<posy>24</posy>
+							<width>389</width>
+							<height>405</height>
+							<texture>showcase/showcase_glow2.png</texture>
+							<colordiffuse>poster_glow</colordiffuse>
+							<animation type="Focus" reversible="false">
+								<effect type="zoom" center="90,258" start="81" end="100" time="400" tween="back" easing="out" />
+								<effect type="fade" start="0" end="100" time="1000" delay="400"/>
+							</animation>
 						</control>
 						<control type="image">
-							<posx>-8</posx>
-							<posy>122</posy>
-							<width>180</width>
-							<height>260</height>
+							<posx>2</posx>
+							<posy>90</posy>
+							<width>201</width>
+							<height>300</height>
+							<texture background="true" diffuse="postermatte.png">$INFO[ListItem.Icon]</texture>
+							<fadetime>200</fadetime>
+							<aspectratio scalediffuse="false">stretch</aspectratio>
+							<animation type="Focus" reversible="false">
+								<effect type="zoom" center="80,238" start="81" end="100" time="400" tween="back" easing="out" />
+							</animation>
+						</control>
+						<control type="image">
+							<posx>2</posx>
+							<posy>394</posy>
+							<width>201</width>
+							<height>300</height>
+							<texture background="true" flipy="true" diffuse="postermatte.png">$INFO[ListItem.Icon]</texture>
+							<fadetime>200</fadetime>
+							<aspectratio scalediffuse="false">stretch</aspectratio>
+							<animation type="Focus" reversible="false">
+								<effect type="zoom" center="80,238" start="81" end="100" time="400" tween="back" easing="out" />
+								<effect type="fade" start="0" end="60" time="600" />
+							</animation>
+						</control>
+						<control type="image">
+							<posx>-10</posx>
+							<posy>78</posy>
+							<width>225</width>
+							<height>325</height>
 							<texture>posterframeF.png</texture>
-							<colordiffuse>39FFFFFF</colordiffuse>
+							<animation type="Focus" reversible="false">
+								<effect type="zoom" center="90,258" start="81" end="100" time="300" tween="back" easing="out" />
+								<effect type="fade" start="0" end="60" time="600" />
+							</animation>
 						</control>
 						<control type="image">
-							<posx>1</posx>
-							<posy>374</posy>
-							<width>162</width>
-							<height>241</height>
-							<texture background="true" flipy="true" diffuse="movie-poster/Movie_Thumb_Mask.png">$INFO[ListItem.Icon]</texture>
-							<colordiffuse>69FFFFFF</colordiffuse>
-							<fadetime>200</fadetime>
-							<aspectratio scalediffuse="false">stretch</aspectratio>
-						</control>
-						<control type="image">
-							<posx>123</posx>
-							<posy>335</posy>
-							<width>40</width>
-							<height>40</height>
+							<posx>152</posx>
+							<posy>342</posy>
+							<width>50</width>
+							<height>50</height>
 							<texture>dialogs/movies/$INFO[ListItem.Overlay]</texture>
+							<animation type="Focus" reversible="false">
+								<effect type="zoom" center="90,258" start="81" end="100" time="300" tween="back" easing="out" />
+							</animation>
 							<visible>Skin.HasSetting(movieoverlays) + !IsEmpty(ListItem.Overlay)</visible>
 						</control>
 						<control type="image">
-							<posx>123</posx>
-							<posy>338</posy>
-							<width>33</width>
-							<height>28</height>
+							<posx>154</posx>
+							<posy>348</posy>
+							<width>40</width>
+							<height>35</height>
 							<texture>dialogs/movies/movieset.png</texture>
+							<animation type="Focus" reversible="false">
+								<effect type="zoom" center="90,258" start="81" end="100" time="300" tween="back" easing="out" />
+							</animation>
 							<visible>Container.Content(movies) + IsEmpty(ListItem.foldername) + !substring(Container.Listitem.Label,..,left) + !Container.Content(genres) + Window.IsActive(videolibrary)</visible>
 						</control>
-				</control>
-			</itemlayout>
-			<focusedlayout width="210" height="515">
-				<control type="group">
-				<animation effect="slide" start="0,0" end="0,30" time="0" tween="cubic" easing="inout" condition="Control.IsVisible(58) + Container.Content(movies) + Skin.HasSetting(ShowcaseFanart)">Conditional</animation>
-					<control type="image">
-						<posx>-94</posx>
-						<posy>24</posy>
-						<width>389</width>
-						<height>405</height>
-						<texture>showcase/showcase_glow2.png</texture>
-						<colordiffuse>poster_glow</colordiffuse>
-						<animation type="Focus" reversible="false">
-							<effect type="zoom" center="90,258" start="81" end="100" time="400" tween="back" easing="out" />
-							<effect type="fade" start="0" end="100" time="1000" delay="400"/>
-						</animation>
 					</control>
-					<control type="image">
-						<posx>2</posx>
-						<posy>90</posy>
-						<width>201</width>
-						<height>300</height>
-						<texture background="true" diffuse="postermatte.png">$INFO[ListItem.Icon]</texture>
-						<fadetime>200</fadetime>
-						<aspectratio scalediffuse="false">stretch</aspectratio>
-						<animation type="Focus" reversible="false">
-							<effect type="zoom" center="80,238" start="81" end="100" time="400" tween="back" easing="out" />
-						</animation>
-					</control>
-					<control type="image">
-						<posx>2</posx>
-						<posy>394</posy>
-						<width>201</width>
-						<height>300</height>
-						<texture background="true" flipy="true" diffuse="postermatte.png">$INFO[ListItem.Icon]</texture>
-						<fadetime>200</fadetime>
-						<aspectratio scalediffuse="false">stretch</aspectratio>
-						<animation type="Focus" reversible="false">
-							<effect type="zoom" center="80,238" start="81" end="100" time="400" tween="back" easing="out" />
-							<effect type="fade" start="0" end="60" time="600" />
-						</animation>
-					</control>
-					<control type="image">
-						<posx>-10</posx>
-						<posy>78</posy>
-						<width>225</width>
-						<height>325</height>
-						<texture>posterframeF.png</texture>
-						<animation type="Focus" reversible="false">
-							<effect type="zoom" center="90,258" start="81" end="100" time="300" tween="back" easing="out" />
-							<effect type="fade" start="0" end="60" time="600" />
-						</animation>
-					</control>
-					<control type="image">
-						<posx>152</posx>
-						<posy>342</posy>
-						<width>50</width>
-						<height>50</height>
-						<texture>dialogs/movies/$INFO[ListItem.Overlay]</texture>
-						<animation type="Focus" reversible="false">
-							<effect type="zoom" center="90,258" start="81" end="100" time="300" tween="back" easing="out" />
-						</animation>
-						<visible>Skin.HasSetting(movieoverlays) + !IsEmpty(ListItem.Overlay)</visible>
-					</control>
-					<control type="image">
-						<posx>154</posx>
-						<posy>348</posy>
-						<width>40</width>
-						<height>35</height>
-						<texture>dialogs/movies/movieset.png</texture>
-						<animation type="Focus" reversible="false">
-							<effect type="zoom" center="90,258" start="81" end="100" time="300" tween="back" easing="out" />
-						</animation>
-						<visible>Container.Content(movies) + IsEmpty(ListItem.foldername) + !substring(Container.Listitem.Label,..,left) + !Container.Content(genres) + Window.IsActive(videolibrary)</visible>
-					</control>
-				</control>
-			</focusedlayout>
+				</focusedlayout>
 		</control>
 
 		<control type="group">
@@ -430,10 +427,10 @@
 				</control>
 
 				<control type="group">
-				<animation type="Conditional" reversible="false" condition="![IsEmpty(Control.GetLabel(8245)) + IsEmpty(Control.GetLabel(8246))]" loop="true">
-					<effect type="slide" end="-500" time="500" delay="7500" />
-					<effect type="slide" end="500" time="500" delay="14000" />
-				</animation>
+					<animation type="Conditional" reversible="false" condition="![IsEmpty(Control.GetLabel(8245)) + IsEmpty(Control.GetLabel(8246))]" loop="true">
+						<effect type="slide" end="-500" time="500" delay="7500" />
+						<effect type="slide" end="500" time="500" delay="14000" />
+					</animation>
 					<visible>!SubString(ListItem.Icon,DefaultFolderBack.png,Left) + Skin.HasSetting(extrathumbs)</visible>
 					<include>Animation_Viewtype_Showcase_RightArea</include>
 						<control type="image" id="8245">
@@ -536,5 +533,4 @@
 		</control>
 
 	</include>
-
 </includes>

@@ -1,42 +1,38 @@
-
-
 <includes>
 	<include name="Viewtype_MusicShowcase">
-		
-		
-	<control type="group">
-		<visible>Control.IsVisible(58)</visible>
-			<control type="image">
-				<visible>Skin.HasSetting(MusicShowcaseFanart)</visible>
-				<posx>0</posx>
-				<posy>0</posy>
-				<width>1280</width>
-				<height>720</height>
-				<texture>music/music_backdrop3.png</texture>
-			</control>
-			<control type="image">
-				<visible>!Skin.HasSetting(MusicShowcaseFanart)</visible>
-				<posx>0</posx>
-				<posy>0</posy>
-				<width>1280</width>
-				<height>720</height>
-				<texture>music/music_backdrop5.png</texture>
-			</control>
-			<control type="label"><!--Big Title-->
-				<animation effect="slide" start="0,0" end="0,-40" time="0" tween="cubic" easing="inout" condition="Control.IsVisible(58) + Container.Content(movies) + Skin.HasSetting(ShowcaseFanart)">Conditional</animation>
-				<posx>5</posx>
-				<posy>0</posy>
-				<width>900</width>
-				<height>50</height>
-				<align>left</align>
-				<font>LiberationSans_Regular_28</font>
-				<shadowcolor>viewheadershadow</shadowcolor>
-				<textcolor>viewheader</textcolor>
-				<label>[B]$INFO[ListItem.label][/B]</label>
-				<include>Animation_BackdropFade</include>
-			</control>
-	</control>
-		
+
+		<control type="group">
+			<visible>Control.IsVisible(58)</visible>
+				<control type="image">
+					<visible>Skin.HasSetting(MusicShowcaseFanart)</visible>
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>1280</width>
+					<height>720</height>
+					<texture>music/music_backdrop3.png</texture>
+				</control>
+				<control type="image">
+					<visible>!Skin.HasSetting(MusicShowcaseFanart)</visible>
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>1280</width>
+					<height>720</height>
+					<texture>music/music_backdrop5.png</texture>
+				</control>
+				<control type="label"><!--Big Title-->
+					<animation effect="slide" start="0,0" end="0,-40" time="0" tween="cubic" easing="inout" condition="Control.IsVisible(58) + Container.Content(movies) + Skin.HasSetting(ShowcaseFanart)">Conditional</animation>
+					<posx>5</posx>
+					<posy>0</posy>
+					<width>900</width>
+					<height>50</height>
+					<align>left</align>
+					<font>LiberationSans_Regular_28</font>
+					<shadowcolor>viewheadershadow</shadowcolor>
+					<textcolor>viewheader</textcolor>
+					<label>[B]$INFO[ListItem.label][/B]</label>
+					<include>Animation_BackdropFade</include>
+				</control>
+		</control>
 
 		<control type="wraplist" id="58">
 			<posx>-64</posx>
@@ -111,7 +107,6 @@
 							</control>
 					</control>
 				</itemlayout>
-					
 				<focusedlayout width="224" height="515">
 					<control type="group">
 						<posx>0</posx>
@@ -182,7 +177,7 @@
 					</control>
 				</focusedlayout>
 		</control>
-		
+
 		<control type="scrollbar" id="68">
 			<include>Animation_ZoomInZoomOut</include>
 			<posx>100</posx>
@@ -199,9 +194,6 @@
 			<include>Animation_CommonFade</include>
 			<animation effect="slide" start="0,0" end="0,-220" time="400" tween="cubic" easing="inout" condition="Control.HasFocus(68)">Conditional</animation>
 		</control>
-		
 
-	
 	</include>
-	
 </includes>

@@ -1,7 +1,4 @@
-
-
 <includes>
-
 	<include name="Viewtype_Arcade">
 
 		<control type="image">
@@ -33,29 +30,26 @@
 			<visible>!Skin.HasSetting(no_Arcade) + substring(container.folderpath,plugin://plugin.program.advanced.launcher)</visible>
 			<animation effect="rotatey" end="295" center="-100,0" time="0" condition="Control.IsVisible(54)">Conditional</animation>
 			<animation effect="slide" start="0,0" end="30,0" time="400" tween="cubic" easing="inout" condition="Control.HasFocus(68)">Conditional</animation>
-			<itemlayout width="168" height="148">
-				<control type="group">
-						<control type="image">
-							<posx>6</posx>
-							<posy>128</posy>
-							<width>95</width>
-							<height>142</height>
-							<texture background="true" diffuse="postermatteNF.png">$INFO[ListItem.Icon]</texture>
-							<fadetime>200</fadetime>
-							<aspectratio scalediffuse="false">stretch</aspectratio>
-						</control>
-						<control type="image">
-							<posx>0</posx>
-							<posy>122</posy>
-							<width>107</width>
-							<height>154</height>
-							<texture>posterframeF.png</texture>
-							<colordiffuse>39FFFFFF</colordiffuse>
-						</control>
-				</control>
-			</itemlayout>
-			<focusedlayout width="210" height="251">
-				<control type="group">
+				<itemlayout width="168" height="148">
+					<control type="image">
+						<posx>6</posx>
+						<posy>128</posy>
+						<width>95</width>
+						<height>142</height>
+						<texture background="true" diffuse="postermatteNF.png">$INFO[ListItem.Icon]</texture>
+						<fadetime>200</fadetime>
+						<aspectratio scalediffuse="false">stretch</aspectratio>
+					</control>
+					<control type="image">
+						<posx>0</posx>
+						<posy>122</posy>
+						<width>107</width>
+						<height>154</height>
+						<texture>posterframeF.png</texture>
+						<colordiffuse>39FFFFFF</colordiffuse>
+					</control>
+				</itemlayout>
+				<focusedlayout width="210" height="251">
 					<control type="image">
 						<posx>7</posx>
 						<posy>130</posy>
@@ -85,8 +79,7 @@
 							<effect type="fade" start="0" end="0" time="650" />
 						</animation>
 					</control>
-				</control>
-			</focusedlayout>
+				</focusedlayout>
 		</control>
 
 		<control type="group">
@@ -268,6 +261,6 @@
 			<include>Animation_CommonFade</include>
 			<animation effect="slide" start="0,0" end="150,0" time="400" tween="cubic" easing="inout" condition="Control.HasFocus(68)">Conditional</animation>
 		</control>
+		
 	</include>
-	
 </includes>
