@@ -190,9 +190,8 @@
 		</control>
 
 		<control type="group">
-			<visible>Control.IsVisible(58)</visible>
+			<visible>Control.IsVisible(58) + !Skin.HasSetting(ShowcaseFanart)</visible>
 				<control type="textbox">
-					<visible>!Skin.HasSetting(ShowcaseFanart)</visible>
 					<posx>465</posx>
 					<posy>15</posy>
 					<width>520</width>
@@ -205,7 +204,6 @@
 					<include>Animation_Viewtype_Showcase_Plot</include>
 				</control>
 				<control type="image"><!-- Floor -->
-					<visible>!Skin.HasSetting(ShowcaseFanart)</visible>
 					<posx>0</posx>
 					<posy>0</posy>
 					<width>1280</width>
@@ -214,7 +212,7 @@
 				</control>
 
 				<control type="group">
-					<visible>!SubString(ListItem.Icon,DefaultFolderBack.png,Left) + !Skin.HasSetting(ShowcaseFanart)</visible>
+					<visible>!SubString(ListItem.Icon,DefaultFolderBack.png,Left)</visible>
 					<include>Animation_Viewtype_Showcase_LeftArea</include>
 						<control type="label"><!--Movie title-->
 							<posx>15</posx>
@@ -304,7 +302,7 @@
 						</control>
 				</control>	
 				<control type="label"><!--Trailer Start-->
-					<visible>!IsEmpty(ListItem.Trailer) + !Player.HasVideo + !Skin.HasSetting(ShowcaseFanart)</visible>
+					<visible>!IsEmpty(ListItem.Trailer) + !Player.HasVideo</visible>
 					<posx>20</posx>
 					<posy>324</posy>
 					<width>370</width>
@@ -319,7 +317,7 @@
 					<animation effect="fade"  start="0" end="100" time="400" delay="1000" condition="![Container(58).OnNext | Container(58).OnPrevious]">Conditional</animation>
 				</control>	
 				<control type="label"><!--Trailer Stop-->
-					<visible>Player.HasVideo + !Skin.HasSetting(ShowcaseFanart)</visible>
+					<visible>Player.HasVideo</visible>
 					<posx>20</posx>
 					<posy>320</posy>
 					<width>370</width>
@@ -333,7 +331,7 @@
 				</control>
 				<!--Plot and extrathumbs-->
 				<control type="grouplist">
-					<visible>!SubString(ListItem.Icon,DefaultFolderBack.png,Left) + !Skin.HasSetting(ShowcaseFanart)</visible>
+					<visible>!SubString(ListItem.Icon,DefaultFolderBack.png,Left)</visible>
 					<posx>1020</posx>
 					<posy>22</posy>
 					<itemgap>0</itemgap>
@@ -415,20 +413,20 @@
 						</control>
 				</control>
 
-				<control type="image" id="8176"> <!-- Studioflags  -->
+				<control type="group"> <!-- Studioflags  -->
 					<posx>1120</posx>
 					<posy>290</posy>
-					<width>109</width>
-					<height>72</height>
-					<align>center</align>
-					<aspectratio align="center" aligny="top">keep</aspectratio>
-					<texture>$INFO[ListItem.Studio,special://skin/extras/studios/,.png]</texture>
 					<animation type="Conditional" reversible="false" condition="![IsEmpty(Control.GetLabel(8245)) + IsEmpty(Control.GetLabel(8246))]" loop="true">
 						<effect type="fade" start="100" end="0" time="500" delay="7000" />
 						<effect type="fade" start="100" end="0" time="500" delay="14000" />
 					</animation>
-					<include>Animation_Viewtype_Showcase_RightArea</include>
-					<visible>!Skin.HasSetting(ShowcaseFanart)</visible>
+					<include>Animation_ZoomInZoomOut</include>
+						<control type="image" id="8176">
+							<include>flags_studiogrey</include>
+						</control>
+						<control type="image" id="8176">
+							<include>flags_studiocolor</include>
+						</control>
 				</control>
 
 				<control type="group">
@@ -436,7 +434,7 @@
 					<effect type="slide" end="-500" time="500" delay="7500" />
 					<effect type="slide" end="500" time="500" delay="14000" />
 				</animation>
-					<visible>!SubString(ListItem.Icon,DefaultFolderBack.png,Left) + Skin.HasSetting(extrathumbs) + !Skin.HasSetting(ShowcaseFanart)</visible>
+					<visible>!SubString(ListItem.Icon,DefaultFolderBack.png,Left) + Skin.HasSetting(extrathumbs)</visible>
 					<include>Animation_Viewtype_Showcase_RightArea</include>
 						<control type="image" id="8245">
 							<posx>1510</posx>
@@ -477,7 +475,7 @@
 				</control>
 
 				<control type="grouplist">
-					<visible>!Skin.HasSetting(no_media_flags) + Skin.HasSetting(back_flags) + !Skin.HasSetting(ShowcaseFanart)</visible>
+					<visible>!Skin.HasSetting(no_media_flags) + Skin.HasSetting(back_flags)</visible>
 					<description>Media Codec Flagging Images</description>
 					<posx>0</posx>
 					<posy>370</posy>
@@ -489,7 +487,7 @@
 					<include>Animation_ZoomInZoomOut</include>
 				</control>
 				<control type="grouplist">
-					<visible>!Skin.HasSetting(no_media_flags) + !Skin.HasSetting(ShowcaseFanart)</visible>
+					<visible>!Skin.HasSetting(no_media_flags)</visible>
 					<description>Media Codec Flagging Images</description>
 					<posx>0</posx>
 					<posy>370</posy>
@@ -504,7 +502,7 @@
 					<include>Animation_ZoomInZoomOut</include>
 				</control>
 				<control type="grouplist">
-					<visible>!Skin.HasSetting(no_media_flags) + !Skin.HasSetting(no_frame_flags) + !Skin.HasSetting(ShowcaseFanart)</visible>
+					<visible>!Skin.HasSetting(no_media_flags) + !Skin.HasSetting(no_frame_flags)</visible>
 					<description>Media Codec Flagging Images</description>
 					<posx>0</posx>
 					<posy>370</posy>

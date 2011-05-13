@@ -359,7 +359,7 @@
 						<control type="textbox">
 							<description>Plot Movie</description>
 							<posx>340</posx>
-							<posy>432</posy>
+							<posy>402</posy>
 							<width>600</width>
 							<height>230</height>
 							<align>justify</align>
@@ -368,7 +368,7 @@
 							<textcolor>white</textcolor>
 							<animation effect="fade" start="0" end="100" time="400" delay="3000" condition="Control.IsVisible(55)">WindowOpen</animation>
 							<animation effect="slide" start="1000,0" end="0,0" time="400" delay="3600" condition="Skin.HasSetting(PosterPlus) + Container.Content(movies) + !Skin.HasSetting(Poster_Fanart) + ![Container(55).OnNext | Container(55).OnPrevious]">Conditional</animation>
-							<animation effect="slide" end="0,-30" time="0" condition="IsEmpty(ListItem.Tagline)">Conditional</animation>
+							<animation effect="slide" end="0,-30" time="0" condition="IsEmpty(Control.GetLabel(8125))">Conditional</animation>
 							<autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
 							<visible>Skin.HasSetting(PosterPlus) + Container.Content(movies) + !Skin.HasSetting(Poster_Fanart)</visible>
 						</control>
@@ -465,13 +465,12 @@
 						</control>
 				</control>
 
-				<control type="grouplist">
+				<control type="group">
 					<posx>340</posx>
 					<posy>208</posy>
 					<width>600</width>
 					<include>Animation_ZoomInZoomOut</include>
 					<animation effect="slide" start="0,600" end="0,0" time="400" delay="3400" condition="Container.Content(movies) + !Skin.HasSetting(Poster_Fanart) + ![Container(55).OnNext | Container(55).OnPrevious]">Conditional</animation>
-					<animation effect="slide" end="0,52" time="0" condition="IsEmpty(Control.GetLabel(8125))">Conditional</animation>
 					<visible>Skin.HasSetting(PosterPlus) + !SubString(ListItem.Icon,DefaultFolderBack.png,Left) + Container.Content(movies) + !Skin.HasSetting(Poster_Fanart) + !Window.IsActive(videofiles)</visible>
 						<control type="label">
 							<width>600</width>
@@ -485,69 +484,77 @@
 							<animation effect="fade" start="0" end="100" time="400" delay="3000" condition="Control.IsVisible(55)">WindowOpen</animation>
 							<visible>!IsEmpty(ListItem.Tagline)</visible>
 						</control>
-						<control type="image" id="8125"> <!-- Studioflags  -->
-							<width>600</width>
-							<height>72</height>
-							<align>center</align>
-							<aspectratio align="center" aligny="top">keep</aspectratio>
-							<texture>$INFO[ListItem.Studio,special://skin/extras/studios/,.png]</texture>
-							<animation effect="fade" start="0" end="100" time="400" delay="3000" condition="Control.IsVisible(55)">VisibleChange</animation>
-							<visible>!IsEmpty(Control.GetLabel(8125))</visible>
-						</control>
-						<control type="label">
-							<width>600</width>
-							<height>20</height>
-							<aligny>center</aligny>
-							<font>LiberationSans_Regular_18</font>
-							<textcolor>white</textcolor>
-							<shadowcolor>black</shadowcolor>
-							<label>[B][COLOR=mainblue]$LOCALIZE[20339][/COLOR][/B] - $INFO[ListItem.Director]</label>
+						<control type="group"> <!-- Studioflags  -->
+							<posx>247</posx>
+							<posy>30</posy>
 							<animation effect="fade" start="0" end="100" time="400" delay="3000" condition="Control.IsVisible(55)">WindowOpen</animation>
-							<visible>!IsEmpty(ListItem.Director)</visible>
+								<control type="image" id="8125"> 
+									<include>flags_studiogrey</include>
+								</control>
+								<control type="image" id="8125">
+									<include>flags_studiocolor</include>
+								</control>
 						</control>
-						<control type="label">
-							<width>600</width>
-							<height>20</height>
-							<aligny>center</aligny>
-							<font>LiberationSans_Regular_18</font>
-							<textcolor>white</textcolor>
-							<shadowcolor>black</shadowcolor>
-							<label>[B][COLOR=mainblue]$LOCALIZE[20417][/COLOR][/B] - $INFO[ListItem.Writer]</label>
-							<animation effect="fade" start="0" end="100" time="400" delay="3000" condition="Control.IsVisible(55)">WindowOpen</animation>
-							<visible>!IsEmpty(ListItem.Writer)</visible>
-						</control>
-						<control type="label">
-							<width>600</width>
-							<height>20</height>
-							<aligny>center</aligny>
-							<font>LiberationSans_Regular_18</font>
-							<textcolor>white</textcolor>
-							<shadowcolor>black</shadowcolor>
-							<label>[B][COLOR=mainblue]$LOCALIZE[515][/COLOR][/B] - $INFO[ListItem.Genre]</label>
-							<animation effect="fade" start="0" end="100" time="400" delay="3000" condition="Control.IsVisible(55)">WindowOpen</animation>
-							<visible>!IsEmpty(ListItem.Genre)</visible>
-						</control>
-						<control type="label">
-							<width>600</width>
-							<height>20</height>
-							<aligny>center</aligny>
-							<font>LiberationSans_Regular_18</font>
-							<textcolor>white</textcolor>
-							<shadowcolor>black</shadowcolor>
-							<label>[B][COLOR=mainblue]$LOCALIZE[572][/COLOR][/B] - $INFO[ListItem.Studio]</label>
-							<animation effect="fade" start="0" end="100" time="400" delay="3000" condition="Control.IsVisible(55)">WindowOpen</animation>
-							<visible>![!IsEmpty(Control.GetLabel(8125)) | IsEmpty(ListItem.Studio)]</visible>
-						</control>
-						<control type="label">
-							<width>600</width>
-							<height>20</height>
-							<aligny>center</aligny>
-							<font>LiberationSans_Regular_18</font>
-							<textcolor>white</textcolor>
-							<shadowcolor>black</shadowcolor>
-							<label>[B][COLOR=mainblue]$LOCALIZE[563][/COLOR][/B] - $INFO[ListItem.Rating]</label>
-							<animation effect="fade" start="0" end="100" time="400" delay="3000" condition="Control.IsVisible(55)">WindowOpen</animation>
-							<visible>!IsEmpty(ListItem.Rating)</visible>
+						<control type="group">
+							<animation effect="slide" end="0,-55" time="0" condition="IsEmpty(Control.GetLabel(8125))">Conditional</animation>
+								<control type="label">
+									<posy>100</posy>
+									<width>600</width>
+									<height>20</height>
+									<aligny>center</aligny>
+									<font>LiberationSans_Regular_18</font>
+									<textcolor>white</textcolor>
+									<shadowcolor>black</shadowcolor>
+									<label>[B][COLOR=mainblue]$LOCALIZE[20339][/COLOR][/B] - $INFO[ListItem.Director]</label>
+									<animation effect="fade" start="0" end="100" time="400" delay="3000" condition="Control.IsVisible(55)">WindowOpen</animation>
+								</control>
+								<control type="label">
+									<posy>122</posy>
+									<width>600</width>
+									<height>20</height>
+									<aligny>center</aligny>
+									<font>LiberationSans_Regular_18</font>
+									<textcolor>white</textcolor>
+									<shadowcolor>black</shadowcolor>
+									<label>[B][COLOR=mainblue]$LOCALIZE[20417][/COLOR][/B] - $INFO[ListItem.Writer]</label>
+									<animation effect="fade" start="0" end="100" time="400" delay="3000" condition="Control.IsVisible(55)">WindowOpen</animation>
+								</control>
+								<control type="label">
+									<posy>144</posy>
+									<width>600</width>
+									<height>20</height>
+									<aligny>center</aligny>
+									<font>LiberationSans_Regular_18</font>
+									<textcolor>white</textcolor>
+									<shadowcolor>black</shadowcolor>
+									<label>[B][COLOR=mainblue]$LOCALIZE[515][/COLOR][/B] - $INFO[ListItem.Genre]</label>
+									<animation effect="fade" start="0" end="100" time="400" delay="3000" condition="Control.IsVisible(55)">WindowOpen</animation>
+								</control>
+								<control type="label">
+									<posy>166</posy>
+									<width>600</width>
+									<height>20</height>
+									<aligny>center</aligny>
+									<font>LiberationSans_Regular_18</font>
+									<textcolor>white</textcolor>
+									<shadowcolor>black</shadowcolor>
+									<label>[B][COLOR=mainblue]$LOCALIZE[572][/COLOR][/B] - $INFO[ListItem.Studio]</label>
+									<animation effect="fade" start="0" end="100" time="400" delay="3000" condition="Control.IsVisible(55)">WindowOpen</animation>
+									<visible>IsEmpty(Control.GetLabel(8125))</visible>
+								</control>
+								<control type="label">
+									<posy>188</posy>
+									<width>600</width>
+									<height>20</height>
+									<aligny>center</aligny>
+									<font>LiberationSans_Regular_18</font>
+									<textcolor>white</textcolor>
+									<shadowcolor>black</shadowcolor>
+									<label>[B][COLOR=mainblue]$LOCALIZE[563][/COLOR][/B] - $INFO[ListItem.Rating]</label>
+									<animation effect="fade" start="0" end="100" time="400" delay="3000" condition="Control.IsVisible(55)">WindowOpen</animation>
+									<animation effect="slide" end="0,-22" time="0" condition="!IsEmpty(Control.GetLabel(8125))">Conditional</animation>
+									<visible>!IsEmpty(ListItem.Rating)</visible>
+								</control>
 						</control>
 				</control>
 				<control type="group">

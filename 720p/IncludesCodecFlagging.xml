@@ -1,5 +1,20 @@
 <includes>
 
+	<include name="GreyStudioF">
+		<width>106</width>
+		<height>72</height>
+		<aspectratio align="center" aligny="top">keep</aspectratio>
+		<texture>$INFO[ListItem.Studio,special://skin/extras/studios/grey/,.png]</texture>
+		<visible>Skin.HasSetting(greystudio)</visible>
+	</include>
+	<include name="ColorStudioF">
+		<width>106</width>
+		<height>72</height>
+		<aspectratio align="center" aligny="top">keep</aspectratio>
+		<texture>$INFO[ListItem.Studio,special://skin/extras/studios/color/,.png]</texture>
+		<visible>Skin.HasSetting(colorstudio)</visible>
+	</include>
+	
 	<include name="VideoIconRes">
 		<width>54</width>
 		<height>40</height>
@@ -2194,7 +2209,7 @@
 		</control>
 	</include>
 
-	<include name="ResFlags"><!--Back Flags-->
+	<include name="ResFlags_back"><!--Back Flags-->
 		<control type="image">
 			<description>Video rez Image</description>
 			<include>VideoIconRes</include>

@@ -140,6 +140,19 @@
 		<onup>78881</onup>
 	</include>
 
+	<include name="flags_studiogrey">
+		<include>GreyStudioF</include>
+	</include>
+	<include name="flags_studiocolor">
+		<include>ColorStudioF</include>
+	</include>
+	<include name="flags_studiogrey_video">
+		<include>GreyStudioF_FS</include>
+	</include>
+	<include name="flags_studiocolor_video">
+		<include>ColorStudioF_FS</include>
+	</include>
+
 	<include name="frame_flags">
 		<include>ResFlags_frame</include>
 		<include>AspectCodecFlags_frame</include>

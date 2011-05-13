@@ -379,7 +379,6 @@
 		<include>Animation_Viewtype_Panel_FocusArea</include>
 		<visible>!SubString(ListItem.Icon,DefaultFolderBack.png,Left) + Container.Content(movies) + Control.IsVisible(597)</visible>
 			<control type="label"><!--Movie title-->
-				<posx>0</posx>
 				<posy>80</posy>
 				<width>460</width>
 				<height>50</height>
@@ -390,7 +389,6 @@
 				<label>$INFO[ListItem.Label]</label>
 			</control>
 			<control type="label">
-				<posx>0</posx>
 				<posy>108</posy>
 				<width>460</width>
 				<height>50</height>
@@ -400,8 +398,16 @@
 				<label>31508</label>
 				<visible>IsEmpty(ListItem.foldername) + !substring(Container.Listitem.Label,..,left) + !Container.Content(genres)</visible>
 			</control>
+			<control type="group"> <!-- Studioflags  -->
+				<posy>122</posy>
+					<control type="image" id="8133">
+						<include>flags_studiogrey</include>
+					</control>
+					<control type="image" id="8133">
+						<include>flags_studiocolor</include>
+					</control>
+			</control>
 			<control type="label"><!--Duration-->
-				<posx>0</posx>
 				<posy>108</posy>
 				<width>460</width>
 				<height>50</height>
@@ -409,10 +415,10 @@
 				<font>LiberationSans_Regular_24</font>
 				<textcolor>white</textcolor>
 				<label>$INFO[ListItem.Duration] $LOCALIZE[12391]</label>
+				<animation effect="slide" end="115,0" time="0" condition="!IsEmpty(Control.GetLabel(8133))">Conditional</animation>
 				<visible>!IsEmpty(ListItem.Duration) + !SubString(ListItem.Duration,min)</visible>
 			</control>
 			<control type="label"><!--Duration-->
-				<posx>0</posx>
 				<posy>108</posy>
 				<width>460</width>
 				<height>50</height>
@@ -420,10 +426,10 @@
 				<font>LiberationSans_Regular_24</font>
 				<textcolor>white</textcolor>
 				<label>$INFO[ListItem.Duration]</label>
+				<animation effect="slide" end="115,0" time="0" condition="!IsEmpty(Control.GetLabel(8133))">Conditional</animation>
 				<visible>!IsEmpty(ListItem.Duration) + SubString(ListItem.Duration,min)</visible>
 			</control>
 			<control type="label"><!--Year-->
-				<posx>0</posx>
 				<posy>133</posy>
 				<width>360</width>
 				<height>50</height>
@@ -431,6 +437,7 @@
 				<font>LiberationSans_Regular_24</font>
 				<textcolor>white</textcolor>
 				<label>$INFO[ListItem.Year]</label>
+				<animation effect="slide" end="115,0" time="0" condition="!IsEmpty(Control.GetLabel(8133))">Conditional</animation>
 				<animation effect="slide" start="0,0" end="0,-23" time="0" condition="IsEmpty(ListItem.Duration)">Conditional</animation>
 			</control>
 			<control type="group">
@@ -438,13 +445,12 @@
 				<posy>149</posy>
 				<include condition="!Skin.HasSetting(vanilla_flags) + !Skin.HasSetting(flat_flags)">color_MPAAs</include>
 				<include condition="Skin.HasSetting(vanilla_flags) | Skin.HasSetting(flat_flags) + !Skin.HasSetting(original_flags)">vanilla_MPAAs</include>
-				<include>Animation_Viewtype_Wall_UnderInfo</include>
+				<animation effect="slide" end="115,0" time="0" condition="!IsEmpty(Control.GetLabel(8133))">Conditional</animation>
 				<animation effect="slide" start="0,0" end="-64,0" time="0" condition="IsEmpty(ListItem.Year)">Conditional</animation>
 				<animation effect="slide" start="0,0" end="0,-23" time="0" condition="IsEmpty(ListItem.Duration)">Conditional</animation>
 			</control>
 			<control type="textbox">
 				<visible>![Container.OnNext | Container.OnPrevious] + !Player.HasAudio</visible>
-				<posx>0</posx>
 				<posy>200</posy>
 				<width>460</width>
 				<height>326</height>
@@ -457,7 +463,6 @@
 			</control>
 			<control type="textbox">
 				<visible>![Container.OnNext | Container.OnPrevious] + Player.HasAudio</visible>
-				<posx>0</posx>
 				<posy>200</posy>
 				<width>460</width>
 				<height>280</height>

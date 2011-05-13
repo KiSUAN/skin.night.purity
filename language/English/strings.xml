@@ -399,8 +399,25 @@ just copy the translations from Confluence to here
   <string id="31533">Use Custom Playlist for Movies, best for filtering out what you dont want</string>
   <string id="31534">Get TVTune</string>
   <string id="31535">Have Cinema Script start when enter Movies</string>
+ 
+ 
+   <!-- Purity Exclusive-->
+  <string id="38000">Use TV Themes in Library</string>
+  <string id="38001">Use GIANT Fonts for Video Player</string>
+  <string id="38002">Flag Options</string>
+  <string id="38003">Use Original Type Flags</string>
+  <string id="38004">Use Vanilla Type Flags (white by default)</string>
+  <string id="38005">Use Flat Type Flags (white by default)</string>
+  <string id="38006">Disable Frame in Flags</string>
+  <string id="38007">Use Back in Flags (grey by default)</string>
+  <string id="38008">Reset Flags to Default</string>
+  <string id="38009">These are options that XBMC doesn't do by default. They need the user to go the extra mile to have these function correctly.</string>
+  <string id="38010">Use GreyScale Studio Flags</string>
+  <string id="38011">User needs to download and place files in corresponding folder</string>
+  <string id="38012">Arcade</string>
+  <string id="38013">Arcade Wide</string>
+  <string id="38014">Arcade Square</string>
+  <string id="38015">AudioBook</string>
+  <string id="38016">ABTracks</string>
   
   </strings>
-
-  
-  

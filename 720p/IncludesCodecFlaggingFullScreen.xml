@@ -1,5 +1,20 @@
 <includes>
 
+	<include name="GreyStudioF_FS">
+		<width>106</width>
+		<height>72</height>
+		<aspectratio align="center" aligny="top">keep</aspectratio>
+		<texture>$INFO[VideoPlayer.Studio,special://skin/extras/studios/grey/,.png]</texture>
+		<visible>Skin.HasSetting(greystudio_video)</visible>
+	</include>
+	<include name="ColorStudioF_FS">
+		<width>106</width>
+		<height>72</height>
+		<aspectratio align="center" aligny="top">keep</aspectratio>
+		<texture>$INFO[VideoPlayer.Studio,special://skin/extras/studios/color/,.png]</texture>
+		<visible>Skin.HasSetting(colorstudio_video)</visible>
+	</include>
+
 	<include name="VideoIconRes">
 		<width>54</width>
 		<height>40</height>

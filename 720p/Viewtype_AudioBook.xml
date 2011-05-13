@@ -24,7 +24,7 @@
 			<onleft>622</onleft>
 			<onright>622</onright>
 			<onup>93</onup>
-			<viewtype label="AudioBook">list</viewtype>
+			<viewtype label="$LOCALIZE[38015]">list</viewtype>
 			<orientation>horizontal</orientation>
 			<focusposition>3</focusposition>
 			<scrolltime>400</scrolltime>

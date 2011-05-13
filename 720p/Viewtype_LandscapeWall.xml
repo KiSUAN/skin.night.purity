@@ -46,10 +46,21 @@
 							<posy>15</posy>
 							<width>187</width>
 							<height>120</height>
-							<texture background="true" diffuse="wall/wall_h_diffuse.png" fallback="logo_missing.png">$INFO[ListItem.Label,special://skin/extras/studios/,.png]</texture>
+							<texture background="true" diffuse="wall/wall_h_diffuse.png" fallback="logo_missing.png">$INFO[ListItem.Label,special://skin/extras/studios/grey/,.png]</texture>
 							<aspectratio align="center" scalediffuse="false">stretch</aspectratio>
 							<colordiffuse>79FFFFFF</colordiffuse>
-							<visible>Container.Content(Studios)</visible>
+							<visible>Container.Content(Studios) + Skin.HasSetting(greystudio)</visible>
+						</control>
+						<control type="image">
+							<description>Poster</description>
+							<posx>16</posx>
+							<posy>15</posy>
+							<width>187</width>
+							<height>120</height>
+							<texture background="true" diffuse="wall/wall_h_diffuse.png" fallback="logo_missing.png">$INFO[ListItem.Label,special://skin/extras/studios/color/,.png]</texture>
+							<aspectratio align="center" scalediffuse="false">stretch</aspectratio>
+							<colordiffuse>79FFFFFF</colordiffuse>
+							<visible>Container.Content(Studios) + Skin.HasSetting(colorstudio)</visible>
 						</control>
 						<control type="label">
 							<posx>110</posx>
@@ -113,12 +124,25 @@
 							<posy>11</posy>
 							<width>187</width>
 							<height>120</height>
-							<texture background="true" diffuse="wall/wall_h_diffuse.png" fallback="logo_missing.png">$INFO[ListItem.Label,special://skin/extras/studios/,.png]</texture>
+							<texture background="true" diffuse="wall/wall_h_diffuse.png" fallback="logo_missing.png">$INFO[ListItem.Label,special://skin/extras/studios/grey/,.png]</texture>
 							<aspectratio align="center" scalediffuse="false">stretch</aspectratio>
 							<animation type="Focus" reversible="false">
 								<effect type="zoom" start="110" end="180" center="auto" time="400" tween="back" easing="out" />
 							</animation>
-							<visible>Container.Content(Studios)</visible>
+							<visible>Container.Content(Studios) + Skin.HasSetting(greystudio)</visible>
+						</control>
+						<control type="image">
+							<description>Poster</description>
+							<posx>12</posx>
+							<posy>11</posy>
+							<width>187</width>
+							<height>120</height>
+							<texture background="true" diffuse="wall/wall_h_diffuse.png" fallback="logo_missing.png">$INFO[ListItem.Label,special://skin/extras/studios/color/,.png]</texture>
+							<aspectratio align="center" scalediffuse="false">stretch</aspectratio>
+							<animation type="Focus" reversible="false">
+								<effect type="zoom" start="110" end="180" center="auto" time="400" tween="back" easing="out" />
+							</animation>
+							<visible>Container.Content(Studios) + Skin.HasSetting(colorstudio)</visible>
 						</control>
 						<control type="label">
 							<posx>135</posx>

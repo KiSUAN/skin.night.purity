@@ -181,100 +181,100 @@
 				<animation effect="slide" end="-50,0" time="800" tween="cubic" easing="inout" condition="Container(54).Column(7)">Conditional</animation>
 				<animation effect="slide" end="-10,0" time="800" tween="cubic" easing="inout" condition="Container(54).Column(1) | Container(54).Column(2) | Container(54).Column(3) | Container(54).Column(4) | Container(54).Column(5) | Container(54).Column(6)">Conditional</animation>
 				<visible>!SubString(ListItem.Icon,DefaultFolderBack.png,Left) + !Skin.Hassetting(No_Text)</visible>
-					<control type="label"><!--Movie title-->
-						<posx>0</posx>
-						<posy>115</posy>
-						<width>300</width>
-						<height>40</height>
-						<aligny>center</aligny>
-						<font>LiberationSans_Regular_28</font>
-						<textcolor>mainblue</textcolor>
-						<wrapmultiline>true</wrapmultiline>
-						<label>[B]$INFO[ListItem.Label][/B]</label>
-						<include>Animation_Viewtype_Wall_UnderInfo</include>
-					</control>
-					<control type="label">
-						<posx>0</posx>
-						<posy>160</posy>
-						<width>300</width>
-						<height>50</height>
-						<aligny>center</aligny>
-						<font>LiberationSans_Regular_24</font>
-						<textcolor>white</textcolor>
-						<label>31508</label>
-						<include>Animation_Viewtype_Wall_UnderInfo</include>
-						<visible>IsEmpty(ListItem.foldername) + !substring(Container.Listitem.Label,..,left) + !Container.Content(genres) + Window.IsActive(videolibrary)</visible>
-					</control>
-					<control type="label"><!--Duration-->
-						<posx>0</posx>
-						<posy>200</posy>
-						<width>300</width>
-						<height>50</height>
-						<aligny>center</aligny>
-						<font>LiberationSans_Regular_24</font>
-						<textcolor>white</textcolor>
-						<label>$INFO[ListItem.Duration] $LOCALIZE[12391]</label>
-						<include>Animation_Viewtype_Wall_UnderInfo</include>
-						<visible>!IsEmpty(ListItem.Duration) + !SubString(ListItem.Duration,min) + !substring(container.folderpath,plugin://plugin.video.apple.movie.trailers.lite)</visible>
-					</control>
-					<control type="label"><!--Duration-->
-						<posx>0</posx>
-						<posy>200</posy>
-						<width>300</width>
-						<height>50</height>
-						<aligny>center</aligny>
-						<font>LiberationSans_Regular_24</font>
-						<textcolor>white</textcolor>
-						<label>$INFO[ListItem.Duration]</label>
-						<include>Animation_Viewtype_Wall_UnderInfo</include>
-						<visible>!IsEmpty(ListItem.Duration) + SubString(ListItem.Duration,min) + !substring(container.folderpath,plugin://plugin.video.apple.movie.trailers.lite)</visible>
-					</control>
-					<control type="label"><!--Duration-->
-						<posx>0</posx>
-						<posy>200</posy>
-						<width>300</width>
-						<height>50</height>
-						<aligny>center</aligny>
-						<font>LiberationSans_Regular_24</font>
-						<textcolor>white</textcolor>
-						<label>$INFO[ListItem.Property(releasedate)]</label>
-						<include>Animation_Viewtype_Wall_UnderInfo</include>
-						<visible>substring(container.folderpath,plugin://plugin.video.apple.movie.trailers.lite)</visible>
-					</control>
-					<control type="label"><!--Year-->
-						<posx>0</posx>
-						<posy>166</posy>
-						<width>300</width>
-						<height>50</height>
-						<aligny>center</aligny>
-						<font>LiberationSans_Regular_24</font>
-						<textcolor>white</textcolor>
-						<label>$INFO[ListItem.year]</label>
-						<include>Animation_Viewtype_Wall_UnderInfo</include>
-						<visible>!substring(container.folderpath,plugin://plugin.video.apple.movie.trailers.lite)</visible>
-					</control>
-					<control type="label"><!--Year-->
-						<posx>0</posx>
-						<posy>166</posy>
-						<width>300</width>
-						<height>50</height>
-						<aligny>center</aligny>
-						<font>LiberationSans_Regular_24</font>
-						<textcolor>white</textcolor>
-						<label>$LOCALIZE[31226]</label>
-						<include>Animation_Viewtype_Wall_UnderInfo</include>
-						<visible>substring(container.folderpath,plugin://plugin.video.apple.movie.trailers.lite)</visible>
-					</control>
 					<control type="group">
-						<posx>60</posx>
-						<posy>181</posy>
-						<include condition="!Skin.HasSetting(vanilla_flags) + !Skin.HasSetting(flat_flags)">color_MPAAs</include>
-						<include condition="Skin.HasSetting(vanilla_flags) | Skin.HasSetting(flat_flags) + !Skin.HasSetting(original_flags)">vanilla_MPAAs</include>
 						<include>Animation_Viewtype_Wall_UnderInfo</include>
-						<animation effect="slide" start="0,0" end="-64,0" time="0" condition="IsEmpty(ListItem.Year)">Conditional</animation>
+							<control type="label"><!--Movie title-->
+								<posy>115</posy>
+								<width>300</width>
+								<height>40</height>
+								<aligny>center</aligny>
+								<font>LiberationSans_Regular_28</font>
+								<textcolor>mainblue</textcolor>
+								<wrapmultiline>true</wrapmultiline>
+								<label>[B]$INFO[ListItem.Label][/B]</label>
+							</control>
+							<control type="label">
+								<posy>160</posy>
+								<width>300</width>
+								<height>50</height>
+								<aligny>center</aligny>
+								<font>LiberationSans_Regular_24</font>
+								<textcolor>white</textcolor>
+								<label>31508</label>
+								<visible>IsEmpty(ListItem.foldername) + !substring(Container.Listitem.Label,..,left) + !Container.Content(genres) + Window.IsActive(videolibrary)</visible>
+							</control>
+							<control type="group"> <!-- Studioflags  -->
+								<posy>180</posy>
+									<control type="image" id="8132">
+										<include>flags_studiogrey</include>
+									</control>
+									<control type="image" id="8132">
+										<include>flags_studiocolor</include>
+									</control>
+							</control>
+							<control type="label"><!--Year-->
+								<posy>166</posy>
+								<width>300</width>
+								<height>50</height>
+								<aligny>center</aligny>
+								<font>LiberationSans_Regular_24</font>
+								<textcolor>white</textcolor>
+								<label>$INFO[ListItem.year]</label>
+								<animation effect="slide" end="115,0" time="0" condition="!IsEmpty(Control.GetLabel(8132))">Conditional</animation>
+								<visible>!substring(container.folderpath,plugin://plugin.video.apple.movie.trailers.lite)</visible>
+							</control>
+							<control type="label"><!--Year-->
+								<posy>166</posy>
+								<width>300</width>
+								<height>50</height>
+								<aligny>center</aligny>
+								<font>LiberationSans_Regular_24</font>
+								<textcolor>white</textcolor>
+								<label>$LOCALIZE[31226]</label>
+								<visible>substring(container.folderpath,plugin://plugin.video.apple.movie.trailers.lite)</visible>
+							</control>
+							<control type="group">
+								<posx>60</posx>
+								<posy>181</posy>
+								<include condition="!Skin.HasSetting(vanilla_flags) + !Skin.HasSetting(flat_flags)">color_MPAAs</include>
+								<include condition="Skin.HasSetting(vanilla_flags) | Skin.HasSetting(flat_flags) + !Skin.HasSetting(original_flags)">vanilla_MPAAs</include>
+								<animation effect="slide" end="115,0" time="0" condition="!IsEmpty(Control.GetLabel(8132))">Conditional</animation>
+								<animation effect="slide" start="0,0" end="-64,0" time="0" condition="IsEmpty(ListItem.Year)">Conditional</animation>
+							</control>
+							<control type="label"><!--Duration-->
+								<posy>200</posy>
+								<width>300</width>
+								<height>50</height>
+								<aligny>center</aligny>
+								<font>LiberationSans_Regular_24</font>
+								<textcolor>white</textcolor>
+								<label>$INFO[ListItem.Duration] $LOCALIZE[12391]</label>
+								<animation effect="slide" end="115,0" time="0" condition="!IsEmpty(Control.GetLabel(8132))">Conditional</animation>
+								<visible>!IsEmpty(ListItem.Duration) + !SubString(ListItem.Duration,min) + !substring(container.folderpath,plugin://plugin.video.apple.movie.trailers.lite)</visible>
+							</control>
+							<control type="label"><!--Duration-->
+								<posy>200</posy>
+								<width>300</width>
+								<height>50</height>
+								<aligny>center</aligny>
+								<font>LiberationSans_Regular_24</font>
+								<textcolor>white</textcolor>
+								<label>$INFO[ListItem.Duration]</label>
+								<animation effect="slide" end="115,0" time="0" condition="!IsEmpty(Control.GetLabel(8132))">Conditional</animation>
+								<visible>!IsEmpty(ListItem.Duration) + SubString(ListItem.Duration,min) + !substring(container.folderpath,plugin://plugin.video.apple.movie.trailers.lite)</visible>
+							</control>
+							<control type="label"><!--Duration-->
+								<posy>200</posy>
+								<width>300</width>
+								<height>50</height>
+								<aligny>center</aligny>
+								<font>LiberationSans_Regular_24</font>
+								<textcolor>white</textcolor>
+								<label>$INFO[ListItem.Property(releasedate)]</label>
+								<visible>substring(container.folderpath,plugin://plugin.video.apple.movie.trailers.lite)</visible>
+							</control>
 					</control>
 					<control type="textbox">
-						<posx>0</posx>
 						<posy>245</posy>
 						<width>285</width>
 						<height>340</height>
@@ -287,7 +287,6 @@
 						<visible>Container(54).Column(0)</visible>						
 					</control>
 					<control type="textbox">
-						<posx>0</posx>
 						<posy>245</posy>
 						<width>295</width>
 						<height>340</height>
@@ -300,7 +299,6 @@
 						<visible>Container(54).Column(1) | Container(54).Column(2) | Container(54).Column(3) | Container(54).Column(4) | Container(54).Column(5) | Container(54).Column(6)</visible>
 					</control>
 					<control type="textbox">
-						<posx>0</posx>
 						<posy>245</posy>
 						<width>335</width>
 						<height>340</height>

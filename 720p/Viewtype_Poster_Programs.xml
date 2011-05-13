@@ -281,7 +281,7 @@
 							<posx>10</posx>
 							<posy>660</posy>
 							<aspectratio align="center">keep</aspectratio>
-							<texture>$INFO[ListItem.Studio,special://skin/extras/studios/,.png]</texture> 
+							<texture>$INFO[ListItem.Studio,special://skin/extras/studios/grey/,.png]</texture> 
 						</control>
 				</control>
 

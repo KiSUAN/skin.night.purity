@@ -22,7 +22,7 @@
 			<onleft>7000</onleft>
 			<onright>92</onright>
 			<scrolltime>0</scrolltime>
-			<viewtype label="ABTracks">list</viewtype>
+			<viewtype label="$LOCALIZE[38016]">list</viewtype>
 			<orientation>vertical</orientation>
 			<focusposition>7</focusposition>
 			<movement>9</movement>

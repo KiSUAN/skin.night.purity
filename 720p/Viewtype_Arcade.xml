@@ -23,7 +23,7 @@
 			<onleft>68</onleft>
 			<onup>50</onup>
 			<ondown>50</ondown>
-			<viewtype label="Arcade">list</viewtype>
+			<viewtype label="$LOCALIZE[38012]">list</viewtype>
 			<orientation>vertical</orientation>
 			<focusposition>2</focusposition>
 			<scrolltime>400</scrolltime>
@@ -200,7 +200,7 @@
 					<width>145</width>
 					<height>98</height>
 					<aspectratio align="center">keep</aspectratio>
-					<texture>$INFO[ListItem.Studio,special://skin/extras/studios/,.png]</texture>
+					<texture>$INFO[ListItem.Studio,special://skin/extras/studios/grey/,.png]</texture>
 					<animation effect="rotatex" end="-80" center="0,0" condition="Control.IsVisible(54)">Conditional</animation>
 				</control>
 				<control type="label">

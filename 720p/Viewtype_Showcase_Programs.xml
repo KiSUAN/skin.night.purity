@@ -260,7 +260,7 @@
 					<posx>1195</posx>
 					<posy>665</posy>
 					<aspectratio align="center">keep</aspectratio>
-					<texture>$INFO[ListItem.Studio,special://skin/extras/studios/,.png]</texture>
+					<texture>$INFO[ListItem.Studio,special://skin/extras/studios/grey/,.png]</texture>
 					<visible>Window.IsActive(programs) + substring(container.folderpath,plugin://plugin.program.advanced.launcher) + !Skin.HasSetting(ShowcaseFanart_Programs)</visible>
 				</control>
 		</control>

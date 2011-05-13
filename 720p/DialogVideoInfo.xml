@@ -33,15 +33,17 @@
 				<fadetime>100</fadetime>
 				<aspectratio scalediffuse="false">stretch</aspectratio>
 			</control>
-			<control type="image"> <!-- Studioflags  -->
+			<control type="group"> <!-- Studioflags  -->
 				<posx>805</posx>
 				<posy>182</posy>
-				<width>106</width>
-				<height>72</height>
-				<aspectratio align="center">keep</aspectratio>
-				<texture>$INFO[ListItem.Studio,special://skin/extras/studios/,.png]</texture> 
 				<animation effect="slide" start="0,0" end="0,-40" time="0" condition="IsEmpty(Control.GetLabel(9170)) + IsEmpty(Control.GetLabel(9171))">conditional</animation>
 				<animation effect="slide" start="0,0" end="0,-65" time="0" condition="Container.Content(movies)">conditional</animation>
+					<control type="image">
+						<include>flags_studiogrey</include>
+					</control>
+					<control type="image">
+						<include>flags_studiocolor</include>
+					</control>
 			</control>
 			<control type="image"><!-- Floor -->
 				<posx>0</posx>

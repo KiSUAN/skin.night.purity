@@ -53,15 +53,17 @@
 									<bordersize>5</bordersize>
 								</control>
 						</control>
-						<control type="image" id="8125"> <!-- Studioflags  -->
+						<control type="group"> <!-- Studioflags  -->
 							<posy>40</posy>
-							<width>106</width>
-							<height>109</height>
-							<aspectratio align="center" aligny="top">keep</aspectratio>
-							<texture>$INFO[VideoPlayer.Studio,special://skin/extras/studios/,.png]</texture>
+								<control type="image" id="8126">
+									<include>flags_studiogrey_video</include>
+								</control>
+								<control type="image" id="8126">
+									<include>flags_studiocolor_video</include>
+								</control>
 						</control>
 						<control type="group">
-							<animation effect="slide" end="-108,0" time="0" condition="IsEmpty(Control.GetLabel(8125))">Conditional</animation>
+							<animation effect="slide" end="-108,0" time="0" condition="IsEmpty(Control.GetLabel(8126))">Conditional</animation>
 								<control type="grouplist">
 									<visible>!Skin.HasSetting(no_media_flags) + Skin.HasSetting(back_flags)</visible>
 									<description>Media Codec Flagging Images</description>

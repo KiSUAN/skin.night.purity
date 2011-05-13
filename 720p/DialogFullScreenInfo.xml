@@ -65,7 +65,7 @@
 									<align>left</align>
 									<font>LiberationSans_Regular_18</font>
 									<label>[B][COLOR=mainblue]$LOCALIZE[572]:[/COLOR][/B] [COLOR=white]$INFO[VideoPlayer.Studio][/COLOR]</label>
-									<visible>IsEmpty(Control.GetLabel(8125))</visible>
+									<visible>IsEmpty(Control.GetLabel(8127))</visible>
 								</control>
 								<control type="textbox">
 									<posy>-35</posy>
@@ -236,15 +236,17 @@
 							<animation type="WindowClose">
 								<effect type="slide" start="0,0" end="0,130" time="400" delay="400" tween="cubic" easing="out" />
 							</animation>
-								<control type="image" id="8125"> <!-- Studioflags  -->
+								<control type="group"> <!-- Studioflags  -->
 									<posy>-100</posy>
-									<width>106</width>
-									<height>72</height>
-									<aspectratio align="center" aligny="top">keep</aspectratio>
-									<texture>$INFO[VideoPlayer.Studio,special://skin/extras/studios/,.png]</texture>
+										<control type="image" id="8127">
+											<include>flags_studiogrey_video</include>
+										</control>
+										<control type="image" id="8127">
+											<include>flags_studiocolor_video</include>
+										</control>
 								</control>
 								<control type="group">
-									<animation effect="slide" end="-108,13" time="0" condition="IsEmpty(Control.GetLabel(8125))">Conditional</animation>
+									<animation effect="slide" end="-108,13" time="0" condition="IsEmpty(Control.GetLabel(8127))">Conditional</animation>
 										<control type="grouplist">
 											<visible>!Skin.HasSetting(no_media_flags) + Skin.HasSetting(back_flags)</visible>
 											<description>Media Codec Flagging Images</description>
