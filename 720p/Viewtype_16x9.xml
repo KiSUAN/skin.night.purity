@@ -1,10 +1,6 @@
-<!--Alaska-->
-
 <includes>
 	<include name="Viewtype_16x9">
 
-		<!-- Poster Wrap View -->
-		
 		<control type="image">
 			<posx>0</posx>
 			<posy>0</posy>
@@ -15,12 +11,9 @@
 			<include>Animation_BackdropFade</include>
 			<visible>Control.IsVisible(59) + Container.Content(episodes)</visible>
 		</control>
-		
-		
+
 		<include>Music_Global_TopRight_Music_Showcase</include>
-		
-		
-		
+
 		<control type="wraplist" id="59">
 			<posx>-300</posx>
 			<posy>160</posy>
@@ -29,7 +22,7 @@
 			<onleft>59</onleft>
 			<onright>59</onright>
 			<onup>6780</onup>
-			<ondown>92448</ondown>
+			<ondown>8540</ondown>
 			<pagecontrol>6780</pagecontrol>
 			<viewtype label="$LOCALIZE[31048]">list</viewtype>
 			<orientation>horizontal</orientation>
@@ -42,7 +35,7 @@
 				<control type="group">
 					<posx>0</posx>
 					<posy>80</posy>
-					<animation effect="fade" start="100" end="0" time="400" delay="200" condition="Control.HasFocus(98374)">Conditional</animation>
+					<animation effect="fade" start="100" end="0" time="400" delay="200" condition="Control.HasFocus(8541)">Conditional</animation>
 						<control type="image">
 							<posx>0</posx>
 							<posy>0</posy>
@@ -245,111 +238,111 @@
 				</control>	
 			</focusedlayout>
 		</control>
-		
-	<control type="group" id="92448">
-		<control type="button" id="98374">
-			<onleft>59</onleft>
-			<onright>59</onright>
-			<onup>6780</onup>
-			<ondown>59</ondown>
-			<label></label>
-			<visible allowhiddenfocus="true">ControlGroup(98374).HasFocus + Control.IsVisible(59)</visible>
+
+		<control type="group" id="8540">
+				<control type="button" id="8541">
+					<onleft>59</onleft>
+					<onright>59</onright>
+					<onup>stop</onup>
+					<include condition="!Skin.HasSetting(big_trailer)">ondown_small_trailer</include>
+					<include condition="Skin.HasSetting(big_trailer)">ondown_big_trailer</include>
+					<visible allowhiddenfocus="true">ControlGroup(8541).HasFocus</visible>
+			</control>
 		</control>
-	</control>
-	
-	<control type="textbox"><!-- Plot and TV -->
-		<posx>680</posx>
-		<posy>210</posy>
-		<width>590</width>
-		<height>280</height>
-		<align>left</align>
-		<info>ListItem.Plot</info>
-		<font>LiberationSans_Regular_22</font>
-		<textcolor>white</textcolor>
-		<autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
-		<animation effect="slide" start="900,0" end="0,0" time="400" delay="400" condition="Control.HasFocus(98374)">Conditional</animation>
-		<include>Animation_ZoomInZoomOut</include>
-		<visible>Control.HasFocus(98374) + Control.IsVisible(59)</visible>
-	</control>
-		
-	<control type="group">
-		<include>Animation_ZoomInZoomOut</include>
-		<visible>Control.IsVisible(59)</visible>
-			<control type="image" id="57010">
-				<posx>20</posx>
-				<posy>0</posy>
-				<width>300</width>
-				<height>116</height>
-				<texture background="true">$INFO[ListItem.path]logo.png</texture>
-				<fadetime>100</fadetime>
-				<aspectratio scalediffuse="false">stretch</aspectratio>
-				<visible>Container.Content(episodes) | Window.IsActive(videoplaylist)</visible>
-			</control>
-			<control type="image" id="57011">
-				<posx>20</posx>
-				<posy>0</posy>
-				<width>300</width>
-				<height>116</height>
-				<texture background="true">$INFO[ListItem.path]../logo.png</texture>
-				<fadetime>100</fadetime>
-				<aspectratio scalediffuse="false">stretch</aspectratio>
-				<visible>Container.Content(episodes) | Window.IsActive(videoplaylist)</visible>
-			</control>
-			<control type="group"> <!-- Studioflags  -->
-				<posx>10</posx>
-				<posy>540</posy>
-				<include>Animation_ZoomInZoomOut</include>
-					<control type="image" id="8134">
-						<include>flags_studiogrey</include>
-					</control>
-					<control type="image" id="8134">
-						<include>flags_studiocolor</include>
-					</control>
-			</control>
-			
-			<control type="group"> 
-				<visible>!SubString(ListItem.Icon,DefaultFolderBack.png,Left) + Container.Content(movies) + !Window.IsActive(videofiles)</visible>
-				<posx>125</posx>
-				<posy>512</posy>
-				<animation effect="slide" start="0,0" end="0,120" time="0" tween="cubic" easing="inout" condition="Control.IsVisible(52) + [Skin.HasSetting(TVPosters) + !Skin.HasSetting(landscape_jpg) + [Container.Content(tvshows) | Container.Content(seasons)]]">Conditional</animation>
-				<include>Animation_ZoomInZoomOut</include>
-					<control type="label">
-						<width>570</width>
-						<height>50</height>
-						<aligny>center</aligny>
-						<font>LiberationSans_Regular_22</font>
-						<textcolor>mainblue</textcolor>
-						<label>[B][COLOR=mainblue]$LOCALIZE[20339]:[/COLOR][/B] [COLOR=white]$INFO[ListItem.director][/COLOR]</label>
-					</control>
-					<control type="label">
-						<posy>26</posy>
-						<width>570</width>
-						<height>50</height>
-						<aligny>center</aligny>
-						<font>LiberationSans_Regular_22</font>
-						<textcolor>mainblue</textcolor>
-						<label>[B][COLOR=mainblue]$LOCALIZE[515]:[/COLOR][/B] [COLOR=white]$INFO[ListItem.genre][/COLOR]</label>
-					</control>
-					<control type="label">
-						<posy>52</posy>
-						<width>570</width>
-						<height>50</height>
-						<aligny>center</aligny>
-						<font>LiberationSans_Regular_22</font>
-						<textcolor>mainblue</textcolor>
-						<label>[B][COLOR=mainblue]$LOCALIZE[562]:[/B] [COLOR=white]$INFO[ListItem.year][/COLOR]</label>
-					</control>
-					<control type="label">
-						<posy>78</posy>
-						<width>570</width>
-						<height>50</height>
-						<aligny>center</aligny>
-						<font>LiberationSans_Regular_22</font>
-						<textcolor>mainblue</textcolor>
-						<label>[B][COLOR=mainblue]$LOCALIZE[572]:[/B] [COLOR=white]$INFO[ListItem.studio][/COLOR]</label>
-						<visible>IsEmpty(Control.GetLabel(8134))</visible>
-					</control>
-			</control>
+
+		<control type="group">
+			<include>Animation_ZoomInZoomOut</include>
+			<visible>Control.IsVisible(59)</visible>
+				<control type="image" id="57010">
+					<posx>20</posx>
+					<posy>0</posy>
+					<width>300</width>
+					<height>116</height>
+					<texture background="true">$INFO[ListItem.path]logo.png</texture>
+					<fadetime>100</fadetime>
+					<aspectratio scalediffuse="false">stretch</aspectratio>
+					<visible>Container.Content(episodes) | Window.IsActive(videoplaylist)</visible>
+				</control>
+				<control type="image" id="57011">
+					<posx>20</posx>
+					<posy>0</posy>
+					<width>300</width>
+					<height>116</height>
+					<texture background="true">$INFO[ListItem.path]../logo.png</texture>
+					<fadetime>100</fadetime>
+					<aspectratio scalediffuse="false">stretch</aspectratio>
+					<visible>Container.Content(episodes) | Window.IsActive(videoplaylist)</visible>
+				</control>
+				<control type="group"> <!-- Studioflags  -->
+					<posx>10</posx>
+					<posy>540</posy>
+					<include>Animation_ZoomInZoomOut</include>
+					<visible>!Container.Content(tvshows)</visible>
+						<control type="image" id="8134">
+							<include>flags_studiogrey</include>
+						</control>
+						<control type="image" id="8134">
+							<include>flags_studiocolor</include>
+						</control>
+				</control>		
+				<control type="textbox"><!-- Plot and TV -->
+					<posx>680</posx>
+					<posy>200</posy>
+					<width>590</width>
+					<height>280</height>
+					<align>justify</align>
+					<info>ListItem.Plot</info>
+					<font>LiberationSans_Regular_22</font>
+					<textcolor>white</textcolor>
+					<autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
+					<animation effect="slide" start="900,0" end="0,0" time="400" delay="400">Visible</animation>
+					<include>Animation_ZoomInZoomOut</include>
+					<visible>Control.HasFocus(8541) + !Player.HasVideo</visible>
+				</control>
+
+				<control type="group"> 
+					<visible>!SubString(ListItem.Icon,DefaultFolderBack.png,Left) + Container.Content(movies) + !Window.IsActive(videofiles)</visible>
+					<posx>125</posx>
+					<posy>512</posy>
+					<animation effect="slide" start="0,0" end="0,120" time="0" tween="cubic" easing="inout" condition="Control.IsVisible(52) + [Skin.HasSetting(TVPosters) + !Skin.HasSetting(landscape_jpg) + [Container.Content(tvshows) | Container.Content(seasons)]]">Conditional</animation>
+					<include>Animation_ZoomInZoomOut</include>
+						<control type="label">
+							<width>570</width>
+							<height>50</height>
+							<aligny>center</aligny>
+							<font>LiberationSans_Regular_22</font>
+							<textcolor>mainblue</textcolor>
+							<label>[B][COLOR=mainblue]$LOCALIZE[20339]:[/COLOR][/B] [COLOR=white]$INFO[ListItem.director][/COLOR]</label>
+						</control>
+						<control type="label">
+							<posy>26</posy>
+							<width>570</width>
+							<height>50</height>
+							<aligny>center</aligny>
+							<font>LiberationSans_Regular_22</font>
+							<textcolor>mainblue</textcolor>
+							<label>[B][COLOR=mainblue]$LOCALIZE[515]:[/COLOR][/B] [COLOR=white]$INFO[ListItem.genre][/COLOR]</label>
+						</control>
+						<control type="label">
+							<posy>52</posy>
+							<width>570</width>
+							<height>50</height>
+							<aligny>center</aligny>
+							<font>LiberationSans_Regular_22</font>
+							<textcolor>mainblue</textcolor>
+							<label>[B][COLOR=mainblue]$LOCALIZE[562]:[/B] [COLOR=white]$INFO[ListItem.year][/COLOR]</label>
+						</control>
+						<control type="label">
+							<posy>78</posy>
+							<width>570</width>
+							<height>50</height>
+							<aligny>center</aligny>
+							<font>LiberationSans_Regular_22</font>
+							<textcolor>mainblue</textcolor>
+							<label>[B][COLOR=mainblue]$LOCALIZE[572]:[/B] [COLOR=white]$INFO[ListItem.studio][/COLOR]</label>
+							<visible>IsEmpty(Control.GetLabel(8134))</visible>
+						</control>
+				</control>
 				<control type="grouplist">
 					<visible>!SubString(ListItem.Icon,DefaultFolderBack.png,Left) + Container.Content(movies) + !Window.IsActive(videofiles)</visible>
 					<animation effect="slide" end="0,-26" time="0" condition="!IsEmpty(Control.GetLabel(8134))">Conditional</animation>
@@ -368,78 +361,78 @@
 					<include condition="!Skin.HasSetting(vanilla_flags) + !Skin.HasSetting(flat_flags)">color_MPAAs</include>
 					<include condition="Skin.HasSetting(vanilla_flags) | Skin.HasSetting(flat_flags) + !Skin.HasSetting(original_flags)">vanilla_MPAAs</include>
 				</control>
-				
-			<control type="group"> 
-				<visible>!SubString(ListItem.Icon,DefaultFolderBack.png,Left) + !Window.IsActive(videofiles)</visible>
-				<posx>120</posx>
-				<posy>60</posy>
-				<animation effect="slide" start="0,0" end="0,120" time="0" tween="cubic" easing="inout" condition="Control.IsVisible(52) + [Skin.HasSetting(TVPosters) + !Skin.HasSetting(landscape_jpg) + [Container.Content(tvshows) | Container.Content(seasons)]]">Conditional</animation>
-				<include>Animation_ZoomInZoomOut</include>
-					<control type="label"><!-- 1st Seasons -->
-						<posx>5</posx>
-						<posy>452</posy>
-						<width>570</width>
-						<height>50</height>
-						<aligny>center</aligny>
-						<font>LiberationSans_Regular_22</font>
-						<textcolor>mainblue</textcolor>
-						<label>[B][COLOR=mainblue]$LOCALIZE[31226]:[/COLOR][/B] [COLOR=white]$INFO[ListItem.Mpaa][/COLOR]</label>
-						<visible>Container.Content(tvshows)</visible>
-					</control>
-					<control type="label"><!-- 1st Seasons -->
-						<posx>5</posx>
-						<posy>452</posy>
-						<width>570</width>
-						<height>50</height>
-						<aligny>center</aligny>
-						<font>LiberationSans_Regular_22</font>
-						<textcolor>mainblue</textcolor>
-						<label>[B][COLOR=mainblue]$LOCALIZE[20373]:[/COLOR][/B] [COLOR=white]$INFO[ListItem.Season][/COLOR]</label>
-						<visible>Container.Content(seasons) | Container.Content(episodes)</visible>
-					</control>
-					<control type="label"><!-- Episodes -->
-						<posx>5</posx>
-						<posy>478</posy>
-						<width>570</width>
-						<height>50</height>
-						<aligny>center</aligny>
-						<font>LiberationSans_Regular_22</font>
-						<textcolor>mainblue</textcolor>
-						<label>[B][COLOR=mainblue]$LOCALIZE[20360]:[/COLOR][/B] [COLOR=white]$INFO[ListItem.Episode][/COLOR]</label>
-						<visible>Container.Content(tvshows) | Container.Content(seasons)</visible>
-					</control>
-					<control type="label"><!-- Episodes -->
-						<posx>5</posx>
-						<posy>478</posy>
-						<width>570</width>
-						<height>50</height>
-						<aligny>center</aligny>
-						<font>LiberationSans_Regular_22</font>
-						<textcolor>mainblue</textcolor>
-						<label>[B][COLOR=mainblue]$LOCALIZE[20359]:[/COLOR][/B] [COLOR=white]$INFO[ListItem.Episode][/COLOR]</label>
-						<visible>Container.Content(episodes)</visible>
-					</control>
-					<control type="label"><!-- Genre -->
-						<posx>5</posx>
-						<posy>504</posy>
-						<width>570</width>
-						<height>50</height>
-						<aligny>center</aligny>
-						<font>LiberationSans_Regular_22</font>
-						<label>[B][COLOR=mainblue]$LOCALIZE[515]:[/COLOR][/B] [COLOR=white]$INFO[ListItem.Genre][/COLOR]</label>
-						<visible>Container.Content(tvshows) | Container.Content(seasons)</visible>
-					</control>
-					<control type="label"><!-- Episode Rating -->
-						<posx>5</posx>
-						<posy>504</posy>
-						<width>570</width>
-						<height>50</height>
-						<aligny>center</aligny>
-						<font>LiberationSans_Regular_22</font>
-						<textcolor>mainblue</textcolor>
-						<label>[B][COLOR=mainblue]$LOCALIZE[563]:[/B] [COLOR=white]$INFO[ListItem.Rating][/COLOR]</label>
-						<visible>Container.Content(episodes)</visible>
-					</control>
+
+				<control type="group"> 
+					<visible>!SubString(ListItem.Icon,DefaultFolderBack.png,Left) + !Window.IsActive(videofiles)</visible>
+					<posx>120</posx>
+					<posy>60</posy>
+					<animation effect="slide" start="0,0" end="0,120" time="0" tween="cubic" easing="inout" condition="Control.IsVisible(52) + [Skin.HasSetting(TVPosters) + !Skin.HasSetting(landscape_jpg) + [Container.Content(tvshows) | Container.Content(seasons)]]">Conditional</animation>
+					<include>Animation_ZoomInZoomOut</include>
+						<control type="label"><!-- 1st Seasons -->
+							<posx>5</posx>
+							<posy>452</posy>
+							<width>570</width>
+							<height>50</height>
+							<aligny>center</aligny>
+							<font>LiberationSans_Regular_22</font>
+							<textcolor>mainblue</textcolor>
+							<label>[B][COLOR=mainblue]$LOCALIZE[31226]:[/COLOR][/B] [COLOR=white]$INFO[ListItem.Mpaa][/COLOR]</label>
+							<visible>Container.Content(tvshows)</visible>
+						</control>
+						<control type="label"><!-- 1st Seasons -->
+							<posx>5</posx>
+							<posy>452</posy>
+							<width>570</width>
+							<height>50</height>
+							<aligny>center</aligny>
+							<font>LiberationSans_Regular_22</font>
+							<textcolor>mainblue</textcolor>
+							<label>[B][COLOR=mainblue]$LOCALIZE[20373]:[/COLOR][/B] [COLOR=white]$INFO[ListItem.Season][/COLOR]</label>
+							<visible>Container.Content(seasons) | Container.Content(episodes)</visible>
+						</control>
+						<control type="label"><!-- Episodes -->
+							<posx>5</posx>
+							<posy>478</posy>
+							<width>570</width>
+							<height>50</height>
+							<aligny>center</aligny>
+							<font>LiberationSans_Regular_22</font>
+							<textcolor>mainblue</textcolor>
+							<label>[B][COLOR=mainblue]$LOCALIZE[20360]:[/COLOR][/B] [COLOR=white]$INFO[ListItem.Episode][/COLOR]</label>
+							<visible>Container.Content(tvshows) | Container.Content(seasons)</visible>
+						</control>
+						<control type="label"><!-- Episodes -->
+							<posx>5</posx>
+							<posy>478</posy>
+							<width>570</width>
+							<height>50</height>
+							<aligny>center</aligny>
+							<font>LiberationSans_Regular_22</font>
+							<textcolor>mainblue</textcolor>
+							<label>[B][COLOR=mainblue]$LOCALIZE[20359]:[/COLOR][/B] [COLOR=white]$INFO[ListItem.Episode][/COLOR]</label>
+							<visible>Container.Content(episodes)</visible>
+						</control>
+						<control type="label"><!-- Genre -->
+							<posx>5</posx>
+							<posy>504</posy>
+							<width>570</width>
+							<height>50</height>
+							<aligny>center</aligny>
+							<font>LiberationSans_Regular_22</font>
+							<label>[B][COLOR=mainblue]$LOCALIZE[515]:[/COLOR][/B] [COLOR=white]$INFO[ListItem.Genre][/COLOR]</label>
+							<visible>Container.Content(tvshows) | Container.Content(seasons)</visible>
+						</control>
+						<control type="label"><!-- Episode Rating -->
+							<posx>5</posx>
+							<posy>504</posy>
+							<width>570</width>
+							<height>50</height>
+							<aligny>center</aligny>
+							<font>LiberationSans_Regular_22</font>
+							<textcolor>mainblue</textcolor>
+							<label>[B][COLOR=mainblue]$LOCALIZE[563]:[/B] [COLOR=white]$INFO[ListItem.Rating][/COLOR]</label>
+							<visible>Container.Content(episodes)</visible>
+						</control>
 				</control>
 				<control type="grouplist">
 					<visible>!SubString(ListItem.Icon,DefaultFolderBack.png,Left) + !Window.IsActive(videofiles)</visible>
@@ -507,50 +500,91 @@
 						<animation effect="slide" start="0,0" end="-10,-12" time="0" tween="cubic" easing="inout" condition="Container.Content(episodes)">Conditional</animation>
 					</control>
 				</control>
+
+				<include>16x9_Next_Aired</include>
 			
-			<include>16x9_Next_Aired</include>
-			
-			<control type="grouplist">
-				<visible>[Container.Content(episodes) | Container.Content(movies)] + Skin.HasSetting(back_flags) + !Skin.HasSetting(no_media_flags)</visible>
-				<description>Media Codec Flagging Images</description>
-				<posx>125</posx>
-				<posy>674</posy>
-				<width>1280</width>
-				<align>left</align>
-				<itemgap>0</itemgap>
-				<orientation>horizontal</orientation>
-				<include>back_flags</include>
-				<include>Animation_ZoomInZoomOut</include>
-			</control>
-			<control type="grouplist">
-				<visible>[Container.Content(episodes) | Container.Content(movies)] + !Skin.HasSetting(no_media_flags)</visible>
-				<description>Media Codec Flagging Images</description>
-				<posx>125</posx>
-				<posy>674</posy>
-				<width>1280</width>
-				<align>left</align>
-				<itemgap>0</itemgap>
-				<orientation>horizontal</orientation>
-				<include condition="!Skin.HasSetting(vanilla_flags) + !Skin.HasSetting(original_flags) + !Skin.HasSetting(flat_flags)">color_flags</include>
-				<include condition="Skin.HasSetting(vanilla_flags) + !Skin.HasSetting(original_flags) + !Skin.HasSetting(flat_flags)">vanilla_flags</include>
-				<include condition="Skin.HasSetting(original_flags) + !Skin.HasSetting(vanilla_flags) + !Skin.HasSetting(flat_flags)">original_flags</include>
-				<include condition="Skin.HasSetting(flat_flags) + !Skin.HasSetting(vanilla_flags) + !Skin.HasSetting(original_flags)">flat_flags</include>
-				<include>Animation_ZoomInZoomOut</include>
-			</control>
-			<control type="grouplist">
-				<visible>[Container.Content(episodes) | Container.Content(movies)] + !Skin.HasSetting(no_frame_flags) + !Skin.HasSetting(no_media_flags)</visible>
-				<description>Media Codec Flagging Images</description>
-				<posx>125</posx>
-				<posy>674</posy>
-				<width>1280</width>
-				<align>left</align>
-				<itemgap>0</itemgap>
-				<orientation>horizontal</orientation>
-				<include>frame_flags</include>
-				<include>Animation_ZoomInZoomOut</include>
-			</control>
-	</control>
-		
+				<control type="grouplist">
+					<visible>[Container.Content(episodes) | Container.Content(movies)] + Skin.HasSetting(back_flags) + !Skin.HasSetting(no_media_flags)</visible>
+					<description>Media Codec Flagging Images</description>
+					<posx>125</posx>
+					<posy>674</posy>
+					<width>1280</width>
+					<align>left</align>
+					<itemgap>0</itemgap>
+					<orientation>horizontal</orientation>
+					<include>back_flags</include>
+					<include>Animation_ZoomInZoomOut</include>
+				</control>
+				<control type="grouplist">
+					<visible>[Container.Content(episodes) | Container.Content(movies)] + !Skin.HasSetting(no_media_flags)</visible>
+					<description>Media Codec Flagging Images</description>
+					<posx>125</posx>
+					<posy>674</posy>
+					<width>1280</width>
+					<align>left</align>
+					<itemgap>0</itemgap>
+					<orientation>horizontal</orientation>
+					<include condition="!Skin.HasSetting(vanilla_flags) + !Skin.HasSetting(original_flags) + !Skin.HasSetting(flat_flags)">color_flags</include>
+					<include condition="Skin.HasSetting(vanilla_flags) + !Skin.HasSetting(original_flags) + !Skin.HasSetting(flat_flags)">vanilla_flags</include>
+					<include condition="Skin.HasSetting(original_flags) + !Skin.HasSetting(vanilla_flags) + !Skin.HasSetting(flat_flags)">original_flags</include>
+					<include condition="Skin.HasSetting(flat_flags) + !Skin.HasSetting(vanilla_flags) + !Skin.HasSetting(original_flags)">flat_flags</include>
+					<include>Animation_ZoomInZoomOut</include>
+				</control>
+				<control type="grouplist">
+					<visible>[Container.Content(episodes) | Container.Content(movies)] + !Skin.HasSetting(no_frame_flags) + !Skin.HasSetting(no_media_flags)</visible>
+					<description>Media Codec Flagging Images</description>
+					<posx>125</posx>
+					<posy>674</posy>
+					<width>1280</width>
+					<align>left</align>
+					<itemgap>0</itemgap>
+					<orientation>horizontal</orientation>
+					<include>frame_flags</include>
+					<include>Animation_ZoomInZoomOut</include>
+				</control>
+		</control>
+
+		<control type="label">
+			<visible>Control.IsVisible(59) + !Control.HasFocus(8541) + !SubString(ListItem.Icon,DefaultFolderBack.png,Left)</visible>
+			<posx>675</posx>
+			<posy>480</posy>
+			<width>300</width>
+			<height>20</height>
+			<align>left</align>
+			<font>LiberationSans_Regular_16</font>
+			<textcolor>mainblue</textcolor>
+			<shadowcolor>black</shadowcolor>
+			<label>31297</label>
+			<include>Animation_Viewtype_Showcase_Trailer</include>
+			<animation effect="fade"  start="0" end="100" time="400" delay="1000" condition="![Container(59).OnNext | Container(59).OnPrevious]">Conditional</animation>
+		</control>
+		<control type="label">
+			<visible>Control.IsVisible(59) + Control.HasFocus(8541) + !Player.HasVideo + !IsEmpty(ListItem.Trailer)</visible>
+			<posx>675</posx>
+			<posy>480</posy>
+			<width>300</width>
+			<height>20</height>
+			<align>left</align>
+			<font>LiberationSans_Regular_16</font>
+			<textcolor>mainblue</textcolor>
+			<shadowcolor>black</shadowcolor>
+			<label>31298</label>
+			<include>Animation_Viewtype_Showcase_Trailer</include>
+		</control>
+		<control type="label">
+			<visible>Control.IsVisible(59) + Control.HasFocus(8541) + Player.HasVideo + !IsEmpty(ListItem.Trailer)</visible>
+			<posx>675</posx>
+			<posy>480</posy>
+			<width>300</width>
+			<height>20</height>
+			<align>left</align>
+			<font>LiberationSans_Regular_16</font>
+			<textcolor>mainblue</textcolor>
+			<shadowcolor>black</shadowcolor>
+			<label>31516</label>
+			<include>Animation_Viewtype_Showcase_Trailer</include>
+		</control>
+
 		<control type="scrollbar" id="6780">
 			<include>Animation_ZoomInZoomOut</include>
 			<posx>100</posx>
@@ -567,6 +601,6 @@
 			<include>Animation_CommonFade</include>
 			<animation effect="slide" start="0,-200" end="0,0" time="400" tween="cubic" easing="inout" condition="Control.HasFocus(6780)">Conditional</animation>
 		</control>
-		
+
 	</include>
 </includes>

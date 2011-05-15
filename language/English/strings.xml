@@ -4,16 +4,16 @@
 
 	<!-- Main Labels -->
 	
-	<string id="31007">Plugins</string><!-- GOOD -->
-	<string id="31024">Page</string><!-- GOOD -->
-	<string id="31025">Items</string><!-- GOOD -->
+	<string id="31007">Plugins</string>
+	<string id="31024">Page</string>
+	<string id="31025">Items</string>
 	<string id="31326">Created</string>
 	<string id="31327">Resolution</string>
-	<string id="31029">Disable Views</string><!-- GOOD -->
+	<string id="31029">Disable Views</string>
 	
 	<!-- Settings labels -->
 	
-	<string id="31032">Disable Clock on Home</string><!-- GOOD -->
+	<string id="31032">Disable Clock on Home</string>
 	<string id="31033">Scroll Plot for Movies and TV</string>
 	<string id="31034">Disable Media Flags</string>
 	<string id="31035">Enable Movies Watched Overlays</string>
@@ -27,7 +27,7 @@
 	<string id="31043">Set Options for Movies and TV Shows</string>
 	<string id="31044">Use Posters for TV Section</string>
 	<string id="31045">Use Banners for TV Section</string>
-	<string id="31047">Disable Movies and TV Views</string><!-- GOOD -->
+	<string id="31047">Disable Movies and TV Views</string>
 	
 <!--VIEWS -->	
 	<string id="31048">16x9</string>
@@ -47,65 +47,64 @@
 	
 	
 <!--MORE COMMON PHRASES -->	
-	<string id="31067">Filemanager</string><!-- GOOD -->
-	<string id="31073">MUTE</string><!-- GOOD -->
-	<string id="31074">Current Time</string><!-- GOOD -->
-	<string id="31075">Finish Time</string><!-- GOOD -->
-	<string id="31076">Kiosk Mode</string><!-- GOOD -->
-	<string id="31079">Titles</string><!-- GOOD -->
-	<string id="31081">Recently Added</string><!-- GOOD -->
+	<string id="31067">Filemanager</string>
+	<string id="31073">MUTE</string>
+	<string id="31074">Current Time</string>
+	<string id="31075">Finish Time</string>
+	<string id="31076">Kiosk Mode</string>
+	<string id="31079">Titles</string>
+	<string id="31081">Recently Added</string>
 	<string id="31082">Credits</string>
-	<string id="31086">Show Fanart</string><!-- GOOD -->
-	<string id="31088">Viewtype</string><!-- GOOD -->
-	<string id="31094">Dark Showcase</string><!-- GOOD -->
+	<string id="31086">Show Fanart</string>
+	<string id="31088">Viewtype</string>
+	<string id="31094">Dark Showcase</string>
 	<string id="31095">WATCH</string>
-	<string id="31096">Shown</string><!-- GOOD -->
-	<string id="31097">Hidden</string><!-- GOOD -->
+	<string id="31096">Shown</string>
+	<string id="31097">Hidden</string>
 	<string id="31098">Watched</string>
 	<string id="31099">TITLE</string>
-	<string id="31200">Show Thumbs</string><!-- GOOD -->
-	<string id="31201">Disable Thumbs</string><!-- GOOD -->
-	<string id="31202">Use Logo</string><!-- GOOD -->
-	<string id="31203">No Logo</string><!-- GOOD -->
-	<string id="31204">Disable Flags</string><!-- GOOD -->
-	<string id="31205">Show Flags</string><!-- GOOD -->
-	<string id="31206">Extrathumbs</string><!-- GOOD -->
+	<string id="31200">Show Thumbs</string>
+	<string id="31201">Disable Thumbs</string>
+	<string id="31202">Use Logo</string>
+	<string id="31203">No Logo</string>
+	<string id="31204">Disable Flags</string>
+	<string id="31205">Show Flags</string>
+	<string id="31206">Extrathumbs</string>
 	<string id="31207">FLAGS</string>
 	<string id="31208">Title</string>
-	<string id="31209">TV</string><!-- GOOD -->
+	<string id="31209">TV</string>
 	<string id="31210">Fanart Thumbs</string>
 	<string id="31211">16x9 Thumbs</string>
 	<string id="31212">Cinema</string>
-	<string id="31214">Dark View</string><!-- GOOD -->
-	<string id="31215">Show subtitle script button in OSD</string><!-- GOOD -->
-	<string id="31216">Script path:</string><!-- GOOD -->
+	<string id="31214">Dark View</string>
+	<string id="31215">Show subtitle script button in OSD</string>
+	<string id="31216">Script path:</string>
 	<string id="31217">Enable Home Theater Script</string>
 	<string id="31218">Power Options</string>
-	<string id="31219">landscape.jpg</string><!-- GOOD -->
-	<string id="31220">Cached Thumb</string><!-- GOOD -->
+	<string id="31219">landscape.jpg</string>
+	<string id="31220">Cached Thumb</string>
 	<string id="31221">Use Condition based weather fanart</string>
-	<string id="31226">Rated</string><!-- GOOD -->
-	<string id="31229">First Premiered in</string><!-- GOOD -->
-	<string id="31230">This Show Aired</string><!-- GOOD -->
-	<string id="31231">Aired</string><!-- GOOD -->
+	<string id="31226">Rated</string>
+	<string id="31229">First Premiered in</string>
+	<string id="31230">This Show Aired</string>
+	<string id="31231">Aired</string>
 	<string id="31232">GO [CR]BACK</string>
-	<string id="31233">Please Choose a Song</string><!-- GOOD -->
-	<string id="31234">on</string><!-- GODD -->
+	<string id="31233">Please Choose a Song</string>
+	<string id="31234">on</string>
 	<string id="31235">GO BACK</string>
-	<string id="31237">Press Down for Trailer</string>
-	<string id="31238">Press "X" to Stop</string>
-	<string id="31240">Press "Left" for Trailer</string>
+	<string id="31238">« Press "X" to Stop »</string>
+	<string id="31240">« Press "Left" for Trailer »</string>
 	<string id="31241">Show Weather Widget</string>
-	<string id="31242">Set Timer</string><!-- GOOD -->
-	<string id="31243">Cancel Timer</string><!-- GOOD -->
+	<string id="31242">Set Timer</string>
+	<string id="31243">Cancel Timer</string>
 	<string id="31244">Horizontal Home Menu</string>
 	<string id="31246">Show plot</string>
 	<string id="31247">Enable Global Clock</string>
 	<string id="31248">Use Smaller Global Now Playing for Music</string>
 	<string id="31249">Get Logo</string>
 	<string id="31251">Location</string>
-	<string id="31252">Last Updated</string><!-- GOOD -->
-	<string id="31253">Latests Albums</string><!-- GOOD -->
+	<string id="31252">Last Updated</string>
+	<string id="31253">Latests Albums</string>
 	<string id="31254">3 Days - Mini</string>
 	<string id="31255">4 Days - Full</string>
 	<string id="31256">Global Settings</string>
@@ -117,7 +116,7 @@
 	<string id="31262">Set Label</string>
 	<string id="31263">Script to Automatically Download Logos</string>
 	<string id="31264">Click to Run the logo script</string>
-	<string id="31265">By clicking the above button, the script will automatically match whatever TV shows you have and then download the correct logo, if there is one, and save it as logo.png in the root of that TV shows folder[CR]**Go to www.lockstockmods.net if you want to download one by one**</string>
+	<string id="31265">By clicking the above button, the script will automatically match whatever TV shows you have and then download the correct logo, if there is one, and save it as logo.png in the root of that TV shows folder[CR]« Go to http://fanart.tv/ if you want to download one by one »</string>
 	
 <!-- Qlock -->	
 
@@ -260,19 +259,19 @@ just copy the translations from Confluence to here
 	<!-- Confluence Labels -->
   <string id="91000">Change Your</string>
   <string id="31110">Edit Background for Home Button</string>
-  <string id="31113">Single Image</string><!-- GOOD -->
-  <string id="31114">Multi Image</string><!-- GOOD -->
+  <string id="31113">Single Image</string>
+  <string id="31114">Multi Image</string>
 	 <!-- Description Labels  -->
   
   <string id="31106">Miscellaneous options</string>
-  <string id="31115">Customizer</string><!-- GOOD -->
-  <string id="31116">Addon Scripts</string><!-- GOOD -->
+  <string id="31115">Customizer</string>
+  <string id="31116">Addon Scripts</string>
   <string id="31117">Show Recently Added Content on Home</string>
   <string id="31118">Check if using a merge version</string>
   <string id="31323">Latest Movies</string>
   <string id="31309">Memory Used:</string>
   <string id="31122">Weather Page</string>
-  <string id="31324">Latest Episodes</string><!-- good -->
+  <string id="31324">Latest Episodes</string>
   <string id="31325">Playlist Options</string>
   <string id="31126">Enable Lyrics in Music OSD</string>
   <string id="31127">Path to Lyrics Script</string>
@@ -304,7 +303,7 @@ just copy the translations from Confluence to here
   <string id="31004">TV Shows</string>
   <string id="31005">This option will allow more info to display when paused over a movie</string>
   <string id="31006">PosterPlus</string>
-  <string id="31008">Shutdown</string><!-- GOOD -->
+  <string id="31008">Shutdown</string>
   <string id="31119">Enable Custom Script Button</string>
   <string id="31120">BUTTON LABEL</string>
   <string id="31121">PATH TO SCRIPT</string>
@@ -352,8 +351,8 @@ just copy the translations from Confluence to here
   <string id="31296">Newest</string>
   
   <!-- NEW 9/23-->
-  <string id="31297">*Press Down For Info*</string>
-  <string id="31298">*Press Down to Play Trailer*</string>
+  <string id="31297">« Press Down For Info »</string>
+  <string id="31298">« Press Down to Play Trailer »</string>
   <string id="31299">Turn Off</string>
   <string id="31300">Turn On</string>
   <string id="31500">3d Square</string>
@@ -374,7 +373,7 @@ just copy the translations from Confluence to here
   <string id="31513">Use Random Items instead of Recent Items</string>
   <string id="31514">One Day</string>
   <string id="31515">Press Down for New Episodes</string>
-  <string id="31516">*Press Up or "X" to stop Trailer*</string>
+  <string id="31516">« Press Up or "X" to stop Trailer »</string>
   <string id="31517">Random Movies</string>
   <string id="31518">Random Albums</string>
   

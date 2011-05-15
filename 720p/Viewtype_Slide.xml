@@ -16,7 +16,7 @@
 			<posx>-100</posx>
 			<posy>0</posy>
 			<height>615</height>
-			<width>1400</width><!-- 1400 -->
+			<width>1400</width>
 			<onleft>595</onleft>
 			<onright>595</onright>
 			<onup>5950</onup>
@@ -81,14 +81,14 @@
 		</control>
 
 		<control type="group" id="8240">
-			<control type="button" id="8241">
-				<onleft>595</onleft>
-				<onright>595</onright>
-				<onup>stop</onup>
-				<ondown>XBMC.PlayMedia($INFO[ListItem.Trailer],1,noresume)</ondown>
-				<onclick>PlayMedia($INFO[ListItem.FileNameAndPath])</onclick> 
-				<visible allowhiddenfocus="true">ControlGroup(8240).HasFocus</visible>
-			</control>
+				<control type="button" id="8241">
+					<onleft>595</onleft>
+					<onright>595</onright>
+					<onup>stop</onup>
+					<include condition="!Skin.HasSetting(big_trailer)">ondown_small_trailer</include>
+					<include condition="Skin.HasSetting(big_trailer)">ondown_big_trailer</include>
+					<visible allowhiddenfocus="true">ControlGroup(8240).HasFocus</visible>
+				</control>
 		</control>
 
 		<control type="group">
@@ -151,7 +151,6 @@
 				</control>
 				<control type="group"> <!-- Studioflags  -->
 					<posy>280</posy>
-					<include>Animation_ZoomInZoomOut</include>
 						<control type="image" id="8179">
 							<include>flags_studiogrey</include>
 						</control>
@@ -275,71 +274,51 @@
 			<visible>Control.IsVisible(595) + [Container.Content(movies) + Control.HasFocus(8241) + ![Control.HasFocus(8241) + Player.HasVideo]]</visible>
 		</control>
 
-		<control type="group">
-			<visible>Control.IsVisible(595) + Control.HasFocus(8241) + Player.HasVideo</visible>
-			<animation effect="fade" start="0" end="100" time="400" delay="800" condition="Player.HasVideo">Conditional</animation>
-			<posx>666</posx>
-			<posy>250</posy>
-			<control type="image"> 
-				<description>trailer image</description>
-				<posx>-70</posx>
-				<posy>-70</posy>   
-				<width>693</width>     
-				<height>445</height> 
-				<texture>dialogs/trailer_diffuse_back.png</texture>
-			</control>
-			<control type="videowindow" id="4">
-				<posx>30</posx>
-				<posy>26</posy>
-				<width>500</width>
-				<height>256</height>
-			</control>
-		</control>
-
 		<control type="label">
 			<visible>Control.IsVisible(595) + !Control.HasFocus(8241) + !SubString(ListItem.Icon,DefaultFolderBack.png,Left)</visible>
-			<posx>410</posx>
-			<posy>668</posy>
-			<width>370</width>
-			<height>50</height>
-			<aligny>center</aligny>
+			<posx>335</posx>
+			<posy>680</posy>
+			<width>300</width>
+			<height>20</height>
+			<align>center</align>
 			<font>LiberationSans_Regular_16</font>
 			<textcolor>mainblue</textcolor>
-			<label>31297</label>
 			<shadowcolor>black</shadowcolor>
+			<label>31297</label>
 			<include>Animation_Viewtype_Showcase_Trailer</include>
 			<animation effect="fade"  start="0" end="100" time="400" delay="1000" condition="![Container(595).OnNext | Container(595).OnPrevious]">Conditional</animation>
 		</control>
 		<control type="label">
-			<visible>Control.IsVisible(595) + Control.HasFocus(8241) + !Player.HasVideo</visible>
-			<posx>410</posx>
-			<posy>668</posy>
-			<width>370</width>
-			<height>50</height>
-			<aligny>center</aligny>
+			<visible>Control.IsVisible(595) + Control.HasFocus(8241) + !Player.HasVideo + !IsEmpty(ListItem.Trailer)</visible>
+			<posx>335</posx>
+			<posy>680</posy>
+			<width>300</width>
+			<height>20</height>
+			<align>center</align>
 			<font>LiberationSans_Regular_16</font>
 			<textcolor>mainblue</textcolor>
-			<label>31298</label>
 			<shadowcolor>black</shadowcolor>
+			<label>31298</label>
 			<include>Animation_Viewtype_Showcase_Trailer</include>
 		</control>
 		<control type="label">
 			<visible>Control.IsVisible(595) + Control.HasFocus(8241) + Player.HasVideo + !IsEmpty(ListItem.Trailer)</visible>
-			<posx>410</posx>
-			<posy>668</posy>
-			<width>370</width>
-			<height>50</height>
-			<aligny>center</aligny>
+			<posx>335</posx>
+			<posy>680</posy>
+			<width>300</width>
+			<height>20</height>
+			<align>center</align>
 			<font>LiberationSans_Regular_16</font>
 			<textcolor>mainblue</textcolor>
-			<label>$LOCALIZE[31516]</label>
+			<shadowcolor>black</shadowcolor>
+			<label>31516</label>
 			<include>Animation_Viewtype_Showcase_Trailer</include>
 		</control>
 
 		<control type="grouplist">
 			<visible>Control.IsVisible(595) + Skin.HasSetting(back_flags) + Container.Content(movies) + !Skin.HasSetting(no_media_flags)</visible>
 			<description>Media Codec Flagging Images</description>
-			<posx>180</posx>
+			<posx>187</posx>
 			<posy>640</posy>
 			<width>600</width>
 			<align>center</align>
@@ -351,7 +330,7 @@
 		<control type="grouplist">
 			<visible>Control.IsVisible(595) + Container.Content(movies) + !Skin.HasSetting(no_media_flags)</visible>
 			<description>Media Codec Flagging Images</description>
-			<posx>180</posx>
+			<posx>187</posx>
 			<posy>640</posy>
 			<width>600</width>
 			<align>center</align>
@@ -366,7 +345,7 @@
 		<control type="grouplist">
 			<visible>Control.IsVisible(595) + !Skin.HasSetting(no_frame_flags) + Container.Content(movies) + !Skin.HasSetting(no_media_flags)</visible>
 			<description>Media Codec Flagging Images</description>
-			<posx>180</posx>
+			<posx>187</posx>
 			<posy>640</posy>
 			<width>600</width>
 			<align>center</align>

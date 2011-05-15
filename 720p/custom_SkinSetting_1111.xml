@@ -3568,7 +3568,7 @@
 							<focusedcolor>white</focusedcolor>
 							<texturefocus>confluence/button-focus_2.png</texturefocus>
 							<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
-							<onclick>XBMC.RunScript(script.logo-downloader,mode=bulk,clearart=True,logo=True,showthumb=False)</onclick>
+							<onclick>XBMC.RunScript(script.logo-downloader,mode=bulk,clearart=True,logo=True,showthumb=landscape.jpg,banner=banner.jpg)</onclick>
 						</control>
 						<control type="textbox" id="913">
 							<posx>310</posx>

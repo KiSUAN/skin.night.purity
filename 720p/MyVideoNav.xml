@@ -137,10 +137,11 @@
 		</control>
 
 		<include>Trailer</include>
+		<include>Trailer_Showcase</include>
 		<include>Trailer_TVLandscape</include>
-		<include>Trailer_Landscape_Fanart</include>
 		<include>Trailer_16x9</include>
 		<include>Trailer_Poster</include>
+		<include>Trailer_Landscape_Fanart</include>
 
 		<control type="group">	
 			<visible>!SubString(Window(10025).Property(tvtunesIsAlive),True)</visible>

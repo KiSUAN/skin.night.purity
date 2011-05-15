@@ -74,7 +74,7 @@
 								<align>center</align>
 								<font>LiberationSans_Regular_16</font>
 								<textcolor>ListTrackNF</textcolor>
-								<label>[B]*$LOCALIZE[16102]*[/B]</label>
+								<label>[B]« $LOCALIZE[16102] »[/B]</label>
 								<visible>Skin.HasSetting(tvoverlays) + Container.Content(tvshows) + ![StringCompare(Window(Home).Property(LatestEpisode.1.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(LatestEpisode.2.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(LatestEpisode.3.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(LatestEpisode.4.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(LatestEpisode.5.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(LatestEpisode.6.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(LatestEpisode.7.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(LatestEpisode.8.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(LatestEpisode.9.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(LatestEpisode.10.ShowTitle),ListItem.Label)] + stringcompare(ListItem.Overlay,OverlayWatched.png)</visible>
 							</control>
 							<control type="image">
@@ -144,7 +144,7 @@
 								<align>center</align>
 								<font>LiberationSans_Regular_16</font>
 								<textcolor>mainblue</textcolor>
-								<label>[B]*$LOCALIZE[16102]*[/B]</label>
+								<label>[B]« $LOCALIZE[16102] »[/B]</label>
 								<visible>Skin.HasSetting(tvoverlays) + Container.Content(tvshows) + ![StringCompare(Window(Home).Property(LatestEpisode.1.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(LatestEpisode.2.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(LatestEpisode.3.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(LatestEpisode.4.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(LatestEpisode.5.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(LatestEpisode.6.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(LatestEpisode.7.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(LatestEpisode.8.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(LatestEpisode.9.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(LatestEpisode.10.ShowTitle),ListItem.Label)] + stringcompare(ListItem.Overlay,OverlayWatched.png)</visible>
 							</control>
 							<control type="image">
@@ -168,8 +168,7 @@
 					</control>
 				</focusedlayout>
 		</control>
-	
-	
+
 		<control type="group">
 			<include>Animation_LandscapeFade</include>
 			<visible>Control.IsVisible(633) + [Container.Content(seasons) | Container.Content(episodes)]</visible>
@@ -234,7 +233,7 @@
 					<visible>Container.Content(episodes) + !SubString(ListItem.Icon,DefaultFolderBack.png,Left)</visible>
 				</control>
 		</control>
-	
+
 		<control type="group">
 			<animation effect="zoom" start="640,0,1,720" end="0,0,1280,720" time="200" delay="200">Visible</animation>
 			<animation effect="slide" start="0,0" end="0,-40" time="400" tween="cubic" easing="inout" condition="Control.HasFocus(6330)">Conditional</animation>
@@ -300,17 +299,17 @@
 			<animation effect="fade" start="0" end="100" time="400" delay="200" condition="Control.HasFocus(18374)">Conditional</animation>
 			<visible>Control.IsVisible(633) + Container.Content(episodes) + !SubString(ListItem.Icon,DefaultFolderBack.png,Left) + Control.HasFocus(18374)</visible>
 				<control type="image">
-					<posx>458</posx>
+					<posx>456</posx>
 					<posy>426</posy>
-					<width>392</width>
-					<height>221</height>
+					<width>394</width>
+					<height>221.5</height>
 					<texture>tv-landscape/fanart_land_plot_back.png</texture>
 				</control>
 				<control type="textbox">
-					<posx>460</posx>
-					<posy>424</posy>
-					<width>386</width>
-					<height>188</height>
+					<posx>464</posx>
+					<posy>430</posy>
+					<width>375</width>
+					<height>173</height>
 					<font>LiberationSans_Regular_18</font>
 					<textcolor>white</textcolor>
 					<label>$INFO[ListItem.Plot]</label>

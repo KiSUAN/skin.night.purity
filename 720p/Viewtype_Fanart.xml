@@ -320,6 +320,7 @@
 							<visible>Container.Content(tvshows) + IsEmpty(Control.GetLabel(7017))</visible>
 						</control>
 						<control type="label">
+							<posy>40</posy>
 							<height>26</height>
 							<width>540</width>
 							<align>center</align>

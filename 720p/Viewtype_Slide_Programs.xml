@@ -258,7 +258,7 @@
 			<font>LiberationSans_Regular_16</font>
 			<textcolor>mainblue</textcolor>
 			<shadowcolor>black</shadowcolor>
-			<label>$LOCALIZE[31516]</label>
+			<label>31516</label>
 			<include>Animation_Viewtype_Showcase_Trailer</include>
 		</control>
 

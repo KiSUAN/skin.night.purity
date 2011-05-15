@@ -307,7 +307,7 @@
 					<aligny>center</aligny>
 					<font>LiberationSans_Regular_16</font>
 					<textcolor>white</textcolor>
-					<label>*$LOCALIZE[31237]*</label>
+					<label>31298</label>
 					<shadowcolor>black</shadowcolor>
 					<include>Animation_Viewtype_Showcase_Trailer</include>
 					<animation effect="slide" start="0,0" end="0,-23" time="0" condition="IsEmpty(ListItem.Duration)">Conditional</animation>
@@ -316,13 +316,13 @@
 				<control type="label"><!--Trailer Stop-->
 					<visible>Player.HasVideo</visible>
 					<posx>20</posx>
-					<posy>320</posy>
+					<posy>324</posy>
 					<width>370</width>
 					<height>50</height>
 					<aligny>center</aligny>
 					<font>LiberationSans_Regular_16</font>
 					<textcolor>white</textcolor>
-					<label>*$LOCALIZE[31238]*</label>
+					<label>31238</label>
 					<shadowcolor>black</shadowcolor>
 					<include>Animation_Viewtype_Showcase_Trailer</include>
 				</control>
@@ -417,7 +417,7 @@
 						<effect type="fade" start="100" end="0" time="500" delay="7000" />
 						<effect type="fade" start="100" end="0" time="500" delay="14000" />
 					</animation>
-					<include>Animation_ZoomInZoomOut</include>
+					<include>Animation_Viewtype_Showcase_RightArea</include>
 						<control type="image" id="8176">
 							<include>flags_studiogrey</include>
 						</control>
@@ -512,7 +512,6 @@
 				</control>
 		</control>
 
-		<include>Trailer_Showcase</include>
 		<include>Music_Global_Showcase</include>
 
 		<control type="scrollbar" id="68">

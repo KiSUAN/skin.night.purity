@@ -640,7 +640,7 @@
 					<aligny>center</aligny>
 					<font>LiberationSans_Regular_16</font>
 					<textcolor>white</textcolor>
-					<label>*$LOCALIZE[31237]*</label>
+					<label>31298</label>
 					<shadowcolor>black</shadowcolor>
 					<include>Animation_ZoomInZoomOut</include>
 					<animation effect="slide" start="0,0" end="0,-23" time="0" condition="IsEmpty(ListItem.Duration)">Conditional</animation>
@@ -648,14 +648,14 @@
 				</control>	
 				<control type="label"><!--Trailer Stop-->
 					<visible>Container.Content(movies) + Player.HasVideo + !Skin.HasSetting(clean_poster)</visible>
-					<posx>60</posx>
-					<posy>26</posy>
+					<posx>20</posx>
+					<posy>35</posy>
 					<width>370</width>
 					<height>50</height>
 					<aligny>center</aligny>
 					<font>LiberationSans_Regular_16</font>
 					<textcolor>white</textcolor>
-					<label>*$LOCALIZE[31238]*</label>
+					<label>31238</label>
 					<shadowcolor>black</shadowcolor>
 					<include>Animation_ZoomInZoomOut</include>
 				</control>

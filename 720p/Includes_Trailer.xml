@@ -1,5 +1,3 @@
-<!--Alaska-->
-
 <includes>
 
 	<include name="Trailer"><!--Landscape Season Episodes-->
@@ -26,6 +24,7 @@
 			</control>
 		</control>
 	</include>
+
 	<include name="Trailer_TVLandscape">
 		<control type="group">
 			<visible>Player.HasVideo + Control.IsVisible(52) + Container.Content(tvshows)</visible>
@@ -52,6 +51,7 @@
 			</control>
 		</control>
 	</include>
+
 	<include name="Trailer_Landscape_Fanart"><!--Landscape Season Episodes-->
 		<control type="group">
 			<visible>Player.HasVideo + [Control.IsVisible(53) | Control.IsVisible(633) | Control.IsVisible(593)]</visible>
@@ -76,6 +76,7 @@
 			</control>
 		</control>
 	</include>
+
 	<include name="Trailer_Panel">
 	<control type="group">
 			<visible>[Control.IsVisible(56) | Control.IsVisible(57) | Control.IsVisible(592)] + Player.HasVideo</visible>
@@ -99,6 +100,7 @@
 			</control>
 		</control>
 	</include>
+
 	<include name="Trailer_Poster">
 	<control type="group">
 			<visible>[Control.IsVisible(55) | Control.IsVisible(598)] + Player.HasVideo</visible>
@@ -117,16 +119,16 @@
 			</control>
 			<control type="videowindow" id="5">
 				<posx>30</posx>
-				<posy>26</posy>
 				<width>500</width>
 				<height>256</height>
 			</control>
 		</control>
 	</include>
+
 	<include name="Trailer_Showcase">
 		<control type="group">
 			<visible>Control.IsVisible(58) + Player.HasVideo</visible>
-			<animation effect="zoom" start="0" end="78" time="400" delay="0" condition="Player.HasVideo">Conditional</animation>
+			<animation effect="zoom" start="0" end="83" time="400" delay="0" condition="Player.HasVideo">Conditional</animation>
 			<animation effect="fade" start="0" end="100" time="400" delay="800" condition="Player.HasVideo">Conditional</animation>
 			<posx>-10</posx>
 			<posy>0</posy>
@@ -146,20 +148,21 @@
 			</control>
 		</control>
 	</include>
+
 	<include name="Trailer_16x9">
 		<control type="group">
-			<visible>Control.IsVisible(59) + Player.HasVideo</visible>
-			<animation effect="slide" start="920,500" end="920,500" time="400" delay="800" condition="Player.HasVideo">Conditional</animation>
-			<animation effect="zoom" start="0" end="66" time="400" delay="800" condition="Player.HasVideo">Conditional</animation>
-			<posx>0</posx>
-			<posy>0</posy>
+			<visible>[Control.IsVisible(59) | Control.IsVisible(595)] + Player.HasVideo</visible>
+			<animation effect="fade" start="0" end="100" time="400" delay="800" condition="Player.HasVideo">Conditional</animation>
+			<animation effect="slide" end="-34,100" time="0" condition="Control.IsVisible(595)">Conditional</animation>
+			<posx>700</posx>
+			<posy>150</posy>
 			<control type="image"> 
 				<description>trailer image</description>
-				<posx>0</posx>
-				<posy>0</posy>   
-				<width>560</width>     
-				<height>361</height> 
-				<texture>dialogs/trailer_back.png</texture>
+				<posx>-70</posx>
+				<posy>-70</posy>
+				<width>693</width>
+				<height>445</height>
+				<texture>dialogs/trailer_diffuse_back.png</texture>
 			</control>
 			<control type="videowindow" id="7">
 				<posx>30</posx>
@@ -167,24 +170,9 @@
 				<width>500</width>
 				<height>256</height>
 			</control>
-			<control type="image"> 
-				<description>trailer image</description>
-				<posx>0</posx>
-				<posy>0</posy>   
-				<width>560</width>     
-				<height>361</height> 
-				<texture>dialogs/nowplaying.png</texture>
-			</control>
-			<control type="label">
-				<posx>20</posx>
-				<posy>290</posy>
-				<width>490</width>
-				<font>DefaultCaps_30</font>
-				<label>$INFO[VideoPlayer.Title, ]</label>
-				<textcolor>black</textcolor>
-			</control>
 		</control>
 	</include>
+
 	<include name="Trailer_Files">
 		<control type="group">
 			<visible>Control.IsVisible(50) + Player.HasVideo</visible>
@@ -208,6 +196,7 @@
 			</control>
 		</control>
 	</include>
+
 	<include name="Trailer_Episodes">
 		<control type="group">
 			<visible>Control.IsVisible(51) + Player.HasVideo</visible>
@@ -230,6 +219,7 @@
 				<height>256</height>
 			</control>
 		</control>
+
 		<include name="Trailer_Home">
 		<control type="group">
 			<visible>Window.IsActive(Home) + Player.HasVideo</visible>
@@ -254,7 +244,7 @@
 		</control>
 	</include>
 	</include>
-	
+
 	<include name="Trailer_WallPanel">
 		<control type="group">
 			<visible>Control.IsVisible(597) + Player.HasVideo</visible>
@@ -271,11 +261,12 @@
 				<texture>dialogs/trailer_diffuse_back.png</texture>
 			</control>
 			<control type="videowindow" id="8">
-				<posx>30</posx>
+				<posx>40</posx>
 				<posy>26</posy>
 				<width>500</width>
 				<height>256</height>
 			</control>
 		</control>
 	</include>
+
 </includes>

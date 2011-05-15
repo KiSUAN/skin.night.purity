@@ -527,27 +527,27 @@
 
 		<control type="label"><!--Trailer Start-->
 			<visible>Control.IsVisible(597) + Container.Content(movies) + !IsEmpty(ListItem.Trailer) + !Player.HasVideo</visible>
-			<posx>64</posx>
+			<posx>20</posx>
 			<posy>676</posy>
 			<width>370</width>
-			<height>50</height>
-			<aligny>center</aligny>
+			<height>20</height>
+			<align>left</align>
 			<font>LiberationSans_Regular_16</font>
 			<textcolor>white</textcolor>
-			<label>*$LOCALIZE[31240]*</label>
+			<label>31240</label>
 			<shadowcolor>black</shadowcolor>
 			<include>Animation_ZoomInZoomOut</include>
 		</control>	
 		<control type="label"><!--Trailer Stop-->
 			<visible>Control.IsVisible(597) + Container.Content(movies) + Player.HasVideo</visible>
-			<posx>84</posx>
+			<posx>20</posx>
 			<posy>676</posy>
 			<width>370</width>
-			<height>50</height>
-			<aligny>center</aligny>
+			<height>20</height>
+			<align>left</align>
 			<font>LiberationSans_Regular_16</font>
 			<textcolor>white</textcolor>
-			<label>*$LOCALIZE[31238]*</label>
+			<label>31238</label>
 			<shadowcolor>black</shadowcolor>
 			<include>Animation_ZoomInZoomOut</include>
 		</control>
