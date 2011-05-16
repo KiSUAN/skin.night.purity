@@ -18,8 +18,9 @@
 			<width>1400</width>
 			<onleft>621</onleft>
 			<onright>621</onright>
-			<onup>7000</onup>
-			<ondown>66</ondown>
+			<onup>66</onup>
+			<include condition="!Skin.HasSetting(big_trailer)">ondown_small_trailer_games</include>
+			<include condition="Skin.HasSetting(big_trailer)">ondown_big_trailer_games</include>
 			<viewtype label="$LOCALIZE[31500]">list</viewtype>
 			<orientation>horizontal</orientation>
 			<focusposition>3</focusposition>
@@ -338,6 +339,33 @@
 					<texture>common/scrollbar_back.png</texture>
 					<visible>Control.HasFocus(66)</visible>
 				</control>
+				<control type="label"><!--Trailer Start-->
+					<visible>!IsEmpty(ListItem.Trailer) + !Player.HasVideo</visible>
+					<posx>10</posx>
+					<posy>45</posy>
+					<width>370</width>
+					<height>20</height>
+					<align>left</align>
+					<font>LiberationSans_Regular_16</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<label>31298</label>
+					<include>Animation_ZoomInZoomOut</include>
+					<animation effect="fade" start="0" end="100" time="400" delay="1000" condition="![Container(621).OnNext | Container(621).OnPrevious]">Conditional</animation>
+				</control>	
+				<control type="label"><!--Trailer Stop-->
+					<visible>Player.HasVideo</visible>
+					<posx>20</posx>
+					<posy>255</posy>
+					<width>370</width>
+					<height>20</height>
+					<align>left</align>
+					<font>LiberationSans_Regular_16</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<label>31238</label>
+					<include>Animation_ZoomInZoomOut</include>
+				</control>
 		</control>
 		
 		<control type="scrollbar" id="66">
@@ -349,7 +377,7 @@
 			<visible allowhiddenfocus="true">Control.HasFocus(66)</visible>
 			<texturesliderbackground>osd/osd_progress_back1.png</texturesliderbackground>
 			<textureslidernibfocus>ScrollBarV_Nib_Focus1.png</textureslidernibfocus>
-			<onup>621</onup>
+			<onup>7000</onup>
 			<ondown>621</ondown>
 			<showonepage>true</showonepage>
 			<orientation>horizontal</orientation>

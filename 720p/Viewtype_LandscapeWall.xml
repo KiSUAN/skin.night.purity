@@ -220,7 +220,7 @@
 						</control>
 						<control type="label">
 							<posx>0</posx>
-							<posy>160</posy>
+							<posy>175</posy>
 							<width>300</width>
 							<height>50</height>
 							<aligny>center</aligny>

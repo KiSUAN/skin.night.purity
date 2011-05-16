@@ -42,8 +42,9 @@
 			<include condition="Skin.HasSetting(ShowcaseFanart_Programs)">showcase_width_fanart</include>
 			<onleft>58</onleft>
 			<onright>58</onright>
-			<onup>7000</onup>
-			<ondown>71</ondown>
+			<onup>71</onup>
+			<include condition="!Skin.HasSetting(big_trailer)">ondown_small_trailer_games</include>
+			<include condition="Skin.HasSetting(big_trailer)">ondown_big_trailer_games</include>
 			<viewtype label="$LOCALIZE[31063]">list</viewtype>
 			<orientation>horizontal</orientation>
 			<include condition="!Skin.HasSetting(ShowcaseFanart_Programs)">showcase_focusposition_dark</include>
@@ -249,7 +250,6 @@
 							<texture>tv-landscape/landscapeframeFO.png</texture>
 						</control>
 				</control>
-
 				<control type="image"> <!-- Games Studioflags  -->
 					<width>80</width>
 					<height>55</height>
@@ -258,6 +258,33 @@
 					<aspectratio align="center">keep</aspectratio>
 					<texture>$INFO[ListItem.Studio,special://skin/extras/studios/grey/,.png]</texture>
 					<visible>Window.IsActive(programs) + substring(container.folderpath,plugin://plugin.program.advanced.launcher) + !Skin.HasSetting(ShowcaseFanart_Programs)</visible>
+				</control>
+				<control type="label"><!--Trailer Start-->
+					<visible>!IsEmpty(ListItem.Trailer) + !Player.HasVideo</visible>
+					<posx>20</posx>
+					<posy>320</posy>
+					<width>370</width>
+					<height>50</height>
+					<aligny>center</aligny>
+					<font>LiberationSans_Regular_16</font>
+					<textcolor>white</textcolor>
+					<label>31298</label>
+					<shadowcolor>black</shadowcolor>
+					<include>Animation_Viewtype_Showcase_Trailer</include>
+					<animation effect="fade"  start="0" end="100" time="400" delay="1000" condition="![Container(58).OnNext | Container(58).OnPrevious]">Conditional</animation>
+				</control>	
+				<control type="label"><!--Trailer Stop-->
+					<visible>Player.HasVideo</visible>
+					<posx>20</posx>
+					<posy>320</posy>
+					<width>370</width>
+					<height>50</height>
+					<aligny>center</aligny>
+					<font>LiberationSans_Regular_16</font>
+					<textcolor>white</textcolor>
+					<label>31238</label>
+					<shadowcolor>black</shadowcolor>
+					<include>Animation_Viewtype_Showcase_Trailer</include>
 				</control>
 		</control>
 
@@ -272,7 +299,7 @@
 			<visible allowhiddenfocus="true">Control.IsVisible(58) + Control.HasFocus(71)</visible>
 			<texturesliderbackground>osd/osd_progress_back1.png</texturesliderbackground>
 			<textureslidernibfocus>ScrollBarV_Nib_Focus1.png</textureslidernibfocus>
-			<onup>58</onup>
+			<onup>7000</onup>
 			<ondown>58</ondown>
 			<showonepage>true</showonepage>
 			<orientation>horizontal</orientation>

@@ -3,7 +3,7 @@
 <window id="1">
 	<defaultcontrol>50</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
-	<views>621,55,53,51,52,54,58,595,56,50</views>
+	<views>621,55,634,51,52,54,58,595,56,50</views>
 	<controls> 
 		
 		<control type="image">
@@ -66,17 +66,20 @@
 			<include>Viewtype_Files</include><!--  50  -->
 			<include>Viewtype_Arcade_Landscape</include><!-- 51  -->
 			<include>Viewtype_Arcade_Square</include><!-- 52  -->
-			<include>Viewtype_List_Programs</include><!-- 53  -->
 			<include>Viewtype_Arcade</include><!-- 54  -->
 			<include>Viewtype_Poster_Programs</include><!--  55  -->
 			<include>Viewtype_Fanart_Programs</include><!--  56  -->
 			<include>Viewtype_Showcase_Programs</include><!--  58  -->
 			<include>Viewtype_Slide_Programs</include><!--  595  -->
 			<include>Viewtype_3daddon_Programs</include><!--  621  -->
+			<include>Viewtype_List_Programs</include><!-- 634  -->
 	</control>
-	
-	
-		
+
+		<include>Trailer_Showcase</include>
+		<include>Trailer_16x9</include>
+		<include>Trailer_Poster</include>
+		<include>Trailer_Landscape_Fanart</include>
+
 		<include>Global_Time_TopRight_Files</include>
 		
 		<include>7000_has_focus</include>
@@ -185,7 +188,7 @@
 				<altlabel>Disable Plot</altlabel>
 				<onclick>Skin.ToggleSetting(launcher_plot)</onclick>
 				<selected>Skin.HasSetting(launcher_plot)</selected>
-				<visible>Control.IsVisible(53) + substring(container.folderpath,plugin://plugin.program.advanced.launcher)</visible>
+				<visible>Control.IsVisible(634) + substring(container.folderpath,plugin://plugin.program.advanced.launcher)</visible>
 			</control>
 			<control type="togglebutton" id="39">
 				<description>Toggle Launcher Plot</description>
@@ -240,7 +243,7 @@
 				<include>WindowMenuLabel</include>
 				<!-- LOC -->
 				<label>Plot</label>
-				<visible>[Control.IsVisible(53) | Control.IsVisible(56) | [!Skin.HasSetting(ShowcaseFanart_Programs) + Control.IsVisible(58)]] + substring(container.folderpath,plugin://plugin.program.advanced.launcher)</visible>
+				<visible>[Control.IsVisible(634) | Control.IsVisible(56) | [!Skin.HasSetting(ShowcaseFanart_Programs) + Control.IsVisible(58)]] + substring(container.folderpath,plugin://plugin.program.advanced.launcher)</visible>
 			</control>
 		</control>
 	</control>

@@ -297,7 +297,7 @@
 							<animation effect="slide" start="0,0" end="-64,0" time="0" condition="IsEmpty(ListItem.Year)">Conditional</animation>
 							<animation effect="slide" start="0,0" end="0,-23" time="0" condition="IsEmpty(ListItem.Duration)">Conditional</animation>
 						</control>
-				</control>	
+				</control>
 				<control type="label"><!--Trailer Start-->
 					<visible>!IsEmpty(ListItem.Trailer) + !Player.HasVideo</visible>
 					<posx>20</posx>

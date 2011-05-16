@@ -782,7 +782,7 @@
 		<texturefocus>confluence/MenuItemFO1.png</texturefocus>
 		<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
 	</include>
-	
+
 	<include name="ondown_small_trailer">
 		<ondown>XBMC.PlayMedia($INFO[ListItem.Trailer],1,noresume)</ondown>
 	</include>
@@ -796,15 +796,20 @@
 		<onleft>XBMC.PlayMedia($INFO[ListItem.Trailer],noresume)</onleft>
 	</include>
 	
-	
-	
+	<include name="ondown_small_trailer_games">
+		<ondown>XBMC.PlayMedia($INFO[ListItem.Trailer]$INFO[ListItem.label].flv,1,noresume)</ondown>
+	</include>
+	<include name="ondown_big_trailer_games">
+		<ondown>XBMC.PlayMedia($INFO[ListItem.Trailer]$INFO[ListItem.label].flv,noresume)</ondown>
+	</include>	
+
 	<include name="poster_focusposition_dark">
 		<focusposition>3</focusposition>
 	</include>
 	<include name="poster_focusposition_fanart">
 		<focusposition>5</focusposition>
 	</include>
-	
+
 	<include name="showcase_focusposition_dark">
 	<focusposition>4</focusposition>
 	</include>

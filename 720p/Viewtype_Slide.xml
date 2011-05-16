@@ -271,7 +271,7 @@
 			<animation effect="slide" start="1000,0" end="0,0" time="400" delay="600">Visible</animation>
 			<autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
 			<include>Animation_BackdropFade</include>
-			<visible>Control.IsVisible(595) + [Container.Content(movies) + Control.HasFocus(8241) + ![Control.HasFocus(8241) + Player.HasVideo]]</visible>
+			<visible>Control.IsVisible(595) + Container.Content(movies) + Control.HasFocus(8241) + !Player.HasVideo</visible>
 		</control>
 
 		<control type="label">

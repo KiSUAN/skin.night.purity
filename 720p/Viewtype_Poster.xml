@@ -630,7 +630,7 @@
 							<label>[COLOR=ListTrackF][B]$LOCALIZE[31226][/COLOR] [COLOR=white]$INFO[ListItem.mpaa][/COLOR][/B]</label>
 						</control>
 				</control>
-					
+
 				<control type="label"><!--Trailer Start-->
 					<visible>Container.Content(movies) + !Skin.HasSetting(clean_poster) + !IsEmpty(ListItem.Trailer) + !Player.HasVideo</visible>
 					<posx>20</posx>
@@ -640,8 +640,8 @@
 					<aligny>center</aligny>
 					<font>LiberationSans_Regular_16</font>
 					<textcolor>white</textcolor>
-					<label>31298</label>
 					<shadowcolor>black</shadowcolor>
+					<label>31298</label>
 					<include>Animation_ZoomInZoomOut</include>
 					<animation effect="slide" start="0,0" end="0,-23" time="0" condition="IsEmpty(ListItem.Duration)">Conditional</animation>
 					<animation effect="fade" start="0" end="100" time="400" delay="1000" condition="![Container(55).OnNext | Container(55).OnPrevious]">Conditional</animation>
@@ -655,8 +655,8 @@
 					<aligny>center</aligny>
 					<font>LiberationSans_Regular_16</font>
 					<textcolor>white</textcolor>
-					<label>31238</label>
 					<shadowcolor>black</shadowcolor>
+					<label>31238</label>
 					<include>Animation_ZoomInZoomOut</include>
 				</control>
 				<control type="grouplist">

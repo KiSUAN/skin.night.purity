@@ -64,12 +64,15 @@
 			<aspectratio>stretch</aspectratio>
 			<include>Animation_BackdropFade</include>
 		</control>
-
-		<control type="group" id="8240">
+		
+		<control type="group" id="8245">
 			<control type="button" id="8243">
 				<onleft>595</onleft>
 				<onright>595</onright>
-				<visible allowhiddenfocus="true">ControlGroup(8240).HasFocus</visible>
+				<onup>stop</onup>
+				<include condition="!Skin.HasSetting(big_trailer)">ondown_small_trailer_games</include>
+				<include condition="Skin.HasSetting(big_trailer)">ondown_big_trailer_games</include>
+				<visible allowhiddenfocus="true">ControlGroup(8280).HasFocus</visible>
 			</control>
 		</control>
 
@@ -208,26 +211,16 @@
 			<animation effect="slide" start="1000,0" end="0,0" time="400" delay="600">Visible</animation>
 			<autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
 			<include>Animation_BackdropFade</include>
-			<visible>Control.IsVisible(595) + Control.HasFocus(8243)</visible>
-		</control>
-		
-		<control type="group" id="8245">
-			<control type="button" id="8243">
-				<onleft>595</onleft>
-				<onright>595</onright>
-				<onup>stop</onup>
-				<ondown>XBMC.PlayMedia($INFO[ListItem.Trailer]$INFO[ListItem.label].flv,1,noresume)</ondown>
-				<visible allowhiddenfocus="true">ControlGroup(8280).HasFocus</visible>
-			</control>
+			<visible>Control.IsVisible(595) + Control.HasFocus(8243) + !Player.HasVideo</visible>
 		</control>
 
 		<control type="label">
 			<visible>Control.IsVisible(595) + !Control.HasFocus(8243) + !SubString(ListItem.Icon,DefaultFolderBack.png,Left)</visible>
-			<posx>410</posx>
-			<posy>608</posy>
-			<width>370</width>
-			<height>50</height>
-			<aligny>center</aligny>
+			<posx>335</posx>
+			<posy>610</posy>
+			<width>300</width>
+			<height>20</height>
+			<align>center</align>
 			<font>LiberationSans_Regular_16</font>
 			<textcolor>mainblue</textcolor>
 			<shadowcolor>black</shadowcolor>
@@ -236,25 +229,25 @@
 			<animation effect="fade"  start="0" end="100" time="400" delay="1000" condition="![Container(595).OnNext | Container(595).OnPrevious]">Conditional</animation>
 		</control>
 		<control type="label">
-			<visible>Control.IsVisible(595) + Control.HasFocus(8241) + !Player.HasVideo</visible>
-			<posx>410</posx>
-			<posy>668</posy>
-			<width>370</width>
-			<height>50</height>
-			<aligny>center</aligny>
+			<visible>Control.IsVisible(595) + Control.HasFocus(8243) + !Player.HasVideo + !IsEmpty(ListItem.Trailer)</visible>
+			<posx>335</posx>
+			<posy>610</posy>
+			<width>300</width>
+			<height>20</height>
+			<align>center</align>
 			<font>LiberationSans_Regular_16</font>
 			<textcolor>mainblue</textcolor>
-			<label>31298</label>
 			<shadowcolor>black</shadowcolor>
+			<label>31298</label>
 			<include>Animation_Viewtype_Showcase_Trailer</include>
 		</control>
 		<control type="label">
-			<visible>Control.IsVisible(595) + Control.HasFocus(8243) + Player.HasVideo</visible>
-			<posx>410</posx>
-			<posy>608</posy>
-			<width>370</width>
-			<height>50</height>
-			<aligny>center</aligny>
+			<visible>Control.IsVisible(595) + Control.HasFocus(8243) + Player.HasVideo + !IsEmpty(ListItem.Trailer)</visible>
+			<posx>335</posx>
+			<posy>610</posy>
+			<width>300</width>
+			<height>20</height>
+			<align>center</align>
 			<font>LiberationSans_Regular_16</font>
 			<textcolor>mainblue</textcolor>
 			<shadowcolor>black</shadowcolor>
