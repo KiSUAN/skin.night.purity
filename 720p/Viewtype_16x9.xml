@@ -544,6 +544,48 @@
 				</control>
 		</control>
 
+		<control type="group">
+			<posx>20</posx>
+			<posy>330</posy>
+			<animation effect="slide" start="0,500" end="0,0" time="400" delay="400">Visible</animation>
+			<visible>Control.IsVisible(59) + Container.Content(movies) + Control.HasFocus(8541) + !Player.HasVideo]</visible>
+			<include>Animation_BackdropFade</include>
+				<control type="image" id="8541">
+					<posx>680</posx>
+					<posy>200</posy>
+					<width>261</width>
+					<height>147</height>
+					<aspectratio>stretch</aspectratio>
+					<texture background="true" diffuse="tv-landscape/landscapematteFO.png">$INFO[ListItem.Path,,extrathumbs/thumb1.jpg]</texture>
+					<fadetime>200</fadetime>
+				</control>
+				<control type="image">
+					<posx>668</posx>
+					<posy>190</posy>
+					<width>284</width>
+					<height>166</height>
+					<texture>tv-landscape/landscapeframeFO.png</texture>
+					<visible>![IsEmpty(Control.GetLabel(8541)) + IsEmpty(Control.GetLabel(8542))]</visible>
+				</control>
+				<control type="image" id="8542">
+					<posx>980</posx>
+					<posy>200</posy>
+					<width>261</width>
+					<height>147</height>
+					<aspectratio>stretch</aspectratio>
+					<texture background="true" diffuse="tv-landscape/landscapematteFO.png">$INFO[ListItem.Path,,extrathumbs/thumb2.jpg]</texture>
+					<fadetime>200</fadetime>
+				</control>
+				<control type="image">
+					<posx>968</posx>
+					<posy>190</posy>
+					<width>284</width>
+					<height>166</height>
+					<texture>tv-landscape/landscapeframeFO.png</texture>
+					<visible>![IsEmpty(Control.GetLabel(8541)) + IsEmpty(Control.GetLabel(8542))]</visible>
+				</control>
+		</control>
+
 		<control type="label">
 			<visible>Control.IsVisible(59) + !Control.HasFocus(8541) + !SubString(ListItem.Icon,DefaultFolderBack.png,Left)</visible>
 			<posx>675</posx>
@@ -555,7 +597,7 @@
 			<textcolor>mainblue</textcolor>
 			<shadowcolor>black</shadowcolor>
 			<label>31297</label>
-			<include>Animation_Viewtype_Showcase_Trailer</include>
+			<include>Animation_ZoomInZoomOut</include>
 			<animation effect="fade"  start="0" end="100" time="400" delay="1000" condition="![Container(59).OnNext | Container(59).OnPrevious]">Conditional</animation>
 		</control>
 		<control type="label">
@@ -569,7 +611,7 @@
 			<textcolor>mainblue</textcolor>
 			<shadowcolor>black</shadowcolor>
 			<label>31298</label>
-			<include>Animation_Viewtype_Showcase_Trailer</include>
+			<include>Animation_ZoomInZoomOut</include>
 		</control>
 		<control type="label">
 			<visible>Control.IsVisible(59) + Control.HasFocus(8541) + Player.HasVideo + !IsEmpty(ListItem.Trailer)</visible>
@@ -582,7 +624,7 @@
 			<textcolor>mainblue</textcolor>
 			<shadowcolor>black</shadowcolor>
 			<label>31516</label>
-			<include>Animation_Viewtype_Showcase_Trailer</include>
+			<include>Animation_ZoomInZoomOut</include>
 		</control>
 
 		<control type="scrollbar" id="6780">

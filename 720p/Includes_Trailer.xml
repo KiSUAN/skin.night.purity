@@ -152,7 +152,7 @@
 
 	<include name="Trailer_16x9">
 		<control type="group">
-			<visible>[Control.IsVisible(59) | [Control.IsVisible(595) + [Control.HasFocus(8241) | Control.HasFocus(8243)]]] + Player.HasVideo</visible>
+			<visible>[Control.IsVisible(59) + Control.HasFocus(8541)] | [Control.IsVisible(595) + [Control.HasFocus(8241) | Control.HasFocus(8243)]]] + Player.HasVideo</visible>
 			<animation effect="fade" start="0" end="100" time="400" delay="800" condition="Player.HasVideo">Conditional</animation>
 			<animation effect="slide" end="-34,100" time="0" condition="Control.IsVisible(595)">Conditional</animation>
 			<posx>700</posx>

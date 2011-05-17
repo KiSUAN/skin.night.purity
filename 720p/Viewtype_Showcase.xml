@@ -15,7 +15,6 @@
 					<visible>Skin.HasSetting(ShowcaseFanart) + Skin.HasSetting(showcase_fanart_title)</visible>
 					<animation effect="slide" start="0,0" end="0,-70" time="1000" delay="600" tween="cubic" easing="inout" condition="Control.IsVisible(58) + Container.Content(movies) + Skin.HasSetting(ShowcaseFanart)">Conditional</animation>
 					<animation effect="slide" start="0,0" end="0,-110" time="1000" delay="600" tween="cubic" easing="inout" condition="Control.IsVisible(58) + Container.Content(movies)">Conditional</animation>
-					<posx>20</posx>
 					<posy>620</posy>
 					<width>1280</width>
 					<height>50</height>
@@ -23,7 +22,6 @@
 					<font>LiberationSans_Regular_34</font>
 					<shadowcolor>viewheadershadow</shadowcolor>
 					<textcolor>viewheader</textcolor>
-					<scroll>true</scroll>
 					<label>[B]$INFO[ListItem.label][/B]</label>>
 					<include>Animation_Bartowski_Context_Zoom</include>
 				</control>
@@ -59,7 +57,7 @@
 			<preloaditems>2</preloaditems>
 			<pagecontrol>68</pagecontrol>
 			<animation effect="zoom" start="100" end="72" time="700" condition="Skin.HasSetting(ShowcaseFanart)">Conditional</animation>
-			<animation effect="slide" start="0,0" end="0,160" time="700" condition="Skin.HasSetting(ShowcaseFanart)">Conditional</animation>
+			<animation effect="slide" start="0,0" end="136,160" time="700" condition="Skin.HasSetting(ShowcaseFanart)">Conditional</animation>
 			<include>Animation_Viewtype_Showcase_FocusArea</include>
 			<visible>!Skin.HasSetting(no_Showcase) + [Container.Content(movies) | substring(container.folderpath,plugin://plugin.video.apple.movie.trailers.lite)]</visible>
 				<itemlayout width="168" height="245">
@@ -122,6 +120,18 @@
 							<animation type="Focus" reversible="false">
 								<effect type="zoom" center="90,258" start="81" end="100" time="400" tween="back" easing="out" />
 								<effect type="fade" start="0" end="100" time="1000" delay="400"/>
+							</animation>
+						</control>
+						<control type="image">
+							<posx>2</posx>
+							<posy>90</posy>
+							<width>201</width>
+							<height>300</height>
+							<texture background="true" diffuse="postermatte.png">$INFO[ListItem.Icon]</texture>
+							<fadetime>200</fadetime>
+							<aspectratio scalediffuse="false">stretch</aspectratio>
+							<animation type="Focus" reversible="false">
+								<effect type="zoom" center="80,238" start="81" end="100" time="400" tween="back" easing="out" />
 							</animation>
 						</control>
 						<control type="image">

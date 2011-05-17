@@ -130,7 +130,7 @@
 		<width>1480</width>
 	</include>
 	<include name="showcase_width_fanart">
-		<width>2000</width>
+		<width>1900</width>
 	</include>
 	
 	<include name="horizontal_onup_middle">
@@ -814,7 +814,7 @@
 	<focusposition>4</focusposition>
 	</include>
 	<include name="showcase_focusposition_fanart">
-		<focusposition>6</focusposition>
+		<focusposition>5</focusposition>
 	</include>
 	
 	<include name="3dland_down_scrollbar">
